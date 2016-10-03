@@ -1,0 +1,7 @@
+44_0|| CAT-MULTIPLE ||  CAT-MUL-BINARY-VAR A1 || Remove NA participants 475 || CAT-MULT-SKIP-10 (516 vs 9) ||  CAT-MUL-BINARY-VAR A2 || Remove NA participants 475 || sample 495/30(525) || SUCCESS results-logistic-binary  CAT-MUL-BINARY-VAR A3 || Remove NA participants 475 || sample 25/500(525) || SUCCESS results-logistic-binary 
+[1] 36
+[1] 33
+[1] 36
+[1] "99_0"
+[1] "xxxxx 99_0"
+99_0|| Excluded continuous: YES || 

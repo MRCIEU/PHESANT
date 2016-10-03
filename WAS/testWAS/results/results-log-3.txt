@@ -1,0 +1,5 @@
+22000_0|| Excluded cat-multiple: YES || 
+41_0|| CAT-MULTIPLE ||  CAT-MUL-BINARY-VAR A1 || Remove NA participants 475 || CAT-MULT-SKIP-10 (516 vs 9) ||  CAT-MUL-BINARY-VAR A2 || Remove NA participants 475 || sample 495/30(525) || SUCCESS results-logistic-binary  CAT-MUL-BINARY-VAR A3 || Remove NA participants 475 || sample 25/500(525) || SUCCESS results-logistic-binary 
+42_0|| CAT-MULTIPLE ||  CAT-MUL-BINARY-VAR A1 || CAT-MULT-SKIP-10 (991 vs 9) ||  CAT-MUL-BINARY-VAR A2 || sample 970/30(1000) || SUCCESS results-logistic-binary  CAT-MUL-BINARY-VAR A3 || sample 500/500(1000) || SUCCESS results-logistic-binary 
+43_0|| CAT-MULTIPLE ||  CAT-MUL-BINARY-VAR A1 || Indicator name x99_0_0 || Remove indicator var NAs 490 || CAT-MULT-SKIP-10 (501 vs 9) ||  CAT-MUL-BINARY-VAR A2 || Indicator name x99_0_0 || Remove indicator var NAs 490 || sample 500/10(510) || SUCCESS results-logistic-binary  CAT-MUL-BINARY-VAR A3 || Indicator name x99_0_0 || Remove indicator var NAs 490 || sample 480/30(510) || SUCCESS results-logistic-binary 
+NULL

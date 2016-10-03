@@ -1,0 +1,33 @@
+excluded integer: 0
+excluded continuous: 1
+excluded categorical single: 0
+excluded categorical multiple: 0
+continuous starting: 0
+integer starting: 0
+categorical single starting: 0
+categorical multiple starting: 1
+continuous main, <=20% examples with same value: 0
+continuous main, <500 examples: 0
+continuous other, one value: 0
+continuous other, 2 distinct values: 0
+continuous other, >2 distinct values: 0
+integer, >= 20 distinct values (treated as continuous): 0
+integer, one value: 0
+integer, 2 distinct values: 0
+integer, 3-19 distinct values: 0
+categorical single, one value: 0
+categorical single, ACE: 0
+categorical single, ordered: 0
+categorical single, not ordered: 0
+categorical single, binary: 0
+ordered categorical: 0
+ordered categorical, <500 examples: 0
+not-ordered categorical, <500 examples: 0
+categorical multiple, binary variables: 3
+categorical multiple, <10 in each category: 1
+categorical multiple, >=10 in each category: 2
+binary, <500 examples: 0
+success continuous: 0
+success ordered categorical: 0
+success not-ordered categorical: 0
+success binary: 2
