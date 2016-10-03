@@ -5,6 +5,7 @@ Run a phenome scan (pheWAS, Mendelian randomisation (MR)-pheWAS etc.) in UK Biob
 
 A pheWAS is run using WAS/tests_phase1.r script, with the following arguments:
 
+-------|--------
 outcomefile 		| tab separated file containing phenotypes, and a user id column
 exposurefile 		| comma separated file containing the exposure variable (e.g. a snp or genetic risk score)
 variablelistfile 	| tab separated file containing information about each phenotype, that is used to process them.
