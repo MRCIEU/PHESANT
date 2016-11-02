@@ -15,14 +15,11 @@ Rscript tests_phase1.r \
 --userId="userId"
 
 
-
-
 ## results processing example
 
 cd ../../resultsProcessing/
 Rscript mainCombineResults.r \
 --resDir="../WAS/testWAS/results/" \
---variablelistfile="../WAS/testWAS/variable-lists/outcome-info3.txt"
-
+--variablelistfile="../WAS/testWAS/variable-lists/outcome-info.tsv"
 
 
