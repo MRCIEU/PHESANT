@@ -1,5 +1,5 @@
 
-## to run this test pheWAS do -
+## To run this test pheWAS do -
 
 ```bash
 cd ..
@@ -16,9 +16,9 @@ Rscript tests_phase1.r \
 --userId="userId"
 ```
 
-## results processing example
+## To run the results processing do -
 
-```
+```bash
 cd ../../resultsProcessing/
 
 Rscript mainCombineResults.r \

@@ -26,7 +26,7 @@ partNum			| Number of subsets you are using (for parallelising)
 The partNum and partIdx are both used for parallelise your pheWAS. E.g. setting partNum to 5 will divide the set of phenotypes
 into 5 (rough) parts and then partIdx can be used to call the pheWAS on a specific part (1-5).
 
-See WAS/testWAS/readme.txt for an example with test data.
+See WAS/testWAS/README.md for an example with test data.
 
 
 ## 2) Post-pheWAS results processing
