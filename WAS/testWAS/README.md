@@ -1,6 +1,7 @@
 
 ## to run this test pheWAS do -
 
+```bash
 cd ..
 
 testDir="testWAS/"
@@ -13,13 +14,15 @@ Rscript tests_phase1.r \
 --exposurevariable="exposure" \
 --resDir="${testDir}results/" \
 --userId="userId"
-
+```
 
 ## results processing example
 
+```
 cd ../../resultsProcessing/
+
 Rscript mainCombineResults.r \
 --resDir="../WAS/testWAS/results/" \
 --variablelistfile="../WAS/testWAS/variable-lists/outcome-info.tsv"
-
+```
 

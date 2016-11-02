@@ -44,7 +44,7 @@ resDir			| Directory where the pheWAS results are stored
 numParts		| Number of subsets you are have used (for parallelising)
 variablelistfile	| Tab separated file containing information about each phenotype, that is used to process them.
 
-See WAS/testWAS/readme.txt for an example with test data.
+See WAS/testWAS/README.md for an example with test data.
 
 
 ## 3) Results visualisation
