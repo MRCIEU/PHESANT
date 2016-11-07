@@ -5,7 +5,7 @@ excluded categorical multiple: 0
 continuous starting: 0
 integer starting: 0
 categorical single starting: 0
-categorical multiple starting: 1
+categorical multiple starting: 4
 continuous main, <=20% examples with same value: 0
 continuous main, <500 examples: 0
 continuous other, one value: 0
@@ -23,11 +23,11 @@ categorical single, binary: 0
 ordered categorical: 0
 ordered categorical, <500 examples: 0
 not-ordered categorical, <500 examples: 0
-categorical multiple, binary variables: 3
-categorical multiple, <10 in each category: 1
-categorical multiple, >=10 in each category: 2
+categorical multiple, binary variables: 12
+categorical multiple, <10 in each category: 4
+categorical multiple, >=10 in each category: 8
 binary, <500 examples: 0
 success continuous: 0
 success ordered categorical: 0
 success not-ordered categorical: 0
-success binary: 2
+success binary: 8

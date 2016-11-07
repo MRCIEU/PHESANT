@@ -1,4 +1,7 @@
-21022_0|| Excluded cat-single: YES || 
+24_0|| INTEGER || sample 800/91(891) || SUCCESS results-logistic-binary 
+25_0|| INTEGER || CAT-ORD || num categories: 3 || SUCCESS results-ordered-logistic
+26_0|| INTEGER || CAT-ORD || num categories: 3 || SUCCESS results-ordered-logistic
+27_0|| INTEGER || CAT-ORD || num categories: 19 || SUCCESS results-ordered-logistic
 32_0|| CAT-SINGLE || SKIP (only one value) || 
 33_0|| CAT-SINGLE || CAT-SINGLE-BINARY || BINARY-LOGISTIC-SKIP-500 (499) || 
 34_0|| CAT-SINGLE || CAT-SINGLE-BINARY || sample 300/600(900) || SUCCESS results-logistic-binary 
@@ -6,4 +9,3 @@
 36_0|| CAT-SINGLE || ordered || CAT-ORD || num categories: 6 || SUCCESS results-ordered-logistic
 37_0|| CAT-SINGLE || CAT-SINGLE-UNORDERED || SKIP (499< 500 examples) || 
 38_0|| CAT-SINGLE || CAT-SINGLE-UNORDERED || reference: 4=300 || SUCCESS results-notordered-logistic 
-NULL

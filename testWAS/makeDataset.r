@@ -175,7 +175,7 @@ colnames(data)[37] <- "x99_0_0"
 
 
 
-write.table(data, file='data/phenotypes.csv', sep='\t', col.names=TRUE, row.names=FALSE);
+write.table(data, file='data/phenotypes.csv', sep=',', col.names=TRUE, row.names=FALSE);
 
 
 

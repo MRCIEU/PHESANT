@@ -5,7 +5,7 @@ There are three components in this project:
 
 1. Running a pheWAS in UK Biobank
 2. Post-processing of results
-3. Visualise the results
+3. Visualising the results
 
 
 ## 1) Running the phewas
@@ -33,14 +33,15 @@ into 5 (rough) parts and then partIdx can be used to call the pheWAS on a specif
 In the resDir specified as an argument, the following files will be created:
 
 1. Results files for each test type:
-* Linear regression: results-linear.txt
-* Logistic regression: results-logistic.txt
-* Multinomial regression: results-multinomial.txt
-* Ordered logistic regression: results-ordered-logistic.txt
-2. A log file.
-3. Flow counts file: variable-flow-counts.txt
+* Linear regression: results-linear-all.txt
+* Logistic regression: results-logistic-all.txt
+* Multinomial regression: results-multinomial-all.txt
+* Ordered logistic regression: results-ordered-logistic-all.txt
+2. A log file: results-log-all.txt
+3. Flow counts file: variable-flow-counts-all.txt
 
-Where the pheWAS is run in parallel setup then each parallel part will have one file for each of the above files, called [filename]-[partIdx].txt
+Where the pheWAS is run in parallel setup then each parallel part will have one file for each of the above files, with 'all' in each filename replaced
+with partNum: [filename]-[partIdx].txt
 
 
 See WAS/testWAS/README.md for an example with test data.
