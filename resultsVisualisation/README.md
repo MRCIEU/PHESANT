@@ -27,11 +27,11 @@ You'll notice that there is a file in the current directory called node-position
 
 If you open the HTML file (in the web/ subdirectory) in a web browser you should see the visualisation for the test dataset included in this project (in testWAS/).
 
-Running this java cote to generate the JSON for your own results will generate this visualisation for your own phewas.
+Running this Java code to generate the JSON for your own results will generate this visualisation for your own phewas.
 
-## Running the java that generates the JSON for your own pheWAS
+## Running the Java that generates the JSON for your own pheWAS
 
-The main Java files that generates the JSON is ResultsToJson.java. This Java class has three parameters:
+The main Java file that generates the JSON is ResultsToJson.java. This Java class has three parameters:
 
 1. File path of the results files from a pheWAS.
 2. File path to the location of the node position file (you should not need to change this)
