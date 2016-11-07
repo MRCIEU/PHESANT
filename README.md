@@ -44,7 +44,7 @@ Where the pheWAS is run in parallel setup then each parallel part will have one 
 with partNum: [filename]-[partIdx].txt
 
 
-See WAS/testWAS/README.md for an example with test data.
+See testWAS/README.md for an example with test data.
 
 
 ## 2) Post-pheWAS results processing
@@ -63,7 +63,7 @@ resDir			| Directory where the pheWAS results are stored
 numParts		| Number of subsets you are have used (for parallelising)
 variablelistfile	| Tab separated file containing information about each phenotype, that is used to process them.
 
-See WAS/testWAS/README.md for an example with test data.
+See testWAS/README.md for an example with test data.
 
 
 ## 3) Results visualisation
