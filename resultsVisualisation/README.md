@@ -31,7 +31,7 @@ Running this java cote to generate the JSON for your own results will generate t
 
 ## Running the java that generates the JSON for your own pheWAS
 
-The main Java files that generates the JSON is ResultsToJson.java. This java class has three parameters:
+The main Java files that generates the JSON is ResultsToJson.java. This Java class has three parameters:
 
 1. File path of the results files from a pheWAS.
 2. File path to the location of the node position file (you should not need to change this)
