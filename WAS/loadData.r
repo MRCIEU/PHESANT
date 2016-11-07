@@ -3,7 +3,7 @@ loadData <- function() {
 
 ## load phenotype
 #phenoFile=paste(dataDir,'phenotypes/ukb6564-150-ALL.csv',sep="");
-phenotype=read.table(opt$outcomefile, header=1,sep="\t");
+phenotype=read.table(opt$outcomefile, header=1,sep=",");
 
 ## load snps
 #snpFile=paste(dataDir,'snps/snp-score96-withPhenIds-subset.csv',sep="");
