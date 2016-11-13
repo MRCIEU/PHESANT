@@ -26,7 +26,7 @@ A phenome scan is run using WAS/phewas.r script. This is basically ready to go -
 
 The phenome scan process is illustrated in the figure below, and described in detail in the paper above.
 
-![PHESANT processing pipeline][biobank-PHESANT-figure.pdf]
+![PHESANT processing pipeline](biobank-PHESANT-figure.pdf)
 
 
 The phenome scan is run with the following arguments:
@@ -70,7 +70,7 @@ This file was initially the UK Biobank Data dictionary, which can be downloaded 
 This provides the following set of information used in our phenome tool:
 
 1. ValueType column - the field type, either 'Integer', 'Continuous', 'Categorical single', 'Categorical multiple', or a few others we do not use.
-2. 3 Cat_ID and 3 Cat_Title columns - the three levels of the category hierarchy, that can be seen [here](http://biobank.ctsu.ox.ac.uk/showcase/label.cgi)
+2. Three Cat_ID and three Cat_Title columns - the three levels of the category hierarchy, that can be seen [here](http://biobank.ctsu.ox.ac.uk/showcase/label.cgi)
 3. FieldID column - We use this to match the variable in our biobank data file to the correct row in this TSV file.
 4. Field column -  The name of the field.
 
@@ -79,18 +79,18 @@ The variable information file also has the following columns, to provide additio
 1. EXPOSURE_PHENOTYPE - Specifies any field that represents the exposure phenotype. This is a marker so that after the phenome scan is run we can use these
 results as validation only (e.g. a pheWAS of the BMI FTO SNP would expect the BMI phenotypes to show high in the results ranking), i.e. they do not contribute to the multiple testing burden. We have set this code up for BMI, so have marked BMI/weight fields as an exposure - you'll need to change this for you particualar 'exposure' trait. 
 2. EXCLUDED - phenotypes we have apriori decided to exclude from the phenome scan. Any field with a value in this field is excluded, and we state a code that describes the reason we exclude a variable (for future reference). Our codes and reasons are as follows (of course for your phenome scan you can add other as you would like): 
-* YES-ACE: "assessment center environment" variables that don't directly describe the participant;
-* YES-AGE: age variables;
-* YES-ASSESSMENT-CENTRE: which assessment centre the participant attended; 
-* YES-BIOBANK-SUGGESTED-VARIABLE: Variables not initially included in our data request, but that biobank suggested we receive;
-* YES-CAT-SIN-MUL-VAL: fields that were 'Categorical single' types but had multiple value. We do not deal with these currently so remove from the phenome scan.
-* YES-GENETIC: genetic description variables;
-* YES-SENSITIVE: variables not received from Biobank because they are sensitive so have more restricted access;
-* YES-SEX: sex fields.
+..* YES-ACE: "assessment center environment" variables that don't directly describe the participant;
+..* YES-AGE: age variables;
+..* YES-ASSESSMENT-CENTRE: which assessment centre the participant attended; 
+..* YES-BIOBANK-SUGGESTED-VARIABLE: Variables not initially included in our data request, but that biobank suggested we receive;
+..* YES-CAT-SIN-MUL-VAL: fields that were 'Categorical single' types but had multiple value. We do not deal with these currently so remove from the phenome scan.
+..* YES-GENETIC: genetic description variables;
+..* YES-SENSITIVE: variables not received from Biobank because they are sensitive so have more restricted access;
+..* YES-SEX: sex fields.
 3. CAT_MULT_INDICATOR_FIELDS - every categorical multiple field must have a value in this column. The value describes which set of participants to include as the negative examples, when a binary variable is created from each value. The positive examples are simply the people with a particular value for this categorical multiple field. However the negative values can be determined in three ways:
-* ALL -  Include all participants. 
-* NO_NAN - Included only those who have at least one value for this field.
-* field ID - Include only those who have a value for another field, with this field ID.
+..* ALL -  Include all participants. 
+..* NO_NAN - Included only those who have at least one value for this field.
+..* field ID - Include only those who have a value for another field, with this field ID.
 4. CAT_SINGLE_TO_CAT_MULT - Specifies fields that have the categorical single field type (as specified by UK Biobank) but that we actually want to treat as categorical multiple.
 5. CAT_SINGLE_DATA_CODING - The data coding IDs for each categorical single file to map each of categorical single field to it's data code in the data code information file described above.
 
@@ -98,10 +98,10 @@ results as validation only (e.g. a pheWAS of the BMI FTO SNP would expect the BM
 In the directory specified with the `resDir` argument, the following files will be created:
 
 1. Results files for each test type:
-* Linear regression: results-linear-all.txt - One line for each linear regression result
-* Logistic regression: results-logistic-all.txt - One line for each logistic regression result
-* Multinomial regression: results-multinomial-all.txt - Each multinomial regression results in n+1 lines in this results file, where n is the number of categories in the variables. One line corresponds to the results for a particular category, and then there is also one line for the overall assocation of this variable (across all categories).
-* Ordered logistic regression: results-ordered-logistic-all.txt - One line for each ordinal logistic regression result.
+..* Linear regression: results-linear-all.txt - One line for each linear regression result
+..* Logistic regression: results-logistic-all.txt - One line for each logistic regression result
+..* Multinomial regression: results-multinomial-all.txt - Each multinomial regression results in n lines in this results file, where n is the number of categories in the variables. One line corresponds to the results for a particular category compared to an assigned baseline category (the category with the highest sample size), and then there is also one line for the overall assocation of this variable (across all categories).
+..* Ordered logistic regression: results-ordered-logistic-all.txt - One line for each ordinal logistic regression result.
 2. A log file: results-log-all.txt - One line for each Biobank field, providing information about the processing flow for this field. 
 3. Flow counts file: variable-flow-counts-all.txt - A set of counts denoting the number of variables reaching each point in the processing flow (see figure above).
 
@@ -119,6 +119,8 @@ The resultsProcessing folder provides code to post process the results, specific
 1. Combine the results where they were generated in parallel.
 2. Combine the flow counts.
 3. Add the description information for each variable to the results file.
+4. Rank the results by P value.
+5. For the multinomial regression results, include only the main result (not the results for each particular category of a given variable).
 
 This takes three arguments:
 
