@@ -1,7 +1,8 @@
+Field not listed in phenotype information file: 0
 excluded integer: 1
 excluded continuous: 1
-excluded categorical single: 0
-excluded categorical multiple: 0
+excluded categorical single: 1
+excluded categorical multiple: 1
 continuous starting: 6
 integer starting: 7
 categorical single starting: 7

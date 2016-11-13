@@ -3,13 +3,13 @@ processArgs <- function() {
 
 if (opt$test==TRUE) {
 
-	datadir='test/data/';
+	datadir='../testWAS/data/';
 	opt$exposurefile <<- paste(datadir,'exposure.csv', sep="");
 	opt$outcomefile <<-  paste(datadir,'phenotypes.csv', sep="");
-	opt$variablelistfile <<- 'test/variable-lists/outcome-info3.txt';
-	opt$datacodingfile <<- 'test/variable-lists/data-coding-ordinal-info.txt';
+	opt$variablelistfile <<- '../testWAS/variable-lists/outcome-info.tsv';
+	opt$datacodingfile <<- '../testWAS/variable-lists/data-coding-ordinal-info.txt';
 	opt$exposurevariable <<- 'exposure';
-	opt$resDir <<- 'test/results/';
+	opt$resDir <<- '../testWAS/results/';
 	opt$userId <<- 'userId';
 	opt$sensitivity <<- FALSE;
 
@@ -43,7 +43,14 @@ else {
 	}
 
 	processParts(opt$partIdx, opt$numParts);
-
+}
+	
+# just some information to the user
+if (opt$sensitivity==TRUE) {
+	print("Adjusting for age, sex, genetic batch, top 10 genetic principal components and assessment centre");
+}
+else {
+	print("Adjusting for age, sex and genetic batch");
 }
 
 }
@@ -53,6 +60,7 @@ processParts <- function(pIdx, nParts) {
 
 	if (is.null(pIdx) && is.null(nParts)) {
                 opt$varTypeArg <<- "all";
+		print(paste("Running with all traits in phenotype file:", opt$outcomefile));
         }
 	else if (is.null(pIdx)) {
                 print_help(opt_parser)
@@ -68,6 +76,7 @@ processParts <- function(pIdx, nParts) {
 	}
 	else {
                 opt$varTypeArg <<- paste(pIdx, "-", nParts, sep="");
-        }
+        	print(paste("Running with part",pIdx,"of",nParts," in phenotype file:", opt$outcomefile));
+	}
 
 }

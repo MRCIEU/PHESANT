@@ -3,6 +3,7 @@
 
 loadSource <- function() {
 	source("loadData.r")
+	source("validateInput.r")
 	source("testNumExamples.r")
 	source("binaryLogisticRegression.r")
 	source("equalSizedBins.r")
@@ -25,6 +26,7 @@ initCounters <- function() {
 	# data flow counters 
 	count = list(
 	cont=0, int=0, catSin=0, catMul=0,
+	notinphenofile=0,
 	cont.main=0, cont.main.500=0,
 	cont.onevalue=0, cont.case2=0, cont.case3=0,
 	int.case1=0, int.case2=0, int.case3=0,

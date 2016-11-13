@@ -9,6 +9,10 @@ phenotype=read.table(opt$outcomefile, header=1,sep=",");
 #snpFile=paste(dataDir,'snps/snp-score96-withPhenIds-subset.csv',sep="");
 snpScores=read.table(opt$exposurefile,sep=",", header=1);
 
+
+validateInput(phenotype, snpScores);
+print("Phenotype and SNP files validated");
+
 # keep only the userID and exposure variable
 idx1 = which(names(snpScores) == opt$userId);
 idx2 = which(names(snpScores) == opt$exposurevariable);
@@ -18,7 +22,15 @@ colnames(snpScores)[1] <- opt$userId;
 colnames(snpScores)[2] <- "geno";
 
 ## merge to one matrix
-datax = merge(snpScores, phenotype, by=opt$userId);
+datax = merge(snpScores, phenotype, by=opt$userId, all=FALSE);
+
+if (nrow(datax)==0) {
+	stop("No examples with row in both SNP and phenotype files", call.=FALSE)
+}
+else {
+	print(paste("Pheno and SNP data files merged, with", nrow(datax),"examples"))
+}
+
 datax = fixOddFieldsToCatMul(datax)
 
 ## vars we adjust for

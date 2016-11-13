@@ -25,5 +25,5 @@ Cat1_ID	Cat1_Title	Cat2_ID	Cat2_Title	Cat3_ID	Cat3_Title	Field	FieldID	EXPOSURE_
 100000	UK Biobank Assessment Centre	100071	Verbal interview	100076	Operations	FIELD44	44			NO_NAN	YES-INSTANCES		Categorical single
 100000	UK Biobank Assessment Centre	100071	Verbal interview	100076	Operations	FIELD99	99		YES				Continuous
 100000	UK Biobank Assessment Centre	100071	Verbal interview	100076	Operations	FIELD31	31		YES				Integer
-100000	UK Biobank Assessment Centre	100071	Verbal interview	100076	Operations	FIELD21022		21022	YES				Categorical single
-100000	UK Biobank Assessment Centre	100071	Verbal interview	100076	Operations	FIELD22000		22000	YES				Categorical multiple
+100000	UK Biobank Assessment Centre	100071	Verbal interview	100076	Operations	FIELD21022	21022		YES				Categorical single
+100000	UK Biobank Assessment Centre	100071	Verbal interview	100076	Operations	FIELD22000	22000		YES				Categorical multiple

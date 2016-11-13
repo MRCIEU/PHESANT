@@ -16,6 +16,13 @@ Rscript phewas.r \
 --userId="userId"
 ```
 
+Here is a shortcut to this test example:
+
+```bash
+cd ../WAS/
+Rscript phewas.r --test
+```
+
 Or to run part 1 of 3 parts use:
 
 ```bash

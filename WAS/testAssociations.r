@@ -3,10 +3,19 @@ testAssociations <- function(currentVar, currentVarShort, thisdata) {
 	## call file for variable type
 
 	tryCatch({
-		
-		excluded = vl$phenoInfo$EXCLUDED[which(vl$phenoInfo$FieldID==currentVarShort)]
-		catSinToMult = vl$phenoInfo$CAT_SINGLE_TO_CAT_MULT[which(vl$phenoInfo$FieldID==currentVarShort)]
-		fieldType = vl$phenoInfo$ValueType[which(vl$phenoInfo$FieldID==currentVarShort)]
+
+		# retrieve whether phenotype is excluded etc
+		idx=which(vl$phenoInfo$FieldID==currentVarShort);
+
+		if (length(idx)==0) {
+			cat(paste(currentVar, " || Variable could not be found in pheno info file. \n", sep=""))			
+			count$notinphenofile <<- count$notinphenofile+1;
+		}
+		else {
+
+		excluded = vl$phenoInfo$EXCLUDED[idx]
+		catSinToMult = vl$phenoInfo$CAT_SINGLE_TO_CAT_MULT[idx]
+		fieldType = vl$phenoInfo$ValueType[idx]
 
 		if (fieldType=="Integer") {		
 			cat(currentVar, "|| ", sep="")
@@ -20,26 +29,26 @@ testAssociations <- function(currentVar, currentVarShort, thisdata) {
 		    	testInteger(currentVarShort, "INTEGER", thisdata);			
 			}
 			cat("\n");
-	    }
+	    	}
 		else if (fieldType=="Continuous") {
 
 			cat(currentVar, "|| ", sep="")
 
-		    if (excluded!="") {
+		    	if (excluded!="") {
 				cat(paste("Excluded continuous: ", excluded, " || ", sep=""))
 				count$excluded.cont <<- count$excluded.cont+1;
-			}
+		    	}
 			else {
-	        	count$cont <<- count$cont	+ 1;
+	        		count$cont <<- count$cont	+ 1;
 				testContinuous(currentVarShort, "CONTINUOUS", thisdata);
-	        }
-	        cat("\n");
+	        	}
+	        	cat("\n");
 		}
-	    else if (fieldType=="Categorical single" && catSinToMult=="") {
+	    	else if (fieldType=="Categorical single" && catSinToMult=="") {
 
 			cat(currentVar, "|| ", sep="")
 	
-	    	if (excluded!="") {
+	    		if (excluded!="") {
 				cat(paste("Excluded cat-single: ", excluded, " || ", sep=""))
 				count$excluded.catSin <<- count$excluded.catSin+1;
 			}
@@ -64,8 +73,9 @@ testAssociations <- function(currentVar, currentVarShort, thisdata) {
 			cat("\n");
 		}
 		else {
-	        #cat("VAR MISSING ", currentVarShort, "\n", sep="");
-	    }
+	        	#cat("VAR MISSING ", currentVarShort, "\n", sep="");
+	    	}
+		}
 
 	}, error = function(e) {
 		print(paste("ERROR:", currentVar,e))

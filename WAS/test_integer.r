@@ -3,6 +3,11 @@ testInteger <- function(varName, varType, thisdata) {
 
 	pheno = thisdata[,phenoStartIdx:ncol(thisdata)]
 
+	if (!is.integer(pheno)) {
+		cat("SKIP Integer type but not integer",sep="");
+		return(NULL)
+	}
+
 	## average if multiple columns
 	if (!is.null(dim(pheno))) {
                 phenoAvg = rowMeans(pheno, na.rm=TRUE)
@@ -23,7 +28,7 @@ testInteger <- function(varName, varType, thisdata) {
 	else {
 		
 		## remove categories if < 10 examples
-	    phenoAvg = testNumExamples(phenoAvg)
+	    	phenoAvg = testNumExamples(phenoAvg)
 	    
 		## binary if 2 distinct values, else ordered categorical
 		phenoFactor = factor(phenoAvg)

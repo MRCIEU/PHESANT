@@ -45,8 +45,7 @@ phenoVars=colnames(data);
 #phenoVars = phenoVars[-c(1,2,3,4)];
 phenoVars = phenoVars[-c(1,2)]; # first and second columns are the id and snpScore, respectively, as determined in loadData.r
 
-
-## this decides on the start and end idxs of phentypes that we test, so that we can paralelise into multiple jobs
+## this decides on the start and end idxs of phentypes that we test, so that we can parallelise into multiple jobs
 if (opt$varTypeArg!="all") {
 	partSize = ceiling(length(phenoVars)/opt$numParts);
 	partStart = (opt$partIdx-1)*partSize + 1;
@@ -94,9 +93,7 @@ for (var in phenoVars) {
 	}
 	else {
 		## new variable so run test for previous (we have collected all the columns now)
-
 		if (first==FALSE) {
-	
 			thisdata = cbind.data.frame(data$geno, confounders, currentVarValues);
 			colnames(thisdata)[1] = "geno";
 
