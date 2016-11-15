@@ -54,8 +54,7 @@ The data coding file should have the following columns:
 
 1. dataCode - The ID of the data code.
 2. ordinal - Whether the field is ordinal (value 1) or not (value 0). Value -1 denotes this is not needed because the field is binary. 
-3. ordering - Any needed corrections for the numeric ordering of a data codes specified by Biobank. For example, data code (10001)[http://biobank.ctsu.ox.ac.uk/showcase/coding.cgi?id=100001] has values half=555, 1=1, and 200=2+, but we want the 'half' value should be less that the '1' value, so we
-set change the order to '555|1|200'
+3. ordering - Any needed corrections for the numeric ordering of a data codes specified by Biobank. For example, data code (10001)[http://biobank.ctsu.ox.ac.uk/showcase/coding.cgi?id=100001] has values half=555, 1=1, and 200=2+, but we want the 'half' value should be less than the '1' value, so we change the order to '555|1|200'. NB: if this column is used, then if any value is not included it is set to NA (so this field can be used to remove and reorder values at the same time).
 4. reassignments - Any value changes that are needed. For example, in data code (100662)[http://biobank.ctsu.ox.ac.uk/showcase/coding.cgi?id=100662], the values
 7 and 6 may be deemed equal (both representing 'never visited by friends/family' so we can set '7=6' to reassign the value 7 to the value 6.
 
@@ -87,7 +86,7 @@ results as validation only (e.g. a pheWAS of the BMI FTO SNP would expect the BM
  - ALL - Include all participants. 
  - NO_NAN - Included only those who have at least one value for this field.
  - field ID - Include only those who have a value for another field, with this field ID.
-4. CAT_SINGLE_TO_CAT_MULT - Specifies fields that have the categorical single field type (as specified by UK Biobank) but that we actually want to treat as categorical multiple.
+4. CAT_SINGLE_TO_CAT_MULT - Specifies fields that have the categorical single field type (as specified by UK Biobank) but that we actually want to treat as categorical multiple. State YES in this column to change this. To also convert the instances to arrays, state YES-INSTANCES. For example, field (20107)[http://biobank.ctsu.ox.ac.uk/showcase/field.cgi?id=20107] has illnesses stored in 10 arrays (for each instance) so it makes sense to treat this as a categorical(multiple) field. Field (40011)[http://biobank.ctsu.ox.ac.uk/showcase/field.cgi?id=40011] stores the histology of cancer tumours but is stored in 31 instances (rather than arrays) so we specify YES-INSTANCES so this field is treated as a categorical (multiple) field and the instances are treated as arrays.
 5. CAT_SINGLE_DATA_CODING - The data coding IDs for each categorical single file to map each of categorical single field to it's data code in the data code information file described above.
 
 ### Output
