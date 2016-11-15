@@ -31,7 +31,7 @@ initCounters <- function() {
 	cont.onevalue=0, cont.case2=0, cont.case3=0,
 	int.case1=0, int.case2=0, int.case3=0,
 	int.onevalue=0, 
-	catSin.case1=0, catSin.case2=0, catSin.case3=0, catSin.ace=0, catSin.onevalue=0,
+	catSin.case1=0, catSin.case2=0, catSin.case3=0, catSin.binaryorexcluded=0, catSin.onevalue=0,
 	ordCat=0, ordCat.500=0,
 	unordCat.500=0,
 	catMul.binary=0, catMul.10=0, catMul.over10=0,

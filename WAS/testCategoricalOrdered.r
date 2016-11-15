@@ -1,4 +1,4 @@
-testCategoricalOrdered <- function(varName, varType, thisdata) {
+testCategoricalOrdered <- function(varName, varType, thisdata, orderStr="") {
 
 	
 	pheno = thisdata[,phenoStartIdx:ncol(thisdata)]
@@ -11,6 +11,10 @@ testCategoricalOrdered <- function(varName, varType, thisdata) {
 
 	uniqVar = unique(na.omit(pheno));
 
+	# log the ordering of categories used
+	orderStr = setOrderString(orderStr, uniqVar);
+	cat("order: ", orderStr, " || ",  sep="");
+
 	numNotNA = length(which(!is.na(pheno)))
 	if (numNotNA<500) {
 		cat("SKIP (" ,numNotNA, "< 500 examples) || ",sep="");
@@ -18,7 +22,7 @@ testCategoricalOrdered <- function(varName, varType, thisdata) {
 	}
 	else {
 
-        phenoFactor = factor(pheno)
+	        phenoFactor = factor(pheno)
 		cat("num categories: ", length(levels(phenoFactor)), " || ", sep="");
 
 		# ordinal logistic regression
@@ -34,7 +38,7 @@ testCategoricalOrdered <- function(varName, varType, thisdata) {
 		}, error = function(e) {
 			sink()
 			sink(resLogFile, append=TRUE)
-            print(paste("ERROR:", varName,e))
+        		print(paste("ERROR:", varName,e))
 		})
 
 		ctable <- coef(summary(fit))
@@ -47,7 +51,7 @@ testCategoricalOrdered <- function(varName, varType, thisdata) {
 		se = ctable["geno", "Std. Error"];
 		lower = beta - 1.96*se;
 		upper = beta + 1.96*se;
-	
+		
 		write(paste(varName, varType, numNotNA, beta, lower, upper, pvalue, sep=","), file=paste(opt$resDir,"results-ordered-logistic-",opt$varTypeArg,".txt",sep=""), append="TRUE");
 		cat("SUCCESS results-ordered-logistic");
 		count$ordCat.success <<- count$ordCat.success + 1;
@@ -77,3 +81,21 @@ doCatOrdAssertions <- function(pheno) {
 
 
 	
+setOrderString <- function(orderStr, uniqVar) {
+
+	if (is.na(orderStr) || nchar(orderStr)==0) {
+
+		orderStr="";
+
+                uniqVarSorted = sort(uniqVar);
+                first=1;
+                for (i in uniqVarSorted) {
+                        if (first==0) {
+                                orderStr = paste(orderStr, "|",	sep="");
+                        }
+                        orderStr = paste(orderStr, i, sep="");
+			first=0;
+                }
+        }
+	return(orderStr);
+}

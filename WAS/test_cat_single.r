@@ -6,6 +6,27 @@ testCategoricalSingle <- function(varName, varType, thisdata) {
 	# assert variable has only one column
 	if (!is.null(dim(pheno))) stop("More than one column for categorical single")
 
+
+	# get data code info - whether this data code is ordinal or not and any reordering and resassignments
+        dataPheno = vl$phenoInfo[which(vl$phenoInfo$FieldID==varName),];
+        dataCode = dataPheno$CAT_SINGLE_DATA_CODING;
+	
+       	dataCodeRow = which(vl$dataCodeInfo$dataCode==dataCode);
+	if (length(dataCodeRow)==0) {
+                cat("ERROR: No row in data coding info file || ");
+		return(NULL);
+        }
+	dataDataCode = vl$dataCodeInfo[dataCodeRow,];
+        ordered = dataDataCode$ordinal;
+        order = as.character(dataDataCode$ordering);
+        reassignments = as.character(dataDataCode$reassignments);
+
+	## do reasssignments as specified in data coding info file
+	pheno = reassignValue(pheno,reassignments);
+
+	## reorder variable values into increasing order (we do this now as this may convert variable to binary rather than ordered)
+        pheno = reorderOrderedCategory(pheno,order);
+
         ## all categories coded as <0 we assume are `missing' values
         pheno = replaceMissingCodes(pheno);
 
@@ -15,10 +36,6 @@ testCategoricalSingle <- function(varName, varType, thisdata) {
 	uniqVar = unique(na.omit(pheno))
 	uniqVar = sort(uniqVar)
 
-	#numNotNA = length(which(!is.na(pheno)))
-	#if (numNotNA<500) {
-	#	cat("SKIP (", numNotNA, "< 500 examples) || ",sep="");
-	#} else 
 	if (length(uniqVar)<=1) {
 		cat("SKIP (only one value) || ");
 		count$catSin.onevalue <<- count$catSin.onevalue + 1;
@@ -31,20 +48,15 @@ testCategoricalSingle <- function(varName, varType, thisdata) {
 		phenoFactor = factor(pheno)
 		# binary - so logistic regression
 		thisdatanew = cbind.data.frame(thisdata[,1:numPreceedingCols], phenoFactor);
-        binaryLogisticRegression(varName, varType, thisdatanew)	
+	        binaryLogisticRegression(varName, varType, thisdatanew)	
 	}
 	else {
-
 		# > 2 categories
+		if (is.na(ordered)) {
+			cat(" ERROR: 'ordered' not found in data code info file")	
+		}
+		else {
 
-		# get data code and whether this data code is ordinal or not
-		dataPheno = vl$phenoInfo[which(vl$phenoInfo$FieldID==varName),];
-		dataCode = dataPheno$CAT_SINGLE_DATA_CODING;
-		dataDataCode = vl$dataCodeInfo[which(vl$dataCodeInfo$dataCode==dataCode),];
-		ordered = dataDataCode$ordinal;
-		order = dataDataCode$ordering;	
-		reassignments = dataDataCode$reassignments;
-		
 		## unordered
 		if (ordered == 0) {
 			
@@ -61,51 +73,47 @@ testCategoricalSingle <- function(varName, varType, thisdata) {
 			cat("ordered || ");
 			count$catSin.case1 <<- count$catSin.case1 + 1;
 
-			## reassign values and reorder variable values into increasing order
-			## FIXME: potentially reassigning values could reduce the number of categories to 2 - i.e. should treat as binary
-			pheno = reassignValue(pheno,reassignments);
-			pheno = reorderOrderedCategory(pheno,order);
+			## reorder variable values into increasing order
 			thisdatanew = cbind.data.frame(thisdata[,1:numPreceedingCols], pheno);
-			testCategoricalOrdered(varName, varType, thisdatanew);
+			testCategoricalOrdered(varName, varType, thisdatanew, order)
 		
 		}
 		else if (ordered == -2) {
-			cat(" SKIP (ACE variable) ")
-			count$catSin.ace <<- count$catSin.ace + 1;
+			cat(" EXCLUDED or BINARY variable: Should not get here in code. ")
+			count$catSin.binaryorexcluded <<- count$catSin.binaryorexcluded + 1;
 		}
 		else {
 			print(paste("ERROR", varName, varType, dataCode));
+		}
 		}
 	}
 
 }
 
+
 reassignValue <- function(pheno,reassignments) {
 
-#	cat(paste("aa ", class(reassignments), " ", reassignments, sep=""));
-	reassignments = as.character(reassignments);
+	# can be NA if row not included in data coding info file
 
-	if (!is.na(reassignments) && nchar(reassignments)>0) {
-#		print("XXXX")
-		reassignParts = unlist(strsplit(reassignments,"\\|"));
-
-		for(i in reassignParts) {
-			reassignParts = unlist(strsplit(i,"="));
-			idx = which(pheno==reassignParts[1]);
-			cat(paste(reassignParts[1], " ", reassignParts[2], " || "), sep="")
-			pheno[idx]=strtoi(reassignParts[2]);
+		if (!is.na(reassignments) && nchar(reassignments)>0) {
+			reassignParts = unlist(strsplit(reassignments,"\\|"));
+	
+			cat(paste("reassignments: ", reassignments, " || ", sep=""));
+			for(i in reassignParts) {
+				reassignParts = unlist(strsplit(i,"="));
+				idx = which(pheno==reassignParts[1]);
+	#			cat(paste(reassignParts[1], " ", reassignParts[2], " || "), sep="")
+				pheno[idx]=strtoi(reassignParts[2]);
+			}
 		}
-	}
+	
 
 	return(pheno)
 }
 
 reorderOrderedCategory <- function(pheno,order) {
+
 	## new pheno of NAs (all values not in order are assumed to be NA)
-
-
-#	cat(paste("xx ", class(order), " ", order, sep=""));	
-	order = as.character(order);
 
 	if (!is.na(order) && nchar(order)>0) {
 		
@@ -131,10 +139,4 @@ reorderOrderedCategory <- function(pheno,order) {
 	}
 	
 }
-
-
-
-
-
-
 

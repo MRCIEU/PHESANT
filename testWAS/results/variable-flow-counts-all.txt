@@ -17,7 +17,7 @@ integer, one value: 1
 integer, 2 distinct values: 2
 integer, 3-19 distinct values: 3
 categorical single, one value: 1
-categorical single, ACE: 0
+categorical single, binary or excluded (-1 in data code file) but not truely binary, or not marked as excluded in variable info file: 0
 categorical single, ordered: 2
 categorical single, not ordered: 2
 categorical single, binary: 2

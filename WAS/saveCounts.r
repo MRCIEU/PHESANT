@@ -29,7 +29,7 @@ saveCounts <- function() {
     	write(paste("integer, 3-19 distinct values:", count$int.case3), file=countFile, append="TRUE");
 	
 	write(paste("categorical single, one value:", count$catSin.onevalue), file=countFile, append="TRUE");
-    	write(paste("categorical single, ACE:", count$catSin.ace), file=countFile, append="TRUE");
+    	write(paste("categorical single, binary or excluded (-1 in data code file) but not truely binary, or not marked as excluded in variable info file:", count$catSin.binaryorexcluded), file=countFile, append="TRUE");
     	write(paste("categorical single, ordered:", count$catSin.case1), file=countFile, append="TRUE");
     	write(paste("categorical single, not ordered:", count$catSin.case2), file=countFile, append="TRUE");
     	write(paste("categorical single, binary:", count$catSin.case3), file=countFile, append="TRUE");

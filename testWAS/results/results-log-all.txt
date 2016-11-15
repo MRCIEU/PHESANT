@@ -3,22 +3,22 @@
 22000_0|| Excluded cat-multiple: YES || 
 1_0|| CONTINUOUS || IRNT || SUCCESS results-linear
 2_0|| CONTINUOUS || IRNT || SKIP (200< 500 examples) || 
-3_0|| CONTINUOUS || >20% IN ONE CATEGORY || CAT-ORD || num categories: 3 || SUCCESS results-ordered-logistic
-4_0|| CONTINUOUS || >20% IN ONE CATEGORY || CAT-ORD || SKIP (200< 500 examples) || 
+3_0|| CONTINUOUS || >20% IN ONE CATEGORY || CAT-ORD || order: 0|1|2 || num categories: 3 || SUCCESS results-ordered-logistic
+4_0|| CONTINUOUS || >20% IN ONE CATEGORY || CAT-ORD || order: 0|1|2 || SKIP (200< 500 examples) || 
 5_0|| CONTINUOUS || >20% IN ONE CATEGORY || sample 100/400(500) || SUCCESS results-logistic-binary 
 6_0|| CONTINUOUS || >20% IN ONE CATEGORY || SKIP (number of levels: 1)
 21_0|| INTEGER || CONTINUOUS || IRNT || SUCCESS results-linear
 22_0|| INTEGER || SKIP (number of levels: 1)
 23_0|| INTEGER || sample 800/100(900) || SUCCESS results-logistic-binary 
 24_0|| INTEGER || sample 800/91(891) || SUCCESS results-logistic-binary 
-25_0|| INTEGER || CAT-ORD || num categories: 3 || SUCCESS results-ordered-logistic
-26_0|| INTEGER || CAT-ORD || num categories: 3 || SUCCESS results-ordered-logistic
-27_0|| INTEGER || CAT-ORD || num categories: 19 || SUCCESS results-ordered-logistic
+25_0|| INTEGER || CAT-ORD || order: 0|1|2 || num categories: 3 || SUCCESS results-ordered-logistic
+26_0|| INTEGER || CAT-ORD || order: 0|1|3 || num categories: 3 || SUCCESS results-ordered-logistic
+27_0|| INTEGER || CAT-ORD || order: 0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18 || num categories: 19 || SUCCESS results-ordered-logistic
 32_0|| CAT-SINGLE || SKIP (only one value) || 
 33_0|| CAT-SINGLE || CAT-SINGLE-BINARY || BINARY-LOGISTIC-SKIP-500 (499) || 
 34_0|| CAT-SINGLE || CAT-SINGLE-BINARY || sample 300/600(900) || SUCCESS results-logistic-binary 
-35_0|| CAT-SINGLE || ordered || CAT-ORD || SKIP (499< 500 examples) || 
-36_0|| CAT-SINGLE || ordered || CAT-ORD || num categories: 6 || SUCCESS results-ordered-logistic
+35_0|| CAT-SINGLE || ordered || CAT-ORD || order: 0|1|2 || SKIP (499< 500 examples) || 
+36_0|| CAT-SINGLE || ordered || CAT-ORD || order: 0|1|2|3|4|5 || num categories: 6 || SUCCESS results-ordered-logistic
 37_0|| CAT-SINGLE || CAT-SINGLE-UNORDERED || SKIP (499< 500 examples) || 
 38_0|| CAT-SINGLE || CAT-SINGLE-UNORDERED || reference: 4=300 || SUCCESS results-notordered-logistic 
 41_0|| CAT-MULTIPLE ||  CAT-MUL-BINARY-VAR A1 || Remove NA participants 475 || CAT-MULT-SKIP-10 (516 vs 9) ||  CAT-MUL-BINARY-VAR A2 || Remove NA participants 475 || sample 495/30(525) || SUCCESS results-logistic-binary  CAT-MUL-BINARY-VAR A3 || Remove NA participants 475 || sample 25/500(525) || SUCCESS results-logistic-binary 
