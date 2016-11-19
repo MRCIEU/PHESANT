@@ -93,8 +93,10 @@ setOrderString <- function(orderStr, uniqVar) {
                         if (first==0) {
                                 orderStr = paste(orderStr, "|",	sep="");
                         }
-                        orderStr = paste(orderStr, i, sep="");
-			first=0;
+			if (i>=0) # ignore missing values
+                        	orderStr = paste(orderStr, i, sep="");
+				first=0;
+			end
                 }
         }
 	return(orderStr);

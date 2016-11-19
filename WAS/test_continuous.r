@@ -1,4 +1,22 @@
+
 testContinuous <- function(varName, varType, thisdata) {
+
+	cat("CONTINUOUS MAIN || ");	
+
+	pheno = thisdata[,phenoStartIdx:ncol(thisdata)]
+
+	# reassign values
+        pheno = reassignValue(pheno, varName)
+
+	thisdata[,phenoStartIdx:ncol(thisdata)] = pheno
+
+	testContinuous2(varName, varType, thisdata)
+	
+}
+
+
+## called from integer code because we alread reassigned values
+testContinuous2 <- function(varName, varType, thisdata) {
 	cat("CONTINUOUS || ");
 
 	pheno = thisdata[,phenoStartIdx:ncol(thisdata)]
@@ -36,32 +54,30 @@ testContinuous <- function(varName, varType, thisdata) {
 		#cat(length(which(phenoAvg==1)))
 		#cat(length(which(phenoAvg==2)))
 		
-		## remove categories if < 10 examples
-	    phenoAvg = testNumExamples(phenoAvg)
-
-		#cat(unique(phenoAvg))
-
+		## remove categories if < 10 examples to see if this should be binary or not, but if ordered categorical
+		## then we include all values when generating this
+	    	phenoAvgMoreThan10 = testNumExamples(phenoAvg)
 
 		## binary if 2 distinct values, else ordered categorical
-        phenoFactor = factor(phenoAvg)
-        numLevels = length(levels(phenoFactor))
+        	phenoFactor = factor(phenoAvg)
+        	numLevels = length(unique(na.omit(phenoAvgMoreThan10))) #length(levels(phenoFactor))
 
-        if (numLevels<=1) {
-            cat("SKIP (number of levels: ",numLevels,")",sep="")
+        	if (numLevels<=1) {
+       			cat("SKIP (number of levels: ",numLevels,")",sep="")
 			count$cont.onevalue <<- count$cont.onevalue + 1;
-        }
-        else if (numLevels==2) {
-	        # binary
+        	}
+        	else if (numLevels==2) {
+	        	# binary
 			count$cont.case2 <<- count$cont.case2 + 1;
-        	thisdatanew = cbind.data.frame(thisdata[,1:numPreceedingCols], phenoFactor);			
-        	binaryLogisticRegression(varName, varType, thisdatanew);
-        }
-        else {
+        		thisdatanew = cbind.data.frame(thisdata[,1:numPreceedingCols], phenoFactor);			
+        		binaryLogisticRegression(varName, varType, thisdatanew);
+        	}
+        	else {
 			count$cont.case3 <<- count$cont.case3 + 1;
 
 			## equal sized bins
 			phenoBinned = equalSizedBins(phenoAvg);
-            thisdatanew = cbind.data.frame(thisdata[,1:numPreceedingCols], phenoBinned);
+		        thisdatanew = cbind.data.frame(thisdata[,1:numPreceedingCols], phenoBinned);
 			testCategoricalOrdered(varName, varType, thisdatanew);
 		}
 	}

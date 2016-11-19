@@ -1,11 +1,11 @@
-Cat1_ID	Cat1_Title	Cat2_ID	Cat2_Title	Cat3_ID	Cat3_Title	Field	FieldID	EXPOSURE_PHENOTYPE	EXCLUDED	CAT_MULT_INDICATOR_FIELDS	CAT_SINGLE_TO_CAT_MULT	CAT_SINGLE_DATA_CODING	ValueType
+Cat1_ID	Cat1_Title	Cat2_ID	Cat2_Title	Cat3_ID	Cat3_Title	Field	FieldID	EXPOSURE_PHENOTYPE	EXCLUDED	CAT_MULT_INDICATOR_FIELDS	CAT_SINGLE_TO_CAT_MULT	DATA_CODING	ValueType
 100000	UK Biobank Assessment Centre	100006	Physical measures	100008	Anthropometry	FIELD1	1						Continuous
 100000	UK Biobank Assessment Centre	100006	Physical measures	100008	AnthropometrY	FIELD2	2						Continuous
 100000	UK Biobank Assessment Centre	100006	Physical measures	100008	Anthropometry	FIELD3	3						Continuous
 100000	UK Biobank Assessment Centre	100006	Physical measures	100008	Anthropometry	FIELD4	4						Continuous
 100000	UK Biobank Assessment Centre	100006	Physical measures	100008	Anthropometry	FIELD5	5						Continuous
 100000	UK Biobank Assessment Centre	100006	Physical measures	100008	Anthropometry	FIELD6	6						Continuous
-100000	UK Biobank Assessment Centre	100006	Physical measures	100008	Anthropometry	FIELD21	21						Integer
+100000	UK Biobank Assessment Centre	100006	Physical measures	100008	Anthropometry	FIELD21	21					5	Integer
 100000	UK Biobank Assessment Centre	100006	Physical measures	100008	Anthropometry	FIELD22	22						Integer
 100000	UK Biobank Assessment Centre	100006	Physical measures	100008	Anthropometry	FIELD23	23						Integer
 100000	UK Biobank Assessment Centre	100006	Physical measures	100008	Anthropometry	FIELD24	24						Integer
@@ -19,11 +19,11 @@ Cat1_ID	Cat1_Title	Cat2_ID	Cat2_Title	Cat3_ID	Cat3_Title	Field	FieldID	EXPOSURE_
 100000	UK Biobank Assessment Centre	100071	Verbal interview	100074	Medical conditions	FIELD36	36					2	Categorical single
 100000	UK Biobank Assessment Centre	100071	Verbal interview	100076	Operations	FIELD37	37					3	Categorical single
 100000	UK Biobank Assessment Centre	100071	Verbal interview	100076	Operations	FIELD38	38					3	Categorical single
-100000	UK Biobank Assessment Centre	100071	Verbal interview	100076	Operations	FIELD41	41			NO_NAN			Categorical multiple
-100000	UK Biobank Assessment Centre	100071	Verbal interview	100076	Operations	FIELD42	42			ALL			Categorical multiple
-100000	UK Biobank Assessment Centre	100071	Verbal interview	100076	Operations	FIELD43	43			99			Categorical multiple
-100000	UK Biobank Assessment Centre	100071	Verbal interview	100076	Operations	FIELD44	44			NO_NAN	YES-INSTANCES		Categorical single
+100000	UK Biobank Assessment Centre	100071	Verbal interview	100076	Operations	FIELD41	41			NO_NAN		4	Categorical multiple
+100000	UK Biobank Assessment Centre	100071	Verbal interview	100076	Operations	FIELD42	42			ALL		4	Categorical multiple
+100000	UK Biobank Assessment Centre	100071	Verbal interview	100076	Operations	FIELD43	43			99		4	Categorical multiple
+100000	UK Biobank Assessment Centre	100071	Verbal interview	100076	Operations	FIELD44	44			NO_NAN	YES-INSTANCES	4	Categorical single
 100000	UK Biobank Assessment Centre	100071	Verbal interview	100076	Operations	FIELD99	99		YES				Continuous
 100000	UK Biobank Assessment Centre	100071	Verbal interview	100076	Operations	FIELD31	31		YES				Integer
 100000	UK Biobank Assessment Centre	100071	Verbal interview	100076	Operations	FIELD21022	21022		YES				Categorical single
-100000	UK Biobank Assessment Centre	100071	Verbal interview	100076	Operations	FIELD22000	22000		YES				Categorical multiple
+100000	UK Biobank Assessment Centre	100071	Verbal interview	100076	Operations	FIELD22000	22000		YES		4		Categorical multiple

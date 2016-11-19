@@ -6,10 +6,11 @@ testCategoricalSingle <- function(varName, varType, thisdata) {
 	# assert variable has only one column
 	if (!is.null(dim(pheno))) stop("More than one column for categorical single")
 
+	pheno = reassignValue(pheno, varName)
 
-	# get data code info - whether this data code is ordinal or not and any reordering and resassignments
+	# get data code info - whether this data code is ordinal or not and any reordering
         dataPheno = vl$phenoInfo[which(vl$phenoInfo$FieldID==varName),];
-        dataCode = dataPheno$CAT_SINGLE_DATA_CODING;
+        dataCode = dataPheno$DATA_CODING;
 	
        	dataCodeRow = which(vl$dataCodeInfo$dataCode==dataCode);
 	if (length(dataCodeRow)==0) {
@@ -19,10 +20,6 @@ testCategoricalSingle <- function(varName, varType, thisdata) {
 	dataDataCode = vl$dataCodeInfo[dataCodeRow,];
         ordered = dataDataCode$ordinal;
         order = as.character(dataDataCode$ordering);
-        reassignments = as.character(dataDataCode$reassignments);
-
-	## do reasssignments as specified in data coding info file
-	pheno = reassignValue(pheno,reassignments);
 
 	## reorder variable values into increasing order (we do this now as this may convert variable to binary rather than ordered)
         pheno = reorderOrderedCategory(pheno,order);
@@ -90,26 +87,6 @@ testCategoricalSingle <- function(varName, varType, thisdata) {
 
 }
 
-
-reassignValue <- function(pheno,reassignments) {
-
-	# can be NA if row not included in data coding info file
-
-		if (!is.na(reassignments) && nchar(reassignments)>0) {
-			reassignParts = unlist(strsplit(reassignments,"\\|"));
-	
-			cat(paste("reassignments: ", reassignments, " || ", sep=""));
-			for(i in reassignParts) {
-				reassignParts = unlist(strsplit(i,"="));
-				idx = which(pheno==reassignParts[1]);
-	#			cat(paste(reassignParts[1], " ", reassignParts[2], " || "), sep="")
-				pheno[idx]=strtoi(reassignParts[2]);
-			}
-		}
-	
-
-	return(pheno)
-}
 
 reorderOrderedCategory <- function(pheno,order) {
 

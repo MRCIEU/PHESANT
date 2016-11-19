@@ -3,14 +3,19 @@ testInteger <- function(varName, varType, thisdata) {
 
 	pheno = thisdata[,phenoStartIdx:ncol(thisdata)]
 
-	if (!is.integer(pheno)) {
-		cat("SKIP Integer type but not integer",sep="");
+	if (!is.numeric(as.matrix(pheno))) {
+		cat("SKIP Integer type but not numeric",sep="");
 		return(NULL)
 	}
+
+	pheno = reassignValue(pheno, varName)
 
 	## average if multiple columns
 	if (!is.null(dim(pheno))) {
                 phenoAvg = rowMeans(pheno, na.rm=TRUE)
+		
+		# if participant only has NA values then NaN is generated so we convert back to NA
+		phenoAvg = replaceNaN(phenoAvg)
         }
 	else {
                 phenoAvg = pheno
@@ -22,7 +27,7 @@ testInteger <- function(varName, varType, thisdata) {
 	if (length(uniqVar)>=20) {
 		
 		thisdatanew = cbind.data.frame(thisdata[,1:numPreceedingCols], phenoAvg);
-		testContinuous(varName, varType, thisdatanew)
+		testContinuous2(varName, varType, thisdatanew)
 		count$int.case1 <<- count$int.case1 + 1;
 	}
 	else {
@@ -46,9 +51,9 @@ testInteger <- function(varName, varType, thisdata) {
 		}
 		else {
 			count$int.case3 <<- count$int.case3 + 1;
+
+			cat("3-20 values || ")
 			# we don't use equal sized bins just the original integers as categories
-#			phenoBinned = equalSizedBins(phenoAvg);
-#			thisdatanew = cbind.data.frame(thisdata[,1:numPreceedingCols], phenoBinned);
 			thisdatanew = cbind.data.frame(thisdata[,1:numPreceedingCols], phenoFactor);
 
 			# treat as ordinal categorical

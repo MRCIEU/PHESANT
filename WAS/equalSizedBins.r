@@ -80,7 +80,7 @@ equalSizedBins <- function(phenoAvg) {
                 phenoBinned[idx3] = 2;
 	}
 
-	#cat(length(idx1),',',length(idx2),',',length(idx3));
+	cat("cat N: ", length(idx1),", ",length(idx2),", ",length(idx3), " || ", sep="");
 	
 
 	return(phenoBinned);

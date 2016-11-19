@@ -8,7 +8,11 @@ testNumExamples <- function(pheno) {
                 numWithVal = length(withValIdx);
                 if (numWithVal<10) {
                         pheno[withValIdx]=NA
+#			cat(paste("Removed ",u ,": <10 examples || ", sep=""));
                 }
+		else {
+			cat(paste("Inc(>=10): ", u, "(", numWithVal, ") || ", sep=""));
+		}
         }
 	return(pheno);
 }

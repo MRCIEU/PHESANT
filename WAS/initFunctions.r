@@ -3,6 +3,7 @@
 
 loadSource <- function() {
 	source("loadData.r")
+	source("reassignValue.r")
 	source("validateInput.r")
 	source("testNumExamples.r")
 	source("binaryLogisticRegression.r")
@@ -74,6 +75,7 @@ initResultsFiles <- function() {
 initVariableLists <- function() {
 
 	phenoInfo=read.table(opt$variablelistfile,sep="\t",header=1,comment.char="",quote="");
+
 	dataCodeInfo=read.table(opt$datacodingfile,sep=",", header=1);
 
 	vars=list(phenoInfo=phenoInfo, dataCodeInfo=dataCodeInfo);
