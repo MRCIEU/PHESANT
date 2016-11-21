@@ -97,7 +97,7 @@ for (var in phenoVars) {
 			thisdata = cbind.data.frame(data$geno, confounders, currentVarValues);
 			colnames(thisdata)[1] = "geno";
 
-			if (phenoIdx>=partStart && phenoIdx<=partEnd) { # only start new variable processing if first column of it is within the idx range for this part
+			if (phenoIdx>=partStart && phenoIdx<=partEnd) { # only start new variable processing if last column of it is within the idx range for this part
 				testAssociations(currentVar, currentVarShort, thisdata);
 			}
 		}
