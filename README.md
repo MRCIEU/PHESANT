@@ -17,6 +17,8 @@ Java for part 3 above. Tested with jdk-1.8.0-66.
 
 ## Citing this project
 
+Please cite:
+
 Millard, L.A.C, et al. Software Application Profile: PHESANT: a tool for performing automated phenome scans in UK Biobank. bioRxiv (2016)
 
 
@@ -33,7 +35,7 @@ The phenome scan is run with the following arguments:
 Arg | Description
 -------|--------
 outcomefile 		| Comma separated file containing phenotypes, and a user id column. Where there are multiple columns for a phenotype these must be adjacent in the file. Specifically for a given field in Biobank the instances should be adjacent and within each instance the arrays should be adjacent. Each variable name is in the format 'x[varid]\_[instance]\_[array]' (we use the prefix 'x' so that the variable names are valid in R).
-exposurefile 		| Comma separated file containing the exposure variable (e.g. a snp or genetic risk score).
+exposurefile 		| Comma separated file containing the trait of interest (e.g. a snp, genetic risk score or observed phenotype).
 variablelistfile 	| Tab separated file containing information about each phenotype, that is used to process them (see below).
 datacodingfile 		| Comma separated file containing information about data codings (see below).
 exposurevariable 	| Variable name as in exposurefile.
@@ -54,15 +56,15 @@ The data coding file should have the following columns:
 
 1. dataCode - The ID of the data code.
 2. ordinal - Whether the field is ordinal (value 1) or not (value 0). This field is only used for fields of the categorical (single) field type. Value -1 denotes this is not needed because the field is binary. 
-3. ordering - Any needed corrections for the numeric ordering of a data codes specified by Biobank. This field is only used for data codes specified as ordinal in the ordinal column. For example, data code [10001](http://biobank.ctsu.ox.ac.uk/showcase/coding.cgi?id=100001) has values half=555, 1=1, and 200=2+, but we want the 'half' value should be less than the '1' value, so we change the order to '555|1|200'. NB: if this column is used, then if any value is not included it is set to NA (so this field can be used to remove and reorder values at the same time).
+3. ordering - Any needed corrections for the numeric ordering of a data codes specified by Biobank. This field is only used for data codes specified as ordinal in the ordinal column. For example, data code [10001](http://biobank.ctsu.ox.ac.uk/showcase/coding.cgi?id=100001) has values half, 1 and 2+ coded as 555, 1 and 200, respectively. We need the 'half' value to be less than the '1' value, so we change the order to '555|1|200'. NB: if this column is used then, if any value is not included it is set to NA (so this field can be used to remove and reorder values at the same time).
 4. reassignments - Any value changes that are needed. For example, in data code [100662](http://biobank.ctsu.ox.ac.uk/showcase/coding.cgi?id=100662), the values
 7 and 6 may be deemed equal (both representing 'never visited by friends/family' so we can set '7=6' to reassign the value 7 to the value 6.
 
 
 #### Variable information file
 
-This file was initially the UK Biobank Data dictionary, which can be downloaded from their website [here](http://biobank.ctsu.ox.ac.uk/~bbdatan/Data_Dictionary_Showcase.csv).
-This provides the following set of information used in this phenome tool:
+This file was initially the UK Biobank Data dictionary, which can be downloaded from the UK Biobank website [here](http://biobank.ctsu.ox.ac.uk/~bbdatan/Data_Dictionary_Showcase.csv).
+This provides the following set of information about fields, used in this phenome scan tool:
 
 1. ValueType column - the field type, either 'Integer', 'Continuous', 'Categorical single', 'Categorical multiple', or a few others we do not use.
 2. Three Cat_ID and three Cat_Title columns - the three levels of the category hierarchy, that can be seen [here](http://biobank.ctsu.ox.ac.uk/showcase/label.cgi)
@@ -72,7 +74,7 @@ This provides the following set of information used in this phenome tool:
 The variable information file also has the following columns that we have added, to provide additional information used in the phenome scan:
 
 1. EXPOSURE_PHENOTYPE - Specifies any field that represents the exposure phenotype. This is a marker so that after the phenome scan is run we can use these
-results as validation only (e.g. a pheWAS of the BMI FTO SNP would expect the BMI phenotypes to show high in the results ranking), i.e. they do not contribute to the multiple testing burden. We have set this code up for BMI, so have marked BMI/weight fields as an exposure - you'll need to change this for you particualar trait or interest. 
+results as validation only (e.g. a pheWAS of the BMI FTO SNP would expect the BMI phenotypes to show high in the results ranking), i.e. they do not contribute to the multiple testing burden. We have set this code up for BMI, so have marked BMI/weight fields as an exposure - you'll need to change this for your particular trait or interest. 
 2. EXCLUDED - Phenotypes we have apriori decided to exclude from the phenome scan. Any field with a value in this field is excluded, and we state a code that describes the reason we exclude a variable (for future reference). Our codes and reasons are as follows (of course for your phenome scan you can add others as you would like): 
  - YES-ACE: "Assessment center environment" variables that do not directly describe the participant.
  - YES-AGE: Age variables.
@@ -95,13 +97,12 @@ In the directory specified with the `resDir` argument, the following files will 
 1. Results files for each test type:
  - Linear regression: results-linear-all.txt - One line for each linear regression result
  - Logistic regression: results-logistic-all.txt - One line for each logistic regression result
- - Multinomial regression: results-multinomial-all.txt - Each multinomial regression results in n lines in this results file, where n is the number of categories in the variables. One line corresponds to the results for a particular category compared to an assigned baseline category (the category with the highest sample size), and then there is also one line for the overall assocation of this variable (across all categories).
+ - Multinomial regression: results-multinomial-all.txt - Each multinomial regression results in *n* lines in this results file, where *n* is the number of categories in the variable. One line corresponds to the results for a particular category compared to an assigned baseline category (the category with the highest sample size), and then there is also one line for the overall association of this variable (across all categories), using a likelihood ratio test comparing this model with the model with confounders only.
  - Ordered logistic regression: results-ordered-logistic-all.txt - One line for each ordinal logistic regression result.
-2. A log file: results-log-all.txt - One line for each Biobank field, providing information about the processing flow for this field. 
+2. A log file: results-log-all.txt - One line for each Biobank field, providing information about the processing flow for this field.
 3. Flow counts file: variable-flow-counts-all.txt - A set of counts denoting the number of variables reaching each point in the processing flow (see figure above).
 
-Where the phenome scan is run in parallel setup then each parallel part will have one of each of the above files, with 'all' in each filename replaced
-with: [partIdx]-[partNum].
+Where the phenome scan is run in parallel setup then each parallel part will have one of each of the above files, with 'all' in each filename replaced with: [partIdx]-[partNum].
 
 
 See testWAS/README.md for an example with test data.
@@ -133,6 +134,6 @@ See testWAS/README.md for an example with test data.
 A phenome scan generates a large number of results. The aim of this visualisation is to help with interpretation, by allowing the researcher to view each result in the context of the
 results of related traits.
 
-See the resultsVisualisation folder and README for more info.
+See the resultsVisualisation folder and README.md therein for more information.
 
 
