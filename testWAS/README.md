@@ -1,12 +1,12 @@
 
-## To run this test pheWAS do -
+## To run this test phenome scan do -
 
 ```bash
 cd ../WAS/
 
 testDir="../testWAS/"
 
-Rscript phewas.r \
+Rscript phenomeScan.r \
 --outcomefile="${testDir}data/phenotypes.csv" \
 --exposurefile="${testDir}data/exposure.csv" \
 --variablelistfile="${testDir}variable-lists/outcome-info.tsv" \
@@ -20,7 +20,7 @@ Here is a shortcut to this test example:
 
 ```bash
 cd ../WAS/
-Rscript phewas.r --test
+Rscript phenomeScan.r --test
 ```
 
 Or to run part 1 of 3 parts use:
@@ -30,7 +30,7 @@ cd ../WAS/
 
 testDir="../testWAS/"
 
-Rscript phewas.r \
+Rscript phenomeScan.r \
 --outcomefile="${testDir}data/phenotypes.csv" \
 --exposurefile="${testDir}data/exposure.csv" \
 --variablelistfile="${testDir}variable-lists/outcome-info.tsv" \
@@ -75,6 +75,6 @@ java -cp .:../jar/json-simple-1.1\ 2.jar ResultsToJSON "../../testWAS/results/re
 
 ```
 
-This generates the json file containing the pheWAS results, in the resultsVisualisation/web directory.
+This generates the JSON file containing the phenome scan results, in the resultsVisualisation/web directory.
 
 

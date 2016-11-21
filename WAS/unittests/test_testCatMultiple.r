@@ -2,7 +2,7 @@
 library("testthat");
 #install.packages("testthat")
 
-source("../test_cat_multiple.r");
+source("../testCatMultiple.r");
 source("../replaceNaN.r")
 
 # categorical multiple phenotype with two arrays

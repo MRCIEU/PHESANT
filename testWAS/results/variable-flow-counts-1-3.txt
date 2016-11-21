@@ -1,3 +1,4 @@
+Field not listed in phenotype information file: 0
 excluded integer: 1
 excluded continuous: 0
 excluded categorical single: 1
@@ -16,7 +17,7 @@ integer, one value: 1
 integer, 2 distinct values: 1
 integer, 3-19 distinct values: 0
 categorical single, one value: 0
-categorical single, ACE: 0
+categorical single, binary or excluded (-1 in data code file) but not truely binary, or not marked as excluded in variable info file: 0
 categorical single, ordered: 0
 categorical single, not ordered: 0
 categorical single, binary: 0

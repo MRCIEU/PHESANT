@@ -1,5 +1,5 @@
-# UKBiobank-phenome scan
-Run a phenome scan (pheWAS, Mendelian randomisation (MR)-pheWAS etc.) in UK Biobank
+# PHESANT - PHEnome scan ANalysis Tool
+Run a phenome scan (pheWAS, Mendelian randomisation (MR)-pheWAS etc.) in UK Biobank.
 
 There are three components in this project:
 
@@ -24,7 +24,7 @@ Millard, L.A.C, et al. Software Application Profile: PHESANT: a tool for perform
 
 ## 1) Running a phenome scan
 
-A phenome scan is run using WAS/phewas.r script. This is basically ready to go - the only essential amendment you will need to make is the EXPOSURE column in the variable information file (see below).
+A phenome scan is run using WAS/phenomeScan.r script. This is basically ready to go - the only essential amendment you will need to make is the EXPOSURE column in the variable information file (see below).
 
 The PHESANT phenome scan processing pipeline is illustrated in the figure [here](biobank-PHESANT-figure.pdf), and described in detail in the paper above.
 

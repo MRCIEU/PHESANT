@@ -26,7 +26,7 @@ testAssociations <- function(currentVar, currentVarShort, thisdata) {
 			}
 			else {
 				count$int <<- count$int + 1;
-		    	testInteger(currentVarShort, "INTEGER", thisdata);			
+			    	testInteger(currentVarShort, "INTEGER", thisdata);			
 			}
 			cat("\n");
 	    	}
@@ -54,7 +54,7 @@ testAssociations <- function(currentVar, currentVarShort, thisdata) {
 			}
 			else {
 				count$catSin <<- count$catSin + 1;
-		    	testCategoricalSingle(currentVarShort, "CAT-SIN", thisdata);
+			    	testCategoricalSingle(currentVarShort, "CAT-SIN", thisdata);
 			}
 			cat("\n");
 	  	}

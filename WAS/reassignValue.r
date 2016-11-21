@@ -17,7 +17,12 @@ reassignValue <- function(pheno, varName) {
 
 	dataDataCode = vl$dataCodeInfo[dataCodeRow,];
         reassignments = as.character(dataDataCode$reassignments);
+	
+	return(reassignValue2(pheno, reassignments))
+	
+}
 
+reassignValue2 <- function(pheno, reassignments) {
 	# can be NA if row not included in data coding info file
 	if (!is.na(reassignments) && nchar(reassignments)>0) {
 		reassignParts = unlist(strsplit(reassignments,"\\|"));
