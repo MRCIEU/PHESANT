@@ -21,14 +21,18 @@ testCategoricalUnordered <- function(varName, varType, thisdata) {
 		confounders=thisdata[,2:numPreceedingCols];
 		fit <- multinom(phenoFactor ~ geno + ., data=confounders)
 
+		## baseline model with only confounders, to which we compare the model above
+		fitB <- multinom(phenoFactor ~ ., data=confounders)
+
+		## compare model to baseline model
 		require(lmtest)
-		lres = lrtest(fit)
+		lres = lrtest(fit, fitB)
 		modelP = lres[2,"Pr(>Chisq)"];
-			
+		
 		## save result to file
 		maxFreq = length(which(phenoFactor==reference));
 		numNotNA = length(which(!is.na(pheno)))
-	    write(paste(paste(varName,"-",reference,sep=""), varType, paste(maxFreq,"/",numNotNA,sep=""), -999, -999, -999, modelP, sep=","), file=paste(opt$resDir,"results-multinomial-logistic-",opt$varTypeArg,".txt",sep=""), append="TRUE")
+	    	write(paste(paste(varName,"-",reference,sep=""), varType, paste(maxFreq,"/",numNotNA,sep=""), -999, -999, -999, modelP, sep=","), file=paste(opt$resDir,"results-multinomial-logistic-",opt$varTypeArg,".txt",sep=""), append="TRUE")
 		#write("aaa",file=paste(resDir,"results-multinomial-logistic-",varTypeArg,".txt",sep=""), append="TRUE")
 
 		sink()
