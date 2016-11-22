@@ -1,5 +1,5 @@
 
-# PHESANT-vis - a visualisation for phenome scans
+# PHESANT-vis — a visualisation for phenome scans
 
 ## Overview
 
