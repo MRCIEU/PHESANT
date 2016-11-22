@@ -51,7 +51,7 @@ cd ../resultsProcessing/
 
 Rscript mainCombineResults.r \
 --resDir="../testWAS/results/" \
---variablelistfile="../WAS/testWAS/variable-lists/outcome-info.tsv"
+--variablelistfile="../testWAS/variable-lists/outcome-info.tsv"
 ```
 
 Or to perform results processing on parallel results do - 

@@ -29,13 +29,12 @@ public class ResultsToJSON {
 	List<JSONObject> level2nodes = new ArrayList<JSONObject>();
 	List<JSONObject> level3nodes = new ArrayList<JSONObject>();
 	List<JSONObject> level4nodes = new ArrayList<JSONObject>();	
-	
-//	protected static CompositeNodeGenerator compositeNodeGenerator; 
+	List<JSONObject> level5nodes = new ArrayList<JSONObject>();	
 	
 	public static void main (String []args) {
 		
 		if (args.length!=3)
-			throw new IllegalArgumentException("Two arguments required: 1) path to results files and 2) path to output file");
+			throw new IllegalArgumentException("Three arguments required: 1) path to results files, 2) path to node position file and 3) path to output file");
 		
 		String resultsFile = args[0];
 		String nodePositionsFile = args[1];
@@ -53,7 +52,6 @@ public class ResultsToJSON {
 	
 	public void doResultsToJSON() {
 		
-//		String csvFile = resultsFile;//"/Users/lm0423/OneDrive - University of Bristol/biobank-bmi/results-visualisation/scripts-20160928/results-combined-no-quotes.txt";
         String line = "";
         String cvsSplitBy = "\t";
 
@@ -67,7 +65,9 @@ public class ResultsToJSON {
             	if (first==false) {
 	                String[] result = line.split(cvsSplitBy);
 	                PhewasResult pr = new PhewasResult(result);
-	                phewasResults.add(pr);
+	                
+	                if (pr.getIsExposure().length()==0)
+	                	phewasResults.add(pr);
             	} else
             		first = false;
             }
@@ -112,6 +112,7 @@ public class ResultsToJSON {
 	}
 	
 	private void addCompositeChildNodes() {
+		CompositeNodeGenerator.addCompositeChildNodes(level5nodes);
 		CompositeNodeGenerator.addCompositeChildNodes(level4nodes);
 		CompositeNodeGenerator.addCompositeChildNodes(level3nodes);
 		CompositeNodeGenerator.addCompositeChildNodes(level2nodes);
@@ -127,7 +128,6 @@ public class ResultsToJSON {
 		String jsonstr = root.toJSONString();
 		PrintWriter out;
 		try {
-//			out = new PrintWriter( "/Users/lm0423/OneDrive - University of Bristol/biobank-bmi/results-visualisation/java-version-20161006/java-json.json");
 			out = new PrintWriter(outputFile);
 			out.write(jsonstr);
 			out.flush();
@@ -138,7 +138,6 @@ public class ResultsToJSON {
 	}
 
 	private void readNodePositions() {
-//		String nodePositionsFile = "/Users/lm0423/OneDrive - University of Bristol/biobank-bmi/results-visualisation/java-version-20161006/node-positions.csv";
 
 		String line = "";
         String cvsSplitBy = ",";
@@ -196,6 +195,8 @@ public class ResultsToJSON {
 					level3nodes.add(jo);
 				else if (l.level==4)
 					level4nodes.add(jo);
+				else if (l.level==5)
+					level5nodes.add(jo);
 				
 			}
 			
@@ -222,6 +223,7 @@ public class ResultsToJSON {
 		jo.put("type", "circle");
 		jo.put("structure", 1);
 		jo.put("catm", l.type.equals("CAT-MUL")?1:0);
+		jo.put("catmpart", l.type.equals("CAT-MUL-PART")?1:0);
 		jo.put("children", new JSONArray());
 //		jo.put("parent", currentNode); 
 		jo.put("xpos", ""+xpositions.get(id));

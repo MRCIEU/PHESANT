@@ -45,7 +45,7 @@ var width = 1500,
 
 var force = d3.layout.force()
     .size([width, height])
-    .charge(-80)
+    .charge(-60)
     .gravity(0.3)
     //.linkDistance(50)
     .on("tick", tick);
@@ -296,6 +296,9 @@ function color(d) {
   }
   else if (d.catm==1) {
   	return "purple";
+  }
+  else if (d.catmpart==1) {
+  	return "#9b89ab";
   }
   else if (d.result!=null) {
   		if (d.result=="POSITIVESTRONG" || d.result=="NEGATIVESTRONG" || d.result=="UNORDEREDSTRONG") {

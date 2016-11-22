@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Level;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class PhewasResult implements Comparable {
 
@@ -14,6 +15,7 @@ public class PhewasResult implements Comparable {
 	protected ResultType resType;
 	protected String description;
 	protected String isExposure;
+	
 	protected Integer cat1_id;
 	protected String cat1_title;
 	protected Integer cat2_id;
@@ -108,16 +110,31 @@ public class PhewasResult implements Comparable {
 		List<Level> levels = new ArrayList<Level>();
 		
 		int level=1;
-		levels.add(new Level(this.cat1_title, this.cat1_id, "BIO-CAT", level++));
-		levels.add(new Level(this.cat2_title, this.cat2_id, "BIO-CAT", level++));
+		levels.add(new Level(this.cat1_title, this.cat1_id+"", "BIO-CAT", level++));
+		levels.add(new Level(this.cat2_title, this.cat2_id+"", "BIO-CAT", level++));
 		
 		
 		if (this.cat3_id!=null && !this.cat3_id.equals(this.cat2_id)) {
-			levels.add(new Level(this.cat3_title, this.cat3_id, "BIO-CAT", level++));
+			levels.add(new Level(this.cat3_title, this.cat3_id+"", "BIO-CAT", level++));
 		}
 		
-		if (this.catMultId!=null)
-			levels.add(new Level(this.description, this.catMultId, "CAT-MUL", level++));
+		if (this.catMultId!=null) {
+			
+			levels.add(new Level(this.description, this.catMultId+"", "CAT-MUL", level++));
+			
+			// add a stucture node for the letter because these cat mult fields have lots of categories (too many nodes on the graph showing at once!)
+			if (this.catMultId==41201 || this.catMultId==41202 || this.catMultId==41204 || this.catMultId==41200 || this.catMultId==41210) {
+				String catId = this.varName.split("#")[1];
+				Pattern r = Pattern.compile("\\A([A-Z]+)(\\d+)");
+				Matcher m = r.matcher(catId);
+				if (m.find( )) {
+					String startLetters = m.group(1);
+					levels.add(new Level("Codes starting with: "+startLetters, this.varName.split("#")[0]+"-"+startLetters, "CAT-MUL-PART", level++));
+				}
+			
+			}
+		
+		}
 		
 		return levels;
 		
@@ -126,11 +143,11 @@ public class PhewasResult implements Comparable {
 	
 	class Level {
 		String name; 
-		int id; 
+		String id; 
 		String type;
 		int level;
 		
-		public Level(String name, int id, String type, int level) {
+		public Level(String name, String id, String type, int level) {
 			this.name = name;
 			this.id = id;
 			this.type = type;
@@ -178,6 +195,15 @@ public class PhewasResult implements Comparable {
 		String varN =  (resType.equals(ResultType.MULTINOMIAL_LOGISTIC) ? varName.replace("-", "; baseline:"): (varName.contains("#") ? varName.replace("#", "; category:"): varName));
 		String displayName = description  + " (" + varN + ")";
 		return displayName;
+	}
+	
+	public String getIsExposure() {
+		return isExposure;
+	}
+
+
+	public void setIsExposure(String isExposure) {
+		this.isExposure = isExposure;
 	}
 	
 }

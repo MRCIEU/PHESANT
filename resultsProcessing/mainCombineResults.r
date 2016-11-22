@@ -43,7 +43,7 @@ combineAndSortResults();
 source("addVariableDescriptions.r");
 addVariableDescriptions();
 
-write.table(resultsAll, file=paste(opt$resDir,"results-combined.txt",sep=""), row.names=FALSE, quote=FALSE, sep="\t");
+write.table(resultsAll, file=paste(opt$resDir,"results-combined.txt",sep=""), row.names=FALSE, quote=FALSE, sep="\t", na="");
 
 
 
