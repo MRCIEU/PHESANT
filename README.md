@@ -1,4 +1,4 @@
-# PHESANT - PHEnome scan ANalysis Tool
+# PHESANT - PHEnome Scan ANalysis Tool
 Run a phenome scan (pheWAS, Mendelian randomisation (MR)-pheWAS etc.) in UK Biobank.
 
 There are three components in this project:
