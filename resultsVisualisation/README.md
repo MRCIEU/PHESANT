@@ -5,9 +5,11 @@
 
 This directory contains the code used to produce a D3 visualisation that displays the results of a phenome scan, in the context of the hierarchical categorical structure that UK Biobank has specified.
 
+See example for a MR-pheWAS of BMI (preliminary analysis) [here](www.datamining.org.uk/PHESANT/BMI-preliminary.html).
+
 The visualisation is a tree structure, with the following node types:
 
-Structure nodes:
+A. Structure nodes:
 
 1. Root node (pink, circle): The root of the tree, whose child nodes are the top level categories in UK Biobank.
 2. Biobank category nodes (blue, circles): The Biobank category hierarchy found [here](http://biobank.ctsu.ox.ac.uk/showcase/label.cgi).
@@ -15,7 +17,7 @@ Structure nodes:
 4. Biobank subgroups of category multiple fields (light purple, circles): A subset of category multiple fields have a large number of results and also have a natural set of 
 groupings across their categories (41201, 41202, 41204, 41200, 41210) and so we split these into these groups so they are easier to consider when viewing PHESANT-vis.
 
-Results nodes:
+B. Results nodes:
 
 5. Composite results nodes: These nodes collate the results in a particular subtree, so that there are a manageable number of nodes in the visualisation at once. The size of the node reflects the number of results in this subtree, of the following types:
  - Composite node for strong results (yellow, diamond)
@@ -36,12 +38,12 @@ The structure nodes can be clicked to display or hide the structure below this n
 
 The D3 visualisation code consists of:
 
-1. A HTML page that includes the D3 javascript visualisation code (this does not change).
+1. A HTML page that includes the D3 Javascript visualisation code (this does not change).
 2. A JSON file containing the results data in a format that D3 can use to generate the visualisation (this is specific to each particular phenome scan).
 
 This directory has 3 subdirectories:
 
-1. src - contains the java source code that is used to generate the JSON. You will not need to go in here unless you want to change the visualisation and need to amend the JSON that is used.
+1. src - contains the Java source code that is used to generate the JSON. You will not need to go in here unless you want to change the visualisation and need to amend the JSON that is used.
 2. bin - Java classes (compiled versions of the files in the src directory). These are used to generate the JSON files needed for the visualisation.
 3. web - HTML and JSON files for the D3 visualisation.
 
