@@ -36,7 +36,7 @@ cd WAS/
 Rscript phenomeScan.r \
 --outcomefile=<phenotypesFilePath> \
 --exposurefile=<traitOfInterestFilePath> \
---variablelistfile="../variable-info/outcome-info.tsv \
+--variablelistfile="../variable-info/outcome-info.tsv" \
 --datacodingfile="../variable-info/data-coding-ordinal-info.csv" \
 --exposurevariable=<traitOfInterestName> \
 --resDir=<resultsDirectoryPath> \
