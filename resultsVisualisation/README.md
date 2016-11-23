@@ -13,9 +13,9 @@ A. Structure nodes:
 
 1. Root node (pink, circle): The root of the tree, whose child nodes are the top level categories in UK Biobank.
 2. Biobank category nodes (blue, circles): The Biobank category hierarchy found [here](http://biobank.ctsu.ox.ac.uk/showcase/label.cgi).
-3. Biobank category multiple fields (purple, circles): Used to group the set of binary variables generated from a given category multiple fields.
+3. Biobank category multiple fields (purple, circles): Used to group the set of binary variables generated from a given categorical (multiple) field.
 4. Biobank subgroups of category multiple fields (light purple, circles): A subset of category multiple fields have a large number of results and also have a natural set of 
-groupings across their categories (41201, 41202, 41204, 41200, 41210) and so we split these into these groups so they are easier to consider when viewing PHESANT-vis.
+groupings across their categories ([41201](http://biobank.ctsu.ox.ac.uk/showcase/field.cgi?id=41201), [41202](http://biobank.ctsu.ox.ac.uk/showcase/field.cgi?id=41202), [41204](http://biobank.ctsu.ox.ac.uk/showcase/field.cgi?id=41204), [41200](http://biobank.ctsu.ox.ac.uk/showcase/field.cgi?id=41200), [41210](http://biobank.ctsu.ox.ac.uk/showcase/field.cgi?id=41210) and so we split these into these groups (based on the starting letter of their coded value) so they are easier to consider when viewing PHESANT-vis.
 
 B. Results nodes:
 
@@ -24,13 +24,15 @@ B. Results nodes:
  - Composite node for weak results (pale yellow, diamond)
  - Composite node for null results (grey, diamond)
 6. Individual results nodes: These nodes represent a particular test performed in the phenome scan, divided into the following types:
- - Strong positive association (yellow, up triangle)
- - Strong negative association (yellow, down triangle)
- - Strong unordered association (yellow, circle)
- - Weak positive association (pale yellow, up triangle)
- - Weak negative association (pale yellow, down triangle)
- - Weak unordered association (pale yellow, circle)
+ - Strong positive association (yellow, up triangle): P value < Bonferroni-corrected threshold (0.05/#tests), and positive association.
+ - Strong negative association (yellow, down triangle): P value < Bonferroni-corrected threshold (0.05/#tests), and negative association.
+ - Strong unordered association (yellow, circle): P value < Bonferroni-corrected threshold (0.05/#tests), and test was multinomial regression (unordered).
+ - Weak positive association (pale yellow, up triangle): P value < 0.05, and positive association.
+ - Weak negative association (pale yellow, down triangle): P value < 0.05, and negative association.
+ - Weak unordered association (pale yellow, circle): P value < 0.05, and test was multinomial regression (unordered).
  - Null result (grey, square)
+
+Note: Whether an association is negative or positive depends on the coding of the variable, and occasionally these are in an unintuitive direction.
 
 The structure nodes can be clicked to display or hide the structure below this node in the tree.
 

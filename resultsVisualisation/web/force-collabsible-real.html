@@ -23,14 +23,15 @@
 </style>
 <body>
 
-<div style="position:absolute;top:30px;left:70px;font-size:10pt">Root node <i>(Collapsable and expandable)</i></div>
-<div style="position:absolute;top:45px;left:70px;font-size:10pt">Category node <i>(Collapsable and expandable)</i></div>
-<div style="position:absolute;top:60px;left:70px;font-size:10pt">Categorical multiple variable <i>(Collapsable and expandable)</i></div>
+<div style="position:absolute;top:15px;left:70px;font-size:10pt">Root node <i>(Collapsable and expandable)</i></div>
+<div style="position:absolute;top:30px;left:70px;font-size:10pt">Category node <i>(Collapsable and expandable)</i></div>
+<div style="position:absolute;top:45px;left:70px;font-size:10pt">Categorical multiple variable <i>(Collapsable and expandable)</i></div>
+<div style="position:absolute;top:60px;left:70px;font-size:10pt">Categorical multiple variable subgroup <i>(Collapsable and expandable)</i></div>
 <div style="position:absolute;top:75px;left:70px;font-size:10pt">Composite of null results in category (size denotes n)</div>
 <div style="position:absolute;top:90px;left:70px;font-size:10pt">Composite of associations found in category (size denotes n)</div>
-<div style="position:absolute;top:105px;left:70px;font-size:10pt">p &lt; 4.15x10<sup>-6</sup>, strong negative association</div>
-<div style="position:absolute;top:120px;left:70px;font-size:10pt">p &lt; 4.15x10<sup>-6</sup>, strong positive association</div>
-<div style="position:absolute;top:135px;left:70px;font-size:10pt">p &lt; 4.15x10<sup>-6</sup>, strong unordered association</div>
+<div style="position:absolute;top:105px;left:70px;font-size:10pt">p &lt; Bonferroni-corrected threshold, strong negative association</div>
+<div style="position:absolute;top:120px;left:70px;font-size:10pt">p &lt; Bonferroni-corrected threshold, strong positive association</div>
+<div style="position:absolute;top:135px;left:70px;font-size:10pt">p &lt; Bonferroni-corrected threshold, strong unordered association</div>
 <div style="position:absolute;top:150px;left:70px;font-size:10pt">p &lt; 0.05, weak negative association</div>
 <div style="position:absolute;top:165px;left:70px;font-size:10pt">p &lt; 0.05, weak positive association</div>
 <div style="position:absolute;top:180px;left:70px;font-size:10pt">p &lt; 0.05, weak unordered association</div>
@@ -142,9 +143,10 @@ function update() {
           
       // triangle ups
       var nodesxTriDown = [
-      	{x: 50, y: 30, type:"circle", color:"pink" },
-      	{x: 50, y: 45, type:"circle", color:"#c6dbef" },
-      	{x: 50, y: 60, type:"circle", color:"purple" },
+      	{x: 50, y: 15, type:"circle", color:"pink" },
+      	{x: 50, y: 30, type:"circle", color:"#c6dbef" },
+      	{x: 50, y: 45, type:"circle", color:"purple" },
+      	{x: 50, y: 60, type:"circle", color:"#9b89ab" },
       	{x: 50, y: 75, type:"diamond", color:"grey" },
       	{x: 50, y: 90, type:"diamond", color:"yellow" },
       	{x: 50, y: 105, type:"triangle-down", color:"#ffbf00" },

@@ -24,13 +24,26 @@ Millard, L.A.C, et al. Software Application Profile: PHESANT: a tool for perform
 
 ## 1) Running a phenome scan
 
-A phenome scan is run using WAS/phenomeScan.r script. This is basically ready to go - the only essential amendment you will need to make is the EXPOSURE column in the variable information file (see below).
+A phenome scan is run using `WAS/phenomeScan.r`. This is basically ready to go - the only essential amendment you will need to make is the EXPOSURE column in the variable information file (see below).
 
 The PHESANT phenome scan processing pipeline is illustrated in the figure [here](biobank-PHESANT-figure.pdf), and described in detail in the paper above.
 
-The phenome scan is run with the following arguments:
+The phenome scan is run with the following command:
 
-### Input
+```bash
+cd WAS/
+
+Rscript phenomeScan.r \
+--outcomefile=<phenotypesFilePath> \
+--exposurefile=<traitOfInterestFilePath> \
+--variablelistfile="../variable-info/outcome-info.tsv \
+--datacodingfile="../variable-info/data-coding-ordinal-info.csv" \
+--exposurevariable=<traitOfInterestName> \
+--resDir=<resultsDirectoryPath> \
+--userId=<userIdFieldName>
+```
+
+### Required arguments
 
 Arg | Description
 -------|--------
@@ -41,6 +54,10 @@ datacodingfile 		| Comma separated file containing information about data coding
 exposurevariable 	| Variable name as in exposurefile.
 resDir 			| Directory where you want the results to be stored.
 userId 			| User id column as in the exposurefile and the outcomefile.
+
+### Optional arguments
+Arg | Description
+-------|--------
 partIdx			| Subset of phenotypes you want to run (for parallelising).
 partNum			| Number of subsets you are using (for parallelising).
 sensitivity		| By default analyses are adjusted for age (field [21022](http://biobank.ctsu.ox.ac.uk/showcase/field.cgi?id=21022)), sex (field [31](http://biobank.ctsu.ox.ac.uk/showcase/field.cgi?id=31)) and genotype chip (a binary variable derived from field [22000](http://biobank.ctsu.ox.ac.uk/showcase/field.cgi?id=22000)). If sensitivity argument is set to TRUE then also analyses additionally adjust for the first 10 genetic principal components (fields [22009_0_1](http://biobank.ctsu.ox.ac.uk/showcase/field.cgi?id=22009) to [22009_0_10](http://biobank.ctsu.ox.ac.uk/showcase/field.cgi?id=22009)) and assessment centre (field [54](http://biobank.ctsu.ox.ac.uk/showcase/field.cgi?id=54)).
@@ -118,7 +135,17 @@ The resultsProcessing folder provides code to post-process the results, specific
 4. Rank the results by P value.
 5. For the multinomial regression results, include only the main result (not the results for each particular category of a given variable as described above).
 
-This takes three arguments:
+The results processing is run with the following command:
+
+```bash
+cd resultsProcessing/
+
+Rscript mainCombineResults.r \
+--resDir=<resultsDirectoryPath> \
+--variablelistfile="../variable-info/outcome-info.tsv"
+```
+
+### Required arguments
 
 Arg | Description
 -------|--------
@@ -126,7 +153,7 @@ resDir			| Directory where the phenome scan results are stored
 numParts		| Number of subsets you are have used (for parallelising)
 variablelistfile	| Tab separated file containing information about each phenotype, that is used to process them. Same as `variablelistfile` used in main phenome scan.
 
-See testWAS/README.md for an example with test data.
+See `testWAS/README.md` for an example with test data.
 
 
 ## 3) PHESANT-vis: Results visualisation

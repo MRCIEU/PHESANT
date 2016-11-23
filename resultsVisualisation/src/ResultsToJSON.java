@@ -56,6 +56,7 @@ public class ResultsToJSON {
         String cvsSplitBy = "\t";
 
         readNodePositions();
+        int exposureCount = 0;
         
         try (BufferedReader br = new BufferedReader(new FileReader(resultsFile))) {
 
@@ -68,6 +69,8 @@ public class ResultsToJSON {
 	                
 	                if (pr.getIsExposure().length()==0)
 	                	phewasResults.add(pr);
+	                else
+	                	exposureCount++;
             	} else
             		first = false;
             }
@@ -77,7 +80,11 @@ public class ResultsToJSON {
             e.printStackTrace();
         }
         
+        System.out.println("Number of phenotypes marked as denoting exposure: " + exposureCount);
+        System.out.println("Number of results (excluding those marked as denoting exposure): " + phewasResults.size());
+        
         pThreshold = 0.05/phewasResults.size();
+        System.out.println("Bonferroni corrected P value threshold: " + pThreshold);
         
         Collections.sort(phewasResults);
 		
