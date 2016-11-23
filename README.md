@@ -53,11 +53,11 @@ variablelistfile 	| Tab separated file containing information about each phenoty
 datacodingfile 		| Comma separated file containing information about data codings (see below).
 exposurevariable 	| Variable name as in exposurefile.
 resDir 			| Directory where you want the results to be stored.
-userId 			| User id column as in the exposurefile and the outcomefile.
 
 ### Optional arguments
 Arg | Description
 -------|--------
+userId                  | User id column as in the exposurefile and the outcomefile (default: userId).
 partIdx			| Subset of phenotypes you want to run (for parallelising).
 partNum			| Number of subsets you are using (for parallelising).
 sensitivity		| By default analyses are adjusted for age (field [21022](http://biobank.ctsu.ox.ac.uk/showcase/field.cgi?id=21022)), sex (field [31](http://biobank.ctsu.ox.ac.uk/showcase/field.cgi?id=31)) and genotype chip (a binary variable derived from field [22000](http://biobank.ctsu.ox.ac.uk/showcase/field.cgi?id=22000)). If sensitivity argument is set to TRUE then also analyses additionally adjust for the first 10 genetic principal components (fields [22009_0_1](http://biobank.ctsu.ox.ac.uk/showcase/field.cgi?id=22009) to [22009_0_10](http://biobank.ctsu.ox.ac.uk/showcase/field.cgi?id=22009)) and assessment centre (field [54](http://biobank.ctsu.ox.ac.uk/showcase/field.cgi?id=54)).
