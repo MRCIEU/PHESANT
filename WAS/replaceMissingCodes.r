@@ -1,3 +1,5 @@
+
+# Replace negative values with NA as these are assumed to be missing
 replaceMissingCodes <- function(pheno) {
 
 	phenoReplaced = pheno;

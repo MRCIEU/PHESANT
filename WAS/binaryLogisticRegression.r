@@ -1,24 +1,30 @@
-binaryLogisticRegression <- function(varName, varType, thisdata) {
 
-#        cat("ncol ", ncol(thisdata)," || ");
+
+
+# Perform binary logistic regression
+#
+# Performs binary logistic regression on the phenotype stored in thisdata 
+# and stores result in 'results-logistic-binary' results file.
+binaryLogisticRegression <- function(varName, varType, thisdata) {
 
         phenoFactor = thisdata[,phenoStartIdx];
 
         facLevels = levels(phenoFactor);
-        # assert variable has only one column
-		if (length(facLevels)!=2) stop(paste("Not 2 levels: ", length(facLevels), " || ", sep=""))
+        
+	# assert variable has only one column
+	if (length(facLevels)!=2) stop(paste("Not 2 levels: ", length(facLevels), " || ", sep=""))
 
-		idxTrue = length(which(phenoFactor==facLevels[1]))
-       	idxFalse = length(which(phenoFactor==facLevels[2]))
+	idxTrue = length(which(phenoFactor==facLevels[1]))
+	idxFalse = length(which(phenoFactor==facLevels[2]))
   
         if (idxTrue<10 || idxFalse<10) stop("Less than 10 examples");
 
 		numNotNA = length(which(!is.na(phenoFactor)))
 	
-		if (numNotNA<500) {
-            cat("BINARY-LOGISTIC-SKIP-500 (", numNotNA, ") || ",sep="");
+		if (numNotNA<500) {	
+			cat("BINARY-LOGISTIC-SKIP-500 (", numNotNA, ") || ",sep="");
 			count$binary.500 <<- count$binary.500 + 1;
-        }
+        	}
 		else {
 
               	cat("sample ", idxTrue, "/", idxFalse, "(", numNotNA, ") || ", sep="");
@@ -26,7 +32,7 @@ binaryLogisticRegression <- function(varName, varType, thisdata) {
                 geno = thisdata[,"geno"]
 
                 confounders=thisdata[,2:numPreceedingCols];
-				invisible(mylogit <- glm(phenoFactor ~ geno + ., data=confounders, family="binomial"));
+		invisible(mylogit <- glm(phenoFactor ~ geno + ., data=confounders, family="binomial"));
 
                 cis = confint(mylogit, level=0.95)
                 sumx = summary(mylogit)

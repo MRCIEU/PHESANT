@@ -1,3 +1,9 @@
+# Performs variable processing for categorical (single) fields, namely:
+# 1) Reassigning values as specified in data coding information file
+# 2) Reordering categories for ordered fields
+# 3) Replacing missing codes - we assume values < 0 are missing for categorical (single) variables
+# 4) Remove values with <10 cases
+# 5) Deterimine correct test to perform, either binary, ordered or unordered.
 testCategoricalSingle <- function(varName, varType, thisdata) {
 	cat("CAT-SINGLE || ");
 

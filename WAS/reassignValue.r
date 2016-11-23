@@ -1,3 +1,6 @@
+
+
+# Reassigns values as specified in data coding info file
 reassignValue <- function(pheno, varName) {
 
 	# get data code info - whether this data code is ordinal or not and any reordering and resassignments
@@ -22,6 +25,7 @@ reassignValue <- function(pheno, varName) {
 	
 }
 
+# Reassigns values in pheno, as specified in resassignments argument
 reassignValue2 <- function(pheno, reassignments) {
 	# can be NA if row not included in data coding info file
 	if (!is.na(reassignments) && nchar(reassignments)>0) {
@@ -33,10 +37,6 @@ reassignValue2 <- function(pheno, reassignments) {
 			# matrix version
 			idx = which(pheno==reassignParts[1],arr.ind=TRUE)
 			pheno[idx]=strtoi(reassignParts[2]);
-
-			#idx = which(pheno==reassignParts[1]);
-#			cat(paste(reassignParts[1], " ", reassignParts[2], " || "), sep="")
-			#pheno[idx]=strtoi(reassignParts[2]);
 		}
 		
 		## see if type has changed (this happens for field 216 (X changed to -1))

@@ -1,3 +1,14 @@
+
+# Changes variable name from instances to arrays
+# 
+# This function changes the format of variable names from instance format to array format (i.e. we treat
+# the instances as arrays), for a small subset of Biobank variables.
+#
+# Some variables are stored in Biobank as categorical (single) fields with the data stored as set of instances,
+# but we want to treat these instead as categorical (multiple) with a set of arrays.
+# These are indicated by the value "YES-INSTANCES" in the CAT_SINGLE_TO_CAT_MULT column of the variable info file.
+# This function changes the format of these variable names from VARID_0_0, VARID_1_0, VARID_2_0 etc (which
+# is instance format), to VARID_0_0, VARID_0_1, VARID_0_2 etc. (array format) so they can be treated as categorical (multiple) fields. 
 fixOddFieldsToCatMul <- function(data) {
 
 	# examples are variables: 40006, 40011, 40012, 40013

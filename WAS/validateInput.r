@@ -1,5 +1,5 @@
 
-
+# Validate the contents of the phenotype and trait of interest files
 validateInput <- function(phenoIn, snpIn) {
 
 	###

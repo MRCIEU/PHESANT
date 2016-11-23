@@ -1,4 +1,9 @@
-
+# Performs preprocessing of categorical (multiple) fields, namely:
+# 1) Reassigning values as specified in data coding file
+# 2) Generating binary variable for each category in field, restricting to correct set of participants as specified
+# in CAT_MULT_INDICATOR_FIELDS field of variable info file (either NO_NAN, ALL or a field ID)
+# 3) Checking derived variable has at least 10 cases in each group
+# 4) Calling binaryLogisticRegression function for this derived binary variable
 testCategoricalMultiple <- function(varName, varType, thisdata) {
 	cat("CAT-MULTIPLE || ");
 

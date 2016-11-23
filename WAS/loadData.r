@@ -1,4 +1,9 @@
 
+
+# loads phenotype and trait of interest data files
+# creates phenotype / trait of interest data frame
+# creates confounder data frame
+# returns an object holding these two data frames
 loadData <- function() {
 
 ## load phenotype

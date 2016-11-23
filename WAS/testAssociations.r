@@ -1,3 +1,5 @@
+
+# Tests the association of a field, determined by its field type
 testAssociations <- function(currentVar, currentVarShort, thisdata) {
 
 	## call file for variable type

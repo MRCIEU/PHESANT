@@ -1,6 +1,6 @@
 
 
-
+# load the required r files
 loadSource <- function() {
 	source("loadData.r")
 	source("reassignValue.r")
@@ -21,7 +21,7 @@ loadSource <- function() {
 	source("saveCounts.r")
 }
 
-
+# init the counters used to determine how many variables took each path in the variable processing flow.
 initCounters <- function() {
 
 	# data flow counters 
@@ -44,34 +44,28 @@ initCounters <- function() {
 
 }
 
+# create new results files and headers
 initResultsFiles <- function() {
 
-	## create new results files and headers
-	## only particular result types can be generated depending on the initial field type (continuous, integer, categorical single or categorical multiple)
-	
-#	if (opt$varTypeArg==0 || opt$varTypeArg==1) {
-		file.create(paste(opt$resDir,"results-linear-",opt$varTypeArg,".txt",sep=""));
-		write("varName,varType,n,beta,lower,upper,pvalue", file=paste(opt$resDir,"results-linear-",opt$varTypeArg,".txt",sep=""), append="TRUE");
-#	}
+	## only linear and continuous fields can create linear results
+	file.create(paste(opt$resDir,"results-linear-",opt$varTypeArg,".txt",sep=""));
+	write("varName,varType,n,beta,lower,upper,pvalue", file=paste(opt$resDir,"results-linear-",opt$varTypeArg,".txt",sep=""), append="TRUE");
 
 	## all field types can create binary results	
 	file.create(paste(opt$resDir,"results-logistic-binary-",opt$varTypeArg,".txt",sep=""));
 	write("varName,varType,n,beta,lower,upper,pvalue", file=paste(opt$resDir,"results-logistic-binary-",opt$varTypeArg,".txt",sep=""), append="TRUE");
 
 	## only categorical multiple cannot generate order categorical results
-#	if (opt$varTypeArg==0 || opt$varTypeArg==1 || opt$varTypeArg==2) {
-		file.create(paste(opt$resDir,"results-ordered-logistic-",opt$varTypeArg,".txt",sep=""));
-		write("varName,varType,n,beta,lower,upper,pvalue", file=paste(opt$resDir,"results-ordered-logistic-",opt$varTypeArg,".txt",sep=""), append="TRUE");
-#	}
+	file.create(paste(opt$resDir,"results-ordered-logistic-",opt$varTypeArg,".txt",sep=""));
+	write("varName,varType,n,beta,lower,upper,pvalue", file=paste(opt$resDir,"results-ordered-logistic-",opt$varTypeArg,".txt",sep=""), append="TRUE");
 	
 	## only categorical single fields can generate unordered categorical results
-#	if (opt$varTypeArg==2) {
-		file.create(paste(opt$resDir,"results-multinomial-logistic-",opt$varTypeArg,".txt",sep=""));
-		write("varName,varType,n,beta,lower,upper,pvalue", file=paste(opt$resDir,"results-multinomial-logistic-",opt$varTypeArg,".txt",sep=""), append="TRUE");
-#	}
+	file.create(paste(opt$resDir,"results-multinomial-logistic-",opt$varTypeArg,".txt",sep=""));
+	write("varName,varType,n,beta,lower,upper,pvalue", file=paste(opt$resDir,"results-multinomial-logistic-",opt$varTypeArg,".txt",sep=""), append="TRUE");
 	
 }
 
+# load the variable information and data code information files
 initVariableLists <- function() {
 
 	phenoInfo=read.table(opt$variablelistfile,sep="\t",header=1,comment.char="",quote="");

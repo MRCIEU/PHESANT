@@ -1,3 +1,5 @@
+# Tests an unordered categorical phenotype with multinomial regression
+# and saves this result in the multinomial logistic results file
 testCategoricalUnordered <- function(varName, varType, thisdata) {
 
 	pheno = thisdata[,phenoStartIdx:ncol(thisdata)]
@@ -33,7 +35,6 @@ testCategoricalUnordered <- function(varName, varType, thisdata) {
 		maxFreq = length(which(phenoFactor==reference));
 		numNotNA = length(which(!is.na(pheno)))
 	    	write(paste(paste(varName,"-",reference,sep=""), varType, paste(maxFreq,"/",numNotNA,sep=""), -999, -999, -999, modelP, sep=","), file=paste(opt$resDir,"results-multinomial-logistic-",opt$varTypeArg,".txt",sep=""), append="TRUE")
-		#write("aaa",file=paste(resDir,"results-multinomial-logistic-",varTypeArg,".txt",sep=""), append="TRUE")
 
 		sink()
 		sink(resLogFile, append=TRUE)	
@@ -55,7 +56,7 @@ testCategoricalUnordered <- function(varName, varType, thisdata) {
 			pvalue = p[paste(eval(u),sep=""),"geno"]				
 			beta = sumx$coefficients[paste(eval(u),sep=""),"geno"]
 			se = sumx$standard.errors[paste(eval(u),sep=""),"geno"]
-        	lower = beta - 1.96 * se
+	        	lower = beta - 1.96 * se
 			upper = beta + 1.96 * se
 							
 			numThisValue = length(which(phenoFactor==u));

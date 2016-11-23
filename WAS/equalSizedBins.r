@@ -1,6 +1,5 @@
 
 # splits the pheno into 3 bins with the cut points between values rather at the exact value for the quantile
-
 equalSizedBins <- function(phenoAvg) {
 
 	## equal sized bins 

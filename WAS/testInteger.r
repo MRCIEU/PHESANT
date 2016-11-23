@@ -1,3 +1,8 @@
+# Processing integer fields, namely:
+# 1) Reassigning values as specified in the data code information file
+# 2) Generate a single value if there are several values (arrays) by taking the mean
+# 3) Treating this field as continuous if at least 20 distinct values.
+# Otherwise treat as binary or ordered categorical if 2 or more than two values. 
 testInteger <- function(varName, varType, thisdata) {
 	cat("INTEGER || ");
 

@@ -1,4 +1,4 @@
-
+# Main function called for continuous fields
 testContinuous <- function(varName, varType, thisdata) {
 
 	cat("CONTINUOUS MAIN || ");	
@@ -14,8 +14,8 @@ testContinuous <- function(varName, varType, thisdata) {
 	
 }
 
-
-## called from integer code because we alread reassigned values
+# Main code used to process continuous fields, or integer fields that have been reassigned as continuous because they have >20 distinct values.
+# This is needed because we have already reassigned values for integer fields, so do this in the function above for continuous fields.
 testContinuous2 <- function(varName, varType, thisdata) {
 	cat("CONTINUOUS || ");
 

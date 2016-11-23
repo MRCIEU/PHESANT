@@ -1,4 +1,6 @@
 
+# Parse the arguments input by the user
+# if argument 'test' is used then run test phenome scan
 processArgs <- function() {
 
 if (opt$test==TRUE) {
@@ -55,7 +57,7 @@ else {
 
 }
 
-
+# Parse the 'part' arguments and check they are valid
 processParts <- function(pIdx, nParts) {
 
 	if (is.null(pIdx) && is.null(nParts)) {
