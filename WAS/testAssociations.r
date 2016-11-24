@@ -69,6 +69,12 @@ testAssociations <- function(currentVar, currentVarShort, thisdata) {
 				count$excluded.catMul <<- count$excluded.catMul+1;
 			}
 			else {
+
+				if (catSinToMult!="") {
+					cat("cat-single to cat-multiple || ", sep="")
+	                                count$catSinToCatMul <<- count$catSinToCatMul+1;
+				}
+				
 				count$catMul <<- count$catMul + 1;
 	        	testCategoricalMultiple(currentVarShort, "CAT-MUL", thisdata);
 			}

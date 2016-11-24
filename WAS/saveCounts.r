@@ -12,6 +12,7 @@ saveCounts <- function() {
 	write(paste("excluded continuous:", count$excluded.cont), file=countFile, append="TRUE");
 	write(paste("excluded categorical single:", count$excluded.catSin), file=countFile, append="TRUE");
 	write(paste("excluded categorical multiple:", count$excluded.catMul), file=countFile, append="TRUE");
+	write(paste("categorical single reassigned to categorical multiple:", count$catSinToCatMul), file=countFile, append="TRUE");
     
 	write(paste("continuous starting:", count$cont), file=countFile, append="TRUE");
     	write(paste("integer starting:", count$int), file=countFile, append="TRUE");
