@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Force-Directed Graph</title>
+<style>
+
+.node {
+  cursor: pointer;
+  stroke: #3182bd;
+  stroke-width: 1.5px;
+}
+
+.link {
+  fill: none;
+  stroke: #9ecae1;
+  stroke-width: 1.5px;
+}
+
+#text {
+  stroke: "pink";
+  background-color:"pink";
+}
+
+</style>
+<body>
+
+<div style="position:absolute;top:15px;left:70px;font-size:10pt">Root node <i>(Collapsable and expandable)</i></div>
+<div style="position:absolute;top:30px;left:70px;font-size:10pt">Category node <i>(Collapsable and expandable)</i></div>
+<div style="position:absolute;top:45px;left:70px;font-size:10pt">Categorical multiple variable <i>(Collapsable and expandable)</i></div>
+<div style="position:absolute;top:60px;left:70px;font-size:10pt">Categorical multiple variable subgroup <i>(Collapsable and expandable)</i></div>
+<div style="position:absolute;top:75px;left:70px;font-size:10pt">Composite of null results in category (size denotes n)</div>
+<div style="position:absolute;top:90px;left:70px;font-size:10pt">Composite of associations found in category (size denotes n)</div>
+<div style="position:absolute;top:105px;left:70px;font-size:10pt">p &lt; Bonferroni-corrected threshold, strong negative association</div>
+<div style="position:absolute;top:120px;left:70px;font-size:10pt">p &lt; Bonferroni-corrected threshold, strong positive association</div>
+<div style="position:absolute;top:135px;left:70px;font-size:10pt">p &lt; Bonferroni-corrected threshold, strong unordered association</div>
+<div style="position:absolute;top:150px;left:70px;font-size:10pt">p &lt; 0.05, weak negative association</div>
+<div style="position:absolute;top:165px;left:70px;font-size:10pt">p &lt; 0.05, weak positive association</div>
+<div style="position:absolute;top:180px;left:70px;font-size:10pt">p &lt; 0.05, weak unordered association</div>
+<div style="position:absolute;top:195px;left:70px;font-size:10pt">p &ge; 0.05, null result</div>
+
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script>
+
+var width = 1500,
+    height = 900,
+    root;
+
+var force = d3.layout.force()
+    .size([width, height])
+    .charge(-60)
+    .gravity(0.3)
+    //.linkDistance(50)
+    .on("tick", tick);
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+var link = svg.selectAll(".link"),
+    node = svg.selectAll(".node");
+
+var pathx = svg.selectAll(".pathx");
+
+  var label = node.append("text")
+      .attr("dy", "0em")
+      .attr("fill", "red")
+      .style("font-weight", "normal")
+      .style("font-color", "pink")
+      .style("background-color", "green")
+      .text(function(d) { return d.name; });
+
+ var tooltip = d3.select("body")
+	  .append("div")
+	  .attr("class", "tooltip")
+    .style("background-color","#d9e2da")
+	  .style("position", "absolute")
+	  .style("padding-left", "2px")
+	  .style("padding-right", "2px")
+	  .style("padding-top", "1px")
+	  .style("padding-bottom", "1px")
+	  .style("border-color", "#b3cdb6")
+	  .style("border-width", "1px")
+	  .style("border-style", "solid")
+	  .style("color", "#697d6a")
+	  .style("z-index", "10")
+	  .style("visibility", "hidden")
+	  .text("a simple tooltip");
+
+d3.json("java-json.json", function(error, json) {
+  if (error) throw error;
+
+  root = json;
+  //root.fixed = true;
+  
+  	var nodes = flatten(root);
+	nodes.forEach(function(d) {
+		if(d.end==1) {	
+		
+			var tmp1=d._children;
+    		var tmp2=d.children;
+			d.children=null;
+			d._children=null;
+    		d.children = tmp1;
+    		d._children = tmp2;
+    		
+   		}
+   		
+   		// fix the internal nodes at particular innitial positions
+
+   		if (d.xpos!=null && d.xpos.length>0) {
+   			d.x = parseFloat(d.xpos);
+    		d.y = parseFloat(d.ypos);
+    		d.fixed=true;
+    	}
+    	else {
+    		d.x = 800;
+    		d.y = 500;
+    	}
+    		
+   		
+   		//if (d.structure==1) {
+   		//	d.fixed = true;
+   		//}
+   		
+   		//d.x = width/2;//d.posx; 
+  		//d.y = height/2;//d.posy; 
+  	
+	});
+  
+ 
+  update();
+  
+});
+
+function update() {
+  var nodes = flatten(root),
+    links = d3.layout.tree().links(nodes);
+//    alert("a");
+ //   console.log(nodes);
+ 
+ 
+   ////////////////// symbol key
+  //////////////////
+          
+      // triangle ups
+      var nodesxTriDown = [
+      	{x: 50, y: 15, type:"circle", color:"pink" },
+      	{x: 50, y: 30, type:"circle", color:"#c6dbef" },
+      	{x: 50, y: 45, type:"circle", color:"purple" },
+      	{x: 50, y: 60, type:"circle", color:"#9b89ab" },
+      	{x: 50, y: 75, type:"diamond", color:"grey" },
+      	{x: 50, y: 90, type:"diamond", color:"yellow" },
+      	{x: 50, y: 105, type:"triangle-down", color:"#ffbf00" },
+      	{x: 50, y: 120, type:"triangle-up", color:"#ffbf00" },
+      	{x: 50, y: 135, type:"circle", color:"#ffbf00" },
+      	{x: 50, y: 150, type:"triangle-down", color:"#ffffe6" },
+	  	{x: 50, y: 165, type:"triangle-up", color:"#ffffe6" },
+	  	{x: 50, y: 180, type:"circle", color:"#ffffe6" },
+	  	{x: 50, y: 195, type:"square", color:"grey" }
+      ]
+          
+      var elemEnter = svg.selectAll(".points")
+         .data(nodesxTriDown)
+         .enter().append("path")
+		.attr("class", "point")
+		.attr("d", d3.svg.symbol()
+        .size(40)
+        .type(function(d) { return d.type; }))
+        .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; })
+      	//.attr("x", 10)
+        //.attr("y", 20)
+      	.style("fill", function(d) { return d.color; } )
+    	.style("stroke", "black")
+      	.style("stroke-width", "1.0px");     
+      
+      //////////////////
+      //////////////////
+ 
+ 
+ 
+ 
+    
+  // Restart the force layout.
+  force
+      .nodes(nodes)
+      .links(links)
+      .start();
+
+   // alert("b");
+    
+  // Update the links…
+  link = link.data(links, function(d) { return d.target.id; });
+
+  //  alert("c");
+    
+  // Exit any old links.
+  link.exit().remove();
+
+//	    alert("d");
+
+  // Enter any new links.
+  link.enter().insert("line", ".node")
+      .attr("class", "link")
+      .attr("x1", function(d) { return d.source.x; })
+      .attr("y1", function(d) { return d.source.y; })
+      .attr("x2", function(d) { return d.target.x; })
+      .attr("y2", function(d) { return d.target.y; });
+
+	 //   alert("e");
+
+  // Update the nodes…
+  node = node.data(nodes, function(d) { return d.id; }); //.style("fill", color);
+
+  //  alert("f");
+    
+  // Exit any old nodes.
+  node.exit().remove();
+
+   //  alert("g");
+  path = node.data(nodes, function(d) { return d.id; }).selectAll(".pathx").style("fill", color);
+
+   // alert("h");
+    
+var nodeEnter = node.enter().append("g")
+      .attr("class", "node")
+      .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; })
+		.on("click", click)
+      .call(force.drag);
+      
+      //alert("i");
+	var path = nodeEnter.append("path")
+		.attr("class", "pathx")
+		.attr("d", d3.svg.symbol()
+        .size(function(d) { if(d.size) return 1+Math.sqrt(d.size) * 50 || 4.5; else return 100;}) //d.size*0.1;
+        .type(function(d) { if(d.type) return d.type; else return "circle"; })) //d.type
+      	.attr("x", function(d) { return d.x; })
+        .attr("y", function(d) { return d.y; })
+      	.style("fill", color )
+    	.style("stroke", "black")
+      	.style("stroke-width", "1.5px");     	
+
+     // alert("j");
+      
+    nodeEnter.on("mouseover", function(d) {
+	    var g = d3.select(this); // The node
+		// The class is used to remove the additional text later
+//		var info = g.append('text')
+//         	.classed('info', true)
+//         	.attr('x', 20)
+//         	.attr('y', 10)
+//         	.attr('stroke','green') // #333333
+//         	.style("font","italic light 40px arial,serif")
+//         	.text(d.name);
+
+		tooltip.text(function(dx) {return d.name})
+         	.style("top",(d.y+10) + "px")
+         	.style("left",(d.x+10) + "px")
+         	//.style("background-color","yellow");
+         	.style("visibility", "visible");
+         
+  	})
+  	.on("mouseout", function(d) {
+      	// Remove the info text on mouse out.
+//      	d3.select(this).select('text.info').remove();
+      	
+		//tooltip.style("visibility", "hidden");
+  	});
+  	
+  //	alert("k");
+      
+//alert("e");  
+}
+
+function tick() {
+  link.attr("x1", function(d) { return d.source.x; })
+      .attr("y1", function(d) { return d.source.y; })
+      .attr("x2", function(d) { return d.target.x; })
+      .attr("y2", function(d) { return d.target.y; });
+
+  node.attr("cx", function(d) { return d.x; })
+      .attr("cy", function(d) { return d.y; });
+
+	node.attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
+
+	label
+        .attr("x", function(d) { return d.x + 8; })
+        .attr("y", function(d) { return d.y; });
+
+	//pathx.attr("d", d3.svg.symbol()
+    //    .size(function(d) { if(d.size) return 10+Math.sqrt(d.size) * 100 || 4.5; else return 100;}) //d.size*0.1;
+    //    .type(function(d) { if(d.type) return d.type; else return "circle"; })); //d.type
+
+}
+
+// Color leaf nodes orange, and packages white or blue.
+function color(d) {
+  if (d.id=="ROOT") {
+  	return "pink";
+  }
+  else if (d.catm==1) {
+  	return "purple";
+  }
+  else if (d.catmpart==1) {
+  	return "#9b89ab";
+  }
+  else if (d.result!=null) {
+  		if (d.result=="POSITIVESTRONG" || d.result=="NEGATIVESTRONG" || d.result=="UNORDEREDSTRONG") {
+  			return "#ffbf00";
+  		}
+  		else if (d.result=="POSITIVEWEAK" || d.result=="NEGATIVEWEAK" || d.result=="UNORDEREDWEAK") {
+  			return "#ffffe6";
+  		}
+  		else if (d.result=="WEAK")
+  		 	return "#ffffe6";
+  		else if (d.result=="STRONG")
+  		 	return "yellow";
+  		else if (d.result=="NULL") {
+  		 	return "grey";
+  		 }
+  		else if (d.result=="NULL") {
+  			return "grey";
+  		}
+  	
+  	}
+	else if(d._children && d._children!=null) {
+		return "#3182bd";
+	} else
+			return "#c6dbef";
+}
+
+// Toggle children on click.
+function click(d) {
+  if (!d3.event.defaultPrevented) {
+    
+    var tmp1=d._children;
+    var tmp2=d.children;
+    d.children = tmp1;
+    d._children = tmp2;    
+	update();
+        
+  }
+}
+
+// Returns a list of all nodes under the root.
+function flatten(root) {	
+  var nodes = [], i = 0;
+
+  function recurse(node) {
+    if (node.children) node.children.forEach(recurse);
+    if (!node.id) node.id = ++i;
+    nodes.push(node);
+  }
+
+  recurse(root);
+  return nodes;
+}
+
+
+
+</script>
