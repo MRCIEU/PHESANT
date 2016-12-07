@@ -5,7 +5,7 @@
 
 This directory contains the code used to produce a D3 visualisation that displays the results of a phenome scan, in the context of the hierarchical categorical structure that UK Biobank has specified.
 
-See example for a MR-pheWAS of BMI (preliminary analysis) [here](http://www.datamining.org.uk/PHESANT/BMI-preliminary.html) or in example directory. 
+See example for a MR-pheWAS of BMI (preliminary analysis) [here](http://phesant.datamining.org.uk) or in example directory. 
 
 The visualisation is a tree structure, with the following node types:
 

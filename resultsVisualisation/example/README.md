@@ -5,4 +5,4 @@ This directory contains the JSON and HTML files of a MR-pheWAS of BMI, as report
 
 To view the visualisation open the HTML file in a web browser.
 
-This visualisation is also available at [phesant.datamining.org.uk](phesant.datamining.org.uk).
+This visualisation is also available at [http://phesant.datamining.org.uk](http://phesant.datamining.org.uk).
