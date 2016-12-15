@@ -18,9 +18,9 @@ opt = parse_args(opt_parser);
   
 if (opt$test==TRUE) {
 	
-	opt$resDir = '../test/results/';
-	opt$variablelistfile = '../test/variable-lists/outcome-info3.txt';
-        	
+	opt$resDir = '../testWAS/results/';
+	opt$variablelistfile = '../testWAS/variable-lists/outcome-info.tsv';
+  	
 } else {
 	
 	if (is.null(opt$variablelistfile)){
@@ -35,15 +35,26 @@ if (opt$test==TRUE) {
 
 source("combineFlowCounts.r")
 combineFlowCounts();
+print("Finished flow counts")
 
 source("combineAndSortResults.r")
 combineAndSortResults();
+print("Finished combining results and sorting")
 
 # add the name of the variable as listed in the phenotype info file
 source("addVariableDescriptions.r");
 addVariableDescriptions();
 
+print("Finished adding variable descriptions to results listing")
+
 write.table(resultsAll, file=paste(opt$resDir,"results-combined.txt",sep=""), row.names=FALSE, quote=FALSE, sep="\t", na="");
 
 
+source("makeQQPlot.r")
+source("makeForestPlots.r")
 
+makeQQPlot(opt$resDir,resultsAll);
+print("Finished QQ plot")
+
+makeForestPlots(opt$resDir,resultsAll);
+print("Finished forest plot")
