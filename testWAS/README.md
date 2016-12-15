@@ -69,12 +69,12 @@ Rscript mainCombineResults.r \
 
 ```bash
 
-cd ../resultsVisualisation/bin/
+cd ../PHESANT-viz/bin/
 
 java -cp .:../jar/json-simple-1.1\ 2.jar ResultsToJSON "../../testWAS/results/results-combined.txt" "../node-positions.csv" "../web/java-json.json"
 
 ```
 
-This generates the JSON file containing the phenome scan results, in the resultsVisualisation/web directory.
+This generates the JSON file containing the phenome scan results, in the PHESANT-viz/web directory.
 
 
