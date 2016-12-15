@@ -37,13 +37,16 @@ source("combineFlowCounts.r")
 combineFlowCounts();
 print("Finished flow counts")
 
-source("combineAndSortResults.r")
-combineAndSortResults();
-print("Finished combining results and sorting")
+source("combineResults.r")
+combineResults();
+print("Finished combining results")
 
 # add the name of the variable as listed in the phenotype info file
 source("addVariableDescriptions.r");
 addVariableDescriptions();
+
+# sort
+resultsAll <<- resultsAll[order(resultsAll$pvalue),];
 
 print("Finished adding variable descriptions to results listing")
 

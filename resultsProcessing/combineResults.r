@@ -1,4 +1,4 @@
-combineAndSortResults <- function() {
+combineResults <- function() {
 
 if (is.null(opt$numParts)) {
 
@@ -36,7 +36,6 @@ for (i in 1:opt$numParts) {
 }
 }
 
-resultsAll <<- resultsAll[order(resultsAll$pvalue),];
 }
 
 
