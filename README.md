@@ -134,6 +134,10 @@ The resultsProcessing folder provides code to post-process the results, specific
 3. Add the description information for each variable from the `variablelistfile` file, to the results file.
 4. Rank the results by P value.
 5. For the multinomial regression results, include only the main result (not the results for each particular category of a given variable as described above).
+6. Generate basic figures: qqplot, and 3 forest plots for continous, ordered categorical and binary results separately (for results with P<0.05/numTests, i.e. the
+Bonferroni corrected 0.05 threshold). 
+We do not generate a forest plot for the categorical unordered results, because we have not overall estimate (and confidence interval) for the model overall, 
+because we use a likelihood ratio test to generate a model P value. For these plot we use all results except for phenotypes marked as `exposure'.
 
 The results processing is run with the following command:
 
