@@ -5,7 +5,7 @@ There are three components in this project:
 
 1. Running a phenome scan in UK Biobank
 2. Post-processing of results
-3. Visualising the results
+3. PHESANT-viz: Visualising the results
 
 
 ## General requirements
@@ -156,11 +156,11 @@ variablelistfile	| Tab separated file containing information about each phenotyp
 See `testWAS/README.md` for an example with test data.
 
 
-## 3) PHESANT-vis: Results visualisation
+## 3) PHESANT-viz: Results visualisation
 
 A phenome scan generates a large number of results. The aim of this visualisation is to help with interpretation, by allowing the researcher to view each result in the context of the
 results of related traits.
 
-See the resultsVisualisation folder and README.md therein for more information.
+See the PHESANT-viz folder and README.md therein for more information.
 
 
