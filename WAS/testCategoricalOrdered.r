@@ -35,6 +35,8 @@ testCategoricalOrdered <- function(varName, varType, thisdata, orderStr="") {
 
 		tryCatch({
 			confounders=thisdata[,2:numPreceedingCols];
+			geno = scale(geno)
+			#cat("genoMean=", mean(geno), " genoSD=", sd(geno), " || ", sep="");
 			fit <- polr(phenoFactor ~ geno + ., data=confounders, Hess=TRUE)
 		}, error = function(e) {
 			sink()

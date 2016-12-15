@@ -29,8 +29,9 @@ binaryLogisticRegression <- function(varName, varType, thisdata) {
 
               	cat("sample ", idxTrue, "/", idxFalse, "(", numNotNA, ") || ", sep="");
 
-                geno = thisdata[,"geno"]
-
+		# use standardised geno values
+                geno = scale(thisdata[,"geno"])
+#		cat("genoMean=", mean(geno), " genoSD=", sd(geno), " || ", sep="");
                 confounders=thisdata[,2:numPreceedingCols];
 		invisible(mylogit <- glm(phenoFactor ~ geno + ., data=confounders, family="binomial"));
 

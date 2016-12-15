@@ -95,8 +95,9 @@ testContinuous2 <- function(varName, varType, thisdata) {
 			## inverse rank normal transformation
 			phenoIRNT = irnt(phenoAvg)
 		
-			## do regression
-			geno = thisdata[,"geno"] 
+			## do regression (use standardised geno values)
+			geno = scale(thisdata[,"geno"])
+			#cat("genoMean=", mean(geno), " genoSD=", sd(geno), " || ", sep="")
 			confounders=thisdata[,2:numPreceedingCols];
 			invisible(fit <- lm(phenoIRNT ~ geno + ., data=confounders))
 			cis = confint(fit, level=0.95)

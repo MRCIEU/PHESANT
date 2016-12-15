@@ -18,7 +18,8 @@ testCategoricalUnordered <- function(varName, varType, thisdata) {
 		sink()
 		sink("/dev/null"); # hide output of model fitting
 		require(nnet)
-		geno = thisdata[,"geno"] 
+		geno = scale(thisdata[,"geno"])
+		#cat("genoMean=", mean(geno), " genoSD=", sd(geno), " || ", sep="")
 		
 		confounders=thisdata[,2:numPreceedingCols];
 		fit <- multinom(phenoFactor ~ geno + ., data=confounders)
