@@ -5,14 +5,18 @@
 #
 # Performs binary logistic regression on the phenotype stored in thisdata 
 # and stores result in 'results-logistic-binary' results file.
-binaryLogisticRegression <- function(varName, varType, thisdata) {
+binaryLogisticRegression <- function(varName, varType, thisdata, isExposure) {
 
         phenoFactor = thisdata[,phenoStartIdx];
 
-        facLevels = levels(phenoFactor);
-        
+        facLevels = levels(phenoFactor)
+
 	# assert variable has only one column
-	if (length(facLevels)!=2) stop(paste("Not 2 levels: ", length(facLevels), " || ", sep=""))
+	if (length(facLevels)!=2) {
+		#stop(paste("Not 2 levels: ", length(facLevels), " || ", sep=""))
+		cat("BINARY-NOT2LEVELS- (", length(facLevels), ") || ",sep="");
+                incrementCounter("binary.nottwolevels")
+	}
 
 	idxTrue = length(which(phenoFactor==facLevels[1]))
 	idxFalse = length(which(phenoFactor==facLevels[2]))
@@ -23,7 +27,7 @@ binaryLogisticRegression <- function(varName, varType, thisdata) {
 	
 		if (numNotNA<500) {	
 			cat("BINARY-LOGISTIC-SKIP-500 (", numNotNA, ") || ",sep="");
-			count$binary.500 <<- count$binary.500 + 1;
+			incrementCounter("binary.500")
         	}
 		else {
 
@@ -49,8 +53,12 @@ binaryLogisticRegression <- function(varName, varType, thisdata) {
                 write(paste(varName,varType,paste(idxTrue,"/",idxFalse,"(",numNotNA,")",sep=""), beta,lower,upper,pvalue, sep=","), file=paste(opt$resDir,"results-logistic-binary-",opt$varTypeArg,".txt",sep=""), append="TRUE");
                 cat("SUCCESS results-logistic-binary ");
                 
-                count$binary.success <<- count$binary.success + 1;
-				
+		incrementCounter("success.binary")
+
+		if (isExposure==TRUE) {
+	            	incrementCounter("success.exposure.binary")
+	        }		
+#		}		
         }
 }
 

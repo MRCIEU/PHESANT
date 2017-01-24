@@ -14,6 +14,7 @@ if (opt$test==TRUE) {
 	opt$resDir <<- '../testWAS/results/';
 	opt$userId <<- 'userId';
 	opt$sensitivity <<- FALSE;
+	opt$genetic <<- TRUE;
 
 	processParts(opt$partIdx, opt$numParts);	
 }
@@ -48,11 +49,17 @@ else {
 }
 	
 # just some information to the user
-if (opt$sensitivity==TRUE) {
-	print("Adjusting for age, sex, genetic batch, top 10 genetic principal components and assessment centre");
+if (opt$sensitivity==TRUE & opt$genetic==TRUE) {
+	print("Adjusting for age, sex, genetic batch, top 10 genetic principal components and assessment centre")
 }
-else {
-	print("Adjusting for age, sex and genetic batch");
+else if (opt$sensitivity==FALSE & opt$genetic==TRUE) {
+	print("Adjusting for age, sex and genetic batch")
+}
+else if (opt$sensitivity==TRUE & opt$genetic==FALSE) {
+	print("Adjusting for age, sex and assessment centre")
+}
+else if	(opt$sensitivity==FALSE & opt$genetic==FALSE) {
+        print("Adjusting for age and sex")
 }
 
 }

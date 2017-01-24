@@ -8,6 +8,7 @@ testCategoricalSingle <- function(varName, varType, thisdata) {
 	cat("CAT-SINGLE || ");
 
 	pheno = thisdata[,phenoStartIdx:ncol(thisdata)]
+	isExposure = getIsExposure(varName)
 
 	# assert variable has only one column
 	if (!is.null(dim(pheno))) stop("More than one column for categorical single")
@@ -30,6 +31,12 @@ testCategoricalSingle <- function(varName, varType, thisdata) {
 	## reorder variable values into increasing order (we do this now as this may convert variable to binary rather than ordered)
         pheno = reorderOrderedCategory(pheno,order);
 
+	## if data code has a default_value then recode NA's to this value for participants with value in default_related_field
+	## this is used where there is no zero option e.g. field 100200
+	defaultValue = dataDataCode$default_value
+	defaultRelatedID = dataDataCode$default_related_field
+	pheno = setDefaultValue(pheno, defaultValue, defaultRelatedID)
+
         ## all categories coded as <0 we assume are `missing' values
         pheno = replaceMissingCodes(pheno);
 
@@ -41,17 +48,17 @@ testCategoricalSingle <- function(varName, varType, thisdata) {
 
 	if (length(uniqVar)<=1) {
 		cat("SKIP (only one value) || ");
-		count$catSin.onevalue <<- count$catSin.onevalue + 1;
+		incrementCounter("catSin.onevalue")
 	}
 	else if (length(uniqVar)==2) {		
 		cat("CAT-SINGLE-BINARY || ");
-		count$catSin.case3 <<- count$catSin.case3 + 1;
+		incrementCounter("catSin.case3")
 		# binary so logistic regression
 
 		phenoFactor = factor(pheno)
 		# binary - so logistic regression
 		thisdatanew = cbind.data.frame(thisdata[,1:numPreceedingCols], phenoFactor);
-	        binaryLogisticRegression(varName, varType, thisdatanew)	
+	        binaryLogisticRegression(varName, varType, thisdatanew, isExposure)	
 	}
 	else {
 		# > 2 categories
@@ -64,7 +71,7 @@ testCategoricalSingle <- function(varName, varType, thisdata) {
 		if (ordered == 0) {
 			
 			cat("CAT-SINGLE-UNORDERED || ")
-			count$catSin.case2 <<- count$catSin.case2 + 1;
+			incrementCounter("catSin.case2")
 
 			thisdatanew = cbind.data.frame(thisdata[,1:numPreceedingCols], pheno);
 			testCategoricalUnordered(varName, varType, thisdatanew);
@@ -74,7 +81,7 @@ testCategoricalSingle <- function(varName, varType, thisdata) {
 		
 			## ordered
 			cat("ordered || ");
-			count$catSin.case1 <<- count$catSin.case1 + 1;
+			incrementCounter("catSin.case1")
 
 			## reorder variable values into increasing order
 			thisdatanew = cbind.data.frame(thisdata[,1:numPreceedingCols], pheno);
@@ -83,7 +90,7 @@ testCategoricalSingle <- function(varName, varType, thisdata) {
 		}
 		else if (ordered == -2) {
 			cat(" EXCLUDED or BINARY variable: Should not get here in code. ")
-			count$catSin.binaryorexcluded <<- count$catSin.binaryorexcluded + 1;
+			incrementCounter("catSin.binaryorexcluded")
 		}
 		else {
 			print(paste("ERROR", varName, varType, dataCode));
@@ -93,7 +100,7 @@ testCategoricalSingle <- function(varName, varType, thisdata) {
 
 }
 
-
+## values are reordered and assigned values 1:N for N categories
 reorderOrderedCategory <- function(pheno,order) {
 
 	## new pheno of NAs (all values not in order are assumed to be NA)
@@ -123,3 +130,33 @@ reorderOrderedCategory <- function(pheno,order) {
 	
 }
 
+setDefaultValue <- function(pheno, defaultValue, defaultRelatedID) {
+
+
+	if (!is.na(defaultValue) && nchar(defaultValue)>0) {
+
+		# remove people who have no value for indicator variable
+	       	indName = paste("x",defaultRelatedID,"_0_0",sep="");
+
+	     	cat("Default related field: ", indName, " || ", sep="");
+	   	indicatorVar = data[,indName]
+
+	    	# remove participants with NA value in this related field
+	    	indicatorVar = replaceNaN(indicatorVar)
+
+		# check if there are already examples with default value and if so display warning
+		numWithDefault = length(which(pheno==defaultValue))
+		if (numWithDefault>0) {
+			cat("(WARNING: already ", numWithDefault, " values with default value) ", sep="")
+		}
+
+	    	defaultIdxs = which(!is.na(indicatorVar) & is.na(pheno))
+		pheno[defaultIdxs] = defaultValue
+
+	       	cat("default value ", defaultValue, " set, N= ", length(defaultIdxs), " || ", sep="");
+
+	}
+
+	return(pheno)
+
+}

@@ -5,6 +5,9 @@ validateInput <- function(phenoIn, snpIn) {
 	###
 	### pheno file validation
 
+	print(paste("Number of columns in phenotype file:", ncol(phenoIn),sep=""))
+	print(paste("Number of columns in trait of interest file:", ncol(snpIn),sep=""))
+
 	## check user id exists in pheno file
 	idx1 = which(names(phenoIn) == opt$userId);
 	if (length(idx1)==0) {

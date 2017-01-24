@@ -6,7 +6,7 @@ testCategoricalOrdered <- function(varName, varType, thisdata, orderStr="") {
 	geno = thisdata[,"geno"]
 
 	cat("CAT-ORD || ");
-	count$ordCat <<- count$ordCat + 1;
+	incrementCounter("ordCat")
 
 	doCatOrdAssertions(pheno)
 
@@ -18,8 +18,8 @@ testCategoricalOrdered <- function(varName, varType, thisdata, orderStr="") {
 
 	numNotNA = length(which(!is.na(pheno)))
 	if (numNotNA<500) {
-		cat("SKIP (" ,numNotNA, "< 500 examples) || ",sep="");
-		count$ordCat.500 <<- count$ordCat.500 + 1;		
+		cat("CATORD-SKIP-500 (", numNotNA, ") || ",sep="");
+		incrementCounter("ordCat.500")
 	}
 	else {
 
@@ -57,8 +57,12 @@ testCategoricalOrdered <- function(varName, varType, thisdata, orderStr="") {
 		
 		write(paste(varName, varType, numNotNA, beta, lower, upper, pvalue, sep=","), file=paste(opt$resDir,"results-ordered-logistic-",opt$varTypeArg,".txt",sep=""), append="TRUE");
 		cat("SUCCESS results-ordered-logistic");
-		count$ordCat.success <<- count$ordCat.success + 1;
-		
+		incrementCounter("success.ordCat")
+
+		isExposure = getIsExposure(varName)
+                if (isExposure == TRUE) {
+                        incrementCounter("success.exposure.ordCat")
+                }
 	}
 }
 

@@ -11,24 +11,29 @@ testAssociations <- function(currentVar, currentVarShort, thisdata) {
 
 		if (length(idx)==0) {
 			cat(paste(currentVar, " || Variable could not be found in pheno info file. \n", sep=""))			
-			count$notinphenofile <<- count$notinphenofile+1;
+			incrementCounter("notinphenofile")
 		}
 		else {
 
 		excluded = vl$phenoInfo$EXCLUDED[idx]
 		catSinToMult = vl$phenoInfo$CAT_SINGLE_TO_CAT_MULT[idx]
 		fieldType = vl$phenoInfo$ValueType[idx]
+		isExposure = getIsExposure(currentVarShort) #vl$phenoInfo$EXPOSURE_PHENOTYPE[idx]
 
 		if (fieldType=="Integer") {		
 			cat(currentVar, "|| ", sep="")
 			
 			if (excluded!="") {
 				cat(paste("Excluded integer: ", excluded, " || ", sep=""))
-				count$excluded.int <<- count$excluded.int+1;
+				incrementCounter("excluded.int")
 			}
 			else {
-				count$int <<- count$int + 1;
-			    	testInteger(currentVarShort, "INTEGER", thisdata);			
+				incrementCounter("start.int")
+				if (isExposure==TRUE) {
+					incrementCounter("start.exposure.int")
+				}
+
+			    	testInteger(currentVarShort, "INTEGER", thisdata);
 			}
 			cat("\n");
 	    	}
@@ -38,10 +43,13 @@ testAssociations <- function(currentVar, currentVarShort, thisdata) {
 
 		    	if (excluded!="") {
 				cat(paste("Excluded continuous: ", excluded, " || ", sep=""))
-				count$excluded.cont <<- count$excluded.cont+1;
+				incrementCounter("excluded.cont")
 		    	}
 			else {
-	        		count$cont <<- count$cont	+ 1;
+				incrementCounter("start.cont")
+				if (isExposure==TRUE) {
+                                        incrementCounter("start.exposure.cont")
+                                }
 				testContinuous(currentVarShort, "CONTINUOUS", thisdata);
 	        	}
 	        	cat("\n");
@@ -52,10 +60,13 @@ testAssociations <- function(currentVar, currentVarShort, thisdata) {
 	
 	    		if (excluded!="") {
 				cat(paste("Excluded cat-single: ", excluded, " || ", sep=""))
-				count$excluded.catSin <<- count$excluded.catSin+1;
+				incrementCounter("excluded.catSin")
 			}
 			else {
-				count$catSin <<- count$catSin + 1;
+				incrementCounter("start.catSin")
+				if (isExposure==TRUE) {
+                                        incrementCounter("start.exposure.catSin")
+                                }
 			    	testCategoricalSingle(currentVarShort, "CAT-SIN", thisdata);
 			}
 			cat("\n");
@@ -66,17 +77,20 @@ testAssociations <- function(currentVar, currentVarShort, thisdata) {
 
 			if (excluded!="") {
 				cat(paste("Excluded cat-multiple: ", excluded, " || ", sep=""))
-				count$excluded.catMul <<- count$excluded.catMul+1;
+				incrementCounter("excluded.catMul")
 			}
 			else {
 
 				if (catSinToMult!="") {
 					cat("cat-single to cat-multiple || ", sep="")
-	                                count$catSinToCatMul <<- count$catSinToCatMul+1;
+					incrementCounter("catSinToCatMul")
 				}
-				
-				count$catMul <<- count$catMul + 1;
-	        	testCategoricalMultiple(currentVarShort, "CAT-MUL", thisdata);
+
+				incrementCounter("start.catMul")	
+				if (isExposure==TRUE) {
+                                        incrementCounter("start.exposure.catMul")
+                                }
+		        	testCategoricalMultiple(currentVarShort, "CAT-MUL", thisdata);
 			}
 			cat("\n");
 		}

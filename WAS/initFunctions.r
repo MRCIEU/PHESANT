@@ -19,29 +19,15 @@ loadSource <- function() {
 	source("testCategoricalOrdered.r")
 	source("testCategoricalUnordered.r")
 	source("saveCounts.r")
+	source("incrementCounter.r")
+	source("getIsCatMultExposure.r")
+	source("getIsExposure.r")
 }
 
 # init the counters used to determine how many variables took each path in the variable processing flow.
 initCounters <- function() {
-
-	# data flow counters 
-	count = list(
-	cont=0, int=0, catSin=0, catMul=0,
-	notinphenofile=0,
-	cont.main=0, cont.main.500=0,
-	cont.onevalue=0, cont.case2=0, cont.case3=0,
-	int.case1=0, int.case2=0, int.case3=0,
-	int.onevalue=0, 
-	catSin.case1=0, catSin.case2=0, catSin.case3=0, catSin.binaryorexcluded=0, catSin.onevalue=0,
-	ordCat=0, ordCat.500=0,
-	unordCat.500=0,
-	catSinToCatMul=0, catMul.binary=0, catMul.10=0, catMul.over10=0,
-	binary.500=0,
-	continuous.success=0,ordCat.success=0,unordCat.success=0,binary.success=0,
-	excluded.int=0,excluded.cont=0, excluded.catSin=0, excluded.catMul=0)
-	
-	return(count);
-
+	counters = data.frame(name=character(),countValue=integer(), stringsAsFactors=FALSE)
+	return(counters);
 }
 
 # create new results files and headers

@@ -7,8 +7,8 @@ testCategoricalUnordered <- function(varName, varType, thisdata) {
 
 	numNotNA = length(which(!is.na(pheno)))
 	if (numNotNA<500) {
-		cat("SKIP (", numNotNA, "< 500 examples) || ",sep="");
-		count$unordCat.500 <<- count$unordCat.500 + 1;
+		cat("CATUNORD-SKIP-500 (", numNotNA, ") || ",sep="");
+		incrementCounter("unordCat.500")
 	}
 	else {
 
@@ -68,7 +68,13 @@ testCategoricalUnordered <- function(varName, varType, thisdata) {
 		}
 
 		cat("SUCCESS results-notordered-logistic ");
-		count$unordCat.success <<- count$unordCat.success + 1;
+		incrementCounter("success.unordCat")
+
+		isExposure = getIsExposure(varName)
+                if (isExposure == TRUE) {
+                        incrementCounter("success.exposure.unordCat")
+                }
+
 	}
 }
 

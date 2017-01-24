@@ -9,8 +9,8 @@ replaceMissingCodes <- function(pheno) {
         for (u in uniqVar) {
 #                if (!is.na(u) && u<0) {
 		if (u<0) {
-			idxU = which(phenoReplaced==u)
-                       phenoReplaced[idxU]=NA
+		    	idxU = which(phenoReplaced==u)
+                       	phenoReplaced[idxU]=NA
                 }
         }
 

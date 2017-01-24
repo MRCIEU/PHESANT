@@ -7,6 +7,7 @@ testInteger <- function(varName, varType, thisdata) {
 	cat("INTEGER || ");
 
 	pheno = thisdata[,phenoStartIdx:ncol(thisdata)]
+	isExposure = getIsExposure(varName)
 
 	if (!is.numeric(as.matrix(pheno))) {
 		cat("SKIP Integer type but not numeric",sep="");
@@ -33,7 +34,7 @@ testInteger <- function(varName, varType, thisdata) {
 		
 		thisdatanew = cbind.data.frame(thisdata[,1:numPreceedingCols], phenoAvg);
 		testContinuous2(varName, varType, thisdatanew)
-		count$int.case1 <<- count$int.case1 + 1;
+		incrementCounter("int.case1")
 	}
 	else {
 		
@@ -45,17 +46,17 @@ testInteger <- function(varName, varType, thisdata) {
 		numLevels = length(levels(phenoFactor))
 		if (numLevels<=1) {
 			cat("SKIP (number of levels: ",numLevels,")",sep="");
-			count$int.onevalue <<- count$int.onevalue + 1;
+			incrementCounter("int.onevalue")
 		}
 		else if (numLevels==2) {
-			count$int.case2 <<- count$int.case2 + 1;
+			incrementCounter("int.case2")
 
 			# binary
 			thisdatanew = cbind.data.frame(thisdata[,1:numPreceedingCols], phenoFactor);
-			binaryLogisticRegression(varName, varType, thisdatanew);
+			binaryLogisticRegression(varName, varType, thisdatanew, isExposure);
 		}
 		else {
-			count$int.case3 <<- count$int.case3 + 1;
+			incrementCounter("int.case3")
 
 			cat("3-20 values || ")
 			# we don't use equal sized bins just the original integers as categories

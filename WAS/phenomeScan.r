@@ -16,7 +16,8 @@ option_list = list(
   make_option(c("-s", "--sensitivity"), action="store_true", default=FALSE, help="run sensitivity pheWAS [default= %default]"),
 #  make_option(c("-x", "--varTypeArg"), help="variable type to run pheWAS on (0:integer, 1:continuous, 2:categorical single, 3: categorical multiple)")
   make_option(c("-a", "--partIdx"), type="integer", default=NULL, help="part index of phenotype (used to parellise)"),
-  make_option(c("-b", "--numParts"), type="integer", default=NULL, help="number of phenotype parts (used to parellise)")
+  make_option(c("-b", "--numParts"), type="integer", default=NULL, help="number of phenotype parts (used to parellise)"),
+  make_option(c("-j", "--genetic"), action="store_true", default=TRUE, help="trait of interest is genetic, e.g. a SNP or genetic risk score [default= %default]")
 );
 opt_parser = OptionParser(option_list=option_list);
 opt = parse_args(opt_parser);
@@ -28,7 +29,7 @@ source("initFunctions.r")
 loadSource();
 
 ## load the files we write to and use
-count=initCounters();
+counters=initCounters();
 initResultsFiles();
 vl=initVariableLists();
 

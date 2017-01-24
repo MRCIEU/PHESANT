@@ -20,6 +20,7 @@ testContinuous2 <- function(varName, varType, thisdata) {
 	cat("CONTINUOUS || ");
 
 	pheno = thisdata[,phenoStartIdx:ncol(thisdata)]
+	isExposure = getIsExposure(varName)
 
 	if (!is.null(dim(pheno))) {
 		phenoAvg = rowMeans(pheno, na.rm=TRUE)
@@ -49,46 +50,97 @@ testContinuous2 <- function(varName, varType, thisdata) {
 		## treat as ordinal categorical
 		cat(">20% IN ONE CATEGORY || ");
 		
-		#cat(unique(phenoAvg))
-		#cat(length(which(phenoAvg==0)))
-		#cat(length(which(phenoAvg==1)))
-		#cat(length(which(phenoAvg==2)))
-		
-		## remove categories if < 10 examples to see if this should be binary or not, but if ordered categorical
-		## then we include all values when generating this
-	    	phenoAvgMoreThan10 = testNumExamples(phenoAvg)
+		# if >2 unique values then treat as ordered categorical
+		numUniqueValues = length(uniqVar)
 
-		## binary if 2 distinct values, else ordered categorical
-        	phenoFactor = factor(phenoAvg)
-        	numLevels = length(unique(na.omit(phenoAvgMoreThan10))) #length(levels(phenoFactor))
+		# 1. straight forward case that there are two (or one) values		
+		if (numUniqueValues<=2) {
+			## treat as binary or skip (binary requires>=10 per category)
 
-        	if (numLevels<=1) {
-       			cat("SKIP (number of levels: ",numLevels,")",sep="")
-			count$cont.onevalue <<- count$cont.onevalue + 1;
+			## remove categories if < 10 examples to see if this should be binary or not, but if ordered categorical
+			## then we include all values when generating this
+	    		phenoAvgMoreThan10 = testNumExamples(phenoAvg)
+
+			## binary if 2 distinct values, else ordered categorical
+        		phenoFactor = factor(phenoAvgMoreThan10)
+        		numLevels = length(unique(na.omit(phenoAvgMoreThan10))) #length(levels(phenoFactor))
+
+        		if (numLevels<=1) {
+       				cat("SKIP (number of levels: ",numLevels,")",sep="")
+				incrementCounter("cont.onevalue")
+        		}
+        		else if (numLevels==2) {
+	        		# binary
+				incrementCounter("cont.binary")
+        			thisdatanew = cbind.data.frame(thisdata[,1:numPreceedingCols], phenoFactor);			
+        			binaryLogisticRegression(varName, varType, thisdatanew, isExposure);
+        		}
         	}
-        	else if (numLevels==2) {
-	        	# binary
-			count$cont.case2 <<- count$cont.case2 + 1;
-        		thisdatanew = cbind.data.frame(thisdata[,1:numPreceedingCols], phenoFactor);			
-        		binaryLogisticRegression(varName, varType, thisdatanew);
-        	}
-        	else {
-			count$cont.case3 <<- count$cont.case3 + 1;
+		else {
+			## try to treat as ordered categorical
 
+			incrementCounter("cont.ordcattry")
 			## equal sized bins
 			phenoBinned = equalSizedBins(phenoAvg);
-		        thisdatanew = cbind.data.frame(thisdata[,1:numPreceedingCols], phenoBinned);
-			testCategoricalOrdered(varName, varType, thisdatanew);
+
+			# check number of people in each bin
+			bin0Num = length(which(phenoBinned==0))
+			bin1Num = length(which(phenoBinned==1))
+			bin2Num = length(which(phenoBinned==2))
+
+			if (bin0Num>=10 & bin1Num>=10 & bin2Num>=10) {
+
+				incrementCounter("cont.ordcattry.ordcat")
+				# successful binning. >=10 examples in each of the 3 bins
+			        thisdatanew = cbind.data.frame(thisdata[,1:numPreceedingCols], phenoBinned);
+				testCategoricalOrdered(varName, varType, thisdatanew);
+			}
+			else {
+				# try to treat as binary because not enough examples in each bin
+								
+				if (bin0Num<10 & bin2Num<10) {
+					## skip - not possible to create binary variable because first and third bins are too small
+					cat("SKIP 2 bins are too small || ")
+	                                incrementCounter("cont.ordcattry.smallbins")
+				} 
+				else if (bin0Num<10 & (bin0Num+bin1Num)>=10) {
+
+					# combine first and second bin
+					incrementCounter("cont.ordcattry.binsbinary")
+					cat("Combine first two bins and treat as binary || ")
+					phenoBinned[which(phenoBinned==0)] == 1					
+					# test binary
+					thisdatanew = cbind.data.frame(thisdata[,1:numPreceedingCols], phenoBinned)
+	                                binaryLogisticRegression(varName, varType, thisdatanew, isExposure);
+				}
+				else if (bin2Num<10 & (bin2Num+bin1Num)>=10) {
+
+					# combine second and last bin
+					incrementCounter("cont.ordcattry.binsbinary")
+					cat("Combine last two bins and treat as binary || ")
+                                        phenoBinned[which(phenoBinned==2)] == 1
+                                        # test binary
+                                        thisdatanew = cbind.data.frame(thisdata[,1:numPreceedingCols], phenoBinned)
+                                        binaryLogisticRegression(varName, varType, thisdatanew, isExposure)
+                                }
+				else {
+					## skip - not possible to create binary variable because combining bins would still be too small
+					cat("SKIP 2 bins are too small(2) || ")
+                                        incrementCounter("cont.ordcattry.smallbins2")
+				}
+
+			}
+	
 		}
 	}
 	else {		
 		cat("IRNT || ");
-		count$cont.main <<- count$cont.main + 1;
+		incrementCounter("cont.main")
 
 		numNotNA = length(which(!is.na(phenoAvg)))
 		if (numNotNA<500) {
-            cat("SKIP (", numNotNA, "< 500 examples) || ",sep="");
-			count$cont.main.500 <<- count$cont.main.500 + 1;
+			cat("CONTINUOUS-SKIP-500 (", numNotNA, ") || ",sep="");
+			incrementCounter("cont.main.500")
 		}
 		else {
 		
@@ -113,7 +165,12 @@ testContinuous2 <- function(varName, varType, thisdata) {
 			## save result to file
 			write(paste(varName, varType, numNotNA, beta, lower, upper, pvalue, sep=","), file=paste(opt$resDir,"results-linear-",opt$varTypeArg,".txt", sep=""), append="TRUE");
 			cat("SUCCESS results-linear");
-			count$continuous.success <<- count$continuous.success + 1;
+			incrementCounter("success.continuous")
+
+                	if (isExposure == TRUE) {
+                	        incrementCounter("success.exposure.continuous")
+                	}
+			
 		}
 	}
 }

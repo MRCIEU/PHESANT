@@ -10,7 +10,7 @@ There are three components in this project:
 
 ## General requirements
 
-R for parts 1 and 2 above. Tested with R-3.2.4-ATLAS. Phenome scan requires the R packages: optparse, MASS, lmtest and nnet.
+R for parts 1 and 2 above. Tested with R-3.3.1-ATLAS. Phenome scan requires the R packages: optparse (V1.3.2), MASS (V7.3-45), lmtest (V0.9-34), nnet (V7.3-12) and forestplot (V1.7).
 
 Java for part 3 above. Tested with jdk-1.8.0-66.
 
@@ -19,7 +19,7 @@ Java for part 3 above. Tested with jdk-1.8.0-66.
 
 Please cite:
 
-Millard, L.A.C, et al. Software Application Profile: PHESANT: a tool for performing automated phenome scans in UK Biobank. bioRxiv (2016)
+Millard, L.A.C, et al. Software Application Profile: PHESANT: a tool for performing automated phenome scans in UK Biobank. bioRxiv (2017)
 
 
 ## 1) Running a phenome scan
@@ -47,8 +47,8 @@ Rscript phenomeScan.r \
 
 Arg | Description
 -------|--------
-outcomefile 		| Comma separated file containing phenotypes, and a user id column. Where there are multiple columns for a phenotype these must be adjacent in the file. Specifically for a given field in Biobank the instances should be adjacent and within each instance the arrays should be adjacent. Each variable name is in the format 'x[varid]\_[instance]\_[array]' (we use the prefix 'x' so that the variable names are valid in R).
-exposurefile 		| Comma separated file containing the trait of interest (e.g. a snp, genetic risk score or observed phenotype).
+outcomefile 		| Comma separated file containing phenotypes. Each row is a participant, the first column contains the user id and the remaining columns are phenotypes. Where there are multiple columns for a phenotype these must be adjacent in the file. Specifically for a given field in Biobank the instances should be adjacent and within each instance the arrays should be adjacent. Each variable name is in the format 'x[varid]\_[instance]\_[array]' (we use the prefix 'x' so that the variable names are valid in R).
+exposurefile 		| Comma separated file containing the trait of interest (e.g. a snp, genetic risk score or observed phenotype). Each row is a participant and there should be two columns - the user ID and the trait of interest.
 variablelistfile 	| Tab separated file containing information about each phenotype, that is used to process them (see below).
 datacodingfile 		| Comma separated file containing information about data codings (see below).
 exposurevariable 	| Variable name as in exposurefile.
@@ -60,7 +60,8 @@ Arg | Description
 userId                  | User id column as in the exposurefile and the outcomefile (default: userId).
 partIdx			| Subset of phenotypes you want to run (for parallelising).
 partNum			| Number of subsets you are using (for parallelising).
-sensitivity		| By default analyses are adjusted for age (field [21022](http://biobank.ctsu.ox.ac.uk/showcase/field.cgi?id=21022)), sex (field [31](http://biobank.ctsu.ox.ac.uk/showcase/field.cgi?id=31)) and genotype chip (a binary variable derived from field [22000](http://biobank.ctsu.ox.ac.uk/showcase/field.cgi?id=22000)). If sensitivity argument is set to TRUE then also analyses additionally adjust for the first 10 genetic principal components (fields [22009_0_1](http://biobank.ctsu.ox.ac.uk/showcase/field.cgi?id=22009) to [22009_0_10](http://biobank.ctsu.ox.ac.uk/showcase/field.cgi?id=22009)) and assessment centre (field [54](http://biobank.ctsu.ox.ac.uk/showcase/field.cgi?id=54)).
+sensitivity		| By default analyses are adjusted for age (field [21022](http://biobank.ctsu.ox.ac.uk/showcase/field.cgi?id=21022)), sex (field [31](http://biobank.ctsu.ox.ac.uk/showcase/field.cgi?id=31)) and, if the genetic arg is set to TRUE, genotype chip (a binary variable derived from field [22000](http://biobank.ctsu.ox.ac.uk/showcase/field.cgi?id=22000)). If sensitivity argument is set to TRUE then analyses additionally adjust for the assessment centre (field [54](http://biobank.ctsu.ox.ac.uk/showcase/field.cgi?id=54)), and if the genetic arg is set to true, the first 10 genetic principal components (fields [22009_0_1](http://biobank.ctsu.ox.ac.uk/showcase/field.cgi?id=22009) to [22009_0_10](http://biobank.ctsu.ox.ac.uk/showcase/field.cgi?id=22009)).
+genetic			| By default we assume the trait of interest is a genetic variable (e.g. a SNP or genetic risk score). If this is not the case (e.g you are running an environment-wide association study) then set this flag to FALSE. This option determines which variables are controlled for in analyses, see sensitivity arg above.
 
 The partNum and partIdx arguments are both used to parallelise the phenome scan. E.g. setting partNum to 5 will divide the set of phenotypes into 5 (rough) parts and then partIdx can be used to call the phenome scan on a specific part (1-5).
 
@@ -76,7 +77,17 @@ The data coding file should have the following columns:
 3. ordering - Any needed corrections for the numeric ordering of a data codes specified by Biobank. This field is only used for data codes specified as ordinal in the ordinal column. For example, data code [100001](http://biobank.ctsu.ox.ac.uk/showcase/coding.cgi?id=100001) has values half, 1 and 2+ coded as 555, 1 and 200, respectively. We need the 'half' value to be less than the '1' value, so we change the order to '555|1|200'. NB: if this column is used then, if any value is not included it is set to NA (so this field can be used to remove and reorder values at the same time).
 4. reassignments - Any value changes that are needed. For example, in data code [100662](http://biobank.ctsu.ox.ac.uk/showcase/coding.cgi?id=100662), the values
 7 and 6 may be deemed equal (both representing 'never visited by friends/family' so we can set '7=6' to reassign the value 7 to the value 6.
+5. default_value - A default value assigned to, where a categorical is not explicitly stated (e.g value zero in field [100200](http://biobank.ctsu.ox.ac.uk/showcase/field.cgi?id=100200).
+6. default_value_related_field - The field used to determine which participants are assigned the default value. All participants with a value in the field stated here, and with no value for a field with this data code, are assigned the default value.
 
+Example of default value:
+In the data code information file we specify default_value=0 and default_value_related_field=20080 for data code 100006. 
+Field [100200](http://biobank.ctsu.ox.ac.uk/showcase/field.cgi?id=100200), for example, has data code 100006. 
+Therefore all participants with a value for field 20080, but with no value in field 100200, are assigned value 0 for field 100200.
+Intuitively, all participants who have answered the 24-hour recall diet questionnaire have a value in field 20080, an therefore we assume that they have opted
+for none for field 100200 (although this information is not explicitly stored in this field).
+The Biobank documentation for the "Online 24-hour dietary recall questionnaire" [here](http://biobank.ctsu.ox.ac.uk/showcase/refer.cgi?id=118240) explains instructions to participants either ticking 'none' or just skipping
+and 'none' being inferredthis.
 
 #### Variable information file
 
