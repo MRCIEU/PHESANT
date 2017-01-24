@@ -47,7 +47,7 @@ addVariableDescriptions <- function() {
 	}
 
 	# remove varId column - we don't need it anymore
-	resultsAll <<- resultsAll[, c("varName","varType","n","beta","lower","upper","pvalue","resType","Field","EXPOSURE_PHENOTYPE","Cat1_ID","Cat1_Title","Cat2_ID","Cat2_Title","Cat3_ID","Cat3_Title")]
+	resultsAll <<- resultsAll[, c("varName","varType","n","beta","lower","upper","pvalue","resType","description","isExposure","Cat1_ID","Cat1_Title","Cat2_ID","Cat2_Title","Cat3_ID","Cat3_Title")]
         
 
 }

@@ -12,7 +12,9 @@ makeQQPlot <- function(resDir, resultsAll) {
 	# check pvalues are valid (not zero)
 	idxZero = which(pvalues==0)
 	if (length(idxZero>0)) { 
-		stop("At least one P value is zero!", call.=FALSE)
+		#stop("At least one P value is zero!", call.=FALSE)
+		print("At least one P value is zero! Could not make QQ plot")
+		return(NULL)
 	}
 
 	numRes = length(pvalues)
@@ -46,5 +48,7 @@ makeQQPlot <- function(resDir, resultsAll) {
 	segments(0, threshold, 4.4, threshold, col='#008000',lty=2)
 
 	junk<- dev.off()
+
+	print("Finished QQ plot")
 
 }

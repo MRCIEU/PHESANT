@@ -57,7 +57,5 @@ source("makeQQPlot.r")
 source("makeForestPlots.r")
 
 makeQQPlot(opt$resDir,resultsAll);
-print("Finished QQ plot")
 
 junk <- makeForestPlots(opt$resDir,resultsAll);
-print("Finished forest plot")
