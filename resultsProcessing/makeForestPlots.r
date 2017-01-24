@@ -12,7 +12,13 @@ makeForestPlots <- function(resDir, resultsAll) {
 	bonf= 0.05/numRes
 	resultsIncluded = resultsIncluded[which(resultsIncluded[,"pvalue"]<bonf), ]
 
-	print(paste('Number below Bonferroni threshold:', nrow(resultsIncluded)));
+	numBelowBonf = nrow(resultsIncluded)
+	print(paste('Number below Bonferroni threshold:', numBelowBonf))
+
+	if (numBelowBonf==0) {
+		print("Forest plot not made because no results below Bonferroni threshold")
+		return(NULL)
+	}
 
 	# make sure results are numeric not character
 	resultsIncluded$beta = as.numeric(resultsIncluded$beta)

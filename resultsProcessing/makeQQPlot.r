@@ -31,15 +31,13 @@ makeQQPlot <- function(resDir, resultsAll) {
 	belowBonf = length(which(pSort<bonf))
 	print(paste('Number below Bonferroni threshold:', belowBonf));
 
-	require(car)
-
 	## plot qqplot
 
 	pdf(paste(resDir,"qqplot.pdf",sep=""))
 
 	# qq
 	par(pch='.')
-	plot(rankProportionLog10, pLog10,col='#990099', xlab='expected -log10(p)', ylab='actual -log10(p)',cex=2)
+	plot(rankProportionLog10, pLog10,col='#990099', xlab='expected -log10(p)', ylab='actual -log10(p)',cex=4)
 
 	# ascending diagonal
 	lines(rankProportionLog10~pLog10,col='#0066cc',lty=3)
@@ -47,6 +45,6 @@ makeQQPlot <- function(resDir, resultsAll) {
 	# horizontal threshold line
 	segments(0, threshold, 4.4, threshold, col='#008000',lty=2)
 
-	dev.off()
+	junk<- dev.off()
 
 }
