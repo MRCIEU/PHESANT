@@ -1,33 +1,38 @@
-excluded integer: 1
-excluded continuous: 1
-excluded categorical single: 0
-excluded categorical multiple: 0
-continuous starting: 6
-integer starting: 7
-categorical single starting: 7
-categorical multiple starting: 4
-continuous main, <=20% examples with same value: 3
-continuous main, <500 examples: 1
-continuous other, one value: 1
-continuous other, 2 distinct values: 1
-continuous other, >2 distinct values: 2
-integer, >= 20 distinct values (treated as continuous): 1
-integer, one value: 1
-integer, 2 distinct values: 2
-integer, 3-19 distinct values: 3
-categorical single, one value: 1
-categorical single, ACE: 0
-categorical single, ordered: 2
-categorical single, not ordered: 2
-categorical single, binary: 2
-ordered categorical: 7
-ordered categorical, <500 examples: 2
-not-ordered categorical, <500 examples: 1
-categorical multiple, binary variables: 12
-categorical multiple, <10 in each category: 4
-categorical multiple, >=10 in each category: 8
-binary, <500 examples: 1
-success continuous: 2
-success ordered categorical: 5
-success not-ordered categorical: 1
-success binary: 12
+name,countValue
+binary.500,1
+catMul.binary,12
+catMul.over10,12
+catSin.case1,2
+catSin.case2,2
+catSin.case3,2
+catSin.onevalue,1
+catSinToCatMul,1
+cont.binary,1
+cont.main,3
+cont.main.500,1
+cont.onevalue,1
+cont.ordcattry,2
+cont.ordcattry.ordcat,2
+excluded.catMul,1
+excluded.catSin,1
+excluded.cont,1
+excluded.int,1
+int.case1,1
+int.case2,3
+int.case3,2
+int.onevalue,1
+ordCat,6
+ordCat.500,2
+start.catMul,4
+start.catSin,8
+start.cont,6
+start.exposure.catMul,1
+start.exposure.cont,1
+start.int,7
+success.binary,17
+success.continuous,2
+success.exposure.binary,1
+success.exposure.continuous,1
+success.ordCat,4
+success.unordCat,1
+unordCat.500,1
