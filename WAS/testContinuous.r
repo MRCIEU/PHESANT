@@ -53,7 +53,7 @@ testContinuous2 <- function(varName, varType, thisdata) {
 		# if >2 unique values then treat as ordered categorical
 		numUniqueValues = length(uniqVar)
 
-		# 1. straight forward case that there are two (or one) values		
+		# straight forward case that there are two (or one) values		
 		if (numUniqueValues<=2) {
 			## treat as binary or skip (binary requires>=10 per category)
 
@@ -90,8 +90,9 @@ testContinuous2 <- function(varName, varType, thisdata) {
 
 			if (bin0Num>=10 & bin1Num>=10 & bin2Num>=10) {
 
-				incrementCounter("cont.ordcattry.ordcat")
 				# successful binning. >=10 examples in each of the 3 bins
+
+				incrementCounter("cont.ordcattry.ordcat")
 			        thisdatanew = cbind.data.frame(thisdata[,1:numPreceedingCols], phenoBinned);
 				testCategoricalOrdered(varName, varType, thisdatanew);
 			}
@@ -100,25 +101,28 @@ testContinuous2 <- function(varName, varType, thisdata) {
 								
 				if (bin0Num<10 & bin2Num<10) {
 					## skip - not possible to create binary variable because first and third bins are too small
+					## ie. could merge bin1 with bin 2 but then bin3 still too small etc
 					cat("SKIP 2 bins are too small || ")
 	                                incrementCounter("cont.ordcattry.smallbins")
 				} 
 				else if (bin0Num<10 & (bin0Num+bin1Num)>=10) {
 
-					# combine first and second bin
+					# combine first and second bin to create binary variable
 					incrementCounter("cont.ordcattry.binsbinary")
 					cat("Combine first two bins and treat as binary || ")
 					phenoBinned[which(phenoBinned==0)] == 1					
+
 					# test binary
 					thisdatanew = cbind.data.frame(thisdata[,1:numPreceedingCols], phenoBinned)
 	                                binaryLogisticRegression(varName, varType, thisdatanew, isExposure);
 				}
 				else if (bin2Num<10 & (bin2Num+bin1Num)>=10) {
 
-					# combine second and last bin
+					# combine second and last bin to create binary variable
 					incrementCounter("cont.ordcattry.binsbinary")
 					cat("Combine last two bins and treat as binary || ")
                                         phenoBinned[which(phenoBinned==2)] == 1
+
                                         # test binary
                                         thisdatanew = cbind.data.frame(thisdata[,1:numPreceedingCols], phenoBinned)
                                         binaryLogisticRegression(varName, varType, thisdatanew, isExposure)
@@ -137,6 +141,7 @@ testContinuous2 <- function(varName, varType, thisdata) {
 		cat("IRNT || ");
 		incrementCounter("cont.main")
 
+		# check there are at least 500 examples
 		numNotNA = length(which(!is.na(phenoAvg)))
 		if (numNotNA<500) {
 			cat("CONTINUOUS-SKIP-500 (", numNotNA, ") || ",sep="");
@@ -149,7 +154,6 @@ testContinuous2 <- function(varName, varType, thisdata) {
 		
 			## do regression (use standardised geno values)
 			geno = scale(thisdata[,"geno"])
-			#cat("genoMean=", mean(geno), " genoSD=", sd(geno), " || ", sep="")
 			confounders=thisdata[,2:numPreceedingCols];
 			invisible(fit <- lm(phenoIRNT ~ geno + ., data=confounders))
 			cis = confint(fit, level=0.95)
@@ -165,8 +169,8 @@ testContinuous2 <- function(varName, varType, thisdata) {
 			## save result to file
 			write(paste(varName, varType, numNotNA, beta, lower, upper, pvalue, sep=","), file=paste(opt$resDir,"results-linear-",opt$varTypeArg,".txt", sep=""), append="TRUE");
 			cat("SUCCESS results-linear");
-			incrementCounter("success.continuous")
 
+			incrementCounter("success.continuous")
                 	if (isExposure == TRUE) {
                 	        incrementCounter("success.exposure.continuous")
                 	}

@@ -18,7 +18,8 @@ testCategoricalSingle <- function(varName, varType, thisdata) {
 	# get data code info - whether this data code is ordinal or not and any reordering
         dataPheno = vl$phenoInfo[which(vl$phenoInfo$FieldID==varName),];
         dataCode = dataPheno$DATA_CODING;
-	
+
+	# get data coding information	
        	dataCodeRow = which(vl$dataCodeInfo$dataCode==dataCode);
 	if (length(dataCodeRow)==0) {
                 cat("ERROR: No row in data coding info file || ");
@@ -106,12 +107,15 @@ reorderOrderedCategory <- function(pheno,order) {
 	## new pheno of NAs (all values not in order are assumed to be NA)
 
 	if (!is.na(order) && nchar(order)>0) {
-		
+
+		# make empty pheno		
 		pheno2 = rep(NA,length(pheno));
 			
 		## get ordering
 		orderParts = unlist(strsplit(order,"\\|"));
 		
+		# go through values in correct order and set value
+		# from 1 to the number of values
 		count=1;
 		for(i in orderParts) {
 			idx = which(pheno==i);
@@ -130,6 +134,9 @@ reorderOrderedCategory <- function(pheno,order) {
 	
 }
 
+## sets default value for people with no value in pheno, but with a value in the
+## field specified in the default_value_related_field column in the data coding info file.
+## the default value is specified in the default_value column in the data coding info file.
 setDefaultValue <- function(pheno, defaultValue, defaultRelatedID) {
 
 
@@ -149,7 +156,8 @@ setDefaultValue <- function(pheno, defaultValue, defaultRelatedID) {
 		if (numWithDefault>0) {
 			cat("(WARNING: already ", numWithDefault, " values with default value) ", sep="")
 		}
-
+		
+		# set default value in people who have no value in the pheno but do have a value in the default_value_related_field
 	    	defaultIdxs = which(!is.na(indicatorVar) & is.na(pheno))
 		pheno[defaultIdxs] = defaultValue
 

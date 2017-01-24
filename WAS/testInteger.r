@@ -34,7 +34,7 @@ testInteger <- function(varName, varType, thisdata) {
 		
 		thisdatanew = cbind.data.frame(thisdata[,1:numPreceedingCols], phenoAvg);
 		testContinuous2(varName, varType, thisdatanew)
-		incrementCounter("int.case1")
+		incrementCounter("int.continuous")
 	}
 	else {
 		
@@ -49,17 +49,17 @@ testInteger <- function(varName, varType, thisdata) {
 			incrementCounter("int.onevalue")
 		}
 		else if (numLevels==2) {
-			incrementCounter("int.case2")
+			incrementCounter("int.binary")
 
 			# binary
 			thisdatanew = cbind.data.frame(thisdata[,1:numPreceedingCols], phenoFactor);
 			binaryLogisticRegression(varName, varType, thisdatanew, isExposure);
 		}
 		else {
-			incrementCounter("int.case3")
-
+			incrementCounter("int.catord")
 			cat("3-20 values || ")
-			# we don't use equal sized bins just the original integers as categories
+
+			# we don't use equal sized bins just the original integers (that have >=10 examples) as categories
 			thisdatanew = cbind.data.frame(thisdata[,1:numPreceedingCols], phenoFactor);
 
 			# treat as ordinal categorical

@@ -5,6 +5,7 @@ processArgs <- function() {
 
 if (opt$test==TRUE) {
 
+	# set up the test phenome scan settings
 	datadir='../testWAS/data/';
 	opt$traitofinterestfile <<- paste(datadir,'exposure.csv', sep="");
 	opt$outcomefile <<-  paste(datadir,'phenotypes.csv', sep="");
@@ -19,6 +20,8 @@ if (opt$test==TRUE) {
 	processParts(opt$partIdx, opt$numParts);	
 }
 else {
+
+	## check arguments are supplied correctly
 
 	if (is.null(opt$outcomefile)){
 	  print_help(opt_parser)

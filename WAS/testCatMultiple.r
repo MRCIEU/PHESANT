@@ -57,7 +57,6 @@ testCategoricalMultiple <- function(varName, varType, thisdata) {
 	        if (idxTrue<10 || idxFalse<10) {
 	                cat("CAT-MULT-SKIP-10 (", idxTrue, " vs ", idxFalse, ") || ", sep="");
 			incrementCounter("catMul.10")
-	                next;
 	        }
 		else {
 			isExposure = getIsCatMultExposure(varName, variableVal)
@@ -69,7 +68,9 @@ testCategoricalMultiple <- function(varName, varType, thisdata) {
 	}
 }
 
-
+# restricts sample based on value in CAT_MULT_INDICATOR_FIELDS column of variable info file,
+# either NO_NAN, ALL or a field ID
+# returns idx's that should be removed from the sample
 restrictSample <- function(varName,pheno,variableVal) {
 
 	# get definition for sample for this variable either NO_NAN, ALL or a variable ID
@@ -83,14 +84,16 @@ restrictSample2 <- function(varName,pheno, varIndicator,variableVal) {
 	
 	if (varIndicator=="NO_NAN") { # remove NAs
 		## remove all people with no value for this variable
-		
+
+		# row indexes with NA in all columns of this cat mult field		
 		ind <- apply(pheno, 1, function(x) all(is.na(x)))
-		#cat(which(ind==TRUE))
 		naIdxs = which(ind==TRUE)
 		cat("NO_NAN Remove NA participants ", length(naIdxs), " || ", sep="");
 	}
 	else if (varIndicator=="ALL") {
-		# hospital data so use all people (no missing assumed) .. also for death registry
+
+		# use all people (no missing assumed) so return empty vector
+		# e.g. hospital data and death registry
 		naIdxs = cbind()
 		cat("ALL || ")
 	}
@@ -107,7 +110,7 @@ restrictSample2 <- function(varName,pheno, varIndicator,variableVal) {
 		cat("Remove indicator var NAs: ", length(naIdxs), " || ", sep="");
 
 		if (is.numeric(as.matrix(indicatorVar))) {
-			# remove participants with value <0 in this related field
+			# remove participants with value <0 in this related field - assumed missing indicators
 			lessZero = which(indicatorVar<0)
 			naIdxs = union(naIdxs, lessZero)
 			cat("Remove indicator var <0: ", length(lessZero), " || ", sep="")
@@ -119,12 +122,16 @@ restrictSample2 <- function(varName,pheno, varIndicator,variableVal) {
 
 	## remove people with pheno<0 if they aren't a positive example for this variable indicator
 	## because we can't know if they are a negative example or not
-
 	if (is.numeric(as.matrix(pheno))) {
 		idxForVar = which(pheno == variableVal, arr.ind=TRUE)
 		idxMissing = which(pheno < 0, arr.ind=TRUE)
+
+		# all people with <0 value and not variableVal
 		naMissing = setdiff(idxMissing,idxForVar)
+		
+		# add these people with unknowns to set to remove from sample
 		naIdxs = union(naIdxs, naMissing)
+		
 		cat(paste("Removed ", length(naMissing) ," examples != ", variableVal, " but with missing value (<0) || ", sep=""));
 	}
 	else {

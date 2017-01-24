@@ -9,18 +9,22 @@ testAssociations <- function(currentVar, currentVarShort, thisdata) {
 		# retrieve whether phenotype is excluded etc
 		idx=which(vl$phenoInfo$FieldID==currentVarShort);
 
+		# check if variable info is found for this field
 		if (length(idx)==0) {
 			cat(paste(currentVar, " || Variable could not be found in pheno info file. \n", sep=""))			
 			incrementCounter("notinphenofile")
 		}
 		else {
 
+		# get info from variable info file
 		excluded = vl$phenoInfo$EXCLUDED[idx]
 		catSinToMult = vl$phenoInfo$CAT_SINGLE_TO_CAT_MULT[idx]
 		fieldType = vl$phenoInfo$ValueType[idx]
 		isExposure = getIsExposure(currentVarShort) #vl$phenoInfo$EXPOSURE_PHENOTYPE[idx]
 
 		if (fieldType=="Integer") {		
+
+			#### INTEGER
 			cat(currentVar, "|| ", sep="")
 			
 			if (excluded!="") {
@@ -39,6 +43,7 @@ testAssociations <- function(currentVar, currentVarShort, thisdata) {
 	    	}
 		else if (fieldType=="Continuous") {
 
+			#### CONTINUOUS
 			cat(currentVar, "|| ", sep="")
 
 		    	if (excluded!="") {
@@ -56,6 +61,7 @@ testAssociations <- function(currentVar, currentVarShort, thisdata) {
 		}
 	    	else if (fieldType=="Categorical single" && catSinToMult=="") {
 
+			#### CAT SINGLE
 			cat(currentVar, "|| ", sep="")
 	
 	    		if (excluded!="") {
@@ -73,6 +79,7 @@ testAssociations <- function(currentVar, currentVarShort, thisdata) {
 	  	}
 		else if (fieldType=="Categorical multiple" || catSinToMult!="") {
 		
+			#### CAT MULTIPLE
 			cat(currentVar, "|| ", sep="")
 
 			if (excluded!="") {

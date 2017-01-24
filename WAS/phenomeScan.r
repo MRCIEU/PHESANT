@@ -1,7 +1,6 @@
 
 # main phenome scan file
 
-#install.packages("optparse");
 library("optparse")
 
 option_list = list(

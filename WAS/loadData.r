@@ -13,7 +13,6 @@ phenotype=read.table(opt$outcomefile, header=1,sep=","); #\t
 
 ## load snps
 print("Loading trait of interest...")
-#snpFile=paste(dataDir,'snps/snp-score96-withPhenIds-subset.csv',sep="");
 snpScores=read.table(opt$traitofinterestfile,sep=",", header=1);
 
 validateInput(phenotype, snpScores);
@@ -24,7 +23,6 @@ idx1 = which(names(snpScores) == opt$userId);
 idx2 = which(names(snpScores) == opt$traitofinterest);
 snpScores=cbind.data.frame(snpScores[,idx1], snpScores[,idx2]);
 colnames(snpScores)[1] <- opt$userId;
-#colnames(snpScores)[2] <- opt$traitofinterest;
 colnames(snpScores)[2] <- "geno";
 
 ## merge to one matrix

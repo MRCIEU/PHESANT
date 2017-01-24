@@ -14,7 +14,7 @@ reassignValue <- function(pheno, varName) {
                 return(pheno);
         }
 	else if (length(dataCodeRow)>1) {
-                cat(">1 ROWS IN DATA CODE INFO FILE || ")
+                cat("WARNING: >1 ROWS IN DATA CODE INFO FILE || ")
 		return(pheno);
         }
 
@@ -27,10 +27,14 @@ reassignValue <- function(pheno, varName) {
 
 # Reassigns values in pheno, as specified in resassignments argument
 reassignValue2 <- function(pheno, reassignments) {
+
 	# can be NA if row not included in data coding info file
 	if (!is.na(reassignments) && nchar(reassignments)>0) {
+
 		reassignParts = unlist(strsplit(reassignments,"\\|"));
 		cat(paste("reassignments: ", reassignments, " || ", sep=""));
+
+		# do each reassignment
 		for(i in reassignParts) {
 			reassignParts = unlist(strsplit(i,"="));
 

@@ -16,12 +16,14 @@ testCategoricalOrdered <- function(varName, varType, thisdata, orderStr="") {
 	orderStr = setOrderString(orderStr, uniqVar);
 	cat("order: ", orderStr, " || ",  sep="");
 
+	# check sample size
 	numNotNA = length(which(!is.na(pheno)))
 	if (numNotNA<500) {
 		cat("CATORD-SKIP-500 (", numNotNA, ") || ",sep="");
 		incrementCounter("ordCat.500")
 	}
 	else {
+		# test this cat ordered variable with ordered logistic regression	
 
 	        phenoFactor = factor(pheno)
 		cat("num categories: ", length(levels(phenoFactor)), " || ", sep="");
@@ -31,12 +33,10 @@ testCategoricalOrdered <- function(varName, varType, thisdata, orderStr="") {
 		sink("/dev/null")
 		require(MASS)
 		require(lmtest)
-		# install.packages('lmtest')
 
 		tryCatch({
 			confounders=thisdata[,2:numPreceedingCols];
 			geno = scale(geno)
-			#cat("genoMean=", mean(geno), " genoSD=", sd(geno), " || ", sep="");
 			fit <- polr(phenoFactor ~ geno + ., data=confounders, Hess=TRUE)
 		}, error = function(e) {
 			sink()
@@ -97,6 +97,7 @@ setOrderString <- function(orderStr, uniqVar) {
 
 		orderStr="";
 
+		# create order str by appending each value
                 uniqVarSorted = sort(uniqVar);
                 first=1;
                 for (i in uniqVarSorted) {

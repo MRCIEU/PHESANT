@@ -1,5 +1,10 @@
+
+
+# looks up in the variable info file, whether field varName has varValue stated as a 
+# trait of interest in the TRAIT_OF_INTEREST column
 getIsCatMultExposure <- function(varName, varValue) {
 	
+	# get row index of field in variable information file
 	idx=which(vl$phenoInfo$FieldID==varName)
 
 	# may be empty of may contain VALUE1|VALUE2 etc .. to denote those
@@ -12,10 +17,8 @@ getIsCatMultExposure <- function(varName, varValue) {
 		# split into variable Values
 		exposureValues = unlist(strsplit(isExposure,"\\|"))
 
+		# for each value stated, check whether it is varValue
 		for (thisVal in exposureValues) {
-
-			#thisVal = exposureValues[i];
-
 			if (thisVal == varValue) {
 				cat("IS_CM_EXPOSURE || ")
 				return(TRUE)

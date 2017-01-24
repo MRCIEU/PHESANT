@@ -1,5 +1,7 @@
 
-# returns boolean var - whether this field denotes the trait of interest
+# returns boolean var - whether this field denotes the trait of interest, as specified
+# in the variable information file
+# this should not be used for cat mult fields - use getIsCatMultExposure function instead.
 getIsExposure <- function(varName) {
 
 	idx=which(vl$phenoInfo$FieldID==varName)
@@ -8,5 +10,4 @@ getIsExposure <- function(varName) {
 		return(TRUE)
     	}
 	return(FALSE)
-
 }
