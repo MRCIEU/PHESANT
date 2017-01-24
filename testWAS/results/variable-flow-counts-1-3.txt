@@ -8,8 +8,8 @@ cont.ordcattry.ordcat,2
 excluded.catMul,1
 excluded.catSin,1
 excluded.int,1
-int.case1,1
-int.case2,2
+int.binary,2
+int.continuous,1
 int.onevalue,1
 ordCat,2
 ordCat.500,1

@@ -17,9 +17,9 @@ excluded.catMul,1
 excluded.catSin,1
 excluded.cont,1
 excluded.int,1
-int.case1,1
-int.case2,3
-int.case3,2
+int.binary,3
+int.catord,2
+int.continuous,1
 int.onevalue,1
 ordCat,6
 ordCat.500,2

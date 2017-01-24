@@ -4,8 +4,8 @@ catSin.case1,2
 catSin.case2,2
 catSin.case3,2
 catSin.onevalue,1
-int.case2,1
-int.case3,2
+int.binary,1
+int.catord,2
 ordCat,4
 ordCat.500,1
 start.catSin,8
