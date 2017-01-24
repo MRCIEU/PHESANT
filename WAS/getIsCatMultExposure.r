@@ -4,7 +4,7 @@ getIsCatMultExposure <- function(varName, varValue) {
 
 	# may be empty of may contain VALUE1|VALUE2 etc .. to denote those
 	# cat mult values denoting exposure variable
-	isExposure = vl$phenoInfo$EXPOSURE_PHENOTYPE[idx]
+	isExposure = vl$phenoInfo$TRAIT_OF_INTEREST[idx]
         
         if (!is.na(isExposure) & isExposure!="") {
 

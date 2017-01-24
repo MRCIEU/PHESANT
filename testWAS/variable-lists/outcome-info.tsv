@@ -1,4 +1,4 @@
-Cat1_ID	Cat1_Title	Cat2_ID	Cat2_Title	Cat3_ID	Cat3_Title	Field	FieldID	EXPOSURE_PHENOTYPE	EXCLUDED	CAT_MULT_INDICATOR_FIELDS	CAT_SINGLE_TO_CAT_MULT	DATA_CODING	ValueType
+Cat1_ID	Cat1_Title	Cat2_ID	Cat2_Title	Cat3_ID	Cat3_Title	Field	FieldID	TRAIT_OF_INTEREST	EXCLUDED	CAT_MULT_INDICATOR_FIELDS	CAT_SINGLE_TO_CAT_MULT	DATA_CODING	ValueType
 100000	UK Biobank Assessment Centre	100006	Physical measures	100008	Anthropometry	FIELD1	1	YES					Continuous
 100000	UK Biobank Assessment Centre	100006	Physical measures	100008	AnthropometrY	FIELD2	2						Continuous
 100000	UK Biobank Assessment Centre	100006	Physical measures	100008	Anthropometry	FIELD3	3						Continuous

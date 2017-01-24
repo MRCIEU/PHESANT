@@ -2,7 +2,7 @@
 makeQQPlot <- function(resDir, resultsAll) {
 
 	## remove the fields excluded as stated in variable information file
-	idx = which(is.na(resultsAll[,"isExposure"]) | resultsAll[,"isExposure"]=="")
+	idx = which(is.na(resultsAll[,"isTraitOfInterest"]) | resultsAll[,"isTraitOfInterest"]=="")
 
 	print(paste("Number not exposure variable:", length(idx)))
 

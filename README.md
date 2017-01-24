@@ -24,7 +24,7 @@ Millard, L.A.C, et al. Software Application Profile: PHESANT: a tool for perform
 
 ## 1) Running a phenome scan
 
-A phenome scan is run using `WAS/phenomeScan.r`. This is basically ready to go - the only essential amendment you will need to make is the EXPOSURE column in the variable information file (see below).
+A phenome scan is run using `WAS/phenomeScan.r`. This is basically ready to go - the only essential amendment you will need to make is the TRAIT_OF_INTEREST column in the variable information file (see below).
 
 The PHESANT phenome scan processing pipeline is illustrated in the figure [here](biobank-PHESANT-figure.pdf), and described in detail in the paper above.
 
@@ -35,10 +35,10 @@ cd WAS/
 
 Rscript phenomeScan.r \
 --outcomefile=<phenotypesFilePath> \
---exposurefile=<traitOfInterestFilePath> \
+--traitofinterestfile=<traitOfInterestFilePath> \
 --variablelistfile="../variable-info/outcome-info.tsv" \
 --datacodingfile="../variable-info/data-coding-ordinal-info.csv" \
---exposurevariable=<traitOfInterestName> \
+--traitofinterestvariable=<traitOfInterestName> \
 --resDir=<resultsDirectoryPath> \
 --userId=<userIdFieldName>
 ```
@@ -48,16 +48,16 @@ Rscript phenomeScan.r \
 Arg | Description
 -------|--------
 outcomefile 		| Comma separated file containing phenotypes. Each row is a participant, the first column contains the user id and the remaining columns are phenotypes. Where there are multiple columns for a phenotype these must be adjacent in the file. Specifically for a given field in Biobank the instances should be adjacent and within each instance the arrays should be adjacent. Each variable name is in the format 'x[varid]\_[instance]\_[array]' (we use the prefix 'x' so that the variable names are valid in R).
-exposurefile 		| Comma separated file containing the trait of interest (e.g. a snp, genetic risk score or observed phenotype). Each row is a participant and there should be two columns - the user ID and the trait of interest.
+traitofinterestfile 		| Comma separated file containing the trait of interest (e.g. a snp, genetic risk score or observed phenotype). Each row is a participant and there should be two columns - the user ID and the trait of interest.
 variablelistfile 	| Tab separated file containing information about each phenotype, that is used to process them (see below).
 datacodingfile 		| Comma separated file containing information about data codings (see below).
-exposurevariable 	| Variable name as in exposurefile.
+traitofinterest 	| Variable name as in traitofinterestfile.
 resDir 			| Directory where you want the results to be stored.
 
 ### Optional arguments
 Arg | Description
 -------|--------
-userId                  | User id column as in the exposurefile and the outcomefile (default: userId).
+userId                  | User id column as in the traitofinterestfile and the outcomefile (default: userId).
 partIdx			| Subset of phenotypes you want to run (for parallelising).
 partNum			| Number of subsets you are using (for parallelising).
 sensitivity		| By default analyses are adjusted for age (field [21022](http://biobank.ctsu.ox.ac.uk/showcase/field.cgi?id=21022)), sex (field [31](http://biobank.ctsu.ox.ac.uk/showcase/field.cgi?id=31)) and, if the genetic arg is set to TRUE, genotype chip (a binary variable derived from field [22000](http://biobank.ctsu.ox.ac.uk/showcase/field.cgi?id=22000)). If sensitivity argument is set to TRUE then analyses additionally adjust for the assessment centre (field [54](http://biobank.ctsu.ox.ac.uk/showcase/field.cgi?id=54)), and if the genetic arg is set to true, the first 10 genetic principal components (fields [22009_0_1](http://biobank.ctsu.ox.ac.uk/showcase/field.cgi?id=22009) to [22009_0_10](http://biobank.ctsu.ox.ac.uk/showcase/field.cgi?id=22009)).
@@ -101,7 +101,7 @@ This provides the following set of information about fields, used in this phenom
 
 The variable information file also has the following columns that we have added, to provide additional information used in the phenome scan:
 
-1. EXPOSURE_PHENOTYPE - Specifies any field that represents the exposure phenotype. This is a marker so that after the phenome scan is run we can use these
+1. TRAIT_OF_INTEREST - Specifies any field that represents the trait of interest. This is a marker so that after the phenome scan is run we can use these
 results as validation only (e.g. a pheWAS of the BMI FTO SNP would expect the BMI phenotypes to show high in the results ranking), i.e. they do not contribute to the multiple testing burden. We have set this code up for BMI, so have marked BMI/weight fields as an exposure - you'll need to change this for your particular trait or interest. 
 2. EXCLUDED - Phenotypes we have apriori decided to exclude from the phenome scan. Any field with a value in this field is excluded, and we state a code that describes the reason we exclude a variable (for future reference). Our codes and reasons are as follows (of course for your phenome scan you can add others as you would like): 
  - YES-ACE: "Assessment center environment" variables that do not directly describe the participant.

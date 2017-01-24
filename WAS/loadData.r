@@ -14,27 +14,27 @@ phenotype=read.table(opt$outcomefile, header=1,sep=","); #\t
 ## load snps
 print("Loading trait of interest...")
 #snpFile=paste(dataDir,'snps/snp-score96-withPhenIds-subset.csv',sep="");
-snpScores=read.table(opt$exposurefile,sep=",", header=1);
+snpScores=read.table(opt$traitofinterestfile,sep=",", header=1);
 
 validateInput(phenotype, snpScores);
-print("Phenotype and SNP files validated");
+print("Phenotype and trait of interest files validated");
 
 # keep only the userID and exposure variable
 idx1 = which(names(snpScores) == opt$userId);
-idx2 = which(names(snpScores) == opt$exposurevariable);
+idx2 = which(names(snpScores) == opt$traitofinterest);
 snpScores=cbind.data.frame(snpScores[,idx1], snpScores[,idx2]);
 colnames(snpScores)[1] <- opt$userId;
-#colnames(snpScores)[2] <- opt$exposurevariable;
+#colnames(snpScores)[2] <- opt$traitofinterest;
 colnames(snpScores)[2] <- "geno";
 
 ## merge to one matrix
 datax = merge(snpScores, phenotype, by=opt$userId, all=FALSE);
 
 if (nrow(datax)==0) {
-	stop("No examples with row in both SNP and phenotype files", call.=FALSE)
+	stop("No examples with row in both trait of interest and phenotype files", call.=FALSE)
 }
 else {
-	print(paste("Pheno and SNP data files merged, with", nrow(datax),"examples"))
+	print(paste("Phenotype and trait of interest data files merged, with", nrow(datax),"examples"))
 }
 
 datax = fixOddFieldsToCatMul(datax)

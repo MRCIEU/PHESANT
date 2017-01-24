@@ -6,11 +6,11 @@ processArgs <- function() {
 if (opt$test==TRUE) {
 
 	datadir='../testWAS/data/';
-	opt$exposurefile <<- paste(datadir,'exposure.csv', sep="");
+	opt$traitofinterestfile <<- paste(datadir,'exposure.csv', sep="");
 	opt$outcomefile <<-  paste(datadir,'phenotypes.csv', sep="");
 	opt$variablelistfile <<- '../testWAS/variable-lists/outcome-info.tsv';
 	opt$datacodingfile <<- '../testWAS/variable-lists/data-coding-ordinal-info.txt';
-	opt$exposurevariable <<- 'exposure';
+	opt$traitofinterest <<- 'exposure';
 	opt$resDir <<- '../testWAS/results/';
 	opt$userId <<- 'userId';
 	opt$sensitivity <<- FALSE;
@@ -24,9 +24,9 @@ else {
 	  print_help(opt_parser)
 	  stop("outcomefile argument must be supplied", call.=FALSE)
 	}
-	if (is.null(opt$exposurefile)){
+	if (is.null(opt$traitofinterestfile)){
 	  print_help(opt_parser)
-	  stop("exposurefile argument must be supplied", call.=FALSE)
+	  stop("traitofinterestfile argument must be supplied", call.=FALSE)
 	}
 	if (is.null(opt$variablelistfile)){
 	  print_help(opt_parser)
@@ -36,9 +36,9 @@ else {
 	  print_help(opt_parser)
 	  stop("datacodingfile argument must be supplied", call.=FALSE)
 	}
-	if (is.null(opt$exposurevariable)){
+	if (is.null(opt$traitofinterest)){
 	  print_help(opt_parser)
-	  stop("exposurevariable argument must be supplied", call.=FALSE)
+	  stop("traitofinterest argument must be supplied", call.=FALSE)
 	}
 	if (is.null(opt$resDir)){
 	  print_help(opt_parser)

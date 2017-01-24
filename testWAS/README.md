@@ -8,10 +8,10 @@ testDir="../testWAS/"
 
 Rscript phenomeScan.r \
 --outcomefile="${testDir}data/phenotypes.csv" \
---exposurefile="${testDir}data/exposure.csv" \
+--traitofinterestfile="${testDir}data/exposure.csv" \
 --variablelistfile="${testDir}variable-lists/outcome-info.tsv" \
 --datacodingfile="${testDir}variable-lists/data-coding-ordinal-info.txt" \
---exposurevariable="exposure" \
+--traitofinterestvariable="exposure" \
 --resDir="${testDir}results/" \
 --userId="userId"
 ```
@@ -32,10 +32,10 @@ testDir="../testWAS/"
 
 Rscript phenomeScan.r \
 --outcomefile="${testDir}data/phenotypes.csv" \
---exposurefile="${testDir}data/exposure.csv" \
+--traitofinterestfile="${testDir}data/exposure.csv" \
 --variablelistfile="${testDir}variable-lists/outcome-info.tsv" \
 --datacodingfile="${testDir}variable-lists/data-coding-ordinal-info.txt" \
---exposurevariable="exposure" \
+--traitofinterestvariable="exposure" \
 --resDir="${testDir}results/" \
 --userId="userId" \
 --partIdx=1 \

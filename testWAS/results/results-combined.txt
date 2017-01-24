@@ -1,4 +1,4 @@
-varName	varType	n	beta	lower	upper	pvalue	resType	description	isExposure	Cat1_ID	Cat1_Title	Cat2_ID	Cat2_Title	Cat3_ID	Cat3_Title
+varName	varType	n	beta	lower	upper	pvalue	resType	description	isTraitOfInterest	Cat1_ID	Cat1_Title	Cat2_ID	Cat2_Title	Cat3_ID	Cat3_Title
 1	CONTINUOUS	1000	0.994704869763404	0.987619714556551	1.00179002497026	0	LINEAR	FIELD1	YES	100000	UK Biobank Assessment Centre	100006	Physical measures	100008	Anthropometry
 21	INTEGER	900	1.15654660441432	1.13814239309567	1.17495081573297	0	LINEAR	FIELD21		100000	UK Biobank Assessment Centre	100006	Physical measures	100008	Anthropometry
 36	CAT-SIN	889	4.26406070415127	3.97401193807006	4.55410947023248	1.45251953559895e-128	ORDERED-LOGISTIC	FIELD36		100000	UK Biobank Assessment Centre	100071	Verbal interview	100074	Medical conditions

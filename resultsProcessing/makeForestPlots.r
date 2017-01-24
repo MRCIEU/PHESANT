@@ -4,7 +4,7 @@ makeForestPlots <- function(resDir, resultsAll) {
 	library(forestplot)
 
 	#### remove the fields excluded as stated in variable information file
-	idx = which(is.na(resultsAll[,"isExposure"]) | resultsAll[,"isExposure"]=="")
+	idx = which(is.na(resultsAll[,"isTraitOfInterest"]) | resultsAll[,"isTraitOfInterest"]=="")
 	resultsIncluded = resultsAll[idx,];
 
 	# keep only those reaching Bonferroni significance
