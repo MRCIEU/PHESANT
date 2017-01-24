@@ -1,5 +1,6 @@
-dataCode,ordinal,ordering,reassignments
-1,-1,,
-2,1,,
-3,0,,
-4,,,
+dataCode,ordinal,ordering,reassignments,default_value,default_related_field
+1,-1,,,,
+2,1,,,,
+3,0,,,,
+4,,,,,
+6,,,,100,99
