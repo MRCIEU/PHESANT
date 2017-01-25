@@ -103,6 +103,7 @@ The variable information file also has the following columns that we have added,
 
 1. TRAIT_OF_INTEREST - Specifies any field that represents the trait of interest. This is a marker so that after the phenome scan is run we can use these
 results as validation only (e.g. a pheWAS of the BMI FTO SNP would expect the BMI phenotypes to show high in the results ranking), i.e. they do not contribute to the multiple testing burden. We have set this code up for BMI, so have marked BMI/weight fields as an exposure - you'll need to change this for your particular trait or interest. 
+For categorical multiple field you may want to mark the whole field as denoting the trait of interest (e.g all cancers), or just a specific value (e.g. a particular type of cancer). To do the former set this column to YES, and to do the latter set to particular values using the format 'VALUE1|VALUE2'.
 2. EXCLUDED - Phenotypes we have apriori decided to exclude from the phenome scan. Any field with a value in this field is excluded, and we state a code that describes the reason we exclude a variable (for future reference). Our codes and reasons are as follows (of course for your phenome scan you can add others as you would like): 
  - YES-ACE: "Assessment center environment" variables that do not directly describe the participant.
  - YES-AGE: Age variables.
