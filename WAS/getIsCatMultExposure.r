@@ -13,7 +13,17 @@ getIsCatMultExposure <- function(varName, varValue) {
         
         if (!is.na(isExposure) & isExposure!="") {
 
+		
 		isExposure = as.character(isExposure)
+		
+		## first check if value is YES, then all values are exposure traits
+		if (isExposure == "YES") {
+			cat("IS_CM_ALL_EXPOSURE || ")
+			return(TRUE)
+		}
+
+		## try to split by |, to set particular values as exposure
+
 		# split into variable Values
 		exposureValues = unlist(strsplit(isExposure,"\\|"))
 
