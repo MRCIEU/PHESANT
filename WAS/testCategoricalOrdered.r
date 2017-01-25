@@ -26,23 +26,22 @@ testCategoricalOrdered <- function(varName, varType, thisdata, orderStr="") {
 		# test this cat ordered variable with ordered logistic regression	
 
 	        phenoFactor = factor(pheno)
-		cat("num categories: ", length(levels(phenoFactor)), " || ", sep="");
+		cat("num categories: ", length(unique(na.omit(phenoFactor))), " || ", sep="");
 
 		# ordinal logistic regression
 		sink()
-		sink("/dev/null")
+		sink(modelFitLogFile, append=TRUE)
+		print("--------------")
+		print(varName)
+
 		require(MASS)
 		require(lmtest)
 
+		### BEGIN TRYCATCH
 		tryCatch({
-			confounders=thisdata[,2:numPreceedingCols];
-			geno = scale(geno)
-			fit <- polr(phenoFactor ~ geno + ., data=confounders, Hess=TRUE)
-		}, error = function(e) {
-			sink()
-			sink(resLogFile, append=TRUE)
-        		print(paste("ERROR:", varName,e))
-		})
+		confounders=thisdata[,2:numPreceedingCols];
+		geno = scale(geno)
+		fit <- polr(phenoFactor ~ geno + ., data=confounders, Hess=TRUE)
 
 		ctable <- coef(summary(fit))
 		sink()
@@ -63,6 +62,15 @@ testCategoricalOrdered <- function(varName, varType, thisdata, orderStr="") {
                 if (isExposure == TRUE) {
                         incrementCounter("success.exposure.ordCat")
                 }
+
+		### END TRYCATCH
+		}, error = function(e) {
+			sink()
+                        sink(resLogFile, append=TRUE)
+                        cat(paste("ERROR:", varName,gsub("[\r\n]", "", e), sep=" "))
+                        incrementCounter("ordCat.error")
+                })
+
 	}
 }
 

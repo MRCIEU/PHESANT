@@ -7,7 +7,7 @@
 # and stores result in 'results-logistic-binary' results file.
 binaryLogisticRegression <- function(varName, varType, thisdata, isExposure) {
 
-        phenoFactor = thisdata[,phenoStartIdx];
+        phenoFactor = factor(thisdata[,phenoStartIdx])
 
         facLevels = levels(phenoFactor)
 
@@ -37,8 +37,20 @@ binaryLogisticRegression <- function(varName, varType, thisdata, isExposure) {
 		# use standardised geno values
                 geno = scale(thisdata[,"geno"])
                 confounders=thisdata[,2:numPreceedingCols];
-		invisible(mylogit <- glm(phenoFactor ~ geno + ., data=confounders, family="binomial"));
 
+		sink()
+		sink(modelFitLogFile, append=TRUE)
+		print("--------------")
+		print(varName)
+
+		###### BEGIN TRYCATCH
+                tryCatch({
+
+		mylogit <- glm(phenoFactor ~ geno + ., data=confounders, family="binomial")
+
+		sink()
+             	sink(resLogFile, append=TRUE)
+		
                 cis = confint(mylogit, level=0.95)
                 sumx = summary(mylogit)
 
@@ -57,7 +69,16 @@ binaryLogisticRegression <- function(varName, varType, thisdata, isExposure) {
 
 		if (isExposure==TRUE) {
 	            	incrementCounter("success.exposure.binary")
-	        }		
+	        }	
+
+		## END TRYCATCH
+                }, error = function(e) {
+                        sink()
+                        sink(resLogFile, append=TRUE)
+                        cat(paste("ERROR:", varName,gsub("[\r\n]", "", e), sep=" "))
+                        incrementCounter("binary.error")
+                })
+	
         }
 }
 

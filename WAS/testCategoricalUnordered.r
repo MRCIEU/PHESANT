@@ -12,16 +12,30 @@ testCategoricalUnordered <- function(varName, varType, thisdata) {
 	}
 	else {
 
+		# check there are not too many levels and skip if there are
+		numUnique = length(unique(na.omit(pheno)))
+		if (numUnique>1000) {
+			cat("Too many levels: ", numUnique, " > 1000 || SKIP ", sep="")
+			return(NULL)
+		}
+
 		phenoFactor = chooseReferenceCategory(pheno);
 		reference = levels(phenoFactor)[1];
 		
 		sink()
-		sink("/dev/null"); # hide output of model fitting
+		sink(modelFitLogFile, append=TRUE) # hide output of model fitting
+		print("--------------")
+                print(varName)
+
 		require(nnet)
 		geno = scale(thisdata[,"geno"])
 		#cat("genoMean=", mean(geno), " genoSD=", sd(geno), " || ", sep="")
 		
 		confounders=thisdata[,2:numPreceedingCols];
+
+		###### BEGIN TRYCATCH
+		tryCatch({
+		
 		fit <- multinom(phenoFactor ~ geno + ., data=confounders)
 
 		## baseline model with only confounders, to which we compare the model above
@@ -74,6 +88,14 @@ testCategoricalUnordered <- function(varName, varType, thisdata) {
                 if (isExposure == TRUE) {
                         incrementCounter("success.exposure.unordCat")
                 }
+		
+		## END TRYCATCH
+		}, error = function(e) {
+                        sink()
+                        sink(resLogFile, append=TRUE)
+                        cat(paste("ERROR:", varName,gsub("[\r\n]", "", e), sep=" "))
+                	incrementCounter("unordCat.error")
+		})
 
 	}
 }

@@ -68,6 +68,10 @@ currentVar="";
 currentVarShort="";
 first=TRUE;
 
+modelFitLogFile = paste(opt$resDir,"modelfit-log-",opt$varTypeArg,".txt",sep="")
+sink(modelFitLogFile)
+sink()
+
 resLogFile = paste(opt$resDir,"results-log-",opt$varTypeArg,".txt",sep="")
 sink(resLogFile)
 

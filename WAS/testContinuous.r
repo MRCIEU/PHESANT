@@ -105,28 +105,30 @@ testContinuous2 <- function(varName, varType, thisdata) {
 					cat("SKIP 2 bins are too small || ")
 	                                incrementCounter("cont.ordcattry.smallbins")
 				} 
-				else if (bin0Num<10 & (bin0Num+bin1Num)>=10) {
+				else if ((bin0Num<10 | bin1Num<10) & (bin0Num+bin1Num)>=10) {
 
 					# combine first and second bin to create binary variable
 					incrementCounter("cont.ordcattry.binsbinary")
 					cat("Combine first two bins and treat as binary || ")
-					phenoBinned[which(phenoBinned==0)] == 1					
+					phenoBinned[which(phenoBinned==0)] = 1	
 
 					# test binary
 					thisdatanew = cbind.data.frame(thisdata[,1:numPreceedingCols], phenoBinned)
 	                                binaryLogisticRegression(varName, varType, thisdatanew, isExposure);
 				}
-				else if (bin2Num<10 & (bin2Num+bin1Num)>=10) {
+				else if ((bin2Num<10 | bin1Num<10) & (bin2Num+bin1Num)>=10) {
 
 					# combine second and last bin to create binary variable
 					incrementCounter("cont.ordcattry.binsbinary")
 					cat("Combine last two bins and treat as binary || ")
-                                        phenoBinned[which(phenoBinned==2)] == 1
-
+                                        phenoBinned[which(phenoBinned==2)] = 1
+					
                                         # test binary
                                         thisdatanew = cbind.data.frame(thisdata[,1:numPreceedingCols], phenoBinned)
                                         binaryLogisticRegression(varName, varType, thisdatanew, isExposure)
                                 }
+				
+
 				else {
 					## skip - not possible to create binary variable because combining bins would still be too small
 					cat("SKIP 2 bins are too small(2) || ")
@@ -155,7 +157,20 @@ testContinuous2 <- function(varName, varType, thisdata) {
 			## do regression (use standardised geno values)
 			geno = scale(thisdata[,"geno"])
 			confounders=thisdata[,2:numPreceedingCols];
-			invisible(fit <- lm(phenoIRNT ~ geno + ., data=confounders))
+
+			sink()
+			sink(modelFitLogFile, append=TRUE)
+			print("--------------")			
+			print(varName)
+
+			###### BEGIN TRYCATCH
+	                tryCatch({
+
+			fit <- lm(phenoIRNT ~ geno + ., data=confounders)
+			
+			sink()
+			sink(resLogFile, append=TRUE)
+			
 			cis = confint(fit, level=0.95)
 			sumx = summary(fit)
 
@@ -174,6 +189,14 @@ testContinuous2 <- function(varName, varType, thisdata) {
                 	if (isExposure == TRUE) {
                 	        incrementCounter("success.exposure.continuous")
                 	}
+
+			## END TRYCATCH
+                	}, error = function(e) {
+                	        sink()
+                	        sink(resLogFile, append=TRUE)
+                	        cat(paste("ERROR:", varName,gsub("[\r\n]", "", e), sep=" "))
+                	        incrementCounter("continuous.error")
+                	})
 			
 		}
 	}
