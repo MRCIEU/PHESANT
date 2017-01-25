@@ -3,7 +3,7 @@ binary.500,1
 catMul.binary,12
 catMul.over10,12
 catSin.case1,2
-catSin.case2,2
+catSin.case2,3
 catSin.case3,2
 catSin.onevalue,1
 catSinToCatMul,1
@@ -34,5 +34,5 @@ success.continuous,2
 success.exposure.binary,1
 success.exposure.continuous,1
 success.ordCat,4
-success.unordCat,1
+success.unordCat,2
 unordCat.500,1
