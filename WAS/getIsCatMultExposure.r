@@ -1,7 +1,10 @@
 
 
-# looks up in the variable info file, whether field varName has varValue stated as a 
-# trait of interest in the TRAIT_OF_INTEREST column
+# looks up categorical multiple field in the variable info file, return
+# whether field has YES in TRAIT_OF_INTEREST column (i.e. all values in 
+# this field denote the exposure), or whether varName has varValue stated 
+# as a trait of interest in the TRAIT_OF_INTEREST column (multiple values are
+# separated by "|" in this field
 getIsCatMultExposure <- function(varName, varValue) {
 	
 	# get row index of field in variable information file
@@ -12,7 +15,6 @@ getIsCatMultExposure <- function(varName, varValue) {
 	isExposure = vl$phenoInfo$TRAIT_OF_INTEREST[idx]
         
         if (!is.na(isExposure) & isExposure!="") {
-
 		
 		isExposure = as.character(isExposure)
 		
