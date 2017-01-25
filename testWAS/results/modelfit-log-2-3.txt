@@ -1,0 +1,43 @@
+[1] "--------------"
+[1] "25"
+[1] "--------------"
+[1] "26"
+[1] "--------------"
+[1] "27"
+[1] "--------------"
+[1] "34"
+[1] "--------------"
+[1] "36"
+[1] "--------------"
+[1] "38"
+# weights:  24 (15 variable)
+initial  value 1039.720771 
+iter  10 value 681.237234
+iter  20 value 640.982533
+final  value 640.972945 
+converged
+# weights:  20 (12 variable)
+initial  value 1039.720771 
+iter  10 value 929.343312
+final  value 928.584224 
+converged
+[1] "--------------"
+[1] "39"
+# weights:  30 (20 variable)
+initial  value 1609.437912 
+iter  10 value 985.695843
+iter  20 value 754.544728
+iter  30 value 672.672425
+iter  40 value 648.291452
+iter  50 value 645.548335
+iter  60 value 645.331365
+iter  70 value 644.462326
+iter  80 value 640.987036
+final  value 640.974782 
+converged
+# weights:  25 (16 variable)
+initial  value 1609.437912 
+iter  10 value 1480.736936
+iter  20 value 1478.821800
+final  value 1478.820650 
+converged
