@@ -89,11 +89,13 @@ doMakeForest <- function(results, label, resDir, thisXLabel, nullValue) {
 	tabletext <- list(rownames(v))
 
 	## plot forest
-	pdf(paste(resDir,"forest-",label,".pdf",sep=""), height=2+nrow(v)*0.4) #height in inches, 0.4 inches = 1cm
+	pdf(paste(resDir,"forest-",label,".pdf",sep=""), height=2+nrow(v)*0.4, width=9) #height in inches, 0.4 inches = 1cm
 	forestplot(tabletext, v, 
 		xlab=thisXLabel, 
 		new_page=FALSE, 
-		txt_gp=fpTxtGp(label=gpar(cex=0.8)), 
+		txt_gp=fpTxtGp(label=gpar(cex=0.8), 
+		xlab = gpar(cex=1.2),
+		ticks = gpar(cex=1.2)),
 		col=fpColors(box="royalblue",line="#990099", summary="royalblue"), 
 		lineheight=unit(1, "cm"), 
 		zero=nullValue, 
