@@ -9,22 +9,12 @@ makeQQPlot <- function(resDir, resultsAll) {
 	resultsIncluded = resultsAll[idx,];
 	pvalues = sort(resultsIncluded[,"pvalue"]);
 
-	# check pvalues are valid (not zero)
-	idxZero = which(pvalues==0)
-	if (length(idxZero>0)) { 
-		#stop("At least one P value is zero!", call.=FALSE)
-		print("At least one P value is zero! Could not make QQ plot")
-		return(NULL)
-	}
-
 	numRes = length(pvalues)
 	pSort = sort(pvalues)
 	rank = rank(pSort, ties.method="first")
 	rankProportion = rank/numRes
 	rankProportionLog10 = -log10(rankProportion)
 	pLog10 = -log10(pSort)
-
-	print(paste('Num results:', numRes))
 
 	## do bonferroni correction and output this.
 	bonf= 0.05/numRes
@@ -33,19 +23,31 @@ makeQQPlot <- function(resDir, resultsAll) {
 	belowBonf = length(which(pSort<bonf))
 	print(paste('Number below Bonferroni threshold:', belowBonf));
 
-	## plot qqplot
+	# check pvalues are valid (not zero)
+        idxZero = which(pvalues==0)
+        if (length(idxZero)>0) {
+                print(paste("There are ", length(idxZero)," results with pvalues too small to be stored exactly, colored red on QQ plot.", sep=""))
+        }
 
+	# set indicator for pvalue ~zero (we don't have a precise p value for these results), these are coloured red on QQ plot
+	zeroVal  = rep(0, length(rankProportionLog10))
+	zeroVal[idxZero] = 1
+	zeroVal = as.factor(zeroVal)
+	pLog10[idxZero] = -log10(5e-324)
+
+	## plot qqplot
 	pdf(paste(resDir,"qqplot.pdf",sep=""))
 
 	# qq
 	par(pch='.')
-	plot(rankProportionLog10, pLog10,col='#990099', xlab='expected -log10(p)', ylab='actual -log10(p)',cex=4)
+	plot(rankProportionLog10, pLog10,col=c("#990099", "red")[zeroVal], xlab='expected -log10(p)', ylab='actual -log10(p)',cex=0.8, pch=c(16, 8)[zeroVal])
 
-	# ascending diagonal
-	lines(rankProportionLog10~pLog10,col='#0066cc',lty=3)
-	
-	# horizontal threshold line
-	segments(0, threshold, 4.4, threshold, col='#008000',lty=2)
+	# ascending diagonal, dotted blue
+	minVal = min(max(rankProportionLog10), max(pLog10))
+	segments(0, 0, minVal, minVal, col='#0066cc',lty=3)	
+
+	# horizontal threshold line, dashed green
+	segments(0, threshold, max(rankProportionLog10), threshold, col='#008000',lty=2)
 
 	junk<- dev.off()
 
