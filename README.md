@@ -78,17 +78,17 @@ The data coding file should have the following columns:
 4. reassignments - Any value changes that are needed. For example, in data code [100662](http://biobank.ctsu.ox.ac.uk/showcase/coding.cgi?id=100662), the values
 7 and 6 may be deemed equal (both representing 'never visited by friends/family' so we can set '7=6' to reassign the value 7 to the value 6.
 5. default_value - A default value assigned to all participants with no value for the field, but with a value for field stated in `default_value_related_field` column below. This is used where a category is not explicitly stated in the field but 
-instead needs to be determined by looking at whether another field has a value. Typically, this occurs where there is no category for `none` in a questionnaire field, because participants were told they did not have to mark `none` but could instead leave it blank 
-(see for example section 5.3 in the [24 hour diet questionnaire manual](http://biobank.ctsu.ox.ac.uk/showcase/refer.cgi?id=118240)). Hence, we assume that if they completed the questionnaire and have not ticked a value, then the value is `none`. See default value example below.
+instead needs to be determined by looking at whether another field has a value. Typically, this occurs where there is no category for 'none' in a questionnaire field, because participants were told they did not have to mark `none` but could instead leave it blank 
+(see for example section 5.3 in the [24 hour diet questionnaire manual](http://biobank.ctsu.ox.ac.uk/showcase/refer.cgi?id=118240)). Hence, we assume that if they completed the questionnaire and have not ticked a value, then the value is 'none'. See default value example below.
 6. default_value_related_field - The field used to determine which participants are assigned the default value. All participants with a value in the field stated here, and with no value for a field with this data code, are assigned the default value stated in `default_value`.
 
 ##### Example of default value
 
-In the data code information file we specify default_value=0 and default_value_related_field=20080 for data code 100006. 
+In the data code information file we specify `default_value=0` and `default_value_related_field=20080` for data code 100006. 
 Field [100200](http://biobank.ctsu.ox.ac.uk/showcase/field.cgi?id=100200), for example, has data code 100006. 
-Therefore all participants with a value for field 20080, but with no value in field 100200, are assigned value 0 for field 100200.
+Therefore all participants with a value for field [20080](http://biobank.ctsu.ox.ac.uk/showcase/field.cgi?id=20080), but with no value in field 100200, are assigned value 0 for field 100200.
 Intuitively, all participants who have answered the 24-hour recall diet questionnaire have a value in field 20080, and of these, we assume that those with no value for field 100200 have opted
-for `none` implicitly, by not ticking any option.
+for 'none' implicitly, by not ticking any option.
 
 #### Variable information file
 
@@ -104,7 +104,7 @@ The variable information file also has the following columns that we have added,
 
 1. TRAIT_OF_INTEREST - Specifies any field that represents the trait of interest (set this column to 'YES'). This is a marker so that after the phenome scan is run we can use these
 results as validation only (e.g. a pheWAS of the BMI FTO SNP would expect the BMI phenotypes to show high in the results ranking), i.e. they do not contribute to the multiple testing burden. We have set this code up for BMI, so have marked BMI/weight fields as an exposure - you'll need to change this for your particular trait or interest. 
-For categorical multiple fields you may want to mark the whole field as denoting the trait of interest (e.g all [cancers](http://biobank.ctsu.ox.ac.uk/showcase/field.cgi?id=20001)), or just a specific value (e.g. a particular type of cancer). To do the former set this column to YES, and to do the latter specify each particular value in this field seperated by a bar, i.e. 'VALUE1|VALUE2'.
+For categorical multiple fields you may want to mark the whole field as denoting the trait of interest (e.g all [cancers](http://biobank.ctsu.ox.ac.uk/showcase/field.cgi?id=20001)), or just a specific value (e.g. a particular type of cancer). To do the former set this column to YES, and to do the latter specify each particular value in this field separated by a bar, i.e. 'VALUE1|VALUE2'.
 2. EXCLUDED - Phenotypes we apriori decide to exclude from the phenome scan. Any field with a value in this field is excluded, and we state a code that describes the reason we exclude a variable (for future reference). Our codes and reasons are as follows (of course for your phenome scan you can add others as you would like): 
  - YES-ACE: "Assessment center environment" variables that do not directly describe the participant.
  - YES-AGE: Age variables.
@@ -188,6 +188,6 @@ When this occurs the P value is set to zero, and on the QQ plot we set these to 
 A phenome scan generates a large number of results. The aim of this visualisation is to help with interpretation, by allowing the researcher to view each result in the context of the
 results of related traits.
 
-See the PHESANT-viz folder and README.md therein for more information.
+See the PHESANT-viz folder and README therein for more information.
 
 
