@@ -178,7 +178,7 @@ See `testWAS/README.md` for an example with test data.
 The QQ plot contains the following elements:
 
 1. A horizontal line (dashed, green) denoting the Bonferroni corrected P value threshold.
-2. A line (actual=expected) denoting the expected trajectory of points under the null.
+2. A line (dotted, blue) denoting the expected trajectory of points under the null (actual=expected).
 3. Points each denoting a result for one phenotype. It is possible (as in the testWAS) that the P value is smaller than the smallest possible value that R can store (see [.Machine documentation](https://stat.ethz.ch/R-manual/R-devel/library/base/html/zMachine.html)).
 When this occurs the P value is set to zero, and on the QQ plot we set these to 5e-324 (the smallest positive double on a typical R platform) and display these as red stars to indicate that an exact P value was not recorded.
 
