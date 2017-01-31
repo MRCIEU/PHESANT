@@ -59,11 +59,11 @@ Arg | Description
 -------|--------
 userId                  | User id column as in the traitofinterestfile and the outcomefile (default: userId).
 partIdx			| Subset of phenotypes you want to run (for parallelising).
-partNum			| Number of subsets you are using (for parallelising).
+numParts		| Number of subsets you are using (for parallelising).
 sensitivity		| By default `sensitivity=FALSE`, and analyses are adjusted for age (field [21022](http://biobank.ctsu.ox.ac.uk/showcase/field.cgi?id=21022)), sex (field [31](http://biobank.ctsu.ox.ac.uk/showcase/field.cgi?id=31)) and, if the genetic arg is set to TRUE, genotype chip (a binary variable derived from field [22000](http://biobank.ctsu.ox.ac.uk/showcase/field.cgi?id=22000)). If sensitivity argument is set to TRUE then analyses additionally adjust for the assessment centre (field [54](http://biobank.ctsu.ox.ac.uk/showcase/field.cgi?id=54)), and if the genetic arg is set to true, the first 10 genetic principal components (fields [22009_0_1](http://biobank.ctsu.ox.ac.uk/showcase/field.cgi?id=22009) to [22009_0_10](http://biobank.ctsu.ox.ac.uk/showcase/field.cgi?id=22009)).
 genetic			| By default `genetic=TRUE`, and we assume the trait of interest is a genetic variable (e.g. a SNP or genetic risk score). If this is not the case (e.g you are running an environment-wide association study) then set this flag to FALSE. This option determines which variables are controlled for in analyses, see sensitivity arg above.
 
-The partNum and partIdx arguments are both used to parallelise the phenome scan. E.g. setting partNum to 5 will divide the set of phenotypes into 5 (rough) parts and then partIdx can be used to call the phenome scan on a specific part (1-5).
+The numParts and partIdx arguments are both used to parallelise the phenome scan. E.g. setting numParts to 5 will divide the set of phenotypes into 5 (rough) parts and then partIdx can be used to call the phenome scan on a specific part (1-5).
 
 #### Data coding file
 
@@ -134,7 +134,7 @@ In the directory specified with the `resDir` argument, the following files will 
 2. A log file: results-log-all.txt - One line for each Biobank field, providing information about the processing flow for this field.
 3. Flow counts file: variable-flow-counts-all.txt - A set of counts denoting the number of variables reaching each point in the processing flow. Each code with count value corresponds to a particular position in the processing flow (see figure [here](PHESANT-counter-codes.pdf)).
 
-Where the phenome scan is run in parallel setup, then each parallel part will have one of each of the above files, with 'all' in each filename replaced with: [partIdx]-[partNum].
+Where the phenome scan is run in parallel setup, then each parallel part will have one of each of the above files, with 'all' in each filename replaced with: [partIdx]-[numParts].
 
 
 See testWAS/README.md for an example with test data.
