@@ -15,7 +15,7 @@ option_list = list(
   make_option(c("-s", "--sensitivity"), action="store_true", default=FALSE, help="run sensitivity phenome scan [default= %default]"),
   make_option(c("-a", "--partIdx"), type="integer", default=NULL, help="part index of phenotype (used to parellise)"),
   make_option(c("-b", "--numParts"), type="integer", default=NULL, help="number of phenotype parts (used to parellise)"),
-  make_option(c("-j", "--genetic"), action="store_true", default=TRUE, help="trait of interest is genetic, e.g. a SNP or genetic risk score [default= %default]")
+  make_option(c("-j", "--genetic"), action="store", default=TRUE, help="trait of interest is genetic, e.g. a SNP or genetic risk score [default= %default]")
 );
 opt_parser = OptionParser(option_list=option_list);
 opt = parse_args(opt_parser);
