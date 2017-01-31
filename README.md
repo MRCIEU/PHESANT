@@ -38,7 +38,7 @@ Rscript phenomeScan.r \
 --traitofinterestfile=<traitOfInterestFilePath> \
 --variablelistfile="../variable-info/outcome-info.tsv" \
 --datacodingfile="../variable-info/data-coding-ordinal-info.csv" \
---traitofinterestvariable=<traitOfInterestName> \
+--traitofinterest=<traitOfInterestName> \
 --resDir=<resultsDirectoryPath> \
 --userId=<userIdFieldName>
 ```
