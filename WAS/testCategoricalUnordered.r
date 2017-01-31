@@ -16,6 +16,7 @@ testCategoricalUnordered <- function(varName, varType, thisdata) {
 		numUnique = length(unique(na.omit(pheno)))
 		if (numUnique>1000) {
 			cat("Too many levels: ", numUnique, " > 1000 || SKIP ", sep="")
+			incrementCounter("unordCat.cats")
 			return(NULL)
 		}
 

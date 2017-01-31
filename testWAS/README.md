@@ -11,7 +11,7 @@ Rscript phenomeScan.r \
 --traitofinterestfile="${testDir}data/exposure.csv" \
 --variablelistfile="${testDir}variable-lists/outcome-info.tsv" \
 --datacodingfile="${testDir}variable-lists/data-coding-ordinal-info.txt" \
---traitofinterestvariable="exposure" \
+--traitofinterest="exposure" \
 --resDir="${testDir}results/" \
 --userId="userId"
 ```
@@ -35,7 +35,7 @@ Rscript phenomeScan.r \
 --traitofinterestfile="${testDir}data/exposure.csv" \
 --variablelistfile="${testDir}variable-lists/outcome-info.tsv" \
 --datacodingfile="${testDir}variable-lists/data-coding-ordinal-info.txt" \
---traitofinterestvariable="exposure" \
+--traitofinterest="exposure" \
 --resDir="${testDir}results/" \
 --userId="userId" \
 --partIdx=1 \

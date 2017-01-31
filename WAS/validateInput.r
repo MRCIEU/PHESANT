@@ -25,10 +25,13 @@ validateInput <- function(phenoIn, snpIn) {
                 stop("phenotype file doesn't contain required sex colunn: x31_0_0", call.=FALSE)
         }
 
-	idx = which(names(phenoIn) == "x22000_0_0");
-        if (length(idx)==0) {
-                stop("phenotype file doesn't contain required genetic batch colunn: x22000_0_0", call.=FALSE)
-        }	
+	
+	if (opt$genetic ==TRUE) {
+		idx = which(names(phenoIn) == "x22000_0_0");
+        	if (length(idx)==0) {
+        	        stop("phenotype file doesn't contain required genetic batch colunn: x22000_0_0", call.=FALSE)
+        	}	
+	}
 
 	## if running with sensitivity option then check extra columns exist in pheno file (genetic PCs and assessment centre)
 	if (opt$sensitivity==TRUE) {
@@ -51,7 +54,7 @@ validateInput <- function(phenoIn, snpIn) {
 	}
 
 	###
-	### SNP file validation
+	### trait of interest file validation
 
 	## check user id exists in snp file
 	idx1 = which(names(snpIn) == opt$userId);
@@ -59,7 +62,7 @@ validateInput <- function(phenoIn, snpIn) {
 		stop(paste("Trait of interest file doesn't contain userID colunn:", opt$userId), call.=FALSE)
 	}
 	
-	## check snp exists in snp file
+	## check trait of interest exists in trait of interest file
 	idx2 = which(names(snpIn) == opt$traitofinterest);
 	if (length(idx2)==0) {
 		stop(paste("Trait of interest file doesn't contain trait of interest variable column:", opt$traitofinterest), call.=FALSE)

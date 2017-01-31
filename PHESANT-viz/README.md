@@ -7,7 +7,7 @@ This directory contains the code used to produce a D3 visualisation that display
 
 See example for a MR-pheWAS of BMI (preliminary analysis) [here](http://phesant.datamining.org.uk) or in example directory. 
 
-The visualisation is a tree structure, with the following node types:
+The visualisation is a tree structure, showing the strength and direction of association of all results in the phenome scan excluding phenotypes marked as denoting the trait of interest. The visualisation has the following node types:
 
 A. Structure nodes:
 

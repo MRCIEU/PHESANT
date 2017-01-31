@@ -60,8 +60,8 @@ Arg | Description
 userId                  | User id column as in the traitofinterestfile and the outcomefile (default: userId).
 partIdx			| Subset of phenotypes you want to run (for parallelising).
 partNum			| Number of subsets you are using (for parallelising).
-sensitivity		| By default analyses are adjusted for age (field [21022](http://biobank.ctsu.ox.ac.uk/showcase/field.cgi?id=21022)), sex (field [31](http://biobank.ctsu.ox.ac.uk/showcase/field.cgi?id=31)) and, if the genetic arg is set to TRUE, genotype chip (a binary variable derived from field [22000](http://biobank.ctsu.ox.ac.uk/showcase/field.cgi?id=22000)). If sensitivity argument is set to TRUE then analyses additionally adjust for the assessment centre (field [54](http://biobank.ctsu.ox.ac.uk/showcase/field.cgi?id=54)), and if the genetic arg is set to true, the first 10 genetic principal components (fields [22009_0_1](http://biobank.ctsu.ox.ac.uk/showcase/field.cgi?id=22009) to [22009_0_10](http://biobank.ctsu.ox.ac.uk/showcase/field.cgi?id=22009)).
-genetic			| By default we assume the trait of interest is a genetic variable (e.g. a SNP or genetic risk score). If this is not the case (e.g you are running an environment-wide association study) then set this flag to FALSE. This option determines which variables are controlled for in analyses, see sensitivity arg above.
+sensitivity		| By default `sensitivity=FALSE`, and analyses are adjusted for age (field [21022](http://biobank.ctsu.ox.ac.uk/showcase/field.cgi?id=21022)), sex (field [31](http://biobank.ctsu.ox.ac.uk/showcase/field.cgi?id=31)) and, if the genetic arg is set to TRUE, genotype chip (a binary variable derived from field [22000](http://biobank.ctsu.ox.ac.uk/showcase/field.cgi?id=22000)). If sensitivity argument is set to TRUE then analyses additionally adjust for the assessment centre (field [54](http://biobank.ctsu.ox.ac.uk/showcase/field.cgi?id=54)), and if the genetic arg is set to true, the first 10 genetic principal components (fields [22009_0_1](http://biobank.ctsu.ox.ac.uk/showcase/field.cgi?id=22009) to [22009_0_10](http://biobank.ctsu.ox.ac.uk/showcase/field.cgi?id=22009)).
+genetic			| By default `genetic=TRUE`, and we assume the trait of interest is a genetic variable (e.g. a SNP or genetic risk score). If this is not the case (e.g you are running an environment-wide association study) then set this flag to FALSE. This option determines which variables are controlled for in analyses, see sensitivity arg above.
 
 The partNum and partIdx arguments are both used to parallelise the phenome scan. E.g. setting partNum to 5 will divide the set of phenotypes into 5 (rough) parts and then partIdx can be used to call the phenome scan on a specific part (1-5).
 
@@ -74,25 +74,26 @@ The data coding file should have the following columns:
 
 1. dataCode - The ID of the data code.
 2. ordinal - Whether the field is ordinal (value 1) or not (value 0). This field is only used for fields of the categorical (single) field type. Value -1 denotes this is not needed because the field is binary. 
-3. ordering - Any needed corrections for the numeric ordering of a data codes specified by Biobank. This field is only used for data codes specified as ordinal in the ordinal column. For example, data code [100001](http://biobank.ctsu.ox.ac.uk/showcase/coding.cgi?id=100001) has values half, 1 and 2+ coded as 555, 1 and 200, respectively. We need the 'half' value to be less than the '1' value, so we change the order to '555|1|200'. NB: if this column is used then, if any value is not included it is set to NA (so this field can be used to remove and reorder values at the same time).
+3. ordering - Any needed corrections for the numeric ordering of a data codes specified by Biobank. This field is only used for data codes specified as ordinal in the ordinal column. For example, data code [100001](http://biobank.ctsu.ox.ac.uk/showcase/coding.cgi?id=100001) has values half, 1 and 2+ coded as 555, 1 and 200, respectively. We need the 'half' value to be less than the '1' value, so we change the order to '555|1|200'. NB: if this column is used then and any value is not included then this value is set to NA (i.e. this field can be used to remove and reorder values at the same time).
 4. reassignments - Any value changes that are needed. For example, in data code [100662](http://biobank.ctsu.ox.ac.uk/showcase/coding.cgi?id=100662), the values
 7 and 6 may be deemed equal (both representing 'never visited by friends/family' so we can set '7=6' to reassign the value 7 to the value 6.
-5. default_value - A default value assigned to, where a categorical is not explicitly stated (e.g value zero in field [100200](http://biobank.ctsu.ox.ac.uk/showcase/field.cgi?id=100200).
-6. default_value_related_field - The field used to determine which participants are assigned the default value. All participants with a value in the field stated here, and with no value for a field with this data code, are assigned the default value.
+5. default_value - A default value assigned to all participants with no value for the field, but with a value for field stated in `default_value_related_field` column below. This is used where a category is not explicitly stated in the field but 
+instead needs to be determined by looking at whether another field has a value. Typically, this occurs where there is no category for `none` in a questionnaire field, because participants were told they did not have to mark `none` but could instead leave it blank 
+(see for example section 5.3 in the [24 hour diet questionnaire manual](http://biobank.ctsu.ox.ac.uk/showcase/refer.cgi?id=118240)). Hence, we assume that if they completed the questionnaire and have not ticked a value, then the value is `none`. See default value example below.
+6. default_value_related_field - The field used to determine which participants are assigned the default value. All participants with a value in the field stated here, and with no value for a field with this data code, are assigned the default value stated in `default_value`.
 
-Example of default value:
+##### Example of default value
+
 In the data code information file we specify default_value=0 and default_value_related_field=20080 for data code 100006. 
 Field [100200](http://biobank.ctsu.ox.ac.uk/showcase/field.cgi?id=100200), for example, has data code 100006. 
 Therefore all participants with a value for field 20080, but with no value in field 100200, are assigned value 0 for field 100200.
-Intuitively, all participants who have answered the 24-hour recall diet questionnaire have a value in field 20080, an therefore we assume that they have opted
-for none for field 100200 (although this information is not explicitly stored in this field).
-The Biobank documentation for the "Online 24-hour dietary recall questionnaire" [here](http://biobank.ctsu.ox.ac.uk/showcase/refer.cgi?id=118240) explains instructions to participants either ticking 'none' or just skipping
-and 'none' being inferredthis.
+Intuitively, all participants who have answered the 24-hour recall diet questionnaire have a value in field 20080, and of these, we assume that those with no value for field 100200 have opted
+for `none` implicitly, by not ticking any option.
 
 #### Variable information file
 
 This file was initially the UK Biobank Data dictionary, which can be downloaded from the UK Biobank website [here](http://biobank.ctsu.ox.ac.uk/~bbdatan/Data_Dictionary_Showcase.csv).
-This provides the following set of information about fields, used in this phenome scan tool:
+This data dictionary provides the following set of information about fields, used in this phenome scan tool:
 
 1. ValueType column - the field type, either 'Integer', 'Continuous', 'Categorical single', 'Categorical multiple', or a few others we do not use.
 2. Three Cat_ID and three Cat_Title columns - the three levels of the category hierarchy, that can be seen [here](http://biobank.ctsu.ox.ac.uk/showcase/label.cgi)
@@ -101,10 +102,10 @@ This provides the following set of information about fields, used in this phenom
 
 The variable information file also has the following columns that we have added, to provide additional information used in the phenome scan:
 
-1. TRAIT_OF_INTEREST - Specifies any field that represents the trait of interest. This is a marker so that after the phenome scan is run we can use these
+1. TRAIT_OF_INTEREST - Specifies any field that represents the trait of interest (set this column to 'YES'). This is a marker so that after the phenome scan is run we can use these
 results as validation only (e.g. a pheWAS of the BMI FTO SNP would expect the BMI phenotypes to show high in the results ranking), i.e. they do not contribute to the multiple testing burden. We have set this code up for BMI, so have marked BMI/weight fields as an exposure - you'll need to change this for your particular trait or interest. 
-For categorical multiple field you may want to mark the whole field as denoting the trait of interest (e.g all cancers), or just a specific value (e.g. a particular type of cancer). To do the former set this column to YES, and to do the latter set to particular values using the format 'VALUE1|VALUE2'.
-2. EXCLUDED - Phenotypes we have apriori decided to exclude from the phenome scan. Any field with a value in this field is excluded, and we state a code that describes the reason we exclude a variable (for future reference). Our codes and reasons are as follows (of course for your phenome scan you can add others as you would like): 
+For categorical multiple fields you may want to mark the whole field as denoting the trait of interest (e.g all [cancers](http://biobank.ctsu.ox.ac.uk/showcase/field.cgi?id=20001)), or just a specific value (e.g. a particular type of cancer). To do the former set this column to YES, and to do the latter specify each particular value in this field seperated by a bar, i.e. 'VALUE1|VALUE2'.
+2. EXCLUDED - Phenotypes we apriori decide to exclude from the phenome scan. Any field with a value in this field is excluded, and we state a code that describes the reason we exclude a variable (for future reference). Our codes and reasons are as follows (of course for your phenome scan you can add others as you would like): 
  - YES-ACE: "Assessment center environment" variables that do not directly describe the participant.
  - YES-AGE: Age variables.
  - YES-ASSESSMENT-CENTRE: The assessment centre the participant attended.
@@ -113,10 +114,12 @@ For categorical multiple field you may want to mark the whole field as denoting 
  - YES-GENETIC: Genetic description variables.
  - YES-SENSITIVE: Variables not received from Biobank because they are sensitive so have more restricted access.
  - YES-SEX: Sex fields.
-3. CAT_MULT_INDICATOR_FIELDS - every categorical multiple field must have a value in this column. The value describes which set of participants to include as the negative examples, when a binary variable is created from each value. The positive examples are simply the people with a particular value for this categorical multiple field. However the negative values can be determined in three ways:
- - ALL - Include all participants. 
- - NO_NAN - Included only those who have at least one value for this field.
- - field ID - Include only those who have a value for another field, with this field ID.
+3. CAT_MULT_INDICATOR_FIELDS - every categorical multiple field must have a value in this column. 
+The value describes which set of participants to include as the negative examples, when a binary variable is created from each value (see above cited paper for more information). 
+The positive examples for a value `v` in this categorical multiple field are simply the people with this particular value. However the negative values can be determined in three ways:
+ - ALL - Include all participants (any participant without value `v` is assigned `FALSE`, except those with a value denoting missingness (i.e. value is <0)). 
+ - NO_NAN - Included only those who have at least one value for this field (assign `FALSE` to any participant with at least one value for this field, where these values do not include value `v`, and also do not include a value denoting missingness (i.e. value is <0).
+ - fieldID - Include only those who have a value for another field, with ID `fieldID` (assign `FALSE` to any participant without value `v` and without a value denoting missingness (i.e. value is <0) and with a value in this other field with ID `fieldID`).
 4. CAT_SINGLE_TO_CAT_MULT - Specifies fields that have the categorical single field type (as specified by UK Biobank) but that we actually want to treat as categorical multiple. State YES in this column to change this. To also convert the instances to arrays, state YES-INSTANCES. For example, field [20107](http://biobank.ctsu.ox.ac.uk/showcase/field.cgi?id=20107) has illnesses stored in 10 arrays (for each instance) so it makes sense to treat this as a categorical(multiple) field. Field [40011](http://biobank.ctsu.ox.ac.uk/showcase/field.cgi?id=40011) stores the histology of cancer tumours but is stored in 31 instances (rather than arrays) so we specify YES-INSTANCES so this field is treated as a categorical (multiple) field and the instances are treated as arrays.
 5. CAT_SINGLE_DATA_CODING - The data coding IDs used to map a field to its data code in the data code information file described above. This is required for categorical (single) fields.
 
@@ -129,9 +132,9 @@ In the directory specified with the `resDir` argument, the following files will 
  - Multinomial regression: results-multinomial-all.txt - Each multinomial regression results in *n* lines in this results file, where *n* is the number of categories in the variable. One line corresponds to the results for a particular category compared to an assigned baseline category (the category with the highest sample size), and then there is also one line for the overall association of this variable (across all categories), using a likelihood ratio test comparing this model with the model with confounders only.
  - Ordered logistic regression: results-ordered-logistic-all.txt - One line for each ordinal logistic regression result.
 2. A log file: results-log-all.txt - One line for each Biobank field, providing information about the processing flow for this field.
-3. Flow counts file: variable-flow-counts-all.txt - A set of counts denoting the number of variables reaching each point in the processing flow (see figure above).
+3. Flow counts file: variable-flow-counts-all.txt - A set of counts denoting the number of variables reaching each point in the processing flow. Each code with count value corresponds to a particular position in the processing flow (see figure PHESANT-counter-codes.pdf).
 
-Where the phenome scan is run in parallel setup then each parallel part will have one of each of the above files, with 'all' in each filename replaced with: [partIdx]-[partNum].
+Where the phenome scan is run in parallel setup, then each parallel part will have one of each of the above files, with 'all' in each filename replaced with: [partIdx]-[partNum].
 
 
 See testWAS/README.md for an example with test data.
@@ -149,7 +152,7 @@ The resultsProcessing folder provides code to post-process the results, specific
 6. Generate basic figures: qqplot, and 3 forest plots for continous, ordered categorical and binary results separately (for results with P<0.05/numTests, i.e. the
 Bonferroni corrected 0.05 threshold). 
 We do not generate a forest plot for the categorical unordered results, because we have not overall estimate (and confidence interval) for the model overall, 
-because we use a likelihood ratio test to generate a model P value. For these plot we use all results except for phenotypes marked as `exposure'.
+because we use a likelihood ratio test to generate a model P value. For these plots we use all results except for phenotypes marked as 'trait of interest'. 
 
 The results processing is run with the following command:
 
@@ -170,6 +173,14 @@ numParts		| Number of subsets you are have used (for parallelising)
 variablelistfile	| Tab separated file containing information about each phenotype, that is used to process them. Same as `variablelistfile` used in main phenome scan.
 
 See `testWAS/README.md` for an example with test data.
+
+### QQ plot description
+The QQ plot contains the following elements:
+
+1. A horizontal line (dashed, green) denoting the Bonferroni corrected P value threshold.
+2. A line (actual=expected) denoting the expected trajectory of points under the null.
+3. Points each denoting a result for one phenotype. It is possible (as in the testWAS) that the P value is smaller than the smallest possible value that R can store (see [.Machine documentation](https://stat.ethz.ch/R-manual/R-devel/library/base/html/zMachine.html)).
+When this occurs the P value is set to zero, and on the QQ plot we set these to 5e-324 (the smallest positive double on a typical R platform) and display these as red stars to indicate that an exact P value was not recorded.
 
 
 ## 3) PHESANT-viz: Results visualisation
