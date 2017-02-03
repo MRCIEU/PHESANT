@@ -49,13 +49,13 @@ else {
                 stop(paste("phenotype data file outcomefile=", opt$outcomefile, " does not exist", sep=""), call.=FALSE)
         }
 
-	if (is.null(opt$traitofinterestfile)){
-	  print_help(opt_parser)
-	  stop("traitofinterestfile argument must be supplied", call.=FALSE)
-	}
-	else if (!file.exists(opt$traitofinterestfile)) {
-                stop(paste("trait of interest data file traitofinterestfile=", opt$traitofinterestfile, " does not exist", sep=""), call.=FALSE)
-        }
+#	if (is.null(opt$traitofinterestfile)){
+#	  print_help(opt_parser)
+#	  stop("traitofinterestfile argument must be supplied", call.=FALSE)
+#	}
+#	else if (!file.exists(opt$traitofinterestfile)) {
+#               stop(paste("trait of interest data file traitofinterestfile=", opt$traitofinterestfile, " does not exist", sep=""), call.=FALSE)
+#        }
 
 	if (is.null(opt$variablelistfile)){
 	  print_help(opt_parser)

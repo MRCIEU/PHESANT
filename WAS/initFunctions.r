@@ -20,7 +20,8 @@
 loadSource <- function() {
 	source("loadData.r")
 	source("reassignValue.r")
-	source("validateInput.r")
+	source("validatePhenotypeInput.r")
+	source("validateTraitInput.r")
 	source("testNumExamples.r")
 	source("binaryLogisticRegression.r")
 	source("equalSizedBins.r")

@@ -27,23 +27,53 @@ loadData <- function() {
 #phenoFile=paste(dataDir,'phenotypes/ukb6564-150-ALL.csv',sep="");
 print("Loading phenotypes...")
 phenotype=read.table(opt$outcomefile, header=1,sep=","); #\t
+validatePhenotypeInput(phenotype)
+
 
 ## load snps
-print("Loading trait of interest...")
-snpScores=read.table(opt$traitofinterestfile,sep=",", header=1);
+if (is.null(opt$traitofinterestfile)) {
+	print("Extracting trait of interest from pheno file")
+	if (opt$traitofinterest %in% colnames(phenotype)) {
 
-validateInput(phenotype, snpScores);
-print("Phenotype and trait of interest files validated");
+		print("Trait of interest found in pheno file.")
 
-# keep only the userID and exposure variable
-idx1 = which(names(snpScores) == opt$userId);
-idx2 = which(names(snpScores) == opt$traitofinterest);
-snpScores=cbind.data.frame(snpScores[,idx1], snpScores[,idx2]);
-colnames(snpScores)[1] <- opt$userId;
-colnames(snpScores)[2] <- "geno";
+		# set name of trait of interest to geno in phenotype file
+		idxTOI = which(colnames(phenotype)==opt$traitofinterest)
+		colnames(phenotype)[idxTOI] <- "geno"		
 
-## merge to one matrix
-datax = merge(snpScores, phenotype, by=opt$userId, all=FALSE);
+		datax = phenotype;
+	
+		# remove all rows with no trait of interest
+		idxNotEmpty = which(!is.na(phenotype[,idxTOI]))
+	        print(paste("Phenotype file has ", nrow(phenotype), " rows with ", length(idxNotEmpty), " not NA for trait of interest (",opt$traitofinterest,").", sep=""))
+	        phenotype = phenotype[idxNotEmpty,]
+	}
+	else {
+		stop(paste("Trait of interest (",opt$traitofinterest,") not found in phenotype file ",opt$outcomefile, ". Trait of interest should either be in phenotype file or seperate trait of interest file specified in traitofinterestfile arg.", sep=""), call.=FALSE)
+	}
+
+} else {
+	print("Loading trait of interest file...")
+	snpScores=read.table(opt$traitofinterestfile,sep=",", header=1);
+	validateTraitInput(snpScores)
+
+	# keep only the userID and exposure variable
+	idx1 = which(names(snpScores) == opt$userId);
+	idx2 = which(names(snpScores) == opt$traitofinterest);
+
+	# remove all rows with no trait of interest
+	idxNotEmpty = which(!is.na(snpScores[,idx2]))
+	print(paste("Trait of interest has ", nrow(snpScores), " rows with ", length(idxNotEmpty), " not NA", sep=""))
+	snpScores = snpScores[idxNotEmpty,]
+
+	snpScores=cbind.data.frame(snpScores[,idx1], snpScores[,idx2]);
+	colnames(snpScores)[1] <- opt$userId;
+	colnames(snpScores)[2] <- "geno";
+
+	print("Merging trait of interest and phenotype data")
+	## merge to one matrix
+	datax = merge(snpScores, phenotype, by=opt$userId, all=FALSE);
+}
 
 if (nrow(datax)==0) {
 	stop("No examples with row in both trait of interest and phenotype files", call.=FALSE)
