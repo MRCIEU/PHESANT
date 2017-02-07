@@ -26,7 +26,7 @@ if (opt$test==TRUE) {
 	# set up the test phenome scan settings
 	datadir='../testWAS/data/';
 	opt$traitofinterestfile <<- paste(datadir,'exposure.csv', sep="");
-	opt$outcomefile <<-  paste(datadir,'phenotypes.csv', sep="");
+	opt$phenofile <<-  paste(datadir,'phenotypes.csv', sep="");
 	opt$variablelistfile <<- '../testWAS/variable-lists/outcome-info.tsv';
 	opt$datacodingfile <<- '../testWAS/variable-lists/data-coding-ordinal-info.txt';
 	opt$traitofinterest <<- 'exposure';
@@ -41,12 +41,12 @@ else {
 
 	## check arguments are supplied correctly
 
-	if (is.null(opt$outcomefile)){
+	if (is.null(opt$phenofile)){
 	  print_help(opt_parser)
-	  stop("outcomefile argument must be supplied", call.=FALSE)
+	  stop("phenofile argument must be supplied", call.=FALSE)
 	}
-	else if (!file.exists(opt$outcomefile)) {
-                stop(paste("phenotype data file outcomefile=", opt$outcomefile, " does not exist", sep=""), call.=FALSE)
+	else if (!file.exists(opt$phenofile)) {
+                stop(paste("phenotype data file phenofile=", opt$phenofile, " does not exist", sep=""), call.=FALSE)
         }
 
 #	if (is.null(opt$traitofinterestfile)){
@@ -111,7 +111,7 @@ processParts <- function(pIdx, nParts) {
 
 	if (is.null(pIdx) && is.null(nParts)) {
                 opt$varTypeArg <<- "all";
-		print(paste("Running with all traits in phenotype file:", opt$outcomefile));
+		print(paste("Running with all traits in phenotype file:", opt$phenofile));
         }
 	else if (is.null(pIdx)) {
                 print_help(opt_parser)
@@ -127,7 +127,7 @@ processParts <- function(pIdx, nParts) {
 	}
 	else {
                 opt$varTypeArg <<- paste(pIdx, "-", nParts, sep="");
-        	print(paste("Running with part",pIdx,"of",nParts," in phenotype file:", opt$outcomefile));
+        	print(paste("Running with part",pIdx,"of",nParts," in phenotype file:", opt$phenofile));
 	}
 
 }

@@ -26,7 +26,7 @@ loadData <- function() {
 ## load phenotype
 #phenoFile=paste(dataDir,'phenotypes/ukb6564-150-ALL.csv',sep="");
 print("Loading phenotypes...")
-phenotype=read.table(opt$outcomefile, header=1,sep=","); #\t
+phenotype=read.table(opt$phenofile, header=1,sep=","); #\t
 validatePhenotypeInput(phenotype)
 
 
@@ -49,7 +49,7 @@ if (is.null(opt$traitofinterestfile)) {
 	        phenotype = phenotype[idxNotEmpty,]
 	}
 	else {
-		stop(paste("Trait of interest (",opt$traitofinterest,") not found in phenotype file ",opt$outcomefile, ". Trait of interest should either be in phenotype file or seperate trait of interest file specified in traitofinterestfile arg.", sep=""), call.=FALSE)
+		stop(paste("Trait of interest (",opt$traitofinterest,") not found in phenotype file ",opt$phenofile, ". Trait of interest should either be in phenotype file or seperate trait of interest file specified in traitofinterestfile arg.", sep=""), call.=FALSE)
 	}
 
 } else {

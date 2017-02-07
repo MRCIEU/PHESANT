@@ -22,7 +22,7 @@
 library("optparse")
 
 option_list = list(
-  make_option(c("-f", "--outcomefile"), type="character", default=NULL, help="phenotype dataset file name", metavar="character"),
+  make_option(c("-f", "--phenofile"), type="character", default=NULL, help="phenotype dataset file name", metavar="character"),
   make_option(c("-g", "--traitofinterestfile"), type="character", default=NULL, help="trait of interest dataset file name", metavar="character"),
   make_option(c("-v", "--variablelistfile"), type="character", default=NULL, help="variablelistfile file name (should be tab separated)", metavar="character"),
   make_option(c("-d", "--datacodingfile"), type="character", default=NULL, help="datacodingfile file name (should be comma separated)", metavar="character"),
