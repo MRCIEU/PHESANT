@@ -58,7 +58,7 @@ validatePhenotypeInput <- function(phenoIn) {
 			for (i in 1:10) {
 				idx = which(names(phenoIn) == paste("x22009_0_", i, sep=""));
 				if (length(idx)==0) {
-         			       stop(paste("phenotype file doesn't contain required genetic principal component colunn: x22000_0_", i, sep=""), call.=FALSE)
+         			       stop(paste("phenotype file doesn't contain required genetic principal component colunn: x22009_0_", i, sep=""), call.=FALSE)
         			}
 			}
 		}
