@@ -19,7 +19,7 @@ Java for part 3 above. Tested with jdk-1.8.0-66.
 
 Please cite:
 
-Millard, L.A.C, et al. Software Application Profile: PHESANT: a tool for performing automated phenome scans in UK Biobank. bioRxiv (2017)
+Millard LAC, Davies NM, Gaunt TR, Davey Smith G, Tilling K. PHESANT: a tool for performing automated phenome scans in UK Biobank. bioRxiv (2017)
 
 
 ## 1) Running a phenome scan
@@ -76,9 +76,9 @@ The data coding file should have the following columns:
 2. ordinal - Whether the field is ordinal (value 1) or not (value 0). This field is only used for fields of the categorical (single) field type. Value -1 denotes this is not needed because the field is binary. 
 3. ordering - Any needed corrections for the numeric ordering of a data codes specified by Biobank. This field is only used for data codes specified as ordinal in the ordinal column. For example, data code [100001](http://biobank.ctsu.ox.ac.uk/showcase/coding.cgi?id=100001) has values half, 1 and 2+ coded as 555, 1 and 200, respectively. We need the 'half' value to be less than the '1' value, so we change the order to '555|1|200'. NB: if this column is used then and any value is not included then this value is set to NA (i.e. this field can be used to remove and reorder values at the same time).
 4. reassignments - Any value changes that are needed. For example, in data code [100662](http://biobank.ctsu.ox.ac.uk/showcase/coding.cgi?id=100662), the values
-7 and 6 may be deemed equal (both representing 'never visited by friends/family' so we can set '7=6' to reassign the value 7 to the value 6.
+7 and 6 may be deemed equal (both representing 'never visited by friends/family' so we can set '7=6' to assign the value 6 to all participants with the value 7.
 5. default_value - A default value assigned to all participants with no value for the field, but with a value for field stated in `default_value_related_field` column below. This is used where a category is not explicitly stated in the field but 
-instead needs to be determined by looking at whether another field has a value. Typically, this occurs where there is no category for 'none' in a questionnaire field, because participants were told they did not have to mark `none` but could instead leave it blank 
+instead needs to be determined by looking at whether another field has a value. Typically, this occurs where there is no category for 'none' in a questionnaire field, because participants were told they did not have to mark 'none' but could instead leave it blank 
 (see for example section 5.3 in the [24 hour diet questionnaire manual](http://biobank.ctsu.ox.ac.uk/showcase/refer.cgi?id=118240)). Hence, we assume that if they completed the questionnaire and have not ticked a value, then the value is 'none'. See default value example below.
 6. default_value_related_field - The field used to determine which participants are assigned the default value. All participants with a value in the field stated here, and with no value for a field with this data code, are assigned the default value stated in `default_value`.
 
@@ -92,11 +92,11 @@ for 'none' implicitly, by not ticking any option.
 
 #### Variable information file
 
-This file was initially the UK Biobank Data dictionary, which can be downloaded from the UK Biobank website [here](http://biobank.ctsu.ox.ac.uk/~bbdatan/Data_Dictionary_Showcase.csv).
+This file was initially the UK Biobank data dictionary, which can be downloaded from the UK Biobank website [here](http://biobank.ctsu.ox.ac.uk/~bbdatan/Data_Dictionary_Showcase.csv).
 This data dictionary provides the following set of information about fields, used in this phenome scan tool:
 
 1. ValueType column - the field type, either 'Integer', 'Continuous', 'Categorical single', 'Categorical multiple', or a few others we do not use.
-2. Three Cat_ID and three Cat_Title columns - the three levels of the category hierarchy, that can be seen [here](http://biobank.ctsu.ox.ac.uk/showcase/label.cgi)
+2. Three Cat_ID and three Cat_Title columns - the three levels of the category hierarchy, that can be seen [here](http://biobank.ctsu.ox.ac.uk/showcase/label.cgi).
 3. FieldID column - We use this to match the variable in our biobank data file to the correct row in this TSV file.
 4. Field column -  The name of the field.
 
