@@ -132,7 +132,8 @@ In the directory specified with the `resDir` argument, the following files will 
  - Multinomial regression: results-multinomial-all.txt - Each multinomial regression results in *n* lines in this results file, where *n* is the number of categories in the variable. One line corresponds to the results for a particular category compared to an assigned baseline category (the category with the highest sample size), and then there is also one line for the overall association of this variable (across all categories), using a likelihood ratio test comparing this model with the model with confounders only.
  - Ordered logistic regression: results-ordered-logistic-all.txt - One line for each ordinal logistic regression result.
 2. A log file: results-log-all.txt - One line for each Biobank field, providing information about the processing flow for this field.
-3. Flow counts file: variable-flow-counts-all.txt - A set of counts denoting the number of variables reaching each point in the processing flow. Each code with count value corresponds to a particular position in the processing flow (see figure [here](PHESANT-counter-codes.pdf)).
+3. A model fit log file: modelfit-log-all.txt - shows model fit output for categorical unordered models.
+4. Flow counts file: variable-flow-counts-all.txt - A set of counts denoting the number of variables reaching each point in the processing flow. Each code with count value corresponds to a particular position in the processing flow (see figure [here](PHESANT-counter-codes.pdf)).
 
 Where the phenome scan is run in parallel setup, then each parallel part will have one of each of the above files, with 'all' in each filename replaced with: [partIdx]-[numParts].
 
