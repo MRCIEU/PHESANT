@@ -92,10 +92,10 @@ else {
 	
 # just some information to the user
 if (opt$sensitivity==TRUE & opt$genetic==TRUE) {
-	print("Adjusting for age, sex, genetic batch, top 10 genetic principal components and assessment centre")
+	print("Adjusting for age, sex, genotype chip, top 10 genetic principal components and assessment centre")
 }
 else if (opt$sensitivity==FALSE & opt$genetic==TRUE) {
-	print("Adjusting for age, sex and genetic batch")
+	print("Adjusting for age, sex and genotype chip")
 }
 else if (opt$sensitivity==TRUE & opt$genetic==FALSE) {
 	print("Adjusting for age, sex and assessment centre")

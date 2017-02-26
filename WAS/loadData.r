@@ -108,11 +108,11 @@ if (opt$genetic == TRUE) {
 	if (opt$sensitivity==TRUE) {
 		genoPCs = cbind(datax[,"x22009_0_1"], datax[,"x22009_0_2"], datax[,"x22009_0_3"], datax[,"x22009_0_4"], datax[,"x22009_0_5"], datax[,"x22009_0_6"], datax[,"x22009_0_7"], datax[,"x22009_0_8"], datax[,"x22009_0_9"], datax[,"x22009_0_10"]);
 		assessCenter = datax[,"x54_0_0"];
-		confounders = cbind.data.frame(confounders, genoBatch, genoPCs, assessCenter);
-		print("Adjusting for age, sex, genetic batch, top 10 genetic principal components and assessment centre")
+		confounders = cbind.data.frame(confounders, genoPCs, assessCenter);
+		print("Adjusting for age, sex, genotype chip, top 10 genetic principal components and assessment centre")
 	}
 	else {
-		print("Adjusting for age, sex and genetic batch")
+		print("Adjusting for age, sex and genotype chip")
 	}
 }
 else {
