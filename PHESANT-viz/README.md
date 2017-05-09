@@ -75,8 +75,14 @@ See testWAS/README.md for an example with test data.
 NB: The name of the JSON file is referenced on line 87 of the HTML code, so if you choose a different name then you will need to change the name here too.
 
 
+## Viewing PHESANT-viz locally
 
+Some web browsers (e.g. Chrome and Safari) don't allow cross origin requests which means that PHESANT-viz cannot be viewed locally by opening the HTML file in a web browser. Instead, you'll 
+need to actually serve it, and an easy way to do this is to use python's simple HTTP server:
 
+1. `cd` to the directory with the HTML/JSON files.
+2. Run the command `python -m SimpleHTTPServer`.
+3. Go to this address in your browser `http://0.0.0.0:8000/force-collabsible-real.html`.
 
 
 
