@@ -41,6 +41,8 @@ loadSource <- function() {
 	source("getIsExposure.r")
 	source("addToCounts.r")
 	source("getNumValuesCatMultExposure.r")	
+	source("storeNewVar.r")
+	source("getConfounders.r")
 }
 
 # init the counters used to determine how many variables took each path in the variable processing flow.

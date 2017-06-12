@@ -50,9 +50,17 @@ binaryLogisticRegression <- function(varName, varType, thisdata, isExposure) {
 
               	cat("sample ", idxTrue, "/", idxFalse, "(", numNotNA, ") || ", sep="");
 
+		if (opt$save == TRUE) {
+			# add pheno to dataframe
+			storeNewVar(thisdata[,"userID"], phenoFactor, varName, 'bin')
+			cat("SUCCESS results-logistic-binary ");			
+			incrementCounter("success.binary")
+		}
+		else {
+
 		# use standardised geno values
                 geno = scale(thisdata[,"geno"])
-                confounders=thisdata[,2:numPreceedingCols];
+                confounders=thisdata[,3:numPreceedingCols];
 
 		sink()
 		sink(modelFitLogFile, append=TRUE)
@@ -94,7 +102,7 @@ binaryLogisticRegression <- function(varName, varType, thisdata, isExposure) {
                         cat(paste("ERROR:", varName,gsub("[\r\n]", "", e), sep=" "))
                         incrementCounter("binary.error")
                 })
-	
+		}	
         }
 }
 

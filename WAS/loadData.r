@@ -30,6 +30,25 @@ phenotype=read.table(opt$phenofile, header=1,sep=","); #\t
 validatePhenotypeInput(phenotype)
 
 
+if (opt$save==TRUE) { # saving not running tests so we don't need the confounders or trait of interest
+
+	datax = phenotype;
+	datax = fixOddFieldsToCatMul(datax)
+
+	# add pretend trait of interest so other code doesn't break
+	numRows = nrow(datax)
+	datax$geno = rep(-1, numRows)
+
+	idxUserId = which(names(datax) == opt$userId);
+        colnames(datax)[idxUserId] = "userID"
+	
+	confounders = data.frame(rep(-1, numRows))
+	colnames(confounders)[1] = "conf"
+        d = list(datax=datax, confounders=confounders);
+        return(d);
+
+} else {
+
 ## load snps
 if (is.null(opt$traitofinterestfile)) {
 	print("Extracting trait of interest from pheno file")
@@ -43,12 +62,16 @@ if (is.null(opt$traitofinterestfile)) {
 
 		datax = phenotype;
 	
+		# reorder columns so user id and trait of interest are first and second columns
+		idxUserId = which(names(phenotype) == opt$userId);
+		colnames(phenotype)[idxUserId] = "userID"
+		datax = cbind( datax[,c(idxUserId,idxTOI)], datax[,-c(idxUserId,idxTOI)])
+
 		# remove all rows with no trait of interest
 		idxNotEmpty = which(!is.na(phenotype[,idxTOI]))
 	        print(paste("Phenotype file has ", nrow(phenotype), " rows with ", length(idxNotEmpty), " not NA for trait of interest (",opt$traitofinterest,").", sep=""))
 	        phenotype = phenotype[idxNotEmpty,]
-	}
-	else {
+	} else {
 		stop(paste("Trait of interest (",opt$traitofinterest,") not found in phenotype file ",opt$phenofile, ". Trait of interest should either be in phenotype file or seperate trait of interest file specified in traitofinterestfile arg.", sep=""), call.=FALSE)
 	}
 
@@ -67,67 +90,32 @@ if (is.null(opt$traitofinterestfile)) {
 	snpScores = snpScores[idxNotEmpty,]
 
 	snpScores=cbind.data.frame(snpScores[,idx1], snpScores[,idx2]);
-	colnames(snpScores)[1] <- opt$userId;
+	colnames(snpScores)[1] <- "userID";
 	colnames(snpScores)[2] <- "geno";
+
+	# rename user id column in pheno dataframe
+	idxUserId = which(names(phenotype) == opt$userId);
+        colnames(phenotype)[idxUserId] = "userID"
 
 	print("Merging trait of interest and phenotype data")
 	## merge to one matrix
-	datax = merge(snpScores, phenotype, by=opt$userId, all=FALSE);
+	datax = merge(snpScores, phenotype, by="userID", all=FALSE);
 }
 
 if (nrow(datax)==0) {
 	stop("No examples with row in both trait of interest and phenotype files", call.=FALSE)
-}
-else {
+} else {
 	print(paste("Phenotype and trait of interest data files merged, with", nrow(datax),"examples"))
 }
 
+# some fields are fixed that have a field type as cat single but we want to treat them like cat mult
 datax = fixOddFieldsToCatMul(datax)
 
-## vars we adjust for
-age = datax[,"x21022_0_0"];
-sex = datax[,"x31_0_0"];
-
-confounders = cbind.data.frame(age,sex);
-
-# if genetic trait of interest then adjust for genotype chip
-# and also let user choose sensitivity analysis that also adjusts for top 10 genetic principal components and assessment centre
-if (opt$genetic == TRUE) {
-
-	genoBatch = datax[,"x22000_0_0"];
-
-	# chip comes from batch field 22000
-	genoChip = rep.int(NA,nrow(datax));
-	idxForVar = which(genoBatch<0);
-	genoChip[idxForVar] = 0;
-	idxForVar = which(genoBatch>=0 & genoBatch<2000);
-	genoChip[idxForVar] = 1;
-
-	confounders = cbind.data.frame(confounders, genoChip);
-
-	if (opt$sensitivity==TRUE) {
-		genoPCs = cbind(datax[,"x22009_0_1"], datax[,"x22009_0_2"], datax[,"x22009_0_3"], datax[,"x22009_0_4"], datax[,"x22009_0_5"], datax[,"x22009_0_6"], datax[,"x22009_0_7"], datax[,"x22009_0_8"], datax[,"x22009_0_9"], datax[,"x22009_0_10"]);
-		assessCenter = datax[,"x54_0_0"];
-		confounders = cbind.data.frame(confounders, genoPCs, assessCenter);
-		print("Adjusting for age, sex, genotype chip, top 10 genetic principal components and assessment centre")
-	}
-	else {
-		print("Adjusting for age, sex and genotype chip")
-	}
-}
-else {
-	# non genetic trait of interest, then sensitivity adjusts for assessment center
-	if (opt$sensitivity==TRUE) {
-		assessCenter = datax[,"x54_0_0"];
-		confounders = cbind.data.frame(confounders, assessCenter)
-		print("Adjusting for age, sex and assessment centre")
-	} else {
-		print("Adjusting for age and sex")
-	}
-}
+confounders = getConfounders(datax)
 
 d = list(datax=datax, confounders=confounders);
 
 return(d);
+}
 
 }

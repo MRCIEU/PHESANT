@@ -45,7 +45,16 @@ testCategoricalOrdered <- function(varName, varType, thisdata, orderStr="") {
 		# test this cat ordered variable with ordered logistic regression	
 
 	        phenoFactor = factor(pheno)
+
 		cat("num categories: ", length(unique(na.omit(phenoFactor))), " || ", sep="");
+
+		if (opt$save == TRUE) {
+			# add pheno to dataframe
+			storeNewVar(thisdata[,"userID"], phenoFactor, varName, 'catOrd')
+			cat("SUCCESS results-ordered-logistic");
+			incrementCounter("success.ordCat")
+                }
+                else {
 
 		# ordinal logistic regression
 		sink()
@@ -58,7 +67,7 @@ testCategoricalOrdered <- function(varName, varType, thisdata, orderStr="") {
 
 		### BEGIN TRYCATCH
 		tryCatch({
-		confounders=thisdata[,2:numPreceedingCols];
+		confounders=thisdata[,3:numPreceedingCols];
 		geno = scale(geno)
 		fit <- polr(phenoFactor ~ geno + ., data=confounders, Hess=TRUE)
 
@@ -89,6 +98,7 @@ testCategoricalOrdered <- function(varName, varType, thisdata, orderStr="") {
                         cat(paste("ERROR:", varName,gsub("[\r\n]", "", e), sep=" "))
                         incrementCounter("ordCat.error")
                 })
+		}
 
 	}
 }

@@ -33,7 +33,8 @@ option_list = list(
   make_option(c("-s", "--sensitivity"), action="store_true", default=FALSE, help="run sensitivity phenome scan [default= %default]"),
   make_option(c("-a", "--partIdx"), type="integer", default=NULL, help="part index of phenotype (used to parellise)"),
   make_option(c("-b", "--numParts"), type="integer", default=NULL, help="number of phenotype parts (used to parellise)"),
-  make_option(c("-j", "--genetic"), action="store", default=TRUE, help="trait of interest is genetic, e.g. a SNP or genetic risk score [default= %default]")
+  make_option(c("-j", "--genetic"), action="store", default=TRUE, help="trait of interest is genetic, e.g. a SNP or genetic risk score [default= %default]"),
+  make_option(c("-z", "--save"), action="store_true", default=FALSE, help="Save generated phenotypes to a file rather than testing associations [default= %default]")
 );
 opt_parser = OptionParser(option_list=option_list);
 opt = parse_args(opt_parser);
@@ -46,7 +47,9 @@ loadSource();
 
 ## load the files we write to and use
 counters=initCounters();
-initResultsFiles();
+if (opt$save==FALSE) {
+	initResultsFiles();
+}
 vl=initVariableLists();
 
 print("LOADING")
@@ -54,8 +57,10 @@ print("LOADING")
 ## load data
 d <- loadData();
 data=d$datax;
+
+#print(head(data))
 confounders=d$confounders;
-numPreceedingCols = ncol(confounders)+1;
+numPreceedingCols = ncol(confounders)+2; # confounders, trait of interest and user ID
 phenoStartIdx = numPreceedingCols+1;
 
 print("LOADING DONE")
@@ -86,12 +91,24 @@ currentVar="";
 currentVarShort="";
 first=TRUE;
 
-modelFitLogFile = paste(opt$resDir,"modelfit-log-",opt$varTypeArg,".txt",sep="")
-sink(modelFitLogFile)
-sink()
 
-resLogFile = paste(opt$resDir,"results-log-",opt$varTypeArg,".txt",sep="")
-sink(resLogFile)
+if (opt$save == TRUE) {
+
+	derivedBinary <- data.frame(userID=data$userID)
+        derivedCont <- data.frame(userID=data$userID)
+        derivedCatOrd <- data.frame(userID=data$userID)
+        derivedCatUnord <- data.frame(userID=data$userID)
+
+	resLogFile = paste(opt$resDir,"data-log-",opt$varTypeArg,".txt",sep="")
+        sink(resLogFile)
+} else {
+	modelFitLogFile = paste(opt$resDir,"modelfit-log-",opt$varTypeArg,".txt",sep="")
+	sink(modelFitLogFile)
+	sink()
+
+	resLogFile = paste(opt$resDir,"results-log-",opt$varTypeArg,".txt",sep="")
+	sink(resLogFile)
+}
 
 phenoIdx=0; # zero because then the idx is the position of the previous variable, i.e. the var in currentVar
 for (var in phenoVars) { 
@@ -118,9 +135,9 @@ for (var in phenoVars) {
 	else {
 		## new variable so run test for previous (we have collected all the columns now)
 		if (first==FALSE) {
-			thisdata = cbind.data.frame(data$geno, confounders, currentVarValues);
+			thisdata = cbind.data.frame(data$geno, data$userID, confounders, currentVarValues);
 			colnames(thisdata)[1] = "geno";
-
+			colnames(thisdata)[2] = "userID";
 			if (phenoIdx>=partStart && phenoIdx<=partEnd) { # only start new variable processing if last column of it is within the idx range for this part
 				testAssociations(currentVar, currentVarShort, thisdata);
 			}
@@ -140,8 +157,9 @@ for (var in phenoVars) {
 }
 
 # last variable so test association
-thisdata = cbind.data.frame(data$geno, confounders, currentVarValues);
+thisdata = cbind.data.frame(data$geno, data$userID, confounders, currentVarValues);
 colnames(thisdata)[1] =	"geno";
+colnames(thisdata)[2] = "userID"
 if (phenoIdx>=partStart && phenoIdx<=partEnd) {
 	testAssociations(currentVar, currentVarShort, thisdata);
 }
@@ -151,6 +169,12 @@ sink()
 # save counters of each path in variable flow
 saveCounts()
 
+if (opt$save == TRUE) {
+	write.table(derivedBinary, file=paste(opt$resDir,"data-binary-",opt$varTypeArg,".txt", sep=""), append=FALSE, quote=FALSE, sep=",", na="", row.names=FALSE, col.names=TRUE);
+	write.table(derivedCont, file=paste(opt$resDir,"data-cont-",opt$varTypeArg,".txt", sep=""), append=FALSE, quote=FALSE, sep=",", na="", row.names=FALSE, col.names=TRUE);
+	write.table(derivedCatOrd, file=paste(opt$resDir,"data-catord-",opt$varTypeArg,".txt", sep=""), append=FALSE, quote=FALSE, sep=",", na="", row.names=FALSE, col.names=TRUE);
+	write.table(derivedCatUnord, file=paste(opt$resDir,"data-catunord-",opt$varTypeArg,".txt", sep=""), append=FALSE, quote=FALSE, sep=",", na="", row.names=FALSE, col.names=TRUE);
+}
 
 warnings()
 

@@ -25,15 +25,18 @@ if (opt$test==TRUE) {
 
 	# set up the test phenome scan settings
 	datadir='../testWAS/data/';
-	opt$traitofinterestfile <<- paste(datadir,'exposure.csv', sep="");
-	opt$phenofile <<-  paste(datadir,'phenotypes.csv', sep="");
-	opt$variablelistfile <<- '../testWAS/variable-lists/outcome-info.tsv';
-	opt$datacodingfile <<- '../testWAS/variable-lists/data-coding-ordinal-info.txt';
-	opt$traitofinterest <<- 'exposure';
 	opt$resDir <<- '../testWAS/results/';
-	opt$userId <<- 'userId';
-	opt$sensitivity <<- FALSE;
-	opt$genetic <<- TRUE;
+        opt$userId <<- 'userId';
+	opt$phenofile <<-  paste(datadir,'phenotypes.csv', sep="");
+        opt$variablelistfile <<- '../testWAS/variable-lists/outcome-info.tsv';
+        opt$datacodingfile <<- '../testWAS/variable-lists/data-coding-ordinal-info.txt';
+
+	if(opt$save == FALSE) {
+		opt$traitofinterestfile <<- paste(datadir,'exposure.csv', sep="");
+		opt$traitofinterest <<- 'exposure';
+		opt$sensitivity <<- FALSE;
+		opt$genetic <<- TRUE;
+	}
 
 	processParts(opt$partIdx, opt$numParts);	
 }
@@ -53,7 +56,7 @@ else {
 #	  print_help(opt_parser)
 #	  stop("traitofinterestfile argument must be supplied", call.=FALSE)
 #	}
-	if (!is.null(opt$traitofinterestfile) & !file.exists(opt$traitofinterestfile)) {
+	if (opt$save==FALSE && !is.null(opt$traitofinterestfile) && !file.exists(opt$traitofinterestfile)) {
                stop(paste("trait of interest data file traitofinterestfile=", opt$traitofinterestfile, " does not exist", sep=""), call.=FALSE)
         }
 
@@ -73,7 +76,7 @@ else {
                 stop(paste("data coding file datacodingfile=", opt$datacodingfile, " does not exist", sep=""), call.=FALSE)
         }
 
-	if (is.null(opt$traitofinterest)){
+	if (opt$save==FALSE && is.null(opt$traitofinterest)){
 	  print_help(opt_parser)
 	  stop("traitofinterest argument must be supplied", call.=FALSE)
 	}
@@ -90,6 +93,12 @@ else {
 	processParts(opt$partIdx, opt$numParts);
 }
 	
+
+if (opt$save==TRUE) {
+	print("Saving phenotypes to file. Tests of association will not run!")
+}
+else {
+
 # just some information to the user
 if (opt$sensitivity==TRUE & opt$genetic==TRUE) {
 	print("Adjusting for age, sex, genotype chip, top 10 genetic principal components and assessment centre")
@@ -102,6 +111,8 @@ else if (opt$sensitivity==TRUE & opt$genetic==FALSE) {
 }
 else if	(opt$sensitivity==FALSE & opt$genetic==FALSE) {
         print("Adjusting for age and sex")
+}
+
 }
 
 }

@@ -169,13 +169,21 @@ testContinuous2 <- function(varName, varType, thisdata) {
 			incrementCounter("cont.main.500")
 		}
 		else {
-		
+
 			## inverse rank normal transformation
 			phenoIRNT = irnt(phenoAvg)
+
+			if (opt$save == TRUE) {
+				# add pheno to dataframe
+				storeNewVar(thisdata[,"userID"], phenoIRNT, varName, 'cont')
+				cat("SUCCESS results-linear");
+	                        incrementCounter("success.continuous")
+                        }
+                        else {
 		
 			## do regression (use standardised geno values)
 			geno = scale(thisdata[,"geno"])
-			confounders=thisdata[,2:numPreceedingCols];
+			confounders=thisdata[,3:numPreceedingCols];
 
 			sink()
 			sink(modelFitLogFile, append=TRUE)
@@ -216,7 +224,7 @@ testContinuous2 <- function(varName, varType, thisdata) {
                 	        cat(paste("ERROR:", varName,gsub("[\r\n]", "", e), sep=" "))
                 	        incrementCounter("continuous.error")
                 	})
-			
+			}			
 		}
 	}
 }

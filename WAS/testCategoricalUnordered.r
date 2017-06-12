@@ -40,6 +40,16 @@ testCategoricalUnordered <- function(varName, varType, thisdata) {
 		}
 
 		phenoFactor = chooseReferenceCategory(pheno);
+
+		if (opt$save == TRUE) {
+			# add pheno to dataframe
+			storeNewVar(thisdata[,"userID"], phenoFactor, varName, 'catUnord')
+			cat("SUCCESS results-notordered-logistic ");
+	                incrementCounter("success.unordCat")
+		}
+                else {
+		
+
 		reference = levels(phenoFactor)[1];
 		
 		sink()
@@ -51,7 +61,7 @@ testCategoricalUnordered <- function(varName, varType, thisdata) {
 		geno = scale(thisdata[,"geno"])
 		#cat("genoMean=", mean(geno), " genoSD=", sd(geno), " || ", sep="")
 		
-		confounders=thisdata[,2:numPreceedingCols];
+		confounders=thisdata[,3:numPreceedingCols];
 
 		###### BEGIN TRYCATCH
 		tryCatch({
@@ -116,7 +126,7 @@ testCategoricalUnordered <- function(varName, varType, thisdata) {
                         cat(paste("ERROR:", varName,gsub("[\r\n]", "", e), sep=" "))
                 	incrementCounter("unordCat.error")
 		})
-
+		}
 	}
 }
 
