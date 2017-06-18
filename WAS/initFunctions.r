@@ -42,7 +42,11 @@ loadSource <- function() {
 	source("addToCounts.r")
 	source("getNumValuesCatMultExposure.r")	
 	source("storeNewVar.r")
-	source("getConfounders.r")
+	source("loadPhenotypes.r")
+	source("loadTraitOfInterest.r")	
+	source("loadConfounders.r")
+	source("makeTestDataFrame.r")
+	source("loadIndicatorFields.r")
 }
 
 # init the counters used to determine how many variables took each path in the variable processing flow.

@@ -97,23 +97,6 @@ else {
 if (opt$save==TRUE) {
 	print("Saving phenotypes to file. Tests of association will not run!")
 }
-else {
-
-# just some information to the user
-if (opt$sensitivity==TRUE & opt$genetic==TRUE) {
-	print("Adjusting for age, sex, genotype chip, top 10 genetic principal components and assessment centre")
-}
-else if (opt$sensitivity==FALSE & opt$genetic==TRUE) {
-	print("Adjusting for age, sex and genotype chip")
-}
-else if (opt$sensitivity==TRUE & opt$genetic==FALSE) {
-	print("Adjusting for age, sex and assessment centre")
-}
-else if	(opt$sensitivity==FALSE & opt$genetic==FALSE) {
-        print("Adjusting for age and sex")
-}
-
-}
 
 }
 

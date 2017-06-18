@@ -52,45 +52,25 @@ if (opt$save==FALSE) {
 }
 vl=initVariableLists();
 
-print("LOADING")
-
 ## load data
-d <- loadData();
-data=d$datax;
+d <- loadData()
+data=d$datax
+confounders=d$confounders
+indicatorFields=d$inds
 
-#print(head(data))
-confounders=d$confounders;
-numPreceedingCols = ncol(confounders)+2; # confounders, trait of interest and user ID
+numPreceedingCols = ncol(confounders)-1+2; # confounders,minus id column, plus trait of interest and user ID
 phenoStartIdx = numPreceedingCols+1;
 
 print("LOADING DONE")
 
+
 phenoVars=colnames(data);
 # remove user id and age and sex columns
-#phenoVars = phenoVars[-c(1,2,3,4)];
 phenoVars = phenoVars[-c(1,2)]; # first and second columns are the id and snpScore, respectively, as determined in loadData.r
-
-## this decides on the start and end idxs of phentypes that we test, so that we can parallelise into multiple jobs
-if (opt$varTypeArg!="all") {
-	partSize = ceiling(length(phenoVars)/opt$numParts);
-	partStart = (opt$partIdx-1)*partSize + 1;
-
-	if (opt$partIdx == opt$numParts) {
-		partEnd = length(phenoVars);
-	} else {
-		partEnd = partStart + partSize - 1;
-	}
-
-} else {
-	partStart = 1;
-	partEnd = length(phenoVars);
-}
-print(paste(partStart, '-', partEnd));
 
 currentVar="";
 currentVarShort="";
 first=TRUE;
-
 
 if (opt$save == TRUE) {
 
@@ -109,6 +89,7 @@ if (opt$save == TRUE) {
 	resLogFile = paste(opt$resDir,"results-log-",opt$varTypeArg,".txt",sep="")
 	sink(resLogFile)
 }
+
 
 phenoIdx=0; # zero because then the idx is the position of the previous variable, i.e. the var in currentVar
 for (var in phenoVars) { 
@@ -135,12 +116,9 @@ for (var in phenoVars) {
 	else {
 		## new variable so run test for previous (we have collected all the columns now)
 		if (first==FALSE) {
-			thisdata = cbind.data.frame(data$geno, data$userID, confounders, currentVarValues);
-			colnames(thisdata)[1] = "geno";
-			colnames(thisdata)[2] = "userID";
-			if (phenoIdx>=partStart && phenoIdx<=partEnd) { # only start new variable processing if last column of it is within the idx range for this part
-				testAssociations(currentVar, currentVarShort, thisdata);
-			}
+
+			thisdata = makeTestDataFrame(data, confounders, currentVarValues)
+			testAssociations(currentVar, currentVarShort, thisdata)
 		}
 		
 		first=FALSE;
@@ -157,12 +135,8 @@ for (var in phenoVars) {
 }
 
 # last variable so test association
-thisdata = cbind.data.frame(data$geno, data$userID, confounders, currentVarValues);
-colnames(thisdata)[1] =	"geno";
-colnames(thisdata)[2] = "userID"
-if (phenoIdx>=partStart && phenoIdx<=partEnd) {
-	testAssociations(currentVar, currentVarShort, thisdata);
-}
+thisdata = makeTestDataFrame(data, confounders, currentVarValues)
+testAssociations(currentVar, currentVarShort, thisdata)
 
 sink()
 
@@ -177,7 +151,6 @@ if (opt$save == TRUE) {
 }
 
 warnings()
-
 
 
 

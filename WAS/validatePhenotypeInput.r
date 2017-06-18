@@ -18,12 +18,17 @@
 
 
 # Validate the contents of the phenotype file
-validatePhenotypeInput <- function(phenoIn) {
+validatePhenotypeInput <- function() {
 
+	print("Validating phenotype data ...")
+
+	## get just first row so we can check the column names
+	phenoIn = read.table(opt$phenofile, header=1, nrows=1, sep=',')
+	
 	###
 	### pheno file validation
 
-	print(paste("Number of columns in phenotype file:", ncol(phenoIn),sep=""))
+	print(paste("Number of columns in phenotype file: ", ncol(phenoIn),sep=""))
 
 	## check user id exists in pheno file
 	idx1 = which(names(phenoIn) == opt$userId);

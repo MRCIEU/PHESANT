@@ -169,7 +169,6 @@ testContinuous2 <- function(varName, varType, thisdata) {
 			incrementCounter("cont.main.500")
 		}
 		else {
-
 			## inverse rank normal transformation
 			phenoIRNT = irnt(phenoAvg)
 

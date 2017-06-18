@@ -51,7 +51,7 @@ testCategoricalUnordered <- function(varName, varType, thisdata) {
 		
 
 		reference = levels(phenoFactor)[1];
-		
+
 		sink()
 		sink(modelFitLogFile, append=TRUE) # hide output of model fitting
 		print("--------------")
