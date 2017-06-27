@@ -36,6 +36,9 @@ validatePhenotypeInput <- function() {
                 stop(paste("phenotype file doesn't contain userID colunn:", opt$userId), call.=FALSE)
         }
 
+	# we only need the confounders if we are actually running the tests
+	if (opt$save==FALSE) {
+
 	## confounder variables exist in pheno file
 	idx = which(names(phenoIn) == "x21022_0_0");
 	if (length(idx)==0) {
@@ -73,6 +76,8 @@ validatePhenotypeInput <- function() {
         	if (length(idx)==0) {
         	        stop("phenotype file doesn't contain required assessment centre colunn: x54_0_0", call.=FALSE)
         	}
+	}
+
 	}
 
 	print("Phenotype file validated")

@@ -41,7 +41,6 @@ testCategoricalMultiple <- function(varName, varType, thisdata) {
 	## for each value create a binary variable and test this
 	for (variableVal in uniqueValues) {
 
-
 		## numeric negative values we assume are missing - check this
 		if(is.numeric(variableVal) & variableVal<0) {
 			cat("SKIP_val:", variableVal," < 0", sep="");
