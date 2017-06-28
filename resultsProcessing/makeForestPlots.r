@@ -86,8 +86,11 @@ doMakeForest <- function(results, label, resDir, thisXLabel, nullValue) {
 	print(paste("Making forest plot for: ", label, sep=""));
 
 	numRes = nrow(results)
-	print(paste('Num results:', numRes))
+	print(paste('Number below Bonferroni threshold:', numRes))
 
+	if (numRes==0) {
+		print('Forest plot not made.')
+	} else {
 	# sort data frame on P value
 	results = results[with(results, order(pvalue)),]	
 
@@ -122,5 +125,7 @@ doMakeForest <- function(results, label, resDir, thisXLabel, nullValue) {
 	dev.off()
 
 	print("Finished forest plot")
+
+	}
 }
 
