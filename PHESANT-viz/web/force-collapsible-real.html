@@ -104,9 +104,9 @@ d3.json("java-json.json", function(error, json) {
     		
    		}
    		
-   		// fix the internal nodes at particular innitial positions
+   		// fix the internal nodes at particular initial positions
 
-   		if (d.xpos!=null && d.xpos.length>0) {
+   		if (d.xpos!=null && d.xpos.valueOf()!="null" && d.xpos.length>0) {
    			d.x = parseFloat(d.xpos);
     		d.y = parseFloat(d.ypos);
     		d.fixed=true;
