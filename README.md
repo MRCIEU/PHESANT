@@ -46,7 +46,7 @@ Rscript phenomeScan.r \
 
 Arg | Description
 -------|--------
-phenofile 		| Comma separated file containing phenotypes. Each row is a participant, the first column contains the user id and the remaining columns are phenotypes. Where there are multiple columns for a phenotype these must be adjacent in the file. Specifically for a given field in Biobank the instances should be adjacent and within each instance the arrays should be adjacent. Each variable name is in the format 'x[varid]\_[instance]\_[array]' (we use the prefix 'x' so that the variable names are valid in R).
+phenofile 		| Comma separated file containing phenotypes. Each row is a participant, the first column contains the participant id and the remaining columns are phenotypes. Where there are multiple columns for a phenotype these must be adjacent in the file. Specifically for a given field in Biobank the instances should be adjacent and within each instance the arrays should be adjacent. Each variable name needs to be changed to the format 'x[varid]\_[instance]\_[array]' (we use the prefix 'x' so that the variable names are valid in R).
 variablelistfile 	| Tab separated file containing information about each phenotype, that is used to process them (see below).
 datacodingfile 		| Comma separated file containing information about data codings (see below).
 traitofinterest 	| Variable name as in traitofinterestfile.
