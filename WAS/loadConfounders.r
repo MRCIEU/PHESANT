@@ -32,6 +32,19 @@ if (opt$save==TRUE) {
 
 } else {
 
+	if (!is.null(opt$confounderfile)) {
+		print("Loading confounders from confounder file ...")
+	
+		confs = fread(opt$confounderfile, sep=',', header=TRUE, data.table=FALSE)
+	        confs = lapply(confs,function(x) type.convert(as.character(x)))
+	        confs = as.data.frame(confs)
+
+		## find userID column and change name to userID
+		idx = which(colnames(confs) == opt$userId)
+		confs = confs[,c(opt$userID,setdiff(colnames(confs),opt$userID))]
+		colnames(confs)[1] <- "userID"
+
+	} else {
 	print("Loading confounders from phenotypes file ...")
         confNames = getConfounderNames()
 
@@ -59,6 +72,8 @@ if (opt$save==TRUE) {
         }
 
 	colnames(confs)[1] <- "userID"
+
+	}
 
 	return(confs)
 }

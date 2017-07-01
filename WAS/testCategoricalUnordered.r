@@ -65,7 +65,7 @@ testCategoricalUnordered <- function(varName, varType, thisdata) {
 
 		###### BEGIN TRYCATCH
 		tryCatch({
-		
+
 		fit <- multinom(phenoFactor ~ geno + ., data=confounders)
 
 		## baseline model with only confounders, to which we compare the model above

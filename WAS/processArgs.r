@@ -60,6 +60,10 @@ else {
                stop(paste("trait of interest data file traitofinterestfile=", opt$traitofinterestfile, " does not exist", sep=""), call.=FALSE)
         }
 
+	if (opt$save==FALSE && !is.null(opt$confounderfile) && !file.exists(opt$confounderfile)) {
+               stop(paste("confounder data file confounderfile=", opt$confounderfile, " does not exist", sep=""), call.=FALSE)
+        }
+
 	if (is.null(opt$variablelistfile)){
 	  print_help(opt_parser)
 	  stop("variablelistfile argument must be supplied", call.=FALSE)
