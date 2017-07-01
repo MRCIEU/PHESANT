@@ -70,7 +70,7 @@ loadData <- function() {
 	# some fields are fixed that have a field type as cat single but we want to treat them like cat mult
 	phenotype = fixOddFieldsToCatMul(phenotype)
 
-	indFields = loadIndicatorFields()
+	indFields = loadIndicatorFields(colnames(phenotype))
 	
 	d = list(datax=phenotype, confounders=conf, inds=indFields)
 	return(d)
