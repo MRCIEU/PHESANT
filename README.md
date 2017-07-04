@@ -10,7 +10,7 @@ There are three components in this project:
 
 ## General requirements
 
-R for parts 1 and 2 above. Tested with R-3.3.1-ATLAS. Phenome scan requires the R packages: optparse (V1.3.2), MASS (V7.3-45), lmtest (V0.9-34), nnet (V7.3-12) and forestplot (V1.7).
+R for parts 1 and 2 above. Tested with R-3.3.1-ATLAS. Phenome scan requires the R packages: optparse (V1.3.2), MASS (V7.3-45), lmtest (V0.9-34), nnet (V7.3-12), forestplot (V1.7) and data.table (V1.10.4).
 
 Java for part 3 above. Tested with jdk-1.8.0-66.
 
