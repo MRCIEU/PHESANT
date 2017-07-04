@@ -61,7 +61,7 @@ testCategoricalUnordered <- function(varName, varType, thisdata) {
 		geno = scale(thisdata[,"geno"])
 		#cat("genoMean=", mean(geno), " genoSD=", sd(geno), " || ", sep="")
 		
-		confounders=thisdata[,3:numPreceedingCols];
+		confounders=thisdata[,3:numPreceedingCols, drop = FALSE]
 
 		###### BEGIN TRYCATCH
 		tryCatch({

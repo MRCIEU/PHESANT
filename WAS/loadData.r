@@ -48,13 +48,18 @@ loadData <- function() {
         conf <- loadConfounders(phenotype)
 
 	## add trait of interest to phenotype data frame and remove rows with no trait of interest
-	#if (opt$save==FALSE) {
 	## merge in toi with phenotype - keep id list from phenotypes file
 	phenotype = merge(toi, phenotype, by="userID", all.y=TRUE, all.x=FALSE)
 	
         ## remove any rows with no trait of interest
         idxNotEmpty = which(!is.na(phenotype[,"geno"]))
-        print(paste("Phenotype file has ", nrow(phenotype), " rows with ", length(idxNotEmpty), " not NA for trait of interest (",opt$traitofinterest,").", sep=""))
+
+	if (opt$save == TRUE) {
+	        print(paste("Phenotype file has ", nrow(phenotype), " rows.", sep=""))
+	} else {
+		print(paste("Phenotype file has ", nrow(phenotype), " rows with ", length(idxNotEmpty), " not NA for trait of interest (",opt$traitofinterest,").", sep=""))
+	}
+
         phenotype = phenotype[idxNotEmpty,]
 
 	# match ids from not empty phenotypes list

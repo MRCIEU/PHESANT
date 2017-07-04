@@ -64,7 +64,6 @@ phenoStartIdx = numPreceedingCols+1;
 
 print("LOADING DONE")
 
-
 phenoVars=colnames(data);
 # remove user id and age and sex columns
 phenoVars = phenoVars[-c(1,2)]; # first and second columns are the id and snpScore, respectively, as determined in loadData.r

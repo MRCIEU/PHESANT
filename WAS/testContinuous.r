@@ -182,7 +182,7 @@ testContinuous2 <- function(varName, varType, thisdata) {
 		
 			## do regression (use standardised geno values)
 			geno = scale(thisdata[,"geno"])
-			confounders=thisdata[,3:numPreceedingCols];
+			confounders=thisdata[,3:numPreceedingCols, drop = FALSE]
 
 			sink()
 			sink(modelFitLogFile, append=TRUE)
