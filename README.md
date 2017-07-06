@@ -42,6 +42,25 @@ Rscript phenomeScan.r \
 --userId=<userIdFieldName>
 ```
 
+The following example runs the first part of 20 of the sensitivity analysis (adjusting for age, sex, and assessment centre, see below), of a phenome scan using a non genetic trait of interest:
+```bash
+cd WAS/
+Rscript phenomeScan.r \
+--phenofile=<phenotypesFilePath> \
+--traitofinterestfile=<traitOfInterestFilePath> \
+--variablelistfile="../variable-info/outcome-info.tsv" \
+--datacodingfile="../variable-info/data-coding-ordinal-info.csv" \
+--traitofinterest=<traitOfInterestName> \
+--resDir=<resultsDirectoryPath> \
+--userId=<userIdFieldName> \
+--sensitivity \
+--genetic=FALSE \
+--partIdx=1 \
+--numParts=20
+```
+
+
+
 ### Required arguments
 
 Arg | Description
