@@ -94,7 +94,7 @@ getConfounderNames <- function() {
                 confNames = append(confNames, "x22000_0_0")
 
                 if (opt$sensitivity==TRUE) {
-                        confNames = append(confNames, "x22009_0_1", "x22009_0_2", "x22009_0_3", "x22009_0_4", "x22009_0_5", "x22009_0_6", "x22009_0_7", "x22009_0_8", "x22009_0_9", "x22009_0_10", "x54_0_0")
+                        confNames = append(confNames, c("x22009_0_1", "x22009_0_2", "x22009_0_3", "x22009_0_4", "x22009_0_5", "x22009_0_6", "x22009_0_7", "x22009_0_8", "x22009_0_9", "x22009_0_10", "x54_0_0"))
                         print("Adjusting for age, sex, genotype chip, top 10 genetic principal components and assessment centre")
                 } else {
                         print("Adjusting for age, sex and genotype chip")
