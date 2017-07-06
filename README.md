@@ -42,7 +42,7 @@ Rscript phenomeScan.r \
 --userId=<userIdFieldName>
 ```
 
-The following example runs the first part of 20 of the sensitivity analysis (adjusting for age, sex, and assessment centre, see below), of a phenome scan using a non genetic trait of interest:
+The following example runs part 1 of 20, of a sensitivity analysis phenome scan (adjusting for age, sex, and assessment centre, see below), using a non genetic trait of interest:
 ```bash
 cd WAS/
 Rscript phenomeScan.r \
