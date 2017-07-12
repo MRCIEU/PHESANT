@@ -103,45 +103,45 @@ addIndicatorVariables <- function(indVars, phenosToTest, phenoVarsAll) {
         fieldsIdx = which(!is.na(vl$phenoInfo$CAT_MULT_INDICATOR_FIELDS))
 
 	if (length(fieldsIdx)>0) {
-        fieldsWithCMIF = vl$phenoInfo[fieldsIdx,]
-        fieldsWithCMIF = fieldsWithCMIF[-which(fieldsWithCMIF$CAT_MULT_INDICATOR_FIELDS == "NO_NAN"),]
-        fieldsWithCMIF = fieldsWithCMIF[-which(fieldsWithCMIF$CAT_MULT_INDICATOR_FIELDS == "ALL"),]
-        fieldsWithCMIF = fieldsWithCMIF[-which(fieldsWithCMIF$CAT_MULT_INDICATOR_FIELDS == ""),]
+	        fieldsWithCMIF = vl$phenoInfo[fieldsIdx,]
+	        fieldsWithCMIF = fieldsWithCMIF[-which(fieldsWithCMIF$CAT_MULT_INDICATOR_FIELDS == "NO_NAN"),]
+	        fieldsWithCMIF = fieldsWithCMIF[-which(fieldsWithCMIF$CAT_MULT_INDICATOR_FIELDS == "ALL"),]
+	        fieldsWithCMIF = fieldsWithCMIF[-which(fieldsWithCMIF$CAT_MULT_INDICATOR_FIELDS == ""),]
 
-	if (nrow(fieldsWithCMIF)>0) {
+		if (nrow(fieldsWithCMIF)>0) {
 
-	# turn into variable format not field ID
-	fieldsWithCMIF$CAT_MULT_INDICATOR_FIELDS = paste("x",fieldsWithCMIF$CAT_MULT_INDICATOR_FIELDS,"_0_0", sep="")
-	fieldsWithCMIF$FieldID = paste("x",fieldsWithCMIF$FieldID,"_0_0", sep="")
-
-	# remove rows where the field isn't in the phenotypes list
-	idxIn = which(fieldsWithCMIF$FieldID %in% phenosToTest)
-	fieldsWithCMIF = fieldsWithCMIF[idxIn,]
-
-	defaultFields = fieldsWithCMIF$CAT_MULT_INDICATOR_FIELDS
-	defaultFields = unique(defaultFields)
-        #####
-	##### remove those that already exist in phenotypes 'part'
-	idxExists = which(defaultFields %in% indVars)
-	if (length(idxExists>0)) {
-	        defaultFields = defaultFields[-idxExists]
-	}
+		# turn into variable format not field ID
+		fieldsWithCMIF$CAT_MULT_INDICATOR_FIELDS = paste("x",fieldsWithCMIF$CAT_MULT_INDICATOR_FIELDS,"_0_0", sep="")
+		fieldsWithCMIF$FieldID = paste("x",fieldsWithCMIF$FieldID,"_0_0", sep="")
 	
-	indVars = unique(append(indVars, defaultFields))
+		# remove rows where the field isn't in the phenotypes list
+		idxIn = which(fieldsWithCMIF$FieldID %in% phenosToTest)
+		fieldsWithCMIF = fieldsWithCMIF[idxIn,]
 
-	#####
-	##### check these required variables exist in phenotype file
-	if(length(defaultFields)>0) {
-		for (i in 1:length(defaultFields)) {
-			if (!(defaultFields[i] %in% phenoVarsAll)) {
-				print(paste("Required variable: Field ",defaultFields[i],"is a categorical multiple indicator field (CAT_MULT_INDICATOR_FIELDS column in variable information file) but was not found in phenotype data")) 
-				hasIssue=TRUE
+		defaultFields = fieldsWithCMIF$CAT_MULT_INDICATOR_FIELDS
+		defaultFields = unique(defaultFields)
+
+	        #####
+		##### remove those that already exist in phenotypes 'part'
+		idxExists = which(defaultFields %in% indVars)
+		if (length(idxExists>0)) {
+		        defaultFields = defaultFields[-idxExists]
+		}
+	
+		indVars = unique(append(indVars, defaultFields))
+
+		#####
+		##### check these required variables exist in phenotype file
+		if(length(defaultFields)>0) {
+			for (i in 1:length(defaultFields)) {
+				if (!(defaultFields[i] %in% phenoVarsAll)) {
+					print(paste("Required variable: Field ",defaultFields[i],"is a categorical multiple indicator field (CAT_MULT_INDICATOR_FIELDS column in variable information file) but was not found in phenotype data")) 
+					hasIssue=TRUE
+				}
 			}
 		}
-	}
 
-	
-	}
+		}
 	}
 
 	# stop script if there are missing variables
