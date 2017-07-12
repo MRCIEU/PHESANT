@@ -31,16 +31,20 @@ loadIndicatorFields <- function(phenosToTest) {
 	## add indicator variables to pheno data
 	indVars = addIndicatorVariables(indVars, phenosToTest, phenoVarsAll)
 
-	print(paste("Loading required indicator variable(s):", indVars[2:length(indVars)]))
+	if (length(indVars)>1) {
+		# not just user id column
+		print("Loading required related variable(s):")
+		print(indVars[2:length(indVars)])
+	}
+	else {
+		print("No required related variables.")
+	}
 
         ## read in the right table columns
         data = fread(opt$phenofile, select=indVars, sep=',', header=TRUE, data.table=FALSE)
-
 	data = data.frame(lapply(data,function(x) type.convert(as.character(x))))
-
 	colnames(data)[1] <- "userID"
 	return(data)
-
 }
 
 
@@ -52,9 +56,12 @@ addIndicatorVariables <- function(indVars, phenosToTest, phenoVarsAll) {
 
 	# get datacodes with an indicator variable
 	dataCodeIdx = which(!is.na(vl$dataCodeInfo$default_related_field))
-	dataCodeWithRF = vl$dataCodeInfo[dataCodeIdx,]
 
-#	print(dataCodeWithRF)
+	# whether there are any related fields that are not in the phenotype data file when they should be
+        hasIssue=FALSE
+
+	if (length(dataCodeIdx)>0) {
+	dataCodeWithRF = vl$dataCodeInfo[dataCodeIdx,]
 
 	defaultFields = c()
 
@@ -77,9 +84,6 @@ addIndicatorVariables <- function(indVars, phenosToTest, phenoVarsAll) {
 	defaultFields = unique(defaultFields)
 	indVars = append(indVars, defaultFields)
 	
-	# whether there are any related fields that are not in the phenotype data file when they should be
-	hasIssue=FALSE
-
 	#####
 	##### check these required variables exist in phenotype file
         if(length(defaultFields)>0) {
@@ -90,16 +94,21 @@ addIndicatorVariables <- function(indVars, phenosToTest, phenoVarsAll) {
 			}
                 }
         }
+	}
 
 	#####
 	##### categorical multiple indicator fields
 
 	# get field info, for fields with cat mult indicator fields
         fieldsIdx = which(!is.na(vl$phenoInfo$CAT_MULT_INDICATOR_FIELDS))
+
+	if (length(fieldsIdx)>0) {
         fieldsWithCMIF = vl$phenoInfo[fieldsIdx,]
         fieldsWithCMIF = fieldsWithCMIF[-which(fieldsWithCMIF$CAT_MULT_INDICATOR_FIELDS == "NO_NAN"),]
         fieldsWithCMIF = fieldsWithCMIF[-which(fieldsWithCMIF$CAT_MULT_INDICATOR_FIELDS == "ALL"),]
         fieldsWithCMIF = fieldsWithCMIF[-which(fieldsWithCMIF$CAT_MULT_INDICATOR_FIELDS == ""),]
+
+	if (nrow(fieldsWithCMIF)>0) {
 
 	# turn into variable format not field ID
 	fieldsWithCMIF$CAT_MULT_INDICATOR_FIELDS = paste("x",fieldsWithCMIF$CAT_MULT_INDICATOR_FIELDS,"_0_0", sep="")
@@ -118,6 +127,8 @@ addIndicatorVariables <- function(indVars, phenosToTest, phenoVarsAll) {
 	        defaultFields = defaultFields[-idxExists]
 	}
 	
+	indVars = unique(append(indVars, defaultFields))
+
 	#####
 	##### check these required variables exist in phenotype file
 	if(length(defaultFields)>0) {
@@ -129,6 +140,9 @@ addIndicatorVariables <- function(indVars, phenosToTest, phenoVarsAll) {
 		}
 	}
 
+	
+	}
+	}
 
 	# stop script if there are missing variables
 	if (hasIssue==TRUE) {
@@ -136,8 +150,6 @@ addIndicatorVariables <- function(indVars, phenosToTest, phenoVarsAll) {
 		quit()
 	}
 	
-        indVars = unique(append(indVars, defaultFields))
-
 	return(indVars)
 
 }
