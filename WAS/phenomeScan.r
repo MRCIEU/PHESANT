@@ -134,9 +134,11 @@ for (var in phenoVars) {
 	phenoIdx = phenoIdx + 1;
 }
 
-# last variable so test association
-thisdata = makeTestDataFrame(data, confounders, currentVarValues)
-testAssociations(currentVar, currentVarShort, thisdata)
+if (phenoIdx>0){
+	# last variable so test association
+	thisdata = makeTestDataFrame(data, confounders, currentVarValues)
+	testAssociations(currentVar, currentVarShort, thisdata)
+}
 
 sink()
 
