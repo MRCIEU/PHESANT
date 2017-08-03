@@ -71,9 +71,30 @@ if (opt$save==TRUE) {
                 confs = cbind.data.frame(confs, genoChip)
         }
 
+
+	#####
+	##### Convert assessment centre to an indicator variable
+	if (opt$sensitivity==TRUE) {
+		confs$x54_0_0 = as.factor(confs$x54_0_0)
+		assCentre = model.matrix(~confs$x54_0_0)
+		assCentre = assCentre[,2:ncol(assCentre)]
+		confs = cbind(confs, assCentre)
+		confs$x54_0_0 = NULL
+	}
+
 	colnames(confs)[1] <- "userID"
 
 	}
+
+	# remove any rows with no values
+	print(paste("Number of rows in confounder data: ", nrow(confs),sep=""))
+	confsComp = complete.cases(confs)
+	print(paste("Number of INCOMPLETE rows removed from confounder data: ", length(which(confsComp==FALSE)),sep=""))
+	confs = confs[confsComp==TRUE,]
+	print(paste("Number of rows in confounder data: ", nrow(confs),sep=""))	
+
+	print("Confounder columns:")
+	print(names(confs))
 
 	return(confs)
 }
