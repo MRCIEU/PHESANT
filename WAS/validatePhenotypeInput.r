@@ -37,7 +37,7 @@ validatePhenotypeInput <- function() {
         }
 
 	# we only need the confounders if we are actually running the tests
-	if (opt$save==FALSE) {
+	if (opt$save==FALSE & is.null(opt$confounderfile)) {
 
 	## confounder variables exist in pheno file
 	idx = which(names(phenoIn) == "x21022_0_0");
