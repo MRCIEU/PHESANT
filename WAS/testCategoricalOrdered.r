@@ -78,10 +78,17 @@ testCategoricalOrdered <- function(varName, varType, thisdata, orderStr="") {
 		ct = coeftest(fit)
 		pvalue = ct["geno","Pr(>|t|)"]
 		beta = ctable["geno", "Value"];
-		se = ctable["geno", "Std. Error"];
-		lower = beta - 1.96*se;
-		upper = beta + 1.96*se;
-		
+
+		if (opt$confidenceintervals == TRUE) {
+			se = ctable["geno", "Std. Error"]
+			lower = beta - 1.96*se;
+	                upper = beta + 1.96*se;
+                }
+                else {
+                        lower = NA
+                        upper = NA
+                }
+
 		write(paste(varName, varType, numNotNA, beta, lower, upper, pvalue, sep=","), file=paste(opt$resDir,"results-ordered-logistic-",opt$varTypeArg,".txt",sep=""), append="TRUE");
 		cat("SUCCESS results-ordered-logistic");
 		incrementCounter("success.ordCat")

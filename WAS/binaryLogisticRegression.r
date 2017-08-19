@@ -75,13 +75,21 @@ binaryLogisticRegression <- function(varName, varType, thisdata, isExposure) {
 		sink()
              	sink(resLogFile, append=TRUE)
 		
-                cis = confint(mylogit, level=0.95)
                 sumx = summary(mylogit)
 
                 pvalue = sumx$coefficients['geno','Pr(>|z|)']
                 beta = sumx$coefficients["geno","Estimate"]
-                lower = cis["geno", "2.5 %"]
-                upper = cis["geno", "97.5 %"]
+
+
+		if (opt$confidenceintervals == TRUE) {
+			cis = confint(mylogit, level=0.95)
+	                lower = cis["geno", "2.5 %"]
+	                upper = cis["geno", "97.5 %"]
+		}
+		else {
+			lower = NA
+			upper = NA
+		}
 
                 numNotNA = length(na.omit(phenoFactor))
 

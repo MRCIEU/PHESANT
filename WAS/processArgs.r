@@ -30,6 +30,7 @@ if (opt$test==TRUE) {
 	opt$phenofile <<-  paste(datadir,'phenotypes.csv', sep="");
         opt$variablelistfile <<- '../testWAS/variable-lists/outcome-info.tsv';
         opt$datacodingfile <<- '../testWAS/variable-lists/data-coding-ordinal-info.txt';
+	opt$confidenceintervals <<- TRUE	
 
 	if(opt$save == FALSE) {
 		opt$traitofinterestfile <<- paste(datadir,'exposure.csv', sep="");

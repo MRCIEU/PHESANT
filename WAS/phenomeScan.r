@@ -35,7 +35,8 @@ option_list = list(
   make_option(c("-b", "--numParts"), type="integer", default=NULL, help="Number of phenotype parts (used to parellise)"),
   make_option(c("-j", "--genetic"), action="store", default=TRUE, help="Trait of interest is genetic, e.g. a SNP or genetic risk score [default= %default]"),
   make_option(c("-z", "--save"), action="store_true", default=FALSE, help="Save generated phenotypes to a file rather than testing associations [default= %default]"),
-  make_option(c("-c", "--confounderfile"), type="character", default=NULL, help="Confounder file name", metavar="character") 
+  make_option(c("-c", "--confounderfile"), type="character", default=NULL, help="Confounder file name", metavar="character"),
+  make_option(c("-i", "--confidenceintervals"), type="logical", default=TRUE, help="Whether confidence intervals should be calculated [default= %default]")
 );
 opt_parser = OptionParser(option_list=option_list);
 opt = parse_args(opt_parser);

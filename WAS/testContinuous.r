@@ -197,13 +197,20 @@ testContinuous2 <- function(varName, varType, thisdata) {
 			sink()
 			sink(resLogFile, append=TRUE)
 			
-			cis = confint(fit, level=0.95)
 			sumx = summary(fit)
 
 			pvalue = sumx$coefficients['geno','Pr(>|t|)']
 			beta = sumx$coefficients["geno","Estimate"]
-			lower = cis["geno", "2.5 %"]
-			upper = cis["geno", "97.5 %"]
+
+			if (opt$confidenceintervals == TRUE) {
+				cis = confint(fit, level=0.95)
+				lower = cis["geno", "2.5 %"]
+	                        upper = cis["geno", "97.5 %"]
+                        }
+                        else {
+                                lower = NA
+                                upper = NA
+                        }
 
 			numNotNA = length(which(!is.na(phenoIRNT)))
 

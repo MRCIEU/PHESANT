@@ -103,10 +103,17 @@ testCategoricalUnordered <- function(varName, varType, thisdata) {
 
 			pvalue = p[paste(eval(u),sep=""),"geno"]				
 			beta = sumx$coefficients[paste(eval(u),sep=""),"geno"]
-			se = sumx$standard.errors[paste(eval(u),sep=""),"geno"]
-	        	lower = beta - 1.96 * se
-			upper = beta + 1.96 * se
 							
+			if (opt$confidenceintervals == TRUE) {
+				se = sumx$standard.errors[paste(eval(u),sep=""),"geno"]
+	                        lower = beta - 1.96 * se
+	                        upper = beta + 1.96 * se
+                	}
+                	else {
+                	      	lower = NA
+                	        upper = NA
+                	}
+
 			numThisValue = length(which(phenoFactor==u));
 
 			## save result to file
