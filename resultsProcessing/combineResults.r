@@ -52,6 +52,7 @@ for (i in 1:opt$numParts) {
 	else {
               	resultsAll <<- rbind.data.frame(resultsAll, resBin, resMulL, resOrdL, resLin);
         }
+
 }
 }
 
@@ -60,7 +61,13 @@ for (i in 1:opt$numParts) {
 
 
 loadResult <- function(filename, resultType) {
-        resBin = read.table(filename, header=1, sep=",", comment.char="", colClasses=c("character","character","character","character","character","character","numeric"));
-        resBin$resType = rep(resultType, nrow(resBin));
-	return(resBin);
+
+	if (file.exists(filename)) {
+        	resBin = read.table(filename, header=1, sep=",", comment.char="", colClasses=c("character","character","character","character","character","character","numeric"));
+        	resBin$resType = rep(resultType, nrow(resBin));
+		return(resBin);
+	}
+	else {
+		return(data.frame())
+	}
 }

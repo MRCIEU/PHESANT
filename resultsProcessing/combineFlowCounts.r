@@ -28,8 +28,9 @@ combineFlowCounts <- function() {
                 for (i in 1:opt$numParts) {
                         filex=paste(opt$resDir,"variable-flow-counts-",i,"-",opt$numParts,".txt",sep="");
 
+			if (file.exists(filex)) {
                         cx = read.table(filex, header=1, sep=",");
-	
+			if (nrow(cx)>0) {	
 			for (j in 1:nrow(cx)) {
 				counterName = cx[j,1]
 				counterValue = cx[j,2]
@@ -47,6 +48,8 @@ combineFlowCounts <- function() {
 				else {
               				c$countValue[idx] = c$countValue[idx]+counterValue
 				}
+			}
+			}
 			}
 		}
 

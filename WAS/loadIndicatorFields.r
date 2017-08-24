@@ -55,7 +55,7 @@ addIndicatorVariables <- function(indVars, phenosToTest, phenoVarsAll) {
 	# get list of all indicator variables from outcome info file
 
 	# get datacodes with an indicator variable
-	dataCodeIdx = which(!is.na(vl$dataCodeInfo$default_related_field))
+	dataCodeIdx = which(!is.na(vl$dataCodeInfo$default_related_field) & vl$dataCodeInfo$default_related_field!="")
 
 	# whether there are any related fields that are not in the phenotype data file when they should be
         hasIssue=FALSE
@@ -66,19 +66,20 @@ addIndicatorVariables <- function(indVars, phenosToTest, phenoVarsAll) {
 	defaultFields = c()
 
 	# check there is a field in the phenotypes data for each data code and if so then add this data codes related field to the phenosToTest list
+	if (nrow(dataCodeWithRF)>0) {
 	for (i in 1:nrow(dataCodeWithRF)) {
 		dc = dataCodeWithRF$dataCode[i]
-		rf = dataCodeWithRF$default_related_field[i]
-		rf = paste("x",rf,"_0_0", sep="")
 
-		fieldsIdx = which(vl$phenoInfo$datacode == dc)
-		fieldIDs = vl$phenoInfo$FIELD_ID[fieldsIdx]
+		# get all fields with this datacode
+		fieldsIdx = which(vl$phenoInfo$DATA_CODING == dc)
+		fieldIDs = vl$phenoInfo$FieldID[fieldsIdx]
 		fieldIDs = paste("x",fieldIDs,"_0_0", sep="")
 		
 		# if one of these field IDs are in phenotypeColumns then data code related field is needed
-		if (length(union(fieldIDs, phenosToTest))>0) {
+		if (length(intersect(fieldIDs, phenosToTest))>0) {
 			defaultFields = append(defaultFields, rf)
 		}
+	}
 	}
 
 	defaultFields = unique(defaultFields)

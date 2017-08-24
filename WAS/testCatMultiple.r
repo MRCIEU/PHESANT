@@ -26,16 +26,18 @@
 testCategoricalMultiple <- function(varName, varType, thisdata) {
 	cat("CAT-MULTIPLE || ");
 
-	pheno = thisdata[,phenoStartIdx:ncol(thisdata)]
+	pheno = thisdata[,phenoStartIdx:ncol(thisdata), drop=FALSE]
 	pheno = reassignValue(pheno, varName)
 
 	## get unique values from all columns of this variable
 	uniqueValues = unique(na.omit(pheno[,1]));
 	numCols = ncol(pheno);
 	numRows = nrow(pheno);
-	for (num in 2:numCols) {
-		u = unique(na.omit(pheno[,num]))
-		uniqueValues = union(uniqueValues,u);
+	if (numCols>1) {
+		for (num in 2:numCols) {
+			u = unique(na.omit(pheno[,num]))
+			uniqueValues = union(uniqueValues,u);
+		}
 	}
 
 	## for each value create a binary variable and test this
@@ -64,7 +66,8 @@ testCategoricalMultiple <- function(varName, varType, thisdata) {
 
 		## one of 3 ways to decide which examples are negative
         	idxsToRemove = restrictSample(varName, pheno, variableVal, thisdata[,"userID", drop=FALSE])
-		if (!is.null(idxsToRemove)) {
+
+		if (!is.null(idxsToRemove) & length(idxsToRemove) > 0) {
 			newthisdata = newthisdata[-idxsToRemove,]
 		}
 

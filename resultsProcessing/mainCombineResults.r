@@ -71,10 +71,15 @@ print("Finished adding variable descriptions to results listing")
 
 write.table(resultsAll, file=paste(opt$resDir,"results-combined.txt",sep=""), row.names=FALSE, quote=FALSE, sep="\t", na="");
 
-
 source("makeQQPlot.r")
-source("makeForestPlots.r")
+makeQQPlot(opt$resDir,resultsAll) 
 
-makeQQPlot(opt$resDir,resultsAll);
+if (length(which(is.na(resultsAll$lower)))>0 | length(which(is.na(resultsAll$upper)))>0) {
+	print("Forest plots not generated because NA confidence interval values")
+} else {
+	source("makeForestPlots.r")
+	junk <- makeForestPlots(opt$resDir,resultsAll)
+}
 
-junk <- makeForestPlots(opt$resDir,resultsAll);
+
+
