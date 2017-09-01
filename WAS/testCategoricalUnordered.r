@@ -92,6 +92,9 @@ testCategoricalUnordered <- function(varName, varType, thisdata) {
 		z <- sumx$coefficients/sumx$standard.errors
 		p = (1 - pnorm(abs(z), 0, 1))*2			
 
+		ci <- confint(fit, "geno", level=0.95)
+		ci = data.frame(ci)
+
 		## get result for each variable category
 		uniqVar = unique(na.omit(pheno))
 		for (u in uniqVar) {
@@ -105,9 +108,8 @@ testCategoricalUnordered <- function(varName, varType, thisdata) {
 			beta = sumx$coefficients[paste(eval(u),sep=""),"geno"]
 							
 			if (opt$confidenceintervals == TRUE) {
-				se = sumx$standard.errors[paste(eval(u),sep=""),"geno"]
-	                        lower = beta - 1.96 * se
-	                        upper = beta + 1.96 * se
+				lower = ci[1, paste("X2.5...", u, sep="")]
+				upper =	ci[1, paste("X97.5...", u, sep="")]
                 	}
                 	else {
                 	      	lower = NA
