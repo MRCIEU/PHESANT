@@ -38,6 +38,15 @@ makeForestPlots <- function(resDir, resultsAll) {
 		return(NULL)
 	}
 
+	# check for NA confidence intervals
+	ixL = which(is.na(resultsIncluded$lower))
+	ixU = which(is.na(resultsIncluded$upper))
+	if (length(ixL)>0 | length(ixU)>0) {
+		print("Some results added to forest plots have NA for confidence intervals")
+		resultsIncluded$lower[ixL] = resultsIncluded$beta[ixL]
+		resultsIncluded$upper[ixU] = resultsIncluded$beta[ixU]
+	}
+
 	# make sure results are numeric not character
 	resultsIncluded$beta = as.numeric(resultsIncluded$beta)
 	resultsIncluded$lower = as.numeric(resultsIncluded$lower)

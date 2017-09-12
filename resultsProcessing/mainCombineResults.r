@@ -74,12 +74,8 @@ write.table(resultsAll, file=paste(opt$resDir,"results-combined.txt",sep=""), ro
 source("makeQQPlot.r")
 makeQQPlot(opt$resDir,resultsAll) 
 
-if (length(which(is.na(resultsAll$lower)))>0 | length(which(is.na(resultsAll$upper)))>0) {
-	print("Forest plots not generated because NA confidence interval values")
-} else {
-	source("makeForestPlots.r")
-	junk <- makeForestPlots(opt$resDir,resultsAll)
-}
+source("makeForestPlots.r")
+junk <- makeForestPlots(opt$resDir,resultsAll)
 
 
 
