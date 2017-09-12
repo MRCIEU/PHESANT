@@ -82,9 +82,9 @@ binaryLogisticRegression <- function(varName, varType, thisdata, isExposure) {
 
 
 		if (opt$confidenceintervals == TRUE) {
-			cis = confint(mylogit, level=0.95)
-	                lower = cis["geno", "2.5 %"]
-	                upper = cis["geno", "97.5 %"]
+			cis = confint(mylogit, "geno", level=0.95)
+	                lower = cis["2.5 %"]
+	                upper = cis["97.5 %"]
 		}
 		else {
 			lower = NA
