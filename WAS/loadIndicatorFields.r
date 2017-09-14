@@ -77,7 +77,7 @@ addIndicatorVariables <- function(indVars, phenosToTest, phenoVarsAll) {
 		
 		# if one of these field IDs are in phenotypeColumns then data code related field is needed
 		if (length(intersect(fieldIDs, phenosToTest))>0) {
-			defaultFields = append(defaultFields, rf)
+			defaultFields = append(defaultFields, fieldIDs)
 		}
 	}
 	}
