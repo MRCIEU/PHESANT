@@ -75,16 +75,20 @@ addIndicatorVariables <- function(indVars, phenosToTest, phenoVarsAll) {
 		fieldIDs = vl$phenoInfo$FieldID[fieldsIdx]
 		fieldIDs = paste("x",fieldIDs,"_0_0", sep="")
 		
+		# datacode related field
+		rf = dataCodeWithRF$default_related_field[i]
+		rf = paste("x",rf,"_0_0", sep="")
+
 		# if one of these field IDs are in phenotypeColumns then data code related field is needed
 		if (length(intersect(fieldIDs, phenosToTest))>0) {
-			defaultFields = append(defaultFields, fieldIDs)
+			defaultFields = append(defaultFields, rf)
 		}
 	}
 	}
 
 	defaultFields = unique(defaultFields)
 	indVars = append(indVars, defaultFields)
-	
+
 	#####
 	##### check these required variables exist in phenotype file
         if(length(defaultFields)>0) {
