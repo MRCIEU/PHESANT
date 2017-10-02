@@ -34,8 +34,8 @@ testCategoricalUnordered <- function(varName, varType, thisdata) {
 		# check there are not too many levels and skip if there are
 		numUnique = length(unique(na.omit(pheno)))
 
-		# num outcome values * (num confounders and trait of interest and bias term+one other?)
-		numWeights=numUnique*(numPreceedingCols-3+1+3)
+		# num outcome values * (num confounders and trait of interest and bias term)
+		numWeights=(numUnique-1)*((numPreceedingCols-2)+1+1)
 		if (numWeights>1000) {
 			cat("Too many weights in model: ", numWeights, " > 1000, (num outcomes values: ", numUnique, ") || SKIP ", sep="")
 			incrementCounter("unordCat.cats")
