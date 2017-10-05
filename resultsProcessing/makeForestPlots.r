@@ -104,9 +104,11 @@ doMakeForest <- function(results, label, resDir, thisXLabel, nullValue) {
 	results = results[with(results, order(pvalue)),]	
 
 	v = cbind.data.frame(as.double(results[,"beta"]), as.double(results[,"lower"]), as.double(results[,"upper"]))
+	colnames(v)[1] = "mean"
+        colnames(v)[2] = "lower"
+        colnames(v)[3] = "upper"
 
-	# cat multiple fields have a hash to denote a particular value so we change this to ' value'
-	
+	# cat multiple fields have a hash to denote a particular value so we change this to ' value'	
 	results[,"varName"] = sub("#", " value=", results[,"varName"], perl=TRUE)
 
 	# put upper limit of display width for variable descriptions so graph doesn't display funny
@@ -120,7 +122,7 @@ doMakeForest <- function(results, label, resDir, thisXLabel, nullValue) {
 
 	## plot forest
 	pdf(paste(resDir,"forest-",label,".pdf",sep=""), height=2+nrow(v)*0.4, width=9) #height in inches, 0.4 inches = 1cm
-	forestplot(tabletext, v, 
+	forestplot(tabletext, v$mean, v$lower, v$upper, 
 		xlab=thisXLabel, 
 		new_page=FALSE, 
 		txt_gp=fpTxtGp(label=gpar(cex=0.8), 
