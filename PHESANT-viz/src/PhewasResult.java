@@ -50,8 +50,12 @@ public class PhewasResult implements Comparable {
 		this.varType = results[1];
 		this.n = results[2];
 		this.beta = Double.parseDouble(results[3]);
-		this.lower = Double.parseDouble(results[4]);
-		this.upper = Double.parseDouble(results[5]);
+
+		if (results[4].length()>0)
+			this.lower = Double.parseDouble(results[4]);
+		if (results[5].length()>0)
+			this.upper = Double.parseDouble(results[5]);
+
 		this.pvalue = Double.parseDouble(results[6]);
 		
 		switch(results[7]) {
