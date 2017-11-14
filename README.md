@@ -19,7 +19,7 @@ Java for part 3 above. Tested with jdk-1.8.0-66.
 
 Please cite:
 
-Millard LAC, Davies NM, Gaunt TR, Davey Smith G, Tilling K. PHESANT: a tool for performing automated phenome scans in UK Biobank. bioRxiv (2017)
+Millard LAC, et al. Software Application Profile: PHESANT: a tool for performing automated phenome scans in UK Biobank. *International Journal of Epidemiology* (2017).
 
 
 ## 1) Running a phenome scan
