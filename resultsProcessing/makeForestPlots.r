@@ -19,6 +19,7 @@
 
 makeForestPlots <- function(resDir, resultsAll) {
 
+
 	library(forestplot)
 
 	#### remove the fields excluded as stated in variable information file
@@ -102,6 +103,14 @@ doMakeForest <- function(results, label, resDir, thisXLabel, nullValue) {
 	} else {
 	# sort data frame on P value
 	results = results[with(results, order(pvalue)),]	
+
+	resultsInfIdx = which(is.infinite(results$beta))
+	if (length(resultsInfIdx)>0) {
+
+		print('Results with infinite estimates, and so not shown on forest plot:');
+		print(results[resultsInfIdx, 'varName'])
+		results = results[-resultsInfIdx,]
+	}
 
 	v = cbind.data.frame(as.double(results[,"beta"]), as.double(results[,"lower"]), as.double(results[,"upper"]))
 	colnames(v)[1] = "mean"
