@@ -1,0 +1,23 @@
+coding	meaning	node_id	parent_id	selectable
+-3	Prefer not to answer	-3	0	Y
+-1	Do not know	-1	0	Y
+1	White	1	0	Y
+2	Mixed	2	0	Y
+3	Asian or Asian British	3	0	Y
+4	Black or Black British	4	0	Y
+5	Chinese	5	0	Y
+6	Other ethnic group	6	0	Y
+1001	British	1001	1	Y
+1002	Irish	1002	1	Y
+1003	Any other white background	1003	1	Y
+2001	White and Black Caribbean	2001	2	Y
+2002	White and Black African	2002	2	Y
+2003	White and Asian	2003	2	Y
+2004	Any other mixed background	2004	2	Y
+3001	Indian	3001	3	Y
+3002	Pakistani	3002	3	Y
+3003	Bangladeshi	3003	3	Y
+3004	Any other Asian background	3004	3	Y
+4001	Caribbean	4001	4	Y
+4002	African	4002	4	Y
+4003	Any other Black background	4003	4	Y

@@ -1,0 +1,652 @@
+coding	meaning	node_id	parent_id	selectable
+1	(8000-8009) Not otherwise specified	1	0	N
+2	(8010-8790) Epithelial	2	0	N
+3	(8800-9370) Connective tissue	3	0	N
+4	(9380-9589) Nervous system	4	0	N
+5	(9590-9999) Hematologic (Leukemias, Lymphomas and related disorders)	5	0	N
+8000	Neoplasm	8000	1	Y
+8001	Tumor cells	8001	1	Y
+8002	Small cell tumour	8002	1	Y
+8003	Giant cell tumour	8003	1	Y
+8004	Spindle cell tumour	8004	1	Y
+8005	Clear cell tumor	8005	1	Y
+8010	Carcinoma, NOS	8010	2	Y
+8011	Epithelioma, NOS	8011	2	Y
+8012	Large cell carcinoma, NOS	8012	2	Y
+8013	Large cell neuroendocrine carcinoma	8013	2	Y
+8014	Large cell carcinoma with rhabdoid phenotype	8014	2	Y
+8015	Glassy cell carcinoma	8015	2	Y
+8020	Carcinoma, undifferentiated type	8020	2	Y
+8021	Carcinoma, anaplastic type	8021	2	Y
+8022	Pleomorphic carcinoma	8022	2	Y
+8030	Giant cell and spindle cell carcinoma	8030	2	Y
+8031	Giant cell carcinoma	8031	2	Y
+8032	Spindle cell carcinoma	8032	2	Y
+8033	Pseudosarcomatous carcinoma	8033	2	Y
+8034	Polygonal cell carcinoma	8034	2	Y
+8035	Carcinoma with osteoclast-like giant cells	8035	2	Y
+8041	Small cell carcinoma, NOS	8041	2	Y
+8042	Oat cell carcinoma	8042	2	Y
+8043	Small cell carcinoma, fusiform cell	8043	2	Y
+8044	Small cell carcinoma, intermediate cell	8044	2	Y
+8045	Combined small cell carcinoma	8045	2	Y
+8046	Non-small cell carcinoma	8046	2	Y
+8050	Papillary carcinoma	8050	2	Y
+8051	Verrucous carcinoma	8051	2	Y
+8052	Papillary squamous cell carcinoma	8052	2	Y
+8070	Squamous cell carcinoma	8070	2	Y
+8071	Squamous cell carcinoma, keratinizing	8071	2	Y
+8072	Squamous cell carcinoma, large cell, non-keratinizing	8072	2	Y
+8073	Squamous cell carcinoma, small cell, non-keratinizing	8073	2	Y
+8074	Squamous cell carcinoma, spindle cell	8074	2	Y
+8075	Squamous cell carcinoma, adenoid	8075	2	Y
+8076	Squamous cell carcinoma, micro-invasive	8076	2	Y
+8077	Squamous intraepithelial neoplasia, grade III	8077	2	Y
+8078	Squamous cell carcinoma with horn formation	8078	2	Y
+8080	Queyrat erythroplasia	8080	2	Y
+8081	Bowen disease	8081	2	Y
+8082	Lymphoepithelial carcinoma	8082	2	Y
+8083	Basaloid squamous cell carcinoma	8083	2	Y
+8084	Squamous cell carcinoma, clear cell type	8084	2	Y
+8090	Basal cell carcinoma, NOS	8090	2	Y
+8091	Multifocal superficial basal cell carcinoma	8091	2	Y
+8092	Infiltrating basal cell carcinoma, NOS	8092	2	Y
+8093	Basal cell carcinoma, fibroepithelial	8093	2	Y
+8094	Basosquamous carcinoma	8094	2	Y
+8095	Metatypical carcinoma	8095	2	Y
+8097	Basal cell carcinoma, nodular	8097	2	Y
+8098	Adenoid basal cell carcinoma	8098	2	Y
+8102	Trichilemmocarcinoma	8102	2	Y
+8110	Pilomatrix carcinoma	8110	2	Y
+8120	Transitional cell carcinoma	8120	2	Y
+8121	Schneiderian carcinoma	8121	2	Y
+8122	Transitional cell carcinoma, spindle cell	8122	2	Y
+8123	Basaloid carcinoma	8123	2	Y
+8124	Cloacogenic carcinoma	8124	2	Y
+8130	Papillary transitional cell carcinoma	8130	2	Y
+8131	Transitional cell carcinoma, micropapillary	8131	2	Y
+8140	Adenocarcinoma, NOS	8140	2	Y
+8141	Scirrhous adenocarcinoma	8141	2	Y
+8142	Linitis plastica	8142	2	Y
+8143	Superficial spreading adenocarcinoma	8143	2	Y
+8144	Adenocarcinoma, intestinal type	8144	2	Y
+8145	Carcinoma, diffuse type	8145	2	Y
+8146	Monomorphic adenoma	8146	2	Y
+8147	Basal cell adenocarcinoma	8147	2	Y
+8148	Glandular intraepithelial neoplasia, grade III	8148	2	Y
+8150	Islet cell carcinoma	8150	2	Y
+8151	Insulinoma (Beta-cell tumour), malignant	8151	2	Y
+8152	Glucagonoma (Alpha-cell tumour), malignant	8152	2	Y
+8153	Gastrinoma (G-cell tumour), malignant	8153	2	Y
+8154	Mixed islet cell and exocrine adenocarcinoma	8154	2	Y
+8155	Vipoma	8155	2	Y
+8156	Somatostatinoma, malignant	8156	2	Y
+8157	Enteroglucagonoma, malignant	8157	2	Y
+8160	Bile Duct Adenocarcinoma	8160	2	Y
+8161	Bile duct cystadenocarcinoma	8161	2	Y
+8162	Klatskin tumor	8162	2	Y
+8170	Hepatocellular carcinoma	8170	2	Y
+8171	Hepatocellular carcinoma, fibrolamellar	8171	2	Y
+8172	Hepatocellular carcinoma, scirrhous	8172	2	Y
+8173	Hepatocellular carcinoma, spindle cell variant	8173	2	Y
+8174	Hepatocellular carcinoma, clear cell type	8174	2	Y
+8175	Hepatocellular carcinoma, pleomorphic type	8175	2	Y
+8180	Mixed Hepato Bile Duct Carcinoma	8180	2	Y
+8190	Trabecular adenocarcinoma	8190	2	Y
+8191	Embryonal Adenoma	8191	2	Y
+8200	Adenoid cystic carcinoma	8200	2	Y
+8201	Cribriform carcinoma, NOS	8201	2	Y
+8210	Adenocarcinoma in adenomatous polyp	8210	2	Y
+8211	Tubular adenocarcinoma	8211	2	Y
+8214	Parietal cell carcinoma	8214	2	Y
+8215	Adenocarcinoma of anal glands	8215	2	Y
+8220	Adenocarcinoma in adenoma polyposis coli	8220	2	Y
+8221	Adenocarcinoma in multiple adenomatous polyps	8221	2	Y
+8230	Solid carcinoma, NOS	8230	2	Y
+8231	Carcinoma simplex	8231	2	Y
+8240	Carcinoid tumor	8240	2	Y
+8241	Enterochromaffin cell carcinoid	8241	2	Y
+8242	Enterochromaffin-like cell tumor	8242	2	Y
+8243	Goblet cell carcinoid (Mucocarcinoid Tumor)	8243	2	Y
+8244	Composite carcinoid	8244	2	Y
+8245	Adenocarcinoid tumor	8245	2	Y
+8246	Neuroendocrine carcinoma	8246	2	Y
+8247	Merkel cell carcinoma	8247	2	Y
+8249	Atypical carcinoid tumor	8249	2	Y
+8250	Bronchiolo-alveolar adenocarcinoma	8250	2	Y
+8251	Alveolar adenocarcinoma	8251	2	Y
+8252	Bronchiolo-alveolar carcinoma, non-mucinous	8252	2	Y
+8253	Bronchiolo-alveolar carcinoma, mucinous	8253	2	Y
+8254	Bronchiolo-alveolar carcinoma, mixed mucinous and non-mucinous	8254	2	Y
+8255	Adenocarcinoma with mixed subtypes	8255	2	Y
+8260	Papillary adenocarcinoma, NOS	8260	2	Y
+8261	Adenocarcinoma in villous adenoma	8261	2	Y
+8262	Villous adenocarcinoma	8262	2	Y
+8263	Adenocarcinoma in tubulovillous adenoma	8263	2	Y
+8270	Chromophobe adenocarcinoma	8270	2	Y
+8271	Prolactinoma	8271	2	Y
+8272	Pituitary carcinoma, NOS	8272	2	Y
+8280	Acidophil carcinoma	8280	2	Y
+8281	Mixed acidophil-basophil carcinoma	8281	2	Y
+8290	Oxyphilic adenocarcinoma	8290	2	Y
+8300	Basophil carcinoma	8300	2	Y
+8310	Clear cell adenocarcinoma	8310	2	Y
+8312	Renal cell carcinoma	8312	2	Y
+8313	Clear cell adenocarcinofibroma	8313	2	Y
+8314	Lipid-rich carcinoma	8314	2	Y
+8315	Glycogen-rich carcinoma	8315	2	Y
+8316	Cyst-associated renal cell carcinoma	8316	2	Y
+8317	Renal cell carcinoma, chromophobe type	8317	2	Y
+8318	Renal cell carcinoma, sarcomatoid	8318	2	Y
+8319	Collecting duct carcinoma	8319	2	Y
+8320	Granular cell carcinoma	8320	2	Y
+8322	Water-clear cell adenocarcinoma	8322	2	Y
+8323	Mixed cell adenocarcinoma	8323	2	Y
+8330	Follicular adenocarcinoma	8330	2	Y
+8331	Follicular adenocarcinoma, well differentiated	8331	2	Y
+8332	Follicular adenocarcinoma trabecular	8332	2	Y
+8333	Fetal adenocarcinoma	8333	2	Y
+8335	Follicular carcinoma, minimally invasive	8335	2	Y
+8337	Insular carcinoma	8337	2	Y
+8340	Papillary carcinoma, follicular variant	8340	2	Y
+8341	Papillary microcarcinoma	8341	2	Y
+8342	Papillary carcinoma, oxyphilic cell	8342	2	Y
+8343	Papillary carcinoma, encapsulated	8343	2	Y
+8344	Papillary carcinoma, columnar cell	8344	2	Y
+8345	Medullary carcinoma with amyloid stroma	8345	2	Y
+8346	Mixed medullary-follicular carcinoma	8346	2	Y
+8347	Mixed medullary-papillary carcinoma	8347	2	Y
+8350	Nonencapsulated sclerosing carcinoma	8350	2	Y
+8370	Adrenal cortical carcinoma	8370	2	Y
+8380	Endometrioid carcinoma	8380	2	Y
+8381	Endometrioid adenofibroma, malignant	8381	2	Y
+8382	Endometrioid adenocarcinoma, secretory variant	8382	2	Y
+8383	Endometrioid adenocarcinoma, ciliated cell variant	8383	2	Y
+8384	Adenocarcinoma, endocervical type	8384	2	Y
+8390	Skin appendage carcinoma	8390	2	Y
+8400	Sweat gland adenocarcinoma	8400	2	Y
+8401	Apocrine adenocarcinoma	8401	2	Y
+8402	Nodular hidradenoma, malignant	8402	2	Y
+8403	Malignant eccrine spiradenoma	8403	2	Y
+8407	Sclerosing sweat duct carcinoma	8407	2	Y
+8408	Eccrine papillary adenocarcinoma	8408	2	Y
+8409	Eccrine poroma, malignant	8409	2	Y
+8410	Sebaceous adenocarcinoma	8410	2	Y
+8413	Eccrine adenocarcinoma	8413	2	Y
+8420	Ceruminous adenocarcinoma	8420	2	Y
+8430	Mucoepidermoid carcinoma	8430	2	Y
+8440	Cystadenocarcinoma, NOS	8440	2	Y
+8441	Serous cystadenocarcinoma	8441	2	Y
+8442	Serous cystadenoma, borderline malignancy	8442	2	Y
+8450	Papillary cystadenocarcinoma	8450	2	Y
+8451	Papillary cystadenoma, borderline malignancy	8451	2	Y
+8452	Solid pseudopapillary carcinoma	8452	2	Y
+8453	Intraductal papillary-mucinous carcinoma	8453	2	Y
+8460	Papillary serous cystadenocarcinoma	8460	2	Y
+8461	Serous surface papillary carcinoma	8461	2	Y
+8462	Serous papillary cystic tumor of borderline malignancy	8462	2	Y
+8470	Mucinous cystadenocarcinoma, NOS	8470	2	Y
+8471	Papillary mucinous cystadenocarcinoma	8471	2	Y
+8472	Mucinous cystic tumor of borderline malignancy	8472	2	Y
+8473	Papillary mucinous cystadenoma, borderline malignancy	8473	2	Y
+8480	Mucinous adenocarcinoma	8480	2	Y
+8481	Mucin-producing adenocarcinoma	8481	2	Y
+8482	Mucinous adenocarcinoma, endocervical type	8482	2	Y
+8490	Signet ring cell carcinoma	8490	2	Y
+8500	Duct adenocarcinoma	8500	2	Y
+8501	Comedocarcinoma	8501	2	Y
+8502	Secretory carcinoma of breast	8502	2	Y
+8503	Intraductal papillary adenocarcinoma with invasion	8503	2	Y
+8504	Intracystic carcinoma	8504	2	Y
+8507	Intraductal micropapillary carcinoma	8507	2	Y
+8508	Cystic hypersecretory carcinoma	8508	2	Y
+8510	Medullary carcinoma, NOS	8510	2	Y
+8511	Medull Carcinoma wAmyl Stroma	8511	2	Y
+8512	Medullary carcinoma with lymphoid stroma	8512	2	Y
+8513	Atypical medullary carcinoma	8513	2	Y
+8514	Duct carcinoma, desmoplastic type	8514	2	Y
+8520	Lobular carcinoma, NOS	8520	2	Y
+8521	Infiltrating ductular carcinoma	8521	2	Y
+8522	Infiltrating duct and lobular carcinoma	8522	2	Y
+8523	Infiltrating duct mixed with other types of carcinoma	8523	2	Y
+8524	Infiltrating lobular mixed with other types of carcinoma	8524	2	Y
+8525	Polymorphous low grade adenocarcinoma	8525	2	Y
+8530	Inflammatory carcinoma	8530	2	Y
+8540	Paget disease, mammary	8540	2	Y
+8541	Paget disease and infiltrating duct carcinoma	8541	2	Y
+8542	Paget disease, extramammary	8542	2	Y
+8543	Paget disease and intraductal carcinoma	8543	2	Y
+8550	Acinar cell carcinoma	8550	2	Y
+8551	Acinar cell cystadenocarcinoma	8551	2	Y
+8560	Adenosquamous carcinoma	8560	2	Y
+8561	Warthin tumor (Adenolymphoma), malignant	8561	2	Y
+8562	Epithelial-myoepithelial carcinoma	8562	2	Y
+8570	Adenocarcinoma with squamous metaplasia (adenoacanthoma)	8570	2	Y
+8571	Adenocarcinoma with cartilaginous and osseous metaplasia	8571	2	Y
+8572	Adenocarcinoma with spindle cell mataplasia	8572	2	Y
+8573	Adenocarcinoma with apocrine metaplasia	8573	2	Y
+8574	Adenocarcinoma with neuroendocrine differentiation	8574	2	Y
+8575	Metaplastic carcinoma, NOS	8575	2	Y
+8576	Hepatoid adenocarcinoma	8576	2	Y
+8580	Thymoma, malignant, NOS	8580	2	Y
+8581	Thymoma, type A, malignant	8581	2	Y
+8582	Thymoma, type AB, malignant	8582	2	Y
+8583	Thymoma, type B1, malignant	8583	2	Y
+8584	Thymoma, type B2, malignant	8584	2	Y
+8585	Thymoma, type B3, malignant	8585	2	Y
+8586	Thymic carcinoma, NOS	8586	2	Y
+8588	Spindle epithelial tumor with thymus-like element	8588	2	Y
+8589	Carcinoma showing thymus-like element	8589	2	Y
+8590	Sex cord-gonadal stromal tumour, NOS	8590	2	Y
+8591	Sex cord-gonadal stromal tumour, incompletely differentiated	8591	2	Y
+8592	Sex cord-gonadal stromal tumour, mixed forms	8592	2	Y
+8593	Stromal tumour with minor sex cord elements	8593	2	Y
+8600	Thecoma, malignant	8600	2	Y
+8620	Granulosa cell tumor, malignant	8620	2	Y
+8621	Granulosa cell-theca cell tumor	8621	2	Y
+8630	Androblastoma, malignant	8630	2	Y
+8631	Sertoli-Leydig cell tumor, poorly differentiated	8631	2	Y
+8632	Gynandroblastoma	8632	2	Y
+8634	Sertoli-Leydig cell tumour, poorly differentiated, with heterologous elements	8634	2	Y
+8640	Sertoli cell carcinoma	8640	2	Y
+8650	Interstitial cell tumor	8650	2	Y
+8670	Steroid cell tumor, malignant	8670	2	Y
+8680	Paraganglioma, malignant	8680	2	Y
+8691	Aortic body tumor, malignant	8691	2	Y
+8692	Carotid body tumor, malignant	8692	2	Y
+8693	Extra-adrenal paraganglioma, malignant	8693	2	Y
+8700	Pheochromocytoma, malignant	8700	2	Y
+8710	Glomangiosarcoma	8710	2	Y
+8711	Glomus Tumor Malignant	8711	2	Y
+8720	Malignant melanoma, NOS	8720	2	Y
+8721	Nodular melanoma	8721	2	Y
+8722	Balloon cell melanoma	8722	2	Y
+8723	Malignant melanoma, regressing	8723	2	Y
+8728	Meningeal melanomatosis	8728	2	Y
+8730	Amelanotic melanoma	8730	2	Y
+8740	Melanoma in junctional naevus	8740	2	Y
+8741	Melanoma in precancerous melanosis	8741	2	Y
+8742	Lentigo maligna melanoma	8742	2	Y
+8743	Superficial spreading melanoma	8743	2	Y
+8744	Acral lentiginous melanoma	8744	2	Y
+8745	Desmoplastic melanoma	8745	2	Y
+8746	Mucosal lentiginous melanoma	8746	2	Y
+8761	Melanoma in giant pigmented nevus	8761	2	Y
+8770	Mixed epithelioid and spindle cell melanoma	8770	2	Y
+8771	Epithelioid cell melanoma	8771	2	Y
+8772	Spindle cell melanoma, NOS	8772	2	Y
+8773	Spindle cell melanoma, type A	8773	2	Y
+8774	Spindle cell melanoma, type B	8774	2	Y
+8780	Blue nevus, malignant	8780	2	Y
+8800	Sarcoma, NOS	8800	3	Y
+8801	Spindle cell sarcoma	8801	3	Y
+8802	Giant cell sarcoma	8802	3	Y
+8803	Small cell sarcoma	8803	3	Y
+8804	Epithelioid sarcoma	8804	3	Y
+8805	Undifferentiated sarcoma	8805	3	Y
+8806	Desmoplastic small round cell tumor	8806	3	Y
+8810	Fibrosarcoma, NOS	8810	3	Y
+8811	Fibromyxosarcoma	8811	3	Y
+8812	Periosteal fibrosarcoma	8812	3	Y
+8813	Fascial fibrosarcoma	8813	3	Y
+8814	Infantile fibrosarcoma	8814	3	Y
+8815	Solitary fibrous tumor, malignant	8815	3	Y
+8830	Fibrous histiocytoma, malignant	8830	3	Y
+8832	Dermatofibrosarcoma, NOS	8832	3	Y
+8833	Pigmented dermatofibrosarcoma protuberans	8833	3	Y
+8840	Myxosarcoma	8840	3	Y
+8850	Liposarcoma, NOS	8850	3	Y
+8851	Liposarcoma, well differentiated	8851	3	Y
+8852	Myxoid liposarcoma	8852	3	Y
+8853	Round cell liposarcoma	8853	3	Y
+8854	Pleomorphic liposarcoma	8854	3	Y
+8855	Mixed type liposarcoma	8855	3	Y
+8857	Fibroblastic liposarcoma	8857	3	Y
+8858	Dedifferentiated liposarcoma	8858	3	Y
+8861	Angiolipoma, NOS	8861	3	Y
+8890	Leiomyosarcoma, NOS	8890	3	Y
+8891	Epithelioid leiomyosarcoma	8891	3	Y
+8894	Angiomyosarcoma	8894	3	Y
+8895	Myosarcoma	8895	3	Y
+8896	Myxoid leiomyosarcoma	8896	3	Y
+8897	Smooth muscle tumor, NOS	8897	3	Y
+8900	Rhabdomyosarcoma, NOS	8900	3	Y
+8901	Pleomorphic rhabdomyosarcoma, adult type	8901	3	Y
+8902	Mixed type rhabdomyosarcoma	8902	3	Y
+8910	Embryonal rhabdomyosarcoma	8910	3	Y
+8912	Spindle cell rhabdomyosarcoma	8912	3	Y
+8920	Alveolar rhabdomyosarcoma	8920	3	Y
+8921	Rhabdomyosarcoma with ganglionic differentiation	8921	3	Y
+8930	Endometrial stromal sarcoma	8930	3	Y
+8931	Endometrial stromal sarcoma, low grade	8931	3	Y
+8933	Adenosarcoma	8933	3	Y
+8934	Carcinofibroma	8934	3	Y
+8935	Stromal sarcoma, NOS	8935	3	Y
+8936	Gastrointestinal stromal sarcoma	8936	3	Y
+8940	Mixed tumor, malignant, NOS	8940	3	Y
+8941	Carcinoma in pleomorphic adenoma	8941	3	Y
+8950	Mullerian mixed tumor	8950	3	Y
+8951	Mesodermal mixed tumor	8951	3	Y
+8959	Malignant cystic nephroma	8959	3	Y
+8960	Nephroblastoma, NOS	8960	3	Y
+8963	Malignant rhabdoid tumor	8963	3	Y
+8964	Clear cell sarcoma of kidney	8964	3	Y
+8970	Hepatoblastoma	8970	3	Y
+8971	Pancreatoblastoma	8971	3	Y
+8972	Pulmonary blastoma	8972	3	Y
+8973	Pleuropulmonary blastoma	8973	3	Y
+8980	Carcinosarcoma, NOS	8980	3	Y
+8981	Carcinosarcoma, embryonal type	8981	3	Y
+8982	Malignant myoepithelioma	8982	3	Y
+8990	Mesenchymoma, malignant	8990	3	Y
+8991	Embryonal sarcoma	8991	3	Y
+9000	Brenner tumor, malignant	9000	3	Y
+9014	Serous adenocarcinofibroma	9014	3	Y
+9015	Mucinous adenocarcinofibroma	9015	3	Y
+9020	Phyllodes tumor, malignant	9020	3	Y
+9040	Synovial sarcoma, NOS	9040	3	Y
+9041	Synovial sarcoma, spindle cell	9041	3	Y
+9042	Synovial sarcoma, epithelioid cell	9042	3	Y
+9043	Synovial sarcoma, biphasic	9043	3	Y
+9044	Clear cell sarcoma,NOS	9044	3	Y
+9050	Mesothelioma, malignant	9050	3	Y
+9051	Fibrous mesothelioma, malignant	9051	3	Y
+9052	Epithelioid mesothelioma, malignant	9052	3	Y
+9053	Mesothelioma, biphasic, malignant	9053	3	Y
+9060	Dysgerminoma	9060	3	Y
+9061	Seminoma, NOS	9061	3	Y
+9062	Seminoma, anaplastic	9062	3	Y
+9063	Spermatocytic seminoma	9063	3	Y
+9064	Germinoma	9064	3	Y
+9065	Germ cell tumor, nonseminomatous	9065	3	Y
+9070	Embryonal carcinoma, NOS	9070	3	Y
+9071	Yolk sac tumor	9071	3	Y
+9072	Polyembryoma	9072	3	Y
+9080	Teratoma malignant, NOS	9080	3	Y
+9081	Teratocarcinoma	9081	3	Y
+9082	Malignant teratoma, undifferentiated	9082	3	Y
+9083	Malignant teratoma, intermediate	9083	3	Y
+9084	Teratoma with maligant transformation	9084	3	Y
+9085	Mixed germ cell tumor	9085	3	Y
+9090	Struma ovarii, malignant	9090	3	Y
+9100	Choriocarcinoma, NOS	9100	3	Y
+9101	Choriocarcinoma combined with other germ cell elements	9101	3	Y
+9102	Malignant teratoma, trophoblastic	9102	3	Y
+9104	Placental site trophoblastic tumor	9104	3	Y
+9105	Trophoblastic tumor, epithelioid	9105	3	Y
+9110	Mesonephroma, malignant	9110	3	Y
+9120	Hemangiosarcoma	9120	3	Y
+9121	Cavernous hemangioma	9121	3	Y
+9122	Venous hemangioma	9122	3	Y
+9124	Kupffer cell sarcoma	9124	3	Y
+9130	Hemangioendothelioma, malignant	9130	3	Y
+9131	Capillary hemangioma	9131	3	Y
+9133	Epithelioid hemangioendothelioma, malignant	9133	3	Y
+9140	Kaposi sarcoma	9140	3	Y
+9150	Hemangiopericytoma, malignant	9150	3	Y
+9161	Hemangioblastoma	9161	3	Y
+9170	Lymphangiosarcoma	9170	3	Y
+9180	Osteosarcoma, NOS	9180	3	Y
+9181	Chondroblastic osteosarcoma	9181	3	Y
+9182	Fibroblastic osteosarcoma	9182	3	Y
+9183	Telangiectatic osteosarcoma	9183	3	Y
+9184	Osteosarcoma in Paget disease	9184	3	Y
+9185	Small cell osteosarcoma	9185	3	Y
+9186	Central osteosarcoma	9186	3	Y
+9187	Instrosseous well differentiated osteosarcoma	9187	3	Y
+9192	Parosteal osteosarcoma	9192	3	Y
+9193	Periosteal osteosarcoma	9193	3	Y
+9194	High grade surface osteosarcoma	9194	3	Y
+9195	Intracortical osteosarcoma	9195	3	Y
+9220	Chondrosarcoma, NOS	9220	3	Y
+9221	Juxtacortical chondrosarcoma	9221	3	Y
+9230	Chondroblastoma, malignant	9230	3	Y
+9231	Myxoid chondrosarcoma	9231	3	Y
+9240	Mesenchymal chondrosarcoma	9240	3	Y
+9242	Clear cell chondrosarcoma	9242	3	Y
+9243	Dedifferentiated chondrosarcoma	9243	3	Y
+9250	Giant cell tumor of bone, malignant	9250	3	Y
+9251	Malignant giant cell tumor of soft parts	9251	3	Y
+9252	Malignant tenosynovial giant cell tumor	9252	3	Y
+9260	Ewing sarcoma	9260	3	Y
+9261	Adamantinoma of long bones	9261	3	Y
+9270	Odontogenic tumor, malignant	9270	3	Y
+9290	Ameloblastic odontosarcoma	9290	3	Y
+9310	Ameloblastoma, malignant	9310	3	Y
+9330	Ameloblastic fibrosarcoma	9330	3	Y
+9342	Odontogenic carcinosarcoma	9342	3	Y
+9350	Craniopharyngioma	9350	3	Y
+9351	Adamantinomatous craniopharyngioma	9351	3	Y
+9352	Papillary craniopharyngioma	9352	3	Y
+9360	Pinealoma, NOS	9360	3	Y
+9361	Pineocytoma	9361	3	Y
+9362	Pineoblastoma	9362	3	Y
+9364	Peripheral neuroectodermal tumor	9364	3	Y
+9365	Askin tumor	9365	3	Y
+9370	Chordoma, NOS	9370	3	Y
+9371	Chondroid chordoma	9371	3	Y
+9372	Dedifferentiated chordoma	9372	3	Y
+9380	Glioma, malignant	9380	4	Y
+9381	Gliomatosis cerebri	9381	4	Y
+9382	Mixed glioma	9382	4	Y
+9383	Subependymoma	9383	4	Y
+9384	Supependymal giant cell astrocytoma	9384	4	Y
+9390	Choroid plexus papilloma	9390	4	Y
+9391	Ependymoma, NOS	9391	4	Y
+9392	Ependymoma, anaplastic	9392	4	Y
+9393	Papillary ependymoma	9393	4	Y
+9394	Myxopapillary ependymoma	9394	4	Y
+9400	Astrocytoma, NOS	9400	4	Y
+9401	Astrocytoma, anaplastic	9401	4	Y
+9410	Protoplasmic astrocytoma	9410	4	Y
+9411	Gemistocytic astrocytoma	9411	4	Y
+9412	Desmoplastic infantile astrocytoma	9412	4	Y
+9413	Dysembryoplastic neuroepithelial tumor	9413	4	Y
+9420	Fibrillary astrocytoma	9420	4	Y
+9421	Pilocytic astrocytoma	9421	4	Y
+9423	Polar spongioblastoma	9423	4	Y
+9424	Pleomorphic xanthoastrocytoma	9424	4	Y
+9430	Astroblastoma	9430	4	Y
+9440	Glioblastoma, NOS	9440	4	Y
+9441	Giant cell glioblastoma	9441	4	Y
+9442	Gliosarcoma	9442	4	Y
+9444	Chordoid glioma	9444	4	Y
+9450	Oligodendroglioma, NOS	9450	4	Y
+9451	Oligodendroglioma, anaplastic	9451	4	Y
+9460	Oligodendroblastoma	9460	4	Y
+9470	Medulloblastoma, NOS	9470	4	Y
+9471	Desmoplastic nodular medulloblastoma	9471	4	Y
+9472	Medullomyoblastoma	9472	4	Y
+9473	Primitive neuroectodermal tumor	9473	4	Y
+9474	Large cell medulloblastoma	9474	4	Y
+9480	Cerebellar sarcoma, NOS	9480	4	Y
+9490	Ganglioneuroblastoma	9490	4	Y
+9492	Gangliocytoma	9492	4	Y
+9493	Dysplastic gangliocytoma of cerebellum (Lhermitte-Duclos)	9493	4	Y
+9500	Neuroblastoma, NOS	9500	4	Y
+9501	Medulloepithelioma, NOS	9501	4	Y
+9502	Teratoid medulloepithelioma	9502	4	Y
+9503	Neuroepithelioma, NOS	9503	4	Y
+9504	Spongioneuroblastoma	9504	4	Y
+9505	Ganglioglioma, anaplastic	9505	4	Y
+9506	Centrol neurocytoma	9506	4	Y
+9508	Atypical teratoid/rhabdoid tumor	9508	4	Y
+9510	Retinoblastoma, NOS	9510	4	Y
+9511	Retinoblastoma, differentiated	9511	4	Y
+9512	Retinoblastoma, undifferentiated	9512	4	Y
+9513	Retinoblastoma, diffuse	9513	4	Y
+9520	Olfactory neurogenic tumor	9520	4	Y
+9521	Olfactory neurcytoma	9521	4	Y
+9522	Olfactory neuroblastoma	9522	4	Y
+9523	Olfactory neuroepithelioma	9523	4	Y
+9530	Meningioma, malignant	9530	4	Y
+9531	Meningothelial meningioma	9531	4	Y
+9532	Fibrous meningioma	9532	4	Y
+9533	Psammomatous meningioma	9533	4	Y
+9534	Angiomatous meningioma	9534	4	Y
+9537	Transitional meningioma	9537	4	Y
+9538	Papillary meningioma	9538	4	Y
+9539	Meningeal sarcomatosis	9539	4	Y
+9540	Malignant peripheral nerve sheath tumor	9540	4	Y
+9541	Melanotic neurofibroma	9541	4	Y
+9550	Plexiform neurofibroma	9550	4	Y
+9560	Neurilemmoma, malignant	9560	4	Y
+9561	Malignant peripheral nerve sheath tumour with rhabdomyoblastic differentiation	9561	4	Y
+9562	Neurothekeoma	9562	4	Y
+9570	Neuroma, NOS	9570	4	Y
+9571	Perineurioma, malignant	9571	4	Y
+9580	Granular cell tumor, malignant	9580	4	Y
+9581	Alveolar soft part sarcoma	9581	4	Y
+9582	Granular cell tumor of the sellar region	9582	4	Y
+9590	Malignant lymphoma, NOS	9590	5	Y
+9591	Malignant lymphoma, non-Hodgkin	9591	5	Y
+9596	Composite Hodgkin and non-Hodgkin lymphoma	9596	5	Y
+9597	Primary Cutaneous follicle centre lymphoma	9597	5	Y
+9650	Hodgkin lymphoma, NOS	9650	5	Y
+9651	Hodgkin lymphoma, lymphocyte-rich	9651	5	Y
+9652	Hodgkin lymphoma, mixed cellularity	9652	5	Y
+9653	Hodgkin lymphoma, lymphocytic depletion	9653	5	Y
+9654	Hodgkin lymphoma, lymphocytic depletion, diffuse fibrosis	9654	5	Y
+9655	Hodgkin lymphoma, lymphocytic depletion, reticular	9655	5	Y
+9659	Hodgkin lymphoma, nodular lymphocyte predominance	9659	5	Y
+9661	Hodgkin granuloma	9661	5	Y
+9662	Hodgkin sarcoma	9662	5	Y
+9663	Hodgkin lymphoma, nodular sclerosis	9663	5	Y
+9664	Hodgkin lymphoma, nodular sclerosis, cellular phase	9664	5	Y
+9665	Hodgkin lymphoma, nodular sclerosis, grade 1	9665	5	Y
+9667	Hodgkin lymphoma, nodular sclerosis, grade 2	9667	5	Y
+9670	Malignant lymphoma, small B lymphocytic, NOS	9670	5	Y
+9671	Malignant lymphoma, lymphoplasmacytic	9671	5	Y
+9673	Mantle cell lymphoma	9673	5	Y
+9675	Malignant lymphoma, mixed small and large cell, diffuse	9675	5	Y
+9678	Primary effusion lymphoma	9678	5	Y
+9679	Mediastinal large B-cell lymphoma	9679	5	Y
+9680	Malignant lymphoma, large B-cell, diffuse	9680	5	Y
+9684	Malignant lymphoma, large B-cell, diffuse, immunoblastic, NOS	9684	5	Y
+9687	Burkitt lymphoma, NOS	9687	5	Y
+9688	T-cell histiocyte rich large B-cell lymphoma	9688	5	Y
+9689	Splenic marginal zone B-cell lymphoma	9689	5	Y
+9690	Follicular lymphoma, NOS	9690	5	Y
+9691	Follicular lymphoma, grade 2	9691	5	Y
+9695	Follicular lymphoma, grade 1	9695	5	Y
+9698	Follicular lymphoma, grade 3	9698	5	Y
+9699	Marginal zone B-cell lymphoma, NOS	9699	5	Y
+9700	Mycosis fungoides	9700	5	Y
+9701	Sezary syndrome	9701	5	Y
+9702	Mature T-cell lymphoma, NOS	9702	5	Y
+9705	Angioimmunoblastic T-cell lymphoma	9705	5	Y
+9708	Subcutaneous panniculitis-like T-cell lymphoma	9708	5	Y
+9709	Cutaneous T-cell lymphoma, NOS	9709	5	Y
+9712	Intravascular large B-cell lymphoma	9712	5	Y
+9714	Anaplastic large cell lymphoma, T-cell and Null cell type	9714	5	Y
+9716	Hepatosplenic gamma-delta cell lymphoma	9716	5	Y
+9717	Intestinal T-cell lymphoma	9717	5	Y
+9718	Primary cutaneous CD30+ T-cell lymphoproliferative disorder	9718	5	Y
+9719	NK/T-cell lymphoma, nasal and nasal-type	9719	5	Y
+9724	SystemicEBV positive T-cell lymphoproliferative disease of childhood	9724	5	Y
+9725	Hydroa vacciniforme-like lymphoma	9725	5	Y
+9726	Primary Cutaneous gamma-delta T-cell lymphoma	9726	5	Y
+9727	Precursor cell lymphoblastic lymphoma, NOS	9727	5	Y
+9728	Precursor B-cell lymphoblastic lymphoma	9728	5	Y
+9729	Precursor T-cell lymphoblastic lymphoma	9729	5	Y
+9731	Plasmacytoma, NOS	9731	5	Y
+9732	Multiple myeloma	9732	5	Y
+9733	Plasma cell leukemia	9733	5	Y
+9734	Plasmacytoma, extramedullary	9734	5	Y
+9735	Plasmablastic lymphoma	9735	5	Y
+9737	ALK positive large B-cell lymphoma	9737	5	Y
+9738	Lrg B-cell lymphoma in HHV8-assoc. multicentric Castleman DZ	9738	5	Y
+9740	Mast cell sarcoma	9740	5	Y
+9741	Malignant mastocytosis	9741	5	Y
+9742	Mast cell leukemia	9742	5	Y
+9750	Malignant histiocytosis	9750	5	Y
+9751	Langerhans cell histiocytosis, NOS	9751	5	Y
+9752	Langerhans cell histiocytosis, unifocal	9752	5	Y
+9753	Langerhans cell histiocytosis, multifocal	9753	5	Y
+9754	Langerhans cell histiocytosis, disseminated	9754	5	Y
+9755	Histiocytic sarcoma	9755	5	Y
+9756	Langerhans cell sarcoma	9756	5	Y
+9757	Interdigitating dendritic cell sarcoma	9757	5	Y
+9758	Follicular dendritic cell sarcoma	9758	5	Y
+9759	Fibroblastic reticular cell tumor	9759	5	Y
+9760	Immunoproliferative disease, NOS	9760	5	Y
+9761	Waldenstrom macroglobulinemia	9761	5	Y
+9762	Heavy chain disease, NOS	9762	5	Y
+9764	Immunoproliferative small intestinal disease	9764	5	Y
+9800	Leukemia, NOS	9800	5	Y
+9801	Acute leukemia, NOS	9801	5	Y
+9805	Acute biphenotypic leukemia	9805	5	Y
+9806	Mixed phenotype acute leukemia with t(9;22)(q34;q11.2);BCR-ABL2	9806	5	Y
+9807	Mixed phenotype acute leukemia with t(v;11q23);MLL rearranged	9807	5	Y
+9808	Mixed phenotype acute leukemia, B/myeloid, NOS	9808	5	Y
+9809	Mixed phenotype acute leukemia, T/myeloid, NOS	9809	5	Y
+9811	B lymphoblastic leukemia/lymphoma, NOS	9811	5	Y
+9812	Leukemia/lymphoma with t(9;22)(q34;q11.2);BCR-ABL2	9812	5	Y
+9813	Leukemia/lymphoma with t(v;11q23);MLL rearranged	9813	5	Y
+9814	Leukemia/lymphoma with t(12;21)(p13;q22);TEL-AML1(ETV6-RUNX1)	9814	5	Y
+9815	B lymphoblastic leukemia/lymphoma with hyperdiploidy	9815	5	Y
+9816	Leukemia/lymphoma with hypodiploidy (hypodiploid ALL)	9816	5	Y
+9817	B lymphblastic leukemia/lymphoma with t(5;14)(q31;q32);IL3-IGH	9817	5	Y
+9818	Leukemia/lymphoma with t(1;19)(q23;p13.3); E2A PBX1 (TCF3 PBX1)	9818	5	Y
+9820	Lymphoid leukemia, NOS	9820	5	Y
+9823	Chronic lymphocytic leukemia/small lymphocytic lymphoma	9823	5	Y
+9826	Burkitt cell leukemia	9826	5	Y
+9827	Adult T-cell leukemia/lymphoma	9827	5	Y
+9828	Acute lymphoblastic leukemia, L2 type, NOS	9828	5	Y
+9831	T-cell large granular lymphocytic leukemia	9831	5	Y
+9832	Prolymphocytic leukemia, NOS	9832	5	Y
+9833	Prolymphocytic leukemia, B-cell type	9833	5	Y
+9834	Prolymphocytic leukemia, T-cell type	9834	5	Y
+9835	Precursor cell lymphoblastic leukemia, NOS	9835	5	Y
+9836	Precursor B-cell lymphoblastic leukemia	9836	5	Y
+9837	Precursor T-cell lymphoblastic leukaemia	9837	5	Y
+9840	Acute myeloid leukemia, M6 type	9840	5	Y
+9860	Myeloid leukemia, NOS	9860	5	Y
+9861	Acute myeloid leukemia, NOS	9861	5	Y
+9863	Chronic myeloid leukemia, NOS	9863	5	Y
+9865	Acute myeloid leukemia with t(6;9)(p23;q34) DEK-NUP215	9865	5	Y
+9866	Acute promyelocytic leukaemia	9866	5	Y
+9867	Acute myelomonocytic leukemia	9867	5	Y
+9869	Acute myeloid leukemia with inv(3)(q21q26.2) or t(3;3)(q21;q26.2);RPN1EVI2	9869	5	Y
+9870	Acute basophilic leukemia	9870	5	Y
+9871	Acute myeloid leukaemia with abnormal marrow eosinophils	9871	5	Y
+9872	Acute myeloid leukemia, minimal differentiation	9872	5	Y
+9873	Acute myeloid leukemia without maturation	9873	5	Y
+9874	Acute myeloid leukemia with maturation	9874	5	Y
+9875	Chronic myelogenous leukemia, BCR/ABL positive	9875	5	Y
+9876	Atypical chronic myeloid leukemia, BCR/ABL negative	9876	5	Y
+9891	Acute monocytic leukemia	9891	5	Y
+9895	Acute myeloid leukemia with multilineage dysplasia	9895	5	Y
+9896	Acute myeloid leukemia, t(8;21)(q22;q22)	9896	5	Y
+9897	Acute myeloid leukemia, 11q23 abnormalities	9897	5	Y
+9898	Myeloid leukemia associated with Down Syndrome	9898	5	Y
+9910	Acute megakaryoblastic leukemia	9910	5	Y
+9911	Acute myeloid leukemia (megakaryoblastic) with t(1;22)(p13;q13);RBM15-MLK2	9911	5	Y
+9920	Therapy-related acute myeloid leukemia, NOS	9920	5	Y
+9930	Myeloid sarcoma	9930	5	Y
+9931	Acute panmyelosis with myelofibrosis	9931	5	Y
+9940	Hairy cell leukemia	9940	5	Y
+9945	Chronic myelomonocytic leukemia, NOS	9945	5	Y
+9946	Juvenile myelomonocytic leukemia	9946	5	Y
+9948	Aggressive NK-cell leukemia	9948	5	Y
+9950	Polycythemia vera	9950	5	Y
+9960	Chronic myeloproliferative disease, NOS	9960	5	Y
+9961	Myelosclerosis with myeloid metaplasia	9961	5	Y
+9962	Essential thrombocythemia	9962	5	Y
+9963	Chronic neutrophilic leukemia	9963	5	Y
+9964	Hypereosinophilic syndrome	9964	5	Y
+9965	Myeloid and lymphoid neoplasms with PDGFRB rearrangement	9965	5	Y
+9966	Myeloid and lymphoid neoplasms with PDGFRB re arrangement	9966	5	Y
+9967	Myeloid and lymphoid neoplasm with FGFR1 abnormalities	9967	5	Y
+9971	Polymorphic PTLD	9971	5	Y
+9975	Myelodysplastic/Myeloproliferative neoplasm, unclassifiable	9975	5	Y
+9980	Refractory anemia	9980	5	Y
+9982	Refractory anemia with sideroblasts	9982	5	Y
+9983	Refractory anemia with excess blasts	9983	5	Y
+9984	Refractory anemia with excess blasts in transformation	9984	5	Y
+9985	Refractory cytopenia with multilineage dysplasia	9985	5	Y
+9986	Myelodysplastic syndrome with 5q deletion syndrome	9986	5	Y
+9987	Therapy-related myelodysplastic syndrome, NOS	9987	5	Y
+9989	Myelodysplastic syndrome, NOS	9989	5	Y
+9991	Refractory neutropenia	9991	5	Y
+9992	Refractory thrombocytopenia	9992	5	Y

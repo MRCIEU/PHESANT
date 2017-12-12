@@ -1,0 +1,11 @@
+coding	meaning
+0	NHS hospital: midwife ward
+1	At a domestic address
+2	NHS hospital: consultant ward
+3	NHS hospital: GP ward
+4	NHS hospital: consultant and GP ward
+5	Private hospital
+6	Other hospital or institution
+7	NHS hospital: ward or unit without delivery facilities
+8	Other
+9	Not known

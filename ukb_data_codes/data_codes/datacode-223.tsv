@@ -1,0 +1,9 @@
+coding	meaning
+1	Positive pressure nil, drugs nil
+2	Positive pressure nil, drugs administered
+3	Positive pressure by mask, drugs nil
+4	Positive pressure by mask, drugs administered
+5	Positive pressure by endotracheal tube, drugs nil
+6	Positive pressure by endotracheal tube, drugs administered
+8	Stillborn and no method of resuscitation attempted
+9	Not known

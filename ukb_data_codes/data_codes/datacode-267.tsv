@@ -1,0 +1,50 @@
+coding	meaning	node_id	parent_id	selectable
+1000	Usual Place of residence	1000	0	Y
+1001	Usual Place of residence: Living with relatives	1001	1000	Y
+1002	Usual Place of residence: Living alone	1002	1000	Y
+1003	Usual Place of residence: Sheltered	1003	1000	Y
+1004	Usual Place of residence: Supported	1004	1000	Y
+1005	Usual Place of residence: No fixed abode	1005	1000	Y
+2000	Temporary place of residence	2000	0	Y
+2001	Temporary place of residence: Holiday accomodation	2001	2000	Y
+2002	Temporary place of residence: Student accomodation	2002	2000	Y
+3000	Psychiatric Unit	3000	0	Y
+3001	High security psychiatric hospital: NHS	3001	3000	Y
+3002	High security psychiatric hospital: Other	3002	3000	Y
+3003	Medium secure unit: NHS	3003	3000	Y
+3004	Medium secure unit: Other	3004	3000	Y
+4000	Legal Establishment	4000	0	Y
+4001	Legal Establishment: Court, police station, prison	4001	4000	Y
+5000	Transfer to other NHS provider	5000	0	Y
+5001	Transfer to other NHS provider: General ward, young physically disabled, A&E	5001	5000	Y
+5002	Transfer to other NHS provider: Obstetrics	5002	5000	Y
+5003	Transfer to other NHS provider: Psychiatry, learning disabilities	5003	5000	Y
+5004	Transfer to other NHS provider: Surgical specialty	5004	5000	Y
+5005	Transfer to other NHS provider: Medical specialty	5005	5000	Y
+5006	Transfer to other NHS provider: GP	5006	5000	Y
+5007	Transfer to other NHS provider: Geriatrics	5007	5000	Y
+5008	Transfer to other NHS provider: Orthopaedics	5008	5000	Y
+6000	Transfer within NHS provider	6000	0	Y
+6001	Transfer within NHS provider: General ward, young physically disabled, A&E	6001	6000	Y
+6002	Transfer within NHS provider: Obstetrics	6002	6000	Y
+6003	Transfer within NHS provider: Psychiatry, learning disabilities	6003	6000	Y
+6004	Transfer within NHS provider: Surgical specialty	6004	6000	Y
+6005	Transfer within NHS provider: Medical specialty	6005	6000	Y
+6006	Transfer within NHS provider: GP	6006	6000	Y
+6007	Transfer within NHS provider: Geriatrics	6007	6000	Y
+6008	Transfer within NHS provider: Orthopaedics	6008	6000	Y
+7000	Nursing, residential care, group home	7000	0	Y
+7001	Nursing, residential care, group home: NHS	7001	7000	Y
+7002	Nursing, residential care, group home: Local Authoritory	7002	7000	Y
+7003	Nursing, residential care, group home: Non-NHS	7003	7000	Y
+8000	Other hospital	8000	0	Y
+8001	Other hospital: NHS partnership hospital	8001	8000	Y
+8002	Other hospital: Non-NHS	8002	8000	Y
+9000	Hospice	9000	0	Y
+9001	Hospice: Non-NHS	9001	9000	Y
+10000	Other discharge destination	10000	0	Y
+10001	Other discharge destination: Local Authority foster care	10001	10000	Y
+10002	Other discharge destination: Discharge of foundling	10002	10000	Y
+11000	Not applicable	11000	0	Y
+11001	Not applicable: patient died	11001	11000	Y
+12000	Not known	12000	0	Y

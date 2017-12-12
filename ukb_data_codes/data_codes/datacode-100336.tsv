@@ -1,0 +1,9 @@
+coding	meaning
+-3	Prefer not to answer
+-1	Do not know
+0	Less than 5mins
+1	5-29 mins
+2	30-59 mins
+3	1-3 hours
+4	4-6 hours
+5	More than 6 hours

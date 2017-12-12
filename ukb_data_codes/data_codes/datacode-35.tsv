@@ -1,0 +1,6 @@
+coding	meaning
+-1	No category, ECG not to be done
+1	Category 1, cycle rising to 50% level
+2	Category 2, cycle rising to 35% level
+3	Category 3, cycle at constant level
+4	Category 4, at-rest measurement

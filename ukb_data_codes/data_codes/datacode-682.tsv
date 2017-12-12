@@ -1,0 +1,5 @@
+coding	meaning
+-1	Participant excluded from kinship inference process
+0	No kinship found
+1	At least one relative identified
+10	Ten or more third-degree relatives identified

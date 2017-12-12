@@ -1,0 +1,30 @@
+coding	meaning
+1	Informally detained
+2	Detained under Mental Health Act, Section 2
+3	Detained under Mental Health Act, Section 3
+4	Detained under Mental Health Act, Section 4
+5	Detained under Mental Health Act, Section 5(2)
+6	Detained under Mental Health Act, Section 5(4)
+7	Detained under Mental Health Act, Section 35
+8	Detained under Mental Health Act, Section 36
+9	Detained under Mental Health Act, Section 37 with Section 41 restrictions
+10	Detained under Mental Health Act, Section 37 excl. Section 37(4)
+11	Detained under Mental Health Act, Section 37(4)
+12	Detained under Mental Health Act, Section 38
+13	Detained under Mental Health Act, Section 44
+14	Detained under Mental Health Act, Section 46
+15	Detained under Mental Health Act, Section 47 with Section 49 restrictions
+16	Detained under Mental Health Act, Section 47
+17	Detained under Mental Health Act, Section 48 with Section 49 restrictions
+18	Detained under Mental Health Act, Section 48
+19	Detained under Mental Health Act, Section 135
+20	Detained under Mental Health Act, Section 136
+30	Detained under previous legislation
+31	Detained under Criminal Procedure (Insanity) Act 1964
+32	Detained under other Acts
+33	Supervised discharge under the Mental Health Act 1995
+34	Detained under Mental Health Act, Section 45A
+35	Subject to guardianship under Mental Health Act Section 7
+36	Subject to guardianship under Mental Health Act Section 37
+98	Not applicable
+99	Not known

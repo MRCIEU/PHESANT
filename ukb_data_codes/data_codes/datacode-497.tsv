@@ -1,0 +1,996 @@
+coding	meaning	node_id	parent_id	selectable
+-3133460	inspector of factories, utilities and trading standards; occupational hygiene or health/safety officer, building inspector, environmental health officer	3460	3431	N
+-3133453	private and other security work	3453	3431	N
+-3133446	prison and probation services, customs and excise, border control	3446	3431	N
+-3133435	ambulance service, fire service, police service	3435	3431	N
+-3133432	armed forces (excluding civilians working in this sector)	3432	3431	N
+-3133431	armed forces, emergency services, security, health & safety (including managers)	3431	0	N
+-3133419	manager or administrator in educational establishment	3419	3397	N
+-3133406	educational/school assistant or other childcare worker	3406	3397	N
+-3133398	teaching professional	3398	3397	N
+-3133397	education, school-related work (including managers)	3397	0	N
+-3133382	work in restaurants, bars, pubs, hotels and other accommodation	3382	3356	N
+-3133371	hostess/steward and travel assistants (air, road, rail, water)	3371	3367	N
+-3133367	work in travel and tourism	3367	3356	N
+-3133357	personal services, including beauty	3357	3356	N
+-3133356	personal services, travel/tourism, hospitality (including managers)	3356	0	N
+-3133347	work in storage, distribution or transport of goods	3347	3319	N
+-3133336	other work in selling, including: door-to-door sales, credit agent, market trader, telephone salesperson, advertising worker	3336	3319	N
+-3133320	selling or other work in all kind of shops (retail or wholesale)	3320	3319	N
+-3133319	selling and shop work (retail/wholesale), storage and distribution (including managers)	3319	0	N
+-3133313	librarian, filing and database clerk	3313	3198	N
+-3133306	general office worker, telephonist, radio operator, postal worker, messenger	3306	3198	N
+-3133297	secretary, receptionist, or typist	3297	3198	N
+-3133287	work in architecture, town planning or surveying	3287	3198	N
+-3133276	work in law, accountancy or business analysis/management consultancy	3276	3198	N
+-3133263	other professional or support work in business or finance	3263	3198	N
+-3133249	manager, office manager or clerk in financial institution (banks, post office, insurance)	3249	3198	N
+-3133235	clerk/officer in sales and marketing, advertising, public relations, human resources, or customer care; estate agent, auctioneer	3235	3198	N
+-3133220	manager or senior official in sales and marketing, advertising, public relations, human resources, customer care; property/housing manager	3220	3198	N
+-3133210	official in private organisation or ngo, including chief executive, administrator, manager, supervisor, officer, etc.	3210	3198	N
+-3133199	official in national/local government including chief executive, administrator, manager, supervisor, officer; civil and public service professional, assistant or clerical officer	3199	3198	N
+-3133198	office-based work: professional, managerial, administrative or general office/clerical	3198	0	N
+-3133191	other entertainment assistants and related jobs	3191	3135	N
+-3133180	arts or entertainment assistants	3180	3135	N
+-3133172	arts or entertainment manager	3172	3135	N
+-3133165	actor, singer, dancer, musician, or other performers	3165	3135	N
+-3133156	author or writer, journalist, broadcaster; photographer or audiovisual operator; public relations professional	3156	3135	N
+-3133146	visual artist, graphic designer, other designer (clothing, fashion, commercial, furniture, interior, textile)	3146	3135	N
+-3133136	work in sport and fitness, sports players	3136	3135	N
+-3133135	sport, culture, arts, media, entertainment (including managers)	3135	0	N
+-3133123	animal health professional or assistant and related jobs	3123	3064	N
+-3133116	undertaker, mortuary assistant, including funeral director and manager	3116	3064	N
+-3133107	social and community worker or manager, including clergy/any religious officer/leader	3107	3064	N
+-3133102	residential care worker (with children, the elderly, young offenders)	3102	3064	N
+-3133096	manager in healthcare (hospitals, clinics etc.) or residential care	3096	3064	N
+-3133083	medical/allied assistant/technician and other staff, including administrators	3083	3064	N
+-3133071	nurse and auxiliary, paramedic, therapist, other medical/allied professional	3071	3064	N
+-3133065	medical doctor, psychologist, pharmacist, ophthalmic optician, dentist	3065	3064	N
+-3133064	health (human or animal), residential/social/religious care, undertaking (including managers)	3064	0	N
+-3133056	information & communication technology (ict) or information technology (it) professional or technician, including managers	3056	3017	N
+-3133048	engineering technician	3048	3017	N
+-3133037	engineering professional	3037	3017	N
+-3133032	science/research technician, including librarian	3032	3017	N
+-3133018	science/research professional, including managers	3018	3017	N
+-3133017	science, research, engineering, computer technology (including managers)	3017	0	N
+-3133013	pest control worker, including manager	3013	2966	N
+-3133007	waste collector, recycler, including manager	3007	2966	N
+-3132995	caretaker or housekeeper, including porters	2995	2966	N
+-3132984	cleaner, laundry or drycleaning worker, including manager/owner	2984	2966	N
+-3132967	factory and industrial cleaners	2967	2966	N
+-3132966	cleaning, caretaking, waste collection, pest control (including managers)	2966	0	N
+-3132956	other	2956	2875	N
+-3132952	instrument making	2952	2875	N
+-3132943	electrics, electronics, telecommunications, computers	2943	2875	N
+-3132933	vehicle (car, bus, train, ship, aircraft) body building or repairing	2933	2875	N
+-3132920	work with metal, welding	2920	2875	N
+-3132913	precious metals or stones	2913	2875	N
+-3132903	furniture, other wood trades, musical instruments	2903	2875	N
+-3132898	glass, ceramics, bricks	2898	2875	N
+-3132891	food, drink	2891	2875	N
+-3132885	printing	2885	2875	N
+-3132876	textiles, leather, upholstery	2876	2875	N
+-3132875	skilled manual work (including managers)	2875	0	N
+-3132860	managerial work, including engineers, surveyors and inspectors	2860	2846	N
+-3132847	work in mining, quarrying, utilities and power generating industry, or water treatment	2847	2846	N
+-3132846	mining, quarrying, energy production, water treatment (including managers)	2846	0	N
+-3132833	routine factory work in making, treating or scrapping metals	2833	2677	N
+-3132823	routine factory work in the production of any other goods or products	2823	2677	N
+-3132814	routine factory work in the production of metal goods such as cookers, bed frames, jewellery, rifles, bicycles etc.	2814	2677	N
+-3132803	routine factory work in the production of vehicles or vehicle components	2803	2677	N
+-3132793	routine factory work in the production of electrical/electronic products and equipment	2793	2677	N
+-3132783	routine factory work in the production of concrete, asphalt, lime, asbestos	2783	2677	N
+-3132773	routine factory work in the production of paper, pulp or wood products	2773	2677	N
+-3132762	routine factory work in the production of chemicals or petrochemicals	2762	2677	N
+-3132752	routine factory work in the production of rubber	2752	2677	N
+-3132742	routine factory work in the production of plastics or plastic products	2742	2677	N
+-3132732	routine factory work in the production of glass or ceramics	2732	2677	N
+-3132722	routine factory work in the production of leather, hides, pelts	2722	2677	N
+-3132709	routine factory work in the production of textiles, clothes, or shoes	2709	2677	N
+-3132699	routine factory work in the production of food, drink or tobacco	2699	2677	N
+-3132691	managerial work, inspectors, instructors	2691	2677	N
+-3132678	engineers and factory maintenance	2678	2677	N
+-3132677	routine factory-based manufacturing (including managers)	2677	0	N
+-3132668	managerial/administrative work in transport/distribution	2668	2601	N
+-3132658	vehicle (car, bus, train, ship/boat, aircraft) body builders, fitters and repairers, including electricians, auto engineers, spray painters, etc.	2658	2601	N
+-3132646	sea/water transport	2646	2601	N
+-3132635	air transport	2635	2601	N
+-3132623	rail transport (overground and underground)	2623	2601	N
+-3132616	drivers and operators of other mobile machinery	2616	2601	N
+-3132602	road transport	2602	2601	N
+-3132601	transport (road, rail, air, water), work with other mobile machinery (including managers)	2601	0	N
+-3132590	managerial work, including surveyors and inspectors, designers, instructors	2590	2522	N
+-3132583	other outdoor construction or maintenance work	2583	2522	N
+-3132571	manual work in road or rail or ship construction	2571	2522	N
+-3132563	work on or from scaffolding or rigging, steel erecting or on tall buildings such as industrial chimneys or steeples	2563	2522	N
+-3132551	inside finishing or renovation work such as plastering, tiling, flooring, painting and decorating: sign writing	2551	2522	N
+-3132538	inside work in construction, building or maintenance	2538	2522	N
+-3132523	outside work in construction, building, demolition or maintenance	2523	2522	N
+-3132522	construction, building, demolition or maintenance (including managers)	2522	0	N
+-3132507	work with non-farm animals	2507	2474	N
+-3132496	work in fishing	2496	2474	N
+-3132484	work with plants, trees and other landscape (including conservation)	2484	2474	N
+-3132475	agricultural work, farming, work with farm animals	2475	2474	N
+-3132474	agriculture, horticulture, fishing, other work with animals (including managers)	2474	0	N
+11113200	senior official in central government including members of the senior civil service and the equivalent in the diplomatic service, mps, meps	3200	3199	Y
+11123211	director or chief executive of private organisation/company, company chairman or president, general manager	3211	3210	Y
+11133201	senior official in local government including parish or town or county chief clerk, chief or superintendent rate collector, chief executive or director, councillor	3201	3199	Y
+11143212	senior official of special interest organisation including general manager or director or executive or general secretary of charity, or trade union/association or religious organisation	3212	3210	Y
+11212692	production, works or maintenance manager	2692	2691	Y
+11212693	factory/works manager, shift manager	2693	2691	Y
+11222591	manager in construction, clerk of works, site manager, contracts manager, highways manager	2591	2590	Y
+11232861	manager in mining, energy production or water supply	2861	2860	Y
+11232862	colliery agent/manager, quarry manager, offshore installation manager	2862	2860	Y
+11313221	financial services manager, chartered secretary, banker, merchant or investment banker, finance director, tax manager	3221	3220	Y
+11323222	sales or marketing manager/director, export/import manager, business development manager, advertising/commercial manager	3222	3220	Y
+11333223	purchasing manager/director (not retail), supplies manager	3223	3220	Y
+11343163	public relations manager, media director, publicity manager	3163	3156	Y
+11343224	advertising or public relations manager, media/publicity manager, campaign/fundraising manager	3224	3220	Y
+11353225	personnel, human resources, training or industrial relations manager/director, recruitment manager/director	3225	3220	Y
+11363057	ict or it manager, systems/data processing manager, telecom manager	3057	3056	Y
+11373019	research or laboratory manager	3019	3018	Y
+11373228	research and development manager	3228	3220	Y
+11412694	quality assurance manager, quality control manager	2694	2691	Y
+11413229	quality assurance manager, quality control manager	3229	3220	Y
+11423230	customer care/relations manager, help desk manager	3230	3220	Y
+11423324	customer care/relations manager, help desk manager	3324	3320	Y
+11513250	bank manager, bank section manager, building society manager, post/sub-post office manager	3250	3249	Y
+11523251	office manager, account/payrolls manager, administration manager, litigation/solicitor's office manager	3251	3249	Y
+11612669	road transport/traffic manager, haulage contractor/manager, taxi/courier service manager, bus/coach station manager, removals manager, shipping manager	2669	2668	Y
+11612671	rail transport/traffic manager, haulage contractor/manager, shipping manager, railway station manager	2671	2668	Y
+11612673	air transport/traffic manager, haulage contractor/manager, airport director/manager, shipping manager	2673	2668	Y
+11612675	sea transport/traffic manager, haulage contractor/manager, harbour/port master, shipping manager	2675	2668	Y
+11613348	shipping manager, oil distribution terminal manager	3348	3347	Y
+11623349	storage manager, stock control manager, container terminal manager	3349	3347	Y
+11633322	retail or wholesale shop manager, showroom manager	3322	3320	Y
+11633326	petrol station manager	3326	3320	Y
+11713433	officer in armed forces	3433	3432	Y
+11723441	police officer (inspector or above)	3441	3435	Y
+11733438	senior officer in ambulance service including commander, chief, station manager, superintendent	3438	3435	Y
+11733439	senior officer in fire service including captain, commander, controller, firemaster, inspector, salvage officer, station officer, superintendent	3439	3435	Y
+11733447	senior prison officer including governor, chief, controller, principal superintendent	3447	3446	Y
+11733451	senior officer in customs and excise or immigration including senior inspector, customs and excise surveyor, immigration officer	3451	3446	Y
+11743454	security service manager/owner, detective agency manager/owner	3454	3453	Y
+11813097	hospital manager, health service manager, clinical manager, nursing service manager	3097	3096	Y
+11823098	pharmacy manager, hospital pharmacy manager	3098	3096	Y
+11833099	healthcare practice manager, dental practice manager, chiropody practice manager/owner	3099	3096	Y
+11843115	social services manager, community care manager, welfare services manager	3115	3107	Y
+11853100	residential manager, day care manager, nursing home manager, retirement home manager, convalescent home manager	3100	3096	Y
+11853101	rehabilitation unit manager, children's home manager	3101	3096	Y
+12112477	farm manager, agricultural manager	2477	2475	Y
+12112485	horticultural manager, vineyard manager	2485	2484	Y
+12122493	natural environment and conservation manager, country park manager, national park manager	2493	2484	Y
+12192492	forestry manager	2492	2484	Y
+12192497	fish farm manager	2497	2496	Y
+12192498	fishing vessel owner	2498	2496	Y
+12192510	kennel/cattery owner	2510	2507	Y
+12192515	race horse trainer	2515	2507	Y
+12192518	stable owner	2518	2507	Y
+12193134	race horse trainer	3134	3123	Y
+12213392	hotel or guesthouse owner/manager; hostel warden, holiday camp manager, caravan/camping site owner/manager	3392	3382	Y
+12223174	conference/exhibition manager	3174	3172	Y
+12223226	conference/events/exhibition manager	3226	3220	Y
+12233383	restaurant or catering manager, restaurateur; canteen manager; takeaway food shop manager	3383	3382	Y
+12243178	publican or manager of licensed premises, licensee, wine bar manager	3178	3172	Y
+12243390	publican or manager of licensed premises, licensee, wine bar manager	3390	3382	Y
+12253140	sports centre manager, riding school owner, sports ground manager, baths manager	3140	3136	Y
+12253173	manager of theatre, cinema, museum	3173	3172	Y
+12253177	manager of snooker hall, bingo hall, circus/fairground, casino, night club, etc.	3177	3172	Y
+12253227	leisure/sports centre manager	3227	3220	Y
+12263368	travel agency manager/owner, tourist manager	3368	3367	Y
+12313231	property/housing/land manager	3231	3220	Y
+12313323	shopping centre manager	3323	3320	Y
+12322659	garage manager/owner	2659	2658	Y
+12322938	garage manager/proprietor	2938	2933	Y
+12323327	garage manager/proprietor	3327	3320	Y
+12333358	hairdressing or beauty salon manager or proprietor/owner	3358	3357	Y
+12342520	pet shop owner	2520	2507	Y
+12343321	shopkeeper, shop owner, newsagent, wholesale/retail dealer	3321	3320	Y
+12353009	recycling manager, refuse disposal manager, incinerator manager, landfill site manager	3009	3007	Y
+12353010	scrap metal dealer/merchant, rag dealer	3010	3007	Y
+12392993	laundry, laundrette, dry cleaning manager or proprietor/owner	2993	2984	Y
+12392994	domestic or cleaning service manager	2994	2984	Y
+12393016	pest control manager	3016	3013	Y
+12393117	funeral parlour manager, crematorium or cemetery manager	3117	3116	Y
+12393179	manager of bookmakers	3179	3172	Y
+21113020	chemist (analytic, developmental, industrial, research)	3020	3018	Y
+21123021	biologist, botanist, entomologist, zoologist, ecologist, microbiologist/pathologist/virologist/geneticist (not medically qualified)	3021	3018	Y
+21123022	biochemist, medical laboratory scientific officer	3022	3018	Y
+21133023	physicist, astronomer, geologist, geophysicist, meteorologist, oceanographer, seismologist	3023	3018	Y
+21133024	mathematician	3024	3018	Y
+21212592	civil engineer	2592	2590	Y
+21212864	mining engineer in mining, water or natural gas/oil	2864	2860	Y
+21213038	civil engineer, transport engineer, structural engineer, borough surveyor	3038	3037	Y
+21213039	mining engineer, petroleum engineer	3039	3037	Y
+21222679	mechanical engineer	2679	2678	Y
+21222865	mechanical engineer	2865	2860	Y
+21223040	mechanical engineer, automobile engineer, aeronautical engineer, locomotive or marine engineer, welding engineer	3040	3037	Y
+21232680	electrical engineer	2680	2678	Y
+21232866	electrical engineer, generating engineer, power engineer, power transmission engineer	2866	2860	Y
+21233041	electrical engineer, generating engineer, power engineer, power transmission engineer	3041	3037	Y
+21242681	electronics engineer	2681	2678	Y
+21243042	electronics engineer, broadcasting engineer, microwave engineer, radar engineer, radio engineer	3042	3037	Y
+21252682	chemical engineer	2682	2678	Y
+21252869	mining explosive engineer	2869	2860	Y
+21253043	chemical engineer, plastics engineer, pharmaceutical engineer	3043	3037	Y
+21262683	design and development engineer	2683	2678	Y
+21263044	design and development engineer, ergonomist	3044	3037	Y
+21272684	production and process engineer	2684	2678	Y
+21273045	production and process engineer	3045	3037	Y
+21282685	planning and quality control engineer	2685	2678	Y
+21282870	quality control engineer	2870	2860	Y
+21283046	planning and quality control engineer, industrial engineer, quality engineer	3046	3037	Y
+21292686	other engineering professional	2686	2678	Y
+21292871	nuclear power engineer	2871	2860	Y
+21292897	brewer or distiller	2897	2891	Y
+21293047	other engineering professional	3047	3037	Y
+21313058	it strategy or planning professional, computer consultant, software consultant	3058	3056	Y
+21323059	software professional, analyst-programmer, computer programmer, software analyst or engineer, systems designer or programmer	3059	3056	Y
+22113066	medical doctor, general practitioner, hospital consultant	3066	3065	Y
+22123067	psychologist, psychometrist	3067	3065	Y
+22133068	pharmacist, pharmacologist, pharmaceutical chemist	3068	3065	Y
+22143069	ophthalmic optician, optometrist	3069	3065	Y
+22153070	dentist, dental surgeon, orthodontist, periodontist	3070	3065	Y
+22162482	veterinarian	2482	2475	Y
+22162505	veterinarian	2505	2496	Y
+22162508	veterinarian	2508	2507	Y
+22163124	veterinarian	3124	3123	Y
+23113030	university lecturer/professor	3030	3018	Y
+23113399	higher education teaching professional, university lecturer/professor (including college/university head/vice chancellor)	3399	3398	Y
+23123400	further education teaching professional, college lecturer/professor	3400	3398	Y
+23133420	education officer, director of education, curriculum development officer	3420	3419	Y
+23133421	school inspector, education inspector	3421	3419	Y
+23143401	secondary school teacher or teaching professional (including head teacher)	3401	3398	Y
+23153402	primary /junior school teacher or teaching professional, nursery school teacher (including head teacher)	3402	3398	Y
+23163403	special needs teaching professional (including head teacher)	3403	3398	Y
+23173422	registrar or senior administrator of educational establishment, bursar, registrar, university administrator	3422	3419	Y
+23193404	principal of dancing/drama/evening school, private music teacher	3404	3398	Y
+23193405	other teaching professional including private tutor, tefl (teaching english as a foreign language) teacher; tutor at adult education centre, etc.	3405	3398	Y
+23193429	day nursery manager or owner	3429	3419	Y
+23193430	school examiner	3430	3419	Y
+23213026	scientific researcher, scientific officer, medical research associate, experimental officer	3026	3018	Y
+23223027	social science researcher, anthropologist, sociologist, archaeologist, behavioural scientist, epidemiologist, government survey officer	3027	3018	Y
+23223028	geographer, historian, philosopher, linguist, political scientist	3028	3018	Y
+23293029	university research fellow or assistant/associate	3029	3018	Y
+23293031	other researchers including in broadcasting, journalism, photography, printing and publishing	3031	3018	Y
+23293164	researcher in broadcasting, journalism, photography, printing and publishing	3164	3156	Y
+24113277	solicitor, lawyer, barrister, judge, coroner, articled clerk, attorney, advocate, stipendiary magistrate, fiscal/crown prosecutor, sheriff (scottish courts), legal services recorder	3277	3276	Y
+24193278	other legal professional including: court clerk, legal officer/advisor, clerk to the justices, legal services registrar	3278	3276	Y
+24213281	chartered/certified accountant, auditor, company accountant, articled/audit clerk, official receiver	3281	3276	Y
+24223282	management accountant, works accountant, cost accountant	3282	3276	Y
+24233025	statistician	3025	3018	Y
+24233283	management consultant, actuary, economist, statistician, statistical controller/assistant, business analyst, demographer, economic forecaster	3283	3276	Y
+24312597	architect, landscape architect/designer, structural designer	2597	2590	Y
+24313288	architect, landscape architect/designer, structural designer	3288	3287	Y
+24323289	town planner, development officer	3289	3287	Y
+24332598	quantity surveyor, quantity survey technician	2598	2590	Y
+24333290	quantity surveyor, quantity survey technician	3290	3287	Y
+24342599	chartered surveyor, building surveyor, land surveyor	2599	2590	Y
+24342600	river/water surveyor, surveyor and estimator, topographer, property surveyor	2600	2590	Y
+24342863	surveyor in mining/minerals, energy production or water supply	2863	2860	Y
+24343291	chartered surveyor, building surveyor, land surveyor, mining/minerals surveyor, river/water surveyor, surveyor and estimator, topographer, property surveyor	3291	3287	Y
+24413202	civil service senior manager outside the senior civil service (former grades 6 and 7)	3202	3199	Y
+24423108	social worker, child care/protection officer, adoption officer, mental health officer, almoner, family case worker	3108	3107	Y
+24433109	probation officer, community service officer	3109	3107	Y
+24433449	probation officer, community service officer	3449	3446	Y
+24443114	clergyman/woman; any religious officer/leader	3114	3107	Y
+24513035	librarian, assistant librarian	3035	3032	Y
+24513314	librarian, assistant librarian	3314	3313	Y
+24513418	school librarian, assistant school librarian	3418	3406	Y
+24513424	librarian, assistant librarian	3424	3419	Y
+24523036	archivist, conservator, curator	3036	3032	Y
+24523188	archivist, curator, conservator, inspector of ancient monuments, museum officer	3188	3180	Y
+24523315	archivist, curator, conservator, inspector of ancient monuments, museum officer, public records officer	3315	3313	Y
+24523426	archivist	3426	3419	Y
+31113033	laboratory technician, scientific assistant, cytology screener; hospital, medical or health technician	3033	3032	Y
+31113086	laboratory technician	3086	3083	Y
+31122687	electrical/electronics technician	2687	2678	Y
+31122867	electrical/electronics technician	2867	2860	Y
+31122951	electrical/electronics technician	2951	2943	Y
+31123049	electrical or electronics technician, signals officer	3049	3048	Y
+31132688	engineering technician	2688	2678	Y
+31132868	engineering technician	2868	2860	Y
+31133050	engineering technician, engineer's assistant, commissioning engineer, contracts engineer, technician engineer, industrial radiographer	3050	3048	Y
+31143051	building or civil engineering technician, structural engineering technician, survey technician	3051	3048	Y
+31152695	quality assurance technician/co-ordinator	2695	2691	Y
+31153052	quality assurance technician or co-ordinator	3052	3048	Y
+31193034	other science technician, materials technician, technical assistant, technical officer	3034	3032	Y
+31193055	other engineering technician, including materials technician, technical assistant, technical officer	3055	3048	Y
+31213292	architectural technologist/technician/assistant, town planning technician, planning enforcement officer	3292	3287	Y
+31223293	draughtsperson, cartographer, designer-detailer/draughtsperson, drawing office checker, engineering draughtsperson	3293	3287	Y
+31233461	building inspector, building control officer, construction site inspector	3461	3460	Y
+31313060	it operations technician, computer operator or technician, database manager, network or web technician, web master, systems administrator or officer	3060	3056	Y
+31323061	it user support technician, help desk or helpline operator (computing), support technician (computing), systems support officer	3061	3056	Y
+32113072	nurse (of any kind, at any level)	3072	3071	Y
+32113077	health visitor	3077	3071	Y
+32113106	health visitor	3106	3102	Y
+32123074	midwife	3074	3071	Y
+32133075	paramedic, ambulance paramedic	3075	3071	Y
+32133436	paramedic, ambulance paramedic	3436	3435	Y
+32143084	medical radiographer, x-ray operator, sonographer	3084	3083	Y
+32153081	chiropodist, podiatrist	3081	3071	Y
+32163087	dispensing optician	3087	3083	Y
+32173088	pharmaceutical dispenser, pharmacy technician	3088	3083	Y
+32183085	medical technician, audiologist, cardiographer, prosthesist, ecg technician, eeg technician	3085	3083	Y
+32183089	dental technician, dental hygienist	3089	3083	Y
+32213078	physiotherapist	3078	3071	Y
+32223079	occupational therapist	3079	3071	Y
+32233080	speech and language therapist	3080	3071	Y
+32293082	other therapist including acupuncturist, aromatherapist, dietician, herbalist, homeopath, hypnotherapist, masseur, orthoptist, osteopath, psychotherapist	3082	3071	Y
+32293361	masseur	3361	3357	Y
+32313110	community worker, day centre officer, youth leader, youth worker, parish worker, bail support officer	3110	3107	Y
+32323111	housing officer, welfare officer, refuge/rescue worker, probation assistant, nspcc inspector, day centre supervisor	3111	3107	Y
+32323112	benefits advisor, citizens advice bureau adviser, debt counsellor	3112	3107	Y
+32323113	school/student counsellor, school attendance officer	3113	3107	Y
+32323410	school/student counsellor, school attendance officer	3410	3406	Y
+33113434	non-commissioned officers or other rank of armed forces	3434	3432	Y
+33123442	police officer (sergeant or below)	3442	3435	Y
+33133440	fire service officer (leading fire officer and below)	3440	3435	Y
+33143448	prison service officer (below principal officer), prison warder	3448	3446	Y
+33192645	airport customs and excise or immigration officer	2645	2635	Y
+33192657	customs and excise or immigration officer, coastguard	2657	2646	Y
+33193444	civilian scenes of crime officer	3444	3435	Y
+33193452	other customs and excise or immigration officer, coastguard, emergency planning officer, civilian scenes of crime officer, civilian defence officer	3452	3446	Y
+34113147	painter, calligrapher, portrait engraver, art restorer	3147	3146	Y
+34113148	illustrator, cartoonist, animator	3148	3146	Y
+34113149	sculptor	3149	3146	Y
+34123157	author, writer, biographer, book editor, novelist, dramatist, playwright, poet	3157	3156	Y
+34123158	speechwriter, translator	3158	3156	Y
+34132516	performing animals trainer	2516	2507	Y
+34133132	performing animal trainer	3132	3123	Y
+34133166	actor, chorister or singer	3166	3165	Y
+34133167	entertainer, comedian, acrobat, clown, juggler, performing animal trainer, puppeteer	3167	3165	Y
+34133168	conjuror, hypnotist, magician, ventriloquist	3168	3165	Y
+34133171	disc jockey	3171	3165	Y
+34143169	dancer, ballet dancer, dance instructor, choreographer	3169	3165	Y
+34153170	musician, bandsman, instrumentalist, bellringer; composer, conductor; song writer	3170	3165	Y
+34163176	arts officer, producer, director; entertainment/artists'/theatrical agent; studio manager, prompter	3176	3172	Y
+34213150	graphic designer, commercial artist, desktop publishing artist, illuminator	3150	3146	Y
+34223151	fashion designer, clothing and footwear designer, hat designer	3151	3146	Y
+34223152	interior designer	3152	3146	Y
+34223153	scenery designer, costume designer	3153	3146	Y
+34223154	commercial/industrial designer	3154	3146	Y
+34223155	textile, cloth or soft furnishings designer	3155	3146	Y
+34313159	journalist, reporter, newspaper correspondent, sports writer, newspaper or magazine editor	3159	3156	Y
+34323160	broadcasting professional, broadcaster, news reporter; radio or television journalist, director or producer	3160	3156	Y
+34333162	public relations officer, press officer, information officer	3162	3156	Y
+34333239	public relations officer, press officer, information officer, publicity assistant	3239	3235	Y
+34343161	photographer and audio-visual equipment operator, cameraman, film technician, sound or light engineer, projectionist	3161	3156	Y
+34343186	photographer and audio-visual equipment operator, cameraman, film technician, sound or light engineer, projectionist	3186	3180	Y
+34413137	sports player	3137	3136	Y
+34423138	sports coach, instructor, trainer, or manager	3138	3136	Y
+34423139	referee, umpire, scorer, steward	3139	3136	Y
+34433141	fitness instructor, aerobics teacher, yoga teacher	3141	3136	Y
+34493143	other sports and fitness jobs including riding school instructor, balloonist, outdoor pursuits instructor	3143	3136	Y
+35112639	air traffic controller, flight planner, flight dispatcher	2639	2635	Y
+35122636	aircraft pilot, flight engineer, aircraft navigator, helicopter pilot	2636	2635	Y
+35122637	flying instructor	2637	2635	Y
+35132647	ship, merchant navy or hovercraft captain/officer/navigator, master mariner, skipper	2647	2646	Y
+35132648	ship's engineer, ship's purser	2648	2646	Y
+35132649	ship's mate	2649	2646	Y
+35142624	train driver	2624	2623	Y
+35203279	judge's or barrister's clerk, conveyancer, data protection officer, legal assistant or executive, coroner's officer, land registrar, tribunal member	3279	3276	Y
+35313257	estimator, valuer, building estimator/assessor, insurance assessor, costing engineer, surveyor/valuer, lottery officer, rating officer, marine/naval surveyor	3257	3249	Y
+35313264	estimator, valuer, building estimator/assessor, insurance assessor, costing engineer, surveyor/valuer, lottery officer, rating officer, marine/naval surveyor	3264	3263	Y
+35323258	broker, financial/insurance broker, foreign exchange dealer, ship/marine broker, stockbroker, commodity trader	3258	3249	Y
+35323265	broker, financial/insurance broker, foreign exchange dealer, ship/marine broker, stockbroker, commodity trader	3265	3263	Y
+35333259	insurance underwriter, insurance inspector, insurance account handler	3259	3249	Y
+35333266	insurance underwriter, insurance inspector, insurance account handler	3266	3263	Y
+35343267	financial adviser/agent/consultant, investment analyst, mortgage consultant, financier, pension advisor	3267	3263	Y
+35353268	taxation accountant or adviser or consultant or practitioner	3268	3263	Y
+35363269	import agent, export agent, shipping agent	3269	3263	Y
+35373270	financial controller, accounting/audit technician, trust officer	3270	3263	Y
+35393175	festival organiser, events coordinator	3175	3172	Y
+35393271	management information officer, conference/events co-ordinator/organiser, exhibition officer, work study engineer/officer/analyst, contract adviser/agent, election agent, business system analyst	3271	3263	Y
+35413236	buyer, purchasing/procurement officer, supply officer	3236	3235	Y
+35423237	sales or marketing representative, manufacturer's agent or representative or salesman/woman	3237	3235	Y
+35433238	marketing research professional, marketing consultant, promotions or advertising consultant, fundraiser consultant, appeals organiser	3238	3235	Y
+35443245	estate agent, auctioneer, land agent, letting agent	3245	3235	Y
+35512494	conservation or environmental protection officer, national park officer, marine/coastal conservationist, flood officer	2494	2484	Y
+35522495	countryside or park ranger, countryside or environmental warden	2495	2484	Y
+35613203	public service higher/senior executive officer, hospital administrator	3203	3199	Y
+35623207	personnel or industrial relations officer, recruitment consultant	3207	3199	Y
+35623213	personnel or industrial relations officer, recruitment consultant	3213	3210	Y
+35623217	personnel or industrial relations officer, recruitment consultant	3217	3210	Y
+35623232	personnel or industrial relations officer, recruitment consultant	3232	3220	Y
+35623246	personnel or industrial relations officer, recruitment consultant	3246	3235	Y
+35623260	personnel or industrial relations officer, recruitment consultant	3260	3249	Y
+35623273	personnel or industrial relations officer, recruitment consultant	3273	3263	Y
+35623284	personnel or industrial relations officer, recruitment consultant	3284	3276	Y
+35623294	personnel or industrial relations officer, recruitment consultant	3294	3287	Y
+35632596	vocational trainer/instructor, craft instructor, apprentice instructor	2596	2590	Y
+35632698	vocational or industrial trainer/instructor, craft instructor, apprentice instructor	2698	2691	Y
+35633208	vocational or industrial trainer/instructor	3208	3199	Y
+35633214	vocational or industrial trainer/instructor, craft instructor, apprentice instructor	3214	3210	Y
+35633218	vocational or industrial trainer/instructor	3218	3210	Y
+35633233	vocational or industrial trainer/instructor	3233	3220	Y
+35633247	vocational or industrial trainer/instructor	3247	3235	Y
+35633261	vocational or industrial trainer/instructor	3261	3249	Y
+35633274	vocational or industrial trainer/instructor	3274	3263	Y
+35633285	vocational or industrial trainer/instructor	3285	3276	Y
+35633295	vocational or industrial trainer/instructor	3295	3287	Y
+35643209	careers adviser or vocational guidance specialist, placement advisor	3209	3199	Y
+35643215	careers adviser or vocational guidance specialist, placement advisor	3215	3210	Y
+35643219	careers adviser or vocational guidance specialist, placement advisor	3219	3210	Y
+35643234	careers adviser or vocational guidance specialist, placement advisor	3234	3220	Y
+35643248	careers adviser or vocational guidance specialist, placement advisor	3248	3235	Y
+35643262	careers adviser or vocational guidance specialist, placement advisor	3262	3249	Y
+35643275	careers adviser or vocational guidance specialist, placement advisor	3275	3263	Y
+35643286	careers adviser or vocational guidance specialist, placement advisor	3286	3276	Y
+35643296	careers adviser or vocational guidance specialist, placement advisor	3296	3287	Y
+35652696	inspector of factories, utilities or trading standards	2696	2691	Y
+35653462	inspector of factories or utilities, gas/electricity installation inspector, plumbing inspector	3462	3460	Y
+35653463	inspector of weights and measures, trading standards officer, hotel/pub inspector, planning inspector	3463	3460	Y
+35662872	mines inspector	2872	2860	Y
+35663193	gaming club/casino inspector	3193	3191	Y
+35663464	regulation compliance inspector/examiner including driving/flight/railway examiner/inspector, vehicle tester	3464	3460	Y
+35663465	regulation compliance inspector/examiner including fishery or pollution control officer, water bailiff, rspca inspector, refuse inspector	3465	3460	Y
+35663466	works/site/mines inspector	3466	3460	Y
+35672595	health and safety officer, occupational hygienist, safety adviser	2595	2590	Y
+35672697	health and safety officer, occupational hygienist, safety adviser	2697	2691	Y
+35672874	health and safety officer, occupational hygienist, safety adviser	2874	2860	Y
+35673467	health and safety officer, occupational hygienist, safety adviser, road safety officer	3467	3460	Y
+35683468	environmental health officer/inspector, meat inspector, public health officer, port inspector, air pollution officer	3468	3460	Y
+41113204	civil service executive officer, revenue/tax executive or officer, fraud inspector or officer, job centre adviser	3204	3199	Y
+41123205	civil service administrative officer or assistant or clerk, tax collector, prison service clerk, law courts clerk	3205	3199	Y
+41133206	local government administrative officer or assistant or clerk	3206	3199	Y
+41143216	officer of ngo, trade union organiser/official, charity administrator, secretary of research or charity or political or professional or trade association or trade union	3216	3210	Y
+41213240	credit controller/supervisor	3240	3235	Y
+41213252	credit controller/supervisor	3252	3249	Y
+41223241	accounts and wages clerk/assistant/supervisor, bookkeeper, cost or ledger clerk, audit assistant, budget officer, student loans officer, paymaster	3241	3235	Y
+41223253	accounts and wages clerk/assistant/supervisor, bookkeeper, cost or ledger clerk, audit assistant, budget officer, student loans officer, paymaster	3253	3249	Y
+41233145	ticket seller	3145	3136	Y
+41233184	ticket seller, box office clerk	3184	3180	Y
+41233254	counter clerk, bank clerk, cashier, post office clerk	3254	3249	Y
+41233345	ticket seller, box office clerk	3345	3336	Y
+41313093	ward clerk, medical records clerk	3093	3083	Y
+41313256	filing clerk, records assistant/clerk	3256	3249	Y
+41313272	filing clerk, records assistant/clerk	3272	3263	Y
+41313317	filing clerk, records assistant/clerk, technical clerk, lottery clerk, courts administrator, checker, census enumerator, progress/document controller	3317	3313	Y
+41313427	filing clerk, records assistant/clerk, technical clerk	3427	3419	Y
+41313443	civilian fingerprint officer	3443	3435	Y
+41323255	pensions and insurance clerk/administrator, claims handler	3255	3249	Y
+41333350	stock control clerk, stock controller, progress/production/stock chaser, warehouse clerk, materials controller/co-ordinator, stores officer	3350	3347	Y
+41342670	road transport/traffic clerk, distribution clerk/controller, shipping clerk/controller, fleet controller/administrator, traffic officer (road haulage)	2670	2668	Y
+41342672	rail transport/traffic clerk, distribution clerk/controller, shipping clerk/controller	2672	2668	Y
+41342674	air transport/traffic clerk, distribution clerk/controller, shipping clerk/controller, aircraft load controller/clerk, traffic officer (airlines)	2674	2668	Y
+41342676	sea transport/traffic clerk, distribution clerk/controller, shipping clerk/controller, fleet controller/administrator, aircraft load controller/clerk, traffic officer (port)	2676	2668	Y
+41343351	distribution clerk/controller, shipping clerk/controller, fleet controller/administrator, aircraft load controller/clerk, traffic officer (airlines, port, road haulage)	3351	3347	Y
+41353316	library assistant/clerk, press cuttings clerk	3316	3313	Y
+41353425	library assistant/clerk	3425	3419	Y
+41363318	database assistant/clerk, computer clerk, data entry clerk/processor, book keeping/accounts machinist	3318	3313	Y
+41363428	database assistant/clerk, computer clerk, data entry clerk/processor, book keeping/accounts machinist	3428	3419	Y
+41373244	market research interviewer, telephone interviewer	3244	3235	Y
+41413308	telephonist, telephone/switchboard operator	3308	3306	Y
+41423309	communication/telecommunications operator, radio/telex operator, radar operator	3309	3306	Y
+41423310	emergency services control room/radio operator/officer	3310	3306	Y
+41423445	emergency services control room/radio operator/officer	3445	3435	Y
+41503307	general office assistant/clerk, clerical officer, clerk-typist, office supervisor, press/newspaper corrector/reader	3307	3306	Y
+42113094	medical secretary	3094	3083	Y
+42113298	medical secretary	3298	3297	Y
+42123280	legal secretary, clerk, or aid clerk	3280	3276	Y
+42123299	legal secretary	3299	3297	Y
+42133300	school secretary	3300	3297	Y
+42133407	school secretary, clerical assistant, school registry assistant	3407	3406	Y
+42133423	school secretary, clerical assistant, school registry assistant	3423	3419	Y
+42143301	company secretary, club secretary	3301	3297	Y
+42153302	all other personal assistants and secretaries	3302	3297	Y
+42163095	receptionist, doctor's/dental receptionist	3095	3083	Y
+42163303	receptionist, doctor's/dental receptionist	3303	3297	Y
+42173304	typist, shorthand typist, transcriber, stenographer	3304	3297	Y
+51112476	farmer, farming contractor, herd manager, smallholder, bailiff	2476	2475	Y
+51122486	nurseryman, market gardener, horticulturist	2486	2484	Y
+51132488	gardener, groundsman/groundswoman, park keeper, landscape gardener, greenkeeper, turf cutter	2488	2484	Y
+51192490	tree surgeon	2490	2484	Y
+51192499	fishing boat (trawler) skipper	2499	2496	Y
+51192501	fish farmer	2501	2496	Y
+51192511	cat, dog or other animal breeder (not fish)	2511	2507	Y
+51192512	bee keeper	2512	2507	Y
+51192514	animals trainer, including horse, greyhound, etc.	2514	2507	Y
+51192519	stable manager	2519	2507	Y
+51192521	gamekeeper	2521	2507	Y
+51193127	gamekeeper, stable manager	3127	3123	Y
+51193128	bee keeper	3128	3123	Y
+51193129	cat, dog or other animal breeder (not fish)	3129	3123	Y
+51193133	animal trainer, including horse, greyhound, etc.	3133	3123	Y
+52112921	forge worker, brass stamper, farrier, blacksmith	2921	2920	Y
+52122922	moulder, floor moulder, coremaker, die caster	2922	2920	Y
+52132923	sheet metal worker, panel beater, metal finisher, coppersmith	2923	2920	Y
+52142581	ship builder	2581	2571	Y
+52142667	ship builder or repairer	2667	2658	Y
+52142924	metal plate worker, boilermaker, plater-welder, caulker-burner, shipwright, riveter	2924	2920	Y
+52142940	ship builder	2940	2933	Y
+52152527	welder	2527	2523	Y
+52152541	welder	2541	2538	Y
+52152568	welder	2568	2563	Y
+52152580	welder	2580	2571	Y
+52152689	welder	2689	2678	Y
+52152925	welder, fitter-welder	2925	2920	Y
+52162530	pipe fitter	2530	2523	Y
+52162542	pipe fitter	2542	2538	Y
+52162690	pipe fitter	2690	2678	Y
+52162857	pipe fitter	2857	2847	Y
+52162926	pipe fitter	2926	2920	Y
+52212927	metal machine setter, tool setter, setter operator, centre lathe turner	2927	2920	Y
+52222928	tool maker, tool fitter, jig and tool fitter, marker out, die sinker	2928	2920	Y
+52232634	railway shop mechanic, fitter or stripper, wheeler	2634	2623	Y
+52232640	aircraft engineer, aircraft fitter, aircraft ground engineer	2640	2635	Y
+52232641	aircraft mechanic or maintenance engineer	2641	2635	Y
+52232663	aircraft or airline engineer, fitter, maintainer	2663	2658	Y
+52232856	plant maintenance fitter, machine fitter, mechanic-fitter	2856	2847	Y
+52232929	metal working production or maintenance fitter, machine fitter, fitter and turner, bench fitter, plant fitter	2929	2920	Y
+52232930	motor vehicle/industrial machinery fitter	2930	2920	Y
+52232931	millwright	2931	2920	Y
+52232932	aircraft engineer, aircraft fitter, aircraft ground engineer	2932	2920	Y
+52232941	motor vehicle/industrial machinery fitter	2941	2933	Y
+52232942	aircraft engineer	2942	2933	Y
+52242953	precision instrument maker or repairer	2953	2952	Y
+52242954	clockmaker, watchmaker, clock and watch repairer	2954	2952	Y
+52242955	optical technician	2955	2952	Y
+52312660	motor mechanic, auto engineer	2660	2658	Y
+52312934	motor mechanic, diesel fitter, auto engineer	2934	2933	Y
+52322661	vehicle body builder, fitter or repairer	2661	2658	Y
+52322935	vehicle body builder, coach builder, panel beater	2935	2933	Y
+52332662	auto electrician	2662	2658	Y
+52332936	auto electrician	2936	2933	Y
+52342664	vehicle spray painter	2664	2658	Y
+52342805	spray painter	2805	2803	Y
+52342937	car paint sprayer, coach painter	2937	2933	Y
+52412528	electrician, electrical fitter	2528	2523	Y
+52412543	electrician, electrical fitter	2543	2538	Y
+52412944	electrician, electrical engineer, electrical contractor	2944	2943	Y
+52422945	telecommunication engineer, telephone engineer, telephone technician	2945	2943	Y
+52432946	line or cable repairer, cable jointer, overhead linesman	2946	2943	Y
+52442947	television or radio engineer, video engineer	2947	2943	Y
+52443062	television, video, audio or radio engineer/repairer/installer/technician	3062	3056	Y
+52452948	computer engineer, computer service or maintenance technician	2948	2943	Y
+52453063	computer installation and maintenance engineer/repairer/installer/technician	3063	3056	Y
+52492632	railway signal technician, signal inspector	2632	2623	Y
+52492665	electrical/electronic engineer (including radar, alarm, signal tester)	2665	2658	Y
+52492949	electronic engineer (maintenance), alarm engineer, office equipment engineer	2949	2943	Y
+52492950	railway signal technician	2950	2943	Y
+52493053	other electrical or electronics technician, including alarm engineer, office machinery engineer or mechanic	3053	3048	Y
+52493054	railway signal technician, domestic appliance repairer	3054	3048	Y
+53112564	steel erector, steel fabricator, structural erector	2564	2563	Y
+53122524	bricklayer	2524	2523	Y
+53122525	mason, stonemason, monumental mason	2525	2523	Y
+53122901	monumental mason, engraver	2901	2898	Y
+53123122	monumental mason, engraver	3122	3116	Y
+53132526	roofer, roof tiler, slater, felt roofer, thatcher	2526	2523	Y
+53142539	plumber	2539	2538	Y
+53142540	heating engineer, gas service engineer, air conditioning engineer	2540	2538	Y
+53152529	carpenter, carpenter and joiner, builder's joiner	2529	2523	Y
+53152546	carpenter, carpenter and joiner, builder's joiner	2546	2538	Y
+53152557	shop fitter, office fitter	2557	2551	Y
+53152582	boatbuilder	2582	2571	Y
+53152666	boat builder or repairer	2666	2658	Y
+53152939	boat builder	2939	2933	Y
+53162547	window fitter, window fabricator, glazier, double glazing installer	2547	2538	Y
+53192534	builder, building contractor	2534	2523	Y
+53192549	builder, building contractor	2549	2538	Y
+53192561	builder, building contractor	2561	2551	Y
+53192566	steeplejack, steel fixer	2566	2563	Y
+53212552	plasterer	2552	2551	Y
+53222553	floorer, floor layer, floor or wall tiler, floor polisher	2553	2551	Y
+53222554	carpet fitter	2554	2551	Y
+53232556	painter, decorator	2556	2551	Y
+53232558	french polisher, furniture polisher	2558	2551	Y
+53232559	sign writer, letter writer	2559	2551	Y
+53232567	spray painter (buildings/bridges/ships)	2567	2563	Y
+53232579	spray painter (buildings/ bridges/ships)	2579	2571	Y
+53232905	furniture polisher, painter, decorator	2905	2903	Y
+54112877	weaver, knitter, carpet weaver, net maker	2877	2876	Y
+54122878	upholsterer, coach trimmer, curtain maker, mattress maker	2878	2876	Y
+54132879	leather worker, shoe maker/repairer, clicker, laster, saddler	2879	2876	Y
+54142880	tailor, dressmaker, milliner	2880	2876	Y
+54192881	corsetiere	2881	2876	Y
+54192882	hat blocker	2882	2876	Y
+54192883	cushion filler	2883	2876	Y
+54192884	sail maker	2884	2876	Y
+54212886	compositor, originator, lithographic plate maker, paste-up artist, stereotyper, typesetter	2886	2885	Y
+54222887	printer, master printer	2887	2885	Y
+54232888	bookbinder, print finisher, collator, binder's assistant, darkroom technician	2888	2885	Y
+54242889	screen printer, block printer	2889	2885	Y
+54312892	butcher, meat cutter, slaughterer	2892	2891	Y
+54322893	baker, confectioner, pastry cook, cake decorator	2893	2891	Y
+54323386	baker, confectioner, pastry cook, cake decorator	3386	3382	Y
+54332894	fishmonger, filleter	2894	2891	Y
+54332895	poultry dresser	2895	2891	Y
+54342896	chef, cook, caterer	2896	2891	Y
+54343385	chef, cook, caterer	3385	3382	Y
+54912899	glass blower, glass cutter, glass maker	2899	2898	Y
+54912900	potter, ceramic caster, ceramic artist, ceramic lithographer	2900	2898	Y
+54912902	brick maker	2902	2898	Y
+54922904	furniture maker/fitter, cabinet maker	2904	2903	Y
+54922906	picture frame maker	2906	2903	Y
+54922907	wood carver, veneer preparer	2907	2903	Y
+54922908	coffin maker	2908	2903	Y
+54932911	pattern maker (moulds)	2911	2903	Y
+54932912	model maker	2912	2903	Y
+54932918	pattern maker (moulds)	2918	2913	Y
+54932919	model maker	2919	2913	Y
+54942909	musical instrument maker/repairer	2909	2903	Y
+54942910	piano tuner	2910	2903	Y
+54952914	goldsmith, silversmith	2914	2913	Y
+54952915	jewellery maker	2915	2913	Y
+54952916	diamond mounter or polisher, gem setter	2916	2913	Y
+54952917	jewellery or other decorative engraver	2917	2913	Y
+54962957	florist, flower or floral arranger	2957	2956	Y
+54992958	basket maker	2958	2956	Y
+54992959	lampshade or blind maker	2959	2956	Y
+54992960	toy maker	2960	2956	Y
+54992961	wig maker	2961	2956	Y
+54992962	prosthetic limb maker or adapter	2962	2956	Y
+54992963	firework maker, munitions charger	2963	2956	Y
+54992964	candle maker	2964	2956	Y
+54992965	billiard table fitter	2965	2956	Y
+61113073	nursing auxiliary or assistant, steriliser of medical equipment, occupational therapy assistant, phlebotomist, physiotherapy assistant, ward orderly, ward assistant	3073	3071	Y
+61123090	ambulance staff (not paramedic), ambulance driver, ambulance technician	3090	3083	Y
+61123437	other ambulance staff (not paramedic), ambulance driver, ambulance technician	3437	3435	Y
+61133076	dental nurse or assistant	3076	3071	Y
+61143103	houseparent, child careworker, residential warden, sheltered accommodation warden, foster parent	3103	3102	Y
+61143450	residential warden of young offenders	3450	3446	Y
+61153104	care assistant, home care assistant, residential social worker, home carer, nursing home assistant	3104	3102	Y
+61213416	nursery nurse/assistant/supervisor, crèche assistant	3416	3406	Y
+61223105	childminder, au pair, children's nanny	3105	3102	Y
+61223417	childminder, au pair, children's nanny	3417	3406	Y
+61233408	playgroup or playschool leader or assistant	3408	3406	Y
+61243409	educational assistant, classroom assistant, special needs helper	3409	3406	Y
+61312483	veterinary nurse or assistant, animal technician	2483	2475	Y
+61312506	veterinary nurse or assistant, animal technician	2506	2496	Y
+61312509	veterinary nurse or assistant, animal technician	2509	2507	Y
+61313125	veterinary nurse or assistant, animal technician	3125	3123	Y
+61392517	other animal care work including dog beautician, dog walker, dog warden; kennel or cattery assistant; groom, huntsman, stable worker; zoo keeper	2517	2507	Y
+61393126	other animal care worker including dog beautician, dog walker, dog warden; kennel or cattery assistant; groom, huntsman, stable worker; zoo keeper	3126	3123	Y
+62113142	sports assistant, lifeguard, swimming pool attendant, gym attendant, bowling green attendant	3142	3136	Y
+62113181	wardrobe mistress or master, dresser	3181	3180	Y
+62113189	museum guide	3189	3180	Y
+62113194	bookmaker	3194	3191	Y
+62113195	croupier	3195	3191	Y
+62113364	spa/leisure attendant	3364	3357	Y
+62113384	toastmaster, master of ceremonies	3384	3382	Y
+62123369	travel agent, travel agency/booking/reservations clerk, tour organiser	3369	3367	Y
+62132609	coach tour operator, coach guide	2609	2602	Y
+62133370	travel/tour guide	3370	3367	Y
+62133381	coach tour operator, coach guide	3381	3367	Y
+62142638	air travel assistant, cabin/flight attendant, air hostess, air purser, air steward, cabin crew; passenger services agent; check-in staff	2638	2635	Y
+62143372	air hostess, air steward, air travel assistant, cabin/flight attendant, cabin crew, air purser, passenger services agent, check-in-staff	3372	3371	Y
+62152628	railway conductor, train guard	2628	2623	Y
+62152629	ticket collector, railway porter	2629	2623	Y
+62153374	railway conductor, train guard	3374	3371	Y
+62153375	railway porter, ticket collector	3375	3371	Y
+62153376	railway host/hostess, railway assistant/attendants	3376	3371	Y
+62192607	bus conductor	2607	2602	Y
+62192650	ship or hovercraft steward, cabin boy	2650	2646	Y
+62193373	bus conductor	3373	3371	Y
+62193378	ship or hovercraft steward, cabin boy	3378	3371	Y
+62193379	other travel assistants, other travel hostess/steward	3379	3371	Y
+62213359	hairdresser, barber, shampooist, hair stylist	3359	3357	Y
+62223182	make-up artist, beautician, manicurist, nail technician	3182	3180	Y
+62223360	beautician, make-up artist, manicurist, nail technician	3360	3357	Y
+62223362	manicurist, pedicurist	3362	3357	Y
+62223363	tattooist, ear piercer, body piercer, electrologist, electrolysist	3363	3357	Y
+62223365	slimming consultant	3365	3357	Y
+62223366	astrologer, medium, palmist, water diviner, phrenologist, fortune teller	3366	3357	Y
+62312996	housekeeper, butler, valet, cook-housekeeper, companion-housekeeper	2996	2995	Y
+62322997	caretaker, janitor, concierge, warden	2997	2995	Y
+62322998	religious building caretaker	2998	2995	Y
+62323000	school/college caretaker/porter	3000	2995	Y
+62323120	mortuary keeper	3120	3116	Y
+62323413	school caretaker, janitor	3413	3406	Y
+62913092	mortuary or morgue assistant	3092	3083	Y
+62913118	funeral director	3118	3116	Y
+62913119	undertaker, mortuary assistant, bearer, embalmer, crematorium worker	3119	3116	Y
+62923014	pest control officer, mole catcher, rodent operator	3014	3013	Y
+62923015	pest exterminator, pest control surveyor	3015	3013	Y
+71113328	sales assistant, retail/shop assistant, counter assistant, sub post office assistant, takeaway food worker	3328	3320	Y
+71123329	retail/shop cashier, check-out operator, petrol station attendant, restaurant cashier	3329	3320	Y
+71123388	restaurant/canteen cashier	3388	3382	Y
+71133342	telephone salesperson, telephone canvasser	3342	3336	Y
+71213337	collector/door-to-door salesperson, canvasser, credit agent, insurance agent, travelling salesperson, commercial traveller	3337	3336	Y
+71223338	debt, rent or other cash collector, meter reader, vending machine operator, toll booth operator	3338	3336	Y
+71233339	roundsman or woman, van salesperson, ice cream seller, milkman, mobile shop salesperson	3339	3336	Y
+71243340	market or street trader/assistant, stall holder, newspaper seller	3340	3336	Y
+71253330	merchandiser, window dresser	3330	3320	Y
+71293332	advertising or sales representative, demonstrator, estate agent negotiator, land/property salesman	3332	3320	Y
+71293335	other sales-related work including car hirer, skip hire operator, rental operator, sales promoter, film/video renter, money lender	3335	3320	Y
+71293343	advertising or sales representative, demonstrator, estate agent negotiator, land/property salesman	3343	3336	Y
+71293344	car hirer, skip hire operator, rental operator, sales promoter, film/video renter, money lender	3344	3336	Y
+72113242	call centre operator, sales order clerk, telephone adviser	3242	3235	Y
+72113341	call centre operator, sales order clerk, telephone adviser	3341	3336	Y
+72123243	customer care adviser/officer/assistant, store guide, customer relations officer/representative	3243	3235	Y
+72123325	customer care adviser/officer/assistant, store guide, customer relations officer/representative	3325	3320	Y
+81112700	machine operator, processor, foreman	2700	2699	Y
+81122733	machine operator, kiln operator, foreman	2733	2732	Y
+81132710	textile machine operator, assembler, spinner, foreman	2710	2709	Y
+81142711	bleacher, dyer, treater etc.	2711	2709	Y
+81142723	bleacher, dyer, treater etc.	2723	2722	Y
+81142763	machine operator, processor, paint maker, foreman	2763	2762	Y
+81152753	machine operator, rubber moulder, foreman	2753	2752	Y
+81162743	machine operator, plastics moulder, foreman	2743	2742	Y
+81172834	metal making or metal treating process worker, machine operator, furnaceman	2834	2833	Y
+81182764	electroplater, anodiser, galvaniser, plater	2764	2762	Y
+81182836	electroplater, anodiser, galvaniser, plater	2836	2833	Y
+81192784	machine operator, furnaceman, foreman	2784	2783	Y
+81212774	machine operator, processor, foreman	2774	2773	Y
+81222848	coal worker or miner (surface or underground)	2848	2847	Y
+81232851	quarry worker, surface miner (not coal), underground miner (not coal)	2851	2847	Y
+81242853	energy plant operator, stoker, boiler operator, substation or power station attendant	2853	2847	Y
+81252835	metal working machine operator, fettler, grinder, metal cutter, metal machinist, metal polisher, press operator, shot blaster, tool room machinist	2835	2833	Y
+81262854	water or sewage plant operator	2854	2847	Y
+81292837	other machine operator including saw doctor, coil, spring or wire maker, pumpsman, shearer	2837	2833	Y
+81292838	scrap metal worker or breaker	2838	2833	Y
+81292858	plant and machine operative such as pumpsman, duct erector, oilman, etc	2858	2847	Y
+81293011	scrap metal worker or breaker	3011	3007	Y
+81312794	assembler, machine operator, foreman	2794	2793	Y
+81312795	wireman, coil winder, wirer	2795	2793	Y
+81322804	assembler, machine operator, foreman	2804	2803	Y
+81322815	assembler, machine operator, foreman	2815	2814	Y
+81332594	rail inspector	2594	2590	Y
+81332702	routine inspector, tester	2702	2699	Y
+81332715	routine inspector, tester	2715	2709	Y
+81332725	routine inspector, tester	2725	2722	Y
+81332735	routine inspector, tester	2735	2732	Y
+81332745	routine inspector, tester	2745	2742	Y
+81332755	routine inspector, tester	2755	2752	Y
+81332766	routine inspector, tester	2766	2762	Y
+81332776	routine inspector, tester	2776	2773	Y
+81332786	routine inspector, tester	2786	2783	Y
+81332797	routine inspector, tester	2797	2793	Y
+81332807	routine inspector, tester	2807	2803	Y
+81332817	routine inspector, tester	2817	2814	Y
+81332826	routine inspector, tester	2826	2823	Y
+81332873	routine examiner, tester	2873	2860	Y
+81342615	weighbridge operator	2615	2602	Y
+81342704	weigher, grader, sorter, picker; weighbridge clerk/controller	2704	2699	Y
+81342717	weigher, grader, sorter, picker; weighbridge clerk/controller	2717	2709	Y
+81342727	weigher, grader, sorter, picker; weighbridge clerk/controller	2727	2722	Y
+81342737	weigher, grader, sorter, picker; weighbridge clerk/controller	2737	2732	Y
+81342747	weigher, grader, sorter, picker; weighbridge clerk/controller	2747	2742	Y
+81342757	weigher, grader, sorter, picker; weighbridge clerk/controller	2757	2752	Y
+81342768	weigher, grader, sorter, picker; weighbridge clerk/controller	2768	2762	Y
+81342778	weigher, grader, sorter, picker; weighbridge clerk/controller	2778	2773	Y
+81342788	weigher, grader, sorter, picker; weighbridge clerk/controller	2788	2783	Y
+81342798	weigher, grader, sorter, picker; weighbridge clerk/controller	2798	2793	Y
+81342809	weigher, grader, sorter, picker; weighbridge clerk/controller	2809	2803	Y
+81342818	weigher, grader, sorter, picker; weighbridge clerk/controller	2818	2814	Y
+81342828	weigher, grader, sorter, picker; weighbridge clerk/controller	2828	2823	Y
+81342840	weigher, grader, sorter, picker; weighbridge clerk/controller	2840	2833	Y
+81342850	weigher, grader, sorter	2850	2847	Y
+81352808	tyre, exhaust and windscreen fitter	2808	2803	Y
+81362712	clothing cutter	2712	2709	Y
+81372713	sewing machinist	2713	2709	Y
+81382703	routine laboratory tester	2703	2699	Y
+81382716	routine laboratory tester	2716	2709	Y
+81382726	routine laboratory tester	2726	2722	Y
+81382736	routine laboratory tester	2736	2732	Y
+81382746	routine laboratory tester	2746	2742	Y
+81382756	routine laboratory tester	2756	2752	Y
+81382767	routine laboratory tester	2767	2762	Y
+81382777	routine laboratory tester	2777	2773	Y
+81382787	routine laboratory tester	2787	2783	Y
+81382827	routine laboratory tester	2827	2823	Y
+81382839	routine laboratory tester	2839	2833	Y
+81392707	other assembler, routine operative	2707	2699	Y
+81392720	other assembler, routine operative	2720	2709	Y
+81392730	other assembler, routine operative	2730	2722	Y
+81392740	other assembler, routine operative	2740	2732	Y
+81392750	other assembler, routine operative	2750	2742	Y
+81392760	other assembler, routine operative	2760	2752	Y
+81392771	other assembler, routine operative	2771	2762	Y
+81392781	other assembler, routine operative	2781	2773	Y
+81392791	other assembler, routine operative	2791	2783	Y
+81392801	other assembler, routine operative	2801	2793	Y
+81392812	other assembler, routine operative	2812	2803	Y
+81392821	other assembler, routine operative	2821	2814	Y
+81392824	assembler, machine operator, processor, foreman	2824	2823	Y
+81392831	other assembler, routine operative	2831	2823	Y
+81392843	other assembler, routine operative	2843	2833	Y
+81412565	scaffolder, rigger	2565	2563	Y
+81412577	ship rigger, ship stager, ship scaffolder/erector	2577	2571	Y
+81412578	rope/wire splicer	2578	2571	Y
+81422572	road construction worker, asphalter, layer, ganger (road), road worker foreman	2572	2571	Y
+81422573	paviour, paver	2573	2571	Y
+81422589	driveway paver or asphalter	2589	2583	Y
+81422593	road inspector	2593	2590	Y
+81432576	rail construction worker, rail maintenance worker/examiner, plate layer, trackman, foreman-ganger (rail)	2576	2571	Y
+81492531	pipelayer	2531	2523	Y
+81492535	building site foreman or supervisor	2535	2523	Y
+81492537	demolisher	2537	2523	Y
+81492544	thermal insulation engineer, lagger	2544	2538	Y
+81492545	ceiling fixer	2545	2538	Y
+81492548	building site foreman or supervisor	2548	2538	Y
+81492555	ceiling fixer	2555	2551	Y
+81492560	building site foreman or supervisor	2560	2551	Y
+82112603	heavy goods vehicle (hgv) driver, lorry or truck driver, tanker driver, haulage driver	2603	2602	Y
+82112604	refuse or rubbish truck driver	2604	2602	Y
+82113012	refuse truck driver	3012	3007	Y
+82122605	van driver, delivery driver, courier driver	2605	2602	Y
+82132606	bus or coach driver, minibus driver	2606	2602	Y
+82132631	tram driver	2631	2623	Y
+82133380	bus or coach driver, minibus driver	3380	3367	Y
+82142611	taxi or cab driver, chauffeur, hearse driver	2611	2602	Y
+82152612	driving instructor, hgv instructor	2612	2602	Y
+82162625	railway man, shunter, signalman, pointsman, level crossing keeper	2625	2623	Y
+82162626	locomotive fireman	2626	2623	Y
+82162627	railway controller	2627	2623	Y
+82162633	rail line inspector	2633	2623	Y
+82172651	merchant seaman, seafarer, deckhand, boatman	2651	2646	Y
+82172655	bargee	2655	2646	Y
+82182642	ramp agent, airport hand, aircraft refueller	2642	2635	Y
+82182643	baggage handler	2643	2635	Y
+82192608	bus inspector	2608	2602	Y
+82192656	lock keeper, bridge/swingbridge worker, lighthouse keeper/pontoon man	2656	2646	Y
+82212533	crane operator	2533	2523	Y
+82212569	crane operator	2569	2563	Y
+82212575	crane operator	2575	2571	Y
+82212617	crane driver/operator, gantry operator, banksman (coalmine, salt works)	2617	2616	Y
+82212849	coal banksman	2849	2847	Y
+82222618	fork-lift truck driver or operator	2618	2616	Y
+82232479	agricultural machine driver, tractor driver	2479	2475	Y
+82232489	agricultural machine driver, tractor driver	2489	2484	Y
+82232622	agricultural machine driver, tractor driver	2622	2616	Y
+82292532	jcb driver, plant operator, pile driver	2532	2523	Y
+82292574	jcb driver, plant operator	2574	2571	Y
+82292619	jcb driver, plant operator, bulldozer driver, caterpillar driver	2619	2616	Y
+82292620	spreading machine driver, asphalt or tar-sprayer driver	2620	2616	Y
+82292621	roadsweeper driver	2621	2616	Y
+82292652	dredgerman	2652	2646	Y
+82292852	mobile machinery driver	2852	2847	Y
+91112478	farmhand, farm labourer, herdsman, shepherd, dairyman, pigman	2478	2475	Y
+91122491	forester, forestry contractor, lumberjack	2491	2484	Y
+91192480	sheep shearer, artificial inseminator, chicken sexer	2480	2475	Y
+91192481	fruit and vegetable picker, hedger and ditcher	2481	2475	Y
+91192487	nursery worker/hand, horticultural worker, fruit picker, mushroom picker and other pickers	2487	2484	Y
+91192500	fishing boat (trawler) mate or bosun	2500	2496	Y
+91192502	fish farm assistant, aquarium assistant, fish hatcher, oyster bed worker	2502	2496	Y
+91192503	seaweed gatherer, shellfish digger, crabber, shrimper	2503	2496	Y
+91192504	fish breeder or shellfish cultivator	2504	2496	Y
+91192513	insect breeder, maggot breeder, mink farm assistant	2513	2507	Y
+91193130	fish breeder	3130	3123	Y
+91193131	artificial inseminator	3131	3123	Y
+91212536	builder's labourer, building worker, hod carrier	2536	2523	Y
+91212550	builder's labourer, building worker	2550	2538	Y
+91212562	builder's labourer, building worker	2562	2551	Y
+91212570	builder's labourer, building worker	2570	2563	Y
+91292584	drainage worker, ditch digger	2584	2583	Y
+91292585	fence erector	2585	2583	Y
+91292586	grave digger	2586	2583	Y
+91292587	marquee or tent erector	2587	2583	Y
+91292588	reservoir attendant	2588	2583	Y
+91293121	gravedigger	3121	3116	Y
+91312844	labourer in foundry	2844	2833	Y
+91322706	cleaner, industrial cleaner	2706	2699	Y
+91322719	cleaner, industrial cleaner	2719	2709	Y
+91322729	cleaner, industrial cleaner	2729	2722	Y
+91322739	cleaner, industrial cleaner	2739	2732	Y
+91322749	cleaner, industrial cleaner	2749	2742	Y
+91322759	cleaner, industrial cleaner	2759	2752	Y
+91322770	cleaner, industrial cleaner	2770	2762	Y
+91322780	cleaner, industrial cleaner	2780	2773	Y
+91322790	cleaner, industrial cleaner	2790	2783	Y
+91322800	cleaner, industrial cleaner	2800	2793	Y
+91322811	cleaner, industrial cleaner	2811	2803	Y
+91322820	cleaner, industrial cleaner	2820	2814	Y
+91322830	cleaner, industrial cleaner	2830	2823	Y
+91322842	cleaner, industrial cleaner	2842	2833	Y
+91322855	cleaner, industrial cleaner	2855	2847	Y
+91322968	factory cleaner/industrial cleaner in the production of food, drink or tobacco	2968	2967	Y
+91322969	factory cleaner/industrial cleaner in the production of textiles, clothes, or shoes	2969	2967	Y
+91322970	factory cleaner/industrial cleaner in the production of leather, hides, pelts	2970	2967	Y
+91322971	factory cleaner/industrial cleaner in the production of glass or ceramics	2971	2967	Y
+91322972	factory cleaner/industrial cleaner in the production of plastics or plastic products	2972	2967	Y
+91322973	factory cleaner/industrial cleaner in the production of rubber	2973	2967	Y
+91322974	factory cleaner/industrial cleaner in the production of chemicals or petrochemicals	2974	2967	Y
+91322975	factory cleaner/industrial cleaner in the production of paper, pulp or wood products	2975	2967	Y
+91322976	factory cleaner/industrial cleaner in the production of concrete, asphalt, lime, asbestos	2976	2967	Y
+91322977	factory cleaner/industrial cleaner in the production of electrical/electronic products and equipment	2977	2967	Y
+91322978	factory cleaner/industrial cleaner in the production of vehicles or vehicle components	2978	2967	Y
+91322979	factory cleaner/industrial cleaner in the production of metal goods such as cookers, bed frames, jewellery, rifles, bicycles etc.	2979	2967	Y
+91322980	factory cleaner/industrial cleaner in the production of any other goods or products	2980	2967	Y
+91322981	factory cleaner/industrial cleaner in making, treating or scrapping metals	2981	2967	Y
+91322982	cleaner/industrial cleaner in mining, quarrying, utilities and power generating industry, or water treatment	2982	2967	Y
+91322983	factory cleaner/industrial cleaner in some other setting	2983	2967	Y
+91332890	printing machine operator, printer's assistant	2890	2885	Y
+91342701	packer, bottler, canner, filler, wrapper, foreman	2701	2699	Y
+91342714	packer, wrapper, foreman	2714	2709	Y
+91342724	packer, wrapper, foreman	2724	2722	Y
+91342734	packer, wrapper, foreman	2734	2732	Y
+91342744	packer, wrapper, foreman	2744	2742	Y
+91342754	packer, wrapper, foreman	2754	2752	Y
+91342765	packer, wrapper, foreman	2765	2762	Y
+91342775	packer, wrapper, foreman	2775	2773	Y
+91342785	packer, wrapper, foreman	2785	2783	Y
+91342796	packer, wrapper, foreman	2796	2793	Y
+91342806	packer, wrapper, foreman	2806	2803	Y
+91342816	packer, wrapper, foreman	2816	2814	Y
+91342825	packer, wrapper, foreman	2825	2823	Y
+91392708	other work in this industry: factory hand, mate, assistant, handler, loader	2708	2699	Y
+91392721	other work in this industry: factory hand, mate, assistant, handler, loader, finisher	2721	2709	Y
+91392731	other work in this industry: factory hand, mate, assistant, handler, loader	2731	2722	Y
+91392741	other work in this industry: factory hand, mate, assistant, handler, loader	2741	2732	Y
+91392751	other work in this industry: factory hand, mate, assistant, handler, loader	2751	2742	Y
+91392761	other work in this industry: factory hand, mate, assistant, handler, loader	2761	2752	Y
+91392772	other work in this industry: factory hand, mate, assistant, handler, loader	2772	2762	Y
+91392782	other work in this industry: factory hand, mate, assistant, handler, loader	2782	2773	Y
+91392792	other work in this industry: factory hand, mate, assistant, handler, loader	2792	2783	Y
+91392802	other work in this industry: factory hand, mate, assistant, handler, loader	2802	2793	Y
+91392813	other work in this industry: factory hand, mate, assistant, handler, loader	2813	2803	Y
+91392822	other work in this industry: factory hand, mate, assistant, handler, loader	2822	2814	Y
+91392832	other work in this industry: factory hand, mate, assistant, handler, loader	2832	2823	Y
+91392845	other work in this industry: factory hand, mate, assistant, handler, loader	2845	2833	Y
+91392859	other work in these industries: attendant, hand, mate, assistant, handler, loader	2859	2847	Y
+91412654	docker, stevedore, slinger	2654	2646	Y
+91492705	storesman, warehouseman, porter	2705	2699	Y
+91492718	storesman, warehouseman, porter	2718	2709	Y
+91492728	storesman, warehouseman, porter	2728	2722	Y
+91492738	storesman, warehouseman, porter	2738	2732	Y
+91492748	storesman, warehouseman, porter	2748	2742	Y
+91492758	storesman, warehouseman, porter	2758	2752	Y
+91492769	storesman, warehouseman, porter	2769	2762	Y
+91492779	storesman, warehouseman, porter	2779	2773	Y
+91492789	storesman, warehouseman, porter	2789	2783	Y
+91492799	storesman, warehouseman, porter	2799	2793	Y
+91492810	storesman, warehouseman, porter	2810	2803	Y
+91492819	storesman, warehouseman, porter	2819	2814	Y
+91492829	storesman, warehouseman, porter	2829	2823	Y
+91492841	storesman, warehouseman, porter	2841	2833	Y
+91493003	office porter	3003	2995	Y
+91493004	stores/warehouse porter	3004	2995	Y
+91493005	factory porter	3005	2995	Y
+91493305	office porter	3305	3297	Y
+91493353	sales room assistant, wine merchant's cellar man; order/stock filler, stock/store keeper; lorry/warehouse loader/checker/weigher, goods porter, customs attendant	3353	3347	Y
+91493354	stores/warehouse porter	3354	3347	Y
+91493355	other work handling or storing goods including: store keeper, warehouseman, order assembler, goods despatcher	3355	3347	Y
+92113311	postal worker, postman, mail sorter, messenger, courier, mailroom clerk, post sorter, leaflet/circular distributor, newspaper/parcel deliverer	3311	3306	Y
+92113352	postal worker, postman, mail sorter, messenger, courier, mailroom clerk, post sorter, leaflet/circular distributor, newspaper/parcel deliverer	3352	3347	Y
+92193312	other general office clerical tasks including: office junior, office worker, photocopy/print room operator, office machinist	3312	3306	Y
+92213002	hospital porter	3002	2995	Y
+92213091	hospital porter	3091	3083	Y
+92222999	residential building porter	2999	2995	Y
+92223001	hotel and other accommodation porter, bell hop	3001	2995	Y
+92223394	hotel and other accommodation porter, bell hop	3394	3382	Y
+92233377	railway refreshment trolley host/hostess	3377	3371	Y
+92233387	kitchen, canteen or catering assistant, washer-up, kitchen porter, counter assistant	3387	3382	Y
+92233412	dinner lady	3412	3406	Y
+92243389	waiter, waitress, maitre d'hotel, sommelier, steward	3389	3382	Y
+92253391	bar staff, cellarman (public house)	3391	3382	Y
+92263187	cinema/theatre usher, popcorn/ice cream/refreshments seller	3187	3180	Y
+92263197	theme park or arcade attendant; fairground/funfair worker, snooker hall attendant, or other leisure attendants	3197	3191	Y
+92263393	holiday camp worker/entertainer/redcoat	3393	3382	Y
+92293144	baths attendant, changing room attendant	3144	3136	Y
+92293183	stage hand, props hand, scenery hand	3183	3180	Y
+92293185	ticket collector/checker	3185	3180	Y
+92293192	bingo assistant/caller	3192	3191	Y
+92312988	window cleaner	2988	2984	Y
+92322989	road sweeper	2989	2984	Y
+92322990	chimney sweep	2990	2984	Y
+92332610	bus or coach cleaner	2610	2602	Y
+92332630	train cleaner	2630	2623	Y
+92332644	aircraft cleaner	2644	2635	Y
+92332653	ship's cleaner	2653	2646	Y
+92332985	house cleaner, domestic, chambermaid, charlady	2985	2984	Y
+92332986	other cleaner including in offices, hospitals, schools, shops, warehouses, ships, aircraft, stations	2986	2984	Y
+92332991	car valet, vehicle washer	2991	2984	Y
+92333396	cleaner in restaurants, bars, pubs, hotels and other accommodation; chambermaid	3396	3382	Y
+92333415	school cleaner	3415	3406	Y
+92342992	laundry worker, dry cleaner, presser, ironer, carpet cleaner	2992	2984	Y
+92353008	waste collector, salvage worker, dustman, recycling operative	3008	3007	Y
+92392987	wash room attendant, toilet cleaner, sanitary cleaner	2987	2984	Y
+92413333	security guard, cctv operator	3333	3320	Y
+92413455	security guard/officer, night watchman, store detective, private detective, bodyguard, gateman, door keeper, cctv operator, patrolman	3455	3453	Y
+92422614	traffic warden, wheel clamper	2614	2602	Y
+92423456	traffic warden, wheel clamper	3456	3453	Y
+92433414	school crossing patrol attendant, lollipop man/woman	3414	3406	Y
+92443411	school mid-day assistant, dinner or school meals supervisor or assistant, lunchtime supervisor	3411	3406	Y
+92452613	car park attendant	2613	2602	Y
+92453395	lift attendant	3395	3382	Y
+92453457	car park attendant, lift attendant	3457	3453	Y
+92493006	entertainment places porter including casino, night club, etc.	3006	2995	Y
+92493190	museum attendant, cloakroom attendant	3190	3180	Y
+92493196	bouncer, or other jobs in entertainment places, including casino/night club porter, etc.	3196	3191	Y
+92493458	commissionaire, cloakroom attendant, left luggage clerk, bouncer, doorman, court warrant officer	3458	3453	Y
+92493459	other security worker including court bailiff or usher, museum attendant	3459	3453	Y
+92513331	shelf filler or stacker, stock handler, display assistant	3331	3320	Y
+92593334	other shop work including: trolley collector, basket issuer, pricer/tagger	3334	3320	Y
+92593346	other sales occupations including bill poster, ticket checker	3346	3336	Y

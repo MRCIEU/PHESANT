@@ -1,0 +1,16 @@
+coding	meaning	node_id	parent_id	selectable
+100	Declined	100	0	Y
+101	Against participant wishes	101	100	Y
+102	Lack of time	102	100	Y
+200	Equipment failure	200	0	Y
+201	Malfunction	201	200	Y
+202	Not available	202	200	Y
+300	Reason not known	300	0	Y
+400	Unable	400	0	Y
+405	Other health reason	405	400	Y
+407	Reason not stated	407	400	Y
+432	Moved arm	432	400	Y
+433	Poor venous access/flow	433	400	Y
+434	Recently donated blood	434	400	Y
+600	Abandoned	600	0	Y
+601	Feeling unwell/pain	601	600	Y

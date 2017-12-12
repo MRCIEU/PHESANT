@@ -1,0 +1,18 @@
+coding	meaning
+1	England/Wales - Urban - sparse
+2	England/Wales - Town and Fringe - sparse
+3	England/Wales - Village - sparse
+4	England/Wales - Hamlet and Isolated dwelling - sparse
+5	England/Wales - Urban - less sparse
+6	England/Wales - Town and Fringe - less sparse
+7	England/Wales - Village - less sparse
+8	England/Wales - Hamlet and Isolated Dwelling - less sparse
+9	Postcode not linkable
+11	Scotland - Large Urban Area
+12	Scotland - Other Urban Area
+13	Scotland - Accessible Small Town
+14	Scotland - Remote Small Town
+15	Scotland - Very Remote Small Town
+16	Scotland - Accessible Rural
+17	Scotland - Remote Rural
+18	Scotland - Very Remote Rural

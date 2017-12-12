@@ -1,0 +1,475 @@
+coding	meaning	node_id	parent_id	selectable
+-1	tropical & travel-related infections	1762	1495	N
+-1	dermatology	1510	1078	N
+-1	gynaecology/breast	1079	0	N
+-1	cardiovascular	1071	0	N
+-1	musculoskeletal/trauma	1077	0	N
+-1	renal/urology	1074	0	N
+-1	bowel problem	1155	1073	N
+-1	haematology/dermatology	1078	0	N
+-1	gastrointestinal/abdominal	1073	0	N
+-1	bacterial infection	1758	1495	N
+-1	other fractures	1713	1695	N
+-1	fracture	1695	1077	N
+-1	neurology	1265	1076	N
+-1	other urological problem (male)	1231	1074	N
+-1	immunological/systemic disorders	1080	0	N
+-1	obstetric problem	1621	1079	N
+-1	cerebrovascular disease	1083	1071	N
+-1	haematology	1502	1078	N
+-1	neurology/eye/psychiatry	1076	0	N
+-1	fracture upper limb & shoulder	1702	1695	N
+-1	respiratory/ent	1072	0	N
+-1	fracture head & neck	1696	1695	N
+-1	viral infection	1747	1495	N
+-1	fracture pelvis & lower limb	1720	1695	N
+-1	infections	1495	0	N
+-1	endocrine/diabetes	1075	0	N
+-1	ent disorder/not cancer	1466	1072	N
+-1	substance abuse/dependency	1460	1269	N
+1065	hypertension	1081	1071	Y
+1066	heart/cardiac problem	1082	1071	Y
+1067	peripheral vascular disease	1084	1071	Y
+1068	venous thromboembolic disease	1085	1071	Y
+1072	essential hypertension	1089	1081	Y
+1073	gestational hypertension/pre-eclampsia	1090	1081	Y
+1074	angina	1091	1082	Y
+1075	heart attack/myocardial infarction	1092	1082	Y
+1076	heart failure/pulmonary odema	1093	1082	Y
+1077	heart arrhythmia	1094	1082	Y
+1078	heart valve problem/heart murmur	1095	1082	Y
+1079	cardiomyopathy	1096	1082	Y
+1080	pericardial problem	1097	1082	Y
+1081	stroke	1098	1083	Y
+1082	transient ischaemic attack (tia)	1099	1083	Y
+1083	subdural haemorrhage/haematoma	1100	1083	Y
+1086	subarachnoid haemorrhage	1103	1098	Y
+1087	leg claudication/ intermittent claudication	1104	1084	Y
+1088	arterial embolism	1105	1084	Y
+1093	pulmonary embolism +/- dvt	1111	1085	Y
+1094	deep venous thrombosis (dvt)	1112	1085	Y
+1111	asthma	1130	1072	Y
+1112	chronic obstructive airways disease/copd	1131	1072	Y
+1113	emphysema/chronic bronchitis	1132	1072	Y
+1114	bronchiectasis	1133	1072	Y
+1115	interstitial lung disease	1134	1072	Y
+1117	other respiratory problems	1136	1072	Y
+1120	asbestosis	1139	1134	Y
+1121	pulmonary fibrosis	1140	1134	Y
+1122	fibrosing alveolitis/unspecified alveolitis	1141	1134	Y
+1123	sleep apnoea	1142	1136	Y
+1124	respiratory failure	1143	1136	Y
+1125	pleurisy	1144	1136	Y
+1126	spontaneous pneumothorax/recurrent pneumothorax	1145	1560	Y
+1134	oesophageal disorder	1153	1073	Y
+1135	stomach disorder	1154	1073	Y
+1136	liver/biliary/pancreas problem	1156	1073	Y
+1137	other abdominal problem	1158	1073	Y
+1138	gastro-oesophageal reflux (gord) / gastric reflux	1159	1153	Y
+1139	oesophagitis/barretts oesophagus	1160	1153	Y
+1140	oesophageal stricture	1161	1153	Y
+1141	oesophageal varicies	1162	1153	Y
+1142	gastric/stomach ulcers	1163	1154	Y
+1143	gastritis/gastric erosions	1164	1154	Y
+1154	irritable bowel syndrome	1175	1155	Y
+1155	hepatitis	1176	1156	Y
+1156	infective/viral hepatitis	1177	1176	Y
+1157	non-infective hepatitis	1178	1176	Y
+1158	liver failure/cirrhosis	1179	1156	Y
+1159	bile duct disease	1180	1156	Y
+1160	bile duct obstruction/ascending cholangitis	1181	1180	Y
+1161	gall bladder disease	1182	1156	Y
+1162	cholelithiasis/gall stones	1183	1182	Y
+1163	cholecystitis	1184	1182	Y
+1164	pancreatic disease	1185	1156	Y
+1165	pancreatitis	1186	1185	Y
+1190	peritonitis	1211	1158	Y
+1191	gastrointestinal bleeding	1212	1158	Y
+1192	renal/kidney failure	1213	1074	Y
+1193	renal failure requiring dialysis	1214	1213	Y
+1194	renal failure not requiring dialysis	1215	1213	Y
+1196	urinary tract infection/kidney infection	1217	1074	Y
+1197	kidney stone/ureter stone/bladder stone	1218	1074	Y
+1200	ureteric obstruction/hydronephrosis	1221	1074	Y
+1201	bladder problem (not cancer)	1222	1074	Y
+1202	urinary frequency / incontinence	1223	1222	Y
+1207	prostate problem (not cancer)	1232	1231	Y
+1210	scrotal problem (not cancer)	1235	1231	Y
+1214	testicular problems (not cancer)	1239	1231	Y
+1220	diabetes	1245	1075	Y
+1221	gestational diabetes	1246	1245	Y
+1222	type 1 diabetes	1247	1245	Y
+1223	type 2 diabetes	1248	1245	Y
+1224	thyroid problem (not cancer)	1249	1075	Y
+1225	hyperthyroidism/thyrotoxicosis	1250	1249	Y
+1226	hypothyroidism/myxoedema	1251	1249	Y
+1228	thyroid radioablation therapy	1253	1249	Y
+1229	parathyroid gland problem (not cancer)	1254	1075	Y
+1230	parathyroid hyperplasia/adenoma	1255	1254	Y
+1232	disorder of adrenal gland	1257	1075	Y
+1233	adrenal tumour	1258	1257	Y
+1234	adrenocortical insufficiency/addison's disease	1259	1257	Y
+1235	hyperaldosteronism/conn's syndrome	1260	1257	Y
+1236	phaeochromocytoma	1261	1257	Y
+1237	disorder or pituitary gland	1262	1075	Y
+1238	pituitary adenoma/tumour	1263	1262	Y
+1239	cushings syndrome	1264	1075	Y
+1240	neurological injury/trauma	1266	1076	Y
+1242	eye/eyelid problem	1268	1076	Y
+1243	psychological/psychiatric problem	1269	1076	Y
+1244	infection of nervous system	1270	1265	Y
+1245	brain abscess/intracranial abscess	1271	1270	Y
+1246	encephalitis	1272	1270	Y
+1247	meningitis	1273	1270	Y
+1248	spinal abscess	1274	1270	Y
+1249	cranial nerve problem/palsy	1275	1265	Y
+1250	bell's palsy/facial nerve palsy	1276	1275	Y
+1251	spinal cord disorder	1277	1265	Y
+1252	paraplegia	1278	1277	Y
+1254	peripheral nerve disorder	1280	1265	Y
+1255	peripheral neuropathy	1281	1280	Y
+1256	acute infective polyneuritis/guillain-barre syndrome	1282	1280	Y
+1257	trapped nerve/compressed nerve	1283	1280	Y
+1258	chronic/degenerative neurological problem	1284	1265	Y
+1259	motor neurone disease	1285	1284	Y
+1260	myasthenia gravis	1286	1284	Y
+1261	multiple sclerosis	1287	1284	Y
+1262	parkinsons disease	1288	1284	Y
+1263	dementia/alzheimers/cognitive impairment	1289	1284	Y
+1264	epilepsy	1290	1265	Y
+1265	migraine	1291	1265	Y
+1266	head injury	1292	1266	Y
+1267	spinal injury	1293	1266	Y
+1274	eye infection	1300	1268	Y
+1275	retinal problem	1301	1268	Y
+1276	diabetic eye disease	1302	1268	Y
+1277	glaucoma	1303	1268	Y
+1278	cataract	1304	1268	Y
+1279	eye trauma	1305	1268	Y
+1281	retinal detachment	1307	1301	Y
+1282	retinal artery/vein occlusion	1308	1301	Y
+1286	depression	1312	1269	Y
+1287	anxiety/panic attacks	1313	1269	Y
+1288	nervous breakdown	1314	1269	Y
+1289	schizophrenia	1315	1269	Y
+1290	deliberate self-harm/suicide attempt	1316	1269	Y
+1291	mania/bipolar disorder/manic depression	1317	1269	Y
+1293	bone disorder	1319	1077	Y
+1294	back problem	1320	1077	Y
+1295	joint disorder	1321	1077	Y
+1297	muscle/soft tissue problem	1323	1077	Y
+1308	osteomyelitis	1347	1319	Y
+1309	osteoporosis	1348	1319	Y
+1310	paget's disease	1349	1319	Y
+1311	spine arthritis/spondylitis	1350	1320	Y
+1312	prolapsed disc/slipped disc	1351	1595	Y
+1313	ankylosing spondylitis	1352	1320	Y
+1322	myositis/myopathy	1361	1323	Y
+1327	low platelets/platelet disorder	1366	1503	Y
+1328	haemophilia	1367	1503	Y
+1330	iron deficiency anaemia	1369	1504	Y
+1331	pernicious anaemia	1370	1504	Y
+1332	aplastic anaemia	1371	1504	Y
+1339	sickle cell disease	1378	1509	Y
+1340	thalassaemia	1379	1509	Y
+1344	stevens johnson syndrome	1386	1513	Y
+1345	pemphigoid/pemphigus	1387	1513	Y
+1348	gynaecological disorder (not cancer)	1390	1079	Y
+1349	ovarian cyst or cysts	1391	1614	Y
+1350	polycystic ovaries/polycystic ovarian syndrome	1392	1614	Y
+1351	uterine fibroids	1393	1615	Y
+1352	uterine polyps	1394	1615	Y
+1353	vaginal prolapse/uterine prolapse	1395	1615	Y
+1364	breast disease (not cancer)	1407	1079	Y
+1366	fibrocystic disease	1409	1407	Y
+1367	breast cysts	1410	1407	Y
+1371	sarcoidosis	1414	1080	Y
+1372	vasculitis	1415	1416	Y
+1373	connective tissue disorder	1416	1080	Y
+1374	allergy/hypersensitivity/anaphylaxis	1417	1080	Y
+1376	giant cell/temporal arteritis	1419	1415	Y
+1377	polymyalgia rheumatica	1420	1415	Y
+1378	wegners granulmatosis	1421	1415	Y
+1379	microscopic polyarteritis	1422	1415	Y
+1380	polyartertis nodosa	1423	1415	Y
+1381	systemic lupus erythematosis/sle	1424	1416	Y
+1382	sjogren's syndrome/sicca syndrome	1425	1416	Y
+1383	dermatopolymyositis	1426	1416	Y
+1384	scleroderma/systemic sclerosis	1427	1416	Y
+1385	allergy or anaphylactic reaction to food	1428	1417	Y
+1386	allergy or anaphylactic reaction to drug	1429	1417	Y
+1387	hayfever/allergic rhinitis	1430	1417	Y
+1394	peripheral nerve injury	1438	1266	Y
+1396	enlarged prostate	1441	1232	Y
+1397	other demyelinating disease (not multiple sclerosis)	1442	1284	Y
+1398	pneumonia	1443	1660	Y
+1400	peptic ulcer	1445	1158	Y
+1402	endometriosis	1451	1615	Y
+1403	female infertility	1452	1390	Y
+1404	male infertility	1453	1231	Y
+1405	other renal/kidney problem	1454	1074	Y
+1406	muscle or soft tissue injuries	1457	1323	Y
+1407	burns	1458	1077	Y
+1408	alcohol dependency	1461	1460	Y
+1409	opioid dependency	1462	1460	Y
+1410	other substance abuse/dependency	1463	1460	Y
+1411	lung abscess	1464	1660	Y
+1412	bronchitis	1465	1132	Y
+1413	nasal/sinus disorder	1467	1466	Y
+1414	throat or larynx disorder	1468	1466	Y
+1415	ear/vestibular disorder	1469	1466	Y
+1416	chronic sinusitis	1470	1467	Y
+1417	nasal polyps	1471	1467	Y
+1418	chronic laryngitis	1472	1468	Y
+1419	vocal cord polyp	1473	1468	Y
+1420	otosclerosis	1474	1469	Y
+1421	meniere's disease	1475	1469	Y
+1425	cerebral aneurysm	1480	1083	Y
+1426	myocarditis	1481	1082	Y
+1427	polycystic kidney	1482	1454	Y
+1428	thyroiditis	1483	1249	Y
+1429	acromegaly	1484	1262	Y
+1430	hypopituitarism	1485	1262	Y
+1431	hyperprolactinaemia	1486	1262	Y
+1432	carcinoid syndrome/tumour	1487	1075	Y
+1433	cerebral palsy	1488	1265	Y
+1434	other neurological problem	1489	1265	Y
+1435	optic neuritis	1490	1268	Y
+1436	headaches (not migraine)	1491	1489	Y
+1437	myasthenia gravis	1492	1489	Y
+1438	polycythaemia vera	1493	1507	Y
+1439	hiv/aids	1748	1747	Y
+1440	tuberculosis (tb)	1761	1758	Y
+1441	malaria	1763	1762	Y
+1442	helicobacter pylori	1760	1758	Y
+1443	schistosomiasis/bilharzia	1764	1762	Y
+1445	clotting disorder/excessive bleeding	1503	1502	Y
+1446	anaemia	1504	1502	Y
+1447	pancytopenia	1505	1502	Y
+1448	neutropenia/lymphopenia	1506	1502	Y
+1449	myeloproliferative disorder	1507	1502	Y
+1450	monoclonal gammopathy/not myeloma	1508	1502	Y
+1451	hereditary/genetic haematological disorder	1509	1502	Y
+1452	eczema/dermatitis	1511	1510	Y
+1453	psoriasis	1512	1510	Y
+1454	blistering/desquamating skin disorder	1513	1510	Y
+1455	chronic skin ulcers	1514	1510	Y
+1456	malabsorption/coeliac disease	1516	1155	Y
+1457	duodenal ulcer	1517	1155	Y
+1458	diverticular disease/diverticulitis	1518	1155	Y
+1459	colitis/not crohns or ulcerative colitis	1519	1155	Y
+1460	rectal or colon adenoma/polyps	1520	1155	Y
+1461	inflammatory bowel disease	1521	1155	Y
+1462	crohns disease	1522	1521	Y
+1463	ulcerative colitis	1523	1521	Y
+1464	rheumatoid arthritis	1524	1321	Y
+1465	osteoarthritis	1525	1321	Y
+1466	gout	1526	1321	Y
+1467	other joint disorder	1527	1321	Y
+1468	diabetic neuropathy/ulcers	1528	1280	Y
+1469	post-traumatic stress disorder	1530	1269	Y
+1470	anorexia/bulimia/other eating disorder	1531	1269	Y
+1471	atrial fibrillation	1532	1094	Y
+1472	emphysema	1534	1132	Y
+1473	high cholesterol	1536	1071	Y
+1474	hiatus hernia	1537	1153	Y
+1475	sclerosing cholangitis	1538	1180	Y
+1476	sciatica	1539	1320	Y
+1477	psoriatic arthropathy	1540	1321	Y
+1478	cervical spondylosis	1541	1608	Y
+1479	rheumatic fever	1542	1082	Y
+1480	dermatomyositis	1543	1426	Y
+1481	polymyositis	1544	1426	Y
+1482	chronic fatigue syndrome	1545	1080	Y
+1483	atrial flutter	1546	1094	Y
+1484	wolff parkinson white / wpw syndrome	1547	1094	Y
+1485	irregular heart beat	1548	1094	Y
+1486	sick sinus syndrome	1549	1094	Y
+1487	svt / supraventricular tachycardia	1550	1094	Y
+1488	mitral valve prolapse	1551	1650	Y
+1489	mitral stenosis	1552	1650	Y
+1490	aortic stenosis	1553	1652	Y
+1491	brain haemorrhage	1554	1098	Y
+1492	aortic aneurysm	1555	1084	Y
+1493	other venous/lymphatic disease	1556	1071	Y
+1494	varicose veins	1557	1556	Y
+1495	lymphoedema	1558	1556	Y
+1496	alpha-1 antitrypsin deficiency	1559	1132	Y
+1497	pneumothorax	1560	1136	Y
+1498	empyema	1561	1660	Y
+1499	labyrinthitis	1562	1469	Y
+1500	vertigo	1563	1469	Y
+1501	pyloric stenosis	1564	1154	Y
+1502	appendicitis	1565	1155	Y
+1503	anal problem	1566	1155	Y
+1504	anal fissure	1567	1566	Y
+1505	haemorrhoids / piles	1568	1566	Y
+1506	primary biliary cirrhosis	1569	1179	Y
+1507	haemochromatosis	1570	1156	Y
+1508	jaundice (unknown cause)	1571	1156	Y
+1509	gastroenteritis/dysentry	1572	1158	Y
+1510	dyspepsia / indigestion	1573	1158	Y
+1511	abdominal hernia	1574	1158	Y
+1512	umbilical hernia	1575	1574	Y
+1513	inguinal hernia	1576	1574	Y
+1514	cystitis	1577	1217	Y
+1515	pyelonephritis	1578	1217	Y
+1516	bph / benign prostatic hypertrophy	1579	1232	Y
+1517	prostatitis	1580	1232	Y
+1518	erectile dysfunction / impotence	1581	1231	Y
+1519	kidney nephropathy	1582	1454	Y
+1520	iga nephropathy	1583	1582	Y
+1521	diabetes insipidus	1584	1245	Y
+1522	grave's disease	1585	1249	Y
+1523	trigemminal neuralgia	1586	1275	Y
+1524	spina bifida	1587	1277	Y
+1525	benign / essential tremor	1588	1489	Y
+1526	polio / poliomyelitis	1589	1489	Y
+1527	retinitis pigmentosa	1590	1301	Y
+1528	macular degeneration	1591	1301	Y
+1529	dry eyes	1592	1268	Y
+1530	iritis	1593	1268	Y
+1531	post-natal depression	1594	1312	Y
+1532	disc problem	1595	1320	Y
+1533	disc degeneration	1596	1595	Y
+1534	back pain	1597	1320	Y
+1535	scoliosis	1598	1320	Y
+1536	spinal stenosis	1599	1320	Y
+1537	joint pain	1600	1527	Y
+1538	arthritis (nos)	1601	1321	Y
+1540	plantar fascitis	1603	1323	Y
+1541	carpal tunnel syndrome	1604	1323	Y
+1542	fibromyalgia	1605	1323	Y
+1544	dupuytren's contracture	1607	1323	Y
+1545	neck problem/injury	1608	1077	Y
+1546	essential thrombocytosis	1609	1503	Y
+1548	acne/acne vulgaris	1611	1510	Y
+1549	lichen planus	1612	1510	Y
+1550	lichen sclerosis	1613	1510	Y
+1551	ovarian problem	1614	1390	Y
+1552	uterine problem	1615	1390	Y
+1553	cervical problem	1616	1390	Y
+1554	cervical intra-epithelial neoplasia (cin) / precancerous cells cervix	1617	1616	Y
+1555	cervical polyps	1618	1616	Y
+1556	menorrhagia (unknown cause)	1619	1390	Y
+1557	pelvic inflammatory disease/ pid	1620	1390	Y
+1558	ectopic pregnancy	1622	1621	Y
+1559	miscarriage	1623	1621	Y
+1560	breast fibroadenoma	1624	1407	Y
+1561	raynaud's phenomenon/disease	1625	1416	Y
+1562	food intolerance	1626	1417	Y
+1563	urticaria	1627	1417	Y
+1564	antiphospholipid syndrome	1628	1080	Y
+1566	mrsa / methicillin resistant staphylococcus aureus	1759	1758	Y
+1567	infectious mononucleosis / glandular fever / epstein barr virus (ebv)	1756	1747	Y
+1568	measles / morbillivirus	1750	1747	Y
+1569	mumps / epidemic parotitis	1757	1747	Y
+1570	rubella / german measles	1751	1747	Y
+1571	chickenpox	1753	1752	Y
+1572	whooping cough / pertussis	1769	1758	Y
+1573	shingles	1754	1752	Y
+1574	diphtheria	1768	1758	Y
+1575	herpes simplex	1755	1747	Y
+1576	dengue fever	1765	1762	Y
+1577	typhoid fever	1766	1762	Y
+1578	hepatitis a	1642	1177	Y
+1579	hepatitis b	1643	1177	Y
+1580	hepatitis c	1644	1177	Y
+1581	hepatitis d	1645	1177	Y
+1582	hepatitis e	1646	1177	Y
+1583	ischaemic stroke	1649	1098	Y
+1584	mitral valve disease	1650	1095	Y
+1585	mitral regurgitation / incompetence	1651	1650	Y
+1586	aortic valve disease	1652	1095	Y
+1587	aortic regurgitation / incompetence	1653	1652	Y
+1588	hypertrophic cardiomyopathy (hcm / hocm)	1654	1096	Y
+1589	pericarditis	1655	1097	Y
+1590	pericardial effusion	1656	1097	Y
+1591	aortic aneurysm rupture	1657	1555	Y
+1592	aortic dissection	1658	1555	Y
+1593	varicose ulcer	1659	1556	Y
+1594	respiratory infection	1660	1072	Y
+1595	pleural plaques (not known asbestosis)	1662	1136	Y
+1596	pleural effusion	1663	1136	Y
+1597	tinnitus / tiniitis	1664	1469	Y
+1598	tonsiltis	1665	1468	Y
+1599	constipation	1666	1155	Y
+1600	bowel / intestinal perforation	1667	1155	Y
+1601	bowel / intestinal infarction	1668	1155	Y
+1602	bowel / intestinal obstruction	1670	1155	Y
+1603	rectal prolapse	1671	1155	Y
+1604	alcoholic liver disease / alcoholic cirrhosis	1672	1179	Y
+1605	femoral hernia	1673	1574	Y
+1606	incisional hernia	1674	1574	Y
+1607	diabetic nephropathy	1675	1582	Y
+1608	nephritis	1676	1454	Y
+1609	glomerulnephritis	1677	1676	Y
+1610	thyroid goitre	1678	1249	Y
+1611	hyperparathyroidism	1679	1254	Y
+1613	blepharitis / eyelid infection	1681	1268	Y
+1614	stress	1682	1269	Y
+1615	obsessive compulsive disorder (ocd)	1683	1269	Y
+1616	insomnia	1684	1269	Y
+1617	osteopenia	1685	1319	Y
+1618	soft tissue inflammation	1686	1323	Y
+1619	tendonitis / tendinitis / tenosynovitis	1687	1686	Y
+1620	bursitis	1688	1686	Y
+1621	synovitis	1689	1686	Y
+1622	epicondylitis	1690	1686	Y
+1623	tennis elbow / lateral epicondylitis	1691	1690	Y
+1624	housemaid's knee (prepatellar bursitis)	1692	1688	Y
+1625	cellulitis	1693	1510	Y
+1626	fracture skull / head	1697	1696	Y
+1627	fracture jaw	1698	1696	Y
+1628	fracture nose	1699	1696	Y
+1629	fracture face / orbit / eye socket	1700	1696	Y
+1630	fracture neck / cervical fracture	1701	1696	Y
+1631	fracture clavicle / collar bone	1703	1702	Y
+1632	fracture shoulder / scapula	1704	1702	Y
+1633	fracture upper arm / humerus / elbow	1705	1702	Y
+1634	fracture forearm / wrist	1706	1702	Y
+1635	fracture radius	1707	1706	Y
+1636	fracture ulna	1708	1706	Y
+1637	fracture wrist / colles fracture	1709	1706	Y
+1638	fracture hand	1710	1702	Y
+1639	fracture finger	1711	1702	Y
+1640	fracture thumb	1712	1702	Y
+1644	fracture rib	1717	1713	Y
+1645	fracture sternum	1718	1713	Y
+1646	fracture vertebra / crush fracture / vertebral collapse	1719	1713	Y
+1647	fracture pelvis	1721	1720	Y
+1648	fracture neck of femur / hip	1722	1720	Y
+1649	fracture shaft of femur	1723	1720	Y
+1650	fracture patella / knee	1724	1720	Y
+1651	fracture lower leg / ankle	1725	1720	Y
+1652	fracture tibia	1726	1725	Y
+1653	fracture fibula	1727	1725	Y
+1654	fracture foot	1728	1720	Y
+1655	fracture metatarsal	1729	1728	Y
+1656	fracture toe	1730	1728	Y
+1657	septicaemia / sepsis	1731	1495	Y
+1658	myelofibrosis	1732	1507	Y
+1659	meningioma / benign meningeal tumour	1733	1489	Y
+1660	rosacea	1734	1510	Y
+1661	vitiligo	1735	1510	Y
+1662	cervical erosion	1736	1616	Y
+1663	abnormal smear (cervix)	1737	1617	Y
+1664	dysmenorrhoea / dysmenorrhea	1738	1390	Y
+1665	menopausal symptoms / menopause	1739	1390	Y
+1666	benign breast lump	1740	1407	Y
+1667	alopecia / hair loss	1741	1510	Y
+1668	allergy to house dust mite	1742	1417	Y
+1669	contact dermatitis	1743	1417	Y
+1670	allergy to elastoplast	1744	1743	Y
+1671	allergy to nickel	1745	1743	Y
+1674	varicella zoster virus	1752	1747	Y
+1675	giardia / giardiasis	1767	1762	Y
+1676	yellow fever	1770	1762	Y
+1677	scarlet fever / scarlatina	1771	1758	Y
+1678	chlamydia	1772	1758	Y
+1679	undescended testicle	1773	1231	Y
+1680	bowen's disease	1776	1510	Y
+1681	hydatiform mole	1777	1391	Y
+1682	benign insulinoma	1778	1075	Y
+1683	benign neuroma	1779	1489	Y
+99999	unclassifiable	99999	0	N

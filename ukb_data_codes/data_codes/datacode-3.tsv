@@ -1,0 +1,90 @@
+coding	meaning	node_id	parent_id	selectable
+-1	other cancer	1011	0	N
+-1	haematological malignancy	1009	0	N
+-1	neurological system cancer	1005	0	N
+-1	ear/nose/throat cancer	1001	0	N
+-1	genital tract cancer	1008	0	N
+-1	gastrointestinal cancer	1002	0	N
+-1	urinary tract cancer	1006	0	N
+1001	lung cancer	1003	1095	Y
+1002	breast cancer	1007	0	Y
+1003	skin cancer	1010	0	Y
+1004	cancer of lip/mouth/pharynx/oral cavity	1012	1001	Y
+1005	salivary gland cancer	1013	1012	Y
+1006	larynx/throat cancer	1014	1095	Y
+1007	nasal cavity cancer	1015	1001	Y
+1008	ear cancer	1016	1095	Y
+1009	sinus cancer	1017	1001	Y
+1010	lip cancer	1018	1012	Y
+1011	tongue cancer	1019	1012	Y
+1012	gum cancer	1020	1012	Y
+1015	parotid gland cancer	1023	1013	Y
+1016	other salivary gland cancer	1024	1013	Y
+1017	oesophageal cancer	1025	1002	Y
+1018	stomach cancer	1026	1002	Y
+1019	small intestine/small bowel cancer	1027	1002	Y
+1020	large bowel cancer/colorectal cancer	1028	1002	Y
+1021	anal cancer	1029	1002	Y
+1022	colon cancer/sigmoid cancer	1030	1028	Y
+1023	rectal cancer	1031	1028	Y
+1024	liver/hepatocellular cancer	1032	1002	Y
+1025	gallbladder/bile duct cancer	1033	1002	Y
+1026	pancreas cancer	1034	1002	Y
+1027	small cell lung cancer	1035	1003	Y
+1028	non-small cell lung cancer	1036	1003	Y
+1029	peripheral nerve/autonomic nerve cancer	1037	1005	Y
+1030	eye and/or adnexal cancer	1038	1005	Y
+1031	meningeal cancer / malignant meningioma	1039	1005	Y
+1032	brain cancer / primary malignant brain tumour	1040	1005	Y
+1033	spinal cord or cranial nerve cancer	1041	1005	Y
+1034	kidney/renal cell cancer	1042	1006	Y
+1035	bladder cancer	1043	1006	Y
+1036	other cancer of urinary tract	1044	1006	Y
+1037	female genital tract cancer	1045	1008	Y
+1038	male genital tract cancer	1046	1008	Y
+1039	ovarian cancer	1047	1045	Y
+1040	uterine/endometrial cancer	1048	1045	Y
+1041	cervical cancer	1049	1045	Y
+1042	vaginal cancer	1050	1045	Y
+1043	vulval cancer	1051	1045	Y
+1044	prostate cancer	1052	1046	Y
+1045	testicular cancer	1053	1046	Y
+1046	penis cancer	1054	1046	Y
+1047	lymphoma	1055	1009	Y
+1048	leukaemia	1056	1009	Y
+1050	multiple myeloma	1058	1009	Y
+1051	myelofibrosis or myelodysplasia	1059	1009	Y
+1052	hodgkins lymphoma / hodgkins disease	1060	1055	Y
+1053	non-hodgkins lymphoma	1061	1055	Y
+1055	chronic lymphocytic	1063	1056	Y
+1056	chronic myeloid	1064	1056	Y
+1058	other haematological malignancy	1066	1009	Y
+1059	malignant melanoma	1067	1010	Y
+1060	non-melanoma skin cancer	1068	1010	Y
+1061	basal cell carcinoma	1069	1068	Y
+1062	squamous cell carcinoma	1070	1068	Y
+1063	primary bone cancer	1071	1011	Y
+1064	mesothelioma	1072	1011	Y
+1065	thyroid cancer	1073	1011	Y
+1066	parathyroid cancer	1074	1011	Y
+1067	adrenal cancer	1075	1011	Y
+1068	sarcoma/fibrosarcoma	1076	1011	Y
+1070	malignant lymph node, unspecified	1078	1011	Y
+1071	metastatic cancer (unknown primary)	1079	1011	Y
+1072	cin/pre-cancer cells cervix	1080	1049	Y
+1073	rodent ulcer	1081	1069	Y
+1074	acute myeloid leukaemia	1082	1056	Y
+1075	retinoblastoma	1083	1038	Y
+1076	kaposis sarcoma	1084	1011	Y
+1077	mouth cancer	1087	1012	Y
+1078	tonsil cancer	1088	1012	Y
+1079	oropharynx / oropharyngeal cancer	1089	1012	Y
+1080	trachea cancer	1091	1095	Y
+1081	thymus cancer / malignant thymoma	1092	1095	Y
+1082	heart / mediastinum cancer	1093	1095	Y
+1084	respiratory / intrathoracic cancer	1095	0	Y
+1085	bone metastases / bony secondaries	1097	1079	Y
+1086	appendix cancer	1098	1030	Y
+1087	fallopian tube cancer	1099	1045	Y
+1088	malignant insulinoma	1100	1034	Y
+99999	unclassifiable	99999	0	N

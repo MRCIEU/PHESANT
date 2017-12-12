@@ -1,0 +1,202 @@
+coding	meaning	node_id	parent_id	selectable
+100	Africa	100	0	N
+101	Algeria	101	100	Y
+102	Angola	102	100	Y
+103	Benin	103	100	Y
+104	Botswana	104	100	Y
+105	Burkina	105	100	Y
+106	Burundi	106	100	Y
+107	Cameroon	107	100	Y
+108	Cape Verde	108	100	Y
+109	Caribbean	109	100	Y
+110	Central African Republic	110	100	Y
+111	Comoros	111	100	Y
+112	Congo	112	100	Y
+113	Djibouti	113	100	Y
+114	East Africa	114	100	Y
+115	Egypt	115	100	Y
+116	Equatorial Guinea	116	100	Y
+117	Eritrea	117	100	Y
+118	Ethiopia	118	100	Y
+119	Gambia	119	100	Y
+120	Ghana	120	100	Y
+121	Guinea	121	100	Y
+122	Guinea-Bissau	122	100	Y
+123	Ivory Coast	123	100	Y
+124	Kenya	124	100	Y
+125	Lesotho	125	100	Y
+126	Liberia	126	100	Y
+127	Libya	127	100	Y
+128	Madagascar	128	100	Y
+129	Malawi	129	100	Y
+130	Mauritania	130	100	Y
+131	Mauritius	131	100	Y
+132	Morocco	132	100	Y
+133	Mozambique	133	100	Y
+134	Namibia	134	100	Y
+135	Niger	135	100	Y
+136	Nigeria	136	100	Y
+137	Rwanda	137	100	Y
+138	Sao Tome and Principe	138	100	Y
+139	Senegal	139	100	Y
+140	Seychelles	140	100	Y
+141	Sierra Leone	141	100	Y
+142	Somalia	142	100	Y
+143	South Africa	143	100	Y
+144	Sudan	144	100	Y
+145	Swaziland	145	100	Y
+146	Tanzania	146	100	Y
+147	Togo	147	100	Y
+148	Tunisia	148	100	Y
+149	Uganda	149	100	Y
+150	West Africa	150	100	Y
+151	Zambia	151	100	Y
+152	Zimbabwe	152	100	Y
+200	Asia	200	0	N
+201	Afghanistan	201	200	Y
+202	Bahrain	202	200	Y
+203	Bangladesh	203	200	Y
+204	Borneo	204	200	Y
+205	British Indian Ocean Territory	205	200	Y
+206	Brunei	206	200	Y
+207	Myanmar (Burma)	207	200	Y
+208	Cambodia	208	200	Y
+209	China	209	200	Y
+210	Emirates	210	200	Y
+211	Hong Kong	211	200	Y
+212	India	212	200	Y
+213	Indonesia	213	200	Y
+214	Iran	214	200	Y
+215	Iraq	215	200	Y
+216	Israel	216	200	Y
+217	Japan	217	200	Y
+218	Jordan	218	200	Y
+219	Kashmir	219	200	Y
+220	Kurdistan	220	200	Y
+221	Kuwait	221	200	Y
+222	Kyrgyzstan	222	200	Y
+223	Laos	223	200	Y
+224	Lebanon	224	200	Y
+225	Macau (Macao)	225	200	Y
+226	Malaysia	226	200	Y
+227	Maldives	227	200	Y
+228	Mongolia	228	200	Y
+229	Nepal	229	200	Y
+230	North Korea	230	200	Y
+231	Oman	231	200	Y
+232	Pakistan	232	200	Y
+233	Palestine	233	200	Y
+234	Pattaya	234	200	Y
+235	Philippines	235	200	Y
+236	Qatar	236	200	Y
+237	Saint Helena	237	200	Y
+238	Saudi Arabia	238	200	Y
+239	Singapore	239	200	Y
+240	South Korea	240	200	Y
+241	Sri Lanka	241	200	Y
+242	Syria	242	200	Y
+243	Taiwan	243	200	Y
+244	Tajikistan	244	200	Y
+245	Thailand	245	200	Y
+246	Tibet	246	200	Y
+247	Turkmenistan	247	200	Y
+248	Uzbekistan	248	200	Y
+249	Vietnam	249	200	Y
+250	West Indies	250	200	Y
+251	Yemen	251	200	Y
+300	Europe	300	0	N
+301	Akrotiri and Dhekelia	301	300	Y
+302	Albania	302	300	Y
+303	Armenia	303	300	Y
+304	Austria	304	300	Y
+305	Azerbaijan	305	300	Y
+306	Belarus	306	300	Y
+307	Belgium	307	300	Y
+308	Bosnia and Herzegovina	308	300	Y
+309	Bulgaria	309	300	Y
+310	Crete	310	300	Y
+311	Croatia	311	300	Y
+312	Cyprus	312	300	Y
+313	Czech Republic	313	300	Y
+314	Denmark	314	300	Y
+315	Estonia	315	300	Y
+316	Faroe Islands	316	300	Y
+317	Finland	317	300	Y
+318	France	318	300	Y
+319	Georgia	319	300	Y
+320	Germany	320	300	Y
+321	Gibraltar	321	300	Y
+322	Greece	322	300	Y
+323	Hungary	323	300	Y
+324	Iceland	324	300	Y
+325	Isle of Man	325	300	Y
+326	Italy	326	300	Y
+327	Kazakhstan	327	300	Y
+328	Latvia	328	300	Y
+329	Lithuania	329	300	Y
+330	Luxembourg	330	300	Y
+331	Macedonia	331	300	Y
+332	Madeira	332	300	Y
+333	Malta	333	300	Y
+334	Moldova	334	300	Y
+335	Monaco	335	300	Y
+336	Netherlands	336	300	Y
+337	Netherlands Antilles	337	300	Y
+338	Norway	338	300	Y
+339	Poland	339	300	Y
+340	Portugal	340	300	Y
+341	Republic of Kosovo	341	300	Y
+342	Romania	342	300	Y
+343	Russia	343	300	Y
+344	Serbia	344	300	Y
+345	Serbia/Montenegro	345	300	Y
+346	Sicily	346	300	Y
+347	Slovakia	347	300	Y
+348	Slovenia	348	300	Y
+349	Spain	349	300	Y
+350	Sweden	350	300	Y
+351	Switzerland	351	300	Y
+352	Turkey	352	300	Y
+353	Ukraine	353	300	Y
+354	United Kingdom	354	300	Y
+355	Channel Islands	355	300	Y
+356	Ireland	356	300	Y
+400	North America	400	0	N
+401	Anguilla	401	400	Y
+402	Antigua and Barbuda	402	400	Y
+403	Aruba	403	400	Y
+404	Bahamas	404	400	Y
+405	Barbados	405	400	Y
+406	Belize	406	400	Y
+407	Bermuda	407	400	Y
+409	Canada	409	400	Y
+410	Costa Rica	410	400	Y
+413	El Salvador	413	400	Y
+416	Guatemala	416	400	Y
+421	Mexico	421	400	Y
+424	Nicaragua	424	400	Y
+426	Panama	426	400	Y
+427	Puerto Rico	427	400	Y
+434	USA	434	400	Y
+500	Oceania	500	0	N
+501	Samoa	501	500	Y
+502	Australia	502	500	Y
+503	Fiji	503	500	Y
+505	New Zealand	505	500	Y
+506	Pacific Islands	506	500	Y
+600	South America	600	0	N
+601	Argentina	601	600	Y
+602	Bolivia	602	600	Y
+603	Brazil	603	600	Y
+604	Chile	604	600	Y
+605	Colombia	605	600	Y
+606	Cuba	606	600	Y
+607	Ecuador	607	600	Y
+608	Falkland Islands	608	600	Y
+609	The Guianas	609	600	Y
+611	Paraguay	611	600	Y
+612	Peru	612	600	Y
+613	South Georgia and the South Sandwich Islands	613	600	Y
+614	Suriname	614	600	Y
+615	Uruguay	615	600	Y
+616	Venezuela	616	600	Y

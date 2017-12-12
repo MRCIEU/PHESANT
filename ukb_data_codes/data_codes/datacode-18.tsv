@@ -1,0 +1,4 @@
+coding	meaning
+0	Instruction not recalled, either skipped or incorrect
+1	Correct recall on first attempt
+2	Correct recall on second attempt

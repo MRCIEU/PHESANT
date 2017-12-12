@@ -1,0 +1,15 @@
+coding	meaning	node_id	parent_id	selectable
+100	Declined	100	0	Y
+101	Against participant wishes	101	100	Y
+102	Lack of time	102	100	Y
+105	Unwilling to remove contact lenses	105	100	Y
+200	Equipment failure	200	0	Y
+201	Malfunction	201	200	Y
+202	Not available	202	200	Y
+300	Reason not known	300	0	Y
+400	Unable	400	0	Y
+405	Other health reason	405	400	Y
+412	Unable to understand instructions	412	400	Y
+424	Other eye-related reason	424	400	Y
+425	Visually impaired	425	400	Y
+426	Forgot glasses	426	400	Y

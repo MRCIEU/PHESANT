@@ -1,0 +1,271 @@
+coding	meaning	node_id	parent_id	selectable
+-1	investigations +/- biopsy	1571	0	N
+-1	neurosurgery	1521	1076	N
+-1	haematology/dermatology	1078	0	N
+-1	cardiovascular	1071	0	N
+-1	musculoskeletal/trauma	1077	0	N
+-1	renal/urology	1074	0	N
+-1	thoracotomy/chest/lung surgery	1493	1072	N
+-1	amputation	1488	1071	N
+-1	gastrointestinal/abdominal	1073	0	N
+-1	other urological surgery (male)	1231	1074	N
+-1	gynaecology/breast	1079	0	N
+-1	lower gi surgery	1510	1073	N
+-1	neurology/eye	1076	0	N
+-1	respiratory/ent	1072	0	N
+-1	upper gi surgery	1498	1073	N
+-1	endocrine	1075	0	N
+1069	heart surgery	1086	1071	Y
+1070	coronary angioplasty (ptca) +/- stent	1087	1071	Y
+1071	other arterial surgery/revascularisation procedures	1088	1071	Y
+1095	coronary artery bypass grafts (cabg)	1113	1086	Y
+1096	pacemaker/defibrillator insertion	1114	1086	Y
+1097	heart valve surgery	1115	1086	Y
+1098	heart transplant	1116	1086	Y
+1099	aortic valve repair/replacement	1117	1115	Y
+1100	mitral valve repair/replacement	1118	1115	Y
+1101	other valve repair/replacement	1119	1115	Y
+1102	fem-pop bypass/leg artery bypass	1120	1088	Y
+1103	leg artery aneurysm repair	1121	1088	Y
+1104	aortic aneurysm/repair or stent	1122	1088	Y
+1105	carotid artery surgery/endarterectomy	1123	1088	Y
+1106	cerebral artery aneurysm surgery or clipping	1124	1088	Y
+1107	non-coronary artery angioplasty +/- stent	1125	1088	Y
+1108	leg artery angioplasty +/- stent	1127	1125	Y
+1109	carotid artery angioplasty +/- stent	1128	1125	Y
+1110	renal artery angioplasty +/- stent	1129	1125	Y
+1118	ent surgery	1137	1072	Y
+1127	ear surgery	1146	1137	Y
+1128	nasal/sinus/nose surgery	1147	1137	Y
+1129	throat/larynx surgery (incl tracheostomy)	1148	1137	Y
+1130	mouth/salivary gland surgery	1149	1137	Y
+1195	renal/kidney transplant	1216	1074	Y
+1197	percutaneous/open kidney stone surgery/lithotripsy	1218	1074	Y
+1199	ureteric surgery	1220	1074	Y
+1207	prostate operation	1232	1231	Y
+1208	radical prostatectomy	1233	1232	Y
+1209	transurethral resection of prostate (turp)	1234	1232	Y
+1216	testicular/scrotal operation	1241	1231	Y
+1217	removal of testicle/orchidectomy	1242	1241	Y
+1218	vasectomy	1243	1231	Y
+1219	other urological surgery	1244	1074	Y
+1224	thyroid surgery	1249	1075	Y
+1228	thyroid radioablation therapy	1253	1249	Y
+1229	parathyroidectomy	1254	1075	Y
+1232	adrenal surgery	1257	1075	Y
+1296	bone surgery/joint surgery	1322	1077	Y
+1297	muscle/soft tissue surgery	1323	1077	Y
+1318	hip replacement/revision	1357	1322	Y
+1319	knee replacement/revision	1358	1322	Y
+1320	spine or back surgery	1359	1322	Y
+1354	gynaecological surgery	1396	1079	Y
+1355	bilateral oophorectomy	1397	1562	Y
+1356	unilateral oophorectomy	1398	1562	Y
+1357	hysterectomy	1399	1565	Y
+1358	hysterectomy with oophorectomy	1400	1399	Y
+1359	hysterectomy with cervical sparing	1401	1399	Y
+1360	endometrial ablation	1402	1565	Y
+1361	vaginal prolapse/colposuspension	1403	1565	Y
+1362	sterilisation	1404	1562	Y
+1363	intrauterine contraceptive device insertion/removal	1405	1565	Y
+1365	breast surgery	1408	1079	Y
+1368	mastectomy	1411	1408	Y
+1369	lumpectomy	1412	1408	Y
+1370	mammoplasty/cosmetic operation on breast	1413	1408	Y
+1393	venous surgery/procedures	1437	1071	Y
+1402	hernia surgery	1447	1073	Y
+1403	inguinal/femoral hernia repair	1448	1447	Y
+1404	umbilical hernia repair	1449	1447	Y
+1405	incisional hernia repair	1450	1447	Y
+1427	bladder surgery	1474	1074	Y
+1428	transurethral resection bladder tumour (turbt)	1475	1474	Y
+1429	cystectomy	1476	1474	Y
+1431	urethral surgery	1478	1474	Y
+1432	thyroidectomy/partial thyroidectomy	1479	1249	Y
+1434	eye surgery	1481	1076	Y
+1435	cataract extraction/lens implant	1482	1481	Y
+1436	glaucoma surgery/trabeculectomy	1483	1481	Y
+1437	retinal operation/vitrectomy	1484	1481	Y
+1438	bone marrow transplant	1485	1078	Y
+1439	reduction or fixation of bone fracture	1486	1322	Y
+1440	amputation of leg	1489	1488	Y
+1441	amputation of foot	1490	1488	Y
+1442	amputation of toe	1491	1488	Y
+1443	other amputation	1492	1488	Y
+1444	lung removal/pneumonectomy/lobectomy	1494	1493	Y
+1445	bullaectomy/bullae removal	1495	1493	Y
+1446	lung transplant	1496	1493	Y
+1447	other thoracic surgery	1497	1493	Y
+1448	stomach surgery	1499	1498	Y
+1449	oesophageal surgery	1500	1498	Y
+1450	liver surgery	1501	1498	Y
+1451	biliary surgery	1502	1498	Y
+1452	pancreas surgery	1503	1498	Y
+1453	splenectomy	1504	1498	Y
+1454	liver transplant	1505	1501	Y
+1455	cholecystectomy/gall bladder removal	1506	1502	Y
+1456	bile duct surgery	1507	1502	Y
+1457	pancreatic transplant	1508	1503	Y
+1458	appendicectomy	1511	1510	Y
+1459	bowel resection	1512	1510	Y
+1460	anal surgery	1513	1510	Y
+1461	large bowel resection +/- colostomy	1514	1512	Y
+1462	small bowel resection	1515	1512	Y
+1463	rectal or colon polypectomy	1516	1514	Y
+1464	colectomy/hemicolectomy	1517	1514	Y
+1465	rectal/sigmoid resection	1518	1514	Y
+1466	other bowel surgery	1519	1510	Y
+1467	brain surgery	1522	1521	Y
+1468	intracranial haematoma drainage	1523	1521	Y
+1469	cerebroventricular shunt/shunt for hydrocephalus	1524	1521	Y
+1470	spinal cord surgery	1525	1521	Y
+1471	peripheral nerve surgery	1526	1521	Y
+1472	pituitary surgery	1527	1521	Y
+1473	pituitary transplant	1528	1527	Y
+1474	skin operation or plastic surgery	1529	1078	Y
+1475	fertility treatment procedures	1530	1396	Y
+1476	fistula for dialysis	1531	1088	Y
+1477	caesarean section / caesarian section	1532	1079	Y
+1478	tonsillectomy +/- adenoids	1533	1137	Y
+1479	varicose vein surgery	1535	1437	Y
+1480	wisdom teeth surgery	1536	1137	Y
+1481	maxillo-facial surgery	1537	1137	Y
+1482	oesphageal fundoplication/hiatus hernia surgery	1538	1500	Y
+1483	haemorroidectomy / piles surgery/ banding of piles	1539	1513	Y
+1484	pilonidal sinus surgery (anal)	1540	1513	Y
+1485	abdominal/pelvic adhesion surgery	1542	1514	Y
+1486	laparotomy nos	1543	1073	Y
+1487	nephrectomy/kidney removed	1544	1074	Y
+1488	anterior/posterior repair bladder/uterus	1545	1474	Y
+1489	testicular hydrocoele surgery / drainage	1546	1241	Y
+1490	male circumcision	1547	1231	Y
+1491	squint correction	1548	1481	Y
+1492	spinal laminectomy	1549	1359	Y
+1493	arthroscopy nos	1550	1322	Y
+1494	foot surgery	1551	1552	Y
+1495	lower limb surgery	1552	1322	Y
+1496	knee surgery (not replacement)	1553	1552	Y
+1497	hip surgery (not replacement)	1554	1552	Y
+1498	upper limb surgery	1555	1322	Y
+1499	shoulder surgery	1556	1555	Y
+1500	elbow surgery	1557	1555	Y
+1501	carpal tunnel surgery	1558	1555	Y
+1502	cruciate ligament surgery	1559	1553	Y
+1503	bunion/hallus valgus surgery	1560	1551	Y
+1504	removal of mole/skin lesion	1561	1529	Y
+1505	ovarian/tubal surgery	1562	1396	Y
+1506	ovarian cyst removal/surgery	1563	1562	Y
+1507	ectopic pregnancy surgery	1564	1562	Y
+1508	uterine surgery	1565	1396	Y
+1509	myomectomy/fibroids removed	1566	1565	Y
+1510	dilatation and curettage/d+c	1567	1565	Y
+1511	cervix surgery	1568	1396	Y
+1512	cone biopsy	1569	1568	Y
+1513	breast cyst/abscess removal	1570	1408	Y
+1514	coronary angiogram	1572	1665	Y
+1515	angiogram not coronary	1573	1665	Y
+1516	echocardiogram/transoesophageal echo	1574	1665	Y
+1517	endoscopy / gastroscopy	1575	1666	Y
+1518	ercp/endoscopic retrograde cholangiopancreatogram	1576	1666	Y
+1519	colonoscopy/sigmoidoscopy	1577	1666	Y
+1520	laparoscopy	1578	1571	Y
+1521	hysteroscopy +/- biopsy	1579	1667	Y
+1522	colposcopy +/- biopsy	1580	1667	Y
+1523	triple heart bypass	1581	1113	Y
+1524	cardioversion	1582	1086	Y
+1525	mastoidectomy/mastoid surgery	1583	1146	Y
+1526	stapedectomy	1584	1146	Y
+1527	dental/tooth surgery	1585	1137	Y
+1528	gallstones removed	1586	1502	Y
+1529	duodenal surgery	1587	1498	Y
+1530	ileostomy/colostomy surgery	1588	1519	Y
+1531	discectomy	1589	1359	Y
+1532	ankle surgery	1590	1552	Y
+1533	achilles tendon repair	1591	1551	Y
+1534	hand/finger surgery	1592	1555	Y
+1535	dupuytren's contracture surgery	1593	1592	Y
+1536	lipoma removed / excision of lipoma	1594	1529	Y
+1537	lymph node surgery	1595	1078	Y
+1538	salpingectomy	1596	1562	Y
+1539	uterine polypectomy/uterine polyps removed	1597	1565	Y
+1540	termination of pregnancy/top	1598	1565	Y
+1541	cervical polyps removed	1599	1568	Y
+1542	laser treatment cervix	1600	1568	Y
+1543	pelvic floor surgery	1601	1396	Y
+1544	breast biopsy	1602	1408	Y
+1545	ecg/electrocardiogram	1603	1665	Y
+1546	bronchoscopy	1604	1571	Y
+1547	cystoscopy	1605	1667	Y
+1548	pacemaker insertion	1608	1114	Y
+1549	pacemaker battery change	1609	1114	Y
+1550	defibrillator/icd insertion	1610	1114	Y
+1551	defibrillator/icd battery change	1611	1114	Y
+1552	electrophysiological studies (eps)	1612	1665	Y
+1553	cardiac ablation	1613	1071	Y
+1554	pericardial surgery	1614	1086	Y
+1555	femoral/popliteal/iliac aneurysm repair	1615	1121	Y
+1556	tympanic membrane surgery / ear drum repair	1616	1146	Y
+1557	rhinoplasty / nose surgery	1617	1147	Y
+1558	sinus surgery	1618	1147	Y
+1559	nasal polyp surgery / nasal polypectomy	1619	1147	Y
+1560	parotid surgery / parotidectomy	1620	1149	Y
+1561	tonsillectomy / tonsil surgery	1621	1533	Y
+1562	adenoid surgery / adenoidectomy	1622	1533	Y
+1563	inguinal hernia repair	1623	1448	Y
+1564	femoral hernia repair	1624	1448	Y
+1565	gastrectomy	1625	1499	Y
+1566	peptic ulcer surgery	1626	1498	Y
+1567	gastric ulcer surgery	1627	1626	Y
+1568	duodenal ulcer surgery	1628	1626	Y
+1570	ileostomy surgery	1630	1515	Y
+1571	ileostomy formation	1631	1630	Y
+1572	ileostomy reversal	1632	1630	Y
+1573	surgery for pyloric stenosis	1633	1499	Y
+1574	colostomy surgery	1634	1514	Y
+1575	colostomy formation	1635	1634	Y
+1576	colostomy reversal	1636	1634	Y
+1577	anterior resection	1637	1514	Y
+1578	abdomino-perineal resection / ap resection	1638	1514	Y
+1579	anal fissure surgery	1639	1513	Y
+1580	dialysis access surgery	1640	1074	Y
+1581	haemodialysis access / fistula surgery	1641	1640	Y
+1582	peritoneal dialysis (capd) access surgery	1642	1640	Y
+1583	urethral stricture surgery / dilatation	1643	1478	Y
+1584	testicular lump removal	1644	1241	Y
+1586	varicocoele / varicocele surgery	1646	1241	Y
+1587	removal of epididymal cyst	1647	1241	Y
+1588	orchidopexy	1648	1241	Y
+1589	reversal of vasectomy / vasectomy reversal	1649	1243	Y
+1590	spinal fusion	1650	1359	Y
+1591	eyelid surgery	1651	1481	Y
+1592	nasolacrimal / tear duct surgery	1652	1481	Y
+1593	removal of malignant melanoma	1653	1561	Y
+1594	removal of benign skin lesion	1654	1561	Y
+1595	removal of squamous cell carcinoma (scc)	1655	1561	Y
+1596	removal of rodent ulcer / basal cell carcinoma (bcc)	1656	1561	Y
+1597	skin graft	1657	1529	Y
+1598	nail surgery / nail removal	1658	1529	Y
+1599	exercise ecg	1659	1665	Y
+1600	mri / magnetic resonance imaging	1660	1664	Y
+1601	laryngoscopy	1661	1571	Y
+1602	nasal endoscopy	1662	1571	Y
+1603	scan / x-ray	1664	1571	Y
+1604	cardiac investigation	1665	1571	Y
+1605	gastrointestinal investigation	1666	1571	Y
+1606	genito-urinary investigation	1667	1571	Y
+1607	ct scan	1668	1664	Y
+1608	bone scan	1669	1664	Y
+1609	ultrasound scan	1670	1664	Y
+1610	pet scan	1671	1664	Y
+1611	barium meal / barium swallow	1672	1666	Y
+1612	barium enema	1673	1666	Y
+1613	ct colonoscopy	1674	1666	Y
+1614	biopsy	1675	1571	Y
+1615	bone marrow biopsy	1676	1675	Y
+1616	liver biopsy	1677	1675	Y
+1617	prostate biopsy	1678	1675	Y
+1618	renal biopsy / kidney biopsy	1679	1675	Y
+1619	lung biopsy	1680	1675	Y
+1620	lumbar puncture	1681	1571	Y
+1621	cystoscopy	1682	1667	Y
+99999	unclassifiable	99999	0	N

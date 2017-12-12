@@ -1,0 +1,9 @@
+coding	meaning	node_id	parent_id	selectable
+-1	Malignant	4	0	N
+0	Benign	1	0	Y
+1	Uncertain whether benign or malignant	2	0	Y
+2	Carcinoma in situ	3	0	Y
+3	Malignant, primary site	5	4	Y
+5	Malignant, microinvasive	8	4	Y
+6	Malignant, metastatic site	6	4	Y
+9	Malignant, uncertain whether primary or metastatic site	7	4	Y

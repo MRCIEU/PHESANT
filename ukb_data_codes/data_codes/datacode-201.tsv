@@ -1,0 +1,13 @@
+coding	meaning
+10	NHS patient: not formally detained
+11	NHS patient: formally detained under Part II, Mental Health Act 1983
+12	NHS patient: formally detained under Part III, Mental Health Act 1983, or under other Acts
+13	NHS patient: formally detained under part X, Mental Health Act 1983
+20	Private patient: not formally detained
+21	Private patient: formally detained under Part II, Mental Health Act 1983
+22	Private patient: formally detained under Part III, Mental Health Act 1983
+23	Private patient: formally detained under part X, Mental Health Act 1983
+30	Amenity patient: not formally detained
+31	Amenity patient: formally detained under Part II, Mental Health Act 1983
+32	Amenity patient: formally detained under Part III, Mental Health Act 1983
+33	Amenity patient: formally detained under part X, Mental Health Act 1983

@@ -1,0 +1,5 @@
+coding	meaning
+0	Other error
+1	Invalid landmark position - thigh completely or partly outside the FOV, in particular the femoral epicondyles are not visible
+2	One or more slab(s) missing in the thigh region
+3	Subject tilted in scanner - part of the thigh outside the FOV or severe outer FOV inhomogeneities affect thigh muscle(s)

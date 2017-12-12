@@ -1,0 +1,12 @@
+coding	meaning
+0	Spontaneous vertex
+1	Spontaneous other cephalic
+2	Low forceps, not breech
+3	Other forceps, not breech
+4	Ventouse, vacuum extraction
+5	Breech, including partial breech extraction
+6	Breech extraction not otherwise specified
+7	Elective caesarean section
+8	Emergency caesarean section
+9	Other than those specified above
+X	Not known

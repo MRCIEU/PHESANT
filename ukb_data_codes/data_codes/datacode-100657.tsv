@@ -1,0 +1,8 @@
+coding	meaning
+-3	Prefer not to answer
+-1	Do not know
+1	Less than 18,000
+2	18,000 to 31,000
+3	31,000 to 52,000
+4	52,000 to 100,000
+5	Greater than 100,000

@@ -1,0 +1,95 @@
+coding	meaning
+1010	Accident and emergency (A&E)
+1011	Acute Internal Medicine
+1020	Adult mental illness
+1030	Allied health professional episode
+1040	Anaesthetics
+1050	Audiological medicine
+1060	Blood transfusion
+1070	Cardiology
+1080	Cardiothoracic surgery
+1090	Chemical pathology
+1100	Child and adolescent psychiatry
+1110	Clinical cytogenics and molecular genetics
+1120	Clinical genetics
+1130	Clinical haematology
+1140	Clinical immunology and allergy
+1150	Clinical neuro-physiology
+1160	Clinical oncology/ Radiotherapy
+1170	Clinical pharmacology
+1180	Clinical physiology
+1190	Community health services
+1191	Community Sexual And Reproductive Health
+1200	Community medicine
+1210	Critical care medicine
+1220	Dental medicine
+1230	Dermatology
+1240	Ear, nose and throat (ENT)
+1250	Endocrinology
+1260	Endodontics
+1270	Forensic psychiatry
+1280	Gastroenterology
+1290	General Dental Practice
+1300	General Medical Practice
+1310	General medicine
+1320	General pathology
+1330	General practice other than maternity
+1340	General practice with maternity function
+1350	General surgery
+1360	Genito-urinary medicine
+1370	Geriatric medicine
+1380	Gynaecology
+1390	Haematology
+1400	Histopathology
+1410	Immunopathology
+1420	Infectious diseases
+1430	Joint Consultant Clinics
+1440	Learning disability
+1449	Microbiology And Bacteriology
+1450	Medical microbiology
+1460	Medical oncology
+1470	Medical opthalmology
+1475	Medical Virology
+1480	Midwifery
+1490	Nephrology
+1500	Neurology
+1510	Neuropathology
+1520	Neurosurgery
+1530	Non-UK Provider
+1540	Nuclear medicine
+1550	Nursing episode
+1559	Obstetrics And Gynaecology
+1560	Obstetrics
+1570	Obstetrics: AN (outpatients)
+1580	Obstetrics: PN (outpatients)
+1590	Occupational medicine
+1600	Old age psychiatry
+1610	Ophthalmology
+1620	Oral and maxillo facial surgery
+1630	Oral surgery
+1640	Orthodontics
+1650	Paediatric cardiology
+1660	Paediatric dentistry
+1670	Paediatric neurology
+1680	Paediatric surgery
+1690	Paediatrics
+1700	Pain management
+1710	Palliative medicine
+1720	Periodontics
+1730	Plastic surgery
+1740	Prosthodontics
+1750	Psychotherapy
+1760	Public health dental
+1770	Public health medicine
+1780	Radiology
+1790	Rehabilitation
+1800	Respiratory medicine
+1810	Restorative dentistry
+1820	Rheumatology
+1830	Surgical dentistry
+1831	Sport And Exercise Medicine
+1832	Special Care Dentistry
+1840	Trauma and orthopaedics
+1850	Tropical medicine
+1860	Urology
+9999	Not known

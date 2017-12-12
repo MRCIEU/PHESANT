@@ -1,0 +1,12 @@
+coding	meaning	node_id	parent_id	selectable
+100	Declined	100	0	Y
+101	Against participant wishes	101	100	Y
+102	Lack of time	102	100	Y
+103	Feeling unwell	103	100	Y
+200	Equipment failure	200	0	Y
+201	Malfunction	201	200	Y
+202	Not available	202	200	Y
+400	Unable	400	0	Y
+405	Other health reason	405	400	Y
+422	False Nails/varnish	422	400	Y
+423	Insuffient pulse/signal	423	400	Y

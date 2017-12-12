@@ -1,0 +1,193 @@
+coding	meaning
+1010	Acute medicine
+1020	Acute mixed
+1030	Acute other
+1040	Accident & emergency (A&E)
+1050	Addiction Services
+1055	Adult Cystic Fibrosis Service
+1060	Adult mental illness
+1070	Allergy
+1075	Allied Health Professional (AHP) Services
+1080	Anaesthetics
+1081	Anticoagulant service
+1090	Audiological medicine
+1100	Audiology
+1110	Blood transfusion
+1120	Bone and marrow transplantation
+1130	Breast surgery
+1140	Burns care
+1145	Cardiac Rehabilitation
+1150	Cardiac surgery
+1160	Cardiology
+1170	Cardiothoracic surgery
+1180	Cardiothoracic transplantation
+1190	Chemical pathology
+1200	Child and adolescent psychiatry
+1210	Clinical genetics
+1220	Clinical haematology
+1230	Clinical immunology
+1240	Clinical immunology and allergy
+1250	Clinical microbiology
+1260	Clinical Neurophysiology
+1270	Clinical oncology
+1280	Clinical pharmacology
+1290	Clinical Physiology
+1300	Clinical Psychology
+1305	Congenital Heart Disease Service
+1310	Colorectal surgery
+1320	Communicable Diseases
+1330	Community medicine
+1340	Community Paediatrics
+1350	Community Dental Practice
+1360	Community Sexual & Reproductive Health
+1365	Complex Specialised Rehabilitation Service
+1370	Critical care medicine
+1380	Dental medicine
+1390	Dermatology
+1400	Diagnostic Imaging
+1405	Other diagnostic
+1410	Dietetics
+1415	Diabetic Education Service
+1420	Diabetic medicine
+1425	Drama Therapy
+1430	Ear, nose and throat (ENT)
+1440	Eating Disorders
+1450	Endocrinology & Diabetes
+1460	Endocrinology
+1470	Forensic psychiatry
+1480	Gastroenterology
+1490	General medicine
+1500	General pathology
+1510	General practice other than maternity
+1520	General practice with maternity function
+1530	General surgery
+1540	Genito-urinary medicine
+1550	Geriatric medicine
+1560	GP Other than Obstetrics
+1570	Gynaecological oncology
+1580	Gynaecology
+1590	Haematology
+1600	Haemophilia
+1610	Hepatobiliary & pancreatic surgery
+1620	Hepatology
+1630	Histopathology
+1640	Homeopathy
+1650	Immunopathology
+1660	Infectious diseases
+1670	Intensive therapy unit
+1680	Intermediate care
+1690	Interventional radiology
+1700	Joint Consultant Clinics
+1705	Local Specialist Rehabilitation Service
+1710	Learning disability
+1720	Liaison Psychiatry
+1730	Maxillo-facial surgery
+1740	Medical microbiology
+1750	Medical oncology
+1760	Medical ophthalmology
+1761	Medical virology
+1765	Mental Health Recovery And Rehabilitation Service
+1767	Mental Health Dual Diagnosis Service
+1770	Metabolic Diseases
+1780	Midwife episode
+1785	Music Therapy
+1790	Neonatology
+1800	Nephrology
+1810	Neurology
+1820	Neuropathology
+1830	Neurosurgery
+1840	Non-UK Provider
+1850	Clinical Cytogenetics and Molecular Genetics
+1860	Not a treatment function
+1870	Obstetrics: AN (outpatients)
+1880	Obstetrics: PN (outpatients)
+1885	Art Therapy
+1890	Nuclear Medicine
+1900	Nursing episode
+1910	Obstetrics
+1920	Occupational medicine
+1930	Occupational Therapy
+1940	Old age psychiatry
+1950	Ophthalmology
+1955	Optometry
+1960	Oral surgery/medicine
+1970	Oral medicine
+1980	Oral surgery
+1990	Orthodontics/Paediatric Dentistry
+2000	Orthodontics
+2010	Orthoptics
+2020	Paediatric Audiological Medicine
+2030	Paediatric Burns Care
+2040	Paediatric Cardiac Surgery
+2050	Paediatric cardiology
+2060	Paediatric Clinical Haematology
+2070	Paediatric Clinical Immunology and Allergy
+2075	Paediatric Cystic Fibrosis
+2080	Paediatric dentistry
+2090	Paediatric Dermatology
+2100	Paediatric Ear Nose and Throat
+2105	Paediatric Diabetic Medicine
+2110	Paediatric Endocrinology
+2115	Paediatric Epilepsy
+2120	Paediatric Gastroenterology
+2130	Paediatric Gastrointestinal Surgery
+2140	Paediatric Infectious diseases
+2150	Paediatric Intensive Care
+2160	Paediatric Interventional Radiology
+2170	Paediatric Maxillo-Facial Surgery
+2180	Paediatric Medical Oncology
+2190	Paediatric Metabolic disease
+2200	Paediatric Nephrology
+2210	Paediatric Neuro-disability
+2220	Paediatric neurology
+2230	Paediatric Neurosurgery
+2240	Paediatric Ophthalmology
+2250	Paediatric Pain Management
+2260	Paediatric Pheumalogy
+2270	Paediatric Plastic Surgery
+2280	Paediatric Respiratory Medicine
+2290	Paediatric surgery
+2300	Paediatric Thoracic Surgery
+2310	Paediatric Transplantation Surgery
+2320	Paediatric Trauma and Orthopaedics
+2330	Paediatric Urology
+2340	Paediatrics
+2350	Pain management
+2360	Palliative medicine
+2370	Perinatal Psychiatry
+2380	Physiotherapy
+2390	Plastic surgery
+2393	Prosthetics
+2395	Programmed Pulmonary Rehabilitation
+2400	Podiatry
+2405	Podiatric Surgery
+2410	Poisons unit
+2420	Psychiatric Intensive Care
+2430	Psychotherapy
+2440	Radiology
+2450	Radiotherapy
+2451	Spinal Surgery Service
+2455	Sport And Exercise Medicine
+2457	Stroke Medicine
+2460	Rehabilitation
+2470	Respiratory Medicine
+2480	Respiratory Physiology
+2490	Respite care
+2500	Restorative dentistry
+2510	Rheumatology
+2515	Specialist Rehabilitation Service
+2520	Speech and Language Therapy
+2530	Spinal Injuries
+2540	Spinal paralysis
+2550	Thoracic medicine
+2560	Thoracic surgery
+2570	Transplantation surgery
+2575	Transient Ischaemic Attack
+2580	Trauma & orthopaedics
+2590	Tropical medicine
+2600	Upper gastrointestinal surgery
+2610	Urology
+2620	Vascular surgery
+2630	Well babies
+2640	Young Chronic Sick
+9999	Not known

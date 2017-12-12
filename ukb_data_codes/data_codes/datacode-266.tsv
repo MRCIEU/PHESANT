@@ -1,0 +1,14 @@
+coding	meaning	node_id	parent_id	selectable
+1000	Inpatient	1000	0	Y
+1001	Inpatient: In day bed unit, not retained overnight	1001	1000	Y
+1002	Inpatient: In five day ward	1002	1000	Y
+2000	Day case	2000	0	Y
+2001	Day case: moved to inpatient ward and retained overnight	2001	2000	Y
+2002	Day case: In day bed unit	2002	2000	Y
+2003	Day case: In day bed unit, moved to inpatient ward and retained overnight	2003	2000	Y
+2004	Day case: In inpatient ward	2004	2000	Y
+2005	Day case: In inpatient ward and retained overnight	2005	2000	Y
+3000	Regular day attender	3000	0	Y
+4000	Regular night attender	4000	0	Y
+5000	Expectant mothers using delivery facilities	5000	0	Y
+6000	Not applicable	6000	0	Y

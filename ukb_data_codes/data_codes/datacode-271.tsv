@@ -1,0 +1,8 @@
+coding	meaning
+100	One or more nights hospital stay
+200	No overnight hospital stay
+300	Planned series of admissions with at least one overnight stay
+400	Planned series of admissions with no overnight stay
+500	Planned series of night admissions of 24h period at home
+800	Not applicable
+900	Not known
