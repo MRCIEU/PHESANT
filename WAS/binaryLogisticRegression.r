@@ -59,7 +59,12 @@ binaryLogisticRegression <- function(varName, varType, thisdata, isExposure) {
 		else {
 
 		# use standardised geno values
-                geno = scale(thisdata[,"geno"])
+		if (opt$standardise==TRUE) {
+                	geno = scale(thisdata[,"geno"])
+		}
+		else {
+			geno = thisdata[,"geno"]
+		}
                 confounders=thisdata[,3:numPreceedingCols, drop = FALSE]
 		
 		sink()

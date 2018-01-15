@@ -22,7 +22,7 @@
 testCategoricalUnordered <- function(varName, varType, thisdata) {
 
 	pheno = thisdata[,phenoStartIdx:ncol(thisdata)]
-	geno = thisdata[,"geno"]
+	#geno = thisdata[,"geno"]
 
 	numNotNA = length(which(!is.na(pheno)))
 	if (numNotNA<500) {
@@ -61,7 +61,12 @@ testCategoricalUnordered <- function(varName, varType, thisdata) {
                 print(varName)
 
 		require(nnet)
-		geno = scale(thisdata[,"geno"])
+		if (opt$standardise==TRUE) {
+                	geno = scale(thisdata[,"geno"])
+                }
+		else {
+                        geno = thisdata[,"geno"] 
+                }
 		#cat("genoMean=", mean(geno), " genoSD=", sd(geno), " || ", sep="")
 		
 		confounders=thisdata[,3:numPreceedingCols, drop = FALSE]
@@ -69,10 +74,10 @@ testCategoricalUnordered <- function(varName, varType, thisdata) {
 		###### BEGIN TRYCATCH
 		tryCatch({
 
-		fit <- multinom(phenoFactor ~ geno + ., data=confounders)
+		fit <- multinom(phenoFactor ~ geno + ., data=confounders, maxit=1000)
 
 		## baseline model with only confounders, to which we compare the model above
-		fitB <- multinom(phenoFactor ~ ., data=confounders)
+		fitB <- multinom(phenoFactor ~ ., data=confounders, maxit=1000)
 
 		## compare model to baseline model
 		require(lmtest)
