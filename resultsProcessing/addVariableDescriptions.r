@@ -30,7 +30,7 @@ addVariableDescriptions <- function() {
 	resultsAll$varID <<- sapply(strsplit(resultsAll$varName,"[-#]", perl=TRUE), "[", 1)
 
 	resultsAllx = merge(resultsAll, varList, by.x="varID", by.y="FieldID", all=FALSE, sort=FALSE);
-	resultsAll <<- resultsAllx[, c("varID","varName","varType","n","beta","lower","upper","pvalue","resType","Field","TRAIT_OF_INTEREST","Cat1_ID","Cat1_Title","Cat2_ID","Cat2_Title","Cat3_ID","Cat3_Title")]
+	resultsAll <<- resultsAllx[, c("varID","varName","varType","n","beta","lower","upper","pvalue","resType","Field","TRAIT_OF_INTEREST","Category", "Path")]
 	names(resultsAll)[names(resultsAll)=="Field"] <<- "description"
 	names(resultsAll)[names(resultsAll)=="TRAIT_OF_INTEREST"] <<- "isTraitOfInterest"
 
@@ -41,7 +41,7 @@ addVariableDescriptions <- function() {
 	catMultIdxs = which(varList$ValueType=="Categorical multiple" & !is.na(varList$TRAIT_OF_INTEREST) & varList$TRAIT_OF_INTEREST!="")
 	resultsCatMult = resultsAll[catMultIdxs,]
 	
-	for (i in nrow(resultsCatMult)) {
+	for (i in 1:nrow(resultsCatMult)) {
 
 		thisVarID = resultsCatMult[i,"FieldID"]
 
@@ -65,9 +65,71 @@ addVariableDescriptions <- function() {
 	}
 
 	# remove varId column - we don't need it anymore
-	resultsAll <<- resultsAll[, c("varName","varType","n","beta","lower","upper","pvalue","resType","description","isTraitOfInterest","Cat1_ID","Cat1_Title","Cat2_ID","Cat2_Title","Cat3_ID","Cat3_Title")]
-        
+	resultsAll <<- resultsAll[, c("varName","varType","n","beta","lower","upper","pvalue","resType","description","isTraitOfInterest","Category", "Path")]
+
+
+	####
+	#### add category structure for PHESANT-viz - first 3 category levels
+
+	## load category hierarchy
+        catHier = read.table("catbrowse.txt", header=1, sep="\t")
+
+	## set category names
+	resultsAll$Path <<- as.character(resultsAll$Path)
+	resultsAll$Path <<- gsub("\"","", resultsAll$Path)
+	resultsAll$Cat1_Title <<- ""
+	resultsAll$Cat2_Title <<- ""
+	resultsAll$Cat3_Title <<- ""
+
+
+	## set category IDs
+	resultsAll$Cat1_ID <<- NA
+	resultsAll$Cat2_ID <<- NA
+	resultsAll$Cat3_ID <<- NA
+
+	for (i in 1:nrow(resultsAll)) {
+
+		catnames = unlist(strsplit(resultsAll$Path[i], " > "))
+
+		thispath = getCatIDPath(resultsAll$Category[i], catHier, c(resultsAll$Category[i]))
+		numInPath = length(thispath)
+
+		resultsAll$Cat1_ID[i] <<- thispath[1]
+		resultsAll$Cat1_Title[i] <<- catnames[1]
+                resultsAll$Cat2_ID[i] <<- thispath[2]
+		resultsAll$Cat2_Title[i] <<- catnames[2]
+
+		if (numInPath>=3) {
+                        resultsAll$Cat3_ID[i] <<- thispath[3]
+			resultsAll$Cat3_Title[i] <<- catnames[3]
+                }
+		else {
+			resultsAll$Cat3_ID[i] <<- thispath[2]
+                        resultsAll$Cat3_Title[i] <<- catnames[2]
+		}
+	}
+
+	# specific order needed for PHESANT-viz
+	resultsAll <<- resultsAll[, c("varName","varType","n","beta","lower","upper","pvalue","resType","description","isTraitOfInterest","Cat1_ID", "Cat1_Title", "Cat2_ID", "Cat2_Title", "Cat3_ID", "Cat3_Title", "Category", "Path")]
 
 }
 
 
+getCatIDPath <- function(categoryID, catHier, thishier) {
+
+	idx = which(catHier$child_id == categoryID)
+
+	# reached top of hierarchy
+	if (length(idx)==0) {
+		return(thishier)
+	}
+
+	pid = catHier$parent_id[idx]
+	
+	# add parent to path
+	thishier = c(pid, thishier)
+
+	# look for other ancestors in path
+	return(getCatIDPath(pid, catHier, thishier))
+
+}

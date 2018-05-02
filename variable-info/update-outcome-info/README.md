@@ -12,44 +12,35 @@ The steps we take to do this are:
 wget http://biobank.ctsu.ox.ac.uk/%7Ebbdatan/Data_Dictionary_Showcase.csv
 ```
 
+2. Convert CSV to TSV
 
-2. Create a list of fields currently available, and a list of fields in PHESANTs `../outcome-info.tsv`, for comparison.
-
-```bash
-awk -F'\t' '(NR>1) {print $7}' ../outcome-info.tsv | sort > current-fields.txt
-awk -F'\t' '(NR>1) {print $7}' Data_Dictionary_Showcase.tsv | sort > latest-fields.txt
-```
+Convert data dictionary to tsv file (Data_Dictionary_Showcase.tsv), and you might need to fix the encoding format from windows to linux.
 
 
-3. Summarise the number of fields we currently include, vs the total available.
-
-```bash
-wc -l current-fields.txt
-wc -l latest-fields.txt 
-```
-
-
-4. Add new fields to `../outcome-info.tsv`.
+3. Make updated outcome info file, called `outcome-info-new.tsv`.
 
 ```bash
 sh addNewFields.sh
 ```
 
-5. Clean up - remove temporary files.
+This also makes a file `new-field-list.txt` which lists the new fields added to `outcome-info-new.tsv`
+
+
+4. Clean up
 
 ```bash
-rm current-fields.txt
-rm latest-fields.txt
 rm Data_Dictionary_Showcase.csv
 rm Data_Dictionary_Showcase.tsv
 ```
 
-6. Review fields and manually update PHESANT properties.
+
+5. Review fields and manually update PHESANT properties.
+
+Fields with X in the PHESANT-specific columns need to be manually review and values set in these columns as appropriate.
 
 Fields with capitalized names in `../outcome-info.tsv` are additional PHESANT fields, used to process fields appropriately when running PHESANT.
 
-We review each new field and assign values to these fields, where appropriate.
-
+And then move `outcome-info-new.tsv` to `../outcome-info.tsv`.
 
 
 
