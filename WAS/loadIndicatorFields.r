@@ -74,7 +74,7 @@ addIndicatorVariables <- function(indVars, phenosToTest, phenoVarsAll) {
 		fieldsIdx = which(vl$phenoInfo$DATA_CODING == dc)
 		fieldIDs = vl$phenoInfo$FieldID[fieldsIdx]
 		fieldIDs = paste("x",fieldIDs,"_0_0", sep="")
-		
+
 		# datacode related field
 		rf = dataCodeWithRF$default_related_field[i]
 		rf = paste("x",rf,"_0_0", sep="")
@@ -117,10 +117,11 @@ addIndicatorVariables <- function(indVars, phenosToTest, phenoVarsAll) {
 
 		# turn into variable format not field ID
 		fieldsWithCMIF$CAT_MULT_INDICATOR_FIELDS = paste("x",fieldsWithCMIF$CAT_MULT_INDICATOR_FIELDS,"_0_0", sep="")
-		fieldsWithCMIF$FieldID = paste("x",fieldsWithCMIF$FieldID,"_0_0", sep="")
+		fieldsWithCMIF$FieldID = paste("x",fieldsWithCMIF$FieldID,"_", sep="")
+		phenosToTestIds = sub("_.*", "_", phenosToTest)
 	
 		# remove rows where the field isn't in the phenotypes list
-		idxIn = which(fieldsWithCMIF$FieldID %in% phenosToTest)
+		idxIn = which(fieldsWithCMIF$FieldID %in% phenosToTestIds)
 		fieldsWithCMIF = fieldsWithCMIF[idxIn,]
 
 		defaultFields = fieldsWithCMIF$CAT_MULT_INDICATOR_FIELDS
