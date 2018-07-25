@@ -30,9 +30,49 @@ addVariableDescriptions <- function() {
 	resultsAll$varID <<- sapply(strsplit(resultsAll$varName,"[-#]", perl=TRUE), "[", 1)
 
 	resultsAllx = merge(resultsAll, varList, by.x="varID", by.y="FieldID", all=FALSE, sort=FALSE);
-	resultsAll <<- resultsAllx[, c("varID","varName","varType","n","beta","lower","upper","pvalue","resType","Field","TRAIT_OF_INTEREST","Category", "Path")]
+	resultsAll <<- resultsAllx[, c("varID","varName","varType","n","beta","lower","upper","pvalue","resType","Field","TRAIT_OF_INTEREST","Category", "Path", "DATA_CODING")]
 	names(resultsAll)[names(resultsAll)=="Field"] <<- "description"
 	names(resultsAll)[names(resultsAll)=="TRAIT_OF_INTEREST"] <<- "isTraitOfInterest"
+
+	resultsAll$description <<- as.character(resultsAll$description)
+
+	## for each cat multiple field append the value to the description column
+	cmIdxs = which(resultsAll$varType=="CAT-MUL")
+
+	dccurrent=-1
+	if(length(cmIdxs)>0) {
+	for (ii in 1:length(cmIdxs)) {
+		i = cmIdxs[ii]
+		thisDC = resultsAll[i,"DATA_CODING"]
+		dcVal = unlist(strsplit(resultsAll$varName[i],"#"))[2]
+
+		# get data codes for this field
+		if(dccurrent!=thisDC) {
+			dcfile=paste('../ukb_data_codes/data_codes/datacode-',thisDC,'.tsv', sep='')
+		}
+		if (file.exists(dcfile)) {
+
+			if(dccurrent!=thisDC) {
+				dclist = read.table(dcfile, header=1, sep="\t", comment.char="",quote="")
+			}
+
+			# columns: coding	meaning
+			ixx= which(dclist$coding == dcVal)
+
+			if (length(ixx)>0) {
+				meaning = dclist[ixx,"meaning"]
+				newDescription = paste(resultsAll[i,"description"], ": ", meaning, sep="")
+				resultsAll[i,"description"] <<- newDescription
+			}
+		}
+		else {
+			print("DC file does not exist (could not add value to cat multiple results):")
+			print(dcfile)
+		}
+		dccurrent=thisDC
+	}
+	}
+
 
 	# binary results from cat multiple need processing to set 'isExposure' using the list supplied in TRAIT_OF_INTEREST column in variable info file
 	# (basically this is because 1 cat mult field generates multiple binary variables of which a subset may be denoting the exposure (e.g. a particular type of cancer))
