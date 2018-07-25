@@ -63,6 +63,10 @@ then
 		
 		# rename file
 		mv "codown.cgi?id=${dc_id}" $dcfilename
+
+		# make sure all files are ASCII or this causes probs when we use it
+		iconv -f ISO-8859-1 -t ASCII//TRANSLIT $dcfilename > tmp.txt
+		mv tmp.txt $dcfilename
 	
 		sleep 2
 

@@ -631,7 +631,7 @@ coding	meaning	node_id	parent_id	selectable
 61143103	houseparent, child careworker, residential warden, sheltered accommodation warden, foster parent	3103	3102	Y
 61143450	residential warden of young offenders	3450	3446	Y
 61153104	care assistant, home care assistant, residential social worker, home carer, nursing home assistant	3104	3102	Y
-61213416	nursery nurse/assistant/supervisor, crèche assistant	3416	3406	Y
+61213416	nursery nurse/assistant/supervisor, cr`eche assistant	3416	3406	Y
 61223105	childminder, au pair, children's nanny	3105	3102	Y
 61223417	childminder, au pair, children's nanny	3417	3406	Y
 61233408	playgroup or playschool leader or assistant	3408	3406	Y

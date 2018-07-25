@@ -15,14 +15,15 @@ coding	meaning	node_id	parent_id	selectable
 4000	Legal Establishment	4000	0	Y
 4001	Legal Establishment: Court, police station, prison	4001	4000	Y
 5000	Transfer to other NHS provider	5000	0	Y
-5001	Transfer to other NHS provider: General ward, young physically disabled, A&E 	5001	5000	Y
+5001	Transfer to other NHS provider: General ward, young physically disabled, A&E	5001	5000	Y
 5002	Transfer to other NHS provider: Obstetrics	5002	5000	Y
-5003	Transfer to other NHS provider: psychiatry, learning disabilities 	5003	5000	Y
+5003	Transfer to other NHS provider: psychiatry, learning disabilities	5003	5000	Y
 5004	Transfer to other NHS provider: Surgical specialty	5004	5000	Y
 5005	Transfer to other NHS provider: Medical specialty	5005	5000	Y
 5006	Transfer to other NHS provider: GP	5006	5000	Y
 5007	Transfer to other NHS provider: Geriatrics	5007	5000	Y
 5008	Transfer to other NHS provider: Orthopaedics	5008	5000	Y
+5009	Transfer from another Health Care Provider - Hospital at Home	5009	5000	Y
 6000	Transfer within NHS provider	6000	0	Y
 6001	Transfer within NHS provider: general ward, young physically disabled, A&E	6001	6000	Y
 6002	Transfer to other NHS provider: Obstetrics	6002	6000	Y
@@ -32,9 +33,10 @@ coding	meaning	node_id	parent_id	selectable
 6006	Transfer within NHS provider: GP	6006	6000	Y
 6007	Transfer within NHS provider: Geriatrics	6007	6000	Y
 6008	Transfer within NHS provider: Orthopaedics	6008	6000	Y
+6009	Transfer within the same Health Care Provider - Hospital at Home	6009	6000	Y
 7000	Nursing, residential care, group home	7000	0	Y
 7001	Nursing, residential care, group home: NHS	7001	7000	Y
-7002	Nursing, residential care, group home: Local Authoritory	7002	7000	Y
+7002	Nursing, residential care, group home: Local Authority	7002	7000	Y
 7003	Nursing, residential care, group home: Non-NHS	7003	7000	Y
 8000	Other hospital	8000	0	Y
 8001	Other hospital: NHS partnership hospital	8001	8000	Y

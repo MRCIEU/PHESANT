@@ -1,5 +1,6 @@
 coding	meaning
-1	Pre-2012 NHS Information Centre
-2	Post-2012 NHS Information Centre
+1	IC Death Format (2011 and earlier)
+2	IC Death Format (2012 onwards)
 7	Scottish Morbidity Record (SMR)
 19	Scottish Morbidity Record (SMR) 99B - 2015
+55	IC Scottish deaths (2017 onwards)

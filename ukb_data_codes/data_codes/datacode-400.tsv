@@ -1,3 +1,10 @@
 coding	meaning
-1	Severe motion artefact
-2	Tall subject
+1	Severe Motion Artefact
+2	Tall Subject
+3	Broken Coil Element
+4	Complicated Swap
+5	Complicated Swap in ASAT
+6	Corrupt Data
+7	Extreme Dogbites
+8	Metal
+9	Minor Metal Artefact in ASAT

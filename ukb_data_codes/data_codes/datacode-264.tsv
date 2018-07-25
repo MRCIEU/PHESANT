@@ -8,7 +8,7 @@ coding	meaning	node_id	parent_id	selectable
 2001	Emergency admission: A&E	2001	2000	Y
 2002	Emergency admission: GP	2002	2000	Y
 2003	Emergency admission: Bed bureau	2003	2000	Y
-2004	Emergency admission: Outpatients	2004	2000	Y
+2004	Emergency admission: Outpatients (obsolete)	2004	2000	Y
 2005	Emergency admission: Consultant home visit	2005	2000	Y
 2006	Emergency admission: NHS Direct Services	2006	2000	Y
 2007	Emergency admission: Self injury or poisoning	2007	2000	Y
@@ -17,6 +17,9 @@ coding	meaning	node_id	parent_id	selectable
 2010	Emergency admission: Work accident	2010	2000	Y
 2011	Emergency admission: Other injury	2011	2000	Y
 2012	Emergency admission: Non-injury	2012	2000	Y
+2013	Emergency admission: Consultant clinic of this or another health care provider	2013	2000	Y
+2014	Emergency admission: Outpatients	2014	2000	Y
+2015	Emergency admission: Mental Health Crisis Resolution Team	2015	2000	Y
 3000	Maternity admission	3000	0	Y
 3001	Maternity admission: Post-partum	3001	3000	Y
 3002	Maternity admission: Ante-partum	3002	3000	Y
