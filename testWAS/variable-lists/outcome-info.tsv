@@ -20,7 +20,7 @@ UK Biobank Assessment Centre > Verbal interview > Medical conditions	FIELD36	36	
 UK Biobank Assessment Centre > Verbal interview > Operations	FIELD37	37					3	Categorical single	100076
 UK Biobank Assessment Centre > Verbal interview > Operations	FIELD38	38					3	Categorical single	100076
 UK Biobank Assessment Centre > Verbal interview > Operations	FIELD39	39					6	Categorical single	100076
-UK Biobank Assessment Centre > Verbal interview > Operations	FIELD41	41			A2	NO_NAN	4	Categorical multiple	100076
+UK Biobank Assessment Centre > Verbal interview > Operations	FIELD41	41				NO_NAN	4	Categorical multiple	100076
 UK Biobank Assessment Centre > Verbal interview > Operations	FIELD42	42			ALL		4	Categorical multiple	100076
 UK Biobank Assessment Centre > Verbal interview > Operations	FIELD43	43			99		4	Categorical multiple	100076
 UK Biobank Assessment Centre > Verbal interview > Operations	FIELD44	44			NO_NAN	YES-INSTANCES	4	Categorical single	100076
