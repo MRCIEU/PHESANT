@@ -24,7 +24,7 @@ Millard LAC, et al. Software Application Profile: PHESANT: a tool for performing
 
 ## 1) Running a phenome scan
 
-A phenome scan is run using `WAS/phenomeScan.r`. This is basically ready to go - the only essential amendment you will need to make is the TRAIT_OF_INTEREST column in the variable information file (see below).
+A phenome scan is run using `WAS/phenomeScan.r`. This is ready to go. One amendment you may wish to make before running PHESANT is the TRAIT_OF_INTEREST column in the variable information file (see below).
 
 The PHESANT phenome scan processing pipeline is illustrated in the figure [here](biobank-PHESANT-figure.pdf), and described in detail in the paper above.
 
@@ -83,6 +83,7 @@ sensitivity		| By default analyses are adjusted for age (field [21022](http://bi
 genetic			| By default `genetic=TRUE`, and we assume the trait of interest is a genetic variable (e.g. a SNP or genetic risk score). If this is not the case (e.g you are running an environment-wide association study) then set this flag to FALSE. This option determines which variables are controlled for in analyses, see sensitivity arg above.
 save			| Instead of running phenome scan, generated phenotypes are stored to file, in `resDir`. If this option is used then `traitofinterest` argument is not required.
 confidenceintervals	| By default `confidenceintervals=TRUE`, but specifying `confidenceintervals=FALSE` means that PHESANT doesn't calculate the association confidence intervals (which may speed up PHESANT).
+standardise		| By default `standardise=TRUE`, but specifying `standardise=FALSE` means that PHESANT will not standardise the exposure variable. E.g. use this option for binary exposure variables.
 
 The numParts and partIdx arguments are both used to parallelise the phenome scan. E.g. setting numParts to 5 will divide the set of phenotypes into 5 (rough) parts and then partIdx can be used to call the phenome scan on a specific part (1-5).
 
