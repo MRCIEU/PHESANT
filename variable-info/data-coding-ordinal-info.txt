@@ -172,7 +172,7 @@ dataCode,ordinal,ordering,reassignments,default_value,default_related_field
 100640,0,,,,
 100641,-1,,,,
 100642,-1,,,,
-100643,1,,,,
+100643,0,,,,
 100644,0,,,,
 100645,0,,,,
 100646,0,,,,
