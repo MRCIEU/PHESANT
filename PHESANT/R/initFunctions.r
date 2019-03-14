@@ -16,39 +16,6 @@
 # CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 # DEALINGS IN THE SOFTWARE.
 
-# load the required r files
-loadSource <- function() {
-	source("loadData.r")
-	source("reassignValue.r")
-	source("validatePhenotypeInput.r")
-	source("validateTraitInput.r")
-	source("testNumExamples.r")
-	source("binaryLogisticRegression.r")
-	source("equalSizedBins.r")
-	source("fixOddFieldsToCatMul.r")
-	source("replaceMissingCodes.r")
-	source("replaceNaN.r")
-	source("testAssociations.r")
-	source("testCatMultiple.r")
-	source("testCatSingle.r")
-	source("testContinuous.r")
-	source("testInteger.r")
-	source("testCategoricalOrdered.r")
-	source("testCategoricalUnordered.r")
-	source("saveCounts.r")
-	source("incrementCounter.r")
-	source("getIsCatMultExposure.r")
-	source("getIsExposure.r")
-	source("addToCounts.r")
-	source("getNumValuesCatMultExposure.r")	
-	source("storeNewVar.r")
-	source("loadPhenotypes.r")
-	source("loadTraitOfInterest.r")	
-	source("loadConfounders.r")
-	source("makeTestDataFrame.r")
-	source("loadIndicatorFields.r")
-}
-
 # init the counters used to determine how many variables took each path in the variable processing flow.
 initCounters <- function() {
 	counters = data.frame(name=character(),countValue=integer(), stringsAsFactors=FALSE)
