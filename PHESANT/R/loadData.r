@@ -22,8 +22,6 @@
 # creates confounder data frame
 # returns an object holding these two data frames
 loadData <- function(vl) {
-  	library(data.table)
-
   
   	##### validating data
   	## check phenotype file headers

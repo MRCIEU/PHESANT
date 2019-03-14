@@ -1,4 +1,8 @@
 exportPattern("^[[:alpha:]]+")
+import(MASS)
+import(lmtest)
+import(data.table)
+import(nnet)
 importFrom("stats", "coef", "complete.cases", "confint", "end", "glm",
              "lm", "model.matrix", "na.omit", "pnorm", "qnorm",
              "quantile", "relevel")

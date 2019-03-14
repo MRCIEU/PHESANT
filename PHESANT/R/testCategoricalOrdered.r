@@ -61,10 +61,7 @@ testCategoricalOrdered <- function(vl, varName, varType, thisdata, orderStr="") 
 		sink(modelFitLogFile, append=TRUE)
 		print("--------------")
 		print(varName)
-
-		require(MASS)
-		require(lmtest)
-
+		
 		### BEGIN TRYCATCH
 		tryCatch({
 		confounders=thisdata[,3:numPreceedingCols, drop = FALSE]

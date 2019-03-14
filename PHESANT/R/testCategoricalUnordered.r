@@ -60,7 +60,6 @@ testCategoricalUnordered <- function(vl, varName, varType, thisdata) {
 		print("--------------")
                 print(varName)
 
-		require(nnet)
 		if (opt$standardise==TRUE) {
                 	geno = scale(thisdata[,"geno"])
                 }
@@ -80,7 +79,6 @@ testCategoricalUnordered <- function(vl, varName, varType, thisdata) {
 		fitB <- multinom(phenoFactor ~ ., data=confounders, maxit=1000)
 
 		## compare model to baseline model
-		require(lmtest)
 		lres = lrtest(fit, fitB)
 		modelP = lres[2,"Pr(>Chisq)"];
 		
