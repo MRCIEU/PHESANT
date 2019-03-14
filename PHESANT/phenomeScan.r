@@ -30,7 +30,7 @@ if (length(args) == 0) {
 } else {
     opt_parser <- OptionParser(option_list=option_list)
     opt <- parse_args(opt_parser)
-    opt <- processArgs(opt)
+    opt <- processArgs(opt, opt_parser)
 }
 
 ## load the files we write to and use
@@ -44,7 +44,7 @@ vl <- initVariableLists(opt)
 d <- loadData(opt, vl)
 data=d$datax
 confounders=d$confounders
-indicatorFields=d$inds
+vl$indicatorFields=d$inds
 
 numPreceedingCols = ncol(confounders)-1+2; # confounders,minus id column, plus trait of interest and user ID
 phenoStartIdx = numPreceedingCols+1;

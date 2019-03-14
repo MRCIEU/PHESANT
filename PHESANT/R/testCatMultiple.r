@@ -122,7 +122,7 @@ restrictSample2 <- function(vl, varName,pheno, varIndicator,variableVal, userID)
 		# remove people who have no value for indicator variable
 		indName = paste("x",varIndicator,"_0_0",sep="");
 		cat("Indicator name ", indName, " || ", sep="");
-		indvarx = merge(userID, indicatorFields, by="userID", all.x=TRUE, all.y=FALSE, sort=FALSE)		
+		indvarx = merge(userID, vl$indicatorFields, by="userID", all.x=TRUE, all.y=FALSE, sort=FALSE)		
 		indicatorVar = indvarx[,indName]
 
 		# remove participants with NA value in this related field

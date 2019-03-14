@@ -19,7 +19,7 @@
 
 # Parse the arguments input by the user
 # if argument 'test' is used then run test phenome scan
-processArgs <- function() {
+processArgs <- function(opt, opt_parser) {
     if (opt$test==TRUE) {
       	# set up the test phenome scan settings
       	datadir='../testWAS/data/';
@@ -36,7 +36,7 @@ processArgs <- function() {
       		opt$sensitivity <- FALSE;
       		opt$genetic <- TRUE;
       	}
-    	  opt <- processParts(opt, opt$partIdx, opt$numParts)
+    	  opt <- processParts(opt, opt_parser,opt$partIdx, opt$numParts)
     }
     else {
     	## check arguments are supplied correctly
@@ -81,7 +81,7 @@ processArgs <- function() {
     	else if (!file.exists(opt$resDir)) {
     		  stop(paste("results directory resDir=", opt$resDir, " does not exist", sep=""), call.=FALSE)
     	}
-    	opt <-processParts(opt, opt$partIdx, opt$numParts);
+    	opt <-processParts(opt, opt_parser,opt$partIdx, opt$numParts);
     }
     if (opt$save==TRUE) {
     	  print("Saving phenotypes to file. Tests of association will not run!")
@@ -90,7 +90,7 @@ processArgs <- function() {
 }
 
 # Parse the 'part' arguments and check they are valid
-processParts <- function(opt, pIdx, nParts) {
+processParts <- function(opt, opt_parser, pIdx, nParts) {
 
 	if (is.null(pIdx) && is.null(nParts)) {
                 opt$varTypeArg <- "all";

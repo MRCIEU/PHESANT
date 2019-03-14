@@ -119,7 +119,7 @@ testAssociations <- function(opt, vl, currentVar, currentVarShort, thisdata, phe
 					# get number of cat mult values denoting trait of interest
 	                                numVals = getNumValuesCatMultExposure(vl, currentVarShort)
 					if (numVals>0) {
-		                                addToCounts(addToCounts, "start.exposure.catMulvalues", numVals)
+		                                addToCounts("start.exposure.catMulvalues", numVals)
 					}
 				}
 		        	testCategoricalMultiple(opt, vl, currentVarShort, "CAT-MUL", thisdata, phenoStartIdx);

@@ -55,7 +55,7 @@ testCategoricalSingle <- function(opt, vl, varName, varType, thisdata, phenoStar
 	## this is used where there is no zero option e.g. field 100200
 	defaultValue = dataDataCode$default_value
 	defaultRelatedID = dataDataCode$default_related_field
-	pheno = setDefaultValue(pheno, defaultValue, defaultRelatedID, thisdata[,"userID", drop=FALSE])
+	pheno = setDefaultValue(vl, pheno, defaultValue, defaultRelatedID, thisdata[,"userID", drop=FALSE])
 
         ## all categories coded as <0 we assume are `missing' values
         pheno = replaceMissingCodes(pheno)
@@ -155,7 +155,7 @@ reorderOrderedCategory <- function(pheno,order) {
 ## sets default value for people with no value in pheno, but with a value in the
 ## field specified in the default_value_related_field column in the data coding info file.
 ## the default value is specified in the default_value column in the data coding info file.
-setDefaultValue <- function(pheno, defaultValue, defaultRelatedID, userID) {
+setDefaultValue <- function(vl, pheno, defaultValue, defaultRelatedID, userID) {
 
 
 	if (!is.na(defaultValue) && nchar(defaultValue)>0) {
@@ -164,8 +164,8 @@ setDefaultValue <- function(pheno, defaultValue, defaultRelatedID, userID) {
 	       	indName = paste("x",defaultRelatedID,"_0_0",sep="");
 
 	     	cat("Default related field: ", indName, " || ", sep="");
-		indicatorVar = indicatorFields[,indName]
-		indvarx = merge(userID, indicatorFields, by="userID", all.x=TRUE, all.y=FALSE, sort=FALSE)
+		indicatorVar = vl$indicatorFields[,indName]
+		indvarx = merge(userID, vl$indicatorFields, by="userID", all.x=TRUE, all.y=FALSE, sort=FALSE)
                 indicatorVar = indvarx[,indName]
 
 	    	# remove participants with NA value in this related field
