@@ -240,11 +240,11 @@ testContinuous2 <- function(opt, vl, varName, varType, thisdata, phenoStartIdx) 
 	}
 }
 
-irnt <- function(pheno) {
-	set.seed(1234)
-	numPhenos = length(which(!is.na(pheno)))
-	quantilePheno = (rank(pheno, na.last="keep", ties.method="random")-0.5)/numPhenos
-	phenoIRNT = qnorm(quantilePheno)	
-	return(phenoIRNT);
+irnt <- function(pheno, seed = 1234) {
+  	set.seed(seed)
+  	numPhenos <- length(which(!is.na(pheno)))
+  	quantilePheno <- (rank(pheno, na.last="keep", ties.method="random")-0.5)/numPhenos
+  	phenoIRNT <- qnorm(quantilePheno)	
+  	return(phenoIRNT)
 }
 

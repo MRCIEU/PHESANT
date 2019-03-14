@@ -58,7 +58,7 @@ testCategoricalSingle <- function(opt, vl, varName, varType, thisdata, phenoStar
 	pheno = setDefaultValue(vl, pheno, defaultValue, defaultRelatedID, thisdata[,"userID", drop=FALSE])
 
         ## all categories coded as <0 we assume are `missing' values
-        pheno = replaceMissingCodes(pheno)
+        pheno = .replaceMissingCodes(pheno)
 
 	## remove categories if < 10 examples
 	pheno = testNumExamples(pheno)
@@ -190,3 +190,9 @@ setDefaultValue <- function(vl, pheno, defaultValue, defaultRelatedID, userID) {
 }
 
 
+# Replace negative values with NA as these are assumed to be missing
+.replaceMissingCodes <- function(pheno) {
+  phenoReplaced <- pheno
+  phenoReplaced[phenoReplaced <0 ] <- NA
+  return(phenoReplaced)
+}
