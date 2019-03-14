@@ -23,7 +23,7 @@
 # 3) Replacing missing codes - we assume values < 0 are missing for categorical (single) variables
 # 4) Remove values with <10 cases
 # 5) Deterimine correct test to perform, either binary, ordered or unordered.
-testCategoricalSingle <- function(vl, varName, varType, thisdata) {
+testCategoricalSingle <- function(vl, counters, varName, varType, thisdata) {
 	cat("CAT-SINGLE || ");
 
 	pheno = thisdata[,phenoStartIdx:ncol(thisdata)]
@@ -68,17 +68,17 @@ testCategoricalSingle <- function(vl, varName, varType, thisdata) {
 
 	if (length(uniqVar)<=1) {
 		cat("SKIP (only one value) || ");
-		incrementCounter("catSin.onevalue")
+		counters <- incrementCounter(counters, "catSin.onevalue")
 	}
 	else if (length(uniqVar)==2) {		
 		cat("CAT-SINGLE-BINARY || ");
-		incrementCounter("catSin.case3")
+	  counters <- incrementCounter(counters, "catSin.case3")
 		# binary so logistic regression
 
 		phenoFactor = factor(pheno)
 		# binary - so logistic regression
 		thisdatanew = cbind.data.frame(thisdata[,1:numPreceedingCols], phenoFactor);
-	        binaryLogisticRegression(varName, varType, thisdatanew, isExposure)	
+		counters <- binaryLogisticRegression(varName, counters, varType, thisdatanew, isExposure)	
 	}
 	else {
 		# > 2 categories
@@ -91,33 +91,33 @@ testCategoricalSingle <- function(vl, varName, varType, thisdata) {
 		if (ordered == 0) {
 			
 			cat("CAT-SINGLE-UNORDERED || ")
-			incrementCounter("catSin.case2")
+		  counters <- incrementCounter(counters, "catSin.case2")
 
 			thisdatanew = cbind.data.frame(thisdata[,1:numPreceedingCols], pheno);
-			testCategoricalUnordered(vl, varName, varType, thisdatanew);
+			counters <- testCategoricalUnordered(vl, counters, varName, varType, thisdatanew);
 			
 		}
 		else if (ordered == 1) {
 		
 			## ordered
 			cat("ordered || ");
-			incrementCounter("catSin.case1")
+		  counters <- incrementCounter(counters, "catSin.case1")
 
 			## reorder variable values into increasing order
 			thisdatanew = cbind.data.frame(thisdata[,1:numPreceedingCols], pheno);
-			testCategoricalOrdered(vl, varName, varType, thisdatanew, order)
+			counters <- testCategoricalOrdered(vl, counters, varName, varType, thisdatanew, order)
 		
 		}
 		else if (ordered == -2) {
 			cat(" EXCLUDED or BINARY variable: Should not get here in code. ")
-			incrementCounter("catSin.binaryorexcluded")
+		  counters <- incrementCounter(counters, "catSin.binaryorexcluded")
 		}
 		else {
 			print(paste("ERROR", varName, varType, dataCode));
 		}
 		}
 	}
-
+  return(counters)
 }
 
 ## values are reordered and assigned values 1:N for N categories

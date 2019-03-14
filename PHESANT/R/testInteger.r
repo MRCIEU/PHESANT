@@ -22,7 +22,7 @@
 # 2) Generate a single value if there are several values (arrays) by taking the mean
 # 3) Treating this field as continuous if at least 20 distinct values.
 # Otherwise treat as binary or ordered categorical if 2 or more than two values. 
-testInteger <- function(vl, varName, varType, thisdata) {
+testInteger <- function(vl, counters, varName, varType, thisdata) {
 	cat("INTEGER || ");
 
 	pheno = thisdata[,phenoStartIdx:ncol(thisdata)]
@@ -52,8 +52,8 @@ testInteger <- function(vl, varName, varType, thisdata) {
 	if (length(uniqVar)>=20) {
 		
 		thisdatanew = cbind.data.frame(thisdata[,1:numPreceedingCols], phenoAvg);
-		testContinuous2(vl, varName, varType, thisdatanew)
-		incrementCounter("int.continuous")
+		counters <- testContinuous2(vl, counters, varName, varType, thisdatanew)
+		counters <- incrementCounter(counters, "int.continuous")
 	}
 	else {
 		
@@ -65,24 +65,25 @@ testInteger <- function(vl, varName, varType, thisdata) {
 		numLevels = length(levels(phenoFactor))
 		if (numLevels<=1) {
 			cat("SKIP (number of levels: ",numLevels,")",sep="");
-			incrementCounter("int.onevalue")
+		  counters <- incrementCounter(counters, "int.onevalue")
 		}
 		else if (numLevels==2) {
-			incrementCounter("int.binary")
+		  counters <- incrementCounter(counters, "int.binary")
 
 			# binary
 			thisdatanew = cbind.data.frame(thisdata[,1:numPreceedingCols], phenoFactor);
-			binaryLogisticRegression(varName, varType, thisdatanew, isExposure);
+			counters <- binaryLogisticRegression(varName, counters, varType, thisdatanew, isExposure);
 		}
 		else {
-			incrementCounter("int.catord")
+		  counters <- incrementCounter(counters, "int.catord")
 			cat("3-20 values || ")
 
 			# we don't use equal sized bins just the original integers (that have >=10 examples) as categories
 			thisdatanew = cbind.data.frame(thisdata[,1:numPreceedingCols], phenoFactor);
 
 			# treat as ordinal categorical
-			testCategoricalOrdered(vl, varName, varType, thisdatanew);
+			counters <- testCategoricalOrdered(vl, counters, varName, varType, thisdatanew);
 		}
 	}
+	return(counters)
 }

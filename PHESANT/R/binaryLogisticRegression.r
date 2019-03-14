@@ -21,7 +21,7 @@
 #
 # Performs binary logistic regression on the phenotype stored in thisdata 
 # and stores result in 'results-logistic-binary' results file.
-binaryLogisticRegression <- function(varName, varType, thisdata, isExposure) {
+binaryLogisticRegression <- function(varName, counters, varType, thisdata, isExposure) {
 
         phenoFactor = factor(thisdata[,phenoStartIdx])
 
@@ -31,7 +31,7 @@ binaryLogisticRegression <- function(varName, varType, thisdata, isExposure) {
 	if (length(facLevels)!=2) {
 		#stop(paste("Not 2 levels: ", length(facLevels), " || ", sep=""))
 		cat("BINARY-NOT2LEVELS- (", length(facLevels), ") || ",sep="");
-                incrementCounter("binary.nottwolevels")
+                counters <- incrementCounter(counters, "binary.nottwolevels")
 	}
 
 	idxTrue = length(which(phenoFactor==facLevels[1]))
@@ -40,11 +40,11 @@ binaryLogisticRegression <- function(varName, varType, thisdata, isExposure) {
   
         if (idxTrue<10 || idxFalse<10) {
 		cat("BINARY-LOGISTIC-SKIP-10 (", idxTrue, "/", idxFalse, ") || ", sep="")
-		incrementCounter("binary.10")
+          counters <- incrementCounter(counters, "binary.10")
 	}
 	else if (numNotNA<500) {	
 		cat("BINARY-LOGISTIC-SKIP-500 (", numNotNA, ") || ",sep="");
-		incrementCounter("binary.500")
+	  counters <- incrementCounter(counters, "binary.500")
        	}
 	else {
 
@@ -54,7 +54,7 @@ binaryLogisticRegression <- function(varName, varType, thisdata, isExposure) {
 			# add pheno to dataframe
 			storeNewVar(thisdata[,"userID"], phenoFactor, varName, 'bin')
 			cat("SUCCESS results-logistic-binary ");			
-			incrementCounter("success.binary")
+			counters <- incrementCounter(counters, "success.binary")
 		}
 		else {
 
@@ -102,10 +102,10 @@ binaryLogisticRegression <- function(varName, varType, thisdata, isExposure) {
                 write(paste(varName,varType,paste(idxTrue,"/",idxFalse,"(",numNotNA,")",sep=""), beta,lower,upper,pvalue, sep=","), file=paste(opt$resDir,"results-logistic-binary-",opt$varTypeArg,".txt",sep=""), append="TRUE");
                 cat("SUCCESS results-logistic-binary ");
                 
-		incrementCounter("success.binary")
+                counters <- incrementCounter(counters, "success.binary")
 
 		if (isExposure==TRUE) {
-	            	incrementCounter("success.exposure.binary")
+		  counters <-incrementCounter(counters,"success.exposure.binary")
 	        }	
 
 		## END TRYCATCH
@@ -113,9 +113,10 @@ binaryLogisticRegression <- function(varName, varType, thisdata, isExposure) {
                         sink()
                         sink(resLogFile, append=TRUE)
                         cat(paste("ERROR:", varName,gsub("[\r\n]", "", e), sep=" "))
-                        incrementCounter("binary.error")
+                        counters <- incrementCounter(counters, "binary.error")
                 })
 		}	
-        }
+	}
+	return(counters)
 }
 

@@ -18,7 +18,7 @@
 
 
 # Tests the association of a field, determined by its field type
-testAssociations <- function(vl, currentVar, currentVarShort, thisdata) {
+testAssociations <- function(vl, counters, currentVar, currentVarShort, thisdata) {
 
 	## call file for variable type
 
@@ -30,7 +30,7 @@ testAssociations <- function(vl, currentVar, currentVarShort, thisdata) {
 		# check if variable info is found for this field
 		if (length(idx)==0) {
 			cat(paste(currentVar, " || Variable could not be found in pheno info file. \n", sep=""))			
-			incrementCounter("notinphenofile")
+		  counters <- incrementCounter(counters, "notinphenofile")
 		}
 		else {
 
@@ -47,15 +47,15 @@ testAssociations <- function(vl, currentVar, currentVarShort, thisdata) {
 			
 			if (excluded!="") {
 				cat(paste("Excluded integer: ", excluded, " || ", sep=""))
-				incrementCounter("excluded.int")
+			  counters <- incrementCounter(counters, "excluded.int")
 			}
 			else {
-				incrementCounter("start.int")
+			  counters <- incrementCounter(counters, "start.int")
 				if (isExposure==TRUE) {
-					incrementCounter("start.exposure.int")
+				  counters <- incrementCounter(counters, "start.exposure.int")
 				}
 
-			    	testInteger(vl, currentVarShort, "INTEGER", thisdata);
+			    	counters <- testInteger(vl, couinters, currentVarShort, "INTEGER", thisdata);
 			}
 			cat("\n");
 	    	}
@@ -66,14 +66,14 @@ testAssociations <- function(vl, currentVar, currentVarShort, thisdata) {
 
 		    	if (excluded!="") {
 				cat(paste("Excluded continuous: ", excluded, " || ", sep=""))
-				incrementCounter("excluded.cont")
+		    	  counters <- incrementCounter(counters, "excluded.cont")
 		    	}
 			else {
-				incrementCounter("start.cont")
+			  counters <- incrementCounter(counters, "start.cont")
 				if (isExposure==TRUE) {
-                                        incrementCounter("start.exposure.cont")
+				  counters<- incrementCounter(counters, "start.exposure.cont")
                                 }
-				testContinuous(vl, currentVarShort, "CONTINUOUS", thisdata);
+				counters <- testContinuous(vl, counters, currentVarShort, "CONTINUOUS", thisdata);
 	        	}
 	        	cat("\n");
 		}
@@ -84,14 +84,14 @@ testAssociations <- function(vl, currentVar, currentVarShort, thisdata) {
 	
 	    		if (excluded!="") {
 				cat(paste("Excluded cat-single: ", excluded, " || ", sep=""))
-				incrementCounter("excluded.catSin")
+	    		  counters <- incrementCounter(counters, "excluded.catSin")
 			}
 			else {
-				incrementCounter("start.catSin")
+			  counters <- incrementCounter(counters, "start.catSin")
 				if (isExposure==TRUE) {
-                                        incrementCounter("start.exposure.catSin")
+				  counters <-incrementCounter(counters, "start.exposure.catSin")
                                 }
-			    	testCategoricalSingle(vl, currentVarShort, "CAT-SIN", thisdata);
+			  counters <- testCategoricalSingle(vl, counters, currentVarShort, "CAT-SIN", thisdata);
 			}
 			cat("\n");
 	  	}
@@ -102,27 +102,27 @@ testAssociations <- function(vl, currentVar, currentVarShort, thisdata) {
 
 			if (excluded!="") {
 				cat(paste("Excluded cat-multiple: ", excluded, " || ", sep=""))
-				incrementCounter("excluded.catMul")
+			  counters <- incrementCounter(counters, "excluded.catMul")
 			}
 			else {
 
 				if (catSinToMult!="") {
 					cat("cat-single to cat-multiple || ", sep="")
-					incrementCounter("catSinToCatMul")
+				  counters <- incrementCounter(counters, "catSinToCatMul")
 				}
 
-				incrementCounter("start.catMul")	
+			  counters <- incrementCounter(counters, "start.catMul")	
 				if (isExposure==TRUE) {
-                                        incrementCounter("start.exposure.catMul")
+				  counters <- incrementCounter(counters, "start.exposure.catMul")
                                 }
 				else {
 					# get number of cat mult values denoting trait of interest
 	                                numVals = getNumValuesCatMultExposure(vl, currentVarShort)
 					if (numVals>0) {
-		                                addToCounts("start.exposure.catMulvalues", numVals)
+		                                counters <- addToCounts(addToCounts, "start.exposure.catMulvalues", numVals)
 					}
 				}
-		        	testCategoricalMultiple(vl, currentVarShort, "CAT-MUL", thisdata);
+		        	counters <- testCategoricalMultiple(vl, counters, currentVarShort, "CAT-MUL", thisdata);
 			}
 			cat("\n");
 		}
@@ -134,7 +134,7 @@ testAssociations <- function(vl, currentVar, currentVarShort, thisdata) {
 	}, error = function(e) {
 		print(paste("ERROR:", currentVar,e))
 	})
-
+  return(counters)
 }
 
 

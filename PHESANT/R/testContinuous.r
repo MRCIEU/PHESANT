@@ -18,7 +18,7 @@
 
 
 # Main function called for continuous fields
-testContinuous <- function(vl, varName, varType, thisdata) {
+testContinuous <- function(vl, counters, varName, varType, thisdata) {
 
 	cat("CONTINUOUS MAIN || ");	
 
@@ -29,13 +29,13 @@ testContinuous <- function(vl, varName, varType, thisdata) {
 
 	thisdata[,phenoStartIdx:ncol(thisdata)] = pheno
 
-	testContinuous2(vl, varName, varType, thisdata)
+	counters <- testContinuous2(vl, counters, varName, varType, thisdata)
 	
 }
 
 # Main code used to process continuous fields, or integer fields that have been reassigned as continuous because they have >20 distinct values.
 # This is needed because we have already reassigned values for integer fields, so do this in the function above for continuous fields.
-testContinuous2 <- function(vl, varName, varType, thisdata) {
+testContinuous2 <- function(vl, counters, varName, varType, thisdata) {
 	cat("CONTINUOUS || ");
 
 	pheno = thisdata[,phenoStartIdx:ncol(thisdata)]
@@ -86,19 +86,19 @@ testContinuous2 <- function(vl, varName, varType, thisdata) {
 
         		if (numLevels<=1) {
        				cat("SKIP (number of levels: ",numLevels,")",sep="")
-				incrementCounter("cont.onevalue")
+        		  counters <- incrementCounter(counters,"cont.onevalue")
         		}
         		else if (numLevels==2) {
 	        		# binary
-				incrementCounter("cont.binary")
+        		  counters <- incrementCounter(counters, "cont.binary")
         			thisdatanew = cbind.data.frame(thisdata[,1:numPreceedingCols], phenoFactor);			
-        			binaryLogisticRegression(varName, varType, thisdatanew, isExposure);
+        			counters <- binaryLogisticRegression(varName, counters, varType, thisdatanew, isExposure);
         		}
         	}
 		else {
 			## try to treat as ordered categorical
 
-			incrementCounter("cont.ordcattry")
+		  counters <- incrementCounter(counters, "cont.ordcattry")
 			## equal sized bins
 			phenoBinned = equalSizedBins(phenoAvg);
 
@@ -111,9 +111,9 @@ testContinuous2 <- function(vl, varName, varType, thisdata) {
 
 				# successful binning. >=10 examples in each of the 3 bins
 
-				incrementCounter("cont.ordcattry.ordcat")
+			  counters <- incrementCounter(counters, "cont.ordcattry.ordcat")
 			        thisdatanew = cbind.data.frame(thisdata[,1:numPreceedingCols], phenoBinned);
-				testCategoricalOrdered(vl, varName, varType, thisdatanew);
+				counters <- testCategoricalOrdered(vl, counters, varName, varType, thisdatanew);
 			}
 			else {
 				# try to treat as binary because not enough examples in each bin
@@ -122,36 +122,36 @@ testContinuous2 <- function(vl, varName, varType, thisdata) {
 					## skip - not possible to create binary variable because first and third bins are too small
 					## ie. could merge bin1 with bin 2 but then bin3 still too small etc
 					cat("SKIP 2 bins are too small || ")
-	                                incrementCounter("cont.ordcattry.smallbins")
+				  counters <-incrementCounter(counters, "cont.ordcattry.smallbins")
 				} 
 				else if ((bin0Num<10 | bin1Num<10) & (bin0Num+bin1Num)>=10) {
 
 					# combine first and second bin to create binary variable
-					incrementCounter("cont.ordcattry.binsbinary")
+				  counters <- incrementCounter(counters, "cont.ordcattry.binsbinary")
 					cat("Combine first two bins and treat as binary || ")
 					phenoBinned[which(phenoBinned==0)] = 1	
 
 					# test binary
 					thisdatanew = cbind.data.frame(thisdata[,1:numPreceedingCols], phenoBinned)
-	                                binaryLogisticRegression(varName, varType, thisdatanew, isExposure);
+	                                counters <- binaryLogisticRegression(varName, counters, varType, thisdatanew, isExposure);
 				}
 				else if ((bin2Num<10 | bin1Num<10) & (bin2Num+bin1Num)>=10) {
 
 					# combine second and last bin to create binary variable
-					incrementCounter("cont.ordcattry.binsbinary")
+				  counters <- incrementCounter(counters, "cont.ordcattry.binsbinary")
 					cat("Combine last two bins and treat as binary || ")
                                         phenoBinned[which(phenoBinned==2)] = 1
 					
                                         # test binary
                                         thisdatanew = cbind.data.frame(thisdata[,1:numPreceedingCols], phenoBinned)
-                                        binaryLogisticRegression(varName, varType, thisdatanew, isExposure)
+                                        counters <- binaryLogisticRegression(varName, counters, varType, thisdatanew, isExposure)
                                 }
 				
 
 				else {
 					## skip - not possible to create binary variable because combining bins would still be too small
 					cat("SKIP 2 bins are too small(2) || ")
-                                        incrementCounter("cont.ordcattry.smallbins2")
+				  counters <-incrementCounter(counters, "cont.ordcattry.smallbins2")
 				}
 
 			}
@@ -160,13 +160,13 @@ testContinuous2 <- function(vl, varName, varType, thisdata) {
 	}
 	else {		
 		cat("IRNT || ");
-		incrementCounter("cont.main")
+	  counters <- incrementCounter(counters, "cont.main")
 
 		# check there are at least 500 examples
 		numNotNA = length(which(!is.na(phenoAvg)))
 		if (numNotNA<500) {
 			cat("CONTINUOUS-SKIP-500 (", numNotNA, ") || ",sep="");
-			incrementCounter("cont.main.500")
+		  counters <- incrementCounter(counters, "cont.main.500")
 		}
 		else {
 			## inverse rank normal transformation
@@ -176,7 +176,7 @@ testContinuous2 <- function(vl, varName, varType, thisdata) {
 				# add pheno to dataframe
 				storeNewVar(thisdata[,"userID"], phenoIRNT, varName, 'cont')
 				cat("SUCCESS results-linear");
-	                        incrementCounter("success.continuous")
+				counters <- incrementCounter(counters, "success.continuous")
                         }
                         else {
 		
@@ -223,9 +223,9 @@ testContinuous2 <- function(vl, varName, varType, thisdata) {
 			write(paste(varName, varType, numNotNA, beta, lower, upper, pvalue, sep=","), file=paste(opt$resDir,"results-linear-",opt$varTypeArg,".txt", sep=""), append="TRUE");
 			cat("SUCCESS results-linear");
 
-			incrementCounter("success.continuous")
+			counters <- incrementCounter(counters, "success.continuous")
                 	if (isExposure == TRUE) {
-                	        incrementCounter("success.exposure.continuous")
+                	  counters <- incrementCounter(counters, "success.exposure.continuous")
                 	}
 
 			## END TRYCATCH
@@ -233,11 +233,12 @@ testContinuous2 <- function(vl, varName, varType, thisdata) {
                 	        sink()
                 	        sink(resLogFile, append=TRUE)
                 	        cat(paste("ERROR:", varName,gsub("[\r\n]", "", e), sep=" "))
-                	        incrementCounter("continuous.error")
+                	        counters <-incrementCounter(counters, "continuous.error")
                 	})
 			}			
 		}
 	}
+	return(counters)
 }
 
 irnt <- function(pheno) {
