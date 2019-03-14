@@ -23,7 +23,7 @@
 # in CAT_MULT_INDICATOR_FIELDS field of variable info file (either NO_NAN, ALL or a field ID)
 # 3) Checking derived variable has at least 10 cases in each group
 # 4) Calling binaryLogisticRegression function for this derived binary variable
-testCategoricalMultiple <- function(vl, counters, varName, varType, thisdata) {
+testCategoricalMultiple <- function(opt, vl, counters, varName, varType, thisdata) {
 	cat("CAT-MULTIPLE || ");
 
 	pheno = thisdata[,phenoStartIdx:ncol(thisdata), drop=FALSE]
@@ -84,7 +84,7 @@ testCategoricalMultiple <- function(vl, counters, varName, varType, thisdata) {
 
 			counters <- incrementCounter(counters, "catMul.over10")
 		     	# binary - so logistic regression
-			counters <- binaryLogisticRegression(paste(varName, variableVal,sep="#"), counters, varType, newthisdata, isExposure)
+			counters <- binaryLogisticRegression(opt, paste(varName, variableVal,sep="#"), counters, varType, newthisdata, isExposure)
 		}
 	}
 	return(counters)

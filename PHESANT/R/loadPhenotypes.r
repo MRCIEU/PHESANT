@@ -19,7 +19,7 @@
 ##
 ## load phenotypes from phenotype file
 
-loadPhenotypes <- function() {
+loadPhenotypes <- function(opt) {
     ## is not running 'all' then we determine the start and end idxs of phenotypes that we test, so that we can parallelise into multiple jobs
     if (opt$varTypeArg!="all") {
 		      # read pheno file column names

@@ -20,7 +20,7 @@
 ##
 ## load trait of interest, either from separate trait of interest file, or from phenotype file
 
-loadTraitOfInterest <- function(phenotypes) {
+loadTraitOfInterest <- function(opt, phenotypes) {
     if (opt$save==TRUE) { 
 	      # saving not running tests so we don't have a trait of interest
         # add pretend trait of interest so other code doesn't break

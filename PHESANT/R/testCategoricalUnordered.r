@@ -19,7 +19,7 @@
 
 # Tests an unordered categorical phenotype with multinomial regression
 # and saves this result in the multinomial logistic results file
-testCategoricalUnordered <- function(vl, counters, varName, varType, thisdata) {
+testCategoricalUnordered <- function(opt, vl, counters, varName, varType, thisdata) {
 
 	pheno = thisdata[,phenoStartIdx:ncol(thisdata)]
 	#geno = thisdata[,"geno"]

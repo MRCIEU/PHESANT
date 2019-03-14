@@ -18,7 +18,7 @@
 
 
 # Validate the contents of the trait of interest file
-validateTraitInput <- function(snpIn) {
+validateTraitInput <- function(opt) {
 
 if (opt$save!=TRUE) {
 

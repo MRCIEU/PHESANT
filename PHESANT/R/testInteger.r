@@ -22,7 +22,7 @@
 # 2) Generate a single value if there are several values (arrays) by taking the mean
 # 3) Treating this field as continuous if at least 20 distinct values.
 # Otherwise treat as binary or ordered categorical if 2 or more than two values. 
-testInteger <- function(vl, counters, varName, varType, thisdata) {
+testInteger <- function(opt, vl, counters, varName, varType, thisdata) {
 	cat("INTEGER || ");
 
 	pheno = thisdata[,phenoStartIdx:ncol(thisdata)]
@@ -52,7 +52,7 @@ testInteger <- function(vl, counters, varName, varType, thisdata) {
 	if (length(uniqVar)>=20) {
 		
 		thisdatanew = cbind.data.frame(thisdata[,1:numPreceedingCols], phenoAvg);
-		counters <- testContinuous2(vl, counters, varName, varType, thisdatanew)
+		counters <- testContinuous2(opt, vl, counters, varName, varType, thisdatanew)
 		counters <- incrementCounter(counters, "int.continuous")
 	}
 	else {
@@ -72,7 +72,7 @@ testInteger <- function(vl, counters, varName, varType, thisdata) {
 
 			# binary
 			thisdatanew = cbind.data.frame(thisdata[,1:numPreceedingCols], phenoFactor);
-			counters <- binaryLogisticRegression(varName, counters, varType, thisdatanew, isExposure);
+			counters <- binaryLogisticRegression(opt, varName, counters, varType, thisdatanew, isExposure);
 		}
 		else {
 		  counters <- incrementCounter(counters, "int.catord")
@@ -82,7 +82,7 @@ testInteger <- function(vl, counters, varName, varType, thisdata) {
 			thisdatanew = cbind.data.frame(thisdata[,1:numPreceedingCols], phenoFactor);
 
 			# treat as ordinal categorical
-			counters <- testCategoricalOrdered(vl, counters, varName, varType, thisdatanew);
+			counters <- testCategoricalOrdered(opt, vl, counters, varName, varType, thisdatanew);
 		}
 	}
 	return(counters)

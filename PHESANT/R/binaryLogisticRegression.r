@@ -21,7 +21,7 @@
 #
 # Performs binary logistic regression on the phenotype stored in thisdata 
 # and stores result in 'results-logistic-binary' results file.
-binaryLogisticRegression <- function(varName, counters, varType, thisdata, isExposure) {
+binaryLogisticRegression <- function(opt, varName, counters, varType, thisdata, isExposure) {
 
         phenoFactor = factor(thisdata[,phenoStartIdx])
 

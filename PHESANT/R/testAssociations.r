@@ -18,7 +18,7 @@
 
 
 # Tests the association of a field, determined by its field type
-testAssociations <- function(vl, counters, currentVar, currentVarShort, thisdata) {
+testAssociations <- function(opt, vl, counters, currentVar, currentVarShort, thisdata) {
 
 	## call file for variable type
 
@@ -55,7 +55,7 @@ testAssociations <- function(vl, counters, currentVar, currentVarShort, thisdata
 				  counters <- incrementCounter(counters, "start.exposure.int")
 				}
 
-			    	counters <- testInteger(vl, couinters, currentVarShort, "INTEGER", thisdata);
+			    	counters <- testInteger(opt, vl, couinters, currentVarShort, "INTEGER", thisdata);
 			}
 			cat("\n");
 	    	}
@@ -73,7 +73,7 @@ testAssociations <- function(vl, counters, currentVar, currentVarShort, thisdata
 				if (isExposure==TRUE) {
 				  counters<- incrementCounter(counters, "start.exposure.cont")
                                 }
-				counters <- testContinuous(vl, counters, currentVarShort, "CONTINUOUS", thisdata);
+				counters <- testContinuous(opt, vl, counters, currentVarShort, "CONTINUOUS", thisdata);
 	        	}
 	        	cat("\n");
 		}
@@ -91,7 +91,7 @@ testAssociations <- function(vl, counters, currentVar, currentVarShort, thisdata
 				if (isExposure==TRUE) {
 				  counters <-incrementCounter(counters, "start.exposure.catSin")
                                 }
-			  counters <- testCategoricalSingle(vl, counters, currentVarShort, "CAT-SIN", thisdata);
+			  counters <- testCategoricalSingle(opt, vl, counters, currentVarShort, "CAT-SIN", thisdata);
 			}
 			cat("\n");
 	  	}
@@ -122,7 +122,7 @@ testAssociations <- function(vl, counters, currentVar, currentVarShort, thisdata
 		                                counters <- addToCounts(addToCounts, "start.exposure.catMulvalues", numVals)
 					}
 				}
-		        	counters <- testCategoricalMultiple(vl, counters, currentVarShort, "CAT-MUL", thisdata);
+		        	counters <- testCategoricalMultiple(opt, vl, counters, currentVarShort, "CAT-MUL", thisdata);
 			}
 			cat("\n");
 		}

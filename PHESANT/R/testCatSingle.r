@@ -23,7 +23,7 @@
 # 3) Replacing missing codes - we assume values < 0 are missing for categorical (single) variables
 # 4) Remove values with <10 cases
 # 5) Deterimine correct test to perform, either binary, ordered or unordered.
-testCategoricalSingle <- function(vl, counters, varName, varType, thisdata) {
+testCategoricalSingle <- function(opt, vl, counters, varName, varType, thisdata) {
 	cat("CAT-SINGLE || ");
 
 	pheno = thisdata[,phenoStartIdx:ncol(thisdata)]
@@ -78,7 +78,7 @@ testCategoricalSingle <- function(vl, counters, varName, varType, thisdata) {
 		phenoFactor = factor(pheno)
 		# binary - so logistic regression
 		thisdatanew = cbind.data.frame(thisdata[,1:numPreceedingCols], phenoFactor);
-		counters <- binaryLogisticRegression(varName, counters, varType, thisdatanew, isExposure)	
+		counters <- binaryLogisticRegression(opt, varName, counters, varType, thisdatanew, isExposure)	
 	}
 	else {
 		# > 2 categories
@@ -94,7 +94,7 @@ testCategoricalSingle <- function(vl, counters, varName, varType, thisdata) {
 		  counters <- incrementCounter(counters, "catSin.case2")
 
 			thisdatanew = cbind.data.frame(thisdata[,1:numPreceedingCols], pheno);
-			counters <- testCategoricalUnordered(vl, counters, varName, varType, thisdatanew);
+			counters <- testCategoricalUnordered(opt, vl, counters, varName, varType, thisdatanew);
 			
 		}
 		else if (ordered == 1) {
@@ -105,7 +105,7 @@ testCategoricalSingle <- function(vl, counters, varName, varType, thisdata) {
 
 			## reorder variable values into increasing order
 			thisdatanew = cbind.data.frame(thisdata[,1:numPreceedingCols], pheno);
-			counters <- testCategoricalOrdered(vl, counters, varName, varType, thisdatanew, order)
+			counters <- testCategoricalOrdered(opt, vl, counters, varName, varType, thisdatanew, order)
 		
 		}
 		else if (ordered == -2) {

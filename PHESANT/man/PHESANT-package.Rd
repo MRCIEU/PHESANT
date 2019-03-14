@@ -13,7 +13,7 @@
 The DESCRIPTION file:
 \packageDESCRIPTION{PHESANT}
 \packageIndices{PHESANT}
-~~ An overview of how to use the package, including the most important functions ~~
+An overview of how to use the package, including the most important functions
 }
 \author{
 \packageAuthor{PHESANT}
@@ -21,14 +21,12 @@ The DESCRIPTION file:
 Maintainer: \packageMaintainer{PHESANT}
 }
 \references{
-~~ Literature or other references for background information ~~
+Literature or other references for background information 
 }
-~~ Optionally other standard keywords, one per line, from file KEYWORDS in the R documentation directory ~~
 \keyword{ package }
 \seealso{
-~~ Optional links to other man pages, e.g. ~~
-~~ \code{\link[<pkg>:<pkg>-package]{<pkg>}} ~~
+To be done
 }
 \examples{
-~~ simple examples of the most important functions ~~
+
 }

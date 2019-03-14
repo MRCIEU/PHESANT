@@ -18,7 +18,7 @@
 
 
 # create new results files and headers
-initResultsFiles <- function() {
+initResultsFiles <- function(opt) {
 
 	## only linear and continuous fields can create linear results
 	file.create(paste(opt$resDir,"results-linear-",opt$varTypeArg,".txt",sep=""));
@@ -39,7 +39,7 @@ initResultsFiles <- function() {
 }
 
 # load the variable information and data code information files
-initVariableLists <- function() {
+initVariableLists <- function(opt) {
 
 	phenoInfo=read.table(opt$variablelistfile,sep="\t",header=1,comment.char="",quote="");
 

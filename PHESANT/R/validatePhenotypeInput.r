@@ -18,7 +18,7 @@
 
 
 # Validate the contents of the phenotype file
-validatePhenotypeInput <- function() {
+validatePhenotypeInput <- function(opt) {
 
 	print("Validating phenotype data ...")
 

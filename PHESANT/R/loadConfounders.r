@@ -19,7 +19,7 @@
 ##
 ## loads confounder variables from phenotype file
 
-loadConfounders <- function(phenotypes) {
+loadConfounders <- function(opt, phenotypes) {
     if (opt$save==TRUE) { 
 	      # saving not running tests so we add a fake confounder
 	      numRows = nrow(phenotypes)
@@ -40,7 +40,7 @@ loadConfounders <- function(phenotypes) {
       		    colnames(confs)[1] <- "userID"
     	  } else {
     	        print("Loading confounders from phenotypes file ...")
-              confNames = getConfounderNames()
+              confNames = getConfounderNames(opt)
               #####
     	        ##### extract confounders from data file
               confs = fread(opt$phenofile, select=confNames, sep=',', header=TRUE, data.table=FALSE)
@@ -90,7 +90,7 @@ loadConfounders <- function(phenotypes) {
     }
 }
 
-getConfounderNames <- function() {
+getConfounderNames <- function(opt) {
     #####
 	  ##### first get vector of confounder names
     # age and sex

@@ -18,7 +18,7 @@
 
 
 # Main function called for continuous fields
-testContinuous <- function(vl, counters, varName, varType, thisdata) {
+testContinuous <- function(opt, vl, counters, varName, varType, thisdata) {
 
 	cat("CONTINUOUS MAIN || ");	
 
@@ -29,13 +29,13 @@ testContinuous <- function(vl, counters, varName, varType, thisdata) {
 
 	thisdata[,phenoStartIdx:ncol(thisdata)] = pheno
 
-	counters <- testContinuous2(vl, counters, varName, varType, thisdata)
+	counters <- testContinuous2(opt, vl, counters, varName, varType, thisdata)
 	
 }
 
 # Main code used to process continuous fields, or integer fields that have been reassigned as continuous because they have >20 distinct values.
 # This is needed because we have already reassigned values for integer fields, so do this in the function above for continuous fields.
-testContinuous2 <- function(vl, counters, varName, varType, thisdata) {
+testContinuous2 <- function(opt, vl, counters, varName, varType, thisdata) {
 	cat("CONTINUOUS || ");
 
 	pheno = thisdata[,phenoStartIdx:ncol(thisdata)]
@@ -92,7 +92,7 @@ testContinuous2 <- function(vl, counters, varName, varType, thisdata) {
 	        		# binary
         		  counters <- incrementCounter(counters, "cont.binary")
         			thisdatanew = cbind.data.frame(thisdata[,1:numPreceedingCols], phenoFactor);			
-        			counters <- binaryLogisticRegression(varName, counters, varType, thisdatanew, isExposure);
+        			counters <- binaryLogisticRegression(opt, varName, counters, varType, thisdatanew, isExposure);
         		}
         	}
 		else {
@@ -113,7 +113,7 @@ testContinuous2 <- function(vl, counters, varName, varType, thisdata) {
 
 			  counters <- incrementCounter(counters, "cont.ordcattry.ordcat")
 			        thisdatanew = cbind.data.frame(thisdata[,1:numPreceedingCols], phenoBinned);
-				counters <- testCategoricalOrdered(vl, counters, varName, varType, thisdatanew);
+				counters <- testCategoricalOrdered(opt, vl, counters, varName, varType, thisdatanew);
 			}
 			else {
 				# try to treat as binary because not enough examples in each bin
@@ -133,7 +133,7 @@ testContinuous2 <- function(vl, counters, varName, varType, thisdata) {
 
 					# test binary
 					thisdatanew = cbind.data.frame(thisdata[,1:numPreceedingCols], phenoBinned)
-	                                counters <- binaryLogisticRegression(varName, counters, varType, thisdatanew, isExposure);
+	                                counters <- binaryLogisticRegression(opt, varName, counters, varType, thisdatanew, isExposure);
 				}
 				else if ((bin2Num<10 | bin1Num<10) & (bin2Num+bin1Num)>=10) {
 
@@ -144,7 +144,7 @@ testContinuous2 <- function(vl, counters, varName, varType, thisdata) {
 					
                                         # test binary
                                         thisdatanew = cbind.data.frame(thisdata[,1:numPreceedingCols], phenoBinned)
-                                        counters <- binaryLogisticRegression(varName, counters, varType, thisdatanew, isExposure)
+                                        counters <- binaryLogisticRegression(opt, varName, counters, varType, thisdatanew, isExposure)
                                 }
 				
 

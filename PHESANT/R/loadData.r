@@ -21,25 +21,25 @@
 # creates phenotype / trait of interest data frame
 # creates confounder data frame
 # returns an object holding these two data frames
-loadData <- function(vl) {
+loadData <- function(opt, vl) {
   
   	##### validating data
   	## check phenotype file headers
-  	validatePhenotypeInput()
+  	validatePhenotypeInput(opt)
   
   	## check trait of interest file headers
-  	validateTraitInput()
+  	validateTraitInput(opt)
   
   	##### load data
   	## load phenotype
   	print("Loading phenotypes ...")
-  	phenotype = loadPhenotypes()
+  	phenotype = loadPhenotypes(opt)
   
   	## load trait of interest
-    toi <- loadTraitOfInterest(phenotype)
+    toi <- loadTraitOfInterest(opt, phenotype)
   
     ## load confounders
-    conf <- loadConfounders(phenotype)
+    conf <- loadConfounders(opt, phenotype)
   
   	## add trait of interest to phenotype data frame and remove rows with no trait of interest
   	## merge in toi with phenotype - keep id list from phenotypes file
@@ -68,7 +68,7 @@ loadData <- function(vl) {
   
   	# some fields are fixed that have a field type as cat single but we want to treat them like cat mult
   	phenotype = fixOddFieldsToCatMul(vl, phenotype)
-  	indFields = loadIndicatorFields(vl, colnames(phenotype))
+  	indFields = loadIndicatorFields(opt, vl, colnames(phenotype))
   	d = list(datax=phenotype, confounders=conf, inds=indFields)
   	return(d)
 }

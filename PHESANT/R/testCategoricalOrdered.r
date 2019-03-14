@@ -18,7 +18,7 @@
 
 
 # Performs ordered logistic regression test and saves results in ordered logistic results file
-testCategoricalOrdered <- function(vl, counters, varName, varType, thisdata, orderStr="") {
+testCategoricalOrdered <- function(opt, vl, counters, varName, varType, thisdata, orderStr="") {
 
 	
 	pheno = thisdata[,phenoStartIdx:ncol(thisdata)]

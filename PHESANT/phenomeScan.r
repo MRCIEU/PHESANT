@@ -26,22 +26,22 @@ library("optparse")
 
 args <- commandArgs(T)
 if (length(args) == 0) {
-  load(file = "opt_only.RData")
+    load(file = "opt_only.RData")
 } else {
-  opt_parser = OptionParser(option_list=option_list);
-  opt = parse_args(opt_parser);
-  processArgs();
+    opt_parser <- OptionParser(option_list=option_list)
+    opt <- parse_args(opt_parser)
+    opt <- processArgs(opt)
 }
 
 ## load the files we write to and use
 counters <- initCounters()
 if (opt$save==FALSE) {
-	initResultsFiles();
+	initResultsFiles(opt)
 }
-vl=initVariableLists();
+vl <- initVariableLists(opt)
 
 ## load data
-d <- loadData(vl)
+d <- loadData(opt, vl)
 data=d$datax
 confounders=d$confounders
 indicatorFields=d$inds
@@ -105,7 +105,7 @@ for (var in phenoVars) {
 		if (first==FALSE) {
 
 			thisdata = makeTestDataFrame(data, confounders, currentVarValues)
-			counters <- testAssociations(vl, counters, currentVar, currentVarShort, thisdata)
+			counters <- testAssociations(opt, vl, counters, currentVar, currentVarShort, thisdata)
 		}
 		
 		first=FALSE;
@@ -124,13 +124,13 @@ for (var in phenoVars) {
 if (phenoIdx>0){
 	# last variable so test association
 	thisdata = makeTestDataFrame(data, confounders, currentVarValues)
-	counters <- testAssociations(vl, counters, currentVar, currentVarShort, thisdata)
+	counters <- testAssociations(opt, vl, counters, currentVar, currentVarShort, thisdata)
 }
 
 sink()
 
 # save counters of each path in variable flow
-saveCounts(counters)
+saveCounts(opt, counters)
 
 if (opt$save == TRUE) {
 	write.table(derivedBinary, file=paste(opt$resDir,"data-binary-",opt$varTypeArg,".txt", sep=""), append=FALSE, quote=FALSE, sep=",", na="", row.names=FALSE, col.names=TRUE);

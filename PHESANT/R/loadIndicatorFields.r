@@ -18,7 +18,7 @@
 
 ##
 ## load data used for data code default value related field, and categorical multiple indicator field
-loadIndicatorFields <- function(vl, phenosToTest) {
+loadIndicatorFields <- function(opt, vl, phenosToTest) {
   	print("Loading indicator fields from phenotypes file ...")
   
   	# read pheno file column names

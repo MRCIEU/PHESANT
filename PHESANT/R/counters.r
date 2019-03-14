@@ -43,7 +43,7 @@ incrementCounter <- function(counters, countName) {
 }
 
 # Saves the counters stored in count variables, to a file in results directory
-saveCounts <- function(counters) {
+saveCounts <- function(opt, counters) {
     countFile = paste(opt$resDir,"variable-flow-counts-",opt$varTypeArg,".txt",sep="")
     # sort on counter name
     sortIdx = order(as.character(counters[,"name"]))
