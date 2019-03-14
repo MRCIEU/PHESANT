@@ -18,14 +18,14 @@
 
 
 # Performs ordered logistic regression test and saves results in ordered logistic results file
-testCategoricalOrdered <- function(opt, vl, counters, varName, varType, thisdata, phenoStartIdx, orderStr="") {
+testCategoricalOrdered <- function(opt, vl, varName, varType, thisdata, phenoStartIdx, orderStr="") {
 
 	
 	pheno = thisdata[,phenoStartIdx:ncol(thisdata)]
 	geno = thisdata[,"geno"]
 
 	cat("CAT-ORD || ");
-	counters <- incrementCounter(counters, "ordCat")
+	incrementCounter("ordCat")
 
 	doCatOrdAssertions(pheno)
 
@@ -39,7 +39,7 @@ testCategoricalOrdered <- function(opt, vl, counters, varName, varType, thisdata
 	numNotNA = length(which(!is.na(pheno)))
 	if (numNotNA<500) {
 		cat("CATORD-SKIP-500 (", numNotNA, ") || ",sep="");
-	  counters <- incrementCounter(counters, "ordCat.500")
+	  incrementCounter("ordCat.500")
 	}
 	else {
 		# test this cat ordered variable with ordered logistic regression	
@@ -52,7 +52,7 @@ testCategoricalOrdered <- function(opt, vl, counters, varName, varType, thisdata
 			# add pheno to dataframe
 			storeNewVar(thisdata[,"userID"], phenoFactor, varName, 'catOrd')
 			cat("SUCCESS results-ordered-logistic");
-			counters <- incrementCounter(counters, "success.ordCat")
+			incrementCounter("success.ordCat")
                 }
                 else {
 
@@ -93,11 +93,11 @@ testCategoricalOrdered <- function(opt, vl, counters, varName, varType, thisdata
 
 		write(paste(varName, varType, numNotNA, beta, lower, upper, pvalue, sep=","), file=paste(opt$resDir,"results-ordered-logistic-",opt$varTypeArg,".txt",sep=""), append="TRUE");
 		cat("SUCCESS results-ordered-logistic");
-		counters <- incrementCounter(counters, "success.ordCat")
+		incrementCounter("success.ordCat")
 
 		isExposure = getIsExposure(vl, varName)
                 if (isExposure == TRUE) {
-                  counters <- incrementCounter(counters, "success.exposure.ordCat")
+                  incrementCounter("success.exposure.ordCat")
                 }
 
 		### END TRYCATCH
@@ -105,12 +105,11 @@ testCategoricalOrdered <- function(opt, vl, counters, varName, varType, thisdata
 			sink()
                         sink(pkg.env$resLogFile, append=TRUE)
                         cat(paste("ERROR:", varName,gsub("[\r\n]", "", e), sep=" "))
-                        counters <- incrementCounter(counters, "ordCat.error")
+                        incrementCounter("ordCat.error")
                 })
 		}
 
 	}
-	return(counters)
 }
 
 # check that the phenotype is valid - that there are more than two categories

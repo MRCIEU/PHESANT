@@ -34,7 +34,7 @@ if (length(args) == 0) {
 }
 
 ## load the files we write to and use
-counters <- initCounters()
+initCounters()
 if (opt$save==FALSE) {
 	initResultsFiles(opt)
 }
@@ -102,7 +102,7 @@ for (var in phenoVars) {
 		if (first==FALSE) {
 
 			thisdata = makeTestDataFrame(data, confounders, currentVarValues)
-			counters <- testAssociations(opt, vl, counters, currentVar, currentVarShort, thisdata, phenoStartIdx)
+			testAssociations(opt, vl, currentVar, currentVarShort, thisdata, phenoStartIdx)
 		}
 		
 		first=FALSE;
@@ -121,13 +121,13 @@ for (var in phenoVars) {
 if (phenoIdx>0){
 	# last variable so test association
 	thisdata = makeTestDataFrame(data, confounders, currentVarValues)
-	counters <- testAssociations(opt, vl, counters, currentVar, currentVarShort, thisdata, phenoStartIdx)
+	testAssociations(opt, vl, currentVar, currentVarShort, thisdata, phenoStartIdx)
 }
 
 sink()
 
 # save counters of each path in variable flow
-saveCounts(opt, counters)
+saveCounts(opt)
 
 if (opt$save == TRUE) {
 	write.table(pkg.env$derivedBinary, file=paste(opt$resDir,"data-binary-",opt$varTypeArg,".txt", sep=""), append=FALSE, quote=FALSE, sep=",", na="", row.names=FALSE, col.names=TRUE);

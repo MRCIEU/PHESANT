@@ -19,7 +19,7 @@
 
 # Tests an unordered categorical phenotype with multinomial regression
 # and saves this result in the multinomial logistic results file
-testCategoricalUnordered <- function(opt, vl, counters, varName, varType, thisdata, phenoStartIdx) {
+testCategoricalUnordered <- function(opt, vl, varName, varType, thisdata, phenoStartIdx) {
 
 	pheno = thisdata[,phenoStartIdx:ncol(thisdata)]
 	#geno = thisdata[,"geno"]
@@ -27,7 +27,7 @@ testCategoricalUnordered <- function(opt, vl, counters, varName, varType, thisda
 	numNotNA = length(which(!is.na(pheno)))
 	if (numNotNA<500) {
 		cat("CATUNORD-SKIP-500 (", numNotNA, ") || ",sep="");
-	  counters <- incrementCounter(counters, "unordCat.500")
+	  incrementCounter("unordCat.500")
 	}
 	else {
 
@@ -38,8 +38,8 @@ testCategoricalUnordered <- function(opt, vl, counters, varName, varType, thisda
 		numWeights=(numUnique-1)*(((phenoStartIdx -1)-2)+1+1)
 		if (numWeights>1000) {
 			cat("Too many weights in model: ", numWeights, " > 1000, (num outcomes values: ", numUnique, ") || SKIP ", sep="")
-		  counters <-incrementCounter(counters, "unordCat.cats")
-			return(counters)
+		  incrementCounter("unordCat.cats")
+			return(NULL)
 		}
 
 		phenoFactor = chooseReferenceCategory(pheno);
@@ -48,7 +48,7 @@ testCategoricalUnordered <- function(opt, vl, counters, varName, varType, thisda
 			# add pheno to dataframe
 			storeNewVar(thisdata[,"userID"], phenoFactor, varName, 'catUnord')
 			cat("SUCCESS results-notordered-logistic ");
-			counters <- incrementCounter(counters, "success.unordCat")
+			incrementCounter("success.unordCat")
 		}
                 else {
 		
@@ -127,11 +127,11 @@ testCategoricalUnordered <- function(opt, vl, counters, varName, varType, thisda
 		}
 
 		cat("SUCCESS results-notordered-logistic ");
-		counters <- incrementCounter(counters, "success.unordCat")
+		incrementCounter("success.unordCat")
 
 		isExposure = getIsExposure(vl, varName)
                 if (isExposure == TRUE) {
-                  counters <- incrementCounter(counters, "success.exposure.unordCat")
+                  incrementCounter("success.exposure.unordCat")
                 }
 		
 		## END TRYCATCH
@@ -139,11 +139,10 @@ testCategoricalUnordered <- function(opt, vl, counters, varName, varType, thisda
                         sink()
                         sink(pkg.env$resLogFile, append=TRUE)
                         cat(paste("ERROR:", varName,gsub("[\r\n]", "", e), sep=" "))
-                        counters <- incrementCounter(counters, "unordCat.error")
+                        incrementCounter("unordCat.error")
 		})
 		}
 	}
-	return(counters)
 }
 
 # find reference category - category with most number of examples

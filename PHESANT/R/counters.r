@@ -17,42 +17,39 @@
 # DEALINGS IN THE SOFTWARE.
 
 # adds given value to counter, that are used to count how many variables go down each route in the data flow
-addToCounts <- function(counters, countName, num) {
-    idx = which(counters$name==countName)
+addToCounts <- function(countName, num) {
+    idx = which(pkg.env$counters$name==countName)
     if (length(idx)==0) {
         # counter does not exist so add with countValue 1
-        counters <- rbind(counters, data.frame(name=countName, countValue=num))
+        pkg.env$counters <- rbind(pkg.env$counters, data.frame(name=countName, countValue=num))
     } else {
         # add to counter that already exists
-        counters$countValue[idx] <- counters$countValue[idx]+num
+        pkg.env$counters$countValue[idx] <- pkg.env$counters$countValue[idx]+num
     }
-    return(counters)
 }
 
 # increments counters used to count how many variables go down each route in the data flow
-incrementCounter <- function(counters, countName) {
-    idx = which(counters$name==countName)
+incrementCounter <- function(countName) {
+    idx = which(pkg.env$counters$name==countName)
     if (length(idx)==0) {
         # counter does not exist so add with countValue 1
-        counters <- rbind(counters, data.frame(name=countName, countValue=1))
+        pkg.env$counters <- rbind(pkg.env$counters, data.frame(name=countName, countValue=1))
     } else {
         # increment counter that already exists
-        counters$countValue[idx] <- counters$countValue[idx]+1
+        pkg.env$counters$countValue[idx] <- pkg.env$counters$countValue[idx]+1
     }
-    return(counters)
 }
 
 # Saves the counters stored in count variables, to a file in results directory
-saveCounts <- function(opt, counters) {
+saveCounts <- function(opt) {
     countFile = paste(opt$resDir,"variable-flow-counts-",opt$varTypeArg,".txt",sep="")
     # sort on counter name
-    sortIdx = order(as.character(counters[,"name"]))
-    counters <<- counters[sortIdx,]
+    sortIdx = order(as.character(pkg.env$counters[,"name"]))
+    counters <- pkg.env$counters[sortIdx,]
     write.table(counters, file=countFile, sep=",", quote=FALSE, row.names=FALSE)
 }
 
 # init the counters used to determine how many variables took each path in the variable processing flow.
 initCounters <- function() {
-    counters = data.frame(name=character(),countValue=integer(), stringsAsFactors=FALSE)
-    return(counters)
+  pkg.env$counters = data.frame(name=character(),countValue=integer(), stringsAsFactors=FALSE)
 }

@@ -23,7 +23,7 @@
 # in CAT_MULT_INDICATOR_FIELDS field of variable info file (either NO_NAN, ALL or a field ID)
 # 3) Checking derived variable has at least 10 cases in each group
 # 4) Calling binaryLogisticRegression function for this derived binary variable
-testCategoricalMultiple <- function(opt, vl, counters, varName, varType, thisdata, phenoStartIdx) {
+testCategoricalMultiple <- function(opt, vl, varName, varType, thisdata, phenoStartIdx) {
 	cat("CAT-MULTIPLE || ");
 
 	pheno = thisdata[,phenoStartIdx:ncol(thisdata), drop=FALSE]
@@ -54,7 +54,7 @@ testCategoricalMultiple <- function(opt, vl, counters, varName, varType, thisdat
 		idxsTrue = idxForVar[,"row"]
 
 		cat(" CAT-MUL-BINARY-VAR ", variableVal, " || ", sep="");
-		counters <- incrementCounter(counters, "catMul.binary")
+		incrementCounter("catMul.binary")
 		
 		# make zero vector and set 1s for those with this variable value
 		varBinary = rep.int(0,numRows);
@@ -77,17 +77,16 @@ testCategoricalMultiple <- function(opt, vl, counters, varName, varType, thisdat
                 
 	        if (idxTrue<10 || idxFalse<10) {
 	                cat("CAT-MULT-SKIP-10 (", idxTrue, " vs ", idxFalse, ") || ", sep="");
-			counters <- incrementCounter(counters, "catMul.10")
+			incrementCounter("catMul.10")
 	        }
 		else {
 			isExposure = getIsCatMultExposure(vl, varName, variableVal)
 
-			counters <- incrementCounter(counters, "catMul.over10")
+			incrementCounter("catMul.over10")
 		     	# binary - so logistic regression
-			counters <- binaryLogisticRegression(opt, paste(varName, variableVal,sep="#"), counters, varType, newthisdata, isExposure, phenoStartIdx)
+			binaryLogisticRegression(opt, paste(varName, variableVal,sep="#"), varType, newthisdata, isExposure, phenoStartIdx)
 		}
 	}
-	return(counters)
 }
 
 # restricts sample based on value in CAT_MULT_INDICATOR_FIELDS column of variable info file,
