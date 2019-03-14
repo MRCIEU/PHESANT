@@ -20,106 +20,90 @@
 ## load phenotypes from phenotype file
 
 loadPhenotypes <- function() {
-
-
-        ## is not running 'all' then we determine the start and end idxs of phenotypes that we test, so that we can parallelise into multiple jobs
-        if (opt$varTypeArg!="all") {
-
-		# read pheno file column names
+    ## is not running 'all' then we determine the start and end idxs of phenotypes that we test, so that we can parallelise into multiple jobs
+    if (opt$varTypeArg!="all") {
+		      # read pheno file column names
 	        phenoVars = read.table(opt$phenofile, header=0, nrows=1, sep=',')
 	        phenoVars = phenoVars[which(phenoVars!=opt$userId)]
 
-
-		#####
-		##### calculate part start and end
-
-                partSize = ceiling(length(phenoVars)/opt$numParts);
-                partStart = (opt$partIdx-1)*partSize + 1;
-
-                if (opt$partIdx == opt$numParts) {
-                        partEnd = length(phenoVars);
-                } else {
-                        partEnd = partStart + partSize - 1;
-                }
-
-                print(paste(partStart, '-', partEnd));
+		      #####
+		      ##### calculate part start and end
+          partSize = ceiling(length(phenoVars)/opt$numParts);
+          partStart = (opt$partIdx-1)*partSize + 1;
+          if (opt$partIdx == opt$numParts) {
+                  partEnd = length(phenoVars);
+          } else {
+                  partEnd = partStart + partSize - 1;
+          }
+          print(paste(partStart, '-', partEnd));
 
 
-                #####
-                ##### find range of columns to read in
+          #####
+          ##### find range of columns to read in
 
-		## This is more complicated than just reading in a column range, because we need to determine cut points
-		## such that all columns of a particular field are loaded.
-		## A field is included in a 'part' if its last column is within the part range.
-		## e.g. for part 2 of 5 parts and for 100 columns, then fields having their last column at position 21 - 40 (i.e. its column index) are included in this part.
+      		## This is more complicated than just reading in a column range, because we need to determine cut points
+      		## such that all columns of a particular field are loaded.
+      		## A field is included in a 'part' if its last column is within the part range.
+      		## e.g. for part 2 of 5 parts and for 100 columns, then fields having their last column at position 21 - 40 (i.e. its column index) are included in this part.
 
-                ## user ID always included
-                phenosToTest = c(opt$userId)
+          ## user ID always included
+          phenosToTest = c(opt$userId)
 
-		currentVar=""
-		currentVarLong=""
-		currentVarShort=""
-		first=TRUE
-		phenoIdx=0
+      		currentVar=""
+      		currentVarLong=""
+      		currentVarShort=""
+      		first=TRUE
+      		phenoIdx=0
 
-		# all columns for a particular field
-		thisPhenoToTest = c()
+		      # all columns for a particular field
+		      thisPhenoToTest = c()
+          for (var in phenoVars) {
+              varx = gsub("^x", "", var);
+              varx = gsub("_[0-9]+$", "", varx);
+              varxShort = gsub("^x", "", var);
+              varxShort = gsub("_[0-9]+_[0-9]+$", "", varxShort);
+			        currentVarLong = var
 
-                for (var in phenoVars) {
-
-                        varx = gsub("^x", "", var);
-                        varx = gsub("_[0-9]+$", "", varx);
-                        varxShort = gsub("^x", "", var);
-                        varxShort = gsub("_[0-9]+_[0-9]+$", "", varxShort);
-			currentVarLong = var
-
-			if (currentVar == varx) { # same variable same timepoint
-				# add current var to pheno list
-				thisPhenoToTest = append(thisPhenoToTest, as.character(currentVarLong))
-			}
-                        else if (currentVarShort == varxShort) { # save var, diff timepoint
-                                ## different time point of this var so skip in testing but add here because some are fixed to cat mult
-                                thisPhenoToTest = append(thisPhenoToTest, as.character(currentVarLong))
-                        } else {
-                              	## new variable so run test for previous (we have collected all the columns now)
-
-                                if (first==FALSE) {
-                                        if (phenoIdx>=partStart && phenoIdx<=partEnd) { # only start new variable processing if last column of it is within the idx range for this part
-                                       		phenosToTest = append(phenosToTest, thisPhenoToTest)
-					}
-                                }
-
-                                first=FALSE;
-
-                                ## new variable so set values
-                                currentVar = varx
-                                currentVarShort = varxShort
-				thisPhenoToTest = c(as.character(currentVarLong))
+        			if (currentVar == varx) { # same variable same timepoint
+        				    # add current var to pheno list
+        				    thisPhenoToTest = append(thisPhenoToTest, as.character(currentVarLong))
+        			} else if (currentVarShort == varxShort) { # save var, diff timepoint
+                    ## different time point of this var so skip in testing but add here because some are fixed to cat mult
+                    thisPhenoToTest = append(thisPhenoToTest, as.character(currentVarLong))
+              } else {
+                    ## new variable so run test for previous (we have collected all the columns now)
+                    if (first==FALSE) {
+                        if (phenoIdx>=partStart && phenoIdx<=partEnd) { # only start new variable processing if last column of it is within the idx range for this part
+                       		phenosToTest = append(phenosToTest, thisPhenoToTest)
                         }
+                    }
+                    first=FALSE;
 
+                    ## new variable so set values
+                    currentVar = varx
+                    currentVarShort = varxShort
+                    thisPhenoToTest = c(as.character(currentVarLong))
+              }
+              phenoIdx = phenoIdx + 1
+      }
 
-                        phenoIdx = phenoIdx + 1
-                }
+      # last variable so test association
+      if (phenoIdx>=partStart && phenoIdx<=partEnd) {
+            #phenosToTest = append(phenosToTest, as.character(currentVarLong))
+			      phenosToTest = append(phenosToTest, as.character(thisPhenoToTest))
+      }
 
-                # last variable so test association
-                if (phenoIdx>=partStart && phenoIdx<=partEnd) {
-                        #phenosToTest = append(phenosToTest, as.character(currentVarLong))
-			phenosToTest = append(phenosToTest, as.character(thisPhenoToTest))
-                }
+      ## read in the right table columns - a subset of the data file
+      data = fread(opt$phenofile, select=phenosToTest, sep=',', header=TRUE, data.table=FALSE, na.strings=c("", "NA"))
 
-                ## read in the right table columns - a subset of the data file
-                data = fread(opt$phenofile, select=phenosToTest, sep=',', header=TRUE, data.table=FALSE, na.strings=c("", "NA"))
-
-        } else {
-                # reading all data at once
-                data = fread(opt$phenofile, sep=',', header=TRUE, data.table=FALSE, na.strings=c("", "NA"))
-        }
+  } else {
+          # reading all data at once
+          data = fread(opt$phenofile, sep=',', header=TRUE, data.table=FALSE, na.strings=c("", "NA"))
+  }
 
 	## this is type conversion as used in the read.table function (that we used to use ((this was changed because read.table cannot read column subsets))
 	data = data.frame(lapply(data,function(x) type.convert(as.character(x))))
-
 	colnames(data)[1] <- "userID"
-
 	return(data)
 
 }
