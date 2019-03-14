@@ -19,7 +19,7 @@
 
 # Tests an unordered categorical phenotype with multinomial regression
 # and saves this result in the multinomial logistic results file
-testCategoricalUnordered <- function(varName, varType, thisdata) {
+testCategoricalUnordered <- function(vl, varName, varType, thisdata) {
 
 	pheno = thisdata[,phenoStartIdx:ncol(thisdata)]
 	#geno = thisdata[,"geno"]
@@ -131,7 +131,7 @@ testCategoricalUnordered <- function(varName, varType, thisdata) {
 		cat("SUCCESS results-notordered-logistic ");
 		incrementCounter("success.unordCat")
 
-		isExposure = getIsExposure(varName)
+		isExposure = getIsExposure(vl, varName)
                 if (isExposure == TRUE) {
                         incrementCounter("success.exposure.unordCat")
                 }

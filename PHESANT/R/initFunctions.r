@@ -16,11 +16,6 @@
 # CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 # DEALINGS IN THE SOFTWARE.
 
-# init the counters used to determine how many variables took each path in the variable processing flow.
-initCounters <- function() {
-	counters = data.frame(name=character(),countValue=integer(), stringsAsFactors=FALSE)
-	return(counters);
-}
 
 # create new results files and headers
 initResultsFiles <- function() {

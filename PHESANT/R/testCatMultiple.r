@@ -23,11 +23,11 @@
 # in CAT_MULT_INDICATOR_FIELDS field of variable info file (either NO_NAN, ALL or a field ID)
 # 3) Checking derived variable has at least 10 cases in each group
 # 4) Calling binaryLogisticRegression function for this derived binary variable
-testCategoricalMultiple <- function(varName, varType, thisdata) {
+testCategoricalMultiple <- function(vl, varName, varType, thisdata) {
 	cat("CAT-MULTIPLE || ");
 
 	pheno = thisdata[,phenoStartIdx:ncol(thisdata), drop=FALSE]
-	pheno = reassignValue(pheno, varName)
+	pheno = reassignValue(vl, pheno, varName)
 
 	## get unique values from all columns of this variable
 	uniqueValues = unique(na.omit(pheno[,1]));
@@ -65,7 +65,7 @@ testCategoricalMultiple <- function(varName, varType, thisdata) {
 		newthisdata = cbind.data.frame(thisdata[,1:numPreceedingCols], varBinaryFactor)
 
 		## one of 3 ways to decide which examples are negative
-        	idxsToRemove = restrictSample(varName, pheno, variableVal, thisdata[,"userID", drop=FALSE])
+        	idxsToRemove = restrictSample(vl, varName, pheno, variableVal, thisdata[,"userID", drop=FALSE])
 
 		if (!is.null(idxsToRemove) & length(idxsToRemove) > 0) {
 			newthisdata = newthisdata[-idxsToRemove,]
@@ -80,7 +80,7 @@ testCategoricalMultiple <- function(varName, varType, thisdata) {
 			incrementCounter("catMul.10")
 	        }
 		else {
-			isExposure = getIsCatMultExposure(varName, variableVal)
+			isExposure = getIsCatMultExposure(vl, varName, variableVal)
 
 			incrementCounter("catMul.over10")
 		     	# binary - so logistic regression
@@ -92,16 +92,16 @@ testCategoricalMultiple <- function(varName, varType, thisdata) {
 # restricts sample based on value in CAT_MULT_INDICATOR_FIELDS column of variable info file,
 # either NO_NAN, ALL or a field ID
 # returns idx's that should be removed from the sample
-restrictSample <- function(varName,pheno,variableVal, userID) {
+restrictSample <- function(vl, varName,pheno,variableVal, userID) {
 
 	# get definition for sample for this variable either NO_NAN, ALL or a variable ID
 	varIndicator = vl$phenoInfo$CAT_MULT_INDICATOR_FIELDS[which(vl$phenoInfo$FieldID==varName)]
 
-	return(restrictSample2(varName,pheno,varIndicator,variableVal, userID))
+	return(restrictSample2(vl, varName,pheno,varIndicator,variableVal, userID))
 }
 
 
-restrictSample2 <- function(varName,pheno, varIndicator,variableVal, userID) {
+restrictSample2 <- function(vl, varName,pheno, varIndicator,variableVal, userID) {
 	
 	if (varIndicator=="NO_NAN") { # remove NAs
 		## remove all people with no value for this variable

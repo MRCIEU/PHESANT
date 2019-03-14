@@ -18,28 +18,28 @@
 
 
 # Main function called for continuous fields
-testContinuous <- function(varName, varType, thisdata) {
+testContinuous <- function(vl, varName, varType, thisdata) {
 
 	cat("CONTINUOUS MAIN || ");	
 
 	pheno = thisdata[,phenoStartIdx:ncol(thisdata)]
 
 	# reassign values
-        pheno = reassignValue(pheno, varName)
+        pheno = reassignValue(vl, pheno, varName)
 
 	thisdata[,phenoStartIdx:ncol(thisdata)] = pheno
 
-	testContinuous2(varName, varType, thisdata)
+	testContinuous2(vl, varName, varType, thisdata)
 	
 }
 
 # Main code used to process continuous fields, or integer fields that have been reassigned as continuous because they have >20 distinct values.
 # This is needed because we have already reassigned values for integer fields, so do this in the function above for continuous fields.
-testContinuous2 <- function(varName, varType, thisdata) {
+testContinuous2 <- function(vl, varName, varType, thisdata) {
 	cat("CONTINUOUS || ");
 
 	pheno = thisdata[,phenoStartIdx:ncol(thisdata)]
-	isExposure = getIsExposure(varName)
+	isExposure = getIsExposure(vl, varName)
 
 	if (!is.null(dim(pheno))) {
 		phenoAvg = rowMeans(pheno, na.rm=TRUE)
@@ -113,7 +113,7 @@ testContinuous2 <- function(varName, varType, thisdata) {
 
 				incrementCounter("cont.ordcattry.ordcat")
 			        thisdatanew = cbind.data.frame(thisdata[,1:numPreceedingCols], phenoBinned);
-				testCategoricalOrdered(varName, varType, thisdatanew);
+				testCategoricalOrdered(vl, varName, varType, thisdatanew);
 			}
 			else {
 				# try to treat as binary because not enough examples in each bin

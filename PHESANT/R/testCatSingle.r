@@ -23,16 +23,16 @@
 # 3) Replacing missing codes - we assume values < 0 are missing for categorical (single) variables
 # 4) Remove values with <10 cases
 # 5) Deterimine correct test to perform, either binary, ordered or unordered.
-testCategoricalSingle <- function(varName, varType, thisdata) {
+testCategoricalSingle <- function(vl, varName, varType, thisdata) {
 	cat("CAT-SINGLE || ");
 
 	pheno = thisdata[,phenoStartIdx:ncol(thisdata)]
-	isExposure = getIsExposure(varName)
+	isExposure = getIsExposure(vl, varName)
 
 	# assert variable has only one column
 	if (!is.null(dim(pheno))) stop("More than one column for categorical single")
 
-	pheno = reassignValue(pheno, varName)
+	pheno = reassignValue(vl, pheno, varName)
 
 	# get data code info - whether this data code is ordinal or not and any reordering
         dataPheno = vl$phenoInfo[which(vl$phenoInfo$FieldID==varName),];
@@ -94,7 +94,7 @@ testCategoricalSingle <- function(varName, varType, thisdata) {
 			incrementCounter("catSin.case2")
 
 			thisdatanew = cbind.data.frame(thisdata[,1:numPreceedingCols], pheno);
-			testCategoricalUnordered(varName, varType, thisdatanew);
+			testCategoricalUnordered(vl, varName, varType, thisdatanew);
 			
 		}
 		else if (ordered == 1) {
@@ -105,7 +105,7 @@ testCategoricalSingle <- function(varName, varType, thisdata) {
 
 			## reorder variable values into increasing order
 			thisdatanew = cbind.data.frame(thisdata[,1:numPreceedingCols], pheno);
-			testCategoricalOrdered(varName, varType, thisdatanew, order)
+			testCategoricalOrdered(vl, varName, varType, thisdatanew, order)
 		
 		}
 		else if (ordered == -2) {

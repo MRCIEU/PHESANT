@@ -18,7 +18,7 @@
 
 
 # Reassigns values as specified in data coding info file
-reassignValue <- function(pheno, varName) {
+reassignValue <- function(vl, pheno, varName) {
 
 	# get data code info - whether this data code is ordinal or not and any reordering and resassignments
         dataPheno = vl$phenoInfo[which(vl$phenoInfo$FieldID==varName),];
@@ -38,12 +38,12 @@ reassignValue <- function(pheno, varName) {
 	dataDataCode = vl$dataCodeInfo[dataCodeRow,];
         reassignments = as.character(dataDataCode$reassignments);
 	
-	return(reassignValue2(pheno, reassignments))
+	return(reassignValue2(vl, pheno, reassignments))
 	
 }
 
 # Reassigns values in pheno, as specified in resassignments argument
-reassignValue2 <- function(pheno, reassignments) {
+reassignValue2 <- function(vl, pheno, reassignments) {
 
 	# can be NA if row not included in data coding info file
 	if (!is.na(reassignments) && nchar(reassignments)>0) {

@@ -1,9 +1,9 @@
 Package: PHESANT
 Type: Package
-Title: What the package does (short line)
-Version: 1.0
+Title: Repliments PHESANT
+Version: 0.1
 Date: 2019-03-14
-Author: Who wrote it
-Maintainer: Who to complain to <yourfault@somewhere.net>
-Description: More about what it does (maybe more than one line)
-License: What license is it under?
+Author: Quanli Wang
+Maintainer: Quanli Wang <quanliwang20@hotmail.com>
+Description: This will replement the original PHESANT in a package and potentially with some optimizations
+License: GPL (>= 3)

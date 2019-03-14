@@ -1,1 +1,5 @@
 exportPattern("^[[:alpha:]]+")
+importFrom("stats", "coef", "complete.cases", "confint", "end", "glm",
+             "lm", "model.matrix", "na.omit", "pnorm", "qnorm",
+             "quantile", "relevel")
+importFrom("utils", "read.table", "type.convert", "write.table")

@@ -41,7 +41,7 @@ if (opt$save==FALSE) {
 vl=initVariableLists();
 
 ## load data
-d <- loadData()
+d <- loadData(vl)
 data=d$datax
 confounders=d$confounders
 indicatorFields=d$inds
@@ -105,7 +105,7 @@ for (var in phenoVars) {
 		if (first==FALSE) {
 
 			thisdata = makeTestDataFrame(data, confounders, currentVarValues)
-			testAssociations(currentVar, currentVarShort, thisdata)
+			testAssociations(vl, currentVar, currentVarShort, thisdata)
 		}
 		
 		first=FALSE;
@@ -124,7 +124,7 @@ for (var in phenoVars) {
 if (phenoIdx>0){
 	# last variable so test association
 	thisdata = makeTestDataFrame(data, confounders, currentVarValues)
-	testAssociations(currentVar, currentVarShort, thisdata)
+	testAssociations(vl, currentVar, currentVarShort, thisdata)
 }
 
 sink()

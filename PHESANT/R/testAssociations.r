@@ -18,7 +18,7 @@
 
 
 # Tests the association of a field, determined by its field type
-testAssociations <- function(currentVar, currentVarShort, thisdata) {
+testAssociations <- function(vl, currentVar, currentVarShort, thisdata) {
 
 	## call file for variable type
 
@@ -38,7 +38,7 @@ testAssociations <- function(currentVar, currentVarShort, thisdata) {
 		excluded = vl$phenoInfo$EXCLUDED[idx]
 		catSinToMult = vl$phenoInfo$CAT_SINGLE_TO_CAT_MULT[idx]
 		fieldType = vl$phenoInfo$ValueType[idx]
-		isExposure = getIsExposure(currentVarShort) #vl$phenoInfo$EXPOSURE_PHENOTYPE[idx]
+		isExposure = getIsExposure(vl, currentVarShort) #vl$phenoInfo$EXPOSURE_PHENOTYPE[idx]
 
 		if (fieldType=="Integer") {		
 
@@ -55,7 +55,7 @@ testAssociations <- function(currentVar, currentVarShort, thisdata) {
 					incrementCounter("start.exposure.int")
 				}
 
-			    	testInteger(currentVarShort, "INTEGER", thisdata);
+			    	testInteger(vl, currentVarShort, "INTEGER", thisdata);
 			}
 			cat("\n");
 	    	}
@@ -73,7 +73,7 @@ testAssociations <- function(currentVar, currentVarShort, thisdata) {
 				if (isExposure==TRUE) {
                                         incrementCounter("start.exposure.cont")
                                 }
-				testContinuous(currentVarShort, "CONTINUOUS", thisdata);
+				testContinuous(vl, currentVarShort, "CONTINUOUS", thisdata);
 	        	}
 	        	cat("\n");
 		}
@@ -91,7 +91,7 @@ testAssociations <- function(currentVar, currentVarShort, thisdata) {
 				if (isExposure==TRUE) {
                                         incrementCounter("start.exposure.catSin")
                                 }
-			    	testCategoricalSingle(currentVarShort, "CAT-SIN", thisdata);
+			    	testCategoricalSingle(vl, currentVarShort, "CAT-SIN", thisdata);
 			}
 			cat("\n");
 	  	}
@@ -117,12 +117,12 @@ testAssociations <- function(currentVar, currentVarShort, thisdata) {
                                 }
 				else {
 					# get number of cat mult values denoting trait of interest
-	                                numVals = getNumValuesCatMultExposure(currentVarShort)
+	                                numVals = getNumValuesCatMultExposure(vl, currentVarShort)
 					if (numVals>0) {
 		                                addToCounts("start.exposure.catMulvalues", numVals)
 					}
 				}
-		        	testCategoricalMultiple(currentVarShort, "CAT-MUL", thisdata);
+		        	testCategoricalMultiple(vl, currentVarShort, "CAT-MUL", thisdata);
 			}
 			cat("\n");
 		}

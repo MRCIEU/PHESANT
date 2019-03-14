@@ -18,7 +18,7 @@
 
 ##
 ## load data used for data code default value related field, and categorical multiple indicator field
-loadIndicatorFields <- function(phenosToTest) {
+loadIndicatorFields <- function(vl, phenosToTest) {
   	print("Loading indicator fields from phenotypes file ...")
   
   	# read pheno file column names
@@ -27,7 +27,7 @@ loadIndicatorFields <- function(phenosToTest) {
   	indVars = c(opt$userId)
   
   	## add indicator variables to pheno data
-  	indVars = addIndicatorVariables(indVars, phenosToTest, phenoVarsAll)
+  	indVars = addIndicatorVariables(vl, indVars, phenosToTest, phenoVarsAll)
   	if (length(indVars)>1) {
     		# not just user id column
     		print("Loading required related variable(s):")
@@ -44,7 +44,7 @@ loadIndicatorFields <- function(phenosToTest) {
 }
 
 
-addIndicatorVariables <- function(indVars, phenosToTest, phenoVarsAll) {
+addIndicatorVariables <- function(vl, indVars, phenosToTest, phenoVarsAll) {
 
   	##### default value related fields for data codes
   	# get list of all indicator variables from outcome info file

@@ -18,7 +18,7 @@
 
 
 # Performs ordered logistic regression test and saves results in ordered logistic results file
-testCategoricalOrdered <- function(varName, varType, thisdata, orderStr="") {
+testCategoricalOrdered <- function(vl, varName, varType, thisdata, orderStr="") {
 
 	
 	pheno = thisdata[,phenoStartIdx:ncol(thisdata)]
@@ -98,7 +98,7 @@ testCategoricalOrdered <- function(varName, varType, thisdata, orderStr="") {
 		cat("SUCCESS results-ordered-logistic");
 		incrementCounter("success.ordCat")
 
-		isExposure = getIsExposure(varName)
+		isExposure = getIsExposure(vl, varName)
                 if (isExposure == TRUE) {
                         incrementCounter("success.exposure.ordCat")
                 }

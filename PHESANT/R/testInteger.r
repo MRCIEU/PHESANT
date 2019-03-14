@@ -22,18 +22,18 @@
 # 2) Generate a single value if there are several values (arrays) by taking the mean
 # 3) Treating this field as continuous if at least 20 distinct values.
 # Otherwise treat as binary or ordered categorical if 2 or more than two values. 
-testInteger <- function(varName, varType, thisdata) {
+testInteger <- function(vl, varName, varType, thisdata) {
 	cat("INTEGER || ");
 
 	pheno = thisdata[,phenoStartIdx:ncol(thisdata)]
-	isExposure = getIsExposure(varName)
+	isExposure = getIsExposure(vl, varName)
 
 	if (!is.numeric(as.matrix(pheno))) {
 		cat("SKIP Integer type but not numeric",sep="");
 		return(NULL)
 	}
 
-	pheno = reassignValue(pheno, varName)
+	pheno = reassignValue(vl, pheno, varName)
 
 	## average if multiple columns
 	if (!is.null(dim(pheno))) {
@@ -52,7 +52,7 @@ testInteger <- function(varName, varType, thisdata) {
 	if (length(uniqVar)>=20) {
 		
 		thisdatanew = cbind.data.frame(thisdata[,1:numPreceedingCols], phenoAvg);
-		testContinuous2(varName, varType, thisdatanew)
+		testContinuous2(vl, varName, varType, thisdatanew)
 		incrementCounter("int.continuous")
 	}
 	else {
@@ -82,7 +82,7 @@ testInteger <- function(varName, varType, thisdata) {
 			thisdatanew = cbind.data.frame(thisdata[,1:numPreceedingCols], phenoFactor);
 
 			# treat as ordinal categorical
-			testCategoricalOrdered(varName, varType, thisdatanew);
+			testCategoricalOrdered(vl, varName, varType, thisdatanew);
 		}
 	}
 }
