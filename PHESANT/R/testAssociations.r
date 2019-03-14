@@ -18,7 +18,7 @@
 
 
 # Tests the association of a field, determined by its field type
-testAssociations <- function(opt, vl, counters, currentVar, currentVarShort, thisdata) {
+testAssociations <- function(opt, vl, counters, currentVar, currentVarShort, thisdata, phenoStartIdx) {
 
 	## call file for variable type
 
@@ -55,7 +55,7 @@ testAssociations <- function(opt, vl, counters, currentVar, currentVarShort, thi
 				  counters <- incrementCounter(counters, "start.exposure.int")
 				}
 
-			    	counters <- testInteger(opt, vl, couinters, currentVarShort, "INTEGER", thisdata);
+			    	counters <- testInteger(opt, vl, counters, currentVarShort, "INTEGER", thisdata, phenoStartIdx);
 			}
 			cat("\n");
 	    	}
@@ -73,7 +73,7 @@ testAssociations <- function(opt, vl, counters, currentVar, currentVarShort, thi
 				if (isExposure==TRUE) {
 				  counters<- incrementCounter(counters, "start.exposure.cont")
                                 }
-				counters <- testContinuous(opt, vl, counters, currentVarShort, "CONTINUOUS", thisdata);
+				counters <- testContinuous(opt, vl, counters, currentVarShort, "CONTINUOUS", thisdata, phenoStartIdx);
 	        	}
 	        	cat("\n");
 		}
@@ -91,7 +91,7 @@ testAssociations <- function(opt, vl, counters, currentVar, currentVarShort, thi
 				if (isExposure==TRUE) {
 				  counters <-incrementCounter(counters, "start.exposure.catSin")
                                 }
-			  counters <- testCategoricalSingle(opt, vl, counters, currentVarShort, "CAT-SIN", thisdata);
+			  counters <- testCategoricalSingle(opt, vl, counters, currentVarShort, "CAT-SIN", thisdata, phenoStartIdx);
 			}
 			cat("\n");
 	  	}
@@ -122,7 +122,7 @@ testAssociations <- function(opt, vl, counters, currentVar, currentVarShort, thi
 		                                counters <- addToCounts(addToCounts, "start.exposure.catMulvalues", numVals)
 					}
 				}
-		        	counters <- testCategoricalMultiple(opt, vl, counters, currentVarShort, "CAT-MUL", thisdata);
+		        	counters <- testCategoricalMultiple(opt, vl, counters, currentVarShort, "CAT-MUL", thisdata, phenoStartIdx);
 			}
 			cat("\n");
 		}

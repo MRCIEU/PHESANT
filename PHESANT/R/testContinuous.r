@@ -18,7 +18,7 @@
 
 
 # Main function called for continuous fields
-testContinuous <- function(opt, vl, counters, varName, varType, thisdata) {
+testContinuous <- function(opt, vl, counters, varName, varType, thisdata, phenoStartIdx) {
 
 	cat("CONTINUOUS MAIN || ");	
 
@@ -29,13 +29,13 @@ testContinuous <- function(opt, vl, counters, varName, varType, thisdata) {
 
 	thisdata[,phenoStartIdx:ncol(thisdata)] = pheno
 
-	counters <- testContinuous2(opt, vl, counters, varName, varType, thisdata)
+	counters <- testContinuous2(opt, vl, counters, varName, varType, thisdata, phenoStartIdx)
 	
 }
 
 # Main code used to process continuous fields, or integer fields that have been reassigned as continuous because they have >20 distinct values.
 # This is needed because we have already reassigned values for integer fields, so do this in the function above for continuous fields.
-testContinuous2 <- function(opt, vl, counters, varName, varType, thisdata) {
+testContinuous2 <- function(opt, vl, counters, varName, varType, thisdata, phenoStartIdx) {
 	cat("CONTINUOUS || ");
 
 	pheno = thisdata[,phenoStartIdx:ncol(thisdata)]
@@ -91,8 +91,8 @@ testContinuous2 <- function(opt, vl, counters, varName, varType, thisdata) {
         		else if (numLevels==2) {
 	        		# binary
         		  counters <- incrementCounter(counters, "cont.binary")
-        			thisdatanew = cbind.data.frame(thisdata[,1:numPreceedingCols], phenoFactor);			
-        			counters <- binaryLogisticRegression(opt, varName, counters, varType, thisdatanew, isExposure);
+        			thisdatanew = cbind.data.frame(thisdata[,1:(phenoStartIdx -1)], phenoFactor);			
+        			counters <- binaryLogisticRegression(opt, varName, counters, varType, thisdatanew, isExposure, phenoStartIdx);
         		}
         	}
 		else {
@@ -112,8 +112,8 @@ testContinuous2 <- function(opt, vl, counters, varName, varType, thisdata) {
 				# successful binning. >=10 examples in each of the 3 bins
 
 			  counters <- incrementCounter(counters, "cont.ordcattry.ordcat")
-			        thisdatanew = cbind.data.frame(thisdata[,1:numPreceedingCols], phenoBinned);
-				counters <- testCategoricalOrdered(opt, vl, counters, varName, varType, thisdatanew);
+			        thisdatanew = cbind.data.frame(thisdata[,1:(phenoStartIdx -1)], phenoBinned);
+				counters <- testCategoricalOrdered(opt, vl, counters, varName, varType, thisdatanew, phenoStartIdx);
 			}
 			else {
 				# try to treat as binary because not enough examples in each bin
@@ -132,8 +132,8 @@ testContinuous2 <- function(opt, vl, counters, varName, varType, thisdata) {
 					phenoBinned[which(phenoBinned==0)] = 1	
 
 					# test binary
-					thisdatanew = cbind.data.frame(thisdata[,1:numPreceedingCols], phenoBinned)
-	                                counters <- binaryLogisticRegression(opt, varName, counters, varType, thisdatanew, isExposure);
+					thisdatanew = cbind.data.frame(thisdata[,1:(phenoStartIdx -1)], phenoBinned)
+	                                counters <- binaryLogisticRegression(opt, varName, counters, varType, thisdatanew, isExposure, phenoStartIdx);
 				}
 				else if ((bin2Num<10 | bin1Num<10) & (bin2Num+bin1Num)>=10) {
 
@@ -143,8 +143,8 @@ testContinuous2 <- function(opt, vl, counters, varName, varType, thisdata) {
                                         phenoBinned[which(phenoBinned==2)] = 1
 					
                                         # test binary
-                                        thisdatanew = cbind.data.frame(thisdata[,1:numPreceedingCols], phenoBinned)
-                                        counters <- binaryLogisticRegression(opt, varName, counters, varType, thisdatanew, isExposure)
+                                        thisdatanew = cbind.data.frame(thisdata[,1:(phenoStartIdx -1)], phenoBinned)
+                                        counters <- binaryLogisticRegression(opt, varName, counters, varType, thisdatanew, isExposure, phenoStartIdx)
                                 }
 				
 
@@ -187,10 +187,10 @@ testContinuous2 <- function(opt, vl, counters, varName, varType, thisdata) {
 			else {
                 	        geno = thisdata[,"geno"] 
                 	}
-			confounders=thisdata[,3:numPreceedingCols, drop = FALSE]
+			confounders=thisdata[,3:(phenoStartIdx -1), drop = FALSE]
 
 			sink()
-			sink(modelFitLogFile, append=TRUE)
+			sink(pkg.env$modelFitLogFile, append=TRUE)
 			print("--------------")			
 			print(varName)
 
@@ -200,7 +200,7 @@ testContinuous2 <- function(opt, vl, counters, varName, varType, thisdata) {
 			fit <- lm(phenoIRNT ~ geno + ., data=confounders)
 			
 			sink()
-			sink(resLogFile, append=TRUE)
+			sink(pkg.env$resLogFile, append=TRUE)
 			
 			sumx = summary(fit)
 
@@ -231,7 +231,7 @@ testContinuous2 <- function(opt, vl, counters, varName, varType, thisdata) {
 			## END TRYCATCH
                 	}, error = function(e) {
                 	        sink()
-                	        sink(resLogFile, append=TRUE)
+                	        sink(pkg.env$resLogFile, append=TRUE)
                 	        cat(paste("ERROR:", varName,gsub("[\r\n]", "", e), sep=" "))
                 	        counters <-incrementCounter(counters, "continuous.error")
                 	})

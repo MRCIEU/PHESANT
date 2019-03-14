@@ -21,7 +21,7 @@
 #
 # Performs binary logistic regression on the phenotype stored in thisdata 
 # and stores result in 'results-logistic-binary' results file.
-binaryLogisticRegression <- function(opt, varName, counters, varType, thisdata, isExposure) {
+binaryLogisticRegression <- function(opt, varName, counters, varType, thisdata, isExposure, phenoStartIdx) {
 
         phenoFactor = factor(thisdata[,phenoStartIdx])
 
@@ -65,10 +65,10 @@ binaryLogisticRegression <- function(opt, varName, counters, varType, thisdata, 
 		else {
 			geno = thisdata[,"geno"]
 		}
-                confounders=thisdata[,3:numPreceedingCols, drop = FALSE]
+    confounders=thisdata[,3:(phenoStartIdx -1) , drop = FALSE]
 		
 		sink()
-		sink(modelFitLogFile, append=TRUE)
+		sink(pkg.env$modelFitLogFile, append=TRUE)
 		print("--------------")
 		print(varName)
 
@@ -78,7 +78,7 @@ binaryLogisticRegression <- function(opt, varName, counters, varType, thisdata, 
 		mylogit <- glm(phenoFactor ~ geno + ., data=confounders, family="binomial")
 
 		sink()
-             	sink(resLogFile, append=TRUE)
+             	sink(pkg.env$resLogFile, append=TRUE)
 		
                 sumx = summary(mylogit)
 
@@ -111,7 +111,7 @@ binaryLogisticRegression <- function(opt, varName, counters, varType, thisdata, 
 		## END TRYCATCH
                 }, error = function(e) {
                         sink()
-                        sink(resLogFile, append=TRUE)
+                        sink(pkg.env$resLogFile, append=TRUE)
                         cat(paste("ERROR:", varName,gsub("[\r\n]", "", e), sep=" "))
                         counters <- incrementCounter(counters, "binary.error")
                 })

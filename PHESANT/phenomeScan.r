@@ -60,21 +60,18 @@ currentVarShort="";
 first=TRUE;
 
 if (opt$save == TRUE) {
-
-	derivedBinary <- data.frame(userID=data$userID)
-        derivedCont <- data.frame(userID=data$userID)
-        derivedCatOrd <- data.frame(userID=data$userID)
-        derivedCatUnord <- data.frame(userID=data$userID)
-
-	resLogFile = paste(opt$resDir,"data-log-",opt$varTypeArg,".txt",sep="")
-        sink(resLogFile)
+    pkg.env$derivedBinary <- data.frame(userID=data$userID)
+    pkg.env$derivedCont <- data.frame(userID=data$userID)
+    pkg.env$derivedCatOrd <- data.frame(userID=data$userID)
+    pkg.env$derivedCatUnord <- data.frame(userID=data$userID)
+    pkg.env$resLogFile = paste(opt$resDir,"data-log-",opt$varTypeArg,".txt",sep="")
+    sink(pkg.env$resLogFile)
 } else {
-	modelFitLogFile = paste(opt$resDir,"modelfit-log-",opt$varTypeArg,".txt",sep="")
-	sink(modelFitLogFile)
-	sink()
-
-	resLogFile = paste(opt$resDir,"results-log-",opt$varTypeArg,".txt",sep="")
-	sink(resLogFile)
+    pkg.env$modelFitLogFile = paste(opt$resDir,"modelfit-log-",opt$varTypeArg,".txt",sep="")
+  	sink(pkg.env$modelFitLogFile)
+  	sink()
+  	pkg.env$resLogFile = paste(opt$resDir,"results-log-",opt$varTypeArg,".txt",sep="")
+  	sink(pkg.env$resLogFile)
 }
 
 
@@ -84,7 +81,7 @@ for (var in phenoVars) {
 
 	sink()
 #	print(var)
-	sink(resLogFile, append=TRUE)
+	sink(pkg.env$resLogFile, append=TRUE)
 
 	varx = gsub("^x", "", var);
         varx = gsub("_[0-9]+$", "", varx);
@@ -105,7 +102,7 @@ for (var in phenoVars) {
 		if (first==FALSE) {
 
 			thisdata = makeTestDataFrame(data, confounders, currentVarValues)
-			counters <- testAssociations(opt, vl, counters, currentVar, currentVarShort, thisdata)
+			counters <- testAssociations(opt, vl, counters, currentVar, currentVarShort, thisdata, phenoStartIdx)
 		}
 		
 		first=FALSE;
@@ -124,7 +121,7 @@ for (var in phenoVars) {
 if (phenoIdx>0){
 	# last variable so test association
 	thisdata = makeTestDataFrame(data, confounders, currentVarValues)
-	counters <- testAssociations(opt, vl, counters, currentVar, currentVarShort, thisdata)
+	counters <- testAssociations(opt, vl, counters, currentVar, currentVarShort, thisdata, phenoStartIdx)
 }
 
 sink()
@@ -133,10 +130,10 @@ sink()
 saveCounts(opt, counters)
 
 if (opt$save == TRUE) {
-	write.table(derivedBinary, file=paste(opt$resDir,"data-binary-",opt$varTypeArg,".txt", sep=""), append=FALSE, quote=FALSE, sep=",", na="", row.names=FALSE, col.names=TRUE);
-	write.table(derivedCont, file=paste(opt$resDir,"data-cont-",opt$varTypeArg,".txt", sep=""), append=FALSE, quote=FALSE, sep=",", na="", row.names=FALSE, col.names=TRUE);
-	write.table(derivedCatOrd, file=paste(opt$resDir,"data-catord-",opt$varTypeArg,".txt", sep=""), append=FALSE, quote=FALSE, sep=",", na="", row.names=FALSE, col.names=TRUE);
-	write.table(derivedCatUnord, file=paste(opt$resDir,"data-catunord-",opt$varTypeArg,".txt", sep=""), append=FALSE, quote=FALSE, sep=",", na="", row.names=FALSE, col.names=TRUE);
+	write.table(pkg.env$derivedBinary, file=paste(opt$resDir,"data-binary-",opt$varTypeArg,".txt", sep=""), append=FALSE, quote=FALSE, sep=",", na="", row.names=FALSE, col.names=TRUE);
+	write.table(pkg.env$derivedCont, file=paste(opt$resDir,"data-cont-",opt$varTypeArg,".txt", sep=""), append=FALSE, quote=FALSE, sep=",", na="", row.names=FALSE, col.names=TRUE);
+	write.table(pkg.env$derivedCatOrd, file=paste(opt$resDir,"data-catord-",opt$varTypeArg,".txt", sep=""), append=FALSE, quote=FALSE, sep=",", na="", row.names=FALSE, col.names=TRUE);
+	write.table(pkg.env$derivedCatUnord, file=paste(opt$resDir,"data-catunord-",opt$varTypeArg,".txt", sep=""), append=FALSE, quote=FALSE, sep=",", na="", row.names=FALSE, col.names=TRUE);
 }
 
 warnings()

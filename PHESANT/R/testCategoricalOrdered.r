@@ -18,7 +18,7 @@
 
 
 # Performs ordered logistic regression test and saves results in ordered logistic results file
-testCategoricalOrdered <- function(opt, vl, counters, varName, varType, thisdata, orderStr="") {
+testCategoricalOrdered <- function(opt, vl, counters, varName, varType, thisdata, phenoStartIdx, orderStr="") {
 
 	
 	pheno = thisdata[,phenoStartIdx:ncol(thisdata)]
@@ -58,13 +58,13 @@ testCategoricalOrdered <- function(opt, vl, counters, varName, varType, thisdata
 
 		# ordinal logistic regression
 		sink()
-		sink(modelFitLogFile, append=TRUE)
+		sink(pkg.env$modelFitLogFile, append=TRUE)
 		print("--------------")
 		print(varName)
 		
 		### BEGIN TRYCATCH
 		tryCatch({
-		confounders=thisdata[,3:numPreceedingCols, drop = FALSE]
+		confounders=thisdata[,3:(phenoStartIdx -1), drop = FALSE]
 
 
 		if (opt$standardise==TRUE) {
@@ -75,7 +75,7 @@ testCategoricalOrdered <- function(opt, vl, counters, varName, varType, thisdata
 
 		ctable <- coef(summary(fit))
 		sink()
-		sink(resLogFile, append=TRUE)
+		sink(pkg.env$resLogFile, append=TRUE)
 
 		ct = coeftest(fit)
 		pvalue = ct["geno","Pr(>|t|)"]
@@ -103,7 +103,7 @@ testCategoricalOrdered <- function(opt, vl, counters, varName, varType, thisdata
 		### END TRYCATCH
 		}, error = function(e) {
 			sink()
-                        sink(resLogFile, append=TRUE)
+                        sink(pkg.env$resLogFile, append=TRUE)
                         cat(paste("ERROR:", varName,gsub("[\r\n]", "", e), sep=" "))
                         counters <- incrementCounter(counters, "ordCat.error")
                 })

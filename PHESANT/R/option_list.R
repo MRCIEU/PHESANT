@@ -18,3 +18,5 @@ option_list = list(
   make_option(c("-i", "--confidenceintervals"), type="logical", default=TRUE, help="Whether confidence intervals should be calculated [default= %default]"),
   make_option(c("-k", "--standardise"), action="store", default=TRUE, help="Trait of interest is standardised to have mean=0 and std=1 [default= %default]")
 )
+
+pkg.env <- new.env(parent = emptyenv())

@@ -22,7 +22,7 @@
 # 2) Generate a single value if there are several values (arrays) by taking the mean
 # 3) Treating this field as continuous if at least 20 distinct values.
 # Otherwise treat as binary or ordered categorical if 2 or more than two values. 
-testInteger <- function(opt, vl, counters, varName, varType, thisdata) {
+testInteger <- function(opt, vl, counters, varName, varType, thisdata, phenoStartIdx) {
 	cat("INTEGER || ");
 
 	pheno = thisdata[,phenoStartIdx:ncol(thisdata)]
@@ -51,8 +51,8 @@ testInteger <- function(opt, vl, counters, varName, varType, thisdata) {
 	# if >=20 separate values then treat as continuous
 	if (length(uniqVar)>=20) {
 		
-		thisdatanew = cbind.data.frame(thisdata[,1:numPreceedingCols], phenoAvg);
-		counters <- testContinuous2(opt, vl, counters, varName, varType, thisdatanew)
+		thisdatanew = cbind.data.frame(thisdata[,1:(phenoStartIdx -1)], phenoAvg);
+		counters <- testContinuous2(opt, vl, counters, varName, varType, thisdatanew, phenoStartIdx)
 		counters <- incrementCounter(counters, "int.continuous")
 	}
 	else {
@@ -71,18 +71,18 @@ testInteger <- function(opt, vl, counters, varName, varType, thisdata) {
 		  counters <- incrementCounter(counters, "int.binary")
 
 			# binary
-			thisdatanew = cbind.data.frame(thisdata[,1:numPreceedingCols], phenoFactor);
-			counters <- binaryLogisticRegression(opt, varName, counters, varType, thisdatanew, isExposure);
+			thisdatanew = cbind.data.frame(thisdata[,1:(phenoStartIdx -1)], phenoFactor);
+			counters <- binaryLogisticRegression(opt, varName, counters, varType, thisdatanew, isExposure,phenoStartIdx);
 		}
 		else {
 		  counters <- incrementCounter(counters, "int.catord")
 			cat("3-20 values || ")
 
 			# we don't use equal sized bins just the original integers (that have >=10 examples) as categories
-			thisdatanew = cbind.data.frame(thisdata[,1:numPreceedingCols], phenoFactor);
+			thisdatanew = cbind.data.frame(thisdata[,1:(phenoStartIdx -1)], phenoFactor);
 
 			# treat as ordinal categorical
-			counters <- testCategoricalOrdered(opt, vl, counters, varName, varType, thisdatanew);
+			counters <- testCategoricalOrdered(opt, vl, counters, varName, varType, thisdatanew, phenoStartIdx);
 		}
 	}
 	return(counters)

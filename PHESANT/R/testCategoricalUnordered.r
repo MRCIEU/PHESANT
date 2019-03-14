@@ -19,7 +19,7 @@
 
 # Tests an unordered categorical phenotype with multinomial regression
 # and saves this result in the multinomial logistic results file
-testCategoricalUnordered <- function(opt, vl, counters, varName, varType, thisdata) {
+testCategoricalUnordered <- function(opt, vl, counters, varName, varType, thisdata, phenoStartIdx) {
 
 	pheno = thisdata[,phenoStartIdx:ncol(thisdata)]
 	#geno = thisdata[,"geno"]
@@ -35,7 +35,7 @@ testCategoricalUnordered <- function(opt, vl, counters, varName, varType, thisda
 		numUnique = length(unique(na.omit(pheno)))
 
 		# num outcome values * (num confounders and trait of interest and bias term)
-		numWeights=(numUnique-1)*((numPreceedingCols-2)+1+1)
+		numWeights=(numUnique-1)*(((phenoStartIdx -1)-2)+1+1)
 		if (numWeights>1000) {
 			cat("Too many weights in model: ", numWeights, " > 1000, (num outcomes values: ", numUnique, ") || SKIP ", sep="")
 		  counters <-incrementCounter(counters, "unordCat.cats")
@@ -56,7 +56,7 @@ testCategoricalUnordered <- function(opt, vl, counters, varName, varType, thisda
 		reference = levels(phenoFactor)[1];
 
 		sink()
-		sink(modelFitLogFile, append=TRUE) # hide output of model fitting
+		sink(pkg.env$modelFitLogFile, append=TRUE) # hide output of model fitting
 		print("--------------")
                 print(varName)
 
@@ -68,7 +68,7 @@ testCategoricalUnordered <- function(opt, vl, counters, varName, varType, thisda
                 }
 		#cat("genoMean=", mean(geno), " genoSD=", sd(geno), " || ", sep="")
 		
-		confounders=thisdata[,3:numPreceedingCols, drop = FALSE]
+		confounders=thisdata[,3:(phenoStartIdx -1), drop = FALSE]
 
 		###### BEGIN TRYCATCH
 		tryCatch({
@@ -88,7 +88,7 @@ testCategoricalUnordered <- function(opt, vl, counters, varName, varType, thisda
 	    	write(paste(paste(varName,"-",reference,sep=""), varType, paste(maxFreq,"/",numNotNA,sep=""), -999, -999, -999, modelP, sep=","), file=paste(opt$resDir,"results-multinomial-logistic-",opt$varTypeArg,".txt",sep=""), append="TRUE")
 
 		sink()
-		sink(resLogFile, append=TRUE)	
+		sink(pkg.env$resLogFile, append=TRUE)	
 		
 		sumx <- summary(fit)
 		
@@ -137,7 +137,7 @@ testCategoricalUnordered <- function(opt, vl, counters, varName, varType, thisda
 		## END TRYCATCH
 		}, error = function(e) {
                         sink()
-                        sink(resLogFile, append=TRUE)
+                        sink(pkg.env$resLogFile, append=TRUE)
                         cat(paste("ERROR:", varName,gsub("[\r\n]", "", e), sep=" "))
                         counters <- incrementCounter(counters, "unordCat.error")
 		})

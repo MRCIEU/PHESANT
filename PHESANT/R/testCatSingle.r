@@ -23,7 +23,7 @@
 # 3) Replacing missing codes - we assume values < 0 are missing for categorical (single) variables
 # 4) Remove values with <10 cases
 # 5) Deterimine correct test to perform, either binary, ordered or unordered.
-testCategoricalSingle <- function(opt, vl, counters, varName, varType, thisdata) {
+testCategoricalSingle <- function(opt, vl, counters, varName, varType, thisdata, phenoStartIdx) {
 	cat("CAT-SINGLE || ");
 
 	pheno = thisdata[,phenoStartIdx:ncol(thisdata)]
@@ -77,8 +77,8 @@ testCategoricalSingle <- function(opt, vl, counters, varName, varType, thisdata)
 
 		phenoFactor = factor(pheno)
 		# binary - so logistic regression
-		thisdatanew = cbind.data.frame(thisdata[,1:numPreceedingCols], phenoFactor);
-		counters <- binaryLogisticRegression(opt, varName, counters, varType, thisdatanew, isExposure)	
+		thisdatanew = cbind.data.frame(thisdata[,1:(phenoStartIdx -1)], phenoFactor);
+		counters <- binaryLogisticRegression(opt, varName, counters, varType, thisdatanew, isExposure, phenoStartIdx)	
 	}
 	else {
 		# > 2 categories
@@ -93,8 +93,8 @@ testCategoricalSingle <- function(opt, vl, counters, varName, varType, thisdata)
 			cat("CAT-SINGLE-UNORDERED || ")
 		  counters <- incrementCounter(counters, "catSin.case2")
 
-			thisdatanew = cbind.data.frame(thisdata[,1:numPreceedingCols], pheno);
-			counters <- testCategoricalUnordered(opt, vl, counters, varName, varType, thisdatanew);
+			thisdatanew = cbind.data.frame(thisdata[,1:(phenoStartIdx -1)], pheno);
+			counters <- testCategoricalUnordered(opt, vl, counters, varName, varType, thisdatanew, phenoStartIdx);
 			
 		}
 		else if (ordered == 1) {
@@ -104,8 +104,8 @@ testCategoricalSingle <- function(opt, vl, counters, varName, varType, thisdata)
 		  counters <- incrementCounter(counters, "catSin.case1")
 
 			## reorder variable values into increasing order
-			thisdatanew = cbind.data.frame(thisdata[,1:numPreceedingCols], pheno);
-			counters <- testCategoricalOrdered(opt, vl, counters, varName, varType, thisdatanew, order)
+			thisdatanew = cbind.data.frame(thisdata[,1:(phenoStartIdx -1)], pheno);
+			counters <- testCategoricalOrdered(opt, vl, counters, varName, varType, thisdatanew, phenoStartIdx, order)
 		
 		}
 		else if (ordered == -2) {
