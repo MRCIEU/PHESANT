@@ -50,6 +50,6 @@ saveCounts <- function(opt) {
 }
 
 # init the counters used to determine how many variables took each path in the variable processing flow.
-initCounters <- function() {
+.initCounters <- function() {
   pkg.env$counters = data.frame(name=character(),countValue=integer(), stringsAsFactors=FALSE)
 }

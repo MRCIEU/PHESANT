@@ -1,20 +1,16 @@
 run <- function(opt) {
     input <- initData(opt)
-    data <- input$data
-    vl <- input$vl
-    confounders <- input$confounders
-    phenoStartIdx <- input$phenoStartIdx
-    phenoVars <- input$phenoVars
     print("LOADING DONE")
     
-    initEnv(opt, data)
+    #initilize package level variables, primarily for passing variables between functions and logging
+    .initEnv(opt, input$data)
     
     currentVar <- ""
     currentVarShort <- ""
     first <- TRUE
     
     phenoIdx=0; # zero because then the idx is the position of the previous variable, i.e. the var in currentVar
-    for (var in phenoVars) { 
+    for (var in input$phenoVars) { 
         sink()
         sink(pkg.env$resLogFile, append=TRUE)
         
@@ -26,7 +22,7 @@ run <- function(opt) {
         
         ## test this variable
         if (currentVar == varx) {
-          thisCol <- data[,eval(var)]
+          thisCol <- input$data[,eval(var)]
           thisCol <- .replaceNaN(thisCol)
           currentVarValues <- cbind.data.frame(currentVarValues, thisCol)
         } else if (currentVarShort == varxShort) {
@@ -34,8 +30,8 @@ run <- function(opt) {
         } else {
           ## new variable so run test for previous (we have collected all the columns now)
           if (first==FALSE) {
-            thisdata <- makeTestDataFrame(data, confounders, currentVarValues)
-            testAssociations(opt, vl, currentVar, currentVarShort, thisdata, phenoStartIdx)
+            thisdata <- makeTestDataFrame(input$data, input$confounders, currentVarValues)
+            testAssociations(opt, input$vl, currentVar, currentVarShort, thisdata, input$phenoStartIdx)
           }
           first <- FALSE
           
@@ -43,7 +39,7 @@ run <- function(opt) {
           currentVar <- varx
           currentVarShort <- varxShort
           
-          currentVarValues <- data[,eval(var)]
+          currentVarValues <- input$data[,eval(var)]
           currentVarValues <- .replaceNaN(currentVarValues)
         }
         phenoIdx <- phenoIdx + 1
@@ -51,8 +47,8 @@ run <- function(opt) {
     
     if (phenoIdx>0){
         # last variable so test association
-        thisdata = makeTestDataFrame(data, confounders, currentVarValues)
-        testAssociations(opt, vl, currentVar, currentVarShort, thisdata, phenoStartIdx)
+        thisdata = makeTestDataFrame(input$data, input$confounders, currentVarValues)
+        testAssociations(opt, input$vl, currentVar, currentVarShort, thisdata, input$phenoStartIdx)
     }
     sink()
     

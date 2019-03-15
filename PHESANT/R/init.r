@@ -19,11 +19,11 @@
 
 initData <-function(opt) {
     ## load the files we write to and use
-    initCounters()
+    .initCounters()
     if (opt$save==FALSE) {
-      initResultsFiles(opt)
+        .initResultsFiles(opt)
     }
-    vl <- initVariableLists(opt)
+    vl <- initVariableLists(opt$variablelistfile, opt$datacodingfile)
     
     ## load data
     d <- loadData(opt, vl)
@@ -38,7 +38,7 @@ initData <-function(opt) {
     return(list(data = data, vl = vl, confounders = confounders, phenoStartIdx = phenoStartIdx, phenoVars = phenoVars))
 }
 
-initEnv <- function(opt, data) {
+.initEnv <- function(opt, data) {
     if (opt$save == TRUE) {
         pkg.env$derivedBinary <- data.frame(userID=data$userID)
         pkg.env$derivedCont <- data.frame(userID=data$userID)
@@ -55,7 +55,7 @@ initEnv <- function(opt, data) {
     }
 }
 # create new results files and headers
-initResultsFiles <- function(opt) {
+.initResultsFiles <- function(opt) {
 
 	## only linear and continuous fields can create linear results
 	file.create(paste(opt$resDir,"results-linear-",opt$varTypeArg,".txt",sep=""));
@@ -76,14 +76,11 @@ initResultsFiles <- function(opt) {
 }
 
 # load the variable information and data code information files
-initVariableLists <- function(opt) {
-
-	phenoInfo=read.table(opt$variablelistfile,sep="\t",header=1,comment.char="",quote="");
-
-	dataCodeInfo=read.table(opt$datacodingfile,sep=",", header=1);
-
-	vars=list(phenoInfo=phenoInfo, dataCodeInfo=dataCodeInfo);
-	return(vars);
+initVariableLists <- function(variablelistfile, datacodingfile) {
+	  phenoInfo <- read.table(variablelistfile,sep="\t",header=1,comment.char="",quote="")
+	  dataCodeInfo <- read.table(datacodingfile,sep=",", header=1)
+	  vars <- list(phenoInfo=phenoInfo, dataCodeInfo=dataCodeInfo)
+	  return(vars)
 }
 
 
