@@ -147,29 +147,16 @@ testCategoricalUnordered <- function(opt, vl, varName, varType, thisdata, phenoS
 
 # find reference category - category with most number of examples
 chooseReferenceCategory <- function(pheno) {
-
-	uniqVar = unique(na.omit(pheno));
-	phenoFactor = factor(pheno)
-
-	maxFreq=0;
-	maxFreqVar = "";
-	for (u in uniqVar) {
-		withValIdx = which(pheno==u)
-		numWithVal = length(withValIdx);
-		if (numWithVal>maxFreq) {
-			maxFreq = numWithVal;
-			maxFreqVar = u;
-		}
-	}
-
-	cat("reference: ", maxFreqVar,"=",maxFreq, " || ", sep="");
-		
-	## choose reference (category with largest frequency)
-	phenoFactor <- relevel(phenoFactor, ref = paste("",maxFreqVar,sep=""))
-	
-	return(phenoFactor);
+    freq  <- summary(factor(na.omit(pheno)))
+    maxFreq <- max(freq)
+    maxFreqVar <- names(which(freq == max(freq)))[1]
+    cat("reference: ", maxFreqVar,"=", maxFreq, " || ", sep="")
+    
+    ## choose reference (category with largest frequency)
+  	phenoFactor <- factor(pheno)
+  	phenoFactor <- relevel(phenoFactor, ref = maxFreqVar)
+  	return(phenoFactor)
 }
-
 
 
 
