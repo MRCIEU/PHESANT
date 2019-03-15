@@ -16,28 +16,20 @@
 # CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 # DEALINGS IN THE SOFTWARE.
 
-
 # Main function called for continuous fields
 testContinuous <- function(opt, vl, varName, varType, thisdata, phenoStartIdx) {
-
-	cat("CONTINUOUS MAIN || ");	
-
-	pheno = thisdata[,phenoStartIdx:ncol(thisdata)]
-
-	# reassign values
-        pheno = reassignValue(vl, pheno, varName)
-
-	thisdata[,phenoStartIdx:ncol(thisdata)] = pheno
-
-	testContinuous2(opt, vl, varName, varType, thisdata, phenoStartIdx)
-	
+  	cat("CONTINUOUS MAIN || ")	
+  	pheno <- thisdata[,phenoStartIdx:ncol(thisdata)]
+  	# reassign values
+    pheno <- reassignValue(vl, pheno, varName)
+  	thisdata[,phenoStartIdx:ncol(thisdata)] <- pheno
+  	.testContinuous2(opt, vl, varName, varType, thisdata, phenoStartIdx)
 }
 
 # Main code used to process continuous fields, or integer fields that have been reassigned as continuous because they have >20 distinct values.
 # This is needed because we have already reassigned values for integer fields, so do this in the function above for continuous fields.
-testContinuous2 <- function(opt, vl, varName, varType, thisdata, phenoStartIdx) {
+.testContinuous2 <- function(opt, vl, varName, varType, thisdata, phenoStartIdx) {
 	cat("CONTINUOUS || ");
-
 	pheno = thisdata[,phenoStartIdx:ncol(thisdata)]
 	isExposure = getIsExposure(vl, varName)
 

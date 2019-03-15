@@ -52,7 +52,7 @@ testInteger <- function(opt, vl, varName, varType, thisdata, phenoStartIdx) {
 	if (length(uniqVar)>=20) {
 		
 		thisdatanew = cbind.data.frame(thisdata[,1:(phenoStartIdx -1)], phenoAvg);
-		testContinuous2(opt, vl, varName, varType, thisdatanew, phenoStartIdx)
+		.testContinuous2(opt, vl, varName, varType, thisdatanew, phenoStartIdx)
 		.incrementCounter( "int.continuous")
 	}
 	else {
