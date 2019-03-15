@@ -53,29 +53,29 @@ testInteger <- function(opt, vl, varName, varType, thisdata, phenoStartIdx) {
 		
 		thisdatanew = cbind.data.frame(thisdata[,1:(phenoStartIdx -1)], phenoAvg);
 		testContinuous2(opt, vl, varName, varType, thisdatanew, phenoStartIdx)
-		incrementCounter( "int.continuous")
+		.incrementCounter( "int.continuous")
 	}
 	else {
 		
 		## remove categories if < 10 examples
-	    	phenoAvg = testNumExamples(phenoAvg)
+	  phenoAvg = .testNumExamples(phenoAvg)
 	    
 		## binary if 2 distinct values, else ordered categorical
 		phenoFactor = factor(phenoAvg)
 		numLevels = length(levels(phenoFactor))
 		if (numLevels<=1) {
 			cat("SKIP (number of levels: ",numLevels,")",sep="");
-		  incrementCounter("int.onevalue")
+		  .incrementCounter("int.onevalue")
 		}
 		else if (numLevels==2) {
-		  incrementCounter("int.binary")
+		  .incrementCounter("int.binary")
 
 			# binary
 			thisdatanew = cbind.data.frame(thisdata[,1:(phenoStartIdx -1)], phenoFactor);
 			binaryLogisticRegression(opt, varName, varType, thisdatanew, isExposure,phenoStartIdx);
 		}
 		else {
-		  incrementCounter("int.catord")
+		  .incrementCounter("int.catord")
 			cat("3-20 values || ")
 
 			# we don't use equal sized bins just the original integers (that have >=10 examples) as categories

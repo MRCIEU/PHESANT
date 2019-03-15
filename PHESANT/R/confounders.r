@@ -22,86 +22,80 @@
 loadConfounders <- function(opt, phenotypes) {
     if (opt$save==TRUE) { 
 	      # saving not running tests so we add a fake confounder
-	      numRows = nrow(phenotypes)
-        data = cbind.data.frame(phenotypes$userID, rep(-1, numRows))
+	      numRows <- nrow(phenotypes)
+        data <- cbind.data.frame(phenotypes$userID, rep(-1, numRows))
         colnames(data)[1] <- "userID"
         colnames(data)[2] <- "conf1"
         return(data)
     } else {
       	if (!is.null(opt$confounderfile)) {
       		    print("Loading confounders from confounder file ...")
-      		    confs = fread(opt$confounderfile, sep=',', header=TRUE, data.table=FALSE)
-      	      confs = lapply(confs,function(x) type.convert(as.character(x)))
-      	      confs = as.data.frame(confs)
+      		    confs <- fread(opt$confounderfile, sep=',', header=TRUE, data.table=FALSE)
+      	      confs <- lapply(confs,function(x) type.convert(as.character(x)))
+      	      confs <- as.data.frame(confs)
       
       		    ## find userID column and change name to userID
-      		    idx = which(colnames(confs) == opt$userId)
-      		    confs = confs[,c(opt$userID,setdiff(colnames(confs),opt$userID))]
+      		    idx <- which(colnames(confs) == opt$userId)
+      		    confs <- confs[,c(opt$userID,setdiff(colnames(confs),opt$userID))]
       		    colnames(confs)[1] <- "userID"
     	  } else {
     	        print("Loading confounders from phenotypes file ...")
-              confNames = .getConfounderNames(opt)
-              #####
+              confNames <- .getConfounderNames(opt)
+              
     	        ##### extract confounders from data file
-              confs = fread(opt$phenofile, select=confNames, sep=',', header=TRUE, data.table=FALSE)
-    	        confs = lapply(confs,function(x) type.convert(as.character(x)))
-    	        confs = as.data.frame(confs)
-    
-              #####
+              confs <- fread(opt$phenofile, select=confNames, sep=',', header=TRUE, data.table=FALSE)
+    	        confs <- lapply(confs,function(x) type.convert(as.character(x)))
+    	        confs <- as.data.frame(confs)
+
     	        ##### process genetic batch to create genetic chip variable
               if (opt$genetic == TRUE) {
-                    genoBatch = confs[,"x22000_0_0"]
+                    genoBatch <- confs[,"x22000_0_0"]
                     # chip comes from batch field 22000
-                    genoChip = rep.int(NA,nrow(confs));
-                    idxForVar = which(genoBatch<0);
-                    genoChip[idxForVar] = 0;
-                    idxForVar = which(genoBatch>=0 & genoBatch<2000);
-                    genoChip[idxForVar] = 1;
+                    genoChip <- rep.int(NA,nrow(confs))
+                    idxForVar <- which(genoBatch<0)
+                    genoChip[idxForVar] <- 0
+                    idxForVar <- which(genoBatch>=0 & genoBatch<2000)
+                    genoChip[idxForVar] <- 1
     
     		            # remove geno batch from and add geno chip to confounders
-                    confs = confs[,-which(names(confs) == "x22000_0_0")]
-                    confs = cbind.data.frame(confs, genoChip)
+                    confs <- confs[,-which(names(confs) == "x22000_0_0")]
+                    confs <- cbind.data.frame(confs, genoChip)
               }
 
-	            #####
             	##### Convert assessment centre to an indicator variable
 	            if (opt$sensitivity==TRUE) {
-		                confs$x54_0_0 = as.factor(confs$x54_0_0)
-		                assCentre = model.matrix(~confs$x54_0_0)
-		                assCentre = assCentre[,2:ncol(assCentre)]
-		                confs = cbind(confs, assCentre)
+		                confs$x54_0_0 <- as.factor(confs$x54_0_0)
+		                assCentre <- model.matrix(~confs$x54_0_0)
+		                assCentre <- assCentre[,2:ncol(assCentre)]
+		                confs <- cbind(confs, assCentre)
 		                confs$x54_0_0 = NULL
 	            }
 	            colnames(confs)[1] <- "userID"
-
 	      }
 
 	      # remove any rows with no values
 	      print(paste("Number of rows in confounder data: ", nrow(confs),sep=""))
-	      confsComp = complete.cases(confs)
+	      confsComp <- complete.cases(confs)
 	      print(paste("Number of INCOMPLETE rows removed from confounder data: ", length(which(confsComp==FALSE)),sep=""))
-	      confs = confs[confsComp==TRUE,]
+	      confs <- confs[confsComp==TRUE,]
 	      print(paste("Number of rows in confounder data: ", nrow(confs),sep=""))	
 
 	      print("Confounder columns:")
 	      print(names(confs))
-
 	      return(confs)
     }
 }
 
 .getConfounderNames <- function(opt) {
-    #####
 	  ##### first get vector of confounder names
     # age and sex
-    confNames = c(opt$userId, "x21022_0_0", "x31_0_0")
-    
+    confNames <- c(opt$userId, "x21022_0_0", "x31_0_0")
     # if genetic trait of interest then adjust for genotype chip
     # and also let user choose sensitivity analysis that also adjusts for top 10 genetic principal components and assessment centre
     if (opt$genetic == TRUE) {
-          confNames = append(confNames, "x22000_0_0")
+          confNames <- append(confNames, "x22000_0_0")
           if (opt$sensitivity==TRUE) {
-                confNames = append(confNames, c("x22009_0_1", "x22009_0_2", "x22009_0_3", "x22009_0_4", "x22009_0_5", "x22009_0_6", "x22009_0_7", "x22009_0_8", "x22009_0_9", "x22009_0_10", "x54_0_0"))
+                confNames <- append(confNames, c("x22009_0_1", "x22009_0_2", "x22009_0_3", "x22009_0_4", "x22009_0_5", "x22009_0_6", "x22009_0_7", "x22009_0_8", "x22009_0_9", "x22009_0_10", "x54_0_0"))
                 print("Adjusting for age, sex, genotype chip, top 10 genetic principal components and assessment centre")
           } else {
                 print("Adjusting for age, sex and genotype chip")
@@ -109,7 +103,7 @@ loadConfounders <- function(opt, phenotypes) {
     } else {
           # non genetic trait of interest, then sensitivity adjusts for assessment center
           if (opt$sensitivity==TRUE) {
-                confNames = append(confNames, "x54_0_0")
+                confNames <- append(confNames, "x54_0_0")
                 print("Adjusting for age, sex and assessment centre")
           } else {
                 print("Adjusting for age and sex")

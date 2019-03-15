@@ -53,7 +53,7 @@ run <- function(opt) {
     sink()
     
     # save counters of each path in variable flow
-    saveCounts(opt)
+    .saveCounts(opt)
     if (opt$save == TRUE) {
         write.table(pkg.env$derivedBinary, file=paste(opt$resDir,"data-binary-",opt$varTypeArg,".txt", sep=""), append=FALSE, quote=FALSE, sep=",", na="", row.names=FALSE, col.names=TRUE);
         write.table(pkg.env$derivedCont, file=paste(opt$resDir,"data-cont-",opt$varTypeArg,".txt", sep=""), append=FALSE, quote=FALSE, sep=",", na="", row.names=FALSE, col.names=TRUE);

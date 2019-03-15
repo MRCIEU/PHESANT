@@ -61,18 +61,18 @@ testCategoricalSingle <- function(opt, vl, varName, varType, thisdata, phenoStar
         pheno = .replaceMissingCodes(pheno)
 
 	## remove categories if < 10 examples
-	pheno = testNumExamples(pheno)
+	pheno = .testNumExamples(pheno)
 
 	uniqVar = unique(na.omit(pheno))
 	uniqVar = sort(uniqVar)
 
 	if (length(uniqVar)<=1) {
 		cat("SKIP (only one value) || ");
-		incrementCounter("catSin.onevalue")
+		.incrementCounter("catSin.onevalue")
 	}
 	else if (length(uniqVar)==2) {		
 		cat("CAT-SINGLE-BINARY || ");
-	  incrementCounter("catSin.case3")
+	  .incrementCounter("catSin.case3")
 		# binary so logistic regression
 
 		phenoFactor = factor(pheno)
@@ -91,7 +91,7 @@ testCategoricalSingle <- function(opt, vl, varName, varType, thisdata, phenoStar
 		if (ordered == 0) {
 			
 			cat("CAT-SINGLE-UNORDERED || ")
-		  incrementCounter("catSin.case2")
+		  .incrementCounter("catSin.case2")
 
 			thisdatanew = cbind.data.frame(thisdata[,1:(phenoStartIdx -1)], pheno);
 			testCategoricalUnordered(opt, vl, varName, varType, thisdatanew, phenoStartIdx);
@@ -101,7 +101,7 @@ testCategoricalSingle <- function(opt, vl, varName, varType, thisdata, phenoStar
 		
 			## ordered
 			cat("ordered || ");
-		  incrementCounter("catSin.case1")
+		  .incrementCounter("catSin.case1")
 
 			## reorder variable values into increasing order
 			thisdatanew = cbind.data.frame(thisdata[,1:(phenoStartIdx -1)], pheno);
@@ -110,7 +110,7 @@ testCategoricalSingle <- function(opt, vl, varName, varType, thisdata, phenoStar
 		}
 		else if (ordered == -2) {
 			cat(" EXCLUDED or BINARY variable: Should not get here in code. ")
-		  incrementCounter( "catSin.binaryorexcluded")
+		  .incrementCounter( "catSin.binaryorexcluded")
 		}
 		else {
 			print(paste("ERROR", varName, varType, dataCode));

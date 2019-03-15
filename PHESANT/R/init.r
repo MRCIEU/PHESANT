@@ -27,7 +27,7 @@ initData <-function(opt) {
     
     ## load data
     d <- loadData(opt, vl)
-    data <- d$datax
+    data <- d$phenotype
     confounders <- d$confounders
     vl$indicatorFields <- d$inds
     

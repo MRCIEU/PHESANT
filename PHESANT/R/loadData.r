@@ -20,7 +20,8 @@
 # loads phenotype and trait of interest data files
 # creates phenotype / trait of interest data frame
 # creates confounder data frame
-# returns an object holding these two data frames
+# create indicator fields data frame
+# returns an object holding these three data frames
 loadData <- function(opt, vl) {
   
   	validatePhenotypeInputHeader(opt)
@@ -55,9 +56,9 @@ loadData <- function(opt, vl) {
   	}
   
   	# some fields are fixed that have a field type as cat single but we want to treat them like cat mult
-  	phenotype = fixOddFieldsToCatMul(vl, phenotype)
-  	indFields = loadIndicatorFields(opt, vl, colnames(phenotype))
-  	d = list(datax=phenotype, confounders=conf, inds=indFields)
+  	phenotype = .fixOddFieldsToCatMul(vl, phenotype)
+  	indFields = .loadIndicatorFields(opt, vl, colnames(phenotype))
+  	d = list(phenotype=phenotype, confounders=conf, inds=indFields)
   	return(d)
 }
 

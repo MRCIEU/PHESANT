@@ -25,7 +25,7 @@ testCategoricalOrdered <- function(opt, vl, varName, varType, thisdata, phenoSta
 	geno = thisdata[,"geno"]
 
 	cat("CAT-ORD || ");
-	incrementCounter("ordCat")
+	.incrementCounter("ordCat")
 
 	doCatOrdAssertions(pheno)
 
@@ -39,7 +39,7 @@ testCategoricalOrdered <- function(opt, vl, varName, varType, thisdata, phenoSta
 	numNotNA = length(which(!is.na(pheno)))
 	if (numNotNA<500) {
 		cat("CATORD-SKIP-500 (", numNotNA, ") || ",sep="");
-	  incrementCounter("ordCat.500")
+	  .incrementCounter("ordCat.500")
 	}
 	else {
 		# test this cat ordered variable with ordered logistic regression	
@@ -52,7 +52,7 @@ testCategoricalOrdered <- function(opt, vl, varName, varType, thisdata, phenoSta
 			# add pheno to dataframe
 			.storeNewVar(thisdata[,"userID"], phenoFactor, varName, 'catOrd')
 			cat("SUCCESS results-ordered-logistic");
-			incrementCounter("success.ordCat")
+			.incrementCounter("success.ordCat")
                 }
                 else {
 
@@ -93,11 +93,11 @@ testCategoricalOrdered <- function(opt, vl, varName, varType, thisdata, phenoSta
 
 		write(paste(varName, varType, numNotNA, beta, lower, upper, pvalue, sep=","), file=paste(opt$resDir,"results-ordered-logistic-",opt$varTypeArg,".txt",sep=""), append="TRUE");
 		cat("SUCCESS results-ordered-logistic");
-		incrementCounter("success.ordCat")
+		.incrementCounter("success.ordCat")
 
 		isExposure = getIsExposure(vl, varName)
                 if (isExposure == TRUE) {
-                  incrementCounter("success.exposure.ordCat")
+                  .incrementCounter("success.exposure.ordCat")
                 }
 
 		### END TRYCATCH
@@ -105,7 +105,7 @@ testCategoricalOrdered <- function(opt, vl, varName, varType, thisdata, phenoSta
 			sink()
                         sink(pkg.env$resLogFile, append=TRUE)
                         cat(paste("ERROR:", varName,gsub("[\r\n]", "", e), sep=" "))
-                        incrementCounter("ordCat.error")
+                        .incrementCounter("ordCat.error")
                 })
 		}
 

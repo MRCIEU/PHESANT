@@ -30,7 +30,7 @@ testAssociations <- function(opt, vl, currentVar, currentVarShort, thisdata, phe
 		# check if variable info is found for this field
 		if (length(idx)==0) {
 			cat(paste(currentVar, " || Variable could not be found in pheno info file. \n", sep=""))			
-		  incrementCounter("notinphenofile")
+		  .incrementCounter("notinphenofile")
 		}
 		else {
 
@@ -47,12 +47,12 @@ testAssociations <- function(opt, vl, currentVar, currentVarShort, thisdata, phe
 			
 			if (excluded!="") {
 				cat(paste("Excluded integer: ", excluded, " || ", sep=""))
-			  incrementCounter("excluded.int")
+			  .incrementCounter("excluded.int")
 			}
 			else {
-			  incrementCounter("start.int")
+			  .incrementCounter("start.int")
 				if (isExposure==TRUE) {
-				  incrementCounter("start.exposure.int")
+				  .incrementCounter("start.exposure.int")
 				}
 
 			    	testInteger(opt, vl, currentVarShort, "INTEGER", thisdata, phenoStartIdx);
@@ -66,12 +66,12 @@ testAssociations <- function(opt, vl, currentVar, currentVarShort, thisdata, phe
 
 		    	if (excluded!="") {
 				cat(paste("Excluded continuous: ", excluded, " || ", sep=""))
-		    	  incrementCounter("excluded.cont")
+		    	  .incrementCounter("excluded.cont")
 		    	}
 			else {
-			  incrementCounter("start.cont")
+			  .incrementCounter("start.cont")
 				if (isExposure==TRUE) {
-				  incrementCounter("start.exposure.cont")
+				  .incrementCounter("start.exposure.cont")
                                 }
 				testContinuous(opt, vl, currentVarShort, "CONTINUOUS", thisdata, phenoStartIdx);
 	        	}
@@ -84,12 +84,12 @@ testAssociations <- function(opt, vl, currentVar, currentVarShort, thisdata, phe
 	
 	    		if (excluded!="") {
 				cat(paste("Excluded cat-single: ", excluded, " || ", sep=""))
-	    		  incrementCounter("excluded.catSin")
+	    		  .incrementCounter("excluded.catSin")
 			}
 			else {
-			  incrementCounter("start.catSin")
+			  .incrementCounter("start.catSin")
 				if (isExposure==TRUE) {
-				  incrementCounter("start.exposure.catSin")
+				  .incrementCounter("start.exposure.catSin")
                                 }
 			    testCategoricalSingle(opt, vl, currentVarShort, "CAT-SIN", thisdata, phenoStartIdx);
 			}
@@ -102,24 +102,24 @@ testAssociations <- function(opt, vl, currentVar, currentVarShort, thisdata, phe
 
 			if (excluded!="") {
 				cat(paste("Excluded cat-multiple: ", excluded, " || ", sep=""))
-			  incrementCounter("excluded.catMul")
+			  .incrementCounter("excluded.catMul")
 			}
 			else {
 
 				if (catSinToMult!="") {
 					cat("cat-single to cat-multiple || ", sep="")
-				  incrementCounter("catSinToCatMul")
+				  .incrementCounter("catSinToCatMul")
 				}
 
-			  incrementCounter("start.catMul")	
+			  .incrementCounter("start.catMul")	
 				if (isExposure==TRUE) {
-				  incrementCounter("start.exposure.catMul")
+				  .incrementCounter("start.exposure.catMul")
                                 }
 				else {
 					# get number of cat mult values denoting trait of interest
 	                                numVals = getNumValuesCatMultExposure(vl, currentVarShort)
 					if (numVals>0) {
-		                                addToCounts("start.exposure.catMulvalues", numVals)
+		                                .addToCounts("start.exposure.catMulvalues", numVals)
 					}
 				}
 		        	testCategoricalMultiple(opt, vl, currentVarShort, "CAT-MUL", thisdata, phenoStartIdx);

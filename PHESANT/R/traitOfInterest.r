@@ -24,8 +24,8 @@ loadTraitOfInterest <- function(opt, phenotypes) {
     if (opt$save==TRUE) { 
 	      # saving not running tests so we don't have a trait of interest
         # add pretend trait of interest so other code doesn't break
-        numRows = nrow(phenotypes)
-	      data = cbind.data.frame(phenotypes$userID, rep(-1, numRows))
+        numRows <- nrow(phenotypes)
+	      data <- cbind.data.frame(phenotypes$userID, rep(-1, numRows))
     } else {
 	      # load the trait of interest specified by the user
         if (is.null(opt$traitofinterestfile)) {
@@ -35,12 +35,11 @@ loadTraitOfInterest <- function(opt, phenotypes) {
               print("Loading trait of interest file ...")
               data = fread(opt$traitofinterestfile, select=c(opt$userId, opt$traitofinterest), sep=',', header=TRUE, data.table=FALSE)
         }
-	    data = data.frame(lapply(data,function(x) type.convert(as.character(x))))
+	    data <- data.frame(lapply(data,function(x) type.convert(as.character(x))))
     }
 
     colnames(data)[1] <- "userID"
     colnames(data)[2] <- "geno"
-
     return(data)
 }
 

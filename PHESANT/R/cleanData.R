@@ -59,28 +59,6 @@ reassignValue <- function(vl, pheno, varName) {
     return(pheno)
 }
 
-fixOddFieldsToCatMul <- function(vl, data) {
-    # examples are variables: 40006, 40011, 40012, 40013
-    # get all variables that need their instances changing to arrays
-    dataPheno = vl$phenoInfo[which(vl$phenoInfo$CAT_SINGLE_TO_CAT_MULT=="YES-INSTANCES"),];
-    for (i in 1:nrow(dataPheno)) {
-      varID = dataPheno[i,]$FieldID;		
-      varidString = paste("x",varID,"_", sep="");			
-      
-      # get all columns in data dataframe for this variable	
-      colIdxs = which(grepl(varidString,names(data)));
-      
-      # change format from xvarid_0_0, xvarid_1_0, xvarid_2_0, to xvarid_0_0, xvarid_0_1, xvarid_0_2
-      count = 0;
-      for (j in colIdxs) {	
-        colnames(data)[j] <- paste(varidString, "0_", count, sep="")
-        count = count + 1;
-      }				
-    }
-    return(data)
-}
-
-
 # Replace NaN and empty values with NA in pheno
 .replaceNaN <- function(pheno) {
   	if (is.factor(pheno)) {
@@ -98,3 +76,20 @@ fixOddFieldsToCatMul <- function(vl, data) {
   	}
   	return(phenoReplaced)
 }
+
+.testNumExamples <- function(pheno) {
+  	## loop through values and remove if has < 10 examples
+    uniqVar <- unique(na.omit(pheno))
+    for (u in uniqVar) {
+        withValIdx <- which(pheno==u)
+        numWithVal <- length(withValIdx);
+        if (numWithVal<10) {
+            pheno[withValIdx] <- NA
+        	  cat(paste("Removed ",u ,": ", numWithVal, "<10 examples || ", sep=""));
+        } else {
+        	  cat(paste("Inc(>=10): ", u, "(", numWithVal, ") || ", sep=""));
+        }
+    }
+  	return(pheno)
+}
+

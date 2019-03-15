@@ -54,7 +54,7 @@ testCategoricalMultiple <- function(opt, vl, varName, varType, thisdata, phenoSt
 		idxsTrue = idxForVar[,"row"]
 
 		cat(" CAT-MUL-BINARY-VAR ", variableVal, " || ", sep="");
-		incrementCounter("catMul.binary")
+		.incrementCounter("catMul.binary")
 		
 		# make zero vector and set 1s for those with this variable value
 		varBinary = rep.int(0,numRows);
@@ -77,12 +77,12 @@ testCategoricalMultiple <- function(opt, vl, varName, varType, thisdata, phenoSt
                 
 	        if (idxTrue<10 || idxFalse<10) {
 	                cat("CAT-MULT-SKIP-10 (", idxTrue, " vs ", idxFalse, ") || ", sep="");
-			incrementCounter("catMul.10")
+			.incrementCounter("catMul.10")
 	        }
 		else {
 			isExposure = getIsCatMultExposure(vl, varName, variableVal)
 
-			incrementCounter("catMul.over10")
+			.incrementCounter("catMul.over10")
 		     	# binary - so logistic regression
 			binaryLogisticRegression(opt, paste(varName, variableVal,sep="#"), varType, newthisdata, isExposure, phenoStartIdx)
 		}
