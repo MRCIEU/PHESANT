@@ -30,7 +30,7 @@ run <- function(opt) {
         } else {
           ## new variable so run test for previous (we have collected all the columns now)
           if (first==FALSE) {
-            thisdata <- makeTestDataFrame(input$data, input$confounders, currentVarValues)
+            thisdata <- .makeTestDataFrame(input$data, input$confounders, currentVarValues)
             testAssociations(opt, input$vl, currentVar, currentVarShort, thisdata, input$phenoStartIdx)
           }
           first <- FALSE
@@ -47,7 +47,7 @@ run <- function(opt) {
     
     if (phenoIdx>0){
         # last variable so test association
-        thisdata = makeTestDataFrame(input$data, input$confounders, currentVarValues)
+        thisdata = .makeTestDataFrame(input$data, input$confounders, currentVarValues)
         testAssociations(opt, input$vl, currentVar, currentVarShort, thisdata, input$phenoStartIdx)
     }
     sink()

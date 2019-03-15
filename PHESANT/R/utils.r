@@ -15,7 +15,7 @@
 }
 
 ## makes a smaller data frame containing the data for a particular test
-makeTestDataFrame <- function(datax, confounders, currentVarValues) {
+.makeTestDataFrame <- function(datax, confounders, currentVarValues) {
 			thisdata <- datax[,c("geno", "userID")]
 			thisdata <- merge(thisdata, confounders, by="userID", all.x=TRUE, all.y=FALSE, sort=FALSE)
 			currentVarValues <- cbind.data.frame(datax$userID, currentVarValues)
@@ -43,7 +43,7 @@ processArgs <- function(opt, opt_parser) {
       		opt$sensitivity <- FALSE;
       		opt$genetic <- TRUE;
       	}
-    	  opt <- processParts(opt, opt_parser,opt$partIdx, opt$numParts)
+    	  opt <- .processParts(opt, opt_parser,opt$partIdx, opt$numParts)
     }
     else {
     	## check arguments are supplied correctly
@@ -88,7 +88,7 @@ processArgs <- function(opt, opt_parser) {
     	else if (!file.exists(opt$resDir)) {
     		  stop(paste("results directory resDir=", opt$resDir, " does not exist", sep=""), call.=FALSE)
     	}
-    	opt <-processParts(opt, opt_parser,opt$partIdx, opt$numParts);
+    	opt <-.processParts(opt, opt_parser,opt$partIdx, opt$numParts);
     }
     if (opt$save==TRUE) {
     	  print("Saving phenotypes to file. Tests of association will not run!")
@@ -97,27 +97,22 @@ processArgs <- function(opt, opt_parser) {
 }
 
 # Parse the 'part' arguments and check they are valid
-processParts <- function(opt, opt_parser, pIdx, nParts) {
-
-	if (is.null(pIdx) && is.null(nParts)) {
-                opt$varTypeArg <- "all";
-		print(paste("Running with all traits in phenotype file:", opt$phenofile));
-        }
-	else if (is.null(pIdx)) {
-                print_help(opt_parser)
-                stop("pIdx argument must be supplied when nParts argument is supplied", call.=FALSE)
-        }
-	else if (is.null(nParts)) {
-                print_help(opt_parser)
-                stop("nParts argument must be supplied when pIdx argument is supplied", call.=FALSE)
-        }
-	else if (pIdx<1 || pIdx>nParts) {
-		print_help(opt_parser)
-                stop("pIdx arguments must be between 1 and nParts inclusive", call.=FALSE)
-	}
-	else {
-                opt$varTypeArg <- paste(pIdx, "-", nParts, sep="");
-        	print(paste("Running with part",pIdx,"of",nParts," in phenotype file:", opt$phenofile));
-	}
-  return(opt)
+.processParts <- function(opt, opt_parser, pIdx, nParts) {
+  	if (is.null(pIdx) && is.null(nParts)) {
+        opt$varTypeArg <- "all";
+  		  print(paste("Running with all traits in phenotype file:", opt$phenofile));
+    } else if (is.null(pIdx)) {
+        print_help(opt_parser)
+        stop("pIdx argument must be supplied when nParts argument is supplied", call.=FALSE)
+    } else if (is.null(nParts)) {
+        print_help(opt_parser)
+        stop("nParts argument must be supplied when pIdx argument is supplied", call.=FALSE)
+    } else if (pIdx<1 || pIdx>nParts) {
+  		  print_help(opt_parser)
+        stop("pIdx arguments must be between 1 and nParts inclusive", call.=FALSE)
+  	} else {
+        opt$varTypeArg <- paste(pIdx, "-", nParts, sep="");
+        print(paste("Running with part",pIdx,"of",nParts," in phenotype file:", opt$phenofile));
+  	}
+    return(opt)
 }
