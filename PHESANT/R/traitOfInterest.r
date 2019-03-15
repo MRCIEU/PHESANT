@@ -43,3 +43,41 @@ loadTraitOfInterest <- function(opt, phenotypes) {
 
     return(data)
 }
+
+# Validate the contents of the trait of interest file
+validateTraitInputHeader <- function(opt) {
+    if (opt$save!=TRUE) {
+      
+    	### get header of trait of interest file or pheno file (if no trait of interest file is specified
+      print("Validating trait of interest data ...")
+    	if (is.null(opt$traitofinterestfile)) {
+    		  snpIn = read.table(opt$phenofile, header=1, nrows=1, sep=',')
+    	} else {
+    		  snpIn = read.table(opt$traitofinterestfile, header=1, nrows=1, sep=',')	
+    	}
+    
+    	### trait of interest file validation
+    	print(paste("Number of columns in trait of interest file:", ncol(snpIn),sep=""))
+    	## check user id exists in snp file
+    	idx1 = which(names(snpIn) == opt$userId);
+    	if (length(idx1)==0) {
+      		if (is.null(opt$traitofinterestfile)) {
+      			stop(paste("Phenotype file doesn't contain userID colunn:", opt$userId), call.=FALSE)
+      		} else {
+      			stop(paste("Trait of interest file doesn't contain userID colunn:", opt$userId), call.=FALSE)
+      		}
+    	}
+    	
+    	## check trait of interest exists in trait of interest file
+    	idx2 = which(names(snpIn) == opt$traitofinterest);
+    	if (length(idx2)==0) {
+      		if (is.null(opt$traitofinterestfile)) {
+      			  stop(paste("No trait of interest file specified, and phenotypes file doesn't contain trait of interest variable column:", opt$traitofinterest), call.=FALSE)
+      		} else {
+      			  stop(paste("Trait of interest file doesn't contain trait of interest variable column:", opt$traitofinterest), call.=FALSE)
+      		}
+    	}
+    	print("Trait of interest file validated")
+    }
+}
+

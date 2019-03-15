@@ -108,4 +108,60 @@ loadPhenotypes <- function(opt) {
 
 }
 
+# Validate the contents of the phenotype file
+validatePhenotypeInputHeader <- function(opt) {
+  	print("Validating phenotype data ...")
+  
+  	## get just first row so we can check the column names
+  	phenoIn = read.table(opt$phenofile, header=1, nrows=1, sep=',')
+  	
+  	### pheno file validation
+  	print(paste("Number of columns in phenotype file: ", ncol(phenoIn),sep=""))
+  	## check user id exists in pheno file
+  	idx1 = which(names(phenoIn) == opt$userId);
+  	if (length(idx1)==0) {
+        stop(paste("phenotype file doesn't contain userID colunn:", opt$userId), call.=FALSE)
+    }
+  
+  	# we only need the confounders if we are actually running the tests
+  	if (opt$save==FALSE & is.null(opt$confounderfile)) {
+      	## confounder variables exist in pheno file
+      	idx = which(names(phenoIn) == "x21022_0_0");
+      	if (length(idx)==0) {
+            stop("phenotype file doesn't contain required age colunn: x21022_0_0", call.=FALSE)
+        }
+      
+      	idx = which(names(phenoIn) == "x31_0_0");
+        if (length(idx)==0) {
+            stop("phenotype file doesn't contain required sex colunn: x31_0_0", call.=FALSE)
+        }
+      
+      	if (opt$genetic ==TRUE) {
+      		  idx = which(names(phenoIn) == "x22000_0_0");
+          	if (length(idx)==0) {
+          	    stop("phenotype file doesn't contain required genetic batch colunn: x22000_0_0", call.=FALSE)
+          	}	
+      	}
+      
+      	## if running with sensitivity option then check extra columns exist in pheno file (genetic PCs and assessment centre)
+      	if (opt$sensitivity==TRUE) {
+        		if (opt$genetic ==TRUE) {
+          			## check first 10 genetic PCs exist
+          			for (i in 1:10) {
+            				idx = which(names(phenoIn) == paste("x22009_0_", i, sep=""));
+            				if (length(idx)==0) {
+               			    stop(paste("phenotype file doesn't contain required genetic principal component colunn: x22009_0_", i, sep=""), call.=FALSE)
+              			}
+          			}
+        		}
+        		## assessment centre field
+        		idx = which(names(phenoIn) == "x54_0_0");
+          	if (length(idx)==0) {
+          	    stop("phenotype file doesn't contain required assessment centre colunn: x54_0_0", call.=FALSE)
+          	}
+        }
+  
+  	}
+  	print("Phenotype file validated")
+}
 

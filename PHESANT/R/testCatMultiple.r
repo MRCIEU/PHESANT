@@ -126,7 +126,7 @@ restrictSample2 <- function(vl, varName,pheno, varIndicator,variableVal, userID)
 		indicatorVar = indvarx[,indName]
 
 		# remove participants with NA value in this related field
-		indicatorVar = replaceNaN(indicatorVar)
+		indicatorVar = .replaceNaN(indicatorVar)
 		naIdxs = which(is.na(indicatorVar))
 
 		cat("Remove indicator var NAs: ", length(naIdxs), " || ", sep="");

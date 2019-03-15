@@ -23,22 +23,12 @@
 # returns an object holding these two data frames
 loadData <- function(opt, vl) {
   
-  	##### validating data
-  	## check phenotype file headers
-  	validatePhenotypeInput(opt)
+  	validatePhenotypeInputHeader(opt)
+  	validateTraitInputHeader(opt)
   
-  	## check trait of interest file headers
-  	validateTraitInput(opt)
-  
-  	##### load data
-  	## load phenotype
   	print("Loading phenotypes ...")
   	phenotype = loadPhenotypes(opt)
-  
-  	## load trait of interest
     toi <- loadTraitOfInterest(opt, phenotype)
-  
-    ## load confounders
     conf <- loadConfounders(opt, phenotype)
   
   	## add trait of interest to phenotype data frame and remove rows with no trait of interest
@@ -47,13 +37,11 @@ loadData <- function(opt, vl) {
   	
     ## remove any rows with no trait of interest
     idxNotEmpty = which(!is.na(phenotype[,"geno"]))
-  
   	if (opt$save == TRUE) {
   	      print(paste("Phenotype file has ", nrow(phenotype), " rows.", sep=""))
   	} else {
   		    print(paste("Phenotype file has ", nrow(phenotype), " rows with ", length(idxNotEmpty), " not NA for trait of interest (",opt$traitofinterest,").", sep=""))
   	}
-  
     phenotype = phenotype[idxNotEmpty,]
   
   	# match ids from not empty phenotypes list
@@ -61,9 +49,9 @@ loadData <- function(opt, vl) {
     conf = conf[confsIdx,]
   
   	if (nrow(phenotype)==0) {
-  	      stop("No examples with row in both trait of interest and phenotype files", call.=FALSE)
+  	    stop("No examples with row in both trait of interest and phenotype files", call.=FALSE)
   	} else {
-  	     print(paste("Phenotype and trait of interest data files merged, with", nrow(phenotype),"examples"))
+  	    print(paste("Phenotype and trait of interest data files merged, with", nrow(phenotype),"examples"))
   	}
   
   	# some fields are fixed that have a field type as cat single but we want to treat them like cat mult
@@ -71,26 +59,5 @@ loadData <- function(opt, vl) {
   	indFields = loadIndicatorFields(opt, vl, colnames(phenotype))
   	d = list(datax=phenotype, confounders=conf, inds=indFields)
   	return(d)
-}
-
-fixOddFieldsToCatMul <- function(vl, data) {
-  # examples are variables: 40006, 40011, 40012, 40013
-  # get all variables that need their instances changing to arrays
-  dataPheno = vl$phenoInfo[which(vl$phenoInfo$CAT_SINGLE_TO_CAT_MULT=="YES-INSTANCES"),];
-  for (i in 1:nrow(dataPheno)) {
-    varID = dataPheno[i,]$FieldID;		
-    varidString = paste("x",varID,"_", sep="");			
-    
-    # get all columns in data dataframe for this variable	
-    colIdxs = which(grepl(varidString,names(data)));
-    
-    # change format from xvarid_0_0, xvarid_1_0, xvarid_2_0, to xvarid_0_0, xvarid_0_1, xvarid_0_2
-    count = 0;
-    for (j in colIdxs) {	
-      colnames(data)[j] <- paste(varidString, "0_", count, sep="")
-      count = count + 1;
-    }				
-  }
-  return(data)
 }
 

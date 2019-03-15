@@ -52,7 +52,7 @@ binaryLogisticRegression <- function(opt, varName, varType, thisdata, isExposure
 
 		if (opt$save == TRUE) {
 			# add pheno to dataframe
-			storeNewVar(thisdata[,"userID"], phenoFactor, varName, 'bin')
+			.storeNewVar(thisdata[,"userID"], phenoFactor, varName, 'bin')
 			cat("SUCCESS results-logistic-binary ");			
 			incrementCounter("success.binary")
 		}

@@ -17,6 +17,43 @@
 # DEALINGS IN THE SOFTWARE.
 
 
+initData <-function(opt) {
+    ## load the files we write to and use
+    initCounters()
+    if (opt$save==FALSE) {
+      initResultsFiles(opt)
+    }
+    vl <- initVariableLists(opt)
+    
+    ## load data
+    d <- loadData(opt, vl)
+    data <- d$datax
+    confounders <- d$confounders
+    vl$indicatorFields <- d$inds
+    
+    numPreceedingCols <- ncol(confounders)-1+2 
+    phenoStartIdx <- numPreceedingCols + 1; # confounders,minus id column, plus trait of interest and user ID
+    phenoVars <- colnames(data)[-c(1,2)] # first and second columns are the id and snpScore, respectively
+    
+    return(list(data = data, vl = vl, confounders = confounders, phenoStartIdx = phenoStartIdx, phenoVars = phenoVars))
+}
+
+initEnv <- function(opt, data) {
+    if (opt$save == TRUE) {
+        pkg.env$derivedBinary <- data.frame(userID=data$userID)
+        pkg.env$derivedCont <- data.frame(userID=data$userID)
+        pkg.env$derivedCatOrd <- data.frame(userID=data$userID)
+        pkg.env$derivedCatUnord <- data.frame(userID=data$userID)
+        pkg.env$resLogFile = paste(opt$resDir,"data-log-",opt$varTypeArg,".txt",sep="")
+        sink(pkg.env$resLogFile)
+    } else {
+        pkg.env$modelFitLogFile = paste(opt$resDir,"modelfit-log-",opt$varTypeArg,".txt",sep="")
+        sink(pkg.env$modelFitLogFile)
+        sink()
+        pkg.env$resLogFile = paste(opt$resDir,"results-log-",opt$varTypeArg,".txt",sep="")
+        sink(pkg.env$resLogFile)
+    }
+}
 # create new results files and headers
 initResultsFiles <- function(opt) {
 

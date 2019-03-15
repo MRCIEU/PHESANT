@@ -50,7 +50,7 @@ testCategoricalOrdered <- function(opt, vl, varName, varType, thisdata, phenoSta
 
 		if (opt$save == TRUE) {
 			# add pheno to dataframe
-			storeNewVar(thisdata[,"userID"], phenoFactor, varName, 'catOrd')
+			.storeNewVar(thisdata[,"userID"], phenoFactor, varName, 'catOrd')
 			cat("SUCCESS results-ordered-logistic");
 			incrementCounter("success.ordCat")
                 }

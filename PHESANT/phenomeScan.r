@@ -18,7 +18,6 @@
 
 ##
 ## main phenome scan file
-
 ## Updated by Quanli Wang 
 
 library(PHESANT)
@@ -33,110 +32,4 @@ if (length(args) == 0) {
     opt <- processArgs(opt, opt_parser)
 }
 
-## load the files we write to and use
-initCounters()
-if (opt$save==FALSE) {
-	initResultsFiles(opt)
-}
-vl <- initVariableLists(opt)
-
-## load data
-d <- loadData(opt, vl)
-data=d$datax
-confounders=d$confounders
-vl$indicatorFields=d$inds
-
-numPreceedingCols = ncol(confounders)-1+2; # confounders,minus id column, plus trait of interest and user ID
-phenoStartIdx = numPreceedingCols+1;
-
-print("LOADING DONE")
-
-phenoVars=colnames(data);
-# remove user id and age and sex columns
-phenoVars = phenoVars[-c(1,2)]; # first and second columns are the id and snpScore, respectively, as determined in loadData.r
-
-currentVar="";
-currentVarShort="";
-first=TRUE;
-
-if (opt$save == TRUE) {
-    pkg.env$derivedBinary <- data.frame(userID=data$userID)
-    pkg.env$derivedCont <- data.frame(userID=data$userID)
-    pkg.env$derivedCatOrd <- data.frame(userID=data$userID)
-    pkg.env$derivedCatUnord <- data.frame(userID=data$userID)
-    pkg.env$resLogFile = paste(opt$resDir,"data-log-",opt$varTypeArg,".txt",sep="")
-    sink(pkg.env$resLogFile)
-} else {
-    pkg.env$modelFitLogFile = paste(opt$resDir,"modelfit-log-",opt$varTypeArg,".txt",sep="")
-  	sink(pkg.env$modelFitLogFile)
-  	sink()
-  	pkg.env$resLogFile = paste(opt$resDir,"results-log-",opt$varTypeArg,".txt",sep="")
-  	sink(pkg.env$resLogFile)
-}
-
-
-phenoIdx=0; # zero because then the idx is the position of the previous variable, i.e. the var in currentVar
-for (var in phenoVars) { 
-
-
-	sink()
-#	print(var)
-	sink(pkg.env$resLogFile, append=TRUE)
-
-	varx = gsub("^x", "", var);
-        varx = gsub("_[0-9]+$", "", varx);
-	varxShort = gsub("^x", "", var);
-        varxShort = gsub("_[0-9]+_[0-9]+$", "", varxShort);
-
-	## test this variable
-	if (currentVar == varx) {
-		thisCol = data[,eval(var)]
-		thisCol = replaceNaN(thisCol)
-		currentVarValues = cbind.data.frame(currentVarValues, thisCol);
-	}
-	else if (currentVarShort == varxShort) {
-		## different time point of this var so skip
-	}
-	else {
-		## new variable so run test for previous (we have collected all the columns now)
-		if (first==FALSE) {
-
-			thisdata = makeTestDataFrame(data, confounders, currentVarValues)
-			testAssociations(opt, vl, currentVar, currentVarShort, thisdata, phenoStartIdx)
-		}
-		
-		first=FALSE;
-		
-		## new variable so set values
-		currentVar = varx;
-		currentVarShort = varxShort;
-
-		currentVarValues = data[,eval(var)]
-		currentVarValues = replaceNaN(currentVarValues)
-	}
-
-	phenoIdx = phenoIdx + 1;
-}
-
-if (phenoIdx>0){
-	# last variable so test association
-	thisdata = makeTestDataFrame(data, confounders, currentVarValues)
-	testAssociations(opt, vl, currentVar, currentVarShort, thisdata, phenoStartIdx)
-}
-
-sink()
-
-# save counters of each path in variable flow
-saveCounts(opt)
-
-if (opt$save == TRUE) {
-	write.table(pkg.env$derivedBinary, file=paste(opt$resDir,"data-binary-",opt$varTypeArg,".txt", sep=""), append=FALSE, quote=FALSE, sep=",", na="", row.names=FALSE, col.names=TRUE);
-	write.table(pkg.env$derivedCont, file=paste(opt$resDir,"data-cont-",opt$varTypeArg,".txt", sep=""), append=FALSE, quote=FALSE, sep=",", na="", row.names=FALSE, col.names=TRUE);
-	write.table(pkg.env$derivedCatOrd, file=paste(opt$resDir,"data-catord-",opt$varTypeArg,".txt", sep=""), append=FALSE, quote=FALSE, sep=",", na="", row.names=FALSE, col.names=TRUE);
-	write.table(pkg.env$derivedCatUnord, file=paste(opt$resDir,"data-catunord-",opt$varTypeArg,".txt", sep=""), append=FALSE, quote=FALSE, sep=",", na="", row.names=FALSE, col.names=TRUE);
-}
-
-warnings()
-
-
-
+run(opt)

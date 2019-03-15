@@ -46,7 +46,7 @@ testCategoricalUnordered <- function(opt, vl, varName, varType, thisdata, phenoS
 
 		if (opt$save == TRUE) {
 			# add pheno to dataframe
-			storeNewVar(thisdata[,"userID"], phenoFactor, varName, 'catUnord')
+			.storeNewVar(thisdata[,"userID"], phenoFactor, varName, 'catUnord')
 			cat("SUCCESS results-notordered-logistic ");
 			incrementCounter("success.unordCat")
 		}

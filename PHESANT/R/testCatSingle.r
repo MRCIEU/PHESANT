@@ -169,7 +169,7 @@ setDefaultValue <- function(vl, pheno, defaultValue, defaultRelatedID, userID) {
                 indicatorVar = indvarx[,indName]
 
 	    	# remove participants with NA value in this related field
-	    	indicatorVar = replaceNaN(indicatorVar)
+	    	indicatorVar = .replaceNaN(indicatorVar)
 
 		# check if there are already examples with default value and if so display warning
 		numWithDefault = length(which(pheno==defaultValue))

@@ -27,7 +27,7 @@ loadIndicatorFields <- function(opt, vl, phenosToTest) {
   	indVars = c(opt$userId)
   
   	## add indicator variables to pheno data
-  	indVars = addIndicatorVariables(vl, indVars, phenosToTest, phenoVarsAll)
+  	indVars = .addIndicatorVariables(vl, indVars, phenosToTest, phenoVarsAll)
   	if (length(indVars)>1) {
     		# not just user id column
     		print("Loading required related variable(s):")
@@ -44,7 +44,7 @@ loadIndicatorFields <- function(opt, vl, phenosToTest) {
 }
 
 
-addIndicatorVariables <- function(vl, indVars, phenosToTest, phenoVarsAll) {
+.addIndicatorVariables <- function(vl, indVars, phenosToTest, phenoVarsAll) {
 
   	##### default value related fields for data codes
   	# get list of all indicator variables from outcome info file

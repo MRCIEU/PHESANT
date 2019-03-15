@@ -40,7 +40,7 @@ testInteger <- function(opt, vl, varName, varType, thisdata, phenoStartIdx) {
                 phenoAvg = rowMeans(pheno, na.rm=TRUE)
 		
 		# if participant only has NA values then NaN is generated so we convert back to NA
-		phenoAvg = replaceNaN(phenoAvg)
+		phenoAvg = .replaceNaN(phenoAvg)
         }
 	else {
                 phenoAvg = pheno
