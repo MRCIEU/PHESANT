@@ -33,7 +33,7 @@ testInteger <- function(opt, vl, varName, varType, thisdata, phenoStartIdx) {
 		return(NULL)
 	}
 
-	pheno = reassignValue(vl, pheno, varName)
+	pheno = .reassignValue(vl, pheno, varName)
 
 	## average if multiple columns
 	if (!is.null(dim(pheno))) {

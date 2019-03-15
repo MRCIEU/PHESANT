@@ -31,7 +31,7 @@ testCategoricalSingle <- function(opt, vl, varName, varType, thisdata, phenoStar
   	# assert variable has only one column
   	if (!is.null(dim(pheno))) stop("More than one column for categorical single")
   
-  	pheno = reassignValue(vl, pheno, varName)
+  	pheno = .reassignValue(vl, pheno, varName)
   
   	# get data code info - whether this data code is ordinal or not and any reordering
           dataPheno = vl$phenoInfo[which(vl$phenoInfo$FieldID==varName),];

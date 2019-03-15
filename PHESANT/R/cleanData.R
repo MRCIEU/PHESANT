@@ -17,7 +17,7 @@
 # DEALINGS IN THE SOFTWARE.
 
 # Reassigns values as specified in data coding info file
-reassignValue <- function(vl, pheno, varName) {
+.reassignValue <- function(vl, pheno, varName) {
   	# get data code info - whether this data code is ordinal or not and any reordering and resassignments
     dataPheno <- vl$phenoInfo[which(vl$phenoInfo$FieldID==varName),]
     dataCode <- dataPheno$DATA_CODING

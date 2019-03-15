@@ -27,7 +27,7 @@ testCategoricalMultiple <- function(opt, vl, varName, varType, thisdata, phenoSt
   	cat("CAT-MULTIPLE || ")
   
   	pheno = thisdata[,phenoStartIdx:ncol(thisdata), drop=FALSE]
-  	pheno = reassignValue(vl, pheno, varName)
+  	pheno = .reassignValue(vl, pheno, varName)
   
   	## get unique values from all columns of this variable
   	uniqueValues = unique(na.omit(pheno[,1]));

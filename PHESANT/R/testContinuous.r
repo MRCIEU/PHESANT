@@ -21,7 +21,7 @@ testContinuous <- function(opt, vl, varName, varType, thisdata, phenoStartIdx) {
   	cat("CONTINUOUS MAIN || ")	
   	pheno <- thisdata[,phenoStartIdx:ncol(thisdata)]
   	# reassign values
-    pheno <- reassignValue(vl, pheno, varName)
+    pheno <- .reassignValue(vl, pheno, varName)
   	thisdata[,phenoStartIdx:ncol(thisdata)] <- pheno
   	.testContinuous2(opt, vl, varName, varType, thisdata, phenoStartIdx)
 }
