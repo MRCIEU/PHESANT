@@ -19,96 +19,80 @@
 
 # Performs ordered logistic regression test and saves results in ordered logistic results file
 testCategoricalOrdered <- function(opt, vl, varName, varType, thisdata, phenoStartIdx, orderStr="") {
+	  pheno <- thisdata[,phenoStartIdx:ncol(thisdata)]
+	  geno <- thisdata[,"geno"]
 
-	
-	pheno = thisdata[,phenoStartIdx:ncol(thisdata)]
-	geno = thisdata[,"geno"]
+	  cat("CAT-ORD || ")
+	  .incrementCounter("ordCat")
+	  .doCatOrdAssertions(pheno)
+	  uniqVar <- unique(na.omit(pheno))
 
-	cat("CAT-ORD || ");
-	.incrementCounter("ordCat")
-	.doCatOrdAssertions(pheno)
+	  # log the ordering of categories used
+	  orderStr <-.setOrderString(orderStr, uniqVar)
+	  cat("order: ", orderStr, " || ",  sep="")
 
-	uniqVar = unique(na.omit(pheno));
-
-	# log the ordering of categories used
-	orderStr = .setOrderString(orderStr, uniqVar);
-	cat("order: ", orderStr, " || ",  sep="");
-
-	# check sample size
-	numNotNA = length(which(!is.na(pheno)))
-	if (numNotNA<500) {
-		cat("CATORD-SKIP-500 (", numNotNA, ") || ",sep="");
-	  .incrementCounter("ordCat.500")
-	}
-	else {
-		# test this cat ordered variable with ordered logistic regression	
-
-	        phenoFactor = factor(pheno)
-
-		cat("num categories: ", length(unique(na.omit(phenoFactor))), " || ", sep="");
-
-		if (opt$save == TRUE) {
-			# add pheno to dataframe
-			.storeNewVar(thisdata[,"userID"], phenoFactor, varName, 'catOrd')
-			cat("SUCCESS results-ordered-logistic");
-			.incrementCounter("success.ordCat")
+	  # check sample size
+	  numNotNA <- length(which(!is.na(pheno)))
+	  if (numNotNA<500) {
+		    cat("CATORD-SKIP-500 (", numNotNA, ") || ",sep="")
+	      .incrementCounter("ordCat.500")
+	  } else {
+		    # test this cat ordered variable with ordered logistic regression	
+	      phenoFactor <- factor(pheno)
+    		cat("num categories: ", length(unique(na.omit(phenoFactor))), " || ", sep="");
+    		if (opt$save == TRUE) {
+    			  # add pheno to dataframe
+    			  .storeNewVar(thisdata[,"userID"], phenoFactor, varName, 'catOrd')
+    			  cat("SUCCESS results-ordered-logistic")
+    			  .incrementCounter("success.ordCat")
+        } else {
+        		# ordinal logistic regression
+        		sink()
+        		sink(pkg.env$modelFitLogFile, append=TRUE)
+        		print("--------------")
+        		print(varName)
+        		
+        		### BEGIN TRYCATCH
+        		tryCatch({
+        		    confounders=thisdata[,3:(phenoStartIdx -1), drop = FALSE]
+        		    if (opt$standardise==TRUE) {
+        			      geno = scale(geno)
                 }
-                else {
-
-		# ordinal logistic regression
-		sink()
-		sink(pkg.env$modelFitLogFile, append=TRUE)
-		print("--------------")
-		print(varName)
-		
-		### BEGIN TRYCATCH
-		tryCatch({
-		confounders=thisdata[,3:(phenoStartIdx -1), drop = FALSE]
-
-
-		if (opt$standardise==TRUE) {
-			geno = scale(geno)
+        		    fit <- polr(phenoFactor ~ geno + ., data=confounders, Hess=TRUE)
+        		    ctable <- coef(summary(fit))
+        		    sink()
+        		    sink(pkg.env$resLogFile, append=TRUE)
+        
+        		    ct <- coeftest(fit)
+        		    pvalue <- ct["geno","Pr(>|t|)"]
+        		    beta <- ctable["geno", "Value"]
+        
+        		    if (opt$confidenceintervals == TRUE) {
+        			      se <- ctable["geno", "Std. Error"]
+        			      lower <- beta - 1.96*se
+        	          upper <- beta + 1.96*se
+                } else {
+                    lower <- NA
+                    upper <- NA
                 }
-
-		fit <- polr(phenoFactor ~ geno + ., data=confounders, Hess=TRUE)
-
-		ctable <- coef(summary(fit))
-		sink()
-		sink(pkg.env$resLogFile, append=TRUE)
-
-		ct = coeftest(fit)
-		pvalue = ct["geno","Pr(>|t|)"]
-		beta = ctable["geno", "Value"];
-
-		if (opt$confidenceintervals == TRUE) {
-			se = ctable["geno", "Std. Error"]
-			lower = beta - 1.96*se;
-	                upper = beta + 1.96*se;
-                }
-                else {
-                        lower = NA
-                        upper = NA
-                }
-
-		write(paste(varName, varType, numNotNA, beta, lower, upper, pvalue, sep=","), file=paste(opt$resDir,"results-ordered-logistic-",opt$varTypeArg,".txt",sep=""), append="TRUE");
-		cat("SUCCESS results-ordered-logistic");
-		.incrementCounter("success.ordCat")
-
-		isExposure = getIsExposure(vl, varName)
+        
+        		    write(paste(varName, varType, numNotNA, beta, lower, upper, pvalue, sep=","), file=paste(opt$resDir,"results-ordered-logistic-",opt$varTypeArg,".txt",sep=""), append="TRUE")
+        		    cat("SUCCESS results-ordered-logistic")
+        		    .incrementCounter("success.ordCat")
+        
+        		    isExposure <- getIsExposure(vl, varName)
                 if (isExposure == TRUE) {
-                  .incrementCounter("success.exposure.ordCat")
+                    .incrementCounter("success.exposure.ordCat")
                 }
-
-		### END TRYCATCH
-		}, error = function(e) {
-			sink()
-                        sink(pkg.env$resLogFile, append=TRUE)
-                        cat(paste("ERROR:", varName,gsub("[\r\n]", "", e), sep=" "))
-                        .incrementCounter("ordCat.error")
-                })
-		}
-
-	}
+        		### END TRYCATCH
+        		}, error = function(e) {
+        		    sink()
+                sink(pkg.env$resLogFile, append=TRUE)
+                cat(paste("ERROR:", varName,gsub("[\r\n]", "", e), sep=" "))
+                .incrementCounter("ordCat.error")
+            })
+        }
+	  }
 }
 
 # check that the phenotype is valid - that there are more than two categories
