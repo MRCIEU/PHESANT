@@ -30,91 +30,78 @@ testCategoricalSingle <- function(opt, vl, varName, varType, thisdata, phenoStar
   
   	# assert variable has only one column
   	if (!is.null(dim(pheno))) stop("More than one column for categorical single")
-  
-  	pheno = .reassignValue(vl, pheno, varName)
-  
+  	pheno <- .reassignValue(vl, pheno, varName)
+  	
   	# get data code info - whether this data code is ordinal or not and any reordering
-          dataPheno = vl$phenoInfo[which(vl$phenoInfo$FieldID==varName),];
-          dataCode = dataPheno$DATA_CODING;
+    dataPheno <- vl$phenoInfo[which(vl$phenoInfo$FieldID==varName),]
+    dataCode <- dataPheno$DATA_CODING
   
   	# get data coding information	
-         	dataCodeRow = which(vl$dataCodeInfo$dataCode==dataCode);
+    dataCodeRow <- which(vl$dataCodeInfo$dataCode==dataCode)
   	if (length(dataCodeRow)==0) {
-                  cat("ERROR: No row in data coding info file || ");
-  		return(NULL);
-          }
-  	dataDataCode = vl$dataCodeInfo[dataCodeRow,];
-          ordered = dataDataCode$ordinal;
-          order = as.character(dataDataCode$ordering);
+        cat("ERROR: No row in data coding info file || ")
+  		  return
+    }
+  	dataDataCode <- vl$dataCodeInfo[dataCodeRow,]
+    ordered <- dataDataCode$ordinal
+    order <- as.character(dataDataCode$ordering)
   
   	## reorder variable values into increasing order (we do this now as this may convert variable to binary rather than ordered)
-    pheno = .reorderOrderedCategory(pheno,order);
+    pheno <- .reorderOrderedCategory(pheno,order)
   
   	## if data code has a default_value then recode NA's to this value for participants with value in default_related_field
   	## this is used where there is no zero option e.g. field 100200
-  	defaultValue = dataDataCode$default_value
-  	defaultRelatedID = dataDataCode$default_related_field
-  	pheno = .setDefaultValue(vl, pheno, defaultValue, defaultRelatedID, thisdata[,"userID", drop=FALSE])
+  	defaultValue <- dataDataCode$default_value
+  	defaultRelatedID <- dataDataCode$default_related_field
+  	pheno <- .setDefaultValue(vl, pheno, defaultValue, defaultRelatedID, thisdata[,"userID", drop=FALSE])
   
-          ## all categories coded as <0 we assume are `missing' values
-          pheno = .replaceMissingCodes(pheno)
+    ## all categories coded as <0 we assume are `missing' values
+    pheno <- .replaceMissingCodes(pheno)
   
   	## remove categories if < 10 examples
-  	pheno = .testNumExamples(pheno)
+  	pheno <- .testNumExamples(pheno)
   
-  	uniqVar = unique(na.omit(pheno))
-  	uniqVar = sort(uniqVar)
+  	uniqVar <- unique(na.omit(pheno))
+  	uniqVar <- sort(uniqVar)
   
-  	if (length(uniqVar)<=1) {
-  		cat("SKIP (only one value) || ");
-  		.incrementCounter("catSin.onevalue")
-  	}
-  	else if (length(uniqVar)==2) {		
-  		cat("CAT-SINGLE-BINARY || ");
-  	  .incrementCounter("catSin.case3")
-  		# binary so logistic regression
-  
-  		phenoFactor = factor(pheno)
-  		# binary - so logistic regression
-  		thisdatanew = cbind.data.frame(thisdata[,1:(phenoStartIdx -1)], phenoFactor);
-  		binaryLogisticRegression(opt, varName, varType, thisdatanew, isExposure, phenoStartIdx)	
-  	}
-  	else {
-  		# > 2 categories
-  		if (is.na(ordered)) {
-  			cat(" ERROR: 'ordered' not found in data code info file")	
-  		}
-  		else {
-  
-  		## unordered
-  		if (ordered == 0) {
-  			
-  			cat("CAT-SINGLE-UNORDERED || ")
-  		  .incrementCounter("catSin.case2")
-  
-  			thisdatanew = cbind.data.frame(thisdata[,1:(phenoStartIdx -1)], pheno);
-  			testCategoricalUnordered(opt, vl, varName, varType, thisdatanew, phenoStartIdx);
-  			
-  		}
-  		else if (ordered == 1) {
-  		
-  			## ordered
-  			cat("ordered || ");
-  		  .incrementCounter("catSin.case1")
-  
-  			## reorder variable values into increasing order
-  			thisdatanew = cbind.data.frame(thisdata[,1:(phenoStartIdx -1)], pheno);
-  			testCategoricalOrdered(opt, vl, varName, varType, thisdatanew, phenoStartIdx, order)
-  		
-  		}
-  		else if (ordered == -2) {
-  			cat(" EXCLUDED or BINARY variable: Should not get here in code. ")
-  		  .incrementCounter( "catSin.binaryorexcluded")
-  		}
-  		else {
-  			print(paste("ERROR", varName, varType, dataCode));
-  		}
-  		}
+  	if (length(uniqVar)<=1) { 
+  		  cat("SKIP (only one value) || ")
+  		  .incrementCounter("catSin.onevalue")
+  	} else if (length(uniqVar)==2) {		
+  		  cat("CAT-SINGLE-BINARY || ")
+  	    .incrementCounter("catSin.case3")
+  		  # binary so logistic regression
+  		  phenoFactor <- factor(pheno)
+  		  # binary - so logistic regression
+  		  thisdatanew <- cbind.data.frame(thisdata[,1:(phenoStartIdx -1)], phenoFactor)
+  		  binaryLogisticRegression(opt, varName, varType, thisdatanew, isExposure, phenoStartIdx)	
+  	} else {
+  		  # > 2 categories
+  		  if (is.na(ordered)) {
+  			    cat(" ERROR: 'ordered' not found in data code info file")	
+  		  }  else {
+      		  ## unordered
+      		  if (ordered == 0) {
+      			     cat("CAT-SINGLE-UNORDERED || ")
+      		       .incrementCounter("catSin.case2")
+      			     thisdatanew <- cbind.data.frame(thisdata[,1:(phenoStartIdx -1)], pheno)
+      			     testCategoricalUnordered(opt, vl, varName, varType, thisdatanew, phenoStartIdx)
+      		  } else if (ordered == 1) {
+    			       ## ordered
+    			       cat("ordered || ")
+    		         .incrementCounter("catSin.case1")
+    
+    			       ## reorder variable values into increasing order
+    			       thisdatanew <- cbind.data.frame(thisdata[,1:(phenoStartIdx -1)], pheno)
+    			       testCategoricalOrdered(opt, vl, varName, varType, thisdatanew, phenoStartIdx, order)
+    		
+    		    } else if (ordered == -2) {
+    			       cat(" EXCLUDED or BINARY variable: Should not get here in code. ")
+    		         .incrementCounter( "catSin.binaryorexcluded")
+    		    } else {
+    			       print(paste("ERROR", varName, varType, dataCode));
+    		    }
+  		  }
   	}
 }
 
@@ -135,7 +122,7 @@ testCategoricalSingle <- function(opt, vl, varName, varType, thisdata, phenoStar
       			pheno2[idx] <- count
       			count <- count + 1
     		}
-    		cat("reorder ",order," || ",sep="");
+    		cat("reorder ",order," || ",sep="")
     		return(pheno2)
   	}	else {
   		  return(pheno)
@@ -167,7 +154,7 @@ testCategoricalSingle <- function(opt, vl, varName, varType, thisdata, phenoStar
     		# set default value in people who have no value in the pheno but do have a value in the default_value_related_field
     	  defaultIdxs <- which(!is.na(indicatorVar) & is.na(pheno))
     		pheno[defaultIdxs] <- defaultValue
-    	  cat("default value ", defaultValue, " set, N= ", length(defaultIdxs), " || ", sep="");
+    	  cat("default value ", defaultValue, " set, N= ", length(defaultIdxs), " || ", sep="")
 	  }
 	  return(pheno)
 }

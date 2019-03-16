@@ -24,9 +24,17 @@
 			return(thisdata)
 }
 
+parseOptions <- function() {
+    opt_parser <- OptionParser(option_list=option_list)
+    opt <- parse_args(opt_parser)
+    opt <- .processArgs(opt, opt_parser)
+    return(opt)
+}
+
+    
 # Parse the arguments input by the user
 # if argument 'test' is used then run test phenome scan
-processArgs <- function(opt, opt_parser) {
+.processArgs <- function(opt, opt_parser) {
     if (opt$test==TRUE) {
       	# set up the test phenome scan settings
       	datadir='../testWAS/data/';

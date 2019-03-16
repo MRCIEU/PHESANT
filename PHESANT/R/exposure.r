@@ -31,7 +31,7 @@ getIsExposure <- function(vl, varName) {
 # this field denote the exposure), or whether varName has varValue stated 
 # as a trait of interest in the TRAIT_OF_INTEREST column (multiple values are
 # separated by "|" in this field
-getIsCatMultExposure <- function(vl, varName, varValue) {
+.getIsCatMultExposure <- function(vl, varName, varValue) {
     # get row index of field in variable information file
     idx <- which(vl$phenoInfo$FieldID==varName)
     # may be empty of may contain VALUE1|VALUE2 etc .. to denote those
@@ -64,7 +64,7 @@ getIsCatMultExposure <- function(vl, varName, varValue) {
 # looks up categorical multiple field in the variable info file, return
 # number of values denoted as trait of interest.
 # returns zero if whole field is denoted trait of interest, not particular values.
-getNumValuesCatMultExposure <- function(vl, varName) {
+.getNumValuesCatMultExposure <- function(vl, varName) {
     # get row index of field in variable information file
     idx <- which(vl$phenoInfo$FieldID==varName)
     # may be empty of may contain VALUE1|VALUE2 etc .. to denote those

@@ -27,9 +27,7 @@ args <- commandArgs(T)
 if (length(args) == 0) {
     load(file = "opt_only.RData")
 } else {
-    opt_parser <- OptionParser(option_list=option_list)
-    opt <- parse_args(opt_parser)
-    opt <- processArgs(opt, opt_parser)
+    opt <- parseOptions()
 }
 
 run(opt)

@@ -25,67 +25,63 @@
 # 4) Calling binaryLogisticRegression function for this derived binary variable
 testCategoricalMultiple <- function(opt, vl, varName, varType, thisdata, phenoStartIdx) {
   	cat("CAT-MULTIPLE || ")
-  
-  	pheno = thisdata[,phenoStartIdx:ncol(thisdata), drop=FALSE]
-  	pheno = .reassignValue(vl, pheno, varName)
+  	pheno <- thisdata[,phenoStartIdx:ncol(thisdata), drop=FALSE]
+  	pheno <- .reassignValue(vl, pheno, varName)
   
   	## get unique values from all columns of this variable
-  	uniqueValues = unique(na.omit(pheno[,1]));
-  	numCols = ncol(pheno);
-  	numRows = nrow(pheno);
+  	uniqueValues <- unique(na.omit(pheno[,1]))
+  	numCols <- ncol(pheno)
+  	numRows <- nrow(pheno)
   	if (numCols>1) {
-  		for (num in 2:numCols) {
-  			u = unique(na.omit(pheno[,num]))
-  			uniqueValues = union(uniqueValues,u);
-  		}
+  		  for (num in 2:numCols) {
+  			    u <- unique(na.omit(pheno[,num]))
+  			    uniqueValues <- union(uniqueValues,u)
+  		  }
   	}
   
   	## for each value create a binary variable and test this
   	for (variableVal in uniqueValues) {
-  
-  		## numeric negative values we assume are missing - check this
-  		if(is.numeric(variableVal) & variableVal<0) {
-  			cat("SKIP_val:", variableVal," < 0", sep="");
-  			next;
-  		}
+  		  ## numeric negative values we assume are missing - check this
+  		  if(is.numeric(variableVal) & variableVal<0) {
+  			    cat("SKIP_val:", variableVal," < 0", sep="")
+  			    next
+  		  }
   	
-  		# make variable for this value
-  		idxForVar = which(pheno == variableVal, arr.ind=TRUE)
-  		idxsTrue = idxForVar[,"row"]
+  		  # make variable for this value
+  		  idxForVar <- which(pheno == variableVal, arr.ind=TRUE)
+  		  idxsTrue <- idxForVar[,"row"]
   
-  		cat(" CAT-MUL-BINARY-VAR ", variableVal, " || ", sep="");
-  		.incrementCounter("catMul.binary")
+  		  cat(" CAT-MUL-BINARY-VAR ", variableVal, " || ", sep="")
+  		  .incrementCounter("catMul.binary")
   		
-  		# make zero vector and set 1s for those with this variable value
-  		varBinary = rep.int(0,numRows);
-  		varBinary[idxsTrue] = 1;
-  		varBinaryFactor = factor(varBinary)
+  		  # make zero vector and set 1s for those with this variable value
+  		  varBinary <- rep.int(0,numRows)
+  		  varBinary[idxsTrue] <- 1
+  		  varBinaryFactor <- factor(varBinary)
   
-  		## data for this new binary variable
-  		newthisdata = cbind.data.frame(thisdata[,1:(phenoStartIdx -1)], varBinaryFactor)
+  		  ## data for this new binary variable
+  		  newthisdata <- cbind.data.frame(thisdata[,1:(phenoStartIdx -1)], varBinaryFactor)
   
-  		## one of 3 ways to decide which examples are negative
-          	idxsToRemove = .restrictSample(vl, varName, pheno, variableVal, thisdata[,"userID", drop=FALSE])
+  		  ## one of 3 ways to decide which examples are negative
+        idxsToRemove <- .restrictSample(vl, varName, pheno, variableVal, thisdata[,"userID", drop=FALSE])
   
-  		if (!is.null(idxsToRemove) & length(idxsToRemove) > 0) {
-  			newthisdata = newthisdata[-idxsToRemove,]
-  		}
+  		  if (!is.null(idxsToRemove) & length(idxsToRemove) > 0) {
+  			    newthisdata <- newthisdata[-idxsToRemove,]
+  		  }
   
-  		facLevels = levels(newthisdata[,phenoStartIdx])		
-  		idxTrue = length(which(newthisdata[,phenoStartIdx]==facLevels[1]))
-  	        idxFalse = length(which(newthisdata[,phenoStartIdx]==facLevels[2]))
+  		  facLevels <- levels(newthisdata[,phenoStartIdx])		
+  		  idxTrue <- length(which(newthisdata[,phenoStartIdx]==facLevels[1]))
+  	    idxFalse <- length(which(newthisdata[,phenoStartIdx]==facLevels[2]))
                   
-  	        if (idxTrue<10 || idxFalse<10) {
-  	                cat("CAT-MULT-SKIP-10 (", idxTrue, " vs ", idxFalse, ") || ", sep="");
-  			.incrementCounter("catMul.10")
-  	        }
-  		else {
-  			isExposure = getIsCatMultExposure(vl, varName, variableVal)
-  
-  			.incrementCounter("catMul.over10")
+  	    if (idxTrue<10 || idxFalse<10) {
+  	        cat("CAT-MULT-SKIP-10 (", idxTrue, " vs ", idxFalse, ") || ", sep="")
+  			    .incrementCounter("catMul.10")
+  	    } else {
+  			    isExposure <- .getIsCatMultExposure(vl, varName, variableVal)
+  			    .incrementCounter("catMul.over10")
   		     	# binary - so logistic regression
-  			binaryLogisticRegression(opt, paste(varName, variableVal,sep="#"), varType, newthisdata, isExposure, phenoStartIdx)
-  		}
+  			    binaryLogisticRegression(opt, paste(varName, variableVal,sep="#"), varType, newthisdata, isExposure, phenoStartIdx)
+  		  }
   	}
 }
 
@@ -94,7 +90,7 @@ testCategoricalMultiple <- function(opt, vl, varName, varType, thisdata, phenoSt
 # returns idx's that should be removed from the sample
 .restrictSample <- function(vl, varName,pheno,variableVal, userID) {
   	# get definition for sample for this variable either NO_NAN, ALL or a variable ID
-  	varIndicator = vl$phenoInfo$CAT_MULT_INDICATOR_FIELDS[which(vl$phenoInfo$FieldID==varName)]
+  	varIndicator <- vl$phenoInfo$CAT_MULT_INDICATOR_FIELDS[which(vl$phenoInfo$FieldID==varName)]
   	return(.restrictSample2(vl, varName,pheno,varIndicator,variableVal, userID))
 }
 
