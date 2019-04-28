@@ -43,15 +43,18 @@ equalSizedBins <- function(phenoAvg) {
 			# edge case again - quantile value is lowest value
 			idx2 = which(phenoAvg==qx[1]);
 			idx3 = which(phenoAvg>qx[1]);
+			cat("Bin 1: ==", q[1],", bin 2: ==",qx[1], "bin 3: >", qx[1], " || ", sep="")
 		}
 		else if (qx[1]==maxXX) {
 			# edge case again - quantile value is max value
 			idx2 = which(phenoAvg<qx[1] & phenoAvg>q[1]);
 			idx3 = which(phenoAvg==qx[1]);
+			cat("Bin 1: ==", q[1],", bin 2: > ",q[1], " AND <", qx[1] , "bin 3: ==", qx[1], " || ", sep="")
 		}
 		else {
 			idx2 = which(phenoAvg<qx[1] & phenoAvg>q[1]);
 			idx3 = which(phenoAvg>=qx[1]);
+			cat("Bin 1: ==", q[1],", bin 2: > ",q[1], " AND <", qx[1] , "bin 3: >=", qx[1], " || ", sep="")
 		}
 		phenoBinned[idx2] = 1;
                 phenoBinned[idx3] = 2;
@@ -73,15 +76,18 @@ equalSizedBins <- function(phenoAvg) {
 			# edge case again - quantile value is lowest value
                         idx1 = which(phenoAvg==qx[1]);
                         idx2 = which(phenoAvg>qx[1] & phenoAvg<q[2]);
+			cat("Bin 1: ==", qx[1], ", bin 2: >", qx[1], " AND < ", q[2], ", bin 3: ==", q[2], " || ", sep="")
                 }
                 else if	(qx[1]==maxXX) {
 			# edge case again - quantile value is max value
                         idx1 = which(phenoAvg<qx[1]);
                         idx2 = which(phenoAvg==qx[1]);
+			cat("Bin 1: <", qx[1], ", bin 2: ==", qx[1], ", bin 3: ==", q[2], " || ", sep="")
                 }
                 else {
 	                idx1 = which(phenoAvg<qx[1]);  
 			idx2 = which(phenoAvg>=qx[1] & phenoAvg<q[2]);
+			cat("Bin 1: <", qx[1], ", bin 2: >=", qx[1], " AND < ", q[2], ", bin 3: ==", q[2], " || ", sep="")
 		}
 
                 phenoBinned[idx1] = 0;
@@ -98,6 +104,8 @@ equalSizedBins <- function(phenoAvg) {
                 phenoBinned[idx1] = 0;
                 phenoBinned[idx2] = 1;
                 phenoBinned[idx3] = 2;
+
+		cat("Bin 1: <", q[1], ", bin 2: ==", q[2], ", bin 3: >", q[2], " || ", sep="")
        	}
         else {
 		# standard case - split the data into three roughly equal parts where
@@ -109,6 +117,8 @@ equalSizedBins <- function(phenoAvg) {
                 phenoBinned[idx1] = 0;
                 phenoBinned[idx2] = 1;
                 phenoBinned[idx3] = 2;
+
+		cat("Bin 1: <", q[1], ", bin 2: >=", q[1], "AND < ", q[2] ,", bin 3: >=", q[2], " || ", sep="")
 	}
 
 	cat("cat N: ", length(idx1),", ",length(idx2),", ",length(idx3), " || ", sep="");
