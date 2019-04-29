@@ -120,7 +120,15 @@ restrictSample2 <- function(varName,pheno, varIndicator,variableVal, userID) {
 	}
 	else if (varIndicator!="") {
 		# remove people who have no value for indicator variable
-		indName = paste("x",varIndicator,"_0_0",sep="");
+
+		# this is so we can have indicator field that aren't instance 0 and array 0
+		if (startsWith(as.character(varIndicator), 'x')) {
+			indName = as.character(varIndicator)
+		}
+		else {
+			indName = paste("x",varIndicator,"_0_0",sep="");
+		}
+
 		cat("Indicator name ", indName, " || ", sep="");
 		indvarx = merge(userID, indicatorFields, by="userID", all.x=TRUE, all.y=FALSE, sort=FALSE)		
 		indicatorVar = indvarx[,indName]

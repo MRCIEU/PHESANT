@@ -119,9 +119,12 @@ addIndicatorVariables <- function(indVars, phenosToTest, phenoVarsAll) {
 	        fieldsWithCMIF = fieldsWithCMIF[-which(fieldsWithCMIF$CAT_MULT_INDICATOR_FIELDS == ""),]
 
 		if (nrow(fieldsWithCMIF)>0) {
-
+		
 		# turn into variable format not field ID
-		fieldsWithCMIF$CAT_MULT_INDICATOR_FIELDS = paste("x",fieldsWithCMIF$CAT_MULT_INDICATOR_FIELDS,"_0_0", sep="")
+		fieldsWithCMIF$CAT_MULT_INDICATOR_FIELDS = as.character(fieldsWithCMIF$CAT_MULT_INDICATOR_FIELDS)
+		ix = which(!startsWith(fieldsWithCMIF$CAT_MULT_INDICATOR_FIELDS, 'x'))
+		fieldsWithCMIF$CAT_MULT_INDICATOR_FIELDS[ix] = paste("x",fieldsWithCMIF$CAT_MULT_INDICATOR_FIELDS[ix],"_0_0", sep="")
+
 		fieldsWithCMIF$FieldID = paste("x",fieldsWithCMIF$FieldID,"_", sep="")
 		phenosToTestIds = sub("_.*", "_", phenosToTest)
 	
