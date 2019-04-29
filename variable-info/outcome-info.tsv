@@ -1,8 +1,8 @@
 FieldID	TRAIT_OF_INTEREST	EXCLUDED	CAT_MULT_INDICATOR_FIELDS	CAT_SINGLE_TO_CAT_MULT	DATA_CODING	Path	Category	Field	ValueType
-3						UK Biobank Assessment Centre > Procedural metrics	100004	Time taken for verbal interview stage	Integer
-4						UK Biobank Assessment Centre > Procedural metrics	100004	Time taken for biometric station	Integer
-5						UK Biobank Assessment Centre > Procedural metrics	100004	Time taken for blood phlebotomy station	Integer
-6						UK Biobank Assessment Centre > Procedural metrics	100004	Time taken for conclusion station	Integer
+3						UK Biobank Assessment Centre > Procedural metrics > Process durations	152	Verbal interview duration	Integer
+4						UK Biobank Assessment Centre > Procedural metrics > Process durations	152	Biometrics duration	Integer
+5						UK Biobank Assessment Centre > Procedural metrics > Process durations	152	Sample collection duration	Integer
+6						UK Biobank Assessment Centre > Procedural metrics > Process durations	152	Conclusion duration	Integer
 19					100260	UK Biobank Assessment Centre > Physical measures > Bone-densitometry of heel	100018	Heel ultrasound method	Categorical single
 21					100261	UK Biobank Assessment Centre > Physical measures > Anthropometry > Body size measures	100010	Weight method	Categorical single
 23					100270	UK Biobank Assessment Centre > Physical measures > Spirometry	100020	Spirometry method	Categorical single
@@ -52,7 +52,7 @@ FieldID	TRAIT_OF_INTEREST	EXCLUDED	CAT_MULT_INDICATOR_FIELDS	CAT_SINGLE_TO_CAT_M
 402		YES-CAT-SIN-MUL-VAL			92	UK Biobank Assessment Centre > Cognitive function > Reaction time	100032	Index for card B in round	Categorical single
 403						UK Biobank Assessment Centre > Cognitive function > Reaction time	100032	Number of times snap-button pressed	Integer
 404						UK Biobank Assessment Centre > Cognitive function > Reaction time	100032	Duration to first press of snap-button in each round	Integer
-630						UK Biobank Assessment Centre > Procedural metrics	100004	Time to complete touchscreen questionnaire	Integer
+630						UK Biobank Assessment Centre > Procedural metrics > Process durations	152	Touchscreen duration	Integer
 670					100286	UK Biobank Assessment Centre > Touchscreen > Sociodemographics > Household	100066	Type of accommodation lived in	Categorical single
 680					100287	UK Biobank Assessment Centre > Touchscreen > Sociodemographics > Household	100066	Own or rent accommodation lived in	Categorical single
 699					100290	UK Biobank Assessment Centre > Touchscreen > Sociodemographics > Household	100066	Length of time at current address	Integer
@@ -522,7 +522,7 @@ FieldID	TRAIT_OF_INTEREST	EXCLUDED	CAT_MULT_INDICATOR_FIELDS	CAT_SINGLE_TO_CAT_M
 5193						UK Biobank Assessment Centre > Physical measures > Eye measures > Autorefraction	100014	Duration at which refractometer first shown (left)	Integer
 5194					100274	UK Biobank Assessment Centre > Physical measures > Eye measures > Intraocular pressure	100015	Intra-ocular pressure (IOP) method (right)	Categorical single
 5196					100274	UK Biobank Assessment Centre > Physical measures > Eye measures > Intraocular pressure	100015	Intra-ocular pressure (IOP) method (left)	Categorical single
-5198						UK Biobank Assessment Centre > Procedural metrics	100004	Time taken for ocular station	Integer
+5198						UK Biobank Assessment Centre > Procedural metrics > Process durations	152	Eye measures duration	Integer
 5199						UK Biobank Assessment Centre > Physical measures > Eye measures > Visual acuity	100017	"logMAR, initial (right)"	Continuous
 5200						UK Biobank Assessment Centre > Physical measures > Eye measures > Visual acuity	100017	Final number of letters displayed (right)	Integer
 5201						UK Biobank Assessment Centre > Physical measures > Eye measures > Visual acuity	100017	"logMAR, final (right)"	Continuous
@@ -603,7 +603,7 @@ FieldID	TRAIT_OF_INTEREST	EXCLUDED	CAT_MULT_INDICATOR_FIELDS	CAT_SINGLE_TO_CAT_M
 6017					100267	UK Biobank Assessment Centre > Physical measures > ECG during exercise	100012	Able to walk or cycle unaided for 10 minutes	Categorical single
 6019					100256	UK Biobank Assessment Centre > Physical measures > ECG during exercise	100012	ECG/bike method for fitness test	Categorical single
 6020					100257	UK Biobank Assessment Centre > Physical measures > ECG during exercise	100012	Completion status of test	Categorical single
-6022						UK Biobank Assessment Centre > Procedural metrics	100004	Time taken for exercise station	Integer
+6022						UK Biobank Assessment Centre > Procedural metrics > Process durations	152	ECG during exercise duration	Integer
 6024		YES-ACE			35	UK Biobank Assessment Centre > Physical measures > ECG during exercise	100012	Program category	Categorical single
 6032						UK Biobank Assessment Centre > Physical measures > ECG during exercise	100012	Maximum workload during fitness test	Integer
 6033						UK Biobank Assessment Centre > Physical measures > ECG during exercise	100012	Maximum heart rate during fitness test	Integer
@@ -664,6 +664,7 @@ FieldID	TRAIT_OF_INTEREST	EXCLUDED	CAT_MULT_INDICATOR_FIELDS	CAT_SINGLE_TO_CAT_M
 6374						UK Biobank Assessment Centre > Cognitive function > Matrix pattern completion	501	Number of puzzles viewed	Integer
 6382						UK Biobank Assessment Centre > Cognitive function > Tower rearranging	503	Number of puzzles correct	Integer
 6383						UK Biobank Assessment Centre > Cognitive function > Tower rearranging	503	Number of puzzles attempted	Integer
+6671						UK Biobank Assessment Centre > Verbal interview > Medications	100075	Number of antibiotics taken in last 3 months	Integer
 6770						UK Biobank Assessment Centre > Cognitive function > Trail making	505	Errors before selecting correct item in numeric path (trail #1)	Integer
 6771						UK Biobank Assessment Centre > Cognitive function > Trail making	505	Errors before selecting correct item in alphanumeric path (trail #2)	Integer
 6772						UK Biobank Assessment Centre > Cognitive function > Trail making	505	Interval between previous point and current one in numeric path (trail #1)	Integer
@@ -689,7 +690,7 @@ FieldID	TRAIT_OF_INTEREST	EXCLUDED	CAT_MULT_INDICATOR_FIELDS	CAT_SINGLE_TO_CAT_M
 10143						UK Biobank Assessment Centre > Cognitive function > Lights pattern memory	100028	Number of rows displayed (pilot)	Integer
 10144						UK Biobank Assessment Centre > Cognitive function > Lights pattern memory	100028	Time taken to complete lights test (pilot)	Integer
 10147						UK Biobank Assessment Centre > Cognitive function > Reaction time	100032	Duration to first press of snap-button in each round (pilot)	Integer
-10241						UK Biobank Assessment Centre > Procedural metrics	100004	Time to complete touchscreen questionnaire (pilot)	Integer
+10241						UK Biobank Assessment Centre > Procedural metrics > Process durations	152	Touchscreen duration (pilot)	Integer
 10609						UK Biobank Assessment Centre > Cognitive function > Word production	100077	Words answer array (pilot)	Integer
 10610					100280	UK Biobank Assessment Centre > Cognitive function > Word production	100077	Word count (pilot)	Categorical single
 10612					100696	UK Biobank Assessment Centre > Cognitive function > Word production	100077	Number of words beginning with 'S' (pilot)	Integer
@@ -900,8 +901,9 @@ FieldID	TRAIT_OF_INTEREST	EXCLUDED	CAT_MULT_INDICATOR_FIELDS	CAT_SINGLE_TO_CAT_M
 20191						Online follow-up > Cognitive function online > Fluid intelligence	118	Fluid intelligence score	Integer
 20193					5014	Online follow-up > Cognitive function online > Fluid intelligence	118	FI14 : alphanumeric substitution	Categorical single
 20195						Online follow-up > Cognitive function online > Symbol digit substitution	122	Number of symbol digit matches attempted	Integer
-20196					500	Online follow-up > Cognitive function online > Symbol digit substitution	122	First code array presented	Categorical single
-20198					500	Online follow-up > Cognitive function online > Symbol digit substitution	122	Test array presented	Categorical single
+20196		YES-PROCESSING			500	Online follow-up > Cognitive function online > Symbol digit substitution	122	First code array presented	Categorical single
+20198		YES-PROCESSING			500	Online follow-up > Cognitive function online > Symbol digit substitution	122	Test array presented	Categorical single
+20199			x6671_2_0		744	UK Biobank Assessment Centre > Verbal interview > Medications	100075	Antibiotic codes for last 3 months	Categorical multiple
 20200						Online follow-up > Cognitive function online > Symbol digit substitution	122	Values wanted	Integer
 20229						Online follow-up > Cognitive function online > Symbol digit substitution	122	Values entered	Integer
 20230						Online follow-up > Cognitive function online > Symbol digit substitution	122	Duration to entering value	Integer
@@ -912,6 +914,12 @@ FieldID	TRAIT_OF_INTEREST	EXCLUDED	CAT_MULT_INDICATOR_FIELDS	CAT_SINGLE_TO_CAT_M
 20246					479	Online follow-up > Cognitive function online > Trail making	121	Trail making completion status	Categorical single
 20247						Online follow-up > Cognitive function online > Trail making	121	Total errors traversing numeric path (trail #1)	Integer
 20248						Online follow-up > Cognitive function online > Trail making	121	Total errors traversing alphanumeric path (trail #2)	Integer
+20255					1506	UK Biobank Assessment Centre > Physical measures > Spirometry	100020	Spirometry QC measure	Categorical single
+20256						UK Biobank Assessment Centre > Physical measures > Spirometry	100020	Forced expiratory volume in 1-second (FEV1) Z-score	Continuous
+20257						UK Biobank Assessment Centre > Physical measures > Spirometry	100020	Forced vital capacity (FVC) Z-score	Continuous
+20258						UK Biobank Assessment Centre > Physical measures > Spirometry	100020	FEV1/ FVC ratio Z-score	Continuous
+20261						UK Biobank Assessment Centre > Physical measures > Eye measures > Visual acuity	100017	avMSE	Continuous
+20262					1543	UK Biobank Assessment Centre > Physical measures > Eye measures > Visual acuity	100017	Myopia diagnosis	Categorical single
 20401					502	Online follow-up > Mental health > Addictions	141	Ever addicted to any substance or behaviour	Categorical single
 20403					522	Online follow-up > Mental health > Alcohol use	142	Amount of alcohol drunk on a typical drinking day	Categorical single
 20404					502	Online follow-up > Mental health > Addictions	141	Ever physically dependent on alcohol	Categorical single
@@ -1060,32 +1068,114 @@ FieldID	TRAIT_OF_INTEREST	EXCLUDED	CAT_MULT_INDICATOR_FIELDS	CAT_SINGLE_TO_CAT_M
 21004						UK Biobank Assessment Centre > Cognitive function > Tower rearranging	503	Number of puzzles correct	Integer
 21021						UK Biobank Assessment Centre > Physical measures > Arterial stiffness	100007	Pulse wave Arterial Stiffness index	Continuous
 21022		YES-AGE				Population characteristics > Baseline characteristics	100094	Age at recruitment	Integer
-22000		YES-GENETIC			22000	Genomics > Genotyping process and sample QC	100313	Genotype measurement batch	Categorical single
-22001		YES-GENETIC			9	Genomics > Genotyping process and sample QC	100313	Genetic sex	Categorical single
-22003		YES-GENETIC				Genomics > Genotyping process and sample QC	100313	Heterozygosity	Continuous
-22004		YES-GENETIC				Genomics > Genotyping process and sample QC	100313	"Heterozygosity, PCA corrected"	Continuous
-22005		YES-GENETIC				Genomics > Genotyping process and sample QC	100313	Missingness	Continuous
-22006		YES-GENETIC			1002	Genomics > Genotyping process and sample QC	100313	Genetic ethnic grouping	Categorical single
-22009		YES-GENETIC				Genomics > Genotyping process and sample QC	100313	Genetic principal components	Continuous
-22010		YES-GENETIC			1101	Genomics > Interim genotype release	199001	Recommended genomic analysis exclusions	Categorical single
-22011		YES-GENETIC				Genomics > Interim genotype release	199001	Genetic relatedness pairing	Integer
-22012		YES-GENETIC				Genomics > Interim genotype release	199001	Genetic relatedness factor	Continuous
-22013		YES-GENETIC				Genomics > Interim genotype release	199001	Genetic relatedness IBS0	Continuous
-22018		YES-GENETIC				Genomics > Interim genotype release	199001	Genetic relatedness exclusions	Categorical single
-22019		YES-GENETIC			1	Genomics > Genotyping process and sample QC	100313	Sex chromosome aneuploidy	Categorical single
-22020		YES-GENETIC			1	Genomics > Genotyping process and sample QC	100313	Used in genetic principal components	Categorical single
-22021		YES-GENETIC			682	Genomics > Genotyping process and sample QC	100313	Genetic kinship to other participants	Categorical single
-22022		YES-GENETIC				Genomics > Genotyping process and sample QC	100313	Sex inference X probe-intensity	Continuous
-22023		YES-GENETIC				Genomics > Genotyping process and sample QC	100313	Sex inference Y probe-intensity	Continuous
-22024		YES-GENETIC				Genomics > Genotyping process and sample QC	100313	DNA concentration	Continuous
-22025		YES-GENETIC				Genomics > Genotyping process and sample QC	100313	"Affymetrix quality control metric ""Cluster.CR"""	Continuous
-22026		YES-GENETIC				Genomics > Genotyping process and sample QC	100313	"Affymetrix quality control metric ""dQC"""	Continuous
-22027		YES-GENETIC			1	Genomics > Genotyping process and sample QC	100313	Outliers for heterozygosity or missing rate	Categorical single
-22028		YES-GENETIC			100264	Genomics > Genotyping process and sample QC	100313	Use in phasing Chromosomes 1-22	Categorical single
-22029		YES-GENETIC			100264	Genomics > Genotyping process and sample QC	100313	Use in phasing Chromosome X	Categorical single
-22030		YES-GENETIC			100264	Genomics > Genotyping process and sample QC	100313	Use in phasing Chromosome XY	Categorical single
-22051		YES-GENETIC			100	Genomics > Interim genotype release	199001	UKBiLEVE genotype quality control for samples	Categorical single
-22052		YES-GENETIC			101	Genomics > Interim genotype release	199001	UKBiLEVE unrelatedness indicator	Categorical single
+21024					502	Online follow-up > Digestive health	153	Ever diagnosed with IBS	Categorical single
+21025					871	Online follow-up > Digestive health	153	Frequency of discomfort/pain in abdomen in last 3 months	Categorical single
+21026					1022	Online follow-up > Digestive health	153	Discomfort/pain occurring only during menstrual bleed	Categorical single
+21027					503	Online follow-up > Digestive health	153	Abdominal discomfort/pain for 6 months or longer	Categorical single
+21028					950	Online follow-up > Digestive health	153	Frequency of discomfort/pain getting better or stopping after a bowel movement	Categorical single
+21029					950	Online follow-up > Digestive health	153	More frequent bowel movements when abdominal discomfort/pain started	Categorical single
+21030					950	Online follow-up > Digestive health	153	Less frequent bowel movements when abdominal discomfort/pain started	Categorical single
+21031					950	Online follow-up > Digestive health	153	Stools looser when abdominal discomfort/pain started	Categorical single
+21032					950	Online follow-up > Digestive health	153	Frequency of harder stools when abdominal discomfort/pain started	Categorical single
+21033					950	Online follow-up > Digestive health	153	Frequency of hard/lumpy stools in the last 3 months	Categorical single
+21034					950	Online follow-up > Digestive health	153	Frequency of loose/mushy/watery stools in the last 3 months	Categorical single
+21035					503	Online follow-up > Digestive health	153	Currently (in last 3 months) suffer from abdominal pain	Categorical single
+21036					408	Online follow-up > Digestive health	153	Severity of current abdominal pain	Categorical single
+21037					913	Online follow-up > Digestive health	153	Number of days (out of 10) with abdominal pain	Categorical single
+21038					503	Online follow-up > Digestive health	153	Currently suffer from abdominal distension	Categorical single
+21039					620	Online follow-up > Digestive health	153	Severity of current abdominal distension/tightness	Categorical single
+21040					616	Online follow-up > Digestive health	153	Satisfaction with bowel habits	Categorical single
+21041					548	Online follow-up > Digestive health	153	Degree to which abdominal pain/discomfort/altered bowel habits affect/interfere with life in general	Categorical single
+21042					584	Online follow-up > Digestive health	153	Greatest number of times bowels opened per day	Integer
+21043					584	Online follow-up > Digestive health	153	Least number of times bowels opened per week	Integer
+21044					584	Online follow-up > Digestive health	153	Average number of times bowels opened per day	Integer
+21045					957	Online follow-up > Digestive health	153	"Number of weeks absent from work due to IBS, in the last year"	Integer
+21047					42	Online follow-up > Digestive health	153	Number of weeks (in the last year) at work suffering because of IBS	Integer
+21048					339	Online follow-up > Digestive health	153	Degree bothered by back pain in the past 3 months	Categorical single
+21049					339	Online follow-up > Digestive health	153	Degree bothered by pain in arms/legs/joints in the past 3 months	Categorical single
+21050					1018	Online follow-up > Digestive health	153	Degree bothered by menstrual cramps or other problems with period in the last 3 months	Categorical single
+21051					339	Online follow-up > Digestive health	153	Degree bothered by headaches in the last 3 months	Categorical single
+21052					339	Online follow-up > Digestive health	153	Degree bothered by chest pain in the last 3 months	Categorical single
+21053					339	Online follow-up > Digestive health	153	Degree bothered by dizziness in the last 3 months	Categorical single
+21054					339	Online follow-up > Digestive health	153	Degree bothered by fainting spells in the last 3 months	Categorical single
+21055					339	Online follow-up > Digestive health	153	Degree bothered by feeling heart pound/race in the last 3 months	Categorical single
+21056					339	Online follow-up > Digestive health	153	Degree bothered by shortness of breath in the last 3 months	Categorical single
+21057					1018	Online follow-up > Digestive health	153	Degree bothered by pain/problems during intercourse in the last 3 months	Categorical single
+21058					339	Online follow-up > Digestive health	153	Degree bothered by urinary frequency/bladder irritability in the last 3 months	Categorical single
+21059					339	Online follow-up > Digestive health	153	Degree bothered by nausea in the last 3 months	Categorical single
+21060					339	Online follow-up > Digestive health	153	Degree bothered by feeling tired all the time in the last 3 months	Categorical single
+21061					339	Online follow-up > Digestive health	153	Degree bothered by trouble sleeping in the last 3 months	Categorical single
+21062					503	Online follow-up > Digestive health	153	Ever been offered/sought treatment for anxiety	Categorical single
+21063					503	Online follow-up > Digestive health	153	Ever been offered/sought treatment for depression	Categorical single
+21064					502	Online follow-up > Digestive health	153	Sensitive stomach	Categorical single
+21065					502	Online follow-up > Digestive health	153	Family history of IBS	Categorical single
+21066					502	Online follow-up > Digestive health	153	Born by caesarian section	Categorical single
+21067					502	Online follow-up > Digestive health	153	Long-term/recurrent antibiotics as child or teenager	Categorical single
+21068					502	Online follow-up > Digestive health	153	Diagnosed with coeliac disease or gluten sensitivity	Categorical single
+21069					1862	Online follow-up > Digestive health	153	Method of coeliac disease/gluten sensitivity diagnosis	Categorical single
+21070					2730	Online follow-up > Digestive health	153	Speed of onset of IBS symptoms	Categorical single
+21071					503	Online follow-up > Digestive health	153	Infectious illness diagnosis status when IBS symptoms first began	Categorical single
+21072					7310	Online follow-up > Digestive health	153	Infection diagnosed alongside IBS when IBS symptoms began	Categorical single
+21073					503	Online follow-up > Digestive health	153	Fever when IBS symptoms first began	Categorical single
+21074					503	Online follow-up > Digestive health	153	Diarrhoea when IBS symptoms first began	Categorical single
+21075					1021	Online follow-up > Digestive health	153	Bloody diarrhoea when IBS symptoms first began	Categorical single
+21076					503	Online follow-up > Digestive health	153	Vomiting when IBS symptoms first began	Categorical single
+21711		YES-PROCESSING			123	UK Biobank Assessment Centre > Procedural metrics > Process authorisation	127	Reception authorisation	Categorical single
+21721		YES-PROCESSING			123	UK Biobank Assessment Centre > Procedural metrics > Process authorisation	127	Consent authorisation	Categorical single
+21722		YES-PROCESSING			123	UK Biobank Assessment Centre > Procedural metrics > Process authorisation	127	Touchscreen authorisation	Categorical single
+21723		YES-PROCESSING			123	UK Biobank Assessment Centre > Procedural metrics > Process authorisation	127	Touchscreen cognitive authorisation (pilot)	Categorical single
+21725		YES-PROCESSING			123	UK Biobank Assessment Centre > Procedural metrics > Process authorisation	127	Touchscreen cognitive authorisation	Categorical single
+21731		YES-PROCESSING			123	UK Biobank Assessment Centre > Procedural metrics > Process authorisation	127	Verbal interview authorisation	Categorical single
+21732		YES-PROCESSING			123	UK Biobank Assessment Centre > Procedural metrics > Process authorisation	127	Pilot Spirometry authorisation	Categorical single
+21733		YES-PROCESSING			123	UK Biobank Assessment Centre > Procedural metrics > Process authorisation	127	Measurement/Impedance authorisation (pilot)	Categorical single
+21734		YES-PROCESSING			123	UK Biobank Assessment Centre > Procedural metrics > Process authorisation	127	Biometrics authorisation	Categorical single
+21736		YES-PROCESSING			123	UK Biobank Assessment Centre > Procedural metrics > Process authorisation	127	Eye measures authorisation	Categorical single
+21738		YES-PROCESSING			123	UK Biobank Assessment Centre > Procedural metrics > Process authorisation	127	ECG during exercise authorisation	Categorical single
+21741		YES-PROCESSING			123	UK Biobank Assessment Centre > Procedural metrics > Process authorisation	127	Urine collection authorisation	Categorical single
+21742		YES-PROCESSING			123	UK Biobank Assessment Centre > Procedural metrics > Process authorisation	127	Sample collection authorisation	Categorical single
+21751		YES-PROCESSING			123	UK Biobank Assessment Centre > Procedural metrics > Process authorisation	127	Conclusion authorisation	Categorical single
+21761		YES-PROCESSING			123	UK Biobank Assessment Centre > Procedural metrics > Process authorisation	127	Imaging screening authorisation	Categorical single
+21762		YES-PROCESSING			123	UK Biobank Assessment Centre > Procedural metrics > Process authorisation	127	Brain MRI authorisation	Categorical single
+21763		YES-PROCESSING			123	UK Biobank Assessment Centre > Procedural metrics > Process authorisation	127	Chest MRI authorisation	Categorical single
+21764		YES-PROCESSING			123	UK Biobank Assessment Centre > Procedural metrics > Process authorisation	127	DXA assessment authorisation	Categorical single
+21765		YES-PROCESSING			123	UK Biobank Assessment Centre > Procedural metrics > Process authorisation	127	Carotid ultrasound authorisation	Categorical single
+21766		YES-PROCESSING			123	UK Biobank Assessment Centre > Procedural metrics > Process authorisation	127	ECG at rest authorisation	Categorical single
+21771		YES-PROCESSING			123	UK Biobank Assessment Centre > Procedural metrics > Process authorisation	127	Cardiac monitor authorisation	Categorical single
+22000		YES-GENETIC			22000	Genomics > Genotypes > Genotyping process and sample QC	100313	Genotype measurement batch	Categorical single
+22001		YES-GENETIC			9	Genomics > Genotypes > Genotyping process and sample QC	100313	Genetic sex	Categorical single
+22003		YES-GENETIC				Genomics > Genotypes > Genotyping process and sample QC	100313	Heterozygosity	Continuous
+22004		YES-GENETIC				Genomics > Genotypes > Genotyping process and sample QC	100313	"Heterozygosity, PCA corrected"	Continuous
+2005		YES-GENETIC				Genomics > Genotypes > Genotyping process and sample QC	100313	Missingness	Continuous
+22006		YES-GENETIC			1002	Genomics > Genotypes > Genotyping process and sample QC	100313	Genetic ethnic grouping	Categorical single
+22009		YES-GENETIC				Genomics > Genotypes > Genotyping process and sample QC	100313	Genetic principal components	Continuous
+22010		YES-GENETIC			1101	Genomics > Genotypes > Interim genotype release	199001	Recommended genomic analysis exclusions	Categorical single
+22011		YES-GENETIC				Genomics > Genotypes > Interim genotype release	199001	Genetic relatedness pairing	Integer
+22012		YES-GENETIC				Genomics > Genotypes > Interim genotype release	199001	Genetic relatedness factor	Continuous
+22013		YES-GENETIC				Genomics > Genotypes > Interim genotype release	199001	Genetic relatedness IBS0	Continuous
+22018		YES-GENETIC				Genomics > Genotypes > Interim genotype release	199001	Genetic relatedness exclusions	Categorical single
+22019		YES-GENETIC			1	Genomics > Genotypes > Genotyping process and sample QC	100313	Sex chromosome aneuploidy	Categorical single
+22020		YES-GENETIC			1	Genomics > Genotypes > Genotyping process and sample QC	100313	Used in genetic principal components	Categorical single
+22021		YES-GENETIC			682	Genomics > Genotypes > Genotyping process and sample QC	100313	Genetic kinship to other participants	Categorical single
+22022		YES-GENETIC				Genomics > Genotypes > Genotyping process and sample QC	100313	Sex inference X probe-intensity	Continuous
+22023		YES-GENETIC				Genomics > Genotypes > Genotyping process and sample QC	100313	Sex inference Y probe-intensity	Continuous
+22024		YES-GENETIC				Genomics > Genotypes > Genotyping process and sample QC	100313	DNA concentration	Continuous
+22025		YES-GENETIC				Genomics > Genotypes > Genotyping process and sample QC	100313	"Affymetrix quality control metric ""Cluster.CR"""	Continuous
+22026		YES-GENETIC				Genomics > Genotypes > Genotyping process and sample QC	100313	"Affymetrix quality control metric ""dQC"""	Continuous
+22027		YES-GENETIC			1	Genomics > Genotypes > Genotyping process and sample QC	100313	Outliers for heterozygosity or missing rate	Categorical single
+22028		YES-GENETIC			100264	Genomics > Genotypes > Genotyping process and sample QC	100313	Use in phasing Chromosomes 1-22	Categorical single
+22029		YES-GENETIC			100264	Genomics > Genotypes > Genotyping process and sample QC	100313	Use in phasing Chromosome X	Categorical single
+22030		YES-GENETIC			100264	Genomics > Genotypes > Genotyping process and sample QC	100313	Use in phasing Chromosome XY	Categorical single
+22032					100700	UK Biobank Assessment Centre > Touchscreen > Lifestyle and environment > Physical activity > MET Scores	54	IPAQ activity group	Categorical single
+22033						UK Biobank Assessment Centre > Touchscreen > Lifestyle and environment > Physical activity > MET Scores	54	Summed days activity	Integer
+22034						UK Biobank Assessment Centre > Touchscreen > Lifestyle and environment > Physical activity > MET Scores	54	Summed minutes activity	Integer
+22035					7	UK Biobank Assessment Centre > Touchscreen > Lifestyle and environment > Physical activity > MET Scores	54	Above moderate/vigorous recommendation	Categorical single
+22036					7	UK Biobank Assessment Centre > Touchscreen > Lifestyle and environment > Physical activity > MET Scores	54	Above moderate/vigorous/walking recommendation	Categorical single
+22037						UK Biobank Assessment Centre > Touchscreen > Lifestyle and environment > Physical activity > MET Scores	54	MET minutes per week for walking	Continuous
+22038						UK Biobank Assessment Centre > Touchscreen > Lifestyle and environment > Physical activity > MET Scores	54	MET minutes per week for moderate activity	Continuous
+22039						UK Biobank Assessment Centre > Touchscreen > Lifestyle and environment > Physical activity > MET Scores	54	MET minutes per week for vigorous activity	Continuous
+22040						UK Biobank Assessment Centre > Touchscreen > Lifestyle and environment > Physical activity > MET Scores	54	Summed MET minutes per week for all activity	Continuous
+22051		YES-GENETIC			100	Genomics > Genotypes > Interim genotype release	199001	UKBiLEVE genotype quality control for samples	Categorical single
+22052		YES-GENETIC			101	Genomics > Genotypes > Interim genotype release	199001	UKBiLEVE unrelatedness indicator	Categorical single
 22126					7	Online follow-up > Work environment > Medical information	132	Doctor diagnosed hayfever or allergic rhinitis	Categorical single
 22127					7	Online follow-up > Work environment > Medical information	132	Doctor diagnosed asthma	Categorical single
 22128					7	Online follow-up > Work environment > Medical information	132	Doctor diagnosed emphysema	Categorical single
@@ -1135,6 +1225,18 @@ FieldID	TRAIT_OF_INTEREST	EXCLUDED	CAT_MULT_INDICATOR_FIELDS	CAT_SINGLE_TO_CAT_M
 22180					7	Online follow-up > Work environment > Medical information	132	Recent medication for lung cancer (not mesothelioma)	Categorical single
 22181					7	Online follow-up > Work environment > Medical information	132	Recent medication for mesothelioma of the lung	Categorical single
 22200		YES-AGE				Online follow-up > Work environment > Employment history	130	Year of birth	Integer
+22330						"UK Biobank Assessment Centre > Physical measures > ECG at rest, 12-lead"	104	PQ interval	Integer
+22331						"UK Biobank Assessment Centre > Physical measures > ECG at rest, 12-lead"	104	QT interval	Integer
+22332						"UK Biobank Assessment Centre > Physical measures > ECG at rest, 12-lead"	104	QTC interval	Integer
+22333						"UK Biobank Assessment Centre > Physical measures > ECG at rest, 12-lead"	104	RR interval	Integer
+22334						"UK Biobank Assessment Centre > Physical measures > ECG at rest, 12-lead"	104	PP interval	Integer
+22335						"UK Biobank Assessment Centre > Physical measures > ECG at rest, 12-lead"	104	P axis	Integer
+22336						"UK Biobank Assessment Centre > Physical measures > ECG at rest, 12-lead"	104	R axis	Integer
+22337						"UK Biobank Assessment Centre > Physical measures > ECG at rest, 12-lead"	104	T axis	Integer
+22338						"UK Biobank Assessment Centre > Physical measures > ECG at rest, 12-lead"	104	QRS num	Integer
+22400						UK Biobank Assessment Centre > Imaging > Abdominal MRI > Liver MRI	126	Liver iron (Fe)	Continuous
+22401						UK Biobank Assessment Centre > Imaging > Abdominal MRI > Liver MRI	126	Liver inflammation factor (LIF)	Continuous
+22402						UK Biobank Assessment Centre > Imaging > Abdominal MRI > Liver MRI	126	Liver fat percentage	Continuous
 22403						UK Biobank Assessment Centre > Imaging > Abdominal MRI > Abdominal composition	149	Anterior thigh lean muscle volume (right)	Continuous
 22404						UK Biobank Assessment Centre > Imaging > Abdominal MRI > Abdominal composition	149	Posterior thigh lean muscle volume (right)	Continuous
 22405						UK Biobank Assessment Centre > Imaging > Abdominal MRI > Abdominal composition	149	Anterior thigh lean muscle volume (left)	Continuous
@@ -1142,11 +1244,13 @@ FieldID	TRAIT_OF_INTEREST	EXCLUDED	CAT_MULT_INDICATOR_FIELDS	CAT_SINGLE_TO_CAT_M
 22407						UK Biobank Assessment Centre > Imaging > Abdominal MRI > Abdominal composition	149	Visceral adipose tissue volume (VAT)	Continuous
 22408						UK Biobank Assessment Centre > Imaging > Abdominal MRI > Abdominal composition	149	Abdominal subcutaneous adipose tissue volume (ASAT)	Continuous
 22409						UK Biobank Assessment Centre > Imaging > Abdominal MRI > Abdominal composition	149	Total thigh muscle volume	Continuous
-22410						UK Biobank Assessment Centre > Imaging > Abdominal MRI > Abdominal composition	149	Total trunk fat	Continuous
+22410						UK Biobank Assessment Centre > Imaging > Abdominal MRI > Abdominal composition	149	Total trunk fat volume	Continuous
 22411		YES-PROCESSING			403	UK Biobank Assessment Centre > Imaging > Abdominal MRI > Abdominal composition	149	VAT/ASAT error indicator	Categorical single
 22412		YES-PROCESSING			401	UK Biobank Assessment Centre > Imaging > Abdominal MRI > Abdominal composition	149	Thigh error indicator (left)	Categorical multiple
 22413		YES-PROCESSING			401	UK Biobank Assessment Centre > Imaging > Abdominal MRI > Abdominal composition	149	Thigh error indicator (right)	Categorical multiple
 22414		YES-PROCESSING		YES	400	UK Biobank Assessment Centre > Imaging > Abdominal MRI > Abdominal composition	149	Image quality indicator	Categorical single
+22415						UK Biobank Assessment Centre > Imaging > Abdominal MRI > Abdominal composition	149	Total adipose tissue volume	Continuous
+22416						UK Biobank Assessment Centre > Imaging > Abdominal MRI > Abdominal composition	149	Total lean tissue volume	Continuous
 22420						UK Biobank Assessment Centre > Imaging > Heart MRI > Left ventricular size and function	133	LV ejection fraction	Integer
 22421						UK Biobank Assessment Centre > Imaging > Heart MRI > Left ventricular size and function	133	LV end diastolic volume	Integer
 22422						UK Biobank Assessment Centre > Imaging > Heart MRI > Left ventricular size and function	133	LV end systolic volume	Integer
@@ -1203,18 +1307,18 @@ FieldID	TRAIT_OF_INTEREST	EXCLUDED	CAT_MULT_INDICATOR_FIELDS	CAT_SINGLE_TO_CAT_M
 22661						Online follow-up > Work environment > Employment history	130	Number of gap periods	Integer
 22663						Online follow-up > Work environment > Employment history	130	Year gap started	Integer
 22664					100698	Online follow-up > Work environment > Employment history	130	Year gap ended	Integer
-22670						UK Biobank Assessment Centre > Physical measures > Carotid ultrasound	101	Minimum carotid IMT (intima-medial thickness) at 120 degrees	Continuous
-22671						UK Biobank Assessment Centre > Physical measures > Carotid ultrasound	101	Mean carotid IMT (intima-medial thickness) at 120 degrees	Continuous
-22672						UK Biobank Assessment Centre > Physical measures > Carotid ultrasound	101	Maximum carotid IMT (intima-medial thickness) at 120 degrees	Continuous
-22673						UK Biobank Assessment Centre > Physical measures > Carotid ultrasound	101	Minimum carotid IMT (intima-medial thickness) at 150 degrees	Continuous
-22674						UK Biobank Assessment Centre > Physical measures > Carotid ultrasound	101	Mean carotid IMT (intima-medial thickness) at 150 degrees	Continuous
-22675						UK Biobank Assessment Centre > Physical measures > Carotid ultrasound	101	Maximum carotid IMT (intima-medial thickness) at 150 degrees	Continuous
-22676						UK Biobank Assessment Centre > Physical measures > Carotid ultrasound	101	Minimum carotid IMT (intima-medial thickness) at 210 degrees	Continuous
-22677						UK Biobank Assessment Centre > Physical measures > Carotid ultrasound	101	Mean carotid IMT (intima-medial thickness) at 210 degrees	Continuous
-22678						UK Biobank Assessment Centre > Physical measures > Carotid ultrasound	101	Maximum carotid IMT (intima-medial thickness) at 210 degrees	Continuous
-22679						UK Biobank Assessment Centre > Physical measures > Carotid ultrasound	101	Minimum carotid IMT (intima-medial thickness) at 240 degrees	Continuous
-22680						UK Biobank Assessment Centre > Physical measures > Carotid ultrasound	101	Mean carotid IMT (intima-medial thickness) at 240 degrees	Continuous
-22681						UK Biobank Assessment Centre > Physical measures > Carotid ultrasound	101	Maximum carotid IMT (intima-medial thickness) at 240 degrees	Continuous
+22670						UK Biobank Assessment Centre > Physical measures > Carotid ultrasound	101	Minimum carotid IMT (intima-medial thickness) at 120 degrees 	Continuous
+22671						UK Biobank Assessment Centre > Physical measures > Carotid ultrasound	101	Mean carotid IMT (intima-medial thickness) at 120 degrees 	Continuous
+22672						UK Biobank Assessment Centre > Physical measures > Carotid ultrasound	101	Maximum carotid IMT (intima-medial thickness) at 120 degrees 	Continuous
+22673						UK Biobank Assessment Centre > Physical measures > Carotid ultrasound	101	Minimum carotid IMT (intima-medial thickness) at 150 degrees 	Continuous
+22674						UK Biobank Assessment Centre > Physical measures > Carotid ultrasound	101	Mean carotid IMT (intima-medial thickness) at 150 degrees 	Continuous
+22675						UK Biobank Assessment Centre > Physical measures > Carotid ultrasound	101	Maximum carotid IMT (intima-medial thickness) at 150 degrees 	Continuous
+22676						UK Biobank Assessment Centre > Physical measures > Carotid ultrasound	101	Minimum carotid IMT (intima-medial thickness) at 210 degrees 	Continuous
+22677						UK Biobank Assessment Centre > Physical measures > Carotid ultrasound	101	Mean carotid IMT (intima-medial thickness) at 210 degrees 	Continuous
+22678						UK Biobank Assessment Centre > Physical measures > Carotid ultrasound	101	Maximum carotid IMT (intima-medial thickness) at 210 degrees 	Continuous
+22679						UK Biobank Assessment Centre > Physical measures > Carotid ultrasound	101	Minimum carotid IMT (intima-medial thickness) at 240 degrees 	Continuous
+22680						UK Biobank Assessment Centre > Physical measures > Carotid ultrasound	101	Mean carotid IMT (intima-medial thickness) at 240 degrees 	Continuous
+22681						UK Biobank Assessment Centre > Physical measures > Carotid ultrasound	101	Maximum carotid IMT (intima-medial thickness) at 240 degrees 	Continuous
 22682					55	UK Biobank Assessment Centre > Physical measures > Carotid ultrasound	101	Quality control indicator for IMT at 120 degrees	Categorical single
 22683					55	UK Biobank Assessment Centre > Physical measures > Carotid ultrasound	101	Quality control indicator for IMT at 150 degrees	Categorical single
 22684					55	UK Biobank Assessment Centre > Physical measures > Carotid ultrasound	101	Quality control indicator for IMT at 210 degrees	Categorical single
@@ -1223,6 +1327,77 @@ FieldID	TRAIT_OF_INTEREST	EXCLUDED	CAT_MULT_INDICATOR_FIELDS	CAT_SINGLE_TO_CAT_M
 22702						Additional exposures > Local environment > Home locations	150	Home location - east co-ordinate (rounded)	Integer
 22703						Additional exposures > Local environment > Home locations	150	Home location - north co-ordinate	Integer
 22704						Additional exposures > Local environment > Home locations	150	Home location - north co-ordinate (rounded)	Integer
+23000						Biological samples > Assay results > Blood assays > Infectious Diseases > Infectious Disease Antigens	1307	1gG antigen for Herpes Simplex virus-1	Integer
+23001						Biological samples > Assay results > Blood assays > Infectious Diseases > Infectious Disease Antigens	1307	2mgG unique antigen for Herpes Simplex virus-2	Integer
+23002						Biological samples > Assay results > Blood assays > Infectious Diseases > Infectious Disease Antigens	1307	gE / gI antigen for Varicella Zoster Virus 	Integer
+23003						Biological samples > Assay results > Blood assays > Infectious Diseases > Infectious Disease Antigens	1307	VCA p18 antigen for Epstein-Barr Virus	Integer
+23004						Biological samples > Assay results > Blood assays > Infectious Diseases > Infectious Disease Antigens	1307	EBNA-1 antigen for Epstein-Barr Virus	Integer
+23005						Biological samples > Assay results > Blood assays > Infectious Diseases > Infectious Disease Antigens	1307	ZEBRA antigen for Epstein-Barr Virus	Integer
+23006						Biological samples > Assay results > Blood assays > Infectious Diseases > Infectious Disease Antigens	1307	EA-D antigen for Epstein-Barr Virus	Integer
+23007						Biological samples > Assay results > Blood assays > Infectious Diseases > Infectious Disease Antigens	1307	pp150 Nter antigen for Human Cytomegalovirus	Integer
+23008						Biological samples > Assay results > Blood assays > Infectious Diseases > Infectious Disease Antigens	1307	pp 52 antigen for Human Cytomegalovirus	Integer
+23009						Biological samples > Assay results > Blood assays > Infectious Diseases > Infectious Disease Antigens	1307	pp 28 antigen for Human Cytomegalovirus	Integer
+23010						Biological samples > Assay results > Blood assays > Infectious Diseases > Infectious Disease Antigens	1307	IE1A antigen for Human Herpesvirus-6	Integer
+23011						Biological samples > Assay results > Blood assays > Infectious Diseases > Infectious Disease Antigens	1307	IE1B antigen for Human Herpesvirus-6	Integer
+23012						Biological samples > Assay results > Blood assays > Infectious Diseases > Infectious Disease Antigens	1307	p101 k antigen for Human Herpesvirus-6	Integer
+23013						Biological samples > Assay results > Blood assays > Infectious Diseases > Infectious Disease Antigens	1307	U14 antigen for Human Herpesvirus-7	Integer
+23014						Biological samples > Assay results > Blood assays > Infectious Diseases > Infectious Disease Antigens	1307	LANA antigen for Kaposi's Sarcoma-Associated Herpesvirus	Integer
+23015						Biological samples > Assay results > Blood assays > Infectious Diseases > Infectious Disease Antigens	1307	K8.1 antigen for Kaposi's Sarcoma-Associated Herpesvirus	Integer
+23016						Biological samples > Assay results > Blood assays > Infectious Diseases > Infectious Disease Antigens	1307	HBc antigen for Hepatitis B Virus	Integer
+23017						Biological samples > Assay results > Blood assays > Infectious Diseases > Infectious Disease Antigens	1307	HBe antigen for Hepatitis B Virus	Integer
+23018						Biological samples > Assay results > Blood assays > Infectious Diseases > Infectious Disease Antigens	1307	Core antigen for Hepatitis C Virus	Integer
+23019						Biological samples > Assay results > Blood assays > Infectious Diseases > Infectious Disease Antigens	1307	NS3 antigen for Hepatitis C Virus	Integer
+23020						Biological samples > Assay results > Blood assays > Infectious Diseases > Infectious Disease Antigens	1307	p22 antigen for Toxoplasma gondii	Integer
+23021						Biological samples > Assay results > Blood assays > Infectious Diseases > Infectious Disease Antigens	1307	sag1 antigen for Toxoplasma gondii	Integer
+23022						Biological samples > Assay results > Blood assays > Infectious Diseases > Infectious Disease Antigens	1307	HTLV-1 gag antigen for Human T-Lymphotropic Virus 1	Integer
+23023						Biological samples > Assay results > Blood assays > Infectious Diseases > Infectious Disease Antigens	1307	HTLV-1 env antigen for Human T-Lymphotropic Virus 1	Integer
+23024						Biological samples > Assay results > Blood assays > Infectious Diseases > Infectious Disease Antigens	1307	HIV-1 gag antigen for Human Immunodeficiency Virus	Integer
+23025						Biological samples > Assay results > Blood assays > Infectious Diseases > Infectious Disease Antigens	1307	HIV-1 env antigen for Human Immunodeficiency Virus	Integer
+23026						Biological samples > Assay results > Blood assays > Infectious Diseases > Infectious Disease Antigens	1307	BK VP1 antigen for Human Polyomavirus BKV	Integer
+23027						Biological samples > Assay results > Blood assays > Infectious Diseases > Infectious Disease Antigens	1307	JC VP1 antigen for Human Polyomavirus JCV	Integer
+23028						Biological samples > Assay results > Blood assays > Infectious Diseases > Infectious Disease Antigens	1307	MC VP1 antigen for Merkel Cell Polyomavirus	Integer
+23029						Biological samples > Assay results > Blood assays > Infectious Diseases > Infectious Disease Antigens	1307	L1 antigen for Human Papillomavirus type-16	Integer
+23030						Biological samples > Assay results > Blood assays > Infectious Diseases > Infectious Disease Antigens	1307	E6 antigen for Human Papillomavirus type-16	Integer
+23031						Biological samples > Assay results > Blood assays > Infectious Diseases > Infectious Disease Antigens	1307	E7 antigen for Human Papillomavirus type-16	Integer
+23032						Biological samples > Assay results > Blood assays > Infectious Diseases > Infectious Disease Antigens	1307	L1 antigen for Human Papillomavirus type-18	Integer
+23033						Biological samples > Assay results > Blood assays > Infectious Diseases > Infectious Disease Antigens	1307	momp D antigen for Chlamydia trachomatis	Integer
+23034						Biological samples > Assay results > Blood assays > Infectious Diseases > Infectious Disease Antigens	1307	momp A antigen for Chlamydia trachomatis	Integer
+23035						Biological samples > Assay results > Blood assays > Infectious Diseases > Infectious Disease Antigens	1307	tarp-D F1 antigen for Chlamydia trachomatis	Integer
+23036						Biological samples > Assay results > Blood assays > Infectious Diseases > Infectious Disease Antigens	1307	tarp-D F2 antigen for Chlamydia trachomatis	Integer
+23037						Biological samples > Assay results > Blood assays > Infectious Diseases > Infectious Disease Antigens	1307	PorB antigen for Chlamydia trachomatis	Integer
+23038						Biological samples > Assay results > Blood assays > Infectious Diseases > Infectious Disease Antigens	1307	pGP3 antigen for Chlamydia trachomatis	Integer
+23039						Biological samples > Assay results > Blood assays > Infectious Diseases > Infectious Disease Antigens	1307	CagA antigen for Helicobacter pylori	Integer
+23040						Biological samples > Assay results > Blood assays > Infectious Diseases > Infectious Disease Antigens	1307	VacA antigen for Helicobacter pylori	Integer
+23041						Biological samples > Assay results > Blood assays > Infectious Diseases > Infectious Disease Antigens	1307	OMP antigen for Helicobacter pylori	Integer
+23042						Biological samples > Assay results > Blood assays > Infectious Diseases > Infectious Disease Antigens	1307	GroEL antigen for Helicobacter pylori	Integer
+23043						Biological samples > Assay results > Blood assays > Infectious Diseases > Infectious Disease Antigens	1307	Catalase antigen for Helicobacter pylori	Integer
+23044						Biological samples > Assay results > Blood assays > Infectious Diseases > Infectious Disease Antigens	1307	UreA antigen for Helicobacter pylori	Integer
+23049		YES-PROCESSING			7618	Biological samples > Assay results > Blood assays > Infectious Diseases > Infectious Disease Antigens	1307	Antigen assay QC indicator	Categorical single
+23050					12	Biological samples > Assay results > Blood assays > Infectious Diseases	51428	HSV-1 seropositivity for Herpes Simplex virus-1	Categorical single
+23051					12	Biological samples > Assay results > Blood assays > Infectious Diseases	51428	HSV-2 seropositivity for Herpes Simplex virus-2	Categorical single
+23052					12	Biological samples > Assay results > Blood assays > Infectious Diseases	51428	VZV seropositivity for Varicella Zoster Virus 	Categorical single
+23053					12	Biological samples > Assay results > Blood assays > Infectious Diseases	51428	EBV seropositivity for Epstein-Barr Virus	Categorical single
+23054					12	Biological samples > Assay results > Blood assays > Infectious Diseases	51428	CMV seropositivity for Human Cytomegalovirus	Categorical single
+23055					12	Biological samples > Assay results > Blood assays > Infectious Diseases	51428	HHV-6 overall seropositivity for Human Herpesvirus-6	Categorical single
+23056					12	Biological samples > Assay results > Blood assays > Infectious Diseases	51428	HHV-6A seropositivity for Human Herpesvirus-6	Categorical single
+23057					12	Biological samples > Assay results > Blood assays > Infectious Diseases	51428	HHV-6B seropositivity for Human Herpesvirus-6	Categorical single
+23058					12	Biological samples > Assay results > Blood assays > Infectious Diseases	51428	HHV-7 seropositivity for Human Herpesvirus-7	Categorical single
+23059					12	Biological samples > Assay results > Blood assays > Infectious Diseases	51428	KSHV seropositivity for Kaposi's Sarcoma-Associated Herpesvirus	Categorical single
+23060					12	Biological samples > Assay results > Blood assays > Infectious Diseases	51428	HBV seropositivity for Hepatitis B Virus	Categorical single
+23061					12	Biological samples > Assay results > Blood assays > Infectious Diseases	51428	HCV seropositivity for Hepatitis C Virus	Categorical single
+23062					12	Biological samples > Assay results > Blood assays > Infectious Diseases	51428	T. gondii seropositivity for Toxoplasma gondii	Categorical single
+23063					12	Biological samples > Assay results > Blood assays > Infectious Diseases	51428	HTLV-1 seropositivity for Human T-Lymphotropic Virus 1	Categorical single
+23064					12	Biological samples > Assay results > Blood assays > Infectious Diseases	51428	HIV-1 seropositivity for Human Immunodeficiency Virus	Categorical single
+23065					12	Biological samples > Assay results > Blood assays > Infectious Diseases	51428	BKV seropositivity for Human Polyomavirus BKV	Categorical single
+23066					12	Biological samples > Assay results > Blood assays > Infectious Diseases	51428	JCV seropositivity for Human Polyomavirus JCV	Categorical single
+23067					12	Biological samples > Assay results > Blood assays > Infectious Diseases	51428	MCV seropositivity for Merkel Cell Polyomavirus	Categorical single
+23068					12	Biological samples > Assay results > Blood assays > Infectious Diseases	51428	HPV 16 Definition I seropositivity for Human Papillomavirus type-16	Categorical single
+23069					12	Biological samples > Assay results > Blood assays > Infectious Diseases	51428	HPV 18 seropositivity for Human Papillomavirus type-18	Categorical single
+23070					12	Biological samples > Assay results > Blood assays > Infectious Diseases	51428	C. trachomatis Definition I seropositivity for Chlamydia trachomatis	Categorical single
+23071					12	Biological samples > Assay results > Blood assays > Infectious Diseases	51428	C. trachomatis Definition II seropositivity for Chlamydia trachomatis	Categorical single
+23073					12	Biological samples > Assay results > Blood assays > Infectious Diseases	51428	H. pylori Definition I seropositivity for Helicobacter pylori	Categorical single
+23074					12	Biological samples > Assay results > Blood assays > Infectious Diseases	51428	H. pylori Definition II seropositivity for Helicobacter pylori	Categorical single
+23075					12	Biological samples > Assay results > Blood assays > Infectious Diseases	51428	HPV 16 Definition II seropositivity for Human Papillomavirus type-16	Categorical single
 23098						UK Biobank Assessment Centre > Physical measures > Anthropometry > Impedance measures	100009	Weight	Continuous
 23099						UK Biobank Assessment Centre > Physical measures > Anthropometry > Impedance measures	100009	Body fat percentage	Continuous
 23100						UK Biobank Assessment Centre > Physical measures > Anthropometry > Impedance measures	100009	Whole body fat mass	Continuous
@@ -2298,6 +2473,31 @@ FieldID	TRAIT_OF_INTEREST	EXCLUDED	CAT_MULT_INDICATOR_FIELDS	CAT_SINGLE_TO_CAT_M
 25918						UK Biobank Assessment Centre > Imaging > Brain MRI > T1 structural brain MRI	110	Volume of grey matter in X Cerebellum (left)	Continuous
 25919						UK Biobank Assessment Centre > Imaging > Brain MRI > T1 structural brain MRI	110	Volume of grey matter in Vermis X Cerebellum	Continuous
 25920						UK Biobank Assessment Centre > Imaging > Brain MRI > T1 structural brain MRI	110	Volume of grey matter in X Cerebellum (right)	Continuous
+26410						Population characteristics > Baseline characteristics > Indices of Multiple Deprivation	76	Index of Multiple Deprivation (England)	Continuous
+26411						Population characteristics > Baseline characteristics > Indices of Multiple Deprivation	76	Income score (England)	Continuous
+26412						Population characteristics > Baseline characteristics > Indices of Multiple Deprivation	76	Employment score (England)	Continuous
+26413						Population characteristics > Baseline characteristics > Indices of Multiple Deprivation	76	Health score (England)	Continuous
+26414						Population characteristics > Baseline characteristics > Indices of Multiple Deprivation	76	Education score (England)	Continuous
+26415						Population characteristics > Baseline characteristics > Indices of Multiple Deprivation	76	Housing score (England)	Continuous
+26416						Population characteristics > Baseline characteristics > Indices of Multiple Deprivation	76	Crime score (England)	Continuous
+26417						Population characteristics > Baseline characteristics > Indices of Multiple Deprivation	76	Living environment score (England)	Continuous
+26418						Population characteristics > Baseline characteristics > Indices of Multiple Deprivation	76	Income score (Wales)	Continuous
+26419						Population characteristics > Baseline characteristics > Indices of Multiple Deprivation	76	Employment score (Wales)	Continuous
+26420						Population characteristics > Baseline characteristics > Indices of Multiple Deprivation	76	Health score (Wales)	Continuous
+26421						Population characteristics > Baseline characteristics > Indices of Multiple Deprivation	76	Education score (Wales)	Continuous
+26422						Population characteristics > Baseline characteristics > Indices of Multiple Deprivation	76	Access to services score (Wales)	Continuous
+26423						Population characteristics > Baseline characteristics > Indices of Multiple Deprivation	76	Housing score (Wales)	Continuous
+26424						Population characteristics > Baseline characteristics > Indices of Multiple Deprivation	76	Physical environment score (Wales)	Continuous
+26425						Population characteristics > Baseline characteristics > Indices of Multiple Deprivation	76	Community safety score (Wales)	Continuous
+26426						Population characteristics > Baseline characteristics > Indices of Multiple Deprivation	76	Index of Multiple Deprivation (Wales)	Continuous
+26427						Population characteristics > Baseline characteristics > Indices of Multiple Deprivation	76	Index of Multiple Deprivation (Scotland)	Continuous
+26428						Population characteristics > Baseline characteristics > Indices of Multiple Deprivation	76	Income score (Scotland)	Continuous
+26429						Population characteristics > Baseline characteristics > Indices of Multiple Deprivation	76	Employment score (Scotland)	Continuous
+26430						Population characteristics > Baseline characteristics > Indices of Multiple Deprivation	76	Health score (Scotland)	Continuous
+26431						Population characteristics > Baseline characteristics > Indices of Multiple Deprivation	76	Education score (Scotland)	Continuous
+26432						Population characteristics > Baseline characteristics > Indices of Multiple Deprivation	76	Housing score (Scotland)	Continuous
+26433						Population characteristics > Baseline characteristics > Indices of Multiple Deprivation	76	Access to services score (Scotland)	Continuous
+26434						Population characteristics > Baseline characteristics > Indices of Multiple Deprivation	76	Crime score (Scotland)	Continuous
 30000						Biological samples > Assay results > Blood assays > Blood count	100081	White blood cell (leukocyte) count	Continuous
 30001						Biological samples > Assay results > Blood assays > Blood count > Blood count processing	9081	White blood cell (leukocyte) count freeze-thaw cycles	Integer
 30004					2226	Biological samples > Assay results > Blood assays > Blood count > Blood count processing	9081	White blood cell (leukocyte) count acquisition route	Categorical single
@@ -2415,6 +2615,186 @@ FieldID	TRAIT_OF_INTEREST	EXCLUDED	CAT_MULT_INDICATOR_FIELDS	CAT_SINGLE_TO_CAT_M
 30530						Biological samples > Assay results > Urine assays	100083	Sodium in urine	Continuous
 30533					200	Biological samples > Assay results > Urine assays > Urine processing	148	Sodium in urine device ID	Categorical single
 30535					196	Biological samples > Assay results > Urine assays	100083	Sodium in urine result flag	Categorical single
+30600						Biological samples > Assay results > Blood assays > Blood biochemistry	17518	Albumin	Continuous
+30602		YES-PROCESSING			1529	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Albumin aliquot	Categorical single
+30603		YES-PROCESSING			165	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Albumin correction level	Categorical single
+30604		YES-PROCESSING			305	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Albumin correction reason	Categorical single
+30605		YES-PROCESSING			782	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Albumin missing reason	Categorical single
+30606		YES-PROCESSING			4917	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Albumin reportability	Categorical single
+30610						Biological samples > Assay results > Blood assays > Blood biochemistry	17518	Alkaline phosphatase	Continuous
+30612		YES-PROCESSING			1529	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Alkaline phosphatase aliquot	Categorical single
+30613		YES-PROCESSING			165	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Alkaline phosphatase correction level	Categorical single
+30614		YES-PROCESSING			305	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Alkaline phosphatase correction reason	Categorical single
+30615		YES-PROCESSING			782	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Alkaline phosphatase missing reason	Categorical single
+30616		YES-PROCESSING			4917	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Alkaline phosphatase reportability	Categorical single
+30620						Biological samples > Assay results > Blood assays > Blood biochemistry	17518	Alanine aminotransferase	Continuous
+30622		YES-PROCESSING			1529	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Alanine aminotransferase aliquot	Categorical single
+30623		YES-PROCESSING			165	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Alanine aminotransferase correction level	Categorical single
+30624		YES-PROCESSING			305	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Alanine aminotransferase correction reason	Categorical single
+30625		YES-PROCESSING			782	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Alanine aminotransferase missing reason	Categorical single
+30626		YES-PROCESSING			4917	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Alanine aminotransferase reportability	Categorical single
+30630						Biological samples > Assay results > Blood assays > Blood biochemistry	17518	Apolipoprotein A	Continuous
+30632		YES-PROCESSING			1529	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Apolipoprotein A aliquot	Categorical single
+30633		YES-PROCESSING			165	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Apolipoprotein A correction level	Categorical single
+30634		YES-PROCESSING			305	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Apolipoprotein A correction reason	Categorical single
+30635		YES-PROCESSING			782	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Apolipoprotein A missing reason	Categorical single
+30636		YES-PROCESSING			4917	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Apolipoprotein A reportability	Categorical single
+30640						Biological samples > Assay results > Blood assays > Blood biochemistry	17518	Apolipoprotein B	Continuous
+30642		YES-PROCESSING			1529	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Apolipoprotein B aliquot	Categorical single
+30643		YES-PROCESSING			165	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Apolipoprotein B correction level	Categorical single
+30644		YES-PROCESSING			305	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Apolipoprotein B correction reason	Categorical single
+30645		YES-PROCESSING			782	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Apolipoprotein B missing reason	Categorical single
+30646		YES-PROCESSING			4917	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Apolipoprotein B reportability	Categorical single
+30650						Biological samples > Assay results > Blood assays > Blood biochemistry	17518	Aspartate aminotransferase	Continuous
+30652		YES-PROCESSING			1529	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Aspartate aminotransferase aliquot	Categorical single
+30653		YES-PROCESSING			165	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Aspartate aminotransferase correction level	Categorical single
+30654		YES-PROCESSING			305	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Aspartate aminotransferase correction reason	Categorical single
+30655		YES-PROCESSING			782	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Aspartate aminotransferase missing reason	Categorical single
+30656		YES-PROCESSING			4917	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Aspartate aminotransferase reportability	Categorical single
+30660						Biological samples > Assay results > Blood assays > Blood biochemistry	17518	Direct bilirubin	Continuous
+30662		YES-PROCESSING			1529	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Direct bilirubin aliquot	Categorical single
+30663		YES-PROCESSING			165	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Direct bilirubin correction level	Categorical single
+30664		YES-PROCESSING			305	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Direct bilirubin correction reason	Categorical single
+30665		YES-PROCESSING			782	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Direct bilirubin missing reason	Categorical single
+30666		YES-PROCESSING			4917	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Direct bilirubin reportability	Categorical single
+30670						Biological samples > Assay results > Blood assays > Blood biochemistry	17518	Urea	Continuous
+30672		YES-PROCESSING			1529	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Urea aliquot	Categorical single
+30673		YES-PROCESSING			165	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Urea correction level	Categorical single
+30674		YES-PROCESSING			305	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Urea correction reason	Categorical single
+30675		YES-PROCESSING			782	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Urea missing reason	Categorical single
+30676		YES-PROCESSING			4917	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Urea reportability	Categorical single
+30680						Biological samples > Assay results > Blood assays > Blood biochemistry	17518	Calcium	Continuous
+30682		YES-PROCESSING			1529	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Calcium aliquot	Categorical single
+30683		YES-PROCESSING			165	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Calcium correction level	Categorical single
+30684		YES-PROCESSING			305	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Calcium correction reason	Categorical single
+30685		YES-PROCESSING			782	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Calcium missing reason	Categorical single
+30686		YES-PROCESSING			4917	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Calcium reportability	Categorical single
+30690						Biological samples > Assay results > Blood assays > Blood biochemistry	17518	Cholesterol	Continuous
+30692		YES-PROCESSING			1529	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Cholesterol aliquot	Categorical single
+30693		YES-PROCESSING			165	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Cholesterol correction level	Categorical single
+30694		YES-PROCESSING			305	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Cholesterol correction reason	Categorical single
+30695		YES-PROCESSING			782	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Cholesterol missing reason	Categorical single
+30696		YES-PROCESSING			4917	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Cholesterol reportability	Categorical single
+30700						Biological samples > Assay results > Blood assays > Blood biochemistry	17518	Creatinine	Continuous
+30702		YES-PROCESSING			1529	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Creatinine aliquot	Categorical single
+30703		YES-PROCESSING			165	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Creatinine correction level	Categorical single
+30704		YES-PROCESSING			305	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Creatinine correction reason	Categorical single
+30705		YES-PROCESSING			782	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Creatinine missing reason	Categorical single
+30706		YES-PROCESSING			4917	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Creatinine reportability	Categorical single
+30710						Biological samples > Assay results > Blood assays > Blood biochemistry	17518	C-reactive protein	Continuous
+30712		YES-PROCESSING			1529	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	C-reactive protein aliquot	Categorical single
+30713		YES-PROCESSING			165	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	C-reactive protein correction level	Categorical single
+30714		YES-PROCESSING			305	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	C-reactive protein correction reason	Categorical single
+30715		YES-PROCESSING			782	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	C-reactive protein missing reason	Categorical single
+30716		YES-PROCESSING			4917	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	C-reactive protein reportability	Categorical single
+30720						Biological samples > Assay results > Blood assays > Blood biochemistry	17518	Cystatin C	Continuous
+30722		YES-PROCESSING			1529	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Cystatin C aliquot	Categorical single
+30723		YES-PROCESSING			165	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Cystatin C correction level	Categorical single
+30724		YES-PROCESSING			305	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Cystatin C correction reason	Categorical single
+30725		YES-PROCESSING			782	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Cystatin C missing reason	Categorical single
+30726		YES-PROCESSING			4917	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Cystatin C reportability	Categorical single
+30730						Biological samples > Assay results > Blood assays > Blood biochemistry	17518	Gamma glutamyltransferase	Continuous
+30732		YES-PROCESSING			1529	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Gamma glutamyltransferase aliquot	Categorical single
+30733		YES-PROCESSING			165	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Gamma glutamyltransferase correction level	Categorical single
+30734		YES-PROCESSING			305	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Gamma glutamyltransferase correction reason	Categorical single
+30735		YES-PROCESSING			782	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Gamma glutamyltransferase missing reason	Categorical single
+30736		YES-PROCESSING			4917	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Gamma glutamyltransferase reportability	Categorical single
+30740						Biological samples > Assay results > Blood assays > Blood biochemistry	17518	Glucose	Continuous
+30742		YES-PROCESSING			1529	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Glucose aliquot	Categorical single
+30743		YES-PROCESSING			165	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Glucose correction level	Categorical single
+30744		YES-PROCESSING			305	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Glucose correction reason	Categorical single
+30745		YES-PROCESSING			782	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Glucose missing reason	Categorical single
+30746		YES-PROCESSING			4917	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Glucose reportability	Categorical single
+30750						Biological samples > Assay results > Blood assays > Blood biochemistry	17518	Glycated haemoglobin (HbA1c)	Continuous
+30753		YES-PROCESSING			165	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Glycated haemoglobin (HbA1c) correction level	Categorical single
+30754		YES-PROCESSING			305	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Glycated haemoglobin (HbA1c) correction reason	Categorical single
+30755		YES-PROCESSING			782	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Glycated haemoglobin (HbA1c) missing reason	Categorical single
+30756		YES-PROCESSING			4917	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Glycated haemoglobin (HbA1c) reportability	Categorical single
+30760						Biological samples > Assay results > Blood assays > Blood biochemistry	17518	HDL cholesterol	Continuous
+30762		YES-PROCESSING			1529	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	HDL cholesterol aliquot	Categorical single
+30763		YES-PROCESSING			165	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	HDL cholesterol correction level	Categorical single
+30764		YES-PROCESSING			305	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	HDL cholesterol correction reason	Categorical single
+30765		YES-PROCESSING			782	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	HDL cholesterol missing reason	Categorical single
+30766		YES-PROCESSING			4917	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	HDL cholesterol reportability	Categorical single
+30770						Biological samples > Assay results > Blood assays > Blood biochemistry	17518	IGF-1	Continuous
+30772		YES-PROCESSING			1529	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	IGF-1 aliquot	Categorical single
+30773		YES-PROCESSING			165	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	IGF-1 correction level	Categorical single
+30774		YES-PROCESSING			305	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	IGF-1 correction reason	Categorical single
+30775		YES-PROCESSING			782	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	IGF-1 missing reason	Categorical single
+30776		YES-PROCESSING			4917	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	IGF-1 reportability	Categorical single
+30780						Biological samples > Assay results > Blood assays > Blood biochemistry	17518	LDL direct	Continuous
+30782		YES-PROCESSING			1529	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	LDL direct aliquot	Categorical single
+30783		YES-PROCESSING			165	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	LDL direct correction level	Categorical single
+30784		YES-PROCESSING			305	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	LDL direct correction reason	Categorical single
+30785		YES-PROCESSING			782	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	LDL direct missing reason	Categorical single
+30786		YES-PROCESSING			4917	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	LDL direct reportability	Categorical single
+30790						Biological samples > Assay results > Blood assays > Blood biochemistry	17518	Lipoprotein A	Continuous
+30792		YES-PROCESSING			1529	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Lipoprotein A aliquot	Categorical single
+30793		YES-PROCESSING			165	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Lipoprotein A correction level	Categorical single
+30794		YES-PROCESSING			305	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Lipoprotein A correction reason	Categorical single
+30795		YES-PROCESSING			782	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Lipoprotein A missing reason	Categorical single
+30796		YES-PROCESSING			4917	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Lipoprotein A reportability	Categorical single
+30800						Biological samples > Assay results > Blood assays > Blood biochemistry	17518	Oestradiol	Continuous
+30802		YES-PROCESSING			1529	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Oestradiol aliquot	Categorical single
+30803		YES-PROCESSING			165	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Oestradiol correction level	Categorical single
+30804		YES-PROCESSING			305	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Oestradiol correction reason	Categorical single
+30805		YES-PROCESSING			782	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Oestradiol missing reason	Categorical single
+30806		YES-PROCESSING			4917	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Oestradiol reportability	Categorical single
+30810						Biological samples > Assay results > Blood assays > Blood biochemistry	17518	Phosphate	Continuous
+30812		YES-PROCESSING			1529	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Phosphate aliquot	Categorical single
+30813		YES-PROCESSING			165	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Phosphate correction level	Categorical single
+30814		YES-PROCESSING			305	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Phosphate correction reason	Categorical single
+30815		YES-PROCESSING			782	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Phosphate missing reason	Categorical single
+30816		YES-PROCESSING			4917	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Phosphate reportability	Categorical single
+30820						Biological samples > Assay results > Blood assays > Blood biochemistry	17518	Rheumatoid factor	Continuous
+30822		YES-PROCESSING			1529	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Rheumatoid factor aliquot	Categorical single
+30823		YES-PROCESSING			165	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Rheumatoid factor correction level	Categorical single
+30824		YES-PROCESSING			305	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Rheumatoid factor correction reason	Categorical single
+30825		YES-PROCESSING			782	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Rheumatoid factor missing reason	Categorical single
+30826		YES-PROCESSING			4917	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Rheumatoid factor reportability	Categorical single
+30830						Biological samples > Assay results > Blood assays > Blood biochemistry	17518	SHBG	Continuous
+30832		YES-PROCESSING			1529	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	SHBG aliquot	Categorical single
+30833		YES-PROCESSING			165	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	SHBG correction level	Categorical single
+30834		YES-PROCESSING			305	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	SHBG correction reason	Categorical single
+30835		YES-PROCESSING			782	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	SHBG missing reason	Categorical single
+30836		YES-PROCESSING			4917	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	SHBG reportability	Categorical single
+30840						Biological samples > Assay results > Blood assays > Blood biochemistry	17518	Total bilirubin	Continuous
+30842		YES-PROCESSING			1529	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Total bilirubin aliquot	Categorical single
+30843		YES-PROCESSING			165	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Total bilirubin correction level	Categorical single
+30844		YES-PROCESSING			305	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Total bilirubin correction reason	Categorical single
+30845		YES-PROCESSING			782	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Total bilirubin missing reason	Categorical single
+30846		YES-PROCESSING			4917	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Total bilirubin reportability	Categorical single
+30850						Biological samples > Assay results > Blood assays > Blood biochemistry	17518	Testosterone	Continuous
+30852		YES-PROCESSING			1529	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Testosterone aliquot	Categorical single
+30853		YES-PROCESSING			165	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Testosterone correction level	Categorical single
+30854		YES-PROCESSING			305	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Testosterone correction reason	Categorical single
+30855		YES-PROCESSING			782	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Testosterone missing reason	Categorical single
+30856		YES-PROCESSING			4917	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Testosterone reportability	Categorical single
+30860						Biological samples > Assay results > Blood assays > Blood biochemistry	17518	Total protein	Continuous
+30862		YES-PROCESSING			1529	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Total protein aliquot	Categorical single
+30863		YES-PROCESSING			165	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Total protein correction level	Categorical single
+30864		YES-PROCESSING			305	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Total protein correction reason	Categorical single
+30865		YES-PROCESSING			782	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Total protein missing reason	Categorical single
+30866		YES-PROCESSING			4917	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Total protein reportability	Categorical single
+30870						Biological samples > Assay results > Blood assays > Blood biochemistry	17518	Triglycerides	Continuous
+30872		YES-PROCESSING			1529	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Triglycerides aliquot	Categorical single
+30873		YES-PROCESSING			165	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Triglycerides correction level	Categorical single
+30874		YES-PROCESSING			305	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Triglycerides correction reason	Categorical single
+30875		YES-PROCESSING			782	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Triglycerides missing reason	Categorical single
+30876		YES-PROCESSING			4917	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Triglycerides reportability	Categorical single
+30880						Biological samples > Assay results > Blood assays > Blood biochemistry	17518	Urate	Continuous
+30882		YES-PROCESSING			1529	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Urate aliquot	Categorical single
+30883		YES-PROCESSING			165	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Urate correction level	Categorical single
+30884		YES-PROCESSING			305	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Urate correction reason	Categorical single
+30885		YES-PROCESSING			782	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Urate missing reason	Categorical single
+30886		YES-PROCESSING			4917	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Urate reportability	Categorical single
+30890						Biological samples > Assay results > Blood assays > Blood biochemistry	17518	Vitamin D	Continuous
+30892		YES-PROCESSING			1529	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Vitamin D aliquot	Categorical single
+30893		YES-PROCESSING			165	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Vitamin D correction level	Categorical single
+30894		YES-PROCESSING			305	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Vitamin D correction reason	Categorical single
+30895		YES-PROCESSING			782	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Vitamin D missing reason	Categorical single
+30896		YES-PROCESSING			4917	Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Vitamin D reportability	Categorical single
+30897						Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Estimated sample dilution factor	Continuous
 40001			ALL	YES-INSTANCES	19	Health-related outcomes > Death register	100093	Underlying (primary) cause of death: ICD10	Categorical single
 40002			ALL	YES-INSTANCES	19	Health-related outcomes > Death register	100093	Contributory (secondary) causes of death: ICD10	Categorical single
 40006			ALL	YES-INSTANCES	19	Health-related outcomes > Cancer register	100092	Type of cancer: ICD10	Categorical single
@@ -2424,8 +2804,11 @@ FieldID	TRAIT_OF_INTEREST	EXCLUDED	CAT_MULT_INDICATOR_FIELDS	CAT_SINGLE_TO_CAT_M
 40011			ALL	YES-INSTANCES	38	Health-related outcomes > Cancer register	100092	Histology of cancer tumour	Categorical single
 40012			ALL	YES-INSTANCES	39	Health-related outcomes > Cancer register	100092	Behaviour of cancer tumour	Categorical single
 40013			ALL	YES-INSTANCES	87	Health-related outcomes > Cancer register	100092	Type of cancer: ICD9	Categorical single
-40018					261	Health-related outcomes > Death register	100093	Source of death report	Categorical single
-40019					262	Health-related outcomes > Cancer register	100092	Source of cancer report	Categorical single
+40018					261	Health-related outcomes > Death register	100093	Death report format	Categorical single
+40019					262	Health-related outcomes > Cancer register	100092	Cancer report format	Categorical single
+40020		YES-PROCESSING			1970	Health-related outcomes > Death register	100093	Death record origin	Categorical single
+40021		YES-PROCESSING			1970	Health-related outcomes > Cancer register	100092	Cancer record origin	Categorical single
+40022		YES-PROCESSING			1970	Health-related outcomes > Hospital in-patient	2000	Inpatient record origin	Categorical multiple
 40425						Biological samples > Sample inventory > Blood sample inventory	100085	Volume of DNA held by UKB	Integer
 41066						Health-related outcomes > Hospital in-patient > Maternity > Spell and Episode Data (maternity)	2013	"Episodes containing ""Number of weeks of gestation"" data"	Integer
 41067						Health-related outcomes > Hospital in-patient > Maternity > Spell and Episode Data (maternity)	2013	"Episodes containing ""Delivery place"" data"	Integer
@@ -2440,7 +2823,7 @@ FieldID	TRAIT_OF_INTEREST	EXCLUDED	CAT_MULT_INDICATOR_FIELDS	CAT_SINGLE_TO_CAT_M
 41076						Health-related outcomes > Hospital in-patient > Diagnoses > Spell and Episode Data (diagnoses)	2012	"Episodes containing ""Diagnoses - secondary ICD9"" data"	Integer
 41078						Health-related outcomes > Hospital in-patient > Diagnoses > Spell and Episode Data (diagnoses)	2012	"Episodes containing ""Diagnoses - secondary ICD10"" data"	Integer
 41079						Health-related outcomes > Hospital in-patient > Diagnoses > Spell and Episode Data (diagnoses)	2012	"Episodes containing ""Diagnoses - secondary ICD10 addendum"" data"	Integer
-41080						Health-related outcomes > Hospital in-patient > Operations > Spell and Episode Data (operations)	2015	"Episodes containing ""Operative procedures - secondary OPCS"" data"	Integer
+41080						Health-related outcomes > Hospital in-patient > Operations > Spell and Episode Data (operations)	2015	"Episodes containing ""Operative procedures - secondary OPCS4"" data"	Integer
 41082						Health-related outcomes > Hospital in-patient > Operations > Spell and Episode Data (operations)	2015	"Episodes containing ""Dates of operations"" data"	Integer
 41083						Health-related outcomes > Hospital in-patient > Admission and discharge > Spell and Episode Data (admission and discharge)	2011	"Episodes containing ""Episode start date"" data"	Integer
 41084						Health-related outcomes > Hospital in-patient > Admission and discharge > Spell and Episode Data (admission and discharge)	2011	"Episodes containing ""Episode end date"" data"	Integer
@@ -2489,15 +2872,15 @@ FieldID	TRAIT_OF_INTEREST	EXCLUDED	CAT_MULT_INDICATOR_FIELDS	CAT_SINGLE_TO_CAT_M
 41142						Health-related outcomes > Hospital in-patient > Diagnoses > Spell and Episode Data (diagnoses)	2012	"Episodes containing ""Diagnoses - main ICD10"" data"	Integer
 41143						Health-related outcomes > Hospital in-patient > Diagnoses > Spell and Episode Data (diagnoses)	2012	"Episodes containing ""Diagnoses - main ICD10 - addendum"" data"	Integer
 41144						Health-related outcomes > Hospital in-patient > Diagnoses > Spell and Episode Data (diagnoses)	2012	"Episodes containing ""Diagnoses - main ICD9"" data"	Integer
-41146						Health-related outcomes > Hospital in-patient > Operations > Spell and Episode Data (operations)	2015	"Episodes containing ""Operative procedure - main OPCS"" data"	Integer
+41146						Health-related outcomes > Hospital in-patient > Operations > Spell and Episode Data (operations)	2015	"Episodes containing ""Operative procedure - main OPCS4"" data"	Integer
 41148						Health-related outcomes > Hospital in-patient > Operations > Spell and Episode Data (operations)	2015	"Episodes containing ""Date of operation"" data"	Integer
-41200			ALL		240	Health-related outcomes > Hospital in-patient > Operations > Summary Information (operations)	2025	Operative procedures - main OPCS	Categorical multiple
+41200			ALL		240	Health-related outcomes > Hospital in-patient > Operations > Summary Information (operations)	2025	Operative procedures - main OPCS4	Categorical multiple
 41201			ALL		19	Health-related outcomes > Hospital in-patient > Diagnoses > Summary Information (diagnoses)	2022	External causes	Categorical multiple
 41202			ALL		19	Health-related outcomes > Hospital in-patient > Diagnoses > Summary Information (diagnoses)	2022	Diagnoses - main ICD10	Categorical multiple
 41203			ALL		87	Health-related outcomes > Hospital in-patient > Diagnoses > Summary Information (diagnoses)	2022	Diagnoses - main ICD9	Categorical multiple
 41204			ALL		19	Health-related outcomes > Hospital in-patient > Diagnoses > Summary Information (diagnoses)	2022	Diagnoses - secondary ICD10	Categorical multiple
 41205			ALL		87	Health-related outcomes > Hospital in-patient > Diagnoses > Summary Information (diagnoses)	2022	Diagnoses - secondary ICD9	Categorical multiple
-41210			ALL		240	Health-related outcomes > Hospital in-patient > Operations > Summary Information (operations)	2025	Operative procedures - secondary OPCS	Categorical multiple
+41210			ALL		240	Health-related outcomes > Hospital in-patient > Operations > Summary Information (operations)	2025	Operative procedures - secondary OPCS4	Categorical multiple
 41214			NO_NAN		227	Health-related outcomes > Hospital in-patient > Psychiatric > Summary Information (psychiatric)	2024	Carer support indicators	Categorical multiple
 41215			ALL		230	Health-related outcomes > Hospital in-patient > Psychiatric > Summary Information (psychiatric)	2024	Detention categories	Categorical multiple
 41216			ALL		231	Health-related outcomes > Hospital in-patient > Psychiatric > Summary Information (psychiatric)	2024	Legal statuses	Categorical multiple
@@ -2534,15 +2917,36 @@ FieldID	TRAIT_OF_INTEREST	EXCLUDED	CAT_MULT_INDICATOR_FIELDS	CAT_SINGLE_TO_CAT_M
 41249			ALL		264	Health-related outcomes > Hospital in-patient > Admission and discharge > Summary Information (admission and discharge)	2021	Methods of admission to hospital (recoded)	Categorical multiple
 41250			ALL		268	Health-related outcomes > Hospital in-patient > Admission and discharge > Summary Information (admission and discharge)	2021	Methods of discharge from hospital (recoded)	Categorical multiple
 41251			ALL		265	Health-related outcomes > Hospital in-patient > Admission and discharge > Summary Information (admission and discharge)	2021	Sources of admission to hospital (recoded)	Categorical multiple
-41252						Health-related outcomes > Hospital in-patient > Admission and discharge > Spell and Episode Data (admission and discharge)	2011	"Episodes containing ""Source of inpatient record"" data"	Integer
-41253			ALL		263	Health-related outcomes > Hospital in-patient > Admission and discharge > Summary Information (admission and discharge)	2021	Source of inpatient record	Categorical multiple
-42001					300	Health-related outcomes > Algorithmically-defined outcomes > Myocardial infarction outcomes	44	Source of first myocardial infarction report	Categorical single
-42003					300	Health-related outcomes > Algorithmically-defined outcomes > Myocardial infarction outcomes	44	Source of first STEMI report	Categorical single
-42005					300	Health-related outcomes > Algorithmically-defined outcomes > Myocardial infarction outcomes	44	Source of first NSTEMI report	Categorical single
-42007					300	Health-related outcomes > Algorithmically-defined outcomes > Stroke outcomes	43	Source of first stroke report	Categorical single
-42009					300	Health-related outcomes > Algorithmically-defined outcomes > Stroke outcomes	43	Source of first ischaemic stroke report	Categorical single
-42011					300	Health-related outcomes > Algorithmically-defined outcomes > Stroke outcomes	43	Source of first intracerebral haemorrhage report	Categorical single
-42013					300	Health-related outcomes > Algorithmically-defined outcomes > Stroke outcomes	43	Source of first subarachnoid haemorrhage report	Categorical single
+41252						Health-related outcomes > Hospital in-patient	2000	"Episodes containing ""Inpatient record format"" data"	Integer
+41253			ALL		263	Health-related outcomes > Hospital in-patient	2000	Inpatient record format	Categorical multiple
+41254						Health-related outcomes > Hospital in-patient	2000	"Episodes containing ""Inpatient record origin"""	Integer
+41255						Health-related outcomes > Hospital in-patient > Operations > Spell and Episode Data (operations)	2015	"Episodes containing ""Operative procedure - main OPCS3"" data"	Integer
+41256			ALL		259	Health-related outcomes > Hospital in-patient > Operations > Summary Information (operations)	2025	Operative procedures - main OPCS3	Categorical multiple
+41258			ALL		259	Health-related outcomes > Hospital in-patient > Operations > Summary Information (operations)	2025	Operative procedures - secondary OPCS3	Categorical multiple
+41270			ALL		19	Health-related outcomes > Hospital in-patient > Diagnoses > Summary Information (diagnoses)	2022	Diagnoses - ICD10	Categorical multiple
+41271			ALL		87	Health-related outcomes > Hospital in-patient > Diagnoses > Summary Information (diagnoses)	2022	Diagnoses - ICD9	Categorical multiple
+41272			ALL		240	Health-related outcomes > Hospital in-patient > Operations > Summary Information (operations)	2025	Operative procedures - OPCS4	Categorical multiple
+41273			ALL		259	Health-related outcomes > Hospital in-patient > Operations > Summary Information (operations)	2025	Operative procedures - OPCS3	Categorical multiple
+41274						Health-related outcomes > Hospital in-patient > Operations > Spell and Episode Data (operations)	2015	"Episodes containing ""Operative procedures - secondary OPCS3"" data"	Integer
+42001					300	Health-related outcomes > Algorithmically-defined outcomes > Myocardial infarction outcomes	44	Source of myocardial infarction report	Categorical single
+42003					300	Health-related outcomes > Algorithmically-defined outcomes > Myocardial infarction outcomes	44	Source of STEMI report	Categorical single
+42005					300	Health-related outcomes > Algorithmically-defined outcomes > Myocardial infarction outcomes	44	Source of NSTEMI report	Categorical single
+42007					300	Health-related outcomes > Algorithmically-defined outcomes > Stroke outcomes	43	Source of stroke report	Categorical single
+42009					300	Health-related outcomes > Algorithmically-defined outcomes > Stroke outcomes	43	Source of ischaemic stroke report	Categorical single
+42011					300	Health-related outcomes > Algorithmically-defined outcomes > Stroke outcomes	43	Source of intracerebral haemorrhage report	Categorical single
+42013					300	Health-related outcomes > Algorithmically-defined outcomes > Stroke outcomes	43	Source of subarachnoid haemorrhage report	Categorical single
+42015					300	Health-related outcomes > Algorithmically-defined outcomes > Asthma outcomes	45	Source of asthma report	Categorical single
+42017					300	Health-related outcomes > Algorithmically-defined outcomes > COPD outcomes	46	Source of chronic obstructive pulmonary disease report	Categorical single
+42019					300	Health-related outcomes > Algorithmically-defined outcomes > Dementia outcomes	47	Source of all cause dementia report	Categorical single
+42021					300	Health-related outcomes > Algorithmically-defined outcomes > Dementia outcomes	47	Source of alzheimer's disease report	Categorical single
+42023					300	Health-related outcomes > Algorithmically-defined outcomes > Dementia outcomes	47	Source of vascular dementia report	Categorical single
+42025					300	Health-related outcomes > Algorithmically-defined outcomes > Dementia outcomes	47	Source of frontotemporal dementia report	Categorical single
+42027					300	Health-related outcomes > Algorithmically-defined outcomes > End stage renal disease outcomes	48	Source of end stage renal disease report	Categorical single
+42029					300	Health-related outcomes > Algorithmically-defined outcomes > Motor neurone disease outcomes	49	Source of motor neurone disease report	Categorical single
+42031					300	Health-related outcomes > Algorithmically-defined outcomes > Parkinson's disease outcomes	50	Source of all cause parkinsonism report	Categorical single
+42033					300	Health-related outcomes > Algorithmically-defined outcomes > Parkinson's disease outcomes	50	Source of parkinson's disease report	Categorical single
+42035					300	Health-related outcomes > Algorithmically-defined outcomes > Parkinson's disease outcomes	50	Source of progressive supranuclear palsy report	Categorical single
+42037					300	Health-related outcomes > Algorithmically-defined outcomes > Parkinson's disease outcomes	50	Source of multiple system atrophy report	Categorical single
 90002					93	Additional exposures > Physical activity measurement > Raw accelerometer statistics	1013	Data problem indicator	Categorical single
 90012						Additional exposures > Physical activity measurement > Acceleration averages	1009	Overall acceleration average	Continuous
 90013						Additional exposures > Physical activity measurement > Acceleration averages	1009	Standard deviation of acceleration	Continuous
@@ -3009,4 +3413,3 @@ FieldID	TRAIT_OF_INTEREST	EXCLUDED	CAT_MULT_INDICATOR_FIELDS	CAT_SINGLE_TO_CAT_M
 104920					100012	Online follow-up > Diet by 24-hour recall > Physical activity yesterday	100108	Time spent doing light physical activity	Categorical single
 110001					100693	Online follow-up > Diet by 24-hour recall	100090	"Invitation to complete online 24-hour recall dietary questionnaire, acceptance"	Categorical single
 110005					100693	Additional exposures > Physical activity measurement	1008	"Invitation to physical activity study, acceptance"	Categorical single
-

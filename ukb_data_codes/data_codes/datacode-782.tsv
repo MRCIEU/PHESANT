@@ -1,0 +1,9 @@
+coding	meaning
+1	No data returned
+2	Original value above or below reportable limit
+3	Unrecoverable aliquot problem (dip)
+4	Unrecoverable aliquot problem (possible aliquot mis-classification)
+5	Aliquot 4 used
+7	Analyser deemed result not reportable for reason other than above or below reportable range
+8	Not reportable because dilution factor 0.9-0.99 or 1.01-1.1
+9	Not reportable because dilution factor <0.9 or >1.1

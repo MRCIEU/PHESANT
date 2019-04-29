@@ -1,0 +1,1903 @@
+coding	meaning	node_id	parent_id	selectable
+001	001 Craniotomy, not elsewhere classified	16	1	Y
+0011	001.1 Craniotomy, not elsewhere classified : burr-hole	17	1	Y
+0012	001.2 Craniotomy, not elsewhere classified : trephine	18	1	Y
+0014	001.4 Craniotomy, not elsewhere classified : puncture of brain	19	1	Y
+004	004 Excision of lesion of skull	20	1	Y
+005	005 Cranioplasty	21	1	Y
+0051	005.1 Cranioplasty : natural material	22	1	Y
+0052	005.2 Cranioplasty : inert material	23	1	Y
+0053	005.3 Cranioplasty : opening of sutures	24	1	Y
+0054	005.4 Cranioplasty : restoration of orbital region	25	1	Y
+007	007 Repair of cerebral meninges	26	1	Y
+0071	007.1 Repair of cerebral meninges : lamina cribrosa fistula	27	1	Y
+0072	007.2 Repair of cerebral meninges : meningo encephalocele	28	1	Y
+008	008 Ventricular puncture and anastomosis	29	1	Y
+0081	008.1 Ventricular puncture and anastomosis : drainage	30	1	Y
+0083	008.3 Ventricular puncture and anastomosis : ventriculo-cisternostomy	31	1	Y
+0084	008.4 Ventricular puncture and anastomosis : ventriculo-vascular anastomosis	32	1	Y
+0085	008.5 Ventricular puncture and anastomosis : subcutaneous reservoir	33	1	Y
+009	009 Other operations on skull and meninges	34	1	Y
+0091	009.1 Other operations on skull and meninges : biopsy	35	1	Y
+0092	009.2 Other operations on skull and meninges : fractured skull	36	1	Y
+0095	009.5 Other operations on skull and meninges : meningeal lesion	37	1	Y
+0096	009.6 Other operations on skull and meninges : removal of foreign body	38	1	Y
+013	013 Operations on thalamus and globus pallidus	39	1	Y
+014	014 Other division or destruction of brain tissue	40	1	Y
+015	015 Ventriculography	41	1	Y
+016	016 Revision or irrigation of ventricular shunt	42	1	Y
+017	017 Cranial puncture, not elsewhere classified	43	1	Y
+0171	017.1 Cranial puncture, not elsewhere classified : needle biopsy of brain	44	1	Y
+0172	017.2 Cranial puncture, not elsewhere classified : aspiration (brain substance, abscess)	45	1	Y
+018	018 Cisternal puncture	46	1	Y
+020	020 Laminotomy and laminectomy	47	1	Y
+0201	020.1 Laminotomy and laminectomy : laminotomy	48	1	Y
+0202	020.2 Laminotomy and laminectomy : excision of bone (tumour)	49	1	Y
+0203	020.3 Laminotomy and laminectomy : elevation of depressed bone	50	1	Y
+0204	020.4 Laminotomy and laminectomy : drainage (abscess, haematoma)	51	1	Y
+0205	020.5 Laminotomy and laminectomy : opening of dura, decompression	52	1	Y
+0206	020.6 Laminotomy and laminectomy : biopsy of bone	53	1	Y
+021	021 Open reduction of fracture of spine	54	1	Y
+0211	021.1 Open reduction of fracture of spine : with fixation	55	1	Y
+022	022 Spinal fusion and bone operation	56	1	Y
+0221	022.1 Spinal fusion and bone operation : bone graft	57	1	Y
+0222	022.2 Spinal fusion and bone operation : arthroplasty of spine	58	1	Y
+023	023 Operation on intervertebral disc, not elsewhere classified	59	1	Y
+0231	023.1 Operation on intervertebral disc, not elsewhere classified : excision	60	1	Y
+0232	023.2 Operation on intervertebral disc, not elsewhere classified : with radiculotomy	61	1	Y
+0233	023.3 Operation on intervertebral disc, not elsewhere classified : with bone graft	62	1	Y
+0234	023.4 Operation on intervertebral disc, not elsewhere classified : exploration	63	1	Y
+024	024 Section of intraspinal nerve roots	64	1	Y
+0241	024.1 Section of intraspinal nerve roots : cauda equina	65	1	Y
+025	025 Division of cord or spinal tracts	66	1	Y
+026	026 Extirpation of intraspinal lesion	67	1	Y
+0261	026.1 Extirpation of intraspinal lesion : extramedullary	68	1	Y
+0262	026.2 Extirpation of intraspinal lesion : intradedullary	69	1	Y
+0263	026.3 Extirpation of intraspinal lesion : extrusion technique	70	1	Y
+027	027 Repair of spinal cord and meninges	71	1	Y
+0275	027.5 Repair of spinal cord and meninges : freeing of adhesions	72	1	Y
+028	028 Spinal puncture	73	1	Y
+0281	028.1 Spinal puncture : spinal myelography	74	1	Y
+0282	028.2 Spinal puncture : injection of destructive agent	75	1	Y
+0283	028.3 Spinal puncture : drainage	76	1	Y
+0284	028.4 Spinal puncture : manometry	77	1	Y
+0285	028.5 Spinal puncture : diagnostic, not elsewhere classified	78	1	Y
+0286	028.6 Spinal puncture : cauda equine block	79	1	Y
+029	029 Other operation on spine and contents	80	1	Y
+0291	029.1 Other operation on spine and contents : biopsy of cord or meninges	81	1	Y
+0292	029.2 Other operation on spine and contents : removal of foreign body	82	1	Y
+0293	029.3 Other operation on spine and contents : operation for spinal deformity	83	1	Y
+0295	029.5 Other operation on spine and contents : aspiration (cyst, abscess)	84	1	Y
+0296	029.6 Other operation on spine and contents : neuropacemaker, insertion	85	1	Y
+032	032 Decompression of cranial nerve	86	1	Y
+034	034 Injection of cranial nerve or ganglion	87	1	Y
+0342	034.2 Injection of cranial nerve or ganglion : destructive	88	1	Y
+035	035 Other operations on cranial nerves and ganglia	89	1	Y
+0351	035.1 Other operations on cranial nerves and ganglia : avulsion	90	1	Y
+0352	035.2 Other operations on cranial nerves and ganglia : transection	91	1	Y
+0353	035.3 Other operations on cranial nerves and ganglia : ganglionectomy	92	1	Y
+0355	035.5 Other operations on cranial nerves and ganglia : repair or anastomosis	93	1	Y
+036	036 Sympathectomy	94	1	Y
+0361	036.1 Sympathectomy : cervical	95	1	Y
+0362	036.2 Sympathectomy : stellate	96	1	Y
+0363	036.3 Sympathectomy : lumbar	97	1	Y
+0364	036.4 Sympathectomy : splanchnic, presacral	98	1	Y
+037	037 Injection into sympathetic nerve or ganglion	99	1	Y
+0372	037.2 Injection into sympathetic nerve or ganglion : destructive	100	1	Y
+0373	037.3 Injection into sympathetic nerve or ganglion : para cervical	101	1	Y
+039	039 Other operation on autonomic nervous system	102	1	Y
+0391	039.1 Other operation on autonomic nervous system : biopsy	103	1	Y
+0392	039.2 Other operation on autonomic nervous system : extirpation	104	1	Y
+0393	039.3 Other operation on autonomic nervous system : periaterial sympathetic	105	1	Y
+040	040 Neurectomy and neurotomy	106	1	Y
+0401	040.1 Neurectomy and neurotomy : biopsy	107	1	Y
+0402	040.2 Neurectomy and neurotomy : excision	108	1	Y
+0403	040.3 Neurectomy and neurotomy : section	109	1	Y
+041	041 Decompression of nerve	110	1	Y
+0411	041.1 Decompression of nerve : carpel tunnel	111	1	Y
+0412	041.2 Decompression of nerve : tarsal tunnel	112	1	Y
+043	043 Freeing of adhesions	113	1	Y
+0431	043.1 Freeing of adhesions : exploration, not elsewhere classified	114	1	Y
+045	045 Extirpation of lesion of peripheral nerve	115	1	Y
+046	046 Neuroplasty and neurorrhaphy	116	1	Y
+0461	046.1 Neuroplasty and neurorrhaphy : anastomosis	117	1	Y
+0462	046.2 Neuroplasty and neurorrhaphy : suture	118	1	Y
+0463	046.3 Neuroplasty and neurorrhaphy : transposition	119	1	Y
+048	048 Injection of peripheral nerve	120	1	Y
+0481	048.1 Injection of peripheral nerve : destructive	121	1	Y
+049	049 Other operations on peripheral nerves	122	1	Y
+0492	049.2 Other operations on peripheral nerves : removal of foreign body	123	1	Y
+052	052 Operations on vessels of brain	124	1	Y
+0521	052.1 Operations on vessels of brain : clip or ligation	125	1	Y
+0522	052.2 Operations on vessels of brain : other operations on aneurysm nec	126	1	Y
+0523	052.3 Operations on vessels of brain : excision	127	1	Y
+053	053 Evacuation of haematoma or cyst	128	1	Y
+0531	053.1 Evacuation of haematoma or cyst : subdural	129	1	Y
+0532	053.2 Evacuation of haematoma or cyst : temporal lobe	130	1	Y
+0533	053.3 Evacuation of haematoma or cyst : extradural	131	1	Y
+054	054 Infective lesion of brain	132	1	Y
+0541	054.1 Infective lesion of brain : drainage of abscess	133	1	Y
+055	055 Excision of intracranial lesion	134	1	Y
+0552	055.2 Excision of intracranial lesion : trans-sphenoidal	135	1	Y
+0553	055.3 Excision of intracranial lesion : infra-tentorial approach	136	1	Y
+0554	055.4 Excision of intracranial lesion : frontal approach	137	1	Y
+0555	055.5 Excision of intracranial lesion : cortical excision	138	1	Y
+0556	055.6 Excision of intracranial lesion : hernia	139	1	Y
+057	057 Biopsy of brain	140	1	Y
+059	059 Intracranial operations, not elsewhere classified	141	1	Y
+0591	059.1 Intracranial operations, not elsewhere classified : exploration	142	1	Y
+061	061 Hypophysectomy	143	2	Y
+0611	061.1 Hypophysectomy : paranasal trans-sphenoidal	144	2	Y
+0612	061.2 Hypophysectomy : intracranial trans-frontal	145	2	Y
+062	062 Destruction of pituitary gland or lesion	146	2	Y
+063	063 Other operations related to pituitary or pineal gland	147	2	Y
+0631	063.1 Other operations related to pituitary or pineal gland : pituitary stalk	148	2	Y
+0633	063.3 Other operations related to pituitary or pineal gland : pineal	149	2	Y
+065	065 Partial adrenalectomy	150	2	Y
+066	066 Excision of adrenal gland, not otherwise classified	151	2	Y
+067	067 Bilateral adrenalectomy	152	2	Y
+068	068 Bilateral adrenalectomy and oophorectomy	153	2	Y
+069	069 Other operations on adrenal gland	154	2	Y
+0691	069.1 Other operations on adrenal gland : biopsy	155	2	Y
+070	070 Incision of thyroid field	156	2	Y
+071	071 Partial thyroidectomy	157	2	Y
+0711	071.1 Partial thyroidectomy : biopsy	158	2	Y
+0712	071.2 Partial thyroidectomy : nodule	159	2	Y
+0713	071.3 Partial thyroidectomy : isthmectomy	160	2	Y
+0714	071.4 Partial thyroidectomy : isthmectomy	161	2	Y
+0715	071.5 Partial thyroidectomy : lobectomy	162	2	Y
+0716	071.6 Partial thyroidectomy : hemithyroidectomy	163	2	Y
+072	072 Thyroidectomy, not elsewhere classified	164	2	Y
+0721	072.1 Thyroidectomy, not elsewhere classified : total thyroidectomy	165	2	Y
+0722	072.2 Thyroidectomy, not elsewhere classified : with wide block dissection	166	2	Y
+074	074 Thyroidectomy of aberrant thyroid	167	2	Y
+0741	074.1 Thyroidectomy of aberrant thyroid : substernal thyroid	168	2	Y
+075	075 Other operations on thyroid gland	169	2	Y
+0751	075.1 Other operations on thyroid gland : biopsy, retrosternal	170	2	Y
+076	076 Operations on parathyroid glands	171	2	Y
+0761	076.1 Operations on parathyroid glands : biopsy	172	2	Y
+0763	076.3 Operations on parathyroid glands : partial parathyroidectomy	173	2	Y
+0764	076.4 Operations on parathyroid glands : global parathyroidectomy	174	2	Y
+0765	076.5 Operations on parathyroid glands : transplant	175	2	Y
+077	077 Thymectomy	176	2	Y
+078	078 Other operations on thymus	177	2	Y
+079	079 Other glandular operations, not elsewhere classified	178	2	Y
+0792	079.2 Other glandular operations, not elsewhere classified : carotid body	179	2	Y
+0793	079.3 Other glandular operations, not elsewhere classified : other vascular bodies	180	2	Y
+0794	079.4 Other glandular operations, not elsewhere classified : aortic bodies	181	2	Y
+080	080 Excision of cervical lymph nodes	182	2	Y
+0801	080.1 Excision of cervical lymph nodes : biopsy (scalene node)	183	2	Y
+0802	080.2 Excision of cervical lymph nodes : block dissection	184	2	Y
+0803	080.3 Excision of cervical lymph nodes : radical cervical	185	2	Y
+0806	080.6 Excision of cervical lymph nodes : simple excision	186	2	Y
+081	081 Removal of cervical rib	187	2	Y
+082	082 Operations on arteries in neck, not elsewhere classified	188	2	Y
+0822	082.2 Operations on arteries in neck, not elsewhere classified : embolectomy	189	2	Y
+0823	082.3 Operations on arteries in neck, not elsewhere classified : resection with graft	190	2	Y
+0824	082.4 Operations on arteries in neck, not elsewhere classified : bypass graft	191	2	Y
+0825	082.5 Operations on arteries in neck, not elsewhere classified : implantation of graft	192	2	Y
+0826	082.6 Operations on arteries in neck, not elsewhere classified : resection with reanastomosis	193	2	Y
+0827	082.7 Operations on arteries in neck, not elsewhere classified : suture of vessel	194	2	Y
+083	083 Perfusion of head and neck	195	2	Y
+084	084 Cerebral arteriography	196	2	Y
+085	085 Excision of cyst or fistula	197	2	Y
+0851	085.1 Excision of cyst or fistula : incision thyroglossal tract or duct	198	2	Y
+0852	085.2 Excision of cyst or fistula : excision thyroglossal tract or duct	199	2	Y
+0853	085.3 Excision of cyst or fistula : incision branchial cleft, sinus or fistula	200	2	Y
+0854	085.4 Excision of cyst or fistula : excision branchial cleft, sinus or fistula	201	2	Y
+089	089 Other operations in neck region, not elsewhere classified	202	2	Y
+0891	089.1 Other operations in neck region, not elsewhere classified : drainage of abscess	203	2	Y
+0892	089.2 Other operations in neck region, not elsewhere classified : ligation of vein venous anastomsis	204	2	Y
+0893	089.3 Other operations in neck region, not elsewhere classified : catheterization of vessel, not elsewhere	205	2	Y
+1	1 Operations on thoracic duct	206	1	Y
+100	100 Orbitotomy	208	3	Y
+1001	100.1 Orbitotomy : biopsy of orbit	209	3	Y
+1002	100.2 Orbitotomy : abscess, haematoma	210	3	Y
+1003	100.3 Orbitotomy : removal of foreign body	211	3	Y
+101	101 Exenteration of orbit, not elsewhere classified	212	3	Y
+102	102 Repair of socket	213	3	Y
+103	103 Removal of eyeball	214	3	Y
+104	104 Evisceration of contents of eyeball	215	3	Y
+107	107 Extirpation of lesion of eye or orbit, not elsewhere classified	216	3	Y
+108	108 Orbital implant	217	3	Y
+1081	108.1 Orbital implant : insertion or removal of implant	218	3	Y
+1082	108.2 Orbital implant : re-insertion	219	3	Y
+109	109 Other operation on orbit	220	3	Y
+1091	109.1 Other operation on orbit : injection	221	3	Y
+1094	109.4 Other operation on orbit : open reduction of orbital fracture	222	3	Y
+110	110 Tenotomy or myotomy, eye muscle	223	3	Y
+1101	110.1 Tenotomy or myotomy, eye muscle : oblique muscles	224	3	Y
+1102	110.2 Tenotomy or myotomy, eye muscle : superior or inferior recti	225	3	Y
+112	112 Resection or shortening, eye muscle	226	3	Y
+1121	112.1 Resection or shortening, eye muscle : medial	227	3	Y
+1122	112.2 Resection or shortening, eye muscle : lateral rectus	228	3	Y
+1123	112.3 Resection or shortening, eye muscle : shortening of superior oblique	229	3	Y
+113	113 Advancement and recession of eye muscle, not elsewhere classified	230	3	Y
+1131	113.1 Advancement and recession of eye muscle, not elsewhere classified : advancement	231	3	Y
+1132	113.2 Advancement and recession of eye muscle, not elsewhere classified : recession	232	3	Y
+1133	113.3 Advancement and recession of eye muscle, not elsewhere classified : combined resection and recession	233	3	Y
+1134	113.4 Advancement and recession of eye muscle, not elsewhere classified : combined resection and advanceme	234	3	Y
+114	114 Other operation on eye muscle	235	3	Y
+1141	114.1 Other operation on eye muscle : transplantation, not elsewhere classified	236	3	Y
+1142	114.2 Other operation on eye muscle : muscle slide, lengthening	237	3	Y
+1143	114.3 Other operation on eye muscle : freeing of adhesions	238	3	Y
+1144	114.4 Other operation on eye muscle : excision of lesion	239	3	Y
+1145	114.5 Other operation on eye muscle : suture or repair	240	3	Y
+115	115 Operation on oculomotor nerve	241	3	Y
+117	117 Correction of ptosis	242	3	Y
+1171	117.1 Correction of ptosis : levator muscle operation	243	3	Y
+1172	117.2 Correction of ptosis : use of frontal is muscle	244	3	Y
+1173	117.3 Correction of ptosis : sling operations	245	3	Y
+1174	117.4 Correction of ptosis : use of superior rectus	246	3	Y
+118	118 Canthotomy	247	3	Y
+119	119 Canthoplasty	248	3	Y
+1192	119.2 Canthoplasty : repair epicanthus	249	3	Y
+120	120 Blepharotomy	250	3	Y
+1201	120.1 Blepharotomy : biopsy	251	3	Y
+1202	120.2 Blepharotomy : drainage of abscess (hordoleum, style)	252	3	Y
+121	121 Blepharoplasty and tarsoplasty	253	3	Y
+1211	121.1 Blepharoplasty and tarsoplasty : correction of ectropion	254	3	Y
+1212	121.2 Blepharoplasty and tarsoplasty : skin, amniotic, cartilage graft	255	3	Y
+1213	121.3 Blepharoplasty and tarsoplasty : plastic operation, not elsewhere classified	256	3	Y
+1214	121.4 Blepharoplasty and tarsoplasty : reconstruction	257	3	Y
+1215	121.5 Blepharoplasty and tarsoplasty : correction of entropian	258	3	Y
+1216	121.6 Blepharoplasty and tarsoplasty : grey line slit	259	3	Y
+122	122 Excision of lesion of eyelid or tarsal plate, not elsewhere classified	260	3	Y
+123	123 Blepharorrhapy	261	3	Y
+126	126 Chalazion operations	262	3	Y
+128	128 Suture of eyelids, protective	263	3	Y
+129	129 Other operations on eyelid	264	3	Y
+1293	129.3 Other operations on eyelid : epilation of eye lash	265	3	Y
+131	131 Incision of conjunctiva	266	3	Y
+132	132 Pterygium operation	267	3	Y
+1321	132.1 Pterygium operation : with conjunctival flap	268	3	Y
+1322	132.2 Pterygium operation : transplant	269	3	Y
+134	134 Other excision of lesion of conjunctiva	270	3	Y
+1341	134.1 Other excision of lesion of conjunctiva : biopsy	271	3	Y
+1342	134.2 Other excision of lesion of conjunctiva : grattage, scarification, curettage	272	3	Y
+135	135 Suture of conjunctiva	273	3	Y
+136	136 Plastic and other repair of conjunctiva	274	3	Y
+139	139 Other operation on conjunctiva	275	3	Y
+1391	139.1 Other operation on conjunctiva : removal of embedded foreign body	276	3	Y
+1392	139.2 Other operation on conjunctiva : peritomy	277	3	Y
+1393	139.3 Other operation on conjunctiva : division of adhesions and symblepharon	278	3	Y
+140	140 Keratotomy	279	3	Y
+142	142 Excision and destruction of lesion of cornea	280	3	Y
+143	143 Removal of foreign body in anterior eye	281	3	Y
+1431	143.1 Removal of foreign body in anterior eye : magnetic extraction	282	3	Y
+144	144 Suture of cornea	283	3	Y
+145	145 Keratorplasty	284	3	Y
+1451	145.1 Keratorplasty : lamellar graft	285	3	Y
+1452	145.2 Keratorplasty : whole thickness graft	286	3	Y
+1453	145.3 Keratorplasty : refractive keratopiasty	287	3	Y
+1454	145.4 Keratorplasty : keratoprosthetic implant	288	3	Y
+149	149 Other operation on cornea	289	3	Y
+1491	149.1 Other operation on cornea : biopsy	290	3	Y
+1492	149.2 Other operation on cornea : tattooing	291	3	Y
+150	150 Iridotomy	292	3	Y
+1501	150.1 Iridotomy : iridodialysis	293	3	Y
+1502	150.2 Iridotomy : iridosclerotomy	294	3	Y
+1503	150.3 Iridotomy : removal of foreign body	295	3	Y
+1504	150.4 Iridotomy : transfixation	296	3	Y
+151	151 Iridectomy	297	3	Y
+1512	151.2 Iridectomy : for glaucoma	298	3	Y
+1513	151.3 Iridectomy : optical	299	3	Y
+1514	151.4 Iridectomy : partial iridocyclectomy	300	3	Y
+1517	151.7 Iridectomy : bilateral	301	3	Y
+153	153 Iridoplasty and filtering operations	302	3	Y
+155	155 Other operations on iris	303	3	Y
+1551	155.1 Other operations on iris : excision of lesion	304	3	Y
+1552	155.2 Other operations on iris : stretching,  iridotasis	305	3	Y
+156	156 Cyclodialysis	306	3	Y
+157	157 Destruction of ciliary body	307	3	Y
+1573	157.3 Destruction of ciliary body : goniotomy	308	3	Y
+1574	157.4 Destruction of ciliary body : trabeculectomy	309	3	Y
+158	158 Other operations on anterior chamber	310	3	Y
+1581	158.1 Other operations on anterior chamber : paracentesis	311	3	Y
+1582	158.2 Other operations on anterior chamber : injection	312	3	Y
+159	159 Other operation on iris and ciliary body	313	3	Y
+1591	159.1 Other operation on iris and ciliary body : biopsy	314	3	Y
+1592	159.2 Other operation on iris and ciliary body : excision of prolapsed iris	315	3	Y
+161	161 Sclerectomy, not elsewhere classified	316	3	Y
+162	162 Corneo-scleral trephine and sclerotomy	317	3	Y
+163	163 Buckling procedure for retinal reattachment, not elsewhere classified	318	3	Y
+1631	163.1 Buckling procedure for retinal reattachment, not elsewhere classified : overlay, suture, scleroplast	319	3	Y
+1632	163.2 Buckling procedure for retinal reattachment, not elsewhere classified : scleral imbrication, bucklin	320	3	Y
+1635	163.5 Buckling procedure for retinal reattachment, not elsewhere classified : resection of sclera, cerclag	321	3	Y
+1637	163.7 Buckling procedure for retinal reattachment, not elsewhere classified : with graft or implant	322	3	Y
+164	164 Other operations on sclera	323	3	Y
+1641	164.1 Other operations on sclera : drainage of subretinal fluid release of vitreous traction	324	3	Y
+1642	164.2 Other operations on sclera : suture of wound or injury	325	3	Y
+1643	164.3 Other operations on sclera : repair of staphyloma	326	3	Y
+1644	164.4 Other operations on sclera : scleroplasty	327	3	Y
+165	165 Elevation of choroid	328	3	Y
+166	166 Coagulation of retina or lesion	329	3	Y
+1661	166.1 Coagulation of retina or lesion : photo-coagulation (light)	330	3	Y
+1662	166.2 Coagulation of retina or lesion : chemical diathermy, electrocoagulation	331	3	Y
+1663	166.3 Coagulation of retina or lesion : cryotherapy probe	332	3	Y
+167	167 Extraction of foreign body from eye, not classified elsewhere	333	3	Y
+1671	167.1 Extraction of foreign body from eye, not classified elsewhere : magnetic extraction	334	3	Y
+168	168 Operations on vitreous segment	335	3	Y
+1681	168.1 Operations on vitreous segment : aspiration	336	3	Y
+1682	168.2 Operations on vitreous segment : replacement	337	3	Y
+169	169 Other operations on retina, or choroid	338	3	Y
+1691	169.1 Other operations on retina, or choroid : biopsy of retina or choroid.	339	3	Y
+170	170 Discission of cataract and capsulotomy	340	3	Y
+1701	170.1 Discission of cataract and capsulotomy : anterior lens capsule	341	3	Y
+1702	170.2 Discission of cataract and capsulotomy : posterior lens capsule	342	3	Y
+1703	170.3 Discission of cataract and capsulotomy : discission after cataract	343	3	Y
+172	172 Capsulectomy, not elsewhere classified	344	3	Y
+173	173 Extra-capsular extraction of cataract	345	3	Y
+174	174 Intra-capsular extraction of cataract	346	3	Y
+1741	174.1 Intra-capsular extraction of cataract : forceps extraction	347	3	Y
+1742	174.2 Intra-capsular extraction of cataract : linear extraction	348	3	Y
+1743	174.3 Intra-capsular extraction of cataract : chymotrypsin	349	3	Y
+1744	174.4 Intra-capsular extraction of cataract : suction, ventouse, erisiphake	350	3	Y
+1745	174.5 Intra-capsular extraction of cataract : cryo-extraction	351	3	Y
+176	176 Other extraction of lens, not elsewhere classified	352	3	Y
+178	178 Intra-ocular aphakia implant	353	3	Y
+1781	178.1 Intra-ocular aphakia implant : insertion	354	3	Y
+1782	178.2 Intra-ocular aphakia implant : removal	355	3	Y
+179	179 Other operation on lens	356	3	Y
+1791	179.1 Other operation on lens : biopsy	357	3	Y
+1792	179.2 Other operation on lens : removal of foreign body by magnet	358	3	Y
+1793	179.3 Other operation on lens : removal of foreign body by incision	359	3	Y
+180	180 Operations on lacrimal gland	360	3	Y
+1801	180.1 Operations on lacrimal gland : biopsy of gland	361	3	Y
+1802	180.2 Operations on lacrimal gland : incision, exploration	362	3	Y
+1803	180.3 Operations on lacrimal gland : excision	363	3	Y
+181	181 Dacryocystectomy	364	3	Y
+182	182 Dacryocystorhinostomy	365	3	Y
+183	183 Instrumentation of nasolacrimal duct	366	3	Y
+1831	183.1 Instrumentation of nasolacrimal duct : dilatation	367	3	Y
+184	184 Incision of lacrimal sac	368	3	Y
+185	185 Other operation on lacrimal apparatus	369	3	Y
+1851	185.1 Other operation on lacrimal apparatus : reduction of mucocele	370	3	Y
+1852	185.2 Other operation on lacrimal apparatus : CDCR conjunctiyo-dacryo-cystostomy	371	3	Y
+1853	185.3 Other operation on lacrimal apparatus : enlargement of punctum lacrimale	372	3	Y
+1854	185.4 Other operation on lacrimal apparatus : biopsy of sac	373	3	Y
+187	187 Probing of lacrimal passage	374	3	Y
+189	189 Other operation on eye	375	3	Y
+1891	189.1 Other operation on eye : biopsy of eye, not otherwise stated	376	3	Y
+190	190 Incision of external ear	377	4	Y
+1901	190.1 Incision of external ear : drainage of abscess	378	4	Y
+191	191 Excision and destruction of external ear or lesion	379	4	Y
+192	192 Other operation on external ear	380	4	Y
+1921	192.1 Other operation on external ear : biopsy	381	4	Y
+1924	192.4 Other operation on external ear : repair	382	4	Y
+1925	192.5 Other operation on external ear : reconstruction of meatus	383	4	Y
+1926	192.6 Other operation on external ear : correction of anomaly	384	4	Y
+193	193 Myringotomy and tympanostomy	385	4	Y
+1931	193.1 Myringotomy and tympanostomy : paracentesis	386	4	Y
+1932	193.2 Myringotomy and tympanostomy : injection	387	4	Y
+1933	193.3 Myringotomy and tympanostomy : drainage, insertion of tympanostomy tube	388	4	Y
+1934	193.4 Myringotomy and tympanostomy : exploratory, tympanotomy	389	4	Y
+1936	193.6 Myringotomy and tympanostomy : removal of tympanostomy tube	390	4	Y
+194	194 Middle ear operations, not elsewhere classified	391	4	Y
+1941	194.1 Middle ear operations, not elsewhere classified : repair of drum	392	4	Y
+1942	194.2 Middle ear operations, not elsewhere classified : reconstruction, not elsewhere classified	393	4	Y
+1943	194.3 Middle ear operations, not elsewhere classified : excision of lesion	394	4	Y
+1944	194.4 Middle ear operations, not elsewhere classified : other removal of tissue	395	4	Y
+1946	194.6 Middle ear operations, not elsewhere classified : other tympanoplasty	396	4	Y
+1947	194.7 Middle ear operations, not elsewhere classified : revision of tympanoplasty	397	4	Y
+195	195 Operation on ossicles	398	4	Y
+1951	195.1 Operation on ossicles : stapes mobilisation	399	4	Y
+1952	195.2 Operation on ossicles : stapedectomy	400	4	Y
+1953	195.3 Operation on ossicles : reconstruction of ossicular chain	401	4	Y
+1954	195.4 Operation on ossicles : prosthesis	402	4	Y
+1955	195.5 Operation on ossicles : graft	403	4	Y
+1956	195.6 Operation on ossicles : division of sclerosis	404	4	Y
+1957	195.7 Operation on ossicles : revision of stapedectomy	405	4	Y
+200	200 Incision of mastoid and middle ear	406	4	Y
+2001	200.1 Incision of mastoid and middle ear : antrostomy, (conservative) mastoid	407	4	Y
+2003	200.3 Incision of mastoid and middle ear : post-auricular abscess	408	4	Y
+2004	200.4 Incision of mastoid and middle ear : hypotympanotomy	409	4	Y
+2008	200.8 Incision of mastoid and middle ear : other specified	410	4	Y
+201	201 Mastoidectomy and related bone exposure	411	4	Y
+2011	201.1 Mastoidectomy and related bone exposure : radical (modified) and attico-antrotomy	412	4	Y
+2012	201.2 Mastoidectomy and related bone exposure : zygomatic extension	413	4	Y
+2013	201.3 Mastoidectomy and related bone exposure : lateral sinus exploration	414	4	Y
+2014	201.4 Mastoidectomy and related bone exposure : petrous bone	415	4	Y
+2015	201.5 Mastoidectomy and related bone exposure : removal of outer attic wall	416	4	Y
+202	202 Secondary mastoid operation	417	4	Y
+2021	202.1 Secondary mastoid operation : revision, repair	418	4	Y
+2022	202.2 Secondary mastoid operation : closure of fistula	419	4	Y
+203	203 Fenestration operations	420	4	Y
+2031	203.1 Fenestration operations : with vein graft	421	4	Y
+2032	203.2 Fenestration operations : without	422	4	Y
+2033	203.3 Fenestration operations : re-opening, revision	423	4	Y
+205	205 Operations on nerves in ear	424	4	Y
+206	206 Operations on cochlea	425	4	Y
+207	207 Operations on vestibular apparatus	426	4	Y
+2071	207.1 Operations on vestibular apparatus : injection	427	4	Y
+2072	207.2 Operations on vestibular apparatus : incision drainage	428	4	Y
+2074	207.4 Operations on vestibular apparatus : removal of membrane	429	4	Y
+2075	207.5 Operations on vestibular apparatus : destruction	430	4	Y
+2076	207.6 Operations on vestibular apparatus : endolymphatic decompression	431	4	Y
+2077	207.7 Operations on vestibular apparatus : decompression	432	4	Y
+208	208 Operation of inner ear, not elsewhere classified	433	4	Y
+2082	208.2 Operation of inner ear, not elsewhere classified : labyrinthotomy	434	4	Y
+2083	208.3 Operation of inner ear, not elsewhere classified : labyrinthectomy	435	4	Y
+209	209 Other operations on ear, not elsewhere classified	436	4	Y
+2091	209.1 Other operations on ear, not elsewhere classified : biopsy	437	4	Y
+210	210 Incision of external nose	438	4	Y
+211	211 Incision or destruction of lesion of external nose	439	4	Y
+2111	211.1 Incision or destruction of lesion of external nose : incision	440	4	Y
+2112	211.2 Incision or destruction of lesion of external nose : excision	441	4	Y
+212	212 Incision of septum or nasal wall	442	4	Y
+213	213 Sub-mucous resection of septum	443	4	Y
+214	214 Other operation on nasal septum	444	4	Y
+2141	214.1 Other operation on nasal septum : implant, prosthetic material	445	4	Y
+2142	214.2 Other operation on nasal septum : graft, repair	446	4	Y
+2143	214.3 Other operation on nasal septum : closure of perforation	447	4	Y
+215	215 Turbinectomy	448	4	Y
+216	216 Polypectomy	449	4	Y
+217	217 Excision of other lesions of nose and face	450	4	Y
+2171	217.1 Excision of other lesions of nose and face : adhesions, atresia (choanal)	451	4	Y
+2172	217.2 Excision of other lesions of nose and face : sequestrum	452	4	Y
+2173	217.3 Excision of other lesions of nose and face : lesion of facial bone	453	4	Y
+2174	217.4 Excision of other lesions of nose and face : excision with bone graft	454	4	Y
+2175	217.5 Excision of other lesions of nose and face : excision encephalocele (nasal)	455	4	Y
+219	219 Reduction of fracture of nose and face	456	4	Y
+2194	219.4 Reduction of fracture of nose and face : nasal bone	457	4	Y
+2195	219.5 Reduction of fracture of nose and face : malar bone	458	4	Y
+2196	219.6 Reduction of fracture of nose and face : zygomatic arch	459	4	Y
+220	220 Plastic repair of nose	460	4	Y
+2201	220.1 Plastic repair of nose : osteoplasty facial bone of cartilage, bone	461	4	Y
+221	221 Haemostasis, nasal cavity	462	4	Y
+222	222 Treatment of lesion of nasal mucosa	463	4	Y
+2221	222.1 Treatment of lesion of nasal mucosa : of turbinal bones	464	4	Y
+223	223 Operation on eustachian canal	465	4	Y
+2231	223.1 Operation on eustachian canal : intubation, insufflation	466	4	Y
+224	224 Other operations on nose and face	467	4	Y
+2241	224.1 Other operations on nose and face : biopsy	468	4	Y
+2242	224.2 Other operations on nose and face : incision of facial bones	469	4	Y
+2243	224.3 Other operations on nose and face : other operations nec facial bones	470	4	Y
+225	225 Puncture of maxillary antrum	471	4	Y
+226	226 Operative drainage of maxillary antrum	472	4	Y
+2261	226.1 Operative drainage of maxillary antrum : intranasal	473	4	Y
+2262	226.2 Operative drainage of maxillary antrum : external (canine fosse) approach	474	4	Y
+227	227 Other operation on maxillary bone and antrum	475	4	Y
+2271	227.1 Other operation on maxillary bone and antrum : excision of lesion	476	4	Y
+2272	227.2 Other operation on maxillary bone and antrum : excision of maxilla	477	4	Y
+228	228 Drainage or excision nasal sinus, not elsewhere classified	478	4	Y
+2281	228.1 Drainage or excision nasal sinus, not elsewhere classified : drainage: frontal	479	4	Y
+2282	228.2 Drainage or excision nasal sinus, not elsewhere classified : drainage: ethmoidal, sphenoidal	480	4	Y
+2283	228.3 Drainage or excision nasal sinus, not elsewhere classified : excision: frontal	481	4	Y
+2284	228.4 Drainage or excision nasal sinus, not elsewhere classified : excision: ethmoidal, sphenoidal	482	4	Y
+2285	228.5 Drainage or excision nasal sinus, not elsewhere classified : biopsy of sinus	483	4	Y
+229	229 Operation on nasal sinus, not elsewhere classified	484	4	Y
+2291	229.1 Operation on nasal sinus, not elsewhere classified : enlargement of fronto-nasal duct	485	4	Y
+2292	229.2 Operation on nasal sinus, not elsewhere classified : antro-buccal closure	486	4	Y
+2293	229.3 Operation on nasal sinus, not elsewhere classified : elevation of fracture of bone	487	4	Y
+230	230 Incision of nasopharynx or tonsil	488	4	Y
+2301	230.1 Incision of nasopharynx or tonsil : peritonsillar abscess, tonsillar abscess	489	4	Y
+2302	230.2 Incision of nasopharynx or tonsil : retro-pharyngeal abscess	490	4	Y
+231	231 Tonsillectomy by dissection	491	4	Y
+232	232 Tonsillectomy by guillotine	492	4	Y
+233	233 Tonsillectomy with adenoidectomy, not elsewhere classified	493	4	Y
+2331	233.1 Tonsillectomy with adenoidectomy, not elsewhere classified : dissection	494	4	Y
+2332	233.2 Tonsillectomy with adenoidectomy, not elsewhere classified : guillotine	495	4	Y
+234	234 Other tonsillectomy	496	4	Y
+2341	234.1 Other tonsillectomy : removal of tonsil tag	497	4	Y
+2342	234.2 Other tonsillectomy : tonsillectomy, not otherwise stated	498	4	Y
+2343	234.3 Other tonsillectomy : lingual tonsil removal	499	4	Y
+235	235 Adenoidectomy, not otherwise stated	500	4	Y
+236	236 Other operations on tonsil	501	4	Y
+2361	236.1 Other operations on tonsil : removal of foreign body	502	4	Y
+2362	236.2 Other operations on tonsil : biopsy	503	4	Y
+239	239 Other operation on nasopharynx	504	4	Y
+2391	239.1 Other operation on nasopharynx : excision of lesion	505	4	Y
+2392	239.2 Other operation on nasopharynx : haemostasis (tonsil haemorrhage)	506	4	Y
+240	240 Laryngotomy	507	4	Y
+241	241 Laryngectomy	508	4	Y
+2411	241.1 Laryngectomy : partial resection	509	4	Y
+2412	241.2 Laryngectomy : radical	510	4	Y
+2413	241.3 Laryngectomy : complete	511	4	Y
+2415	241.5 Laryngectomy : hemilaryngectomy	512	4	Y
+242	242 Plastic repair of larynx or trachea	513	4	Y
+2423	242.3 Plastic repair of larynx or trachea : larynx	514	4	Y
+2424	242.4 Plastic repair of larynx or trachea : trachea	515	4	Y
+2428	242.8 Plastic repair of larynx or trachea : reconstruction of larynx	516	4	Y
+243	243 Local excision or destruction of lesion of larynx	517	4	Y
+244	244 Laryngoscopic procedures, not elsewhere classified	518	4	Y
+2441	244.1 Laryngoscopic procedures, not elsewhere classified : removal of foreign body	519	4	Y
+245	245 Intubat ion of larynx	520	4	Y
+2453	245.3 Intubat ion of larynx : radiography	521	4	Y
+246	246 Other operation on larynx and trachea	522	4	Y
+2461	246.1 Other operation on larynx and trachea : biopsy	523	4	Y
+2462	246.2 Other operation on larynx and trachea : punch resection	524	4	Y
+2463	246.3 Other operation on larynx and trachea : injection	525	4	Y
+2466	246.6 Other operation on larynx and trachea : repair	526	4	Y
+247	247 Tracheotomy (temporary)	527	4	Y
+248	248 Tracheostomy and laryngostomy	528	4	Y
+2481	248.1 Tracheostomy and laryngostomy : external intubation	529	4	Y
+2484	248.4 Tracheostomy and laryngostomy : permanent stoma	530	4	Y
+2486	248.6 Tracheostomy and laryngostomy : replacement of tube	531	4	Y
+2487	248.7 Tracheostomy and laryngostomy : removal of tracheostomy tube	532	4	Y
+249	249 Other operation on trachea	533	4	Y
+2491	249.1 Other operation on trachea : biopsy	534	4	Y
+2492	249.2 Other operation on trachea : excision of lesion trachea	535	4	Y
+2493	249.3 Other operation on trachea : reconstruction	536	4	Y
+2494	249.4 Other operation on trachea : other repair	537	4	Y
+250	250 Incision of gum or alveolus	538	5	Y
+2501	250.1 Incision of gum or alveolus : drainage of abscess	539	5	Y
+251	251 Simple dental extraction	540	5	Y
+252	252 Surgical extraction of tooth	541	5	Y
+2521	252.1 Surgical extraction of tooth : malposed or impacted tooth	542	5	Y
+2522	252.2 Surgical extraction of tooth : buried root	543	5	Y
+253	253 Endodontic procedures	544	5	Y
+2531	253.1 Endodontic procedures : apicectomy	545	5	Y
+2532	253.2 Endodontic procedures : root canal therapy	546	5	Y
+2533	253.3 Endodontic procedures : pulp capping	547	5	Y
+254	254 Pre-prosthetic surgery	548	5	Y
+2541	254.1 Pre-prosthetic surgery : alveolectomy and alveoplasty	549	5	Y
+2542	254.2 Pre-prosthetic surgery : preparation of alveolar ridge	550	5	Y
+2543	254.3 Pre-prosthetic surgery : vestibuloplasty	551	5	Y
+2544	254.4 Pre-prosthetic surgery : bone graft	552	5	Y
+2545	254.5 Pre-prosthetic surgery : implant	553	5	Y
+255	255 Repair of tooth	554	5	Y
+2551	255.1 Repair of tooth : crown	555	5	Y
+2552	255.2 Repair of tooth : reimplanation, transplantation	556	5	Y
+2553	255.3 Repair of tooth : inlay (gold)	557	5	Y
+2554	255.4 Repair of tooth : prosthetic implant	558	5	Y
+2555	255.5 Repair of tooth : filling, permanent	559	5	Y
+2556	255.6 Repair of tooth : implant, endosseous (dental)	560	5	Y
+256	256 Orthodontic procedures	561	5	Y
+2561	256.1 Orthodontic procedures : external wiring and appliances	562	5	Y
+2562	256.2 Orthodontic procedures : surgical exposure of tooth	563	5	Y
+2563	256.3 Orthodontic procedures : insertion of orthodontic appliance	564	5	Y
+257	257 Reduction of fracture of jaw	565	5	Y
+2572	257.2 Reduction of fracture of jaw : open reduction nec	566	5	Y
+2573	257.3 Reduction of fracture of jaw : closed reduction jaw	567	5	Y
+2574	257.4 Reduction of fracture of jaw : reduction of alveolar fracture	568	5	Y
+2575	257.5 Reduction of fracture of jaw : internal fixation	569	5	Y
+2576	257.6 Reduction of fracture of jaw : traction	570	5	Y
+2577	257.7 Reduction of fracture of jaw : superficial appliances	571	5	Y
+2578	257.8 Reduction of fracture of jaw : manipulation	572	5	Y
+258	258 Extirpation of lesion of gums or jaw	573	5	Y
+2581	258.1 Extirpation of lesion of gums or jaw : gums	574	5	Y
+2582	258.2 Extirpation of lesion of gums or jaw : bone of jaws	575	5	Y
+259	259 Other operations on teeth, gums and jaws	576	5	Y
+2591	259.1 Other operations on teeth, gums and jaws : incision and fracture of jaw	577	5	Y
+2593	259.3 Other operations on teeth, gums and jaws : plastic repair, implant, not elsewhere classified	578	5	Y
+2594	259.4 Other operations on teeth, gums and jaws : gingivoplasty	579	5	Y
+2595	259.5 Other operations on teeth, gums and jaws : biopsy	580	5	Y
+2596	259.6 Other operations on teeth, gums and jaws : haemostasis, plugging of socket	581	5	Y
+2597	259.7 Other operations on teeth, gums and jaws : insertion of removable dentition	582	5	Y
+260	260 Operation for buccal tie	583	5	Y
+2601	260.1 Operation for buccal tie : tongue, frenum	584	5	Y
+2602	260.2 Operation for buccal tie : cheek or gum adhesions	585	5	Y
+261	261 Incision of tongue	586	5	Y
+2611	261.1 Incision of tongue : biopsy of tongue	587	5	Y
+2612	261.2 Incision of tongue : glossotomy, not elsewhere classified	588	5	Y
+262	262 Excision and destruction of tongue or lesion	589	5	Y
+2621	262.1 Excision and destruction of tongue or lesion : partial glossectomy	590	5	Y
+2622	262.2 Excision and destruction of tongue or lesion : en bloc resection	591	5	Y
+2623	262.3 Excision and destruction of tongue or lesion : total glossectomy	592	5	Y
+2624	262.4 Excision and destruction of tongue or lesion : excision of lesion	593	5	Y
+2625	262.5 Excision and destruction of tongue or lesion : frenuectomy	594	5	Y
+2626	262.6 Excision and destruction of tongue or lesion : destruction of lesion	595	5	Y
+263	263 Suture and repair of tongue	596	5	Y
+264	264 Other operations on tongue	597	5	Y
+265	265 Repair of palate	598	5	Y
+2651	265.1 Repair of palate : palatoplasty	599	5	Y
+2652	265.2 Repair of palate : including pharyngoplasty	600	5	Y
+2653	265.3 Repair of palate : plastic	601	5	Y
+2654	265.4 Repair of palate : with graft	602	5	Y
+266	266 Excision of soft tissue lesions of mouth, not elsewhere classified	603	5	Y
+2661	266.1 Excision of soft tissue lesions of mouth, not elsewhere classified : biopsy of lip, mouth	604	5	Y
+2663	266.3 Excision of soft tissue lesions of mouth, not elsewhere classified : excision of lesion of palate	605	5	Y
+267	267 Other operation on mouth and palate	606	5	Y
+2671	267.1 Other operation on mouth and palate : biopsy - fauces, palate	607	5	Y
+2672	267.2 Other operation on mouth and palate : incision of abscess, not elsewhere classified	608	5	Y
+2673	267.3 Other operation on mouth and palate : incision of palate	609	5	Y
+2675	267.5 Other operation on mouth and palate : operations on uvula	610	5	Y
+2677	267.7 Other operation on mouth and palate : other repair of mouth	611	5	Y
+270	270 Resection of salivary gland	612	5	Y
+2701	270.1 Resection of salivary gland : total parotidectomy (radical)	613	5	Y
+2702	270.2 Resection of salivary gland : conservative parotidectomy	614	5	Y
+271	271 Excision of lesion of salivary gland	615	5	Y
+2711	271.1 Excision of lesion of salivary gland : parotid	616	5	Y
+272	272 Removal of salivary calculus	617	5	Y
+2721	272.1 Removal of salivary calculus : parotid duct by incision	618	5	Y
+2722	272.2 Removal of salivary calculus : parotid duct by manipulation	619	5	Y
+2723	272.3 Removal of salivary calculus : submandibular duct by incision	620	5	Y
+2724	272.4 Removal of salivary calculus : submandibular duct by manipulation	621	5	Y
+274	274 Incision, salivary gland	622	5	Y
+2742	274.2 Incision, salivary gland : slit salivary orifice	623	5	Y
+275	275 Other operations on salivary gland and duct	624	5	Y
+2751	275.1 Other operations on salivary gland and duct : closure of fistula	625	5	Y
+2752	275.2 Other operations on salivary gland and duct : sialography	626	5	Y
+2753	275.3 Other operations on salivary gland and duct : dilation of duct	627	5	Y
+2754	275.4 Other operations on salivary gland and duct : biopsy	628	5	Y
+2755	275.5 Other operations on salivary gland and duct : other repair	629	5	Y
+281	281 Pharyngotomy	630	5	Y
+284	284 Pharyngectomy and excision of lesion	631	5	Y
+2841	284.1 Pharyngectomy and excision of lesion : partial pharyngectomy	632	5	Y
+2842	284.2 Pharyngectomy and excision of lesion : excision of lesion	633	5	Y
+2843	284.3 Pharyngectomy and excision of lesion : total pharyngectomy	634	5	Y
+2844	284.4 Pharyngectomy and excision of lesion : excision of branchial cleft structures	635	5	Y
+286	286 Reconstruction and repair of pharynx	636	5	Y
+2861	286.1 Reconstruction and repair of pharynx : suture	637	5	Y
+2862	286.2 Reconstruction and repair of pharynx : plastic reconstruction, not elsewhere classified	638	5	Y
+2864	286.4 Reconstruction and repair of pharynx : bypass operation	639	5	Y
+2865	286.5 Reconstruction and repair of pharynx : repair of fistula	640	5	Y
+288	288 Biopsy of pharynx	641	5	Y
+289	289 Other operations on pharynx	642	5	Y
+2891	289.1 Other operations on pharynx : destruction of lesion	643	5	Y
+2892	289.2 Other operations on pharynx : dilation	644	5	Y
+2893	289.3 Other operations on pharynx : division of adhesions, pharyngeal web	645	5	Y
+2894	289.4 Other operations on pharynx : removal of foreign body	646	5	Y
+290	290 Incision of oesophagus	647	6	Y
+2901	290.1 Incision of oesophagus : cardio(myo)tomy (with vagotomy)	648	6	Y
+291	291 Oesophagectomy	649	6	Y
+2911	291.1 Oesophagectomy : extirpation of lesion	650	6	Y
+2912	291.2 Oesophagectomy : gastro-oesophagectomy (with anastomosis)	651	6	Y
+292	292 Oesophagostomy and anastomosis	652	6	Y
+2921	292.1 Oesophagostomy and anastomosis : fistulization	653	6	Y
+2922	292.2 Oesophagostomy and anastomosis : intrathoracic anastomosis	654	6	Y
+2923	292.3 Oesophagostomy and anastomosis : extrathoracic anastomosis	655	6	Y
+2928	292.8 Oesophagostomy and anastomosis : artificial oesophagus	656	6	Y
+293	293 Plastic operation on oesophagus	657	6	Y
+294	294 Oesophagoscopy	658	6	Y
+2941	294.1 Oesophagoscopy : with biopsy	659	6	Y
+2942	294.2 Oesophagoscopy : via abdomen	660	6	Y
+295	295 Intubation of oesophagus	661	6	Y
+296	296 Dilation of oesophagus	662	6	Y
+298	298 Operation upon varices of oesophagus	663	6	Y
+2981	298.1 Operation upon varices of oesophagus : ligation, injection	664	6	Y
+2982	298.2 Operation upon varices of oesophagus : injection of sclerosing agents	665	6	Y
+299	299 Other operations upon oesophagus	666	6	Y
+2991	299.1 Other operations upon oesophagus : removal of foreign body	667	6	Y
+300	300 Incision and puncture of heart	668	6	Y
+3001	300.1 Incision and puncture of heart : pericardiocentesis	669	6	Y
+3002	300.2 Incision and puncture of heart : intracardiac injection cardiocentesis	670	6	Y
+304	304 Operations affecting myocardium	671	6	Y
+3041	304.1 Operations affecting myocardium : coronary endarterectomy	672	6	Y
+3042	304.2 Operations affecting myocardium : revascularization (poudrage)	673	6	Y
+3043	304.3 Operations affecting myocardium : coronary anastomosis or graft	674	6	Y
+3044	304.4 Operations affecting myocardium : coronary sympathectomy	675	6	Y
+305	305 Insertion of pace-maker	676	6	Y
+3051	305.1 Insertion of pace-maker : intravenous route	677	6	Y
+3052	305.2 Insertion of pace-maker : implanted	678	6	Y
+3053	305.3 Insertion of pace-maker : replacement	679	6	Y
+3054	305.4 Insertion of pace-maker : replacement of implanted battery	680	6	Y
+306	306 Catheter manipulations, not elsewhere classified	681	6	Y
+3061	306.1 Catheter manipulations, not elsewhere classified : septostomy	682	6	Y
+3062	306.2 Catheter manipulations, not elsewhere classified : plugging ductus arteriosus	683	6	Y
+307	307 Operations on pericardium and epicardium	684	6	Y
+3071	307.1 Operations on pericardium and epicardium : pericardiectomy	685	6	Y
+3072	307.2 Operations on pericardium and epicardium : excision of lesion tissue (cyst)	686	6	Y
+3073	307.3 Operations on pericardium and epicardium : freeing of adhesions	687	6	Y
+3074	307.4 Operations on pericardium and epicardium : pericardial irritation	688	6	Y
+309	309 Other operations on heart, not elsewhere classified	689	6	Y
+3092	309.2 Other operations on heart, not elsewhere classified : catheter manipulation, not elsewhere classifie	690	6	Y
+3093	309.3 Other operations on heart, not elsewhere classified : DC shock	691	6	Y
+3094	309.4 Other operations on heart, not elsewhere classified : cardiopulmonary bypass	692	6	Y
+3095	309.5 Other operations on heart, not elsewhere classified : repair of heart or pericardium	693	6	Y
+310	310 Combined operations on open heart, not elsewhere classified	694	6	Y
+3101	310.1 Combined operations on open heart, not elsewhere classified : total correction of Fallot's defect	695	6	Y
+311	311 Closed valvotomy	696	6	Y
+3111	311.1 Closed valvotomy : mitral valve	697	6	Y
+3112	311.2 Closed valvotomy : aortic valve	698	6	Y
+3113	311.3 Closed valvotomy : tricuspid valve	699	6	Y
+3114	311.4 Closed valvotomy : pulmonary valve	700	6	Y
+3115	311.5 Closed valvotomy : multiple valves	701	6	Y
+312	312 Open valvotomy	702	6	Y
+3121	312.1 Open valvotomy : mitral valve	703	6	Y
+3122	312.2 Open valvotomy : aortic valve	704	6	Y
+3123	312.3 Open valvotomy : tricuspid valve	705	6	Y
+3124	312.4 Open valvotomy : pulmonary valve	706	6	Y
+3125	312.5 Open valvotomy : multiple valves	707	6	Y
+313	313 Heart valve replacement	708	6	Y
+3131	313.1 Heart valve replacement : mitral valve	709	6	Y
+3132	313.2 Heart valve replacement : aortic valve	710	6	Y
+3133	313.3 Heart valve replacement : tricuspid valve	711	6	Y
+3134	313.4 Heart valve replacement : pulmonary valve	712	6	Y
+3135	313.5 Heart valve replacement : multiple valves	713	6	Y
+314	314 Other valvuloplasty	714	6	Y
+3141	314.1 Other valvuloplasty : mitral valve	715	6	Y
+3142	314.2 Other valvuloplasty : aortic valve	716	6	Y
+3143	314.3 Other valvuloplasty : tricuspid valve	717	6	Y
+3144	314.4 Other valvuloplasty : pulmonary valve	718	6	Y
+3145	314.5 Other valvuloplasty : multiple valves	719	6	Y
+315	315 Operations on septum within heart cavity	720	6	Y
+3151	315.1 Operations on septum within heart cavity : production of septal defect, septotomy	721	6	Y
+3152	315.2 Operations on septum within heart cavity : repair of septal defect, not elsewhere classified	722	6	Y
+3153	315.3 Operations on septum within heart cavity : repair of septum with graft	723	6	Y
+3154	315.4 Operations on septum within heart cavity : insertion of prosthesis	724	6	Y
+317	317 Operations on heart walls, not elsewhere classified	725	6	Y
+3171	317.1 Operations on heart walls, not elsewhere classified : excision of aneurysm or tumour	726	6	Y
+3172	317.2 Operations on heart walls, not elsewhere classified : repair of coronary A-V fistula	727	6	Y
+3173	317.3 Operations on heart walls, not elsewhere classified : atrial appendectomy	728	6	Y
+319	319 Other operations on open heart	729	6	Y
+3191	319.1 Other operations on open heart : cadaver heart transplant	730	6	Y
+3192	319.2 Other operations on open heart : heart assist system	731	6	Y
+320	320 Incision	732	6	Y
+3201	320.1 Incision : embolectomy	733	6	Y
+3202	320.2 Incision : endarterectomy	734	6	Y
+321	321 Repair of intra-thoracic aneurysm	735	6	Y
+3211	321.1 Repair of intra-thoracic aneurysm : excision	736	6	Y
+3212	321.2 Repair of intra-thoracic aneurysm : repair	737	6	Y
+3213	321.3 Repair of intra-thoracic aneurysm : wiring	738	6	Y
+3214	321.4 Repair of intra-thoracic aneurysm : graft (venous)	739	6	Y
+3215	321.5 Repair of intra-thoracic aneurysm : prosthesis	740	6	Y
+322	322 Clamp or band, ligature or division	741	6	Y
+3221	322.1 Clamp or band, ligature or division : ductus arteriosus	742	6	Y
+3222	322.2 Clamp or band, ligature or division : pulmonary artery	743	6	Y
+323	323 Arterial anastomosis	744	6	Y
+3231	323.1 Arterial anastomosis : systemic-pulmonary	745	6	Y
+324	324 Venous anastomosis	746	6	Y
+3241	324.1 Venous anastomosis : superior vena cava to pulmonary artery	747	6	Y
+325	325 Graft for repair of vessel	748	6	Y
+3251	325.1 Graft for repair of vessel : excision of coarctation	749	6	Y
+3252	325.2 Graft for repair of vessel : aortic replacement	750	6	Y
+326	326 Other plastic repair of intra-thoracic vessel	751	6	Y
+329	329 Other operations on intra-thoracic vessel	752	6	Y
+3291	329.1 Other operations on intra-thoracic vessel : aortography	753	6	Y
+330	330 Incision or puncture of chest wall	754	6	Y
+3301	330.1 Incision or puncture of chest wall : thoracocentesis, not otherwise stated	755	6	Y
+3302	330.2 Incision or puncture of chest wall : aspiration (air, fluid)	756	6	Y
+3303	330.3 Incision or puncture of chest wall : drainage of pleural cavity (empyema)	757	6	Y
+3304	330.4 Incision or puncture of chest wall : thoracoscopy	758	6	Y
+3305	330.5 Incision or puncture of chest wall : therapeutic pneumothorax	759	6	Y
+331	331 Resection of rib	760	6	Y
+332	332 Thoracoplasty	761	6	Y
+3321	332.1 Thoracoplasty : phrenic avulsion	762	6	Y
+3322	332.2 Thoracoplasty : plombage	763	6	Y
+3323	332.3 Thoracoplasty : freeing of adhesions	764	6	Y
+333	333 Repair of chest wall	765	6	Y
+3331	333.1 Repair of chest wall : haemostasis	766	6	Y
+3332	333.2 Repair of chest wall : correction of pectus carinatus	767	6	Y
+334	334 Operations on diaphragm, not elsewhere classified	768	6	Y
+3341	334.1 Operations on diaphragm, not elsewhere classified : incision	769	6	Y
+3342	334.2 Operations on diaphragm, not elsewhere classified : excision of lesion	770	6	Y
+3343	334.3 Operations on diaphragm, not elsewhere classified : repair of diaphragm	771	6	Y
+335	335 Operations of mediastinum	772	6	Y
+3351	335.1 Operations of mediastinum : mediastinoscopy, not otherwise specified	773	6	Y
+3352	335.2 Operations of mediastinum : mediastinotomy	774	6	Y
+3353	335.3 Operations of mediastinum : excision or destruction of lesion	775	6	Y
+3354	335.4 Operations of mediastinum : biopsy	776	6	Y
+336	336 Operations upon pleura	777	6	Y
+3361	336.1 Operations upon pleura : decortication (thoracic)	778	6	Y
+3362	336.2 Operations upon pleura : pleurodesis	779	6	Y
+3364	336.4 Operations upon pleura : other pleurectomy	780	6	Y
+337	337 Repair of diaphragmatic hernia (thoracic approach)	781	6	Y
+338	338 Open reduction of fracture of rib or sternum	782	6	Y
+339	339 Other operation on chest	783	6	Y
+3391	339.1 Other operation on chest : biopsy	784	6	Y
+3392	339.2 Other operation on chest : transthoracic spinal fusion	785	6	Y
+3397	339.7 Other operation on chest : lung transplant	786	6	Y
+340	340 Bronchoscopy with biopsy	787	6	Y
+341	341 Bronchoscopy, not elsewhere classified	788	6	Y
+3411	341.1 Bronchoscopy, not elsewhere classified : aspiration	789	6	Y
+3412	341.2 Bronchoscopy, not elsewhere classified : catheterization	790	6	Y
+3413	341.3 Bronchoscopy, not elsewhere classified : removal of foreign body	791	6	Y
+342	342 Incision or puncture of lung	792	6	Y
+3421	342.1 Incision or puncture of lung : exploration	793	6	Y
+3422	342.2 Incision or puncture of lung : removal of foreign body, not elsewhere	794	6	Y
+3423	342.3 Incision or puncture of lung : drainage of abscess	795	6	Y
+3424	342.4 Incision or puncture of lung : puncture of lung	796	6	Y
+343	343 Excision md destruction of lesion of lung	797	6	Y
+3432	343.2 Excision md destruction of lesion of lung : resection of bulla, of cyst	798	6	Y
+344	344 Lobectomy	799	6	Y
+3441	344.1 Lobectomy : segmental, partial	800	6	Y
+3442	344.2 Lobectomy : lobectomy, removal of one lobe	801	6	Y
+3443	344.3 Lobectomy : bilateral	802	6	Y
+345	345 Pneumonectomy	803	6	Y
+3452	345.2 Pneumonectomy : standard, complete	804	6	Y
+3453	345.3 Pneumonectomy : radical, with mediastinal dissection	805	6	Y
+3454	345.4 Pneumonectomy : extended, with removal of chest wall	806	6	Y
+347	347 Operations upon bronchus, not elsewhere classified	807	6	Y
+3471	347.1 Operations upon bronchus, not elsewhere classified : bronchotomy, exploratory (external approach)	808	6	Y
+3472	347.2 Operations upon bronchus, not elsewhere classified : dilation	809	6	Y
+3473	347.3 Operations upon bronchus, not elsewhere classified : closure of fistula	810	6	Y
+3474	347.4 Operations upon bronchus, not elsewhere classified : biopsy	811	6	Y
+3475	347.5 Operations upon bronchus, not elsewhere classified : ligature	812	6	Y
+3477	347.7 Operations upon bronchus, not elsewhere classified : plastic repair	813	6	Y
+348	348 Excision and destruction of bronchus or lesion	814	6	Y
+3483	348.3 Excision and destruction of bronchus or lesion : local excision or destruction	815	6	Y
+3485	348.5 Excision and destruction of bronchus or lesion : wide excision	816	6	Y
+349	349 Other operations on lung	817	6	Y
+3491	349.1 Other operations on lung : percutaneous biopsy of lung, not elsewhere classified	818	6	Y
+3492	349.2 Other operations on lung : pleurectomy, decortication	819	6	Y
+3493	349.3 Other operations on lung : obliteration of cavity	820	6	Y
+3494	349.4 Other operations on lung : ligation of bulla	821	6	Y
+380	380 Incision into breast	822	7	Y
+3801	380.1 Incision into breast : drainage of abscess	823	7	Y
+381	381 Partial mastectomy	824	7	Y
+3811	381.1 Partial mastectomy : excision of lesion	825	7	Y
+382	382 Mastectomy, not elsewhere classified	826	7	Y
+3821	382.1 Mastectomy, not elsewhere classified : simple mastectomy	827	7	Y
+383	383 Extended simple mastectomy	828	7	Y
+384	384 Radical mastectomy	829	7	Y
+385	385 Extended radical mastectomy	830	7	Y
+386	386 Plastic operation on breast, not elsewhere classified	831	7	Y
+3861	386.1 Plastic operation on breast, not elsewhere classified : reduction mammoplasty	832	7	Y
+3862	386.2 Plastic operation on breast, not elsewhere classified : augmentation mammoplasty	833	7	Y
+3863	386.3 Plastic operation on breast, not elsewhere classified : reconstruction after mastectomy, prosthesis	834	7	Y
+3864	386.4 Plastic operation on breast, not elsewhere classified : skin graft	835	7	Y
+3866	386.6 Plastic operation on breast, not elsewhere classified : mastopexy	836	7	Y
+387	387 Biopsy of breast	837	7	Y
+388	388 Operation upon nipple	838	7	Y
+3881	388.1 Operation upon nipple : excision	839	7	Y
+3882	388.2 Operation upon nipple : release of retraction	840	7	Y
+3883	388.3 Operation upon nipple : resection of ducts lesion	841	7	Y
+389	389 Other operations on breast	842	7	Y
+3891	389.1 Other operations on breast : aspiration of breast	843	7	Y
+3893	389.3 Other operations on breast : injection of duct	844	7	Y
+400	400 Superficial operation of abdominal wall	845	8	Y
+4001	400.1 Superficial operation of abdominal wall : biopsy	846	8	Y
+4002	400.2 Superficial operation of abdominal wall : drainage of abscess	847	8	Y
+401	401 Paracentesis abdomini	848	8	Y
+4011	401.1 Paracentesis abdomini : laparoscopy, peritoneoscopy	849	8	Y
+4012	401.2 Paracentesis abdomini : injection of gas	850	8	Y
+4013	401.3 Paracentesis abdomini : peritoneal dialysis	851	8	Y
+402	402 Laparotomy	852	8	Y
+4021	402.1 Laparotomy : drainage of abscess, intra-abdominal	853	8	Y
+4022	402.2 Laparotomy : biopsy (abdominal) (peritoneal)	854	8	Y
+4023	402.3 Laparotomy : exploratory	855	8	Y
+4024	402.4 Laparotomy : removal of foreign body	856	8	Y
+403	403 Reopening of abdominal wound	857	8	Y
+404	404 Division and resection of omentum and bands	858	8	Y
+405	405 Other operations on omentum and mesentery	859	8	Y
+4051	405.1 Other operations on omentum and mesentery : excision	860	8	Y
+406	406 Repair of abdominal wall	861	8	Y
+4061	406.1 Repair of abdominal wall : suture of abdominal wall	862	8	Y
+4062	406.2 Repair of abdominal wall : secondary suture, re-suture	863	8	Y
+408	408 Destruction of lesion of peritoneum	864	8	Y
+409	409 Other operations on abdominal wall and peritoneum	865	8	Y
+4091	409.1 Other operations on abdominal wall and peritoneum : omphalectomy, repair of umbilicua	866	8	Y
+4092	409.2 Other operations on abdominal wall and peritoneum : incision rectroperitoneal, urachalcyst	867	8	Y
+4093	409.3 Other operations on abdominal wall and peritoneum : excision of lesion	868	8	Y
+4094	409.4 Other operations on abdominal wall and peritoneum : foreign body	869	8	Y
+410	410 Relief of strangulated inguinal hernia	870	8	Y
+4101	410.1 Relief of strangulated inguinal hernia : exteriorization	871	8	Y
+4102	410.2 Relief of strangulated inguinal hernia : graft, prosthesis	872	8	Y
+411	411 Repair of inguinal hernia, not elsewhere classified	873	8	Y
+4111	411.1 Repair of inguinal hernia, not elsewhere classified : unilateral graft	874	8	Y
+4112	411.2 Repair of inguinal hernia, not elsewhere classified : unilateral prosthesis	875	8	Y
+4113	411.3 Repair of inguinal hernia, not elsewhere classified : bilateral graft	876	8	Y
+4114	411.4 Repair of inguinal hernia, not elsewhere classified : bilateral prosthesis	877	8	Y
+4116	411.6 Repair of inguinal hernia, not elsewhere classified : bilateral nos	878	8	Y
+412	412 Operation on femoral hernia	879	8	Y
+4121	412.1 Operation on femoral hernia : unilateral graft	880	8	Y
+4122	412.2 Operation on femoral hernia : unilateral prosthesis	881	8	Y
+4123	412.3 Operation on femoral hernia : bilateral graft	882	8	Y
+4124	412.4 Operation on femoral hernia : bilateral prosthesis	883	8	Y
+413	413 Abdominal operation on diaphragmatic hernia	884	8	Y
+4131	413.1 Abdominal operation on diaphragmatic hernia : recurrent	885	8	Y
+415	415 Secondary repair of hernia, not elsewhere classified	886	8	Y
+4151	415.1 Secondary repair of hernia: inguinal	887	8	Y
+4152	415.2 Secondary repair of hernia, not elsewhere classified: femoral	888	8	Y
+4153	415.3 Secondary repair of hernia, incisional, ventral	889	8	Y
+4156	415.6 Secondary repair of hernia, not elsewhere classified : with graft prosthesis	890	8	Y
+419	419 Operation on abdominal hernia, not elsewhere classified	891	8	Y
+4196	419.6 Operation on abdominal hernia, not elsewhere classified : with graft prosthesis	892	8	Y
+420	420 Incision of stomach	893	8	Y
+421	421 Pyloromyotomy	894	8	Y
+422	422 Gastrectomy, total or radical	895	8	Y
+423	423 Partial gastrectomy	896	8	Y
+4231	423.1 Partial gastrectomy : with oesophago-gastrostomy	897	8	Y
+4232	423.2 Partial gastrectomy : with gastro-duodenostomy	898	8	Y
+4233	423.3 Partial gastrectomy : with gastro-jejunostomy	899	8	Y
+424	424 Excision of lesion of stomach	900	8	Y
+425	425 Gastrostomy	901	8	Y
+4251	425.1 Gastrostomy : valvular, permanent	902	8	Y
+4252	425.2 Gastrostomy : temporary	903	8	Y
+4254	425.4 Gastrostomy : replacement of tube	904	8	Y
+426	426 Gastro-enterostomy	905	8	Y
+4261	426.1 Gastro-enterostomy : gastric revision	906	8	Y
+4262	426.2 Gastro-enterostomy : jejunal interposition	907	8	Y
+4263	426.3 Gastro-enterostomy : by-pass gastro-enterostomy	908	8	Y
+427	427 Repair of stomach	909	8	Y
+4271	427.1 Repair of stomach : suture of perforated gastric ulcer	910	8	Y
+4272	427.2 Repair of stomach : reduction of gastric volvolus	911	8	Y
+428	428 Closure of abnormal opening in stomach	912	8	Y
+4283	428.3 Closure of abnormal opening in stomach : excision of fistula	913	8	Y
+429	429 Plastic operation on stomach	914	8	Y
+4291	429.1 Plastic operation on stomach : pyloroplasty	915	8	Y
+4292	429.2 Plastic operation on stomach : revision of gastric anastomosis	916	8	Y
+430	430 Biopsy of stomach	917	8	Y
+431	431 Gastric intobation with related procedures	918	8	Y
+4311	431.1 Gastric intobation with related procedures : biopsy of duodenum, jejunum	919	8	Y
+433	433 Cryotherapy of stomach	920	8	Y
+434	434 Vagotomy, not elsewhere classified	921	8	Y
+435	435 Vagotomy with gastro-enterostomy	922	8	Y
+436	436 Vagotomy with other gastric operation	923	8	Y
+439	439 Other operations on stomach	924	8	Y
+440	440 Drainage of appendix abscess	925	8	Y
+441	441 Emergency appendicectomy	926	8	Y
+443	443 Prophylactic appendicectomy	927	8	Y
+444	444 Appendicectomy, not otherwise stated	928	8	Y
+445	445 Other operations on appendix	929	8	Y
+4451	445.1 Other operations on appendix : appendicostomy closure	930	8	Y
+4452	445.2 Other operations on appendix : fistulization	931	8	Y
+4453	445.3 Other operations on appendix : inversion	932	8	Y
+446	446 Diverticulectomy of intestine	933	8	Y
+450	450 Enterotomy	934	8	Y
+4501	450.1 Enterotomy : biopsy, not elsewhere classified	935	8	Y
+452	452 Excision of small intestine or lesion	936	8	Y
+4521	452.1 Excision of small intestine or lesion : local excision of lesion	937	8	Y
+4522	452.2 Excision of small intestine or lesion : resection with re-anastomosis	938	8	Y
+4523	452.3 Excision of small intestine or lesion : resection with enterostomy	939	8	Y
+453	453 Enterostomy, not elsewhere classified	940	8	Y
+4531	453.1 Enterostomy, not elsewhere classified : ileostomy	941	8	Y
+454	454 Anastomosis of intestine, not elsewhere classified	942	8	Y
+4541	454.1 Anastomosis of intestine, not elsewhere classified : small - small	943	8	Y
+4542	454.2 Anastomosis of intestine, not elsewhere classified : small - large	944	8	Y
+4543	454.3 Anastomosis of intestine, not elsewhere classified : large - large	945	8	Y
+4547	454.7 Anastomosis of intestine, not elsewhere classified : revision	946	8	Y
+455	455 Reduction of intussusception	947	8	Y
+456	456 Reduction of obstruction, not elsewhere classified	948	8	Y
+458	458 Repair of perforated duodenal ulcer	949	8	Y
+459	459 Enterrorrhaphy, not elsewhere classified	950	8	Y
+460	460 Colectomy and resection, not elsewhere classified	951	8	Y
+4601	460.1 Colectomy and resection, not elsewhere classified : with enterostomy	952	8	Y
+4602	460.2 Colectomy and resection, not elsewhere classified : with anastomosis	953	8	Y
+4604	460.4 Colectomy and resection, not elsewhere classified : for interposition	954	8	Y
+4605	460.5 Colectomy and resection, not elsewhere classified : excision colostomy mucosa	955	8	Y
+461	461 Complete colectomy	956	8	Y
+462	462 Colostomy, primary	957	8	Y
+4621	462.1 Colostomy, primary : exteriorization	958	8	Y
+4625	462.5 Colostomy, primary : petineal	959	8	Y
+463	463 Enterostomy modifications, not elsewhere classified	960	8	Y
+4631	463.1 Enterostomy modifications, not elsewhere classified : closure of stoma	961	8	Y
+4632	463.2 Enterostomy modifications, not elsewhere classified : revision, resection	962	8	Y
+4633	463.3 Enterostomy modifications, not elsewhere classified : dilatation of stoma	963	8	Y
+464	464 Colon by-pass	964	8	Y
+465	465 Mobilisation of bowel	965	8	Y
+466	466 Excision of lesion of large intestine	966	8	Y
+467	467 Resection of bowel for interposition	967	8	Y
+468	468 Sigmoidoscopy	968	8	Y
+4681	468.1 Sigmoidoscopy : with biopsy	969	8	Y
+4685	468.5 Sigmoidoscopy : lavage	970	8	Y
+469	469 Other operations on intestine, not elsewhere classified	971	8	Y
+4691	469.1 Other operations on intestine, not elsewhere classified : fixation	972	8	Y
+4692	469.2 Other operations on intestine, not elsewhere classified : relief of obstruction, not elsewhere class	973	8	Y
+4693	469.3 Other operations on intestine, not elsewhere classified : intra-abdominal manipulations	974	8	Y
+4695	469.5 Other operations on intestine, not elsewhere classified : isolation loop for dialysis	975	8	Y
+470	470 Incision of rectum	976	8	Y
+4701	470.1 Incision of rectum : biopsy	977	8	Y
+471	471 Excision of rectum, not elsewhere classified	978	8	Y
+4711	471.1 Excision of rectum, not elsewhere classified : abdominal-anal operation or anastomosis	979	8	Y
+4712	471.2 Excision of rectum, not elsewhere classified : intra pelvic proctectomy	980	8	Y
+4713	471.3 Excision of rectum, not elsewhere classified : sphincter preservation	981	8	Y
+4714	471.4 Excision of rectum, not elsewhere classified : pull through resection	982	8	Y
+472	472 Abdomino-perineal excision of rectum	983	8	Y
+473	473 Excision and destruction of lesion of rectum	984	8	Y
+474	474 Repair and anastomosis of rectum	985	8	Y
+4741	474.1 Repair and anastomosis of rectum : imperforate anus	986	8	Y
+4742	474.2 Repair and anastomosis of rectum : rectocele	987	8	Y
+4743	474.3 Repair and anastomosis of rectum : closure of stoma	988	8	Y
+4744	474.4 Repair and anastomosis of rectum : proctoplasty	989	8	Y
+475	475 Repair of rectal prolapse	990	8	Y
+476	476 Proctoscopy	991	8	Y
+479	479 Other operations on rectum	992	8	Y
+4791	479.1 Other operations on rectum : proctostomy	993	8	Y
+4792	479.2 Other operations on rectum : dilation	994	8	Y
+4793	479.3 Other operations on rectum : manipulation of rectum	995	8	Y
+480	480 Incision of peri-anal or peri-rectal tissue	996	8	Y
+4801	480.1 Incision of peri-anal or peri-rectal tissue : ischio-rectal abscess	997	8	Y
+4802	480.2 Incision of peri-anal or peri-rectal tissue : pilonidal cyst	998	8	Y
+481	481 Incision of other anal lesion	999	8	Y
+4811	481.1 Incision of other anal lesion : incision of fistula	1000	8	Y
+4812	481.2 Incision of other anal lesion : division of anal sphincter	1001	8	Y
+482	482 Excision of anal fistula	1002	8	Y
+483	483 Excision of anal fissure	1003	8	Y
+484	484 Other excision of anus or anal lesion	1004	8	Y
+4841	484.1 Other excision of anus or anal lesion : local excision of lesion	1005	8	Y
+4842	484.2 Other excision of anus or anal lesion : excision of anus	1006	8	Y
+4843	484.3 Other excision of anus or anal lesion : excision of pilonidal sinus	1007	8	Y
+485	485 Dilatation of anal sphincter	1008	8	Y
+486	486 Repair of anus	1009	8	Y
+4861	486.1 Repair of anus : repair of sphincter	1010	8	Y
+4862	486.2 Repair of anus : sphincterectomy	1011	8	Y
+490	490 Injection of haemorrhoids	1012	8	Y
+491	491 Ligature of haemorrhoids	1013	8	Y
+492	492 Destruction of haemorrhoids	1014	8	Y
+493	493 Haemorrhoidectomy	1015	8	Y
+494	494 Removal of tags	1016	8	Y
+495	495 Other operations on haemorrhoids	1017	8	Y
+499	499 Other operations on anus	1018	8	Y
+4991	499.1 Other operations on anus : biopsy	1019	8	Y
+4992	499.2 Other operations on anus : cauterization, not elsewhere classified	1020	8	Y
+500	500 Hepatectomy	1021	9	Y
+5001	500.1 Hepatectomy : removal of cyst, lesion	1022	9	Y
+5002	500.2 Hepatectomy : destruction of lesion	1023	9	Y
+5003	500.3 Hepatectomy : hemihepatectomy, lobectomy	1024	9	Y
+5004	500.4 Hepatectomy : total hepatectomy	1025	9	Y
+5005	500.5 Hepatectomy : liver transplant	1026	9	Y
+501	501 Needle biopsy	1027	9	Y
+502	502 Repair of liver	1028	9	Y
+5021	502.1 Repair of liver : suture of liver	1029	9	Y
+503	503 Percutaneous cholangiography	1030	9	Y
+509	509 Other operations on liver	1031	9	Y
+5091	509.1 Other operations on liver : open biopsy	1032	9	Y
+5092	509.2 Other operations on liver : drainage of liver (amoebic) abscess, hepatotomy	1033	9	Y
+5093	509.3 Other operations on liver : percutaneous aspiration of abscess	1034	9	Y
+5094	509.4 Other operations on liver : marsupialization	1035	9	Y
+5097	509.7 Other operations on liver : extracorporeal hepatic assistance	1036	9	Y
+510	510 Incision of bile duct	1037	9	Y
+5101	510.1 Incision of bile duct : biopsy	1038	9	Y
+5102	510.2 Incision of bile duct : transduodenal, sphincter of Oddi	1039	9	Y
+5103	510.3 Incision of bile duct : relief of internal stricture, occlusion nec	1040	9	Y
+511	511 Removal of calculus from bile ducts	1041	9	Y
+512	512 Drainage of bile duct	1042	9	Y
+513	513 Anastomosis of bile ducts	1043	9	Y
+5132	513.2 Anastomosis of bile ducts : repair or plastic operation	1044	9	Y
+5133	513.3 Anastomosis of bile ducts : with excision of stricture	1045	9	Y
+514	514 Cholangiography	1046	9	Y
+519	519 Other operations on bile ducts	1047	9	Y
+5192	519.2 Other operations on bile ducts : excision of biljary ducts	1048	9	Y
+5193	519.3 Other operations on bile ducts : removal of prosthesis	1049	9	Y
+5194	519.4 Other operations on bile ducts : other repair	1050	9	Y
+520	520 Incision of gall bladder	1051	9	Y
+5201	520.1 Incision of gall bladder : biopsy	1052	9	Y
+5202	520.2 Incision of gall bladder : drainage	1053	9	Y
+521	521 Removal of stones from gall bladder	1054	9	Y
+522	522 Cholecystectomy	1055	9	Y
+5222	522.2 Cholecystectomy : with drainage	1056	9	Y
+523	523 Anastomosis of gall bladder to jejunum	1057	9	Y
+524	524 Other anastomosis of gall bladder	1058	9	Y
+525	525 Repair of gall bladder	1059	9	Y
+526	526 Excision of lesion of gall bladder	1060	9	Y
+529	529 Other operation on gall bladder	1061	9	Y
+530	530 Pancreatotomy	1062	9	Y
+5301	530.1 Pancreatotomy : drainage of abscess or cyst	1063	9	Y
+5302	530.2 Pancreatotomy : removal of calculus	1064	9	Y
+531	531 Pancreatectomy	1065	9	Y
+5311	531.1 Pancreatectomy : partial	1066	9	Y
+5312	531.2 Pancreatectomy : total	1067	9	Y
+5313	531.3 Pancreatectomy : radical	1068	9	Y
+532	532 Excision of lesion of pancreas	1069	9	Y
+5321	532.1 Excision of lesion of pancreas : with anastomosis of duct	1070	9	Y
+533	533 Anastomosis of pancreatic duct	1071	9	Y
+5331	533.1 Anastomosis of pancreatic duct : internal drainage of cyst	1072	9	Y
+539	539 Other operations on pancreas	1073	9	Y
+5391	539.1 Other operations on pancreas : biopsy	1074	9	Y
+5392	539.2 Other operations on pancreas : marsupialization of cyst	1075	9	Y
+5393	539.3 Other operations on pancreas : transplantation	1076	9	Y
+5394	539.4 Other operations on pancreas : dilation	1077	9	Y
+540	540 Splenectomy	1078	9	Y
+5401	540.1 Splenectomy : excision of lesion	1079	9	Y
+541	541 Biopsy of spleen	1080	9	Y
+5411	541.1 Biopsy of spleen : percutaneous biopsy	1081	9	Y
+542	542 Operations on vessels of spleen, not elsewhere classified	1082	9	Y
+5421	542.1 Operations on vessels of spleen, not elsewhere classified : ligature	1083	9	Y
+5422	542.2 Operations on vessels of spleen, not elsewhere classified : injection	1084	9	Y
+5423	542.3 Operations on vessels of spleen, not elsewhere classified : anastomosis	1085	9	Y
+5424	542.4 Operations on vessels of spleen, not elsewhere classified : venography	1086	9	Y
+543	543 Portal anastomosis or shunt	1087	9	Y
+5431	543.1 Portal anastomosis or shunt : porta-caval	1088	9	Y
+5432	543.2 Portal anastomosis or shunt : superior mesenteric vein	1089	9	Y
+5433	543.3 Portal anastomosis or shunt : spleno-renal	1090	9	Y
+5434	543.4 Portal anastomosis or shunt : extracorporeal portal filtration	1091	9	Y
+544	544 Other operations on abdominal veins, not elsewhere classified	1092	9	Y
+5442	544.2 Other operations on abdominal veins, not elsewhere classified : anti-embolic filter	1093	9	Y
+549	549 Other operations on spleen	1094	9	Y
+5491	549.1 Other operations on spleen : splenotomy	1095	9	Y
+5492	549.2 Other operations on spleen : splenopexy, repair, suture	1096	9	Y
+5493	549.3 Other operations on spleen : freeing from adhesions	1097	9	Y
+5494	549.4 Other operations on spleen : transplantation, spleen to chest	1098	9	Y
+550	550 Exploration and drainage of peri-renal tissue	1099	9	Y
+551	551 Freeing of retro-peritoneal adhesions	1100	9	Y
+552	552 Operations on abdominal vessels, not elsewhere classified	1101	9	Y
+5521	552.1 Operations on abdominal vessels, not elsewhere classified : embolectomy and thrombectomy	1102	9	Y
+5522	552.2 Operations on abdominal vessels, not elsewhere classified : endarterectomy	1103	9	Y
+5523	552.3 Operations on abdominal vessels, not elsewhere classified : graft, repair, reconstruction, prosthesi	1104	9	Y
+5524	552.4 Operations on abdominal vessels, not elsewhere classified : by pass operation	1105	9	Y
+5525	552.5 Operations on abdominal vessels, not elsewhere classified : resection with anastomosis	1106	9	Y
+5526	552.6 Operations on abdominal vessels, not elsewhere classified : plication of vena cava	1107	9	Y
+554	554 Open reduction of pelvic fracture	1108	9	Y
+557	557 Translumbar aortogram	1109	9	Y
+559	559 Abdominal operations, not elsewhere classified	1110	9	Y
+5591	559.1 Abdominal operations, not elsewhere classified : pelvic exenteration, not elsewhere classified	1111	9	Y
+5592	559.2 Abdominal operations, not elsewhere classified : retroperitoneal pneumography	1112	9	Y
+5593	559.3 Abdominal operations, not elsewhere classified : repair of multiple pelvic injuries	1113	9	Y
+5594	559.4 Abdominal operations, not elsewhere classified : other multiple abdominal injuries	1114	9	Y
+5595	559.5 Abdominal operations, not elsewhere classified : transperitineal operations on spine and pelvis	1115	9	Y
+560	560 Nephrotomy, not elsewhere classified	1116	10	Y
+5601	560.1 Nephrotomy, not elsewhere classified : exploration	1117	10	Y
+5602	560.2 Nephrotomy, not elsewhere classified : biopsy, not elsewhere classified	1118	10	Y
+5603	560.3 Nephrotomy, not elsewhere classified : removal of foreign body	1119	10	Y
+561	561 Nephrostomy and pyelostomy	1120	10	Y
+5611	561.1 Nephrostomy and pyelostomy : drainage of kidney	1121	10	Y
+5612	561.2 Nephrostomy and pyelostomy : drainage of renal pelvis	1122	10	Y
+562	562 Pyelotomy	1123	10	Y
+563	563 Removal of renal calculus	1124	10	Y
+5631	563.1 Removal of renal calculus : nephrolithotomy	1125	10	Y
+5632	563.2 Removal of renal calculus : pyelolithotomy	1126	10	Y
+5633	563.3 Removal of renal calculus : removal without incision	1127	10	Y
+564	564 Percutaneous puncture of kidney	1128	10	Y
+5641	564.1 Percutaneous puncture of kidney : biopsy	1129	10	Y
+5642	564.2 Percutaneous puncture of kidney : other aspiration	1130	10	Y
+5643	564.3 Percutaneous puncture of kidney : injection	1131	10	Y
+565	565 Removal of kidney, complete	1132	10	Y
+566	566 Transplantation of kidney	1133	10	Y
+5661	566.1 Transplantation of kidney : donor	1134	10	Y
+5662	566.2 Transplantation of kidney : cadaver	1135	10	Y
+567	567 Excision or destruction of lesion of kidney	1136	10	Y
+5671	567.1 Excision or destruction of lesion of kidney : partial nephrectomy	1137	10	Y
+5672	567.2 Excision or destruction of lesion of kidney : excision of cyst, tumour	1138	10	Y
+568	568 Repair of kidney and renal pelvis	1139	10	Y
+569	569 Nephropexy	1140	10	Y
+571	571 Renal arterial and venous puncture	1141	10	Y
+5711	571.1 Renal arterial and venous puncture : arteriography	1142	10	Y
+5712	571.2 Renal arterial and venous puncture : venography	1143	10	Y
+579	579 Other operations on kidney	1144	10	Y
+5792	579.2 Other operations on kidney : decapsulation	1145	10	Y
+5794	579.4 Other operations on kidney : replacement of drainage tubes	1146	10	Y
+5795	579.5 Other operations on kidney : freeing of adhesions	1147	10	Y
+580	580 Ureterolithotomy	1148	10	Y
+581	581 Ureterotomy, not elsewhere classified	1149	10	Y
+582	582 Resection of ureter or lesion	1150	10	Y
+5821	582.1 Resection of ureter or lesion : fisbulectomy	1151	10	Y
+5824	582.4 Resection of ureter or lesion : ureterocele	1152	10	Y
+585	585 Repair of ureter	1153	10	Y
+587	587 Cystoscopic operation on ureter	1154	10	Y
+5871	587.1 Cystoscopic operation on ureter : catheterisation of ureter, not otherwise stated	1155	10	Y
+5872	587.2 Cystoscopic operation on ureter : lithotomy	1156	10	Y
+5873	587.3 Cystoscopic operation on ureter : meatotomy	1157	10	Y
+5875	587.5 Cystoscopic operation on ureter : pyelography	1158	10	Y
+589	589 Other operations on ureter, not elsewhere classified	1159	10	Y
+5891	589.1 Other operations on ureter, not elsewhere classified : biopsy	1160	10	Y
+5892	589.2 Other operations on ureter, not elsewhere classified : freeing of adhesions	1161	10	Y
+5893	589.3 Other operations on ureter, not elsewhere classified : dilation	1162	10	Y
+591	591 Urinary division: to exterior	1163	10	Y
+5911	591.1 Urinary division: to exterior : cutaneous ureterostomy	1164	10	Y
+5912	591.2 Urinary division: to exterior : ileal conduit, open ileal bladder	1165	10	Y
+5913	591.3 Urinary division: to exterior : colonic conduit	1166	10	Y
+592	592 Urinary diversion: to bowel	1167	10	Y
+5921	592.1 Urinary diversion: to bowel : uretero-ileostomy	1168	10	Y
+5922	592.2 Urinary diversion: to bowel : uretero-colostomy	1169	10	Y
+5923	592.3 Urinary diversion: to bowel : uretero-sigmoid proctostomy	1170	10	Y
+5924	592.4 Urinary diversion: to bowel : uretero-sigmoidostomy with colostomy	1171	10	Y
+593	593 Urinary diversion: anastomosis, not elsewhere classified	1172	10	Y
+594	594 Urinary diversion: other, not elsewhere classified	1173	10	Y
+5941	594.1 Urinary diversion: other, not elsewhere classified : secondary operation, not otherwise stated	1174	10	Y
+5942	594.2 Urinary diversion: other, not elsewhere classified : repair of stomal opening	1175	10	Y
+595	595 Repair of urinary tract, not elsewhere classified	1176	10	Y
+5952	595.2 Repair of urinary tract, not elsewhere classified : uretero-ureterostomy	1177	10	Y
+5953	595.3 Repair of urinary tract, not elsewhere classified : ureteral substitute	1178	10	Y
+5954	595.4 Repair of urinary tract, not elsewhere classified : re-implantation into bladder	1179	10	Y
+5958	595.8 Repair of urinary tract, not elsewhere classified : plastic operation	1180	10	Y
+600	600 Cystotomy	1181	10	Y
+6001	600.1 Cystotomy : stab cystotomy	1182	10	Y
+6002	600.2 Cystotomy : removal of calculus	1183	10	Y
+6003	600.3 Cystotomy : exploration	1184	10	Y
+6004	600.4 Cystotomy : suprapubic drainage	1185	10	Y
+6006	600.6 Cystotomy : replacement, catheter	1186	10	Y
+601	601 Cystectomy, total	1187	10	Y
+6011	601.1 Cystectomy, total : anterior pelvic clearance (bladder-male)	1188	10	Y
+6012	601.2 Cystectomy, total : radical cystectomy	1189	10	Y
+602	602 Extirpation of lesion of bladder by open operation	1190	10	Y
+6021	602.1 Extirpation of lesion of bladder by open operation : partial cystectomy	1191	10	Y
+6022	602.2 Extirpation of lesion of bladder by open operation : destruction of lesion	1192	10	Y
+6023	602.3 Extirpation of lesion of bladder by open operation : excision of lesion	1193	10	Y
+603	603 Resection of bladder neck	1194	10	Y
+6031	603.1 Resection of bladder neck : open operation	1195	10	Y
+6032	603.2 Resection of bladder neck : per-urethral	1196	10	Y
+604	604 Cystostomy, (external)	1197	10	Y
+605	605 Repair or replacement of bladder	1198	10	Y
+6051	605.1 Repair or replacement of bladder : augmentation of bladder	1199	10	Y
+6052	605.2 Repair or replacement of bladder : bladder neck repair	1200	10	Y
+6053	605.3 Repair or replacement of bladder : for exstrophy	1201	10	Y
+6054	605.4 Reconstruction of bladder	1202	10	Y
+607	607 Cystoscopy with destruction of lesion of bladder	1203	10	Y
+6071	607.1 Cystoscopy with destruction of lesion of bladder : per-urethral resection or destruction	1204	10	Y
+6072	607.2 Cystoscopy with destruction of lesion of bladder : radio-active implant	1205	10	Y
+608	608 Cystoscopy, not elsewhere classified	1206	10	Y
+6081	608.1 Cystoscopy, not elsewhere classified : biopsy	1207	10	Y
+609	609 Other per-urethral procedures, not elsewhere classified	1208	10	Y
+6091	609.1 Other per-urethral procedures, not elsewhere classified : lithotrity	1209	10	Y
+616	616 Replacement of external urinary drainage	1210	10	Y
+617	617 Incision of perivesical tissue	1211	10	Y
+618	618 Vesicourethral suspension	1212	10	Y
+6181	618.1 Vesicourethral suspension : urethrovesical plication	1213	10	Y
+6182	618.2 Vesicourethral suspension : putococcygeoplasty	1214	10	Y
+6183	618.3 Vesicourethral suspension : suprapubic sling	1215	10	Y
+6184	618.4 Vesicourethral suspension : retropubic suspension	1216	10	Y
+6185	618.5 Vesicourethral suspension : periurethral suspension	1217	10	Y
+619	619 Other operations on bladder, not elsewhere classified	1218	10	Y
+6191	619.1 : implantation of electrical stimulator	1219	10	Y
+6192	619.2 : freeing of adhesions	1220	10	Y
+620	620 Urethrotomy, external	1221	10	Y
+621	621 Urethral meatotomy	1222	10	Y
+622	622 Destruction or excision of urethral lesion	1223	10	Y
+623	623 Urethrostomy	1224	10	Y
+624	624 Repair of urethra	1225	10	Y
+6241	624.1 Repair of urethra : epispadias hypospadias	1226	10	Y
+6242	624.2 Repair of urethra : sling operation	1227	10	Y
+6243	624.3 Repair of urethra : reduction of ruptured urethra	1228	10	Y
+6244	624.4 Repair of urethra : obliteration of abnormal opening	1229	10	Y
+625	625 Division or excision of stricture of urethra	1230	10	Y
+626	626 Urethroscopy	1231	10	Y
+6261	626.1 Urethroscopy : with biopsy	1232	10	Y
+627	627 Dilatation of urethra	1233	10	Y
+628	628 Other operations on urethra	1234	10	Y
+629	629 Repair of urinary injuries, not otherwise stated	1235	10	Y
+630	630 Prostatectomy, suprapubic	1236	10	Y
+631	631 Prostatectomy, retropubic	1237	10	Y
+632	632 Prostatectomy, perineal	1238	10	Y
+633	633 Prostatectomy, per-urethral	1239	10	Y
+634	634 Prostatectomy, not elsewhere classified	1240	10	Y
+635	635 Radical prostatectomy	1241	10	Y
+636	636 Destruction of lesion of prostate	1242	10	Y
+637	637 Other operations on prostate	1243	10	Y
+6371	637.1 Other operations on prostate : control of haemorrhage	1244	10	Y
+6372	637.2 Other operations on prostate : biopsy (needle)	1245	10	Y
+6373	637.3 Other operations on prostate : prostatotomy, drainage of abscess	1246	10	Y
+6374	637.4 Other operations on prostate : percutaneous aspiration	1247	10	Y
+6375	637.5 Other operations on prostate : incision of periprostatic tissue	1248	10	Y
+638	638 Drainage or removal of perivesical and periurethral tissues	1249	10	Y
+6382	638.2 Drainage or removal of perivesical and periurethral tissues : injection	1250	10	Y
+639	639 Operations on seminal vesicles	1251	10	Y
+640	640 Incision of testis and adnexa	1252	10	Y
+6401	640.1 Incision of testis and adnexa : incision of scrotum	1253	10	Y
+6402	640.2 Incision of testis and adnexa : incision of testis	1254	10	Y
+6403	640.3 Incision of testis and adnexa : removal of foreign body	1255	10	Y
+641	641 Orchidectomy, unilateral or partial	1256	10	Y
+642	642 Castration, male	1257	10	Y
+6421	642.1 Excision or repair of hydrocele : hydrocelectomy	1258	10	Y
+6427	642.7 Excision or repair of hydrocele : hyrodecele of spermatic cord	1259	10	Y
+644	644 Excision or repair of hydrocele	1260	10	Y
+6444	644.4 Excision or repair of hydrocele: ligation of processus vaginalis	1261	10	Y
+6447	644.7 Excision or repair of hydrocele: hydrodecele of spermatic cord	1262	10	Y
+645	645 Tapping of hydrocele	1263	10	Y
+646	646 Operation on varicocele	1264	10	Y
+6461	646.1 Operation on varicocele : ligation	1265	10	Y
+6462	646.2 Operation on varicocele : excision	1266	10	Y
+647	647 Extirpation of lesion of scrotum or testis, not elsewhere classified	1267	10	Y
+6471	647.1 Extirpation of lesion of scrotum or testis, not elsewhere classified : scrotum	1268	10	Y
+6472	647.2 Extirpation of lesion of scrotum or testis, not elsewhere classified : testis	1269	10	Y
+648	648 Orchidopexy	1270	10	Y
+6481	648.1 Orchidopexy : implantation in thigh	1271	10	Y
+649	649 Repair of testis and adnexa	1272	10	Y
+6491	649.1 Repair of testis and adnexa : with skin graft	1273	10	Y
+6492	649.2 Repair of testis and adnexa : insertion of prothesis	1274	10	Y
+650	650 Epididymectomy, not elsewhere classified	1275	10	Y
+6501	650.1 Epididymectomy, not elsewhere classified : excision of spermatocele	1276	10	Y
+6502	650.2 Epididymectomy, not elsewhere classified : excision of other lesion of epididymisor	1277	10	Y
+651	651 Ligation or vasectomy of vas deferens	1278	10	Y
+6511	651.1 Ligation or vasectomy of vas deferens : ligation	1279	10	Y
+6512	651.2 Ligation or vasectomy of vas deferens : vasectomy	1280	10	Y
+652	652 Anastomosis and repair of vas deferens	1281	10	Y
+659	659 Other operation on testis and adnexa	1282	10	Y
+6591	659.1 Other operation on testis and adnexa : biopsy	1283	10	Y
+6592	659.2 Other operation on testis and adnexa : aspiration	1284	10	Y
+6593	659.3 Other operation on testis and adnexa : vasotomy	1285	10	Y
+6594	659.4 Other operation on testis and adnexa : detorsion	1286	10	Y
+6595	659.5 Other operation on testis and adnexa : other repair of spermatic cord and epididymis	1287	10	Y
+6596	659.6 Other operation on testis and adnexa : injection	1288	10	Y
+660	660 Preputiotomy	1289	10	Y
+661	661 Circumcision	1290	10	Y
+6611	661.1 Circumcision : ritual	1291	10	Y
+662	662 Excision of penis	1292	10	Y
+663	663 Excision of lesion of penis	1293	10	Y
+664	664 Plastic repair of penis	1294	10	Y
+669	669 Other operations of male genital organs	1295	10	Y
+6691	669.1 Other operations of male genital organs : biopsy	1296	10	Y
+670	670 Operation for sexual transformation	1297	11	Y
+671	671 Castration, female	1298	11	Y
+672	672 Partial oophorectomy	1299	11	Y
+6721	672.1 Partial oophorectomy : wedge resection	1300	11	Y
+6722	672.2 Partial oophorectomy : removal of remaining ovary	1301	11	Y
+6723	672.3 Partial oophorectomy : excision of lesion	1302	11	Y
+673	673 Extirpation of lesion of ovarian region, not elsewhere classified	1303	11	Y
+674	674 Repair of ovary	1304	11	Y
+679	679 Other operations on ovary	1305	11	Y
+6791	679.1 Other operations on ovary : biopsy	1306	11	Y
+6792	679.2 Other operations on ovary : drainage of abscess	1307	11	Y
+6793	679.3 Other operations on ovary : oophorotomy, not elsewhere classified	1308	11	Y
+6794	679.4 Other operations on ovary : freeing of adhesions	1309	11	Y
+680	680 Drainage of fallopian tube	1310	11	Y
+681	681 Salpingo-oophorectomy	1311	11	Y
+6811	681.1 Salpingo-oophorectomy : unilateral	1312	11	Y
+6812	681.2 Salpingo-oophorectomy : bilateral	1313	11	Y
+682	682 Salpingectomy	1314	11	Y
+6821	682.1 Salpingectomy : unilateral salpingectomy	1315	11	Y
+6822	682.2 Salpingectomy : bilateral removal of oviducts	1316	11	Y
+6823	682.3 Salpingectomy : excision of lesion	1317	11	Y
+6824	682.4 Salpingectomy : excision of remaining fallopian tube	1318	11	Y
+683	683 Plastic repair and anastomosis	1319	11	Y
+6831	683.1 Plastic repair and anastomosis : anastomosis of fallopian tube	1320	11	Y
+6832	683.2 Plastic repair and anastomosis : suture, repair or plastic operation	1321	11	Y
+684	684 Division and ligation of oviducts	1322	11	Y
+685	685 Salpingography	1323	11	Y
+686	686 Insufflation of fallopian tubes	1324	11	Y
+687	687 Bilateral endoscopic occlusion of oviducts	1325	11	Y
+689	689 Other operations on oviduct, not otherwise specified	1326	11	Y
+6891	689.1 Other operations on oviduct, not otherwise specified : biopsy	1327	11	Y
+6892	689.2 Other operations on oviduct, not otherwise specified : freeing of adhesion	1328	11	Y
+6893	689.3 Other operations on oviduct, not otherwise specified : fertility test, not otherwise stated	1329	11	Y
+6894	689.4 Other operations on oviduct, not otherwise specified : sterilization via laparoscope	1330	11	Y
+6895	689.5 Other operations on oviduct, not otherwise specified : burial of fimbria	1331	11	Y
+6896	689.6 Other operations on oviduct, not otherwise specified : unilateral occlusion of oviduct	1332	11	Y
+6897	689.7 Other operations on oviduct, not otherwise specified : salpingotomy	1333	11	Y
+690	690 Pelvic exenteration	1334	11	Y
+6902	690.2 Pelvic exenteration : anterior	1335	11	Y
+691	691 Extended hysterectomy	1336	11	Y
+692	692 Radical hysterectomy	1337	11	Y
+6921	692.1 Radical hysterectomy : with pelvic lymphadenectomy	1338	11	Y
+693	693 Vaginal hysterectomy	1339	11	Y
+6931	693.1 Vaginal hysterectomy : total	1340	11	Y
+6932	693.2 Vaginal hysterectomy : radical	1341	11	Y
+6933	693.3 Vaginal hysterectomy : with repair of prolapse	1342	11	Y
+694	694 Sub-total hysterectomy	1343	11	Y
+696	696 Hysterectomy, not elsewhere classified	1344	11	Y
+6961	696.1 Hysterectomy, not elsewhere classified : total hysterectomy	1345	11	Y
+698	698 Excision of lesion of supporting structures of uterus	1346	11	Y
+6981	698.1 Excision of lesion of supporting structures of uterus : biopsy of pelvic structure	1347	11	Y
+700	700 Excision of lesion of uterus	1348	11	Y
+7001	700.1 Excision of lesion of uterus : myomectomy	1349	11	Y
+7002	700.2 Excision of lesion of uterus : polypectomy	1350	11	Y
+701	701 Repair of uterus and supporting ligaments	1351	11	Y
+7011	701.1 Repair of uterus and supporting ligaments : repair of cervix nec	1352	11	Y
+7012	701.2 Repair of uterus and supporting ligaments : repair of uterine supports	1353	11	Y
+702	702 Hysteropexy	1354	11	Y
+703	703 Dilation of cervix	1355	11	Y
+704	704 Curettage of uterus	1356	11	Y
+7041	704.1 Curettage of uterus : biopsy (of endometrium)	1357	11	Y
+7042	704.2 Curettage of uterus : curettage with cauterization	1358	11	Y
+7043	704.3 Curettage of uterus : menstrual extraction	1359	11	Y
+7045	704.5 Curettage of uterus : removal foreign body	1360	11	Y
+705	705 Excision of lesion of cervix	1361	11	Y
+7051	705.1 Excision of lesion of cervix : cauterization	1362	11	Y
+7052	705.2 Excision of lesion of cervix : cryo-electroconization	1363	11	Y
+7053	705.3 Excision of lesion of cervix : radium	1364	11	Y
+706	706 Biopsy of cervix	1365	11	Y
+7061	706.1 Biopsy of cervix : cone or ring biopsy	1366	11	Y
+707	707 Suture of cervical os	1367	11	Y
+7071	707.1 Suture of cervical os : encirclement suture	1368	11	Y
+7072	707.2 Suture of cervical os : trachelorrhaphy (non-obstetric) (with wedge resection)	1369	11	Y
+708	708 Intra-uterine introduction	1370	11	Y
+709	709 Other operations on uterus	1371	11	Y
+7091	709.1 Other operations on uterus : hysterogram, cervicogram	1372	11	Y
+7092	709.2 Other operations on uterus : cervical smear, postcoital test	1373	11	Y
+7093	709.3 Other operations on uterus : hysterotomy, not elsewhere classified	1374	11	Y
+7094	709.4 Other operations on uterus : amputation of cervix	1375	11	Y
+7096	709.6 Other operations on uterus : division of utero-sacral ligament (denervation)	1376	11	Y
+710	710 Colporrhaphy: with repair of pelvic organs	1377	11	Y
+711	711 Colporrhaphy: with repair of pelvic floor	1378	11	Y
+712	712 Colporrhaphy: with amputation of cervix	1379	11	Y
+713	713 Colporrhaphy, not elsewhere classified	1380	11	Y
+714	714 Reconstruction and repair of vagina	1381	11	Y
+7143	714.3 Reconstruction and repair of vagina : intestinal loop sigmoid	1382	11	Y
+715	715 Repair of vaginal fistula	1383	11	Y
+7151	715.1 Repair of vaginal fistula : with reconstruction of urethra	1384	11	Y
+720	720 Culdotomy, pouch of douglas	1385	11	Y
+7201	720.1 Culdotomy, pouch of douglas : drainage of pelvic abscess	1386	11	Y
+7202	720.2 Culdotomy, pouch of douglas : posterior colpotomy	1387	11	Y
+7204	720.4 Culdotomy, pouch of douglas : with sterilization	1388	11	Y
+721	721 Colpotomy	1389	11	Y
+7211	721.1 Colpotomy : anterior colpotomy	1390	11	Y
+722	722 Obliteration of vagina	1391	11	Y
+7221	722.1 Obliteration of vagina : obliteration of cul-de-sac	1392	11	Y
+7222	722.2 Obliteration of vagina : colpoclesis, total obliteration	1393	11	Y
+723	723 Excision of lesion of vagina	1394	11	Y
+724	724 Destruction of lesion of vagina	1395	11	Y
+728	728 Biopsy of vagina	1396	11	Y
+729	729 Other operations on vagina	1397	11	Y
+7291	729.1 Other operations on vagina, dilatation	1398	11	Y
+730	730 Operation on introitus	1399	11	Y
+731	731 Incision of bartholin's gland or duct	1400	11	Y
+732	732 Incision of other abscess of vulva	1401	11	Y
+734	734 Excision of bartholin's gland	1402	11	Y
+735	735 Extirpation of other lesion of vulva	1403	11	Y
+736	736 Vulvectomy, not elsewhere classified	1404	11	Y
+7362	736.2 Vulvectomy, not elsewhere classified : clitoridectomy	1405	11	Y
+737	737 Radical vulvectomy	1406	11	Y
+7371	737.1 Radical vulvectomy : with protectomy	1407	11	Y
+738	738 Repair of perineum, non-obstetric	1408	11	Y
+7381	738.1 Repair of perineum, non-obstetric : hymenorrhaphy	1409	11	Y
+7382	738.2 Repair of perineum, non-obstetric : skin graft	1410	11	Y
+739	739 Other operation on female genital organs	1411	11	Y
+7391	739.1 Other operation on female genital organs : biopsy of labia, perineum, vulva, clitoris	1412	11	Y
+740	740 Removal of suture of cervix	1413	12	Y
+741	741 Hysterotomy	1414	12	Y
+7411	741.1 Hysterotomy : termination of pregnancy,	1415	12	Y
+7412	741.2 Hysterotomy : removal of hydatidiform mole	1416	12	Y
+7413	741.3 Hysterotomy : with sterilisation	1417	12	Y
+742	742 Other termination of pregnancy	1418	12	Y
+7421	742.1 Other termination of pregnancy : vacum aspiration	1419	12	Y
+7422	742.2 Other termination of pregnancy : dilation and evacuation, curettage	1420	12	Y
+7423	742.3 Other termination of pregnancy : intra-amniotic injection	1421	12	Y
+743	743 Extra-uterine removal of ectopic gestation	1422	12	Y
+7431	743.1 Extra-uterine removal of ectopic gestation : with sterilisation	1423	12	Y
+744	744 Hysterectomy, gravid uterus	1424	12	Y
+746	746 Amniocentesis	1425	12	Y
+7461	746.1 Amniocentesis : amniogram	1426	12	Y
+7462	746.2 Amniocentesis : intra-amniotic injection, not otherwise stated	1427	12	Y
+7463	746.3 Amniocentesis : amnioscopy	1428	12	Y
+747	747 Intra-uterine transfusion	1429	12	Y
+748	748 Other ante-natal operation or manipulation	1430	12	Y
+7481	748.1 Other ante-natal operation or manipulation : visual (optic fibre) inspection of foetus	1431	12	Y
+749	749 Artificial rupture of membranes	1432	12	Y
+750	750 Other surgical induction	1433	12	Y
+752	752 Internal version	1434	12	Y
+753	753 Foetal surgery	1435	12	Y
+754	754 Forceps - high	1436	12	Y
+7541	754.1 Forceps - high : with episiotomy	1437	12	Y
+755	755 Forceps - mid, not otherwise stated	1438	12	Y
+7551	755.1 Forceps - mid, not otherwise stated : with episiotomy	1439	12	Y
+756	756 Forceps - low or outlet	1440	12	Y
+7561	756.1 Forceps - low or outlet : with episiotomy	1441	12	Y
+7562	756.2 Forceps - low or outlet : low, not otherwise stated	1442	12	Y
+7563	756.3 Forceps - low or outlet : with episiotomy	1443	12	Y
+7564	756.4 Forceps - low or outlet : outlet, not otherwise stated	1444	12	Y
+757	757 Forceps - breech	1445	12	Y
+7571	757.1 Forceps - breech : with episiotomy	1446	12	Y
+758	758 Other traction	1447	12	Y
+7581	758.1 Other traction : ventous : vacuum extraction	1448	12	Y
+7582	758.2 Other traction : scalp forceps	1449	12	Y
+759	759 Other delivery operation or manipulation	1450	12	Y
+7591	759.1 Other delivery operation or manipulation : replacement of cord	1451	12	Y
+7592	759.2 Other delivery operation or manipulation : rotation with forceps	1452	12	Y
+7593	759.3 Other delivery operation or manipulation : incision or dilation of cervix	1453	12	Y
+7594	759.4 Other delivery operation or manipulation : enlargement of outlet nec	1454	12	Y
+760	760 Episiotomy	1455	12	Y
+7601	760.1 Episiotomy : includes subsequent suture	1456	12	Y
+7602	760.2 Episiotomy : incision of vagina (obstetric)	1457	12	Y
+762	762 Assisted breech delivery, not elsewhere classified	1458	12	Y
+763	763 Failed (trial) forceps	1459	12	Y
+764	764 Caesarean section with hysterectomy	1460	12	Y
+765	765 Caesarean section-classical - upper segment	1461	12	Y
+7651	765.1 Caesarean section-classical - upper segment : with sterilisation	1462	12	Y
+7652	765.2 Caesarean section-classical - upper segment : repeated	1463	12	Y
+766	766 Caesarean section - lower segment	1464	12	Y
+7661	766.1 Caesarean section - lower segment : with sterilisation	1465	12	Y
+7662	766.2 Caesarean section - lower segment : repeated	1466	12	Y
+769	769 Caesarean section, not otherwise stated	1467	12	Y
+7693	769.3 Caesarean section, not otherwise stated : extraperitoneal	1468	12	Y
+7694	769.4 Caesarean section, not otherwise stated : other specified	1469	12	Y
+7695	769.5 Caesarean section, not otherwise stated : unspecified, with sterilization	1470	12	Y
+7696	769.6 Caesarean section, not otherwise stated : unspecified, repeated operation	1471	12	Y
+770	770 Manual exploration of uterus	1472	12	Y
+771	771 Other removal of retained products	1473	12	Y
+7711	771.1 Other removal of retained products : retained products, not otherwise stated	1474	12	Y
+772	772 Reposition of inverted uterus	1475	12	Y
+774	774 Repair of uterus or cervix	1476	12	Y
+775	775 Repair of vagina and pelvic floor	1477	12	Y
+776	776 Repair of perineum and sphincter ani	1478	12	Y
+777	777 Minor repair of laceration	1479	12	Y
+779	779 Other obstetric operation or procedure	1480	12	Y
+7791	779.1 Other obstetric operation or procedure : sterilization, open operation	1481	12	Y
+7792	779.2 Other obstetric operation or procedure : sterilization by laparoscope	1482	12	Y
+7793	779.3 Other obstetric operation or procedure : tamponed of uterus, or vagina	1483	12	Y
+780	780 Manipulation of closed fracture	1484	13	Y
+7801	780.1 Manipulation of closed fracture : shoulder, upper arm	1485	13	Y
+7802	780.2 Manipulation of closed fracture : at elbow, forearm	1486	13	Y
+7803	780.3 Manipulation of closed fracture : at wrist	1487	13	Y
+7804	780.4 Manipulation of closed fracture : hand, fingers	1488	13	Y
+7805	780.5 Manipulation of closed fracture : hip, thigh	1489	13	Y
+7806	780.6 Manipulation of closed fracture : at knee, lower leg	1490	13	Y
+7807	780.7 Manipulation of closed fracture : at ankle	1491	13	Y
+7808	780.8 Manipulation of closed fracture : other specified site	1492	13	Y
+781	781 Open reduction, not elsewhere classified	1493	13	Y
+7811	781.1 Open reduction, not elsewhere classified : shoulder, upper arm	1494	13	Y
+7812	781.2 Open reduction, not elsewhere classified : at elbow, forearm	1495	13	Y
+7813	781.3 Open reduction, not elsewhere classified : at wrist	1496	13	Y
+7814	781.4 Open reduction, not elsewhere classified : hand, fingers	1497	13	Y
+7815	781.5 Open reduction, not elsewhere classified : hip, thigh	1498	13	Y
+7816	781.6 Open reduction, not elsewhere classified : at knee, lower leg	1499	13	Y
+7817	781.7 Open reduction, not elsewhere classified : at ankle	1500	13	Y
+7818	781.8 Open reduction, not elsewhere classified : other specified site	1501	13	Y
+782	782 Reduction with internal fixation	1502	13	Y
+7821	782.1 Reduction with internal fixation : shoulder, upper arm	1503	13	Y
+7822	782.2 Reduction with internal fixation : at elbow, forearm	1504	13	Y
+7823	782.3 Reduction with internal fixation : at wrist	1505	13	Y
+7824	782.4 Reduction with internal fixation : hand, fingers	1506	13	Y
+7825	782.5 Reduction with internal fixation : hip, thigh	1507	13	Y
+7826	782.6 Reduction with internal fixation : at knee, lower leg	1508	13	Y
+7827	782.7 Reduction with internal fixation : at ankle	1509	13	Y
+7828	782.8 Reduction with internal fixation : other specified site	1510	13	Y
+783	783 Elevation of depressed fragments, not elsewhere classified	1511	13	Y
+7831	783.1 Elevation of depressed fragments, not elsewhere classified : shoulder, upper arm	1512	13	Y
+7832	783.2 Elevation of depressed fragments, not elsewhere classified : at elbow, forearm	1513	13	Y
+7833	783.3 Elevation of depressed fragments, not elsewhere classified : at wrist	1514	13	Y
+7834	783.4 Elevation of depressed fragments, not elsewhere classified : hand, fingers	1515	13	Y
+7835	783.5 Elevation of depressed fragments, not elsewhere classified : hip, thigh	1516	13	Y
+7836	783.6 Elevation of depressed fragments, not elsewhere classified : at knee, lower leg	1517	13	Y
+7837	783.7 Elevation of depressed fragments, not elsewhere classified : at ankle	1518	13	Y
+7838	783.8 Elevation of depressed fragments, not elsewhere classified : other specified site	1519	13	Y
+784	784 Wound toilet of compound fracture, not elsewhere classified	1520	13	Y
+7841	784.1 Wound toilet of compound fracture, not elsewhere classified : shoulder, upper arm	1521	13	Y
+7842	784.2 Wound toilet of compound fracture, not elsewhere classified : at elbow, forearm	1522	13	Y
+7843	784.3 Wound toilet of compound fracture, not elsewhere classified : at wrist	1523	13	Y
+7844	784.4 Wound toilet of compound fracture, not elsewhere classified : hand, fingers	1524	13	Y
+7845	784.5 Wound toilet of compound fracture, not elsewhere classified : hip, thigh	1525	13	Y
+7846	784.6 Wound toilet of compound fracture, not elsewhere classified : at knee, lower leg	1526	13	Y
+7847	784.7 Wound toilet of compound fracture, not elsewhere classified : at ankle	1527	13	Y
+7848	784.8 Wound toilet of compound fracture, not elsewhere classified : other specified site	1528	13	Y
+785	785 Removal of internal fixation	1529	13	Y
+7851	785.1 Removal of internal fixation : shoulder, upper arm	1530	13	Y
+7852	785.2 Removal of internal fixation : at elbow, forearm	1531	13	Y
+7853	785.3 Removal of internal fixation : at wrist	1532	13	Y
+7854	785.4 Removal of internal fixation : hand, fingers	1533	13	Y
+7855	785.5 Removal of internal fixation : hip, thigh	1534	13	Y
+7856	785.6 Removal of internal fixation : at knee, lower leg	1535	13	Y
+7857	785.7 Removal of internal fixation : at ankle	1536	13	Y
+7858	785.8 Removal of internal fixation : other specified site	1537	13	Y
+786	786 Surgical fracture	1538	13	Y
+7861	786.1 Surgical fracture : shoulder, upper arm	1539	13	Y
+7862	786.2 Surgical fracture : at elbow, forearm	1540	13	Y
+7863	786.3 Surgical fracture : at wrist	1541	13	Y
+7864	786.4 Surgical fracture : hand, fingers	1542	13	Y
+7865	786.5 Surgical fracture : hip, thigh	1543	13	Y
+7866	786.6 Surgical fracture : at knee, lower leg	1544	13	Y
+7867	786.7 Surgical fracture : at ankle	1545	13	Y
+7868	786.8 Surgical fracture : other specified site	1546	13	Y
+788	788 Operative treatment of multiple injuries	1547	13	Y
+7881	788.1 Operative treatment of multiple injuries : multiple limb fractures	1548	13	Y
+789	789 Skeletal traction	1549	13	Y
+7891	789.1 Skeletal traction : infixed pin	1550	13	Y
+7892	789.2 Skeletal traction : skull caliper	1551	13	Y
+790	790 Incision of bone	1552	13	Y
+791	791 Division of bone	1553	13	Y
+7915	791.5 Division of bone : femur	1554	13	Y
+7918	791.8 Division of bone : bones of foot	1555	13	Y
+792	792 Partial ostectomy	1556	13	Y
+793	793 Complete ostectomy	1557	13	Y
+7936	793.6 Complete ostectomy : patellectomy	1558	13	Y
+794	794 Excision of lesion of bone	1559	13	Y
+7941	794.1 Excision of lesion of bone : seguestrectomy (local)	1560	13	Y
+7942	794.2 Excision of lesion of bone : exostosis	1561	13	Y
+795	795 Reconstruction of bone	1562	13	Y
+7951	795.1 Reconstruction of bone : internal fixation	1563	13	Y
+796	796 Bone graft, or implant, not elsewhere classified	1564	13	Y
+7961	796.1 Bone graft, or implant, not elsewhere classified : with metallic fixation	1565	13	Y
+797	797 Other bone fusion	1566	13	Y
+7971	797.1 Other bone fusion : stapling of epiphysis to diaphysis	1567	13	Y
+7972	797.2 Other bone fusion : closed reduction of slipped epiphysis	1568	13	Y
+7973	797.3 Other bone fusion : open reduction of slipped epiphysis	1569	13	Y
+798	798 Puncture of bone	1570	13	Y
+7981	798.1 Puncture of bone : biopsy of bone	1571	13	Y
+7982	798.2 Puncture of bone : biopsy of marrow	1572	13	Y
+7983	798.3 Puncture of bone : bone marrow transplant	1573	13	Y
+799	799 Other operations on bone	1574	13	Y
+800	800 Arthrotomy	1575	13	Y
+8001	800.1 Arthrotomy : drainage	1576	13	Y
+8002	800.2 Arthrotomy : exploration	1577	13	Y
+8003	800.3 Arthrotomy : removal of loose cartilage, synovial fringe	1578	13	Y
+8004	800.4 Arthrotomy : foreign body removal	1579	13	Y
+8005	800.5 Arthrotomy : drilling of articular surface	1580	13	Y
+801	801 Joint puncture	1581	13	Y
+8011	801.1 Joint puncture : aspiration	1582	13	Y
+8012	801.2 Joint puncture : arthography	1583	13	Y
+8013	801.3 Joint puncture: therapeutic injection	1584	13	Y
+803	803 Excision of joint lesion, not elsewhere classified	1585	13	Y
+804	804 Manipulation of joint, not elsewhere classified	1586	13	Y
+8041	804.1 Manipulation of joint, not elsewhere classified : jaw	1587	13	Y
+805	805 Closed reduction of dislocation	1588	13	Y
+8051	805.1 Closed reduction of dislocation : jaw	1589	13	Y
+806	806 Open reduction of dislocation	1590	13	Y
+8061	806.1 Open reduction of dislocation : jaw	1591	13	Y
+8062	806.2 Open reduction of dislocation : internal fixation	1592	13	Y
+807	807 Arthrodesis of hip	1593	13	Y
+8071	807.1 Arthrodesis of hip : intra-articular, with nail	1594	13	Y
+8072	807.2 Arthrodesis of hip : extra-articular with graft	1595	13	Y
+8073	807.3 Arthrodesis of hip : with nail and graft	1596	13	Y
+808	808 Arthrodesis of foot	1597	13	Y
+809	809 Other arthrodesis, not elsewhere classified	1598	13	Y
+810	810 Total hip replacement	1599	13	Y
+811	811 Other arthroplasty of hip	1600	13	Y
+812	812 Arthroplasty of knee	1601	13	Y
+8121	812.1 Arthroplasty of knee : with patellectomy	1602	13	Y
+813	813 Arthroplasty of shoulder	1603	13	Y
+8131	813.1 Arthroplasty of shoulder : repair of capsule	1604	13	Y
+814	814 Other arthroplasty, not elsewhere classified	1605	13	Y
+8141	814.1 Other arthroplasty, not elsewhere classified : foot and toes	1606	13	Y
+8142	814.2 Other arthroplasty, not elsewhere classified : jaw	1607	13	Y
+8143	814.3 Other arthroplasty, not elsewhere classified : hand and finger	1608	13	Y
+8145	814.5 Other arthroplasty: revision	1609	13	Y
+815	815 Correction of club foot, not elsewhere classified	1610	13	Y
+816	816 Ostectomy for hallux valgus, not elsewhere classified	1611	13	Y
+8161	816.1 Ostectomy for hallux valgus, not elsewhere classified : phalangectomy (keller)	1612	13	Y
+8162	816.2 Ostectomy for hallux valgus, not elsewhere classified : metatarsectomy	1613	13	Y
+820	820 Excision of internal structure of knee	1614	13	Y
+821	821 Extirpation of other joint structures	1615	13	Y
+8212	821.2 Extirpation of other joint structures : synovectomy excision of synovial membrane	1616	13	Y
+822	822 Other operations on joints or cartilage	1617	13	Y
+8221	822.1 Other operations on joints or cartilage : biopsy	1618	13	Y
+825	825 Capsulotomy	1619	13	Y
+826	826 Other operations on joint capsule	1620	13	Y
+8261	826.1 Other operations on joint capsule : biopsy	1621	13	Y
+8262	826.2 Other operations on joint capsule : capsuloplasty, plication	1622	13	Y
+8264	826.4 Other operations on joint capsule : injection of ligaments	1623	13	Y
+827	827 Excision	1624	13	Y
+8271	827.1 Excision : biopsy	1625	13	Y
+828	828 Other operations on bursa	1626	13	Y
+8281	828.1 Other operations on bursa : aspiration	1627	13	Y
+8282	828.2 Other operations on bursa : injection	1628	13	Y
+829	829 Incision of muscle	1629	13	Y
+8293	829.3 Incision of muscle : hand	1630	13	Y
+830	830 Division of muscle	1631	13	Y
+8301	830.1 Division of muscle : drainage of abscess	1632	13	Y
+8302	830.2 Division of muscle : division, transection of muscle	1633	13	Y
+831	831 Myectomy	1634	13	Y
+8311	831.1 Myectomy : shortening of muscle	1635	13	Y
+832	832 Excision of lesion of muscle	1636	13	Y
+8321	832.1 Excision of lesion of muscle : biopsy	1637	13	Y
+833	833 Suture of muscle	1638	13	Y
+834	834 Plastic repair of muscle, not elsewhere classified	1639	13	Y
+835	835 Reattachment of muscle, not elsewhere classified	1640	13	Y
+837	837 Reattachment of muscles of hand	1641	13	Y
+838	838 Reconstruction of thumb	1642	13	Y
+8382	838.2 Reconstruction of thumb : with free skin graft	1643	13	Y
+8385	838.5 Reconstruction of thumb : with pedicle skin graft	1644	13	Y
+839	839 Other operations on muscle	1645	13	Y
+840	840 Tenotomy of tendon of achilles	1646	13	Y
+841	841 Tenotomy, not elsewhere classified	1647	13	Y
+8413	841.3 Tenotomy, not elsewhere classified : hand	1648	13	Y
+842	842 Incision of tendon sheath	1649	13	Y
+8423	842.3 Incision of tendon sheath : hand	1650	13	Y
+843	843 Tenectomy	1651	13	Y
+844	844 Excision of lesion of tendon	1652	13	Y
+8443	844.3 Excision of lesion of tendon : hand	1653	13	Y
+845	845 Tenorrhaphy	1654	13	Y
+8453	845.3 Tenorrhaphy : hand	1655	13	Y
+8457	845.7 Tenorrhaphy : achilles	1656	13	Y
+846	846 Tenodesis	1657	13	Y
+8463	846.3 Tenodesis : hand	1658	13	Y
+8466	846.6 Tenodesis : knee	1659	13	Y
+848	848 Reconstruction of tendon, not elsewhere classified	1660	13	Y
+8481	848.1 Reconstruction of tendon, not elsewhere classified : thumb	1661	13	Y
+8483	848.3 Reconstruction of tendon, not elsewhere classified : hand	1662	13	Y
+8486	848.6 Reconstruction of tendon, not elsewhere classified : knee	1663	13	Y
+8487	848.7 Reconstruction of tendon, not elsewhere classified : achilles	1664	13	Y
+851	851 Repair of mallet finger	1665	13	Y
+852	852 Other operations on tendon	1666	13	Y
+8523	852.3 Other operations on tendon : hand	1667	13	Y
+8526	852.6 Other operations on tendon : knee	1668	13	Y
+854	854 Fasciotomy	1669	13	Y
+8543	854.3 Fasciotomy : hand	1670	13	Y
+8545	854.5 Fasciotomy : thigh	1671	13	Y
+8546	854.6 Fasciotomy : knee	1672	13	Y
+8548	854.8 Fasciotomy : foot (steindler)	1673	13	Y
+855	855 Fasciectomy and excision of lesion	1674	13	Y
+8553	855.3 Fasciectomy and excision of lesion : hand	1675	13	Y
+857	857 Fasciorrhaphy	1676	13	Y
+8573	857.3 Fasciorrhaphy : hand	1677	13	Y
+858	858 Fascioplasty	1678	13	Y
+8583	858.3 Fascioplasty : hand	1679	13	Y
+859	859 Other operations on fascia	1680	13	Y
+8593	859.3 Other operations on fascia : hand	1681	13	Y
+860	860 Reimplantation of severed limb	1682	13	Y
+8601	860.1 Reimplantation of severed limb : thumb	1683	13	Y
+8602	860.2 Reimplantation of severed limb : other fingers	1684	13	Y
+8603	860.3 Reimplantation of severed limb : hand	1685	13	Y
+8604	860.4 Reimplantation of severed limb : arm	1686	13	Y
+8605	860.5 Reimplantation of severed limb : foot	1687	13	Y
+8606	860.6 Reimplantation of severed limb : leg	1688	13	Y
+8607	860.7 Reimplantation of severed limb : toe	1689	13	Y
+861	861 Removal of upper limb	1690	13	Y
+862	862 Amputation of arm	1691	13	Y
+863	863 Amputation through forearm	1692	13	Y
+864	864 Amputation of hand	1693	13	Y
+865	865 Amputation of thumb	1694	13	Y
+866	866 Amputation of finger	1695	13	Y
+8663	866.3 Amputation of finger : polydactyl	1696	13	Y
+867	867 Other disarticulation, upper limb, not elsewhere classified	1697	13	Y
+868	868 Implantation bio-electric prosthesis	1698	13	Y
+870	870 Removal of lower limb	1699	13	Y
+871	871 Amputation through thigh	1700	13	Y
+8711	871.1 Amputation through thigh : neck of femur	1701	13	Y
+8712	871.2 Amputation through thigh : above knee	1702	13	Y
+8713	871.3 Amputation through thigh : transcondylar	1703	13	Y
+8714	871.4 Amputation through thigh : supracondylar	1704	13	Y
+872	872 Disarticulation at knee	1705	13	Y
+873	873 Amputation through lower leg	1706	13	Y
+874	874 Amputation of foot	1707	13	Y
+875	875 Amputation of toe	1708	13	Y
+8751	875.1 Amputation of toe : hallux	1709	13	Y
+8752	875.2 Amputation of toe : second toe	1710	13	Y
+8755	875.5 Amputation of toe : fifth toe	1711	13	Y
+877	877 Secondary operation on amputation stump	1712	13	Y
+878	878 Other amputations, not elsewhere classified	1713	13	Y
+879	879 Other operations on limbs, not elsewhere classified	1714	13	Y
+880	880 Arteriotomy	1715	14	Y
+8801	880.1 Arteriotomy : embolectomy	1716	14	Y
+881	881 Endarterectomy	1717	14	Y
+8811	881.1 Endarterectomy : popliteal	1718	14	Y
+882	882 Arterectomy, not elsewhere classified	1719	14	Y
+8821	882.1 Arterectomy, not elsewhere classified : biopsy of artery	1720	14	Y
+8823	882.3 Arterectomy, not elsewhere classified : with re-anastomosis	1721	14	Y
+8824	882.4 Arterectomy, not elsewhere classified : with graft replacement	1722	14	Y
+883	883 Repair or excision of aneurysm	1723	14	Y
+8833	883.3 Repair or excision of aneurysm : excision or destruction	1724	14	Y
+8834	883.4 Repair or excision of aneurysm : excision with re-anastomosis	1725	14	Y
+8836	883.6 Repair or excision of aneurysm : excision with graft or prosthesis	1726	14	Y
+884	884 Repair of artery	1727	14	Y
+8841	884.1 Repair of artery : by-pass graft (vein)	1728	14	Y
+8842	884.2 Repair of artery : repair by tissue graft, not elsewhere classified	1729	14	Y
+8843	884.3 Repair of artery : repair by prosthesis	1730	14	Y
+8844	884.4 Repair of artery : excision with re-anastomosis	1731	14	Y
+8845	884.5 Repair of artery : suture of artery	1732	14	Y
+885	885 Ligation of artery, not elsewhere classified	1733	14	Y
+8852	885.2 Ligation of artery, not elsewhere classified : control of aneurysm	1734	14	Y
+8853	885.3 Ligation of artery, not elsewhere classified : post operative	1735	14	Y
+887	887 Arterial catheterization, not elsewhere classified	1736	14	Y
+888	888 Arterial injection or perfusion	1737	14	Y
+8881	888.1 Arterial injection or perfusion : diagnostic, arteriography, not elsewhere classified	1738	14	Y
+8882	888.2 Arterial injection or perfusion : cytotoxic	1739	14	Y
+8883	888.3 Arterial injection or perfusion : arterial puncture (diagnostic)	1740	14	Y
+889	889 Other operations on arteries	1741	14	Y
+8891	889.1 Other operations on arteries : production of arterio-venous fistula	1742	14	Y
+8892	889.2 Other operations on arteries : revision of previous vascular operation	1743	14	Y
+890	890 Phlebotomy (with thrombectomy)	1744	14	Y
+8902	890.2 Phlebotomy (with thrombectomy) : thrombectomy, embolectomy	1745	14	Y
+8903	890.3 Phlebotomy (with thrombectomy) : cut-down transfusion or catheterization of vein	1746	14	Y
+891	891 Injection of vein to produce thrombosis	1747	14	Y
+892	892 Phlebectomy, not elsewhere classified	1748	14	Y
+8921	892.1 Phlebectomy, not elsewhere classified : for vascular graft	1749	14	Y
+8922	892.2 Phlebectomy, not elsewhere classified : excision for graft 3 with re-anastomosis	1750	14	Y
+893	893 Ligation or division of vein, not elsewhere classified	1751	14	Y
+8931	893.1 Ligation or division of vein, not elsewhere classified : varicose veins	1752	14	Y
+8932	893.2 Ligation or division of vein, not elsewhere classified : multiple ligatures	1753	14	Y
+894	894 Operation on varicose veins, not elsewhere classified	1754	14	Y
+8941	894.1 Operation on varicose veins, not elsewhere classified : excision	1755	14	Y
+895	895 Venography	1756	14	Y
+896	896 Venous anastomosis	1757	14	Y
+897	897 Intravenous pacemaker	1758	14	Y
+8971	897.1 Intravenous pacemaker : insertion, implanted	1759	14	Y
+8972	897.2 Intravenous pacemaker : removal	1760	14	Y
+898	898 Other operations on vessels	1761	14	Y
+8981	898.1 Other operations on vessels : biopsy of vein	1762	14	Y
+8982	898.2 Other operations on vessels : repair (by suture, graft)	1763	14	Y
+900	900 Lymphangiotomy and lymphadenotomy	1764	14	Y
+901	901 Injection or cannulation of lymphatic vessel	1765	14	Y
+903	903 Lymphatic excision	1766	14	Y
+904	904 Lymphadenectomy, radical	1767	14	Y
+9041	904.1 Lymphadenectomy, radical : axillary	1768	14	Y
+9042	904.2 Lymphadenectomy, radical : inguinal	1769	14	Y
+9043	904.3 Lymphadenectomy, radical : regional	1770	14	Y
+905	905 Lymphatic biopsy, not elsewhere classified	1771	14	Y
+906	906 Excision of tissue for lymphoedema	1772	14	Y
+907	907 Lymphangioplasty	1773	14	Y
+909	909 Other operations on lymphatic system	1774	14	Y
+910	910 Superficial drainage and incision	1775	14	Y
+9101	910.1 Superficial drainage and incision : facial region	1776	14	Y
+9102	910.2 Superficial drainage and incision : drainage of abscess	1777	14	Y
+9103	910.3 Superficial drainage and incision : hand (whitlow, paronychia)	1778	14	Y
+911	911 Removal of foreign body	1779	14	Y
+912	912 Excision of superficial cyst or fistula	1780	14	Y
+913	913 Excision of other skin growth, not elsewhere classified	1781	14	Y
+914	914 Excision of other lesion of skin or subcutaneous tissue	1782	14	Y
+915	915 Destruction of lesion of skin	1783	14	Y
+9151	915.1 Destruction of lesion of skin : dermabrasion	1784	14	Y
+9152	915.2 Destruction of lesion of skin : chemical extoliation	1785	14	Y
+9153	915.3 Destruction of lesion of skin : depilation by electrolysis	1786	14	Y
+916	916 Toilet of wound	1787	14	Y
+917	917 Dressing of burn under anaesthesis	1788	14	Y
+918	918 Excision of burn	1789	14	Y
+9181	918.1 Excision of burn : of contracture	1790	14	Y
+9182	918.2 Excision of burn : with skin graft, not elsewhere classified	1791	14	Y
+919	919 Suture of wound	1792	14	Y
+920	920 Biopsy of skin and subcutaneous tissue	1793	14	Y
+921	921 Secondary treatment of wound	1794	14	Y
+922	922 Aspiration of skin	1795	14	Y
+923	923 Insertion into skin	1796	14	Y
+924	924 Size reduction	1797	14	Y
+927	927 Incision of nail	1798	14	Y
+928	928 Removal of nail structures	1799	14	Y
+929	929 Other operation on skin or subcutaneous tissue, not elsewhere classified	1800	14	Y
+930	930 Pedicle graft or flap	1801	14	Y
+9301	930.1 Pedicle graft or flap : preparation	1802	14	Y
+9302	930.2 Pedicle graft or flap : attachment, to hand	1803	14	Y
+9303	930.3 Pedicle graft or flap : attachment, other	1804	14	Y
+9304	930.4 Pedicle graft or flap : revision of pedicle	1805	14	Y
+931	931 Plastic repair of pinna, lip or nose	1806	14	Y
+9311	931.1 Plastic repair of pinna, lip or nose : pinna	1807	14	Y
+9312	931.2 Plastic repair of pinna, lip or nose : lip	1808	14	Y
+9313	931.3 Plastic repair of pinna, lip or nose : nose	1809	14	Y
+932	932 Repair of lip deformities	1810	14	Y
+9321	932.1 Repair of lip deformities : skin graft	1811	14	Y
+933	933 Other repair of mouth	1812	14	Y
+9331	933.1 Other repair of mouth :  skin graft	1813	14	Y
+934	934 Other plastic repair of face	1814	14	Y
+9341	934.1 Other plastic repair of face : skin graft or mucosalgraft	1815	14	Y
+935	935 Skin graft and mucous membrane graft, not elsewhere classified	1816	14	Y
+9351	935.1 Skin graft and mucous membrane graft, not elsewhere classified : free skin graft to hand	1817	14	Y
+9352	935.2 Skin graft and mucous membrane graft, not elsewhere classified : graft, or transplant of hair	1818	14	Y
+936	936 Other plastic repair with graft	1819	14	Y
+9361	936.1 Other plastic repair with graft : syndactyly release	1820	14	Y
+937	937 Plastic repair, not elsewhere classified	1821	14	Y
+9371	937.1 Plastic repair, not elsewhere classified : face lift	1822	14	Y
+9372	937.2 Plastic repair, not elsewhere classified : meloplasty	1823	14	Y
+9373	937.3 Plastic repair, not elsewhere classified : rhytidectomy	1824	14	Y
+9376	937.6 Plastic repair, not elsewhere classified : relaxation of contracture scar	1825	14	Y
+939	939 Minor procedures on skin	1826	14	Y
+9391	939.1 Minor procedures on skin : epitation	1827	14	Y
+941	941 Intravenous blood transfusion	1828	15	Y
+942	942 Exchange transfusion	1829	15	Y
+943	943 Other intravenous transfusion	1830	15	Y
+944	944 Intravenous injection	1831	15	Y
+9441	944.1 Intravenous injection : diagnostic	1832	15	Y
+9442	944.2 Intravenous injection : IV induction if abortion or labour	1833	15	Y
+9443	944.3 Intravenous injection : parental alimentation	1834	15	Y
+945	945 Intramuscular injection	1835	15	Y
+9451	945.1 Intramuscular injection : local action	1836	15	Y
+946	946 Subcutaneous injection	1837	15	Y
+9461	946.1 Subcutaneous injection : local action	1838	15	Y
+947	947 Intramedullary injection	1839	15	Y
+948	948 Procedures involving vessels, not elsewhere classified	1840	15	Y
+949	949 Blood withdrawal	1841	15	Y
+950	950 Other vascular procedures	1842	15	Y
+9503	950.3 Other vascular procedures : haemodialysis	1843	15	Y
+952	952 Incision, not otherwise stated	1844	15	Y
+9521	952.1 Incision, not otherwise stated : separation of conjoined twins	1845	15	Y
+953	953 Excision, not otherwise stated	1846	15	Y
+9531	953.1 Excision, not otherwise stated : biopsy, not elsewhere classified	1847	15	Y
+954	954 Puncture	1848	15	Y
+9541	954.1 Puncture : percutaneous biopsy, not elsewhere classified	1849	15	Y
+955	955 Destruction of lesion site unspecified	1850	15	Y
+959	959 Other operation with ill-defined site	1851	15	Y
+960	960 Normal delivery	1852	15	Y
+961	961 Other therapy for cancer	1853	15	Y
+9611	961.1 Other therapy for cancer : chemotherapy for cancer	1854	15	Y
+9612	961.2 Other therapy for cancer : immunotherapy for cancer	1855	15	Y
+962	962 Urethral catheterization	1856	15	Y
+9621	962.1 Urethral catheterization : catheterization, not otherwise stated	1857	15	Y
+9624	962.4 Urethral catheterization : cystometry	1858	15	Y
+963	963 Gastric-intestinal intubation	1859	15	Y
+964	964 Endoscopy, not elsewhere classified	1860	15	Y
+9641	964.1 Endoscopy, not elsewhere classified : with biopsy, not elsewhere classified	1861	15	Y
+965	965 External manipulation	1862	15	Y
+966	966 Prosthetic and other apparatus	1863	15	Y
+9661	966.1 Prosthetic and other apparatus : traction nec	1864	15	Y
+967	967 Resuscitation by external procedure	1865	15	Y
+9671	967.1 Resuscitation by external procedure : cardioversion, D C shock	1866	15	Y
+9672	967.2 Resuscitation by external procedure : mechanical ventilator	1867	15	Y
+968	968 Removal of unwanted material	1868	15	Y
+969	969 Other non-operative procedures	1869	15	Y
+9691	969.1 Other non-operative procedures : hypotherma	1870	15	Y
+9693	969.3 Other non-operative procedures : oxygen (hyberbaric)	1871	15	Y
+9694	969.4 Other non-operative procedures : electroconvulsive therapy	1872	15	Y
+9695	969.5 Other non-operative procedures : other shock therapy	1873	15	Y
+9696	969.6 Other non-operative procedures : oral oxytoxic agents	1874	15	Y
+970	970 Local application	1875	15	Y
+971	971 Local injection	1876	15	Y
+972	972 Nerve block, anaesthetic	1877	15	Y
+973	973 Spinal anaesthesia	1878	15	Y
+9731	973.1 Spinal anaesthesia : cauda equine	1879	15	Y
+9732	973.2 Spinal anaesthesia : epidural lumbar	1880	15	Y
+974	974 Inhalation, not elsewhere classified	1881	15	Y
+9745	974.5 Inhalation, not elsewhere classified : inhalation anaesthesia with endotracheal intubation	1882	15	Y
+9746	974.6 Inhalation, not elsewhere classified : inhalation anaesthesia with muscle relaxant	1883	15	Y
+977	977 Intravenous anaesthesia	1884	15	Y
+979	979 Anaesthesia, not elsewhere classified	1885	15	Y
+980	980 Thyroid scanning	1886	15	Y
+981	981 Cerebral scanning	1887	15	Y
+986	986 Other radio-active scanning	1888	15	Y
+987	987 Other radiographic injection	1889	15	Y
+988	988 Other radiographic techniques, not elsewhere classified	1890	15	Y
+989	989 Other diagnostic techniques	1891	15	Y
+9891	989.1 Other diagnostic techniques: ultrasonic localisation	1892	15	Y
+9892	989.2 Other diagnostic techniques: thermography	1893	15	Y
+990	990 Surface application	1894	15	Y
+991	991 Superficial irradiation	1895	15	Y
+992	992 High voltage irradiation	1896	15	Y
+993	993 Super-voltage irradiation	1897	15	Y
+994	994 Tele-radiotherapy	1898	15	Y
+9941	994.1 Tele-radiotherapy : particle irradiation, proton	1899	15	Y
+996	996 Removable surgical implant	1900	15	Y
+997	997 Non-removable surgical implant	1901	15	Y
+998	998 Radio-active injection or ingestion	1902	15	Y
+999	999 Unspecified radiotherapy	1903	15	Y
+Chapter I	Chapter I - Nervous system (001-050)	1	0	N
+Chapter II	Chapter II - Endocrine glands (060-080)	2	0	N
+Chapter III	Chapter III - Eye (100-180)	3	0	N
+Chapter IV	Chapter IV - Ear, nose and throat (190-240)	4	0	N
+Chapter IX	Chapter IX - Other abdominal organs (500-550)	9	0	N
+Chapter V	Chapter V - Upper alimentary tract (250-280)	5	0	N
+Chapter VI	Chapter VI - Thorax (290-340)	6	0	N
+Chapter VII	Chapter VII - Breast (380-380)	7	0	N
+Chapter VIII	Chapter VIII - Abdomen (400-490)	8	0	N
+Chapter X	Chapter X - Urinary and male genital organs (560-660)	10	0	N
+Chapter XI	Chapter XI - Female genital organs (670-730)	11	0	N
+Chapter XII	Chapter XII - Obstetrics (740-770)	12	0	N
+Chapter XIII	Chapter XIII - Orthopaedic (780-870)	13	0	N
+Chapter XIV	Chapter XIV - Peripheral vessels, skin and subcutaneous tissue (880-930)	14	0	N
+Chapter XV	Chapter XV - Other surgical procedures (941-990)	15	0	N

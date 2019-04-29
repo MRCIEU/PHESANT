@@ -17,18 +17,26 @@
 
 IFS=$'\t'
 
+i=1
+
 # for each line in most up to date data dictionary, add our curated info columns if this field isn't new
 while read Path Category FieldID Field Participants Items Stability ValueType Units ItemType Strata Sexed Instances Array Coding Notes Link; do
+
+	if [ $i -eq 1 ]; then
+		newline="FieldID\tTRAIT_OF_INTEREST\tEXCLUDED\tCAT_MULT_INDICATOR_FIELDS\tCAT_SINGLE_TO_CAT_MULT\tDATA_CODING\tPath\tCategory\tField\tValueType"
+		echo -e $newline  >> outcome-info-new.tsv
+	else
 
 	# don't include field types PHESANT doesn't deal with
 	if [ "$ValueType" == "Text" ] || [ "$ValueType" == "Bulk" ] || [ "$ValueType" == "Date" ] || [ "$ValueType" == "Time" ] || [ "$ValueType" == "Compound" ]; then
 		continue
 	else
 
-		line="$Path\t$Category\t$Field\t$Participants\t$Items\t$Stability\t$ValueType\t$Units\t$ItemType\t$Strata\t$Sexed\t$Instances\t$Array\t$Coding\t$Notes\t$Link"
+		#line="$Path\t$Category\t$Field\t$Participants\t$Items\t$Stability\t$ValueType\t$Units\t$ItemType\t$Strata\t$Sexed\t$Instances\t$Array\t$Coding\t$Notes\t$Link"
+		line="$Path\t$Category\t$Field\t$ValueType"
 	
 		# get line from old outcome-info file
-		oldline=`awk -F'\t' -v nfx=$FieldID '($7==nfx) {print $0}' ../outcome-info.tsv`		
+		oldline=`awk -F'\t' -v nfx=$FieldID '($1==nfx) {print $0}' ../outcome-info.tsv`
 
 		# if old line exists then set new with old setup
 		if [ "$oldline" == "" ]; then
@@ -36,17 +44,21 @@ while read Path Category FieldID Field Participants Items Stability ValueType Un
 			echo $FieldID >> new-field-list.txt
 		else
 			# get each PHESANT information column from old outcome info file
-			col1=`awk -F'\t' -v nfx=$FieldID '($7==nfx) {print $9}' ../outcome-info.tsv`
-			col2=`awk -F'\t' -v nfx=$FieldID '($7==nfx) {print $10}' ../outcome-info.tsv`
-			col3=`awk -F'\t' -v nfx=$FieldID '($7==nfx) {print $11}' ../outcome-info.tsv`
-			col4=`awk -F'\t' -v nfx=$FieldID '($7==nfx) {print $12}' ../outcome-info.tsv`
-			col5=`awk -F'\t' -v nfx=$FieldID '($7==nfx) {print $13}' ../outcome-info.tsv`
+			col1=`awk -F'\t' -v nfx=$FieldID '($1==nfx) {print $2}' ../outcome-info.tsv`
+			col2=`awk -F'\t' -v nfx=$FieldID '($1==nfx) {print $3}' ../outcome-info.tsv`
+			col3=`awk -F'\t' -v nfx=$FieldID '($1==nfx) {print $4}' ../outcome-info.tsv`
+			col4=`awk -F'\t' -v nfx=$FieldID '($1==nfx) {print $5}' ../outcome-info.tsv`
+			col5=`awk -F'\t' -v nfx=$FieldID '($1==nfx) {print $6}' ../outcome-info.tsv`
 
 			# otherwise create empty columns with X to show we need to check and maybe complete them
 			newline="$FieldID\t$col1\t$col2\t$col3\t$col4\t$col5\t$line"
 		fi
 		echo -e $newline  >> outcome-info-new.tsv	
 	fi
+	fi
+
+
+	i=$((i+1))
 
 done < "Data_Dictionary_Showcase.tsv"
 

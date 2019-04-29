@@ -1,0 +1,6 @@
+coding	meaning
+0	Normal for assay type
+1	No tip information
+2	No aliquot information
+3	Original log assay result more than 15 SDs below mean of log results in manual aliquots
+4	Resurvey only: insufficient participants with aliquot dispensing machine data for aliquot correction

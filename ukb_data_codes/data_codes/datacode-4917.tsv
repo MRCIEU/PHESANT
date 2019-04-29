@@ -1,0 +1,6 @@
+coding	meaning
+1	Reportable at assay and after aliquot correction, if attempted
+2	Reportable at assay but not reportable after any corrections (too low)
+3	Reportable at assay but not reportable after any corrections (too high)
+4	Not reportable at assay (too low)
+5	Not reportable at assay (too high)
