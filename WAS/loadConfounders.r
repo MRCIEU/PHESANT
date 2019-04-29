@@ -48,9 +48,16 @@ if (opt$save==TRUE) {
 	print("Loading confounders from phenotypes file ...")
         confNames = getConfounderNames()
 
+	sepx=','
+	if (opt$tab == TRUE) {
+	        sepx='\t'
+	}
+
+
+
         #####
 	##### extract confounders from data file
-        confs = fread(opt$phenofile, select=confNames, sep=',', header=TRUE, data.table=FALSE)
+        confs = fread(opt$phenofile, select=confNames, sep=sepx, header=TRUE, data.table=FALSE)
 	confs = lapply(confs,function(x) type.convert(as.character(x)))
 	confs = as.data.frame(confs)
 

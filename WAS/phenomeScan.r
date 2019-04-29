@@ -37,7 +37,8 @@ option_list = list(
   make_option(c("-z", "--save"), action="store_true", default=FALSE, help="Save generated phenotypes to a file rather than testing associations [default= %default]"),
   make_option(c("-c", "--confounderfile"), type="character", default=NULL, help="Confounder file name", metavar="character"),
   make_option(c("-i", "--confidenceintervals"), type="logical", default=TRUE, help="Whether confidence intervals should be calculated [default= %default]"),
-  make_option(c("-k", "--standardise"), action="store", default=TRUE, help="Trait of interest is standardised to have mean=0 and std=1 [default= %default]")
+  make_option(c("-k", "--standardise"), action="store", default=TRUE, help="Trait of interest is standardised to have mean=0 and std=1 [default= %default]"),
+  make_option(c("-p", "--tab"), action="store", default=TRUE, help="Phenotype (outcome) file is tab rather than comma seperated [default= %default]")
 );
 opt_parser = OptionParser(option_list=option_list);
 opt = parse_args(opt_parser);

@@ -22,8 +22,13 @@ loadIndicatorFields <- function(phenosToTest) {
 
 	print("Loading indicator fields from phenotypes file ...")
 
+	sepx=','
+	if (opt$tab == TRUE) {
+		sepx='\t'
+	}
+
 	# read pheno file column names
-        phenoVarsAll = colnames(read.table(opt$phenofile, header=1, nrows=1, sep=','))
+        phenoVarsAll = colnames(read.table(opt$phenofile, header=1, nrows=1, sep=sepx))
         phenoVarsAll = phenoVarsAll[which(phenoVarsAll!=opt$userId)]
 
 	indVars = c(opt$userId)
@@ -41,7 +46,7 @@ loadIndicatorFields <- function(phenosToTest) {
 	}
 
         ## read in the right table columns
-        data = fread(opt$phenofile, select=indVars, sep=',', header=TRUE, data.table=FALSE)
+        data = fread(opt$phenofile, select=indVars, sep=sepx, header=TRUE, data.table=FALSE)
 	data = data.frame(lapply(data,function(x) type.convert(as.character(x))))
 	colnames(data)[1] <- "userID"
 	return(data)

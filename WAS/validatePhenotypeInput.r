@@ -22,8 +22,13 @@ validatePhenotypeInput <- function() {
 
 	print("Validating phenotype data ...")
 
+	sepx=','
+        if (opt$tab == TRUE) {
+                sepx='\t'
+        }
+
 	## get just first row so we can check the column names
-	phenoIn = read.table(opt$phenofile, header=1, nrows=1, sep=',')
+	phenoIn = read.table(opt$phenofile, header=1, nrows=1, sep=sepx)
 	
 	###
 	### pheno file validation
