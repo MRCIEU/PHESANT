@@ -62,7 +62,7 @@ As specified in the data coding information file (`variable-info/data-coding-ord
 This field is assigned the categorical ordered data type and the association is tested with ordered logistic regression.
 
 
-## Example 6: categorical single field to unordered categorical data type
+## Example 6: categorical single field to unordered categorical data type
 
 ```bash
 1468_0|| CAT-SINGLE || Inc(>=10): 2(73008) || Inc(>=10): 5(80836) || Inc(>=10): 4(82933) || Inc(>=10): 3(105975) || Inc(>=10): 1(69399) || CAT-SINGLE-UNORDERED || reference: 3=105975 || SUCCESS results-notordered-logistic
