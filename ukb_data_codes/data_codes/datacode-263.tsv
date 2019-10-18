@@ -1,33 +1,10 @@
 coding	meaning
-1	Pre 2012 IC Death Data
-2	Post 2012 IC Death Data
-3	IC Cancer Registry 2012-
-4	Scots Cancer Registry (Fixed Width) 2012-
-5	Scots Death Certificates (Hand Coded)
 6	English HES Data
-7	SMR Death Data
-8	HES Critical Care Data
 9	UKB SMR 01B (HES)
 10	UKB SMR 01A (HES)
-11	PEDW GP Data
 12	PEDW In-Patient Data
-13	National Cancer Intelligence Network (NCIN) return
-14	Registry Return Data (aka "was flagged")
 15	SMR01B-V2
-16	Migration data set
-17	Migration data set (Scottish)
 18	UK HES In Patient (2015 format)
-19	UKB SMR 99B (Death) - 2015
-20	HPS HES Data
 21	PEDW HES 2015
-22	Scots Cancer PT_ID (2012 Onwards)
-23	IC Cancers (2016 Onwards)
-24	HES (Genomics England)
 28	SMR01B-V3
-30	ASCEND RCP In Patient Data
-40	UK RR
-41	UK TR
-50	THRIVE Specific Death Cert (Pre 2012)
-60	HES Critical Care (2015)
-65	SMR06 (2016)
 70	UK HES Inpatients (2017 format)

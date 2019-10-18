@@ -106,6 +106,7 @@ coding	meaning
 1890	Nuclear Medicine
 1900	Nursing episode
 1910	Obstetrics
+1915	Other maternity event
 1920	Occupational medicine
 1930	Occupational Therapy
 1940	Old age psychiatry
@@ -171,7 +172,9 @@ coding	meaning
 2455	Sport And Exercise Medicine
 2457	Stroke Medicine
 2460	Rehabilitation
+2465	Convalescence
 2470	Respiratory Medicine
+2475	TB respiratory
 2480	Respiratory Physiology
 2490	Respite care
 2500	Restorative dentistry
@@ -191,4 +194,5 @@ coding	meaning
 2620	Vascular surgery
 2630	Well babies
 2640	Young Chronic Sick
+2650	Staff wards
 9999	Not known

@@ -3,7 +3,7 @@ coding	meaning	node_id	parent_id	selectable
 101	Against participant wishes	101	100	Y
 102	Lack of time	102	100	Y
 103	Feeling unwell	103	100	Y
-104	Other health reason			104	100	Y
+104	Other health reason	104	100	Y
 200	Equipment failure	200	0	Y
 201	Malfunction	201	200	Y
 202	Not available	202	200	Y
@@ -19,10 +19,10 @@ coding	meaning	node_id	parent_id	selectable
 408	Unable to grip	408	400	Y
 409	Unable to remove shoes/socks	409	400	Y
 410	Wheelchair user/unable to stand	410	400	Y
-411	Asthma/lung disease			411	400	Y
-412	Unable to understand instructions			412	400	Y
-413	Physically unable			413	400	Y
-414	Previous measures unavailable			414	400	Y
+411	Asthma/lung disease	411	400	Y
+412	Unable to understand instructions	412	400	Y
+413	Physically unable	413	400	Y
+414	Previous measures unavailable	414	400	Y
 415	Arthritis	415	400	Y
 416	Recent surgery	416	400	Y
 417	Stroke/weakness/paralysis	417	400	Y
@@ -31,12 +31,12 @@ coding	meaning	node_id	parent_id	selectable
 420	Below minimum height scale	420	400	Y
 421	Unable to sit	421	400	Y
 500	Nurse Advised not to perform	500	0	Y
-501	Chest infection			501	500	Y
-502	Collapsed lung			502	500	Y
-503	Heart problems			503	500	Y
-504	High BP			504	500	Y
-505	Pregnant			505	500	Y
-506	Reason not known			506	500	Y
-507	Recent surgery			507	500	Y
-508	Retinal detachment/eye problems			508	500	Y
-509	Tuberculosis			509	500	Y
+501	Chest infection	501	500	Y
+502	Collapsed lung	502	500	Y
+503	Heart problems	503	500	Y
+504	High BP	504	500	Y
+505	Pregnant	505	500	Y
+506	Reason not known	506	500	Y
+507	Recent surgery	507	500	Y
+508	Retinal detachment/eye problems	508	500	Y
+509	Tuberculosis	509	500	Y

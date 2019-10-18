@@ -11,3 +11,5 @@ coding	meaning
 31	Amenity patient: formally detained under Part II, Mental Health Act 1983
 32	Amenity patient: formally detained under Part III, Mental Health Act 1983
 33	Amenity patient: formally detained under part X, Mental Health Act 1983
+98	Not applicable
+99	Not known: a validation error

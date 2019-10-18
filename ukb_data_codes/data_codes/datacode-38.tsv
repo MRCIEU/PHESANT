@@ -25,6 +25,7 @@ coding	meaning	node_id	parent_id	selectable
 8033	Pseudosarcomatous carcinoma	8033	2	Y
 8034	Polygonal cell carcinoma	8034	2	Y
 8035	Carcinoma with osteoclast-like giant cells	8035	2	Y
+8040	Tumorlet	8040	2	Y
 8041	Small cell carcinoma, NOS	8041	2	Y
 8042	Oat cell carcinoma	8042	2	Y
 8043	Small cell carcinoma, fusiform cell	8043	2	Y
@@ -34,6 +35,7 @@ coding	meaning	node_id	parent_id	selectable
 8050	Papillary carcinoma	8050	2	Y
 8051	Verrucous carcinoma	8051	2	Y
 8052	Papillary squamous cell carcinoma	8052	2	Y
+8053	Squamous cell papilloma, inverted	8053	2	Y
 8070	Squamous cell carcinoma	8070	2	Y
 8071	Squamous cell carcinoma, keratinizing	8071	2	Y
 8072	Squamous cell carcinoma, large cell, non-keratinizing	8072	2	Y
@@ -56,6 +58,7 @@ coding	meaning	node_id	parent_id	selectable
 8095	Metatypical carcinoma	8095	2	Y
 8097	Basal cell carcinoma, nodular	8097	2	Y
 8098	Adenoid basal cell carcinoma	8098	2	Y
+8100	Trichoepithelioma	8100	2	Y
 8102	Trichilemmocarcinoma	8102	2	Y
 8110	Pilomatrix carcinoma	8110	2	Y
 8120	Transitional cell carcinoma	8120	2	Y
@@ -123,6 +126,7 @@ coding	meaning	node_id	parent_id	selectable
 8261	Adenocarcinoma in villous adenoma	8261	2	Y
 8262	Villous adenocarcinoma	8262	2	Y
 8263	Adenocarcinoma in tubulovillous adenoma	8263	2	Y
+8264	Papillomatosis, glandular	8264	2	Y
 8270	Chromophobe adenocarcinoma	8270	2	Y
 8271	Prolactinoma	8271	2	Y
 8272	Pituitary carcinoma, NOS	8272	2	Y
@@ -146,6 +150,7 @@ coding	meaning	node_id	parent_id	selectable
 8331	Follicular adenocarcinoma, well differentiated	8331	2	Y
 8332	Follicular adenocarcinoma trabecular	8332	2	Y
 8333	Fetal adenocarcinoma	8333	2	Y
+8334	Macrofollicular adenoma	8334	2	Y
 8335	Follicular carcinoma, minimally invasive	8335	2	Y
 8337	Insular carcinoma	8337	2	Y
 8340	Papillary carcinoma, follicular variant	8340	2	Y
@@ -157,6 +162,7 @@ coding	meaning	node_id	parent_id	selectable
 8346	Mixed medullary-follicular carcinoma	8346	2	Y
 8347	Mixed medullary-papillary carcinoma	8347	2	Y
 8350	Nonencapsulated sclerosing carcinoma	8350	2	Y
+8360	Multiple endocrine adenomas	8360	2	Y
 8370	Adrenal cortical carcinoma	8370	2	Y
 8380	Endometrioid carcinoma	8380	2	Y
 8381	Endometrioid adenofibroma, malignant	8381	2	Y
@@ -168,6 +174,7 @@ coding	meaning	node_id	parent_id	selectable
 8401	Apocrine adenocarcinoma	8401	2	Y
 8402	Nodular hidradenoma, malignant	8402	2	Y
 8403	Malignant eccrine spiradenoma	8403	2	Y
+8405	Papillary hidradenoma	8405	2	Y
 8407	Sclerosing sweat duct carcinoma	8407	2	Y
 8408	Eccrine papillary adenocarcinoma	8408	2	Y
 8409	Eccrine poroma, malignant	8409	2	Y
@@ -178,10 +185,12 @@ coding	meaning	node_id	parent_id	selectable
 8440	Cystadenocarcinoma, NOS	8440	2	Y
 8441	Serous cystadenocarcinoma	8441	2	Y
 8442	Serous cystadenoma, borderline malignancy	8442	2	Y
+8443	Clear cell cystadenoma	8443	2	Y
 8450	Papillary cystadenocarcinoma	8450	2	Y
 8451	Papillary cystadenoma, borderline malignancy	8451	2	Y
 8452	Solid pseudopapillary carcinoma	8452	2	Y
 8453	Intraductal papillary-mucinous carcinoma	8453	2	Y
+8454	Cystic tumor of atrio-ventricular node	8454	2	Y
 8460	Papillary serous cystadenocarcinoma	8460	2	Y
 8461	Serous surface papillary carcinoma	8461	2	Y
 8462	Serous papillary cystic tumor of borderline malignancy	8462	2	Y
@@ -252,6 +261,8 @@ coding	meaning	node_id	parent_id	selectable
 8650	Interstitial cell tumor	8650	2	Y
 8670	Steroid cell tumor, malignant	8670	2	Y
 8680	Paraganglioma, malignant	8680	2	Y
+8681	Sympathetic paraganglioma	8681	2	Y
+8690	Glomus jugulare tumor, NOS	8690	2	Y
 8691	Aortic body tumor, malignant	8691	2	Y
 8692	Carotid body tumor, malignant	8692	2	Y
 8693	Extra-adrenal paraganglioma, malignant	8693	2	Y
@@ -262,6 +273,7 @@ coding	meaning	node_id	parent_id	selectable
 8721	Nodular melanoma	8721	2	Y
 8722	Balloon cell melanoma	8722	2	Y
 8723	Malignant melanoma, regressing	8723	2	Y
+8727	Dysplastic nevus	8727	2	Y
 8728	Meningeal melanomatosis	8728	2	Y
 8730	Amelanotic melanoma	8730	2	Y
 8740	Melanoma in junctional naevus	8740	2	Y
@@ -291,10 +303,16 @@ coding	meaning	node_id	parent_id	selectable
 8813	Fascial fibrosarcoma	8813	3	Y
 8814	Infantile fibrosarcoma	8814	3	Y
 8815	Solitary fibrous tumor, malignant	8815	3	Y
+8821	Aggressive fibromatosis	8821	3	Y
+8822	Abdominal fibromatosis	8822	3	Y
+8823	Desmoplastic fibroma	8823	3	Y
+8824	Myofibroma	8824	3	Y
+8825	Myofibroblastoma	8825	3	Y
 8830	Fibrous histiocytoma, malignant	8830	3	Y
 8832	Dermatofibrosarcoma, NOS	8832	3	Y
 8833	Pigmented dermatofibrosarcoma protuberans	8833	3	Y
 8840	Myxosarcoma	8840	3	Y
+8841	Angiomyxoma	8841	3	Y
 8850	Liposarcoma, NOS	8850	3	Y
 8851	Liposarcoma, well differentiated	8851	3	Y
 8852	Myxoid liposarcoma	8852	3	Y
@@ -306,6 +324,8 @@ coding	meaning	node_id	parent_id	selectable
 8861	Angiolipoma, NOS	8861	3	Y
 8890	Leiomyosarcoma, NOS	8890	3	Y
 8891	Epithelioid leiomyosarcoma	8891	3	Y
+8892	Cellular leiomyoma	8892	3	Y
+8893	Bizarre leiomyoma	8893	3	Y
 8894	Angiomyosarcoma	8894	3	Y
 8895	Myosarcoma	8895	3	Y
 8896	Myxoid leiomyosarcoma	8896	3	Y
@@ -341,6 +361,7 @@ coding	meaning	node_id	parent_id	selectable
 8990	Mesenchymoma, malignant	8990	3	Y
 8991	Embryonal sarcoma	8991	3	Y
 9000	Brenner tumor, malignant	9000	3	Y
+9013	Adenofibroma, NOS	9013	3	Y
 9014	Serous adenocarcinofibroma	9014	3	Y
 9015	Mucinous adenocarcinofibroma	9015	3	Y
 9020	Phyllodes tumor, malignant	9020	3	Y
@@ -353,6 +374,7 @@ coding	meaning	node_id	parent_id	selectable
 9051	Fibrous mesothelioma, malignant	9051	3	Y
 9052	Epithelioid mesothelioma, malignant	9052	3	Y
 9053	Mesothelioma, biphasic, malignant	9053	3	Y
+9054	Adenomatoid tumor, NOS	9054	3	Y
 9060	Dysgerminoma	9060	3	Y
 9061	Seminoma, NOS	9061	3	Y
 9062	Seminoma, anaplastic	9062	3	Y
@@ -362,6 +384,7 @@ coding	meaning	node_id	parent_id	selectable
 9070	Embryonal carcinoma, NOS	9070	3	Y
 9071	Yolk sac tumor	9071	3	Y
 9072	Polyembryoma	9072	3	Y
+9073	Gonadoblastoma	9073	3	Y
 9080	Teratoma malignant, NOS	9080	3	Y
 9081	Teratocarcinoma	9081	3	Y
 9082	Malignant teratoma, undifferentiated	9082	3	Y
@@ -372,6 +395,7 @@ coding	meaning	node_id	parent_id	selectable
 9100	Choriocarcinoma, NOS	9100	3	Y
 9101	Choriocarcinoma combined with other germ cell elements	9101	3	Y
 9102	Malignant teratoma, trophoblastic	9102	3	Y
+9103	Partial hydatidiform mole	9103	3	Y
 9104	Placental site trophoblastic tumor	9104	3	Y
 9105	Trophoblastic tumor, epithelioid	9105	3	Y
 9110	Mesonephroma, malignant	9110	3	Y
@@ -384,8 +408,10 @@ coding	meaning	node_id	parent_id	selectable
 9133	Epithelioid hemangioendothelioma, malignant	9133	3	Y
 9140	Kaposi sarcoma	9140	3	Y
 9150	Hemangiopericytoma, malignant	9150	3	Y
+9160	Angiofibroma, NOS	9160	3	Y
 9161	Hemangioblastoma	9161	3	Y
 9170	Lymphangiosarcoma	9170	3	Y
+9174	Lymphangiomyoma	9174	3	Y
 9180	Osteosarcoma, NOS	9180	3	Y
 9181	Chondroblastic osteosarcoma	9181	3	Y
 9182	Fibroblastic osteosarcoma	9182	3	Y
@@ -398,6 +424,7 @@ coding	meaning	node_id	parent_id	selectable
 9193	Periosteal osteosarcoma	9193	3	Y
 9194	High grade surface osteosarcoma	9194	3	Y
 9195	Intracortical osteosarcoma	9195	3	Y
+9210	Osteochondroma	9210	3	Y
 9220	Chondrosarcoma, NOS	9220	3	Y
 9221	Juxtacortical chondrosarcoma	9221	3	Y
 9230	Chondroblastoma, malignant	9230	3	Y
@@ -421,6 +448,7 @@ coding	meaning	node_id	parent_id	selectable
 9360	Pinealoma, NOS	9360	3	Y
 9361	Pineocytoma	9361	3	Y
 9362	Pineoblastoma	9362	3	Y
+9363	Melanotic neuroectodermal tumor	9363	3	Y
 9364	Peripheral neuroectodermal tumor	9364	3	Y
 9365	Askin tumor	9365	3	Y
 9370	Chordoma, NOS	9370	3	Y
@@ -573,6 +601,8 @@ coding	meaning	node_id	parent_id	selectable
 9761	Waldenstrom macroglobulinemia	9761	5	Y
 9762	Heavy chain disease, NOS	9762	5	Y
 9764	Immunoproliferative small intestinal disease	9764	5	Y
+9765	Monoclonal gammopathy of undetermined significance	9765	5	Y
+9769	Immunoglobulin deposition disease	9769	5	Y
 9800	Leukemia, NOS	9800	5	Y
 9801	Acute leukemia, NOS	9801	5	Y
 9805	Acute biphenotypic leukemia	9805	5	Y
@@ -638,6 +668,7 @@ coding	meaning	node_id	parent_id	selectable
 9965	Myeloid and lymphoid neoplasms with PDGFRB rearrangement	9965	5	Y
 9966	Myeloid and lymphoid neoplasms with PDGFRB re arrangement	9966	5	Y
 9967	Myeloid and lymphoid neoplasm with FGFR1 abnormalities	9967	5	Y
+9970	Lymphoproliferative disorder, NOS	9970	5	Y
 9971	Polymorphic PTLD	9971	5	Y
 9975	Myelodysplastic/Myeloproliferative neoplasm, unclassifiable	9975	5	Y
 9980	Refractory anemia	9980	5	Y

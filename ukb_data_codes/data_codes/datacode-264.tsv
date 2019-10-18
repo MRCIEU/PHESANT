@@ -20,6 +20,10 @@ coding	meaning	node_id	parent_id	selectable
 2013	Emergency admission: Consultant clinic of this or another health care provider	2013	2000	Y
 2014	Emergency admission: Outpatients	2014	2000	Y
 2015	Emergency admission: Mental Health Crisis Resolution Team	2015	2000	Y
+2016	Emergency admission: via A&E of another hospital provide	2016	2000	Y
+2017	Emergency admission: transfer from another hospital provider	2017	2000	Y
+2018	Emergency admission: babies born at home	2018	2000	Y
+2019	Emergency admission: other	2019	2000	Y
 3000	Maternity admission	3000	0	Y
 3001	Maternity admission: Post-partum	3001	3000	Y
 3002	Maternity admission: Ante-partum	3002	3000	Y
