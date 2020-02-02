@@ -94,7 +94,7 @@ testCategoricalOrdered <- function(varName, varType, thisdata, orderStr="") {
                         upper = NA
                 }
 
-		write(paste(varName, varType, numNotNA, beta, lower, upper, pvalue, sep=","), file=paste(opt$resDir,"results-ordered-logistic-",opt$varTypeArg,".txt",sep=""), append="TRUE");
+		write(paste(paste0("\"", varName, "\""), varType, numNotNA, beta, lower, upper, pvalue, sep=","), file=paste(opt$resDir,"results-ordered-logistic-",opt$varTypeArg,".txt",sep=""), append="TRUE");
 		cat("SUCCESS results-ordered-logistic");
 		incrementCounter("success.ordCat")
 

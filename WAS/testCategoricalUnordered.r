@@ -87,7 +87,7 @@ testCategoricalUnordered <- function(varName, varType, thisdata) {
 		## save result to file
 		maxFreq = length(which(phenoFactor==reference));
 		numNotNA = length(which(!is.na(pheno)))
-	    	write(paste(paste(varName,"-",reference,sep=""), varType, paste(maxFreq,"/",numNotNA,sep=""), -999, -999, -999, modelP, sep=","), file=paste(opt$resDir,"results-multinomial-logistic-",opt$varTypeArg,".txt",sep=""), append="TRUE")
+	    	write(paste(paste0("\"",varName,"-",reference,"\""), varType, paste(maxFreq,"/",numNotNA,sep=""), -999, -999, -999, modelP, sep=","), file=paste(opt$resDir,"results-multinomial-logistic-",opt$varTypeArg,".txt",sep=""), append="TRUE")
 
 		sink()
 		sink(resLogFile, append=TRUE)	
@@ -124,7 +124,7 @@ testCategoricalUnordered <- function(varName, varType, thisdata) {
 			numThisValue = length(which(phenoFactor==u));
 
 			## save result to file
-			write(paste(paste(varName,"-",reference,"#",u,sep=""), varType, paste(maxFreq,"#",numThisValue,sep=""), beta, lower, upper, pvalue, sep=","), file=paste(opt$resDir,"results-multinomial-logistic-",opt$varTypeArg,".txt",sep=""), append="TRUE")
+			write(paste(paste("\"", varName,"-",reference,"#",u,"\"", sep=""), varType, paste(maxFreq,"#",numThisValue,sep=""), beta, lower, upper, pvalue, sep=","), file=paste(opt$resDir,"results-multinomial-logistic-",opt$varTypeArg,".txt",sep=""), append="TRUE")
 			
 		}
 

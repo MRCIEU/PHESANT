@@ -99,7 +99,7 @@ binaryLogisticRegression <- function(varName, varType, thisdata, isExposure) {
                 numNotNA = length(na.omit(phenoFactor))
 
                 ## save result to file
-                write(paste(varName,varType,paste(idxTrue,"/",idxFalse,"(",numNotNA,")",sep=""), beta,lower,upper,pvalue, sep=","), file=paste(opt$resDir,"results-logistic-binary-",opt$varTypeArg,".txt",sep=""), append="TRUE");
+                write(paste(paste0("\"", varName, "\""),varType,paste(idxTrue,"/",idxFalse,"(",numNotNA,")",sep=""), beta,lower,upper,pvalue, sep=","), file=paste(opt$resDir,"results-logistic-binary-",opt$varTypeArg,".txt",sep=""), append="TRUE");
                 cat("SUCCESS results-logistic-binary ");
                 
 		incrementCounter("success.binary")
