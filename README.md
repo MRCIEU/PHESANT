@@ -137,6 +137,8 @@ For categorical multiple fields you may want to mark the whole field as denoting
  - YES-GENETIC: Genetic description variables.
  - YES-SENSITIVE: Variables not received from Biobank because they are sensitive so have more restricted access.
  - YES-SEX: Sex fields.
+ - YES-POLYMORPHIC: Fields denoted as [polymorphic](http://biobank.ctsu.ox.ac.uk/showcase/help.cgi?cd=polymorphic) by UK Biobank (e.g. [field 87](http://biobank.ctsu.ox.ac.uk/showcase/field.cgi?id=87)). 
+ - YES-PROCESSING: Fields that describe some aspect of the data collection process rather than some aspect (phenotype) of the participants themselves (e.g. [field 23049](http://biobank.ctsu.ox.ac.uk/showcase/field.cgi?id=23049)).
 3. CAT_MULT_INDICATOR_FIELDS - every categorical multiple field must have a value in this column. 
 The value describes which set of participants to include as the negative examples, when a binary variable is created from each value (see above cited paper for more information). 
 The positive examples for a value `v` in this categorical multiple field are simply the people with this particular value. However the negative values can be determined in three ways:
