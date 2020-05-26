@@ -75,7 +75,7 @@ testCategoricalMultiple <- function(varName, varType, thisdata) {
 		idxTrue = length(which(newthisdata[,phenoStartIdx]==facLevels[1]))
 	        idxFalse = length(which(newthisdata[,phenoStartIdx]==facLevels[2]))
                 
-	        if (idxTrue<10 || idxFalse<10) {
+	        if (idxTrue<opt$mincase || idxFalse<opt$mincase) {
 	                cat("CAT-MULT-SKIP-10 (", idxTrue, " vs ", idxFalse, ") || ", sep="");
 			incrementCounter("catMul.10")
 	        }

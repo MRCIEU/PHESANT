@@ -107,7 +107,7 @@ testContinuous2 <- function(varName, varType, thisdata) {
 			bin1Num = length(which(phenoBinned==1))
 			bin2Num = length(which(phenoBinned==2))
 
-			if (bin0Num>=10 & bin1Num>=10 & bin2Num>=10) {
+			if (bin0Num>=opt$mincase & bin1Num>=opt$mincase & bin2Num>=opt$mincase) {
 
 				# successful binning. >=10 examples in each of the 3 bins
 
@@ -118,13 +118,13 @@ testContinuous2 <- function(varName, varType, thisdata) {
 			else {
 				# try to treat as binary because not enough examples in each bin
 								
-				if (bin0Num<10 & bin2Num<10) {
+				if (bin0Num<opt$mincase & bin2Num<opt$mincase) {
 					## skip - not possible to create binary variable because first and third bins are too small
 					## ie. could merge bin1 with bin 2 but then bin3 still too small etc
 					cat("SKIP 2 bins are too small || ")
 	                                incrementCounter("cont.ordcattry.smallbins")
 				} 
-				else if ((bin0Num<10 | bin1Num<10) & (bin0Num+bin1Num)>=10) {
+				else if ((bin0Num<opt$mincase | bin1Num<opt$mincase) & (bin0Num+bin1Num)>=opt$mincase) {
 
 					# combine first and second bin to create binary variable
 					incrementCounter("cont.ordcattry.binsbinary")
@@ -135,7 +135,7 @@ testContinuous2 <- function(varName, varType, thisdata) {
 					thisdatanew = cbind.data.frame(thisdata[,1:numPreceedingCols], phenoBinned)
 	                                binaryLogisticRegression(varName, varType, thisdatanew, isExposure);
 				}
-				else if ((bin2Num<10 | bin1Num<10) & (bin2Num+bin1Num)>=10) {
+				else if ((bin2Num<opt$mincase | bin1Num<opt$mincase) & (bin2Num+bin1Num)>=opt$mincase) {
 
 					# combine second and last bin to create binary variable
 					incrementCounter("cont.ordcattry.binsbinary")

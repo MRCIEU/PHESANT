@@ -38,7 +38,7 @@ binaryLogisticRegression <- function(varName, varType, thisdata, isExposure) {
 	idxFalse = length(which(phenoFactor==facLevels[2]))
 	numNotNA = length(which(!is.na(phenoFactor)))
   
-        if (idxTrue<10 || idxFalse<10) {
+        if (idxTrue<opt$mincase || idxFalse<opt$mincase) {
 		cat("BINARY-LOGISTIC-SKIP-10 (", idxTrue, "/", idxFalse, ") || ", sep="")
 		incrementCounter("binary.10")
 	}

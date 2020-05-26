@@ -134,7 +134,7 @@ doCatOrdAssertions <- function(pheno) {
      			withValIdx = which(pheno==u)
         		numWithVal = length(withValIdx);
 		
-			if (numWithVal<10) stop("value with <10 examples")
+			if (numWithVal<opt$mincase) stop("value with <",opt$mincase," examples")
 		}
 }
 

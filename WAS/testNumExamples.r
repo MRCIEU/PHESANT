@@ -25,12 +25,12 @@ testNumExamples <- function(pheno) {
         for (u in uniqVar) {
                 withValIdx = which(pheno==u)
                 numWithVal = length(withValIdx);
-                if (numWithVal<10) {
+                if (numWithVal<opt$mincase) {
                         pheno[withValIdx]=NA
-			cat(paste("Removed ",u ,": ", numWithVal, "<10 examples || ", sep=""));
+			cat(paste("Removed ",u ,": ", numWithVal, "<",opt$mincase," examples || ", sep=""));
                 }
 		else {
-			cat(paste("Inc(>=10): ", u, "(", numWithVal, ") || ", sep=""));
+			cat(paste("Inc(>=",opt$mincase,"): ", u, "(", numWithVal, ") || ", sep=""));
 		}
         }
 	return(pheno);

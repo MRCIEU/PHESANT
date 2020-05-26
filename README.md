@@ -85,6 +85,7 @@ save			| Instead of running phenome scan, generated phenotypes are stored to fil
 confidenceintervals	| By default `confidenceintervals=TRUE`, but specifying `confidenceintervals=FALSE` means that PHESANT doesn't calculate the association confidence intervals (which may speed up PHESANT).
 standardise		| By default `standardise=TRUE`, but specifying `standardise=FALSE` means that PHESANT will not standardise the exposure variable. E.g. use this option for binary exposure variables.
 tab			| By default phenotype file (phenofile) is comma seperated, but `tab=TRUE` can be specified when your file is tab delimited (e.g. using the `r` option for UK Biobank's `ukbconv` utility).
+mincase			| Minimum size of phenotype categories (default is 10).
 
 The numParts and partIdx arguments are both used to parallelise the phenome scan. E.g. setting numParts to 5 will divide the set of phenotypes into 5 (rough) parts and then partIdx can be used to call the phenome scan on a specific part (1-5).
 
