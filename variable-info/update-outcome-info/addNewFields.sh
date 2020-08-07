@@ -13,7 +13,7 @@
 > new-field-list.txt
 
 # add our custom fields
-#TRAIT_OF_INTEREST	EXCLUDED	CAT_MULT_INDICATOR_FIELDS	CAT_SINGLE_TO_CAT_MULT	DATA_CODING
+#TRAIT_OF_INTEREST	EXCLUDED	CAT_MULT_INDICATOR_FIELDS	CAT_SINGLE_TO_CAT_MULT	DATE_CONVERT	DATA_CODING
 
 IFS=$'\t'
 
@@ -23,12 +23,12 @@ i=1
 while read Path Category FieldID Field Participants Items Stability ValueType Units ItemType Strata Sexed Instances Array Coding Notes Link; do
 
 	if [ $i -eq 1 ]; then
-		newline="FieldID\tTRAIT_OF_INTEREST\tEXCLUDED\tCAT_MULT_INDICATOR_FIELDS\tCAT_SINGLE_TO_CAT_MULT\tDATA_CODING\tPath\tCategory\tField\tValueType"
+		newline="FieldID\tTRAIT_OF_INTEREST\tEXCLUDED\tCAT_MULT_INDICATOR_FIELDS\tCAT_SINGLE_TO_CAT_MULT\tDATE_CONVERT\tDATA_CODING\tPath\tCategory\tField\tValueType"
 		echo -e $newline  >> outcome-info-new.tsv
 	else
 
 	# don't include field types PHESANT doesn't deal with
-	if [ "$ValueType" == "Text" ] || [ "$ValueType" == "Bulk" ] || [ "$ValueType" == "Date" ] || [ "$ValueType" == "Time" ] || [ "$ValueType" == "Compound" ]; then
+	if [ "$ValueType" == "Text" ] || [ "$ValueType" == "Bulk" ] || [ "$ValueType" == "Time" ] || [ "$ValueType" == "Compound" ]; then
 		continue
 	else
 
@@ -40,7 +40,7 @@ while read Path Category FieldID Field Participants Items Stability ValueType Un
 
 		# if old line exists then set new with old setup
 		if [ "$oldline" == "" ]; then
-			newline="$FieldID\tX\tX\tX\tX\tX\t$line"
+			newline="$FieldID\tX\t\t\t\t\t\t$line"
 			echo $FieldID >> new-field-list.txt
 		else
 			# get each PHESANT information column from old outcome info file
@@ -49,9 +49,10 @@ while read Path Category FieldID Field Participants Items Stability ValueType Un
 			col3=`awk -F'\t' -v nfx=$FieldID '($1==nfx) {print $4}' ../outcome-info.tsv`
 			col4=`awk -F'\t' -v nfx=$FieldID '($1==nfx) {print $5}' ../outcome-info.tsv`
 			col5=`awk -F'\t' -v nfx=$FieldID '($1==nfx) {print $6}' ../outcome-info.tsv`
+			col6=`awk -F'\t' -v nfx=$FieldID '($1==nfx) {print $7}' ../outcome-info.tsv`
 
 			# otherwise create empty columns with X to show we need to check and maybe complete them
-			newline="$FieldID\t$col1\t$col2\t$col3\t$col4\t$col5\t$line"
+			newline="$FieldID\t$col1\t$col2\t$col3\t$col4\t$col5\t$col6\t$line"
 		fi
 		echo -e $newline  >> outcome-info-new.tsv	
 	fi
@@ -60,6 +61,6 @@ while read Path Category FieldID Field Participants Items Stability ValueType Un
 
 	i=$((i+1))
 
-done < "Data_Dictionary_Showcase.tsv"
+done < "Data_Dictionary_Showcase20200806.tsv"
 
 

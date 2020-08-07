@@ -140,6 +140,8 @@ For categorical multiple fields you may want to mark the whole field as denoting
  - YES-SEX: Sex fields.
  - YES-POLYMORPHIC: Fields denoted as [polymorphic](http://biobank.ctsu.ox.ac.uk/showcase/help.cgi?cd=polymorphic) by UK Biobank (e.g. [field 87](http://biobank.ctsu.ox.ac.uk/showcase/field.cgi?id=87)). 
  - YES-PROCESSING: Fields that describe some aspect of the data collection process rather than some aspect (phenotype) of the participants themselves (e.g. [field 23049](http://biobank.ctsu.ox.ac.uk/showcase/field.cgi?id=23049)).
+ - YES-SUPERSEDED: Fields that have been superseded by another version. For example, all fields used to create the aggregated ['first occurence' disease variables](https://biobank.ctsu.ox.ac.uk/crystal/label.cgi?id=1712).
+ - YES-DATE: Fields that are dates. Dates are not currently included in phenome scans. They are only used where they are converted to a binary variable (see DATE_CONVERT column below).
 3. CAT_MULT_INDICATOR_FIELDS - every categorical multiple field must have a value in this column. 
 The value describes which set of participants to include as the negative examples, when a binary variable is created from each value (see above cited paper for more information). 
 The positive examples for a value `v` in this categorical multiple field are simply the people with this particular value. However the negative values can be determined in three ways:
@@ -147,6 +149,7 @@ The positive examples for a value `v` in this categorical multiple field are sim
  - NO_NAN - Included only those who have at least one value for this field (assign `FALSE` to any participant with at least one value for this field, where these values do not include value `v`, and also do not include a value denoting missingness (i.e. value is <0).
  - fieldID - Include only those who have a value for another field, with ID `fieldID` (assign `FALSE` to any participant without value `v` and without a value denoting missingness (i.e. value is <0) and with a value in this other field with ID `fieldID`).
 4. CAT_SINGLE_TO_CAT_MULT - Specifies fields that have the categorical single field type (as specified by UK Biobank) but that we actually want to treat as categorical multiple. State YES in this column to change this. To also convert the instances to arrays, state YES-INSTANCES. For example, field [20107](http://biobank.ctsu.ox.ac.uk/showcase/field.cgi?id=20107) has illnesses stored in 10 arrays (for each instance) so it makes sense to treat this as a categorical(multiple) field. Field [40011](http://biobank.ctsu.ox.ac.uk/showcase/field.cgi?id=40011) stores the histology of cancer tumours but is stored in 31 instances (rather than arrays) so we specify YES-INSTANCES so this field is treated as a categorical (multiple) field and the instances are treated as arrays.
+5. DATE_CONVERT - Specifies that a date field should be included and converted to a binary variable indicating whether each participant has a date in this field or not. This is used for the ['first occurence' disease variables](https://biobank.ctsu.ox.ac.uk/crystal/label.cgi?id=1712) that are date fields.
 5. DATA_CODING - The data coding IDs used to map a field to its data code in the data code information file described above. This is required for categorical (single) fields.
 
 ### Output

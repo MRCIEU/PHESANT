@@ -35,6 +35,7 @@ loadSource <- function() {
 	source("testInteger.r")
 	source("testCategoricalOrdered.r")
 	source("testCategoricalUnordered.r")
+	source("testDate.r")
 	source("saveCounts.r")
 	source("incrementCounter.r")
 	source("getIsCatMultExposure.r")

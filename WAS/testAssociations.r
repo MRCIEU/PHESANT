@@ -39,6 +39,7 @@ testAssociations <- function(currentVar, currentVarShort, thisdata) {
 		catSinToMult = vl$phenoInfo$CAT_SINGLE_TO_CAT_MULT[idx]
 		fieldType = vl$phenoInfo$ValueType[idx]
 		isExposure = getIsExposure(currentVarShort) #vl$phenoInfo$EXPOSURE_PHENOTYPE[idx]
+		dateConvert = vl$phenoInfo$DATE_CONVERT[idx]
 
 		if (fieldType=="Integer") {		
 
@@ -125,6 +126,15 @@ testAssociations <- function(currentVar, currentVarShort, thisdata) {
 		        	testCategoricalMultiple(currentVarShort, "CAT-MUL", thisdata);
 			}
 			cat("\n");
+		}
+		else if (fieldType=="Date" && dateConvert!="") {
+
+			#### DATE TO BE CONVERTED TO BINARY
+			cat(currentVar, "|| ", sep="")
+
+			testDate(currentVarShort, "DATE", thisdata)
+
+			cat("\n")
 		}
 		else {
 	        	#cat("VAR MISSING ", currentVarShort, "\n", sep="");
