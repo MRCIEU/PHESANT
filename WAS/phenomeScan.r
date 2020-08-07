@@ -47,6 +47,7 @@ opt = parse_args(opt_parser);
 source("processArgs.r")
 processArgs();
 
+save.image(file = "opt.RData")
 source("initFunctions.r")
 loadSource();
 

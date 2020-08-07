@@ -1,9 +1,0 @@
-name,countValue
-catMul.binary,12
-catMul.over10,12
-catSinToCatMul,1
-excluded.cont,1
-start.catMul,4
-start.exposure.catMulvalues,1
-success.binary,12
-success.exposure.binary,1
