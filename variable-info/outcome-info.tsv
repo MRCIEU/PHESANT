@@ -34,6 +34,9 @@ FieldID	TRAIT_OF_INTEREST	EXCLUDED	CAT_MULT_INDICATOR_FIELDS	CAT_SINGLE_TO_CAT_M
 96							UK Biobank Assessment Centre > Physical measures > Blood pressure	100011	Time since interview start at which blood pressure screen(s) shown	Integer
 102							UK Biobank Assessment Centre > Physical measures > Blood pressure	100011	"Pulse rate, automated reading"	Integer
 111						7	UK Biobank Assessment Centre > Procedural metrics	100004	Aide-memoire completed	Categorical single
+115		YES-SENSITIVE					Assessment Centre > Verbal interview > Early life factors	100072	Father's month of birth	Categorical single
+117		YES-SENSITIVE					Assessment Centre > Verbal interview > Early life factors	100072	Mother's month of birth	Categorical single
+118		YES-SENSITIVE					Assessment Centre > Verbal interview > Early life factors	100072	Mother's day of birth	Integer
 120						100258	UK Biobank Assessment Centre > Verbal interview > Early life factors	100072	Birth weight known	Categorical single
 129							UK Biobank Assessment Centre > Verbal interview > Early life factors	100072	Place of birth in UK - north co-ordinate	Integer
 130							UK Biobank Assessment Centre > Verbal interview > Early life factors	100072	Place of birth in UK - east co-ordinate	Integer
@@ -42,6 +45,7 @@ FieldID	TRAIT_OF_INTEREST	EXCLUDED	CAT_MULT_INDICATOR_FIELDS	CAT_SINGLE_TO_CAT_M
 135							UK Biobank Assessment Centre > Verbal interview > Medical conditions	100074	Number of self-reported non-cancer illnesses	Integer
 136							UK Biobank Assessment Centre > Verbal interview > Operations	100076	"Number of operations, self-reported"	Integer
 137							UK Biobank Assessment Centre > Verbal interview > Medications	100075	Number of treatments/medications taken	Integer
+146		YES-SENSITIVE					Assessment Centre > Verbal interview > Early life factors	100072	Father's day of birth	Integer
 189							Population characteristics > Baseline characteristics	100094	Townsend deprivation index at recruitment	Continuous
 190						1965	Population characteristics > Ongoing characteristics	2	Reason lost to follow-up	Categorical single
 191		YES-DATE					Population characteristics > Ongoing characteristics	2	Date lost to follow-up	Date
@@ -657,6 +661,8 @@ FieldID	TRAIT_OF_INTEREST	EXCLUDED	CAT_MULT_INDICATOR_FIELDS	CAT_SINGLE_TO_CAT_M
 6221							UK Biobank Assessment Centre > Physical measures > Anthropometry > Impedance measures	100009	"Impedance of arm, manual entry (right)"	Integer
 6222							UK Biobank Assessment Centre > Physical measures > Anthropometry > Impedance measures	100009	"Impedance of arm, manual entry (left)"	Integer
 6312		YES-CAT-SIN-MUL-VAL				6312	UK Biobank Assessment Centre > Cognitive function > Tower rearranging	503	Value entered	Categorical single
+6313							Assessment Centre > Cognitive function > Tower rearranging	503	Duration to entering selection	Integer
+6325							Assessment Centre > Cognitive function > Symbol digit substitution	502	Duration to entering symbol choice	Integer
 6332			NO_NAN			6332	UK Biobank Assessment Centre > Cognitive function > Matrix pattern completion	501	Item selected for each puzzle	Categorical multiple
 6333							UK Biobank Assessment Centre > Cognitive function > Matrix pattern completion	501	Duration spent answering each puzzle	Integer
 6348						1990	UK Biobank Assessment Centre > Cognitive function > Trail making	505	Duration to complete numeric path (trail #1)	Integer
@@ -913,6 +919,7 @@ FieldID	TRAIT_OF_INTEREST	EXCLUDED	CAT_MULT_INDICATOR_FIELDS	CAT_SINGLE_TO_CAT_M
 20187						5012	Online follow-up > Cognitive function online > Fluid intelligence / reasoning	118	FI12 : square sequence recognition	Categorical single
 20189						5013	Online follow-up > Cognitive function online > Fluid intelligence / reasoning	118	FI13 : subset inclusion logic	Categorical single
 20191							Online follow-up > Cognitive function online > Fluid intelligence / reasoning	118	Fluid intelligence score	Integer
+20192							Online follow-up > Cognitive function online > Fluid intelligence / reasoning	118	Number of fluid intelligence questions attempted within time limit	Integer
 20193						5014	Online follow-up > Cognitive function online > Fluid intelligence / reasoning	118	FI14 : alphanumeric substitution	Categorical single
 20195							Online follow-up > Cognitive function online > Symbol digit substitution	122	Number of symbol digit matches attempted	Integer
 20196		YES-PROCESSING				500	Online follow-up > Cognitive function online > Symbol digit substitution	122	First code array presented	Categorical single
@@ -1336,6 +1343,7 @@ FieldID	TRAIT_OF_INTEREST	EXCLUDED	CAT_MULT_INDICATOR_FIELDS	CAT_SINGLE_TO_CAT_M
 22011		YES-GENETIC					Genomics > Genotypes > Interim genotype release	199001	Genetic relatedness pairing	Integer
 22012		YES-GENETIC					Genomics > Genotypes > Interim genotype release	199001	Genetic relatedness factor	Continuous
 22013		YES-GENETIC					Genomics > Genotypes > Interim genotype release	199001	Genetic relatedness IBS0	Continuous
+22017		YES-DATE					Online follow-up > Cognitive function online	116	Invitation to complete online cognitive function questionnaire, date sent	Date
 22018		YES-GENETIC					Genomics > Genotypes > Interim genotype release	199001	Genetic relatedness exclusions	Categorical single
 22019		YES-GENETIC				1	Genomics > Genotypes > Genotyping process and sample QC	100313	Sex chromosome aneuploidy	Categorical single
 22020		YES-GENETIC				1	Genomics > Genotypes > Genotyping process and sample QC	100313	Used in genetic principal components	Categorical single
@@ -1408,6 +1416,10 @@ FieldID	TRAIT_OF_INTEREST	EXCLUDED	CAT_MULT_INDICATOR_FIELDS	CAT_SINGLE_TO_CAT_M
 22179						7	Online follow-up > Work environment > Medical information	132	Recent medication for asbestosis	Categorical single
 22180						7	Online follow-up > Work environment > Medical information	132	Recent medication for lung cancer (not mesothelioma)	Categorical single
 22181						7	Online follow-up > Work environment > Medical information	132	Recent medication for mesothelioma of the lung	Categorical single
+22190		YES-GENETIC					Genomics > Telomeres	265	Unadjusted T/S ratio	Continuous
+22191		YES-GENETIC					Genomics > Telomeres	265	Adjusted T/S ratio	Continuous
+22192		YES-GENETIC					Genomics > Telomeres	265	Z-adjusted T/S log	Continuous
+22194		YES-GENETIC					Genomics > Telomeres	265	T/S ratio for regression dilution bias	Continuous
 22200		YES-AGE					Online follow-up > Work environment > Employment history	130	Year of birth	Integer
 22330							"UK Biobank Assessment Centre > Physical measures > ECG at rest, 12-lead"	104	PQ interval	Integer
 22331							"UK Biobank Assessment Centre > Physical measures > ECG at rest, 12-lead"	104	QT interval	Integer
@@ -1436,6 +1448,8 @@ FieldID	TRAIT_OF_INTEREST	EXCLUDED	CAT_MULT_INDICATOR_FIELDS	CAT_SINGLE_TO_CAT_M
 22415							UK Biobank Assessment Centre > Imaging > Abdominal MRI > Abdominal composition	149	Total adipose tissue volume	Continuous
 22416							UK Biobank Assessment Centre > Imaging > Abdominal MRI > Abdominal composition	149	Total lean tissue volume	Continuous
 22417							UK Biobank Assessment Centre > Imaging > Abdominal MRI > Liver MRI	126	Liver iron corrected T1 (ct1)	Continuous
+22418		YES-GENETIC					Genomics > Genotypes > Genotype Results	100315	Genotype calls	Integer
+22419		YES-GENETIC					Genomics > Genotypes > Genotype Results	100315	Genotype confidences	Integer
 22420							UK Biobank Assessment Centre > Imaging > Heart MRI > Left ventricular size and function	133	LV ejection fraction	Integer
 22421							UK Biobank Assessment Centre > Imaging > Heart MRI > Left ventricular size and function	133	LV end diastolic volume	Integer
 22422							UK Biobank Assessment Centre > Imaging > Heart MRI > Left ventricular size and function	133	LV end systolic volume	Integer
@@ -1444,11 +1458,15 @@ FieldID	TRAIT_OF_INTEREST	EXCLUDED	CAT_MULT_INDICATOR_FIELDS	CAT_SINGLE_TO_CAT_M
 22425							UK Biobank Assessment Centre > Imaging > Heart MRI > Left ventricular size and function	133	Cardiac index	Continuous
 22426							UK Biobank Assessment Centre > Imaging > Heart MRI > Left ventricular size and function	133	Average heart rate	Integer
 22427							UK Biobank Assessment Centre > Imaging > Heart MRI > Left ventricular size and function	133	Body surface area	Continuous
+22430		YES-GENETIC					Genomics > Genotypes > Genotype Results	100315	Genotype intensities	Integer
+22431		YES-GENETIC					Genomics > Genotypes > Genotype Results	100315	Genotype copy number variants, log2ratios	Integer
 22432							UK Biobank Assessment Centre > Imaging > Abdominal MRI > Abdominal composition	149	Total abdominal adipose tissue index	Continuous
 22433							UK Biobank Assessment Centre > Imaging > Abdominal MRI > Abdominal composition	149	Weight-to-muscle ratio	Continuous
 22434							UK Biobank Assessment Centre > Imaging > Abdominal MRI > Abdominal composition	149	Abdominal fat ratio	Continuous
 22435							UK Biobank Assessment Centre > Imaging > Abdominal MRI > Abdominal composition	149	Muscle fat infiltration	Continuous
 22436							UK Biobank Assessment Centre > Imaging > Abdominal MRI > Abdominal composition	149	Liver proton density fat fraction (AMRA)	Continuous
+22437		YES-GENETIC					Genomics > Genotypes > Genotype Results	100315	Genotype copy number variants B-allele frequencies	Integer
+22438		YES-GENETIC					Genomics > Imputation	100319	Haplotypes (WTCHG)	Integer
 22499						480	Online follow-up > Work environment	123	Device used to enter occupational data	Categorical single
 22500		YES-DATE					Online follow-up > Work environment	123	When occupational data entered	Date
 22501						100306	Online follow-up > Work environment	123	Year ended full time education	Integer
@@ -1519,6 +1537,7 @@ FieldID	TRAIT_OF_INTEREST	EXCLUDED	CAT_MULT_INDICATOR_FIELDS	CAT_SINGLE_TO_CAT_M
 22702							Additional exposures > Local environment > Home locations	150	Home location - east co-ordinate (rounded)	Integer
 22703							Additional exposures > Local environment > Home locations	150	Home location - north co-ordinate	Integer
 22704							Additional exposures > Local environment > Home locations	150	Home location - north co-ordinate (rounded)	Integer
+22828		YES-GENETIC					Genomics > Imputation	100319	Imputation from genotype (WTCHG)	Integer
 23000							Biological samples > Assay results > Blood assays > Infectious Diseases > Infectious Disease Antigens	1307	1gG antigen for Herpes Simplex virus-1	Integer
 23001							Biological samples > Assay results > Blood assays > Infectious Diseases > Infectious Disease Antigens	1307	2mgG unique antigen for Herpes Simplex virus-2	Integer
 23002							Biological samples > Assay results > Blood assays > Infectious Diseases > Infectious Disease Antigens	1307	gE / gI antigen for Varicella Zoster Virus 	Integer
@@ -1630,6 +1649,13 @@ FieldID	TRAIT_OF_INTEREST	EXCLUDED	CAT_MULT_INDICATOR_FIELDS	CAT_SINGLE_TO_CAT_M
 23128							UK Biobank Assessment Centre > Physical measures > Anthropometry > Impedance measures	100009	Trunk fat mass	Continuous
 23129							UK Biobank Assessment Centre > Physical measures > Anthropometry > Impedance measures	100009	Trunk fat-free mass	Continuous
 23130							UK Biobank Assessment Centre > Physical measures > Anthropometry > Impedance measures	100009	Trunk predicted mass	Continuous
+23145		YES-GENETIC					Genomics > Exome sequences	170	Population level exome OQFE variants, PLINK format - interim 300k release	Integer
+23146		YES-GENETIC					Genomics > Exome sequences	170	Population level exome OQFE variants, pVCF format - interim 300k release	Integer
+23155		YES-GENETIC					Genomics > Exome sequences	170	Population level exome OQFE variants, PLINK format - interim 200k release	Integer
+23156		YES-GENETIC					Genomics > Exome sequences	170	Population level exome OQFE variants, pVCF format - interim 200k release	Integer
+23165		YES-GENETIC					Genomics > Genetically deduced phenotypes	264	Blood-type haplotype	Categorical single
+23195		YES-GENETIC					Genomics > Whole genome sequences	180	Whole genome GraphTyper joint call pVCF (deprecated)	Integer
+23196		YES-GENETIC					Genomics > Whole genome sequences	180	Whole genome GATK joint call pVCF	Integer
 23200							"UK Biobank Assessment Centre > Imaging > DXA assessment > Bone size, mineral and density by DXA"	125	L1-L4 area	Continuous
 23201							"UK Biobank Assessment Centre > Imaging > DXA assessment > Bone size, mineral and density by DXA"	125	L1-L4 average height	Continuous
 23202							"UK Biobank Assessment Centre > Imaging > DXA assessment > Bone size, mineral and density by DXA"	125	L1-L4 average width	Continuous
@@ -1750,6 +1776,439 @@ FieldID	TRAIT_OF_INTEREST	EXCLUDED	CAT_MULT_INDICATOR_FIELDS	CAT_SINGLE_TO_CAT_M
 23322							UK Biobank Assessment Centre > Cognitive function > Symbol digit substitution	502	Values entered	Integer
 23323						6361	UK Biobank Assessment Centre > Cognitive function > Symbol digit substitution	502	Number of symbol digit matches attempted	Integer
 23324							UK Biobank Assessment Centre > Cognitive function > Symbol digit substitution	502	Number of symbol digit matches made correctly	Integer
+23325							Assessment Centre > Imaging > DXA assessment > Bone size, mineral and density by DXA	125	Femur neck bone area (left)	Continuous
+23326							Assessment Centre > Imaging > DXA assessment > Bone size, mineral and density by DXA	125	Femur neck bone area (right)	Continuous
+23327							Assessment Centre > Imaging > DXA assessment > Bone size, mineral and density by DXA	125	Femur neck BMC (bone mineral content) (left)	Continuous
+23328							Assessment Centre > Imaging > DXA assessment > Bone size, mineral and density by DXA	125	Femur neck BMC (bone mineral content) (right)	Continuous
+23329							Assessment Centre > Imaging > DXA assessment > Bone size, mineral and density by DXA	125	Femur shaft bone area (left)	Continuous
+23330							Assessment Centre > Imaging > DXA assessment > Bone size, mineral and density by DXA	125	Femur shaft bone area (right)	Continuous
+23331							Assessment Centre > Imaging > DXA assessment > Bone size, mineral and density by DXA	125	Femur shaft BMC (bone mineral content) (left)	Continuous
+23332							Assessment Centre > Imaging > DXA assessment > Bone size, mineral and density by DXA	125	Femur shaft BMC (bone mineral content) (right)	Continuous
+23333							Assessment Centre > Imaging > DXA assessment > Bone size, mineral and density by DXA	125	Femur total area (left)	Continuous
+23334							Assessment Centre > Imaging > DXA assessment > Bone size, mineral and density by DXA	125	Femur total area (right)	Continuous
+23335							Assessment Centre > Imaging > DXA assessment > Bone size, mineral and density by DXA	125	Femur total BMC (bone mineral content) (left)	Continuous
+23336							Assessment Centre > Imaging > DXA assessment > Bone size, mineral and density by DXA	125	Femur total BMC (bone mineral content) (right)	Continuous
+23337							Assessment Centre > Imaging > DXA assessment > Bone size, mineral and density by DXA	125	Femur troch bone area (left)	Continuous
+23338							Assessment Centre > Imaging > DXA assessment > Bone size, mineral and density by DXA	125	Femur troch bone area (right)	Continuous
+23339							Assessment Centre > Imaging > DXA assessment > Bone size, mineral and density by DXA	125	Femur troch BMC (bone mineral content) (left)	Continuous
+23340							Assessment Centre > Imaging > DXA assessment > Bone size, mineral and density by DXA	125	Femur troch BMC (bone mineral content) (right)	Continuous
+23341							Assessment Centre > Imaging > DXA assessment > Bone size, mineral and density by DXA	125	Femur wards bone area (left)	Continuous
+23342							Assessment Centre > Imaging > DXA assessment > Bone size, mineral and density by DXA	125	Femur wards bone area (left)	Continuous
+23343							Assessment Centre > Imaging > DXA assessment > Bone size, mineral and density by DXA	125	Femur wards BMC (bone mineral content) (left)	Continuous
+23344							Assessment Centre > Imaging > DXA assessment > Bone size, mineral and density by DXA	125	Femur wards BMC (bone mineral content) (right)	Continuous
+23355							Assessment Centre > Imaging > Abdominal MRI > Abdominal composition	149	Posterior thigh muscle fat infiltration (MFI) (left)	Continuous
+23356							Assessment Centre > Imaging > Abdominal MRI > Abdominal composition	149	Posterior thigh muscle fat infiltration (MFI) (right)	Continuous
+23357		YES-META					Assessment Centre > Imaging > Abdominal MRI > Abdominal composition	149	VAT error indicator	Categorical multiple
+23358		YES-META					Assessment Centre > Imaging > Abdominal MRI > Abdominal composition	149	ASAT error indicator	Categorical multiple
+23359		YES-META					Assessment Centre > Imaging > Abdominal MRI > Abdominal composition	149	Anterior thigh error indicator (left)	Categorical multiple
+23360		YES-META					Assessment Centre > Imaging > Abdominal MRI > Abdominal composition	149	Posterior thigh error indicator (left)	Categorical multiple
+23361		YES-META					Assessment Centre > Imaging > Abdominal MRI > Abdominal composition	149	Anterior thigh error indicator (right)	Categorical multiple
+23362		YES-META					Assessment Centre > Imaging > Abdominal MRI > Abdominal composition	149	Posterior thigh error indicator (right)	Categorical multiple
+23363		YES-META					Assessment Centre > Imaging > Abdominal MRI > Abdominal composition	149	10P liver PDFF mean error indicator	Categorical single
+23364		YES-META					Assessment Centre > Imaging > Abdominal MRI > Abdominal composition	149	FR liver PDFF mean error indicator	Categorical multiple
+23374		YES-GENETIC					Genomics > Whole genome sequences	180	Whole genome GraphTyper joint call pVCF (reserved)	Integer
+23375		YES-GENETIC					Genomics > Whole genome sequences	180	Whole genome GATK joint call pVCF (reserved)	Integer
+23400							Biological samples > Blood assays > NMR metabolomics	220	Total Cholesterol	Continuous
+23401							Biological samples > Blood assays > NMR metabolomics	220	Total Cholesterol Minus HDL-C	Continuous
+23402							Biological samples > Blood assays > NMR metabolomics	220	Remnant Cholesterol (Non-HDL, Non-LDL -Cholesterol)	Continuous
+23403							Biological samples > Blood assays > NMR metabolomics	220	VLDL Cholesterol	Continuous
+23404							Biological samples > Blood assays > NMR metabolomics	220	Clinical LDL Cholesterol	Continuous
+23405							Biological samples > Blood assays > NMR metabolomics	220	LDL Cholesterol	Continuous
+23406							Biological samples > Blood assays > NMR metabolomics	220	HDL Cholesterol	Continuous
+23407							Biological samples > Blood assays > NMR metabolomics	220	Total Triglycerides	Continuous
+23408							Biological samples > Blood assays > NMR metabolomics	220	Triglycerides in VLDL	Continuous
+23409							Biological samples > Blood assays > NMR metabolomics	220	Triglycerides in LDL	Continuous
+23410							Biological samples > Blood assays > NMR metabolomics	220	Triglycerides in HDL	Continuous
+23411							Biological samples > Blood assays > NMR metabolomics	220	Total Phospholipids in Lipoprotein Particles	Continuous
+23412							Biological samples > Blood assays > NMR metabolomics	220	Phospholipids in VLDL	Continuous
+23413							Biological samples > Blood assays > NMR metabolomics	220	Phospholipids in LDL	Continuous
+23414							Biological samples > Blood assays > NMR metabolomics	220	Phospholipids in HDL	Continuous
+23415							Biological samples > Blood assays > NMR metabolomics	220	Total Esterified Cholesterol	Continuous
+23416							Biological samples > Blood assays > NMR metabolomics	220	Cholesteryl Esters in VLDL	Continuous
+23417							Biological samples > Blood assays > NMR metabolomics	220	Cholesteryl Esters in LDL	Continuous
+23418							Biological samples > Blood assays > NMR metabolomics	220	Cholesteryl Esters in HDL	Continuous
+23419							Biological samples > Blood assays > NMR metabolomics	220	Total Free Cholesterol	Continuous
+23420							Biological samples > Blood assays > NMR metabolomics	220	Free Cholesterol in VLDL	Continuous
+23421							Biological samples > Blood assays > NMR metabolomics	220	Free Cholesterol in LDL	Continuous
+23422							Biological samples > Blood assays > NMR metabolomics	220	Free Cholesterol in HDL	Continuous
+23423							Biological samples > Blood assays > NMR metabolomics	220	Total Lipids in Lipoprotein Particles	Continuous
+23424							Biological samples > Blood assays > NMR metabolomics	220	Total Lipids in VLDL	Continuous
+23425							Biological samples > Blood assays > NMR metabolomics	220	Total Lipids in LDL	Continuous
+23426							Biological samples > Blood assays > NMR metabolomics	220	Total Lipids in HDL	Continuous
+23427							Biological samples > Blood assays > NMR metabolomics	220	Total Concentration of Lipoprotein Particles	Continuous
+23428							Biological samples > Blood assays > NMR metabolomics	220	Concentration of VLDL Particles	Continuous
+23429							Biological samples > Blood assays > NMR metabolomics	220	Concentration of LDL Particles	Continuous
+23430							Biological samples > Blood assays > NMR metabolomics	220	Concentration of HDL Particles	Continuous
+23431							Biological samples > Blood assays > NMR metabolomics	220	Average Diameter for VLDL Particles	Continuous
+23432							Biological samples > Blood assays > NMR metabolomics	220	Average Diameter for LDL Particles	Continuous
+23433							Biological samples > Blood assays > NMR metabolomics	220	Average Diameter for HDL Particles	Continuous
+23434							Biological samples > Blood assays > NMR metabolomics	220	Phosphoglycerides	Continuous
+23435							Biological samples > Blood assays > NMR metabolomics	220	Triglycerides to Phosphoglycerides ratio	Continuous
+23436							Biological samples > Blood assays > NMR metabolomics	220	Total Cholines	Continuous
+23437							Biological samples > Blood assays > NMR metabolomics	220	Phosphatidylcholines	Continuous
+23438							Biological samples > Blood assays > NMR metabolomics	220	Sphingomyelins	Continuous
+23439							Biological samples > Blood assays > NMR metabolomics	220	Apolipoprotein B	Continuous
+23440							Biological samples > Blood assays > NMR metabolomics	220	Apolipoprotein A1	Continuous
+23441							Biological samples > Blood assays > NMR metabolomics	220	Apolipoprotein B to Apolipoprotein A1 ratio	Continuous
+23442							Biological samples > Blood assays > NMR metabolomics	220	Total Fatty Acids	Continuous
+23443							Biological samples > Blood assays > NMR metabolomics	220	Degree of Unsaturation	Continuous
+23444							Biological samples > Blood assays > NMR metabolomics	220	Omega-3 Fatty Acids	Continuous
+23445							Biological samples > Blood assays > NMR metabolomics	220	Omega-6 Fatty Acids	Continuous
+23446							Biological samples > Blood assays > NMR metabolomics	220	Polyunsaturated Fatty Acids	Continuous
+23447							Biological samples > Blood assays > NMR metabolomics	220	Monounsaturated Fatty Acids	Continuous
+23448							Biological samples > Blood assays > NMR metabolomics	220	Saturated Fatty Acids	Continuous
+23449							Biological samples > Blood assays > NMR metabolomics	220	Linoleic Acid	Continuous
+23450							Biological samples > Blood assays > NMR metabolomics	220	Docosahexaenoic Acid	Continuous
+23451							Biological samples > Blood assays > NMR metabolomics	220	Omega-3 Fatty Acids to Total Fatty Acids percentage	Continuous
+23452							Biological samples > Blood assays > NMR metabolomics	220	Omega-6 Fatty Acids to Total Fatty Acids percentage	Continuous
+23453							Biological samples > Blood assays > NMR metabolomics	220	Polyunsaturated Fatty Acids to Total Fatty Acids percentage	Continuous
+23454							Biological samples > Blood assays > NMR metabolomics	220	Monounsaturated Fatty Acids to Total Fatty Acids percentage	Continuous
+23455							Biological samples > Blood assays > NMR metabolomics	220	Saturated Fatty Acids to Total Fatty Acids percentage	Continuous
+23456							Biological samples > Blood assays > NMR metabolomics	220	Linoleic Acid to Total Fatty Acids percentage	Continuous
+23457							Biological samples > Blood assays > NMR metabolomics	220	Docosahexaenoic Acid to Total Fatty Acids percentage	Continuous
+23458							Biological samples > Blood assays > NMR metabolomics	220	Polyunsaturated Fatty Acids to Monounsaturated Fatty Acids ratio	Continuous
+23459							Biological samples > Blood assays > NMR metabolomics	220	Omega-6 Fatty Acids to Omega-3 Fatty Acids ratio	Continuous
+23460							Biological samples > Blood assays > NMR metabolomics	220	Alanine	Continuous
+23461							Biological samples > Blood assays > NMR metabolomics	220	Glutamine	Continuous
+23462							Biological samples > Blood assays > NMR metabolomics	220	Glycine	Continuous
+23463							Biological samples > Blood assays > NMR metabolomics	220	Histidine	Continuous
+23464							Biological samples > Blood assays > NMR metabolomics	220	Total Concentration of Branched-Chain Amino Acids (Leucine + Isoleucine + Valine)	Continuous
+23465							Biological samples > Blood assays > NMR metabolomics	220	Isoleucine	Continuous
+23466							Biological samples > Blood assays > NMR metabolomics	220	Leucine	Continuous
+23467							Biological samples > Blood assays > NMR metabolomics	220	Valine	Continuous
+23468							Biological samples > Blood assays > NMR metabolomics	220	Phenylalanine	Continuous
+23469							Biological samples > Blood assays > NMR metabolomics	220	Tyrosine	Continuous
+23470							Biological samples > Blood assays > NMR metabolomics	220	Glucose	Continuous
+23471							Biological samples > Blood assays > NMR metabolomics	220	Lactate	Continuous
+23472							Biological samples > Blood assays > NMR metabolomics	220	Pyruvate	Continuous
+23473							Biological samples > Blood assays > NMR metabolomics	220	Citrate	Continuous
+23474							Biological samples > Blood assays > NMR metabolomics	220	3-Hydroxybutyrate	Continuous
+23475							Biological samples > Blood assays > NMR metabolomics	220	Acetate	Continuous
+23476							Biological samples > Blood assays > NMR metabolomics	220	Acetoacetate	Continuous
+23477							Biological samples > Blood assays > NMR metabolomics	220	Acetone	Continuous
+23478							Biological samples > Blood assays > NMR metabolomics	220	Creatinine	Continuous
+23479							Biological samples > Blood assays > NMR metabolomics	220	Albumin	Continuous
+23480							Biological samples > Blood assays > NMR metabolomics	220	Glycoprotein Acetyls	Continuous
+23481							Biological samples > Blood assays > NMR metabolomics	220	Concentration of Chylomicrons and Extremely Large VLDL Particles	Continuous
+23482							Biological samples > Blood assays > NMR metabolomics	220	Total Lipids in Chylomicrons and Extremely Large VLDL	Continuous
+23483							Biological samples > Blood assays > NMR metabolomics	220	Phospholipids in Chylomicrons and Extremely Large VLDL	Continuous
+23484							Biological samples > Blood assays > NMR metabolomics	220	Cholesterol in Chylomicrons and Extremely Large VLDL	Continuous
+23485							Biological samples > Blood assays > NMR metabolomics	220	Cholesteryl Esters in Chylomicrons and Extremely Large VLDL	Continuous
+23486							Biological samples > Blood assays > NMR metabolomics	220	Free Cholesterol in Chylomicrons and Extremely Large VLDL	Continuous
+23487							Biological samples > Blood assays > NMR metabolomics	220	Triglycerides in Chylomicrons and Extremely Large VLDL	Continuous
+23488							Biological samples > Blood assays > NMR metabolomics	220	Concentration of Very Large VLDL Particles	Continuous
+23489							Biological samples > Blood assays > NMR metabolomics	220	Total Lipids in Very Large VLDL	Continuous
+23490							Biological samples > Blood assays > NMR metabolomics	220	Phospholipids in Very Large VLDL	Continuous
+23491							Biological samples > Blood assays > NMR metabolomics	220	Cholesterol in Very Large VLDL	Continuous
+23492							Biological samples > Blood assays > NMR metabolomics	220	Cholesteryl Esters in Very Large VLDL	Continuous
+23493							Biological samples > Blood assays > NMR metabolomics	220	Free Cholesterol in Very Large VLDL	Continuous
+23494							Biological samples > Blood assays > NMR metabolomics	220	Triglycerides in Very Large VLDL	Continuous
+23495							Biological samples > Blood assays > NMR metabolomics	220	Concentration of Large VLDL Particles	Continuous
+23496							Biological samples > Blood assays > NMR metabolomics	220	Total Lipids in Large VLDL	Continuous
+23497							Biological samples > Blood assays > NMR metabolomics	220	Phospholipids in Large VLDL	Continuous
+23498							Biological samples > Blood assays > NMR metabolomics	220	Cholesterol in Large VLDL	Continuous
+23499							Biological samples > Blood assays > NMR metabolomics	220	Cholesteryl Esters in Large VLDL	Continuous
+23500							Biological samples > Blood assays > NMR metabolomics	220	Free Cholesterol in Large VLDL	Continuous
+23501							Biological samples > Blood assays > NMR metabolomics	220	Triglycerides in Large VLDL	Continuous
+23502							Biological samples > Blood assays > NMR metabolomics	220	Concentration of Medium VLDL Particles	Continuous
+23503							Biological samples > Blood assays > NMR metabolomics	220	Total Lipids in Medium VLDL	Continuous
+23504							Biological samples > Blood assays > NMR metabolomics	220	Phospholipids in Medium VLDL	Continuous
+23505							Biological samples > Blood assays > NMR metabolomics	220	Cholesterol in Medium VLDL	Continuous
+23506							Biological samples > Blood assays > NMR metabolomics	220	Cholesteryl Esters in Medium VLDL	Continuous
+23507							Biological samples > Blood assays > NMR metabolomics	220	Free Cholesterol in Medium VLDL	Continuous
+23508							Biological samples > Blood assays > NMR metabolomics	220	Triglycerides in Medium VLDL	Continuous
+23509							Biological samples > Blood assays > NMR metabolomics	220	Concentration of Small VLDL Particles	Continuous
+23510							Biological samples > Blood assays > NMR metabolomics	220	Total Lipids in Small VLDL	Continuous
+23511							Biological samples > Blood assays > NMR metabolomics	220	Phospholipids in Small VLDL	Continuous
+23512							Biological samples > Blood assays > NMR metabolomics	220	Cholesterol in Small VLDL	Continuous
+23513							Biological samples > Blood assays > NMR metabolomics	220	Cholesteryl Esters in Small VLDL	Continuous
+23514							Biological samples > Blood assays > NMR metabolomics	220	Free Cholesterol in Small VLDL	Continuous
+23515							Biological samples > Blood assays > NMR metabolomics	220	Triglycerides in Small VLDL	Continuous
+23516							Biological samples > Blood assays > NMR metabolomics	220	Concentration of Very Small VLDL Particles	Continuous
+23517							Biological samples > Blood assays > NMR metabolomics	220	Total Lipids in Very Small VLDL	Continuous
+23518							Biological samples > Blood assays > NMR metabolomics	220	Phospholipids in Very Small VLDL	Continuous
+23519							Biological samples > Blood assays > NMR metabolomics	220	Cholesterol in Very Small VLDL	Continuous
+23520							Biological samples > Blood assays > NMR metabolomics	220	Cholesteryl Esters in Very Small VLDL	Continuous
+23521							Biological samples > Blood assays > NMR metabolomics	220	Free Cholesterol in Very Small VLDL	Continuous
+23522							Biological samples > Blood assays > NMR metabolomics	220	Triglycerides in Very Small VLDL	Continuous
+23523							Biological samples > Blood assays > NMR metabolomics	220	Concentration of IDL Particles	Continuous
+23524							Biological samples > Blood assays > NMR metabolomics	220	Total Lipids in IDL	Continuous
+23525							Biological samples > Blood assays > NMR metabolomics	220	Phospholipids in IDL	Continuous
+23526							Biological samples > Blood assays > NMR metabolomics	220	Cholesterol in IDL	Continuous
+23527							Biological samples > Blood assays > NMR metabolomics	220	Cholesteryl Esters in IDL	Continuous
+23528							Biological samples > Blood assays > NMR metabolomics	220	Free Cholesterol in IDL	Continuous
+23529							Biological samples > Blood assays > NMR metabolomics	220	Triglycerides in IDL	Continuous
+23530							Biological samples > Blood assays > NMR metabolomics	220	Concentration of Large LDL Particles	Continuous
+23531							Biological samples > Blood assays > NMR metabolomics	220	Total Lipids in Large LDL	Continuous
+23532							Biological samples > Blood assays > NMR metabolomics	220	Phospholipids in Large LDL	Continuous
+23533							Biological samples > Blood assays > NMR metabolomics	220	Cholesterol in Large LDL	Continuous
+23534							Biological samples > Blood assays > NMR metabolomics	220	Cholesteryl Esters in Large LDL	Continuous
+23535							Biological samples > Blood assays > NMR metabolomics	220	Free Cholesterol in Large LDL	Continuous
+23536							Biological samples > Blood assays > NMR metabolomics	220	Triglycerides in Large LDL	Continuous
+23537							Biological samples > Blood assays > NMR metabolomics	220	Concentration of Medium LDL Particles	Continuous
+23538							Biological samples > Blood assays > NMR metabolomics	220	Total Lipids in Medium LDL	Continuous
+23539							Biological samples > Blood assays > NMR metabolomics	220	Phospholipids in Medium LDL	Continuous
+23540							Biological samples > Blood assays > NMR metabolomics	220	Cholesterol in Medium LDL	Continuous
+23541							Biological samples > Blood assays > NMR metabolomics	220	Cholesteryl Esters in Medium LDL	Continuous
+23542							Biological samples > Blood assays > NMR metabolomics	220	Free Cholesterol in Medium LDL	Continuous
+23543							Biological samples > Blood assays > NMR metabolomics	220	Triglycerides in Medium LDL	Continuous
+23544							Biological samples > Blood assays > NMR metabolomics	220	Concentration of Small LDL Particles	Continuous
+23545							Biological samples > Blood assays > NMR metabolomics	220	Total Lipids in Small LDL	Continuous
+23546							Biological samples > Blood assays > NMR metabolomics	220	Phospholipids in Small LDL	Continuous
+23547							Biological samples > Blood assays > NMR metabolomics	220	Cholesterol in Small LDL	Continuous
+23548							Biological samples > Blood assays > NMR metabolomics	220	Cholesteryl Esters in Small LDL	Continuous
+23549							Biological samples > Blood assays > NMR metabolomics	220	Free Cholesterol in Small LDL	Continuous
+23550							Biological samples > Blood assays > NMR metabolomics	220	Triglycerides in Small LDL	Continuous
+23551							Biological samples > Blood assays > NMR metabolomics	220	Concentration of Very Large HDL Particles	Continuous
+23552							Biological samples > Blood assays > NMR metabolomics	220	Total Lipids in Very Large HDL	Continuous
+23553							Biological samples > Blood assays > NMR metabolomics	220	Phospholipids in Very Large HDL	Continuous
+23554							Biological samples > Blood assays > NMR metabolomics	220	Cholesterol in Very Large HDL	Continuous
+23555							Biological samples > Blood assays > NMR metabolomics	220	Cholesteryl Esters in Very Large HDL	Continuous
+23556							Biological samples > Blood assays > NMR metabolomics	220	Free Cholesterol in Very Large HDL	Continuous
+23557							Biological samples > Blood assays > NMR metabolomics	220	Triglycerides in Very Large HDL	Continuous
+23558							Biological samples > Blood assays > NMR metabolomics	220	Concentration of Large HDL Particles	Continuous
+23559							Biological samples > Blood assays > NMR metabolomics	220	Total Lipids in Large HDL	Continuous
+23560							Biological samples > Blood assays > NMR metabolomics	220	Phospholipids in Large HDL	Continuous
+23561							Biological samples > Blood assays > NMR metabolomics	220	Cholesterol in Large HDL	Continuous
+23562							Biological samples > Blood assays > NMR metabolomics	220	Cholesteryl Esters in Large HDL	Continuous
+23563							Biological samples > Blood assays > NMR metabolomics	220	Free Cholesterol in Large HDL	Continuous
+23564							Biological samples > Blood assays > NMR metabolomics	220	Triglycerides in Large HDL	Continuous
+23565							Biological samples > Blood assays > NMR metabolomics	220	Concentration of Medium HDL Particles	Continuous
+23566							Biological samples > Blood assays > NMR metabolomics	220	Total Lipids in Medium HDL	Continuous
+23567							Biological samples > Blood assays > NMR metabolomics	220	Phospholipids in Medium HDL	Continuous
+23568							Biological samples > Blood assays > NMR metabolomics	220	Cholesterol in Medium HDL	Continuous
+23569							Biological samples > Blood assays > NMR metabolomics	220	Cholesteryl Esters in Medium HDL	Continuous
+23570							Biological samples > Blood assays > NMR metabolomics	220	Free Cholesterol in Medium HDL	Continuous
+23571							Biological samples > Blood assays > NMR metabolomics	220	Triglycerides in Medium HDL	Continuous
+23572							Biological samples > Blood assays > NMR metabolomics	220	Concentration of Small HDL Particles	Continuous
+23573							Biological samples > Blood assays > NMR metabolomics	220	Total Lipids in Small HDL	Continuous
+23574							Biological samples > Blood assays > NMR metabolomics	220	Phospholipids in Small HDL	Continuous
+23575							Biological samples > Blood assays > NMR metabolomics	220	Cholesterol in Small HDL	Continuous
+23576							Biological samples > Blood assays > NMR metabolomics	220	Cholesteryl Esters in Small HDL	Continuous
+23577							Biological samples > Blood assays > NMR metabolomics	220	Free Cholesterol in Small HDL	Continuous
+23578							Biological samples > Blood assays > NMR metabolomics	220	Triglycerides in Small HDL	Continuous
+23579							Biological samples > Blood assays > NMR metabolomics	220	Phospholipids to Total Lipids in Chylomicrons and Extremely Large VLDL percentage	Continuous
+23580							Biological samples > Blood assays > NMR metabolomics	220	Cholesterol to Total Lipids in Chylomicrons and Extremely Large VLDL percentage	Continuous
+23581							Biological samples > Blood assays > NMR metabolomics	220	Cholesteryl Esters to Total Lipids in Chylomicrons and Extremely Large VLDL percentage	Continuous
+23582							Biological samples > Blood assays > NMR metabolomics	220	Free Cholesterol to Total Lipids in Chylomicrons and Extremely Large VLDL percentage	Continuous
+23583							Biological samples > Blood assays > NMR metabolomics	220	Triglycerides to Total Lipids in Chylomicrons and Extremely Large VLDL percentage	Continuous
+23584							Biological samples > Blood assays > NMR metabolomics	220	Phospholipids to Total Lipids in Very Large VLDL percentage	Continuous
+23585							Biological samples > Blood assays > NMR metabolomics	220	Cholesterol to Total Lipids in Very Large VLDL percentage	Continuous
+23586							Biological samples > Blood assays > NMR metabolomics	220	Cholesteryl Esters to Total Lipids in Very Large VLDL percentage	Continuous
+23587							Biological samples > Blood assays > NMR metabolomics	220	Free Cholesterol to Total Lipids in Very Large VLDL percentage	Continuous
+23588							Biological samples > Blood assays > NMR metabolomics	220	Triglycerides to Total Lipids in Very Large VLDL percentage	Continuous
+23589							Biological samples > Blood assays > NMR metabolomics	220	Phospholipids to Total Lipids in Large VLDL percentage	Continuous
+23590							Biological samples > Blood assays > NMR metabolomics	220	Cholesterol to Total Lipids in Large VLDL percentage	Continuous
+23591							Biological samples > Blood assays > NMR metabolomics	220	Cholesteryl Esters to Total Lipids in Large VLDL percentage	Continuous
+23592							Biological samples > Blood assays > NMR metabolomics	220	Free Cholesterol to Total Lipids in Large VLDL percentage	Continuous
+23593							Biological samples > Blood assays > NMR metabolomics	220	Triglycerides to Total Lipids in Large VLDL percentage	Continuous
+23594							Biological samples > Blood assays > NMR metabolomics	220	Phospholipids to Total Lipids in Medium VLDL percentage	Continuous
+23595							Biological samples > Blood assays > NMR metabolomics	220	Cholesterol to Total Lipids in Medium VLDL percentage	Continuous
+23596							Biological samples > Blood assays > NMR metabolomics	220	Cholesteryl Esters to Total Lipids in Medium VLDL percentage	Continuous
+23597							Biological samples > Blood assays > NMR metabolomics	220	Free Cholesterol to Total Lipids in Medium VLDL percentage	Continuous
+23598							Biological samples > Blood assays > NMR metabolomics	220	Triglycerides to Total Lipids in Medium VLDL percentage	Continuous
+23599							Biological samples > Blood assays > NMR metabolomics	220	Phospholipids to Total Lipids in Small VLDL percentage	Continuous
+23600							Biological samples > Blood assays > NMR metabolomics	220	Cholesterol to Total Lipids in Small VLDL percentage	Continuous
+23601							Biological samples > Blood assays > NMR metabolomics	220	Cholesteryl Esters to Total Lipids in Small VLDL percentage	Continuous
+23602							Biological samples > Blood assays > NMR metabolomics	220	Free Cholesterol to Total Lipids in Small VLDL percentage	Continuous
+23603							Biological samples > Blood assays > NMR metabolomics	220	Triglycerides to Total Lipids in Small VLDL percentage	Continuous
+23604							Biological samples > Blood assays > NMR metabolomics	220	Phospholipids to Total Lipids in Very Small VLDL percentage	Continuous
+23605							Biological samples > Blood assays > NMR metabolomics	220	Cholesterol to Total Lipids in Very Small VLDL percentage	Continuous
+23606							Biological samples > Blood assays > NMR metabolomics	220	Cholesteryl Esters to Total Lipids in Very Small VLDL percentage	Continuous
+23607							Biological samples > Blood assays > NMR metabolomics	220	Free Cholesterol to Total Lipids in Very Small VLDL percentage	Continuous
+23608							Biological samples > Blood assays > NMR metabolomics	220	Triglycerides to Total Lipids in Very Small VLDL percentage	Continuous
+23609							Biological samples > Blood assays > NMR metabolomics	220	Phospholipids to Total Lipids in IDL percentage	Continuous
+23610							Biological samples > Blood assays > NMR metabolomics	220	Cholesterol to Total Lipids in IDL percentage	Continuous
+23611							Biological samples > Blood assays > NMR metabolomics	220	Cholesteryl Esters to Total Lipids in IDL percentage	Continuous
+23612							Biological samples > Blood assays > NMR metabolomics	220	Free Cholesterol to Total Lipids in IDL percentage	Continuous
+23613							Biological samples > Blood assays > NMR metabolomics	220	Triglycerides to Total Lipids in IDL percentage	Continuous
+23614							Biological samples > Blood assays > NMR metabolomics	220	Phospholipids to Total Lipids in Large LDL percentage	Continuous
+23615							Biological samples > Blood assays > NMR metabolomics	220	Cholesterol to Total Lipids in Large LDL percentage	Continuous
+23616							Biological samples > Blood assays > NMR metabolomics	220	Cholesteryl Esters to Total Lipids in Large LDL percentage	Continuous
+23617							Biological samples > Blood assays > NMR metabolomics	220	Free Cholesterol to Total Lipids in Large LDL percentage	Continuous
+23618							Biological samples > Blood assays > NMR metabolomics	220	Triglycerides to Total Lipids in Large LDL percentage	Continuous
+23619							Biological samples > Blood assays > NMR metabolomics	220	Phospholipids to Total Lipids in Medium LDL percentage	Continuous
+23620							Biological samples > Blood assays > NMR metabolomics	220	Cholesterol to Total Lipids in Medium LDL percentage	Continuous
+23621							Biological samples > Blood assays > NMR metabolomics	220	Cholesteryl Esters to Total Lipids in Medium LDL percentage	Continuous
+23622							Biological samples > Blood assays > NMR metabolomics	220	Free Cholesterol to Total Lipids in Medium LDL percentage	Continuous
+23623							Biological samples > Blood assays > NMR metabolomics	220	Triglycerides to Total Lipids in Medium LDL percentage	Continuous
+23624							Biological samples > Blood assays > NMR metabolomics	220	Phospholipids to Total Lipids in Small LDL percentage	Continuous
+23625							Biological samples > Blood assays > NMR metabolomics	220	Cholesterol to Total Lipids in Small LDL percentage	Continuous
+23626							Biological samples > Blood assays > NMR metabolomics	220	Cholesteryl Esters to Total Lipids in Small LDL percentage	Continuous
+23627							Biological samples > Blood assays > NMR metabolomics	220	Free Cholesterol to Total Lipids in Small LDL percentage	Continuous
+23628							Biological samples > Blood assays > NMR metabolomics	220	Triglycerides to Total Lipids in Small LDL percentage	Continuous
+23629							Biological samples > Blood assays > NMR metabolomics	220	Phospholipids to Total Lipids in Very Large HDL percentage	Continuous
+23630							Biological samples > Blood assays > NMR metabolomics	220	Cholesterol to Total Lipids in Very Large HDL percentage	Continuous
+23631							Biological samples > Blood assays > NMR metabolomics	220	Cholesteryl Esters to Total Lipids in Very Large HDL percentage	Continuous
+23632							Biological samples > Blood assays > NMR metabolomics	220	Free Cholesterol to Total Lipids in Very Large HDL percentage	Continuous
+23633							Biological samples > Blood assays > NMR metabolomics	220	Triglycerides to Total Lipids in Very Large HDL percentage	Continuous
+23634							Biological samples > Blood assays > NMR metabolomics	220	Phospholipids to Total Lipids in Large HDL percentage	Continuous
+23635							Biological samples > Blood assays > NMR metabolomics	220	Cholesterol to Total Lipids in Large HDL percentage	Continuous
+23636							Biological samples > Blood assays > NMR metabolomics	220	Cholesteryl Esters to Total Lipids in Large HDL percentage	Continuous
+23637							Biological samples > Blood assays > NMR metabolomics	220	Free Cholesterol to Total Lipids in Large HDL percentage	Continuous
+23638							Biological samples > Blood assays > NMR metabolomics	220	Triglycerides to Total Lipids in Large HDL percentage	Continuous
+23639							Biological samples > Blood assays > NMR metabolomics	220	Phospholipids to Total Lipids in Medium HDL percentage	Continuous
+23640							Biological samples > Blood assays > NMR metabolomics	220	Cholesterol to Total Lipids in Medium HDL percentage	Continuous
+23641							Biological samples > Blood assays > NMR metabolomics	220	Cholesteryl Esters to Total Lipids in Medium HDL percentage	Continuous
+23642							Biological samples > Blood assays > NMR metabolomics	220	Free Cholesterol to Total Lipids in Medium HDL percentage	Continuous
+23643							Biological samples > Blood assays > NMR metabolomics	220	Triglycerides to Total Lipids in Medium HDL percentage	Continuous
+23644							Biological samples > Blood assays > NMR metabolomics	220	Phospholipids to Total Lipids in Small HDL percentage	Continuous
+23645							Biological samples > Blood assays > NMR metabolomics	220	Cholesterol to Total Lipids in Small HDL percentage	Continuous
+23646							Biological samples > Blood assays > NMR metabolomics	220	Cholesteryl Esters to Total Lipids in Small HDL percentage	Continuous
+23647							Biological samples > Blood assays > NMR metabolomics	220	Free Cholesterol to Total Lipids in Small HDL percentage	Continuous
+23648							Biological samples > Blood assays > NMR metabolomics	220	Triglycerides to Total Lipids in Small HDL percentage	Continuous
+23650		YES-PROCESSING				2301	Biological samples > Blood assays > NMR metabolomics > NMR metabolomics processing	222	Spectrometer	Categorical single
+23652		YES-PROCESSING				1	Biological samples > Blood assays > NMR metabolomics > NMR metabolomics processing	222	High Lactate	Categorical single
+23653		YES-PROCESSING				1	Biological samples > Blood assays > NMR metabolomics > NMR metabolomics processing	222	High Pyruvate	Categorical single
+23654		YES-PROCESSING				1	Biological samples > Blood assays > NMR metabolomics > NMR metabolomics processing	222	Low Glucose	Categorical single
+23655		YES-PROCESSING				1	Biological samples > Blood assays > NMR metabolomics > NMR metabolomics processing	222	Low Protein	Categorical single
+23704		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Clinical LDL Cholesterol, QC Flag	Categorical single
+23705		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	LDL Cholesterol, QC Flag	Categorical single
+23717		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Cholesteryl Esters in LDL, QC Flag	Categorical single
+23721		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Free Cholesterol in LDL, QC Flag	Categorical single
+23734		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Phosphoglycerides, QC Flag	Categorical single
+23735		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Triglycerides to Phosphoglycerides ratio, QC Flag	Categorical single
+23736		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Total Cholines, QC Flag	Categorical single
+23737		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Phosphatidylcholines, QC Flag	Categorical single
+23738		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Sphingomyelins, QC Flag	Categorical single
+23742		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Total Fatty Acids, QC Flag	Categorical single
+23743		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Degree of Unsaturation, QC Flag	Categorical single
+23744		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Omega-3 Fatty Acids, QC Flag	Categorical single
+23745		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Omega-6 Fatty Acids, QC Flag	Categorical single
+23746		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Polyunsaturated Fatty Acids, QC Flag	Categorical single
+23747		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Monounsaturated Fatty Acids, QC Flag	Categorical single
+23748		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Saturated Fatty Acids, QC Flag	Categorical single
+23749		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Linoleic Acid, QC Flag	Categorical single
+23750		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Docosahexaenoic Acid, QC Flag	Categorical single
+23751		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Omega-3 Fatty Acids to Total Fatty Acids percentage, QC Flag	Categorical single
+23752		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Omega-6 Fatty Acids to Total Fatty Acids percentage, QC Flag	Categorical single
+23753		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Polyunsaturated Fatty Acids to Total Fatty Acids percentage, QC Flag	Categorical single
+23754		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Monounsaturated Fatty Acids to Total Fatty Acids percentage, QC Flag	Categorical single
+23755		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Saturated Fatty Acids to Total Fatty Acids percentage, QC Flag	Categorical single
+23756		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Linoleic Acid to Total Fatty Acids percentage, QC Flag	Categorical single
+23757		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Docosahexaenoic Acid to Total Fatty Acids percentage, QC Flag	Categorical single
+23758		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Polyunsaturated Fatty Acids to Monounsaturated Fatty Acids ratio, QC Flag	Categorical single
+23759		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Omega-6 Fatty Acids to Omega-3 Fatty Acids ratio, QC Flag	Categorical single
+23760		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Alanine, QC Flag	Categorical single
+23761		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Glutamine, QC Flag	Categorical single
+23762		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Glycine, QC Flag	Categorical single
+23763		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Histidine, QC Flag	Categorical single
+23764		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Total Concentration of Branched-Chain Amino Acids (Leucine + Isoleucine + Valine), QC Flag	Categorical single
+3766		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Leucine, QC Flag	Categorical single
+23767		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Valine, QC Flag	Categorical single
+23768		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Phenylalanine, QC Flag	Categorical single
+23769		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Tyrosine, QC Flag	Categorical single
+23770		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Glucose, QC Flag	Categorical single
+23772		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Pyruvate, QC Flag	Categorical single
+23773		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Citrate, QC Flag	Categorical single
+23774		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	3-Hydroxybutyrate, QC Flag	Categorical single
+23775		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Acetate, QC Flag	Categorical single
+23776		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Acetoacetate, QC Flag	Categorical single
+23778		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Creatinine, QC Flag	Categorical single
+23782		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Total Lipids in Chylomicrons and Extremely Large VLDL, QC Flag	Categorical single
+23783		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Phospholipids in Chylomicrons and Extremely Large VLDL, QC Flag	Categorical single
+23784		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Cholesterol in Chylomicrons and Extremely Large VLDL, QC Flag	Categorical single
+23785		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Cholesteryl Esters in Chylomicrons and Extremely Large VLDL, QC Flag	Categorical single
+23786		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Free Cholesterol in Chylomicrons and Extremely Large VLDL, QC Flag	Categorical single
+23787		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Triglycerides in Chylomicrons and Extremely Large VLDL, QC Flag	Categorical single
+23789		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Total Lipids in Very Large VLDL, QC Flag	Categorical single
+23790		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Phospholipids in Very Large VLDL, QC Flag	Categorical single
+23791		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Cholesterol in Very Large VLDL, QC Flag	Categorical single
+23792		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Cholesteryl Esters in Very Large VLDL, QC Flag	Categorical single
+23793		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Free Cholesterol in Very Large VLDL, QC Flag	Categorical single
+23794		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Triglycerides in Very Large VLDL, QC Flag	Categorical single
+23796		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Total Lipids in Large VLDL, QC Flag	Categorical single
+23797		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Phospholipids in Large VLDL, QC Flag	Categorical single
+23798		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Cholesterol in Large VLDL, QC Flag	Categorical single
+23799		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Cholesteryl Esters in Large VLDL, QC Flag	Categorical single
+23800		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Free Cholesterol in Large VLDL, QC Flag	Categorical single
+23801		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Triglycerides in Large VLDL, QC Flag	Categorical single
+23804		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Phospholipids in Medium VLDL, QC Flag	Categorical single
+23805		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Cholesterol in Medium VLDL, QC Flag	Categorical single
+23806		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Cholesteryl Esters in Medium VLDL, QC Flag	Categorical single
+23807		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Free Cholesterol in Medium VLDL, QC Flag	Categorical single
+23808		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Triglycerides in Medium VLDL, QC Flag	Categorical single
+23813		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Cholesteryl Esters in Small VLDL, QC Flag	Categorical single
+23814		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Free Cholesterol in Small VLDL, QC Flag	Categorical single
+23833		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Cholesterol in Large LDL, QC Flag	Categorical single
+23834		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Cholesteryl Esters in Large LDL, QC Flag	Categorical single
+23835		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Free Cholesterol in Large LDL, QC Flag	Categorical single
+23840		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Cholesterol in Medium LDL, QC Flag	Categorical single
+23841		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Cholesteryl Esters in Medium LDL, QC Flag	Categorical single
+23842		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Free Cholesterol in Medium LDL, QC Flag	Categorical single
+23843		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Triglycerides in Medium LDL, QC Flag	Categorical single
+23847		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Cholesterol in Small LDL, QC Flag	Categorical single
+23848		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Cholesteryl Esters in Small LDL, QC Flag	Categorical single
+23849		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Free Cholesterol in Small LDL, QC Flag	Categorical single
+23850		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Triglycerides in Small LDL, QC Flag	Categorical single
+23852		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Total Lipids in Very Large HDL, QC Flag	Categorical single
+23853		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Phospholipids in Very Large HDL, QC Flag	Categorical single
+23854		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Cholesterol in Very Large HDL, QC Flag	Categorical single
+23855		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Cholesteryl Esters in Very Large HDL, QC Flag	Categorical single
+23856		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Free Cholesterol in Very Large HDL, QC Flag	Categorical single
+23857		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Triglycerides in Very Large HDL, QC Flag	Categorical single
+23860		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Phospholipids in Large HDL, QC Flag	Categorical single
+23861		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Cholesterol in Large HDL, QC Flag	Categorical single
+23862		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Cholesteryl Esters in Large HDL, QC Flag	Categorical single
+23863		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Free Cholesterol in Large HDL, QC Flag	Categorical single
+23864		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Triglycerides in Large HDL, QC Flag	Categorical single
+23867		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Phospholipids in Medium HDL, QC Flag	Categorical single
+23868		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Cholesterol in Medium HDL, QC Flag	Categorical single
+23869		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Cholesteryl Esters in Medium HDL, QC Flag	Categorical single
+23870		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Free Cholesterol in Medium HDL, QC Flag	Categorical single
+23871		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Triglycerides in Medium HDL, QC Flag	Categorical single
+23876		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Cholesteryl Esters in Small HDL, QC Flag	Categorical single
+23878		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Triglycerides in Small HDL, QC Flag	Categorical single
+23879		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Phospholipids to Total Lipids in Chylomicrons and Extremely Large VLDL percentage, QC Flag	Categorical single
+23880		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Cholesterol to Total Lipids in Chylomicrons and Extremely Large VLDL percentage, QC Flag	Categorical single
+23881		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Cholesteryl Esters to Total Lipids in Chylomicrons and Extremely Large VLDL percentage, QC Flag	Categorical single
+23882		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Free Cholesterol to Total Lipids in Chylomicrons and Extremely Large VLDL percentage, QC Flag	Categorical single
+23883		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Triglycerides to Total Lipids in Chylomicrons and Extremely Large VLDL percentage, QC Flag	Categorical single
+23884		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Phospholipids to Total Lipids in Very Large VLDL percentage, QC Flag	Categorical single
+23885		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Cholesterol to Total Lipids in Very Large VLDL percentage, QC Flag	Categorical single
+23886		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Cholesteryl Esters to Total Lipids in Very Large VLDL percentage, QC Flag	Categorical single
+23887		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Free Cholesterol to Total Lipids in Very Large VLDL percentage, QC Flag	Categorical single
+23888		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Triglycerides to Total Lipids in Very Large VLDL percentage, QC Flag	Categorical single
+23889		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Phospholipids to Total Lipids in Large VLDL percentage, QC Flag	Categorical single
+23890		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Cholesterol to Total Lipids in Large VLDL percentage, QC Flag	Categorical single
+23891		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Cholesteryl Esters to Total Lipids in Large VLDL percentage, QC Flag	Categorical single
+23892		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Free Cholesterol to Total Lipids in Large VLDL percentage, QC Flag	Categorical single
+23893		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Triglycerides to Total Lipids in Large VLDL percentage, QC Flag	Categorical single
+23894		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Phospholipids to Total Lipids in Medium VLDL percentage, QC Flag	Categorical single
+23895		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Cholesterol to Total Lipids in Medium VLDL percentage, QC Flag	Categorical single
+23896		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Cholesteryl Esters to Total Lipids in Medium VLDL percentage, QC Flag	Categorical single
+23897		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Free Cholesterol to Total Lipids in Medium VLDL percentage, QC Flag	Categorical single
+23898		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Triglycerides to Total Lipids in Medium VLDL percentage, QC Flag	Categorical single
+23901		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Cholesteryl Esters to Total Lipids in Small VLDL percentage, QC Flag	Categorical single
+23902		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Free Cholesterol to Total Lipids in Small VLDL percentage, QC Flag	Categorical single
+23915		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Cholesterol to Total Lipids in Large LDL percentage, QC Flag	Categorical single
+23916		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Cholesteryl Esters to Total Lipids in Large LDL percentage, QC Flag	Categorical single
+23917		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Free Cholesterol to Total Lipids in Large LDL percentage, QC Flag	Categorical single
+23920		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Cholesterol to Total Lipids in Medium LDL percentage, QC Flag	Categorical single
+23921		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Cholesteryl Esters to Total Lipids in Medium LDL percentage, QC Flag	Categorical single
+23922		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Free Cholesterol to Total Lipids in Medium LDL percentage, QC Flag	Categorical single
+23923		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Triglycerides to Total Lipids in Medium LDL percentage, QC Flag	Categorical single
+23925		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Cholesterol to Total Lipids in Small LDL percentage, QC Flag	Categorical single
+23926		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Cholesteryl Esters to Total Lipids in Small LDL percentage, QC Flag	Categorical single
+23927		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Free Cholesterol to Total Lipids in Small LDL percentage, QC Flag	Categorical single
+23928		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Triglycerides to Total Lipids in Small LDL percentage, QC Flag	Categorical single
+23929		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Phospholipids to Total Lipids in Very Large HDL percentage, QC Flag	Categorical single
+23930		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Cholesterol to Total Lipids in Very Large HDL percentage, QC Flag	Categorical single
+23931		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Cholesteryl Esters to Total Lipids in Very Large HDL percentage, QC Flag	Categorical single
+23932		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Free Cholesterol to Total Lipids in Very Large HDL percentage, QC Flag	Categorical single
+23933		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Triglycerides to Total Lipids in Very Large HDL percentage, QC Flag	Categorical single
+23934		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Phospholipids to Total Lipids in Large HDL percentage, QC Flag	Categorical single
+23935		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Cholesterol to Total Lipids in Large HDL percentage, QC Flag	Categorical single
+23936		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Cholesteryl Esters to Total Lipids in Large HDL percentage, QC Flag	Categorical single
+23937		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Free Cholesterol to Total Lipids in Large HDL percentage, QC Flag	Categorical single
+23938		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Triglycerides to Total Lipids in Large HDL percentage, QC Flag	Categorical single
+23939		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Phospholipids to Total Lipids in Medium HDL percentage, QC Flag	Categorical single
+23940		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Cholesterol to Total Lipids in Medium HDL percentage, QC Flag	Categorical single
+23941		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Cholesteryl Esters to Total Lipids in Medium HDL percentage, QC Flag	Categorical single
+23942		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Free Cholesterol to Total Lipids in Medium HDL percentage, QC Flag	Categorical single
+23943		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Triglycerides to Total Lipids in Medium HDL percentage, QC Flag	Categorical single
+23946		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Cholesteryl Esters to Total Lipids in Small HDL percentage, QC Flag	Categorical single
+23948		YES-QC					Biological samples > Blood assays > NMR metabolomics > NMR metabolomics QC indicators	221	Triglycerides to Total Lipids in Small HDL percentage, QC Flag	Categorical single
 24003							Additional exposures > Local environment > Residential air pollution	114	Nitrogen dioxide air pollution; 2010	Continuous
 24004							Additional exposures > Local environment > Residential air pollution	114	Nitrogen oxides air pollution; 2010	Continuous
 24005							Additional exposures > Local environment > Residential air pollution	114	Particulate matter air pollution (pm10); 2010	Continuous
@@ -1772,6 +2231,9 @@ FieldID	TRAIT_OF_INTEREST	EXCLUDED	CAT_MULT_INDICATOR_FIELDS	CAT_SINGLE_TO_CAT_M
 24022							Additional exposures > Local environment > Residential noise pollution	115	Average night-time sound level of noise pollution	Continuous
 24023							Additional exposures > Local environment > Residential noise pollution	115	Average 16-hour sound level of noise pollution	Continuous
 24024							Additional exposures > Local environment > Residential noise pollution	115	Average 24-hour sound level of noise pollution	Continuous
+24352							Assessment Centre > Imaging > Abdominal MRI > Abdominal composition	149	FR liver PDFF mean	Continuous
+24353							Assessment Centre > Imaging > Abdominal MRI > Abdominal composition	149	Anterior thigh muscle fat infiltration (MFI) (left)	Continuous
+24354							Assessment Centre > Imaging > Abdominal MRI > Abdominal composition	149	Anterior thigh muscle fat infiltration (MFI) (right)	Continuous
 24500							Additional exposures > Local environment > Greenspace and coastal proximity	151	"Greenspace percentage, buffer 1000m"	Continuous
 24501							Additional exposures > Local environment > Greenspace and coastal proximity	151	"Domestic garden percentage, buffer 1000m"	Continuous
 24502							Additional exposures > Local environment > Greenspace and coastal proximity	151	"Water percentage, buffer 1000m"	Continuous
@@ -3981,6 +4443,56 @@ FieldID	TRAIT_OF_INTEREST	EXCLUDED	CAT_MULT_INDICATOR_FIELDS	CAT_SINGLE_TO_CAT_M
 27770							UK Biobank Assessment Centre > Imaging > Brain MRI > T1 structural brain MRI > Freesurfer a2009s	197	Volume of S-temporal-inf (right hemisphere)	Continuous
 27771							UK Biobank Assessment Centre > Imaging > Brain MRI > T1 structural brain MRI > Freesurfer a2009s	197	Volume of S-temporal-sup (right hemisphere)	Continuous
 27772							UK Biobank Assessment Centre > Imaging > Brain MRI > T1 structural brain MRI > Freesurfer a2009s	197	Volume of S-temporal-transverse (right hemisphere)	Continuous
+27800							Assessment Centre > Physical measures > Eye measures > Retinal optical coherence tomography > Derived OCT measures	100079	Overall macular thickness (left)	Continuous
+27801							Assessment Centre > Physical measures > Eye measures > Retinal optical coherence tomography > Derived OCT measures	100079	Overall macular thickness (right)	Continuous
+27802							Assessment Centre > Physical measures > Eye measures > Retinal optical coherence tomography > Derived OCT measures	100079	Macular thickness at the central subfield (left)	Continuous
+27803							Assessment Centre > Physical measures > Eye measures > Retinal optical coherence tomography > Derived OCT measures	100079	Macular thickness at the central subfield (right)	Continuous
+27804							Assessment Centre > Physical measures > Eye measures > Retinal optical coherence tomography > Derived OCT measures	100079	Macular thickness at the inner inferior subfield (left)	Continuous
+27805							Assessment Centre > Physical measures > Eye measures > Retinal optical coherence tomography > Derived OCT measures	100079	Macular thickness at the inner inferior subfield (right)	Continuous
+27806							Assessment Centre > Physical measures > Eye measures > Retinal optical coherence tomography > Derived OCT measures	100079	Macular thickness at the inner nasal subfield (left)	Continuous
+27807							Assessment Centre > Physical measures > Eye measures > Retinal optical coherence tomography > Derived OCT measures	100079	Macular thickness at the inner nasal subfield (right)	Continuous
+27808							Assessment Centre > Physical measures > Eye measures > Retinal optical coherence tomography > Derived OCT measures	100079	Macular thickness at the inner superior subfield (left)	Continuous
+27809							Assessment Centre > Physical measures > Eye measures > Retinal optical coherence tomography > Derived OCT measures	100079	Macular thickness at the inner superior subfield (right)	Continuous
+27810							Assessment Centre > Physical measures > Eye measures > Retinal optical coherence tomography > Derived OCT measures	100079	Macular thickness at the inner temporal subfield (left)	Continuous
+27811							Assessment Centre > Physical measures > Eye measures > Retinal optical coherence tomography > Derived OCT measures	100079	Macular thickness at the inner temporal subfield (right)	Continuous
+27812							Assessment Centre > Physical measures > Eye measures > Retinal optical coherence tomography > Derived OCT measures	100079	Macular thickness at the outer inferior subfield (left)	Continuous
+27813							Assessment Centre > Physical measures > Eye measures > Retinal optical coherence tomography > Derived OCT measures	100079	Macular thickness at the outer inferior subfield (right)	Continuous
+27814							Assessment Centre > Physical measures > Eye measures > Retinal optical coherence tomography > Derived OCT measures	100079	Macular thickness at the outer nasal subfield (left)	Continuous
+27815							Assessment Centre > Physical measures > Eye measures > Retinal optical coherence tomography > Derived OCT measures	100079	Macular thickness at the outer nasal subfield (right)	Continuous
+27816							Assessment Centre > Physical measures > Eye measures > Retinal optical coherence tomography > Derived OCT measures	100079	Macular thickness at the outer superior subfield (left)	Continuous
+27817							Assessment Centre > Physical measures > Eye measures > Retinal optical coherence tomography > Derived OCT measures	100079	Macular thickness at the outer superior subfield (right)	Continuous
+27818							Assessment Centre > Physical measures > Eye measures > Retinal optical coherence tomography > Derived OCT measures	100079	Macular thickness at the outer temporal subfield (left)	Continuous
+27819							Assessment Centre > Physical measures > Eye measures > Retinal optical coherence tomography > Derived OCT measures	100079	Macular thickness at the outer temporal subfield (right)	Continuous
+27820							Assessment Centre > Physical measures > Eye measures > Retinal optical coherence tomography > Derived OCT measures	100079	Total macular volume (left)	Continuous
+27821							Assessment Centre > Physical measures > Eye measures > Retinal optical coherence tomography > Derived OCT measures	100079	Total macular volume (right)	Continuous
+27822							Assessment Centre > Physical measures > Eye measures > Retinal optical coherence tomography > Derived OCT measures	100079	Overall average retinal pigment epithelium thickness (left)	Continuous
+27823							Assessment Centre > Physical measures > Eye measures > Retinal optical coherence tomography > Derived OCT measures	100079	Overall average retinal pigment epithelium thickness (right)	Continuous
+27824							Assessment Centre > Physical measures > Eye measures > Retinal optical coherence tomography > Derived OCT measures	100079	Retinal pigment epithelium thickness at central subfield (left)	Continuous
+27825							Assessment Centre > Physical measures > Eye measures > Retinal optical coherence tomography > Derived OCT measures	100079	Retinal pigment epithelium thickness at central subfield (right)	Continuous
+27826							Assessment Centre > Physical measures > Eye measures > Retinal optical coherence tomography > Derived OCT measures	100079	Retinal pigment epithelium thickness at inner inferior subfield (left)	Continuous
+27827							Assessment Centre > Physical measures > Eye measures > Retinal optical coherence tomography > Derived OCT measures	100079	Retinal pigment epithelium thickness at inner inferior subfield (right)	Continuous
+27828							Assessment Centre > Physical measures > Eye measures > Retinal optical coherence tomography > Derived OCT measures	100079	Retinal pigment epithelium thickness at inner nasal subfield (left)	Continuous
+27829							Assessment Centre > Physical measures > Eye measures > Retinal optical coherence tomography > Derived OCT measures	100079	Retinal pigment epithelium thickness at inner nasal subfield (right)	Continuous
+27830							Assessment Centre > Physical measures > Eye measures > Retinal optical coherence tomography > Derived OCT measures	100079	Retinal pigment epithelium thickness at inner superior subfield (left)	Continuous
+27831							Assessment Centre > Physical measures > Eye measures > Retinal optical coherence tomography > Derived OCT measures	100079	Retinal pigment epithelium thickness at inner superior subfield (right)	Continuous
+27832							Assessment Centre > Physical measures > Eye measures > Retinal optical coherence tomography > Derived OCT measures	100079	Retinal pigment epithelium thickness at inner temporal subfield (left)	Continuous
+27833							Assessment Centre > Physical measures > Eye measures > Retinal optical coherence tomography > Derived OCT measures	100079	Retinal pigment epithelium thickness at inner temporal subfield (right)	Continuous
+27834							Assessment Centre > Physical measures > Eye measures > Retinal optical coherence tomography > Derived OCT measures	100079	Retinal pigment epithelium thickness at outer inferior subfield (left)	Continuous
+27835							Assessment Centre > Physical measures > Eye measures > Retinal optical coherence tomography > Derived OCT measures	100079	Retinal pigment epithelium thickness at outer inferior subfield (right)	Continuous
+27836							Assessment Centre > Physical measures > Eye measures > Retinal optical coherence tomography > Derived OCT measures	100079	Retinal pigment epithelium thickness at outer nasal subfield (left)	Continuous
+27837							Assessment Centre > Physical measures > Eye measures > Retinal optical coherence tomography > Derived OCT measures	100079	Retinal pigment epithelium thickness at outer nasal subfield (right)	Continuous
+27838							Assessment Centre > Physical measures > Eye measures > Retinal optical coherence tomography > Derived OCT measures	100079	Retinal pigment epithelium thickness at outer superior subfield (left)	Continuous
+27839							Assessment Centre > Physical measures > Eye measures > Retinal optical coherence tomography > Derived OCT measures	100079	Retinal pigment epithelium thickness at outer superior subfield (right)	Continuous
+27840							Assessment Centre > Physical measures > Eye measures > Retinal optical coherence tomography > Derived OCT measures	100079	Retinal pigment epithelium thickness at outer temporal subfield (left)	Continuous
+27841							Assessment Centre > Physical measures > Eye measures > Retinal optical coherence tomography > Derived OCT measures	100079	Retinal pigment epithelium thickness at outer temporal subfield (right)	Continuous
+27851							Assessment Centre > Physical measures > Eye measures > Retinal optical coherence tomography > Derived OCT measures	100079	Disc diameter after inverse rank normal transformation (left)	Continuous
+27852							Assessment Centre > Physical measures > Eye measures > Retinal optical coherence tomography > Derived OCT measures	100079	Disc diameter after inverse rank normal transformation (right)	Continuous
+27853							Assessment Centre > Physical measures > Eye measures > Retinal optical coherence tomography > Derived OCT measures	100079	Mean of vertical disc diameter (left)	Continuous
+27854							Assessment Centre > Physical measures > Eye measures > Retinal optical coherence tomography > Derived OCT measures	100079	Mean of vertical disc diameter (right)	Continuous
+27855							Assessment Centre > Physical measures > Eye measures > Retinal optical coherence tomography > Derived OCT measures	100079	Vertical cup to disc ratio (VCDR) regressed and transformed (left)	Continuous
+27856							Assessment Centre > Physical measures > Eye measures > Retinal optical coherence tomography > Derived OCT measures	100079	Vertical cup to disc ratio (VCDR) regressed and transformed (right)	Continuous
+27857							Assessment Centre > Physical measures > Eye measures > Retinal optical coherence tomography > Derived OCT measures	100079	Vertical cup to disc ratio (VCDR) (left)	Continuous
+27858							Assessment Centre > Physical measures > Eye measures > Retinal optical coherence tomography > Derived OCT measures	100079	Vertical cup to disc ratio (VCDR) (right)	Continuous
 30000							Biological samples > Assay results > Blood assays > Blood count	100081	White blood cell (leukocyte) count	Continuous
 30001							Biological samples > Assay results > Blood assays > Blood count > Blood count processing	9081	White blood cell (leukocyte) count freeze-thaw cycles	Integer
 30004						2226	Biological samples > Assay results > Blood assays > Blood count > Blood count processing	9081	White blood cell (leukocyte) count acquisition route	Categorical single
@@ -4325,10 +4837,18 @@ FieldID	TRAIT_OF_INTEREST	EXCLUDED	CAT_MULT_INDICATOR_FIELDS	CAT_SINGLE_TO_CAT_M
 40013			ALL	YES-INSTANCES		87	Health-related outcomes > Cancer register	100092	Type of cancer: ICD9	Categorical single
 40018						261	Health-related outcomes > Death register	100093	Death record format	Categorical single
 40019						262	Health-related outcomes > Cancer register	100092	Cancer record format	Categorical single
-40020		YES-PROCESSING				1970	Health-related outcomes > Death register	100093	Death record origin	Categorical single
-40021		YES-PROCESSING				1970	Health-related outcomes > Cancer register	100092	Cancer record origin	Categorical single
-40022		YES-PROCESSING				1970	Health-related outcomes > Hospital inpatient > Summary Administration	2001	Inpatient record origin	Categorical multiple
-40425							Biological samples > Sample inventory > Blood sample inventory	100085	Volume of DNA held by UKB	Integer
+40020		YES-META				1970	Health-related outcomes > Death register	100093	Death record origin	Categorical single
+40021		YES-META				1970	Health-related outcomes > Cancer register	100092	Cancer record origin	Categorical single
+40022		YES-META				1970	Health-related outcomes > Hospital inpatient > Summary Administration	2001	Inpatient record origin	Categorical multiple
+40023		YES-META					Health-related outcomes > Death register	100093	Records in death dataset	Integer
+40100		YES-META					Health-related outcomes > Coronavirus COVID-19	999	Records of COVID-19 test results	Integer
+40101		YES-SENSITIVE					Health-related outcomes > Coronavirus COVID-19	999	GP clinical event records (TPP source)	Integer
+40102		YES-SENSITIVE					Health-related outcomes > Coronavirus COVID-19	999	GP prescription records (TPP source)	Integer
+40103		YES-SENSITIVE					Health-related outcomes > Coronavirus COVID-19	999	GP clinical event records (EMIS source)	Integer
+40104		YES-SENSITIVE					Health-related outcomes > Coronavirus COVID-19	999	GP prescription records (EMIS source)	Integer
+40425		YES-PROCESSING					Biological samples > Sample inventory > Blood sample inventory	100085	Volume of DNA held by UKB	Integer
+41000		YES-PROCESSING					Health-related outcomes > Coronavirus COVID-19	999	Case-control status for COVID19 imaging repeat	Integer
+41001		YES-PROCESSING				1400	Health-related outcomes > Coronavirus COVID-19	999	Source of positive COVID test result	Categorical multiple
 41149							Health-related outcomes > Hospital inpatient > Record-level access	2006	Records in HES inpatient operations dataset	Integer
 41200			ALL			240	Health-related outcomes > Hospital inpatient > Summary Operations	2005	Operative procedures - main OPCS4	Categorical multiple
 41201		YES-SUPERSEDED	ALL			19	Health-related outcomes > Hospital inpatient > Summary Diagnoses	2002	External causes - ICD10	Categorical multiple
@@ -4398,7 +4918,8 @@ FieldID	TRAIT_OF_INTEREST	EXCLUDED	CAT_MULT_INDICATOR_FIELDS	CAT_SINGLE_TO_CAT_M
 41285							Health-related outcomes > Hospital inpatient > Summary Maternity	2003	Duration of postnatal stay	Integer
 41286							Health-related outcomes > Hospital inpatient > Summary Maternity	2003	Mother age on date of delivery	Integer
 41288		YES-DATE					Health-related outcomes > Hospital inpatient > Summary Maternity	2003	Date of birth of baby	Date
-41289							Health-related outcomes > Hospital inpatient > Record-level access	2006	Records in HES inpatient psychiatric dataset	Integer
+41289		YES-META					Health-related outcomes > Hospital inpatient > Record-level access	2006	Records in HES inpatient psychiatric dataset	Integer
+41290		YES-META					Health-related outcomes > Hospital inpatient > Record-level access	2006	Records in HES inpatient critical care dataset	Integer
 42000		YES-DATE					Health-related outcomes > Algorithmically-defined outcomes > Myocardial infarction outcomes	44	Date of myocardial infarction	Date
 42001						300	Health-related outcomes > Algorithmically-defined outcomes > Myocardial infarction outcomes	44	Source of myocardial infarction report	Categorical single
 42002		YES-DATE					Health-related outcomes > Algorithmically-defined outcomes > Myocardial infarction outcomes	44	Date of STEMI	Date
@@ -4909,6 +5430,134 @@ FieldID	TRAIT_OF_INTEREST	EXCLUDED	CAT_MULT_INDICATOR_FIELDS	CAT_SINGLE_TO_CAT_M
 110005						100693	Additional exposures > Physical activity measurement	1008	"Invitation to physical activity study, acceptance"	Categorical single
 110006		YES-DATE					Additional exposures > Physical activity measurement	1008	"Invitation to physical activity study, date sent"	Date
 110008		YES-DATE					UK Biobank Assessment Centre > Recruitment	100021	"Invitation to assessment centre, date sent"	Date
+120000						502	Online follow-up > Experience of pain	154	Ever had osteoarthritis affecting one or more joints (e.g. hip, knee, shoulder)	Categorical single
+120001						502	Online follow-up > Experience of pain	154	Ever had rheumatoid arthritis affecting one or more joints	Categorical single
+120002						502	Online follow-up > Experience of pain	154	Ever had cancer pain	Categorical single
+120003						502	Online follow-up > Experience of pain	154	Ever had carpal tunnel syndrome	Categorical single
+120004						502	Online follow-up > Experience of pain	154	Ever had complex regional pain syndrome (also known as CRPS)	Categorical single
+120005						502	Online follow-up > Experience of pain	154	Ever had chronic post-surgical pain	Categorical single
+120006		YES-RELATIVE				3017	Online follow-up > Experience of pain	154	Year surgery was performed leading to chronic post-surgical pain	Integer
+120007						502	Online follow-up > Experience of pain	154	Ever had diabetes (Type I or Type II)	Categorical single
+120008						502	Online follow-up > Experience of pain	154	Ever had any cause of nerve damage/neuropathy other than diabetic neuropathy	Categorical single
+120009						502	Online follow-up > Experience of pain	154	Ever had fibromyalgia syndrome	Categorical single
+120010						502	Online follow-up > Experience of pain	154	Ever had chronic Fatigue Syndrome or Myalgic Encephalomyelitis (M.E.)	Categorical single
+120011						502	Online follow-up > Experience of pain	154	Ever had gout	Categorical single
+120012						502	Online follow-up > Experience of pain	154	Currently experiencing a gout flare	Categorical single
+120013						502	Online follow-up > Experience of pain	154	Gout causing a swollen joint now	Categorical single
+120014						502	Online follow-up > Experience of pain	154	Gout causing a warm joint now	Categorical single
+120015						584	Online follow-up > Experience of pain	154	Average pain from gout in the past 24 hours while resting	Integer
+120016						502	Online follow-up > Experience of pain	154	Ever had migraine	Categorical single
+120017						502	Online follow-up > Experience of pain	154	Ever had pelvic pain	Categorical single
+120018						502	Online follow-up > Experience of pain	154	Ever had post herpetic neuralgia (pain after shingles)	Categorical single
+120019						502	Online follow-up > Experience of pain	154	Troubled by pain or discomfort present for more than 3 months	Categorical single
+120020						3013	Online follow-up > Experience of pain	154	Length of time of pain or discomfort	Categorical single
+120021						502	Online follow-up > Experience of pain	154	Pain or discomfort all over the body in the last 3 months	Categorical single
+120022						3014	Online follow-up > Experience of pain	154	All over body pain in last three months and rating of pain	Integer
+120023						3014	Online follow-up > Experience of pain	154	Head pain in last three months and rating of pain	Integer
+120024						3014	Online follow-up > Experience of pain	154	Face pain in last three months and rating of pain	Integer
+120025						3014	Online follow-up > Experience of pain	154	Neck or shoulder pain in last three months and rating of pain	Integer
+120026						3014	Online follow-up > Experience of pain	154	Back pain in last three months and rating of pain	Integer
+120027						3014	Online follow-up > Experience of pain	154	Stomach or abdomen pain in last three months and rating of pain	Integer
+120028						3014	Online follow-up > Experience of pain	154	Hip pain in last three months and rating of pain	Integer
+120029						3014	Online follow-up > Experience of pain	154	Knee pain in last three months and rating of pain	Integer
+120030						3014	Online follow-up > Experience of pain	154	Arm pain in last three months and rating of pain	Integer
+120031						3014	Online follow-up > Experience of pain	154	Hand pain in last three months and rating of pain	Integer
+120032						502	Online follow-up > Experience of pain	154	Pain or discomfort in both feet in last three months	Categorical single
+120033						3014	Online follow-up > Experience of pain	154	Feet pain in last three months and rating of pain	Integer
+120034						3014	Online follow-up > Experience of pain	154	Leg pain in last three months and rating of pain	Integer
+120035						3014	Online follow-up > Experience of pain	154	Chest pain in last three months and rating of pain	Integer
+120036						1021	Online follow-up > Experience of pain	154	Pain or discomfort in another part of the body in the last 3 months	Categorical single
+120037			120019	YES		3008	Online follow-up > Experience of pain	154	Area most bothered by pain in the last three months	Categorical single
+120038						502	Online follow-up > Experience of pain	154	Pain or tenderness during the past week	Categorical single
+120039			120038			3022	Online follow-up > Experience of pain	154	Location of pain during the past week	Categorical multiple
+120040						3003	Online follow-up > Experience of pain	154	Fatigue severity over the past week	Categorical single
+120041						3003	Online follow-up > Experience of pain	154	Waking unrefreshed severity over the past week	Categorical single
+120042						3003	Online follow-up > Experience of pain	154	Cognitive symptoms severity over the past week	Categorical single
+120043						1021	Online follow-up > Experience of pain	154	Pain or cramps in lower abdomen in past six months	Categorical single
+120044						1021	Online follow-up > Experience of pain	154	Depression in past six months	Categorical single
+120045						1021	Online follow-up > Experience of pain	154	Headache in past six months	Categorical single
+120046						502	Online follow-up > Experience of pain	154	Burning pain present in pain that bothers the most	Categorical single
+120047						502	Online follow-up > Experience of pain	154	Painful cold present in pain that bothers the most	Categorical single
+120048						502	Online follow-up > Experience of pain	154	Electric shocks present in pain that bothers the most	Categorical single
+120049						502	Online follow-up > Experience of pain	154	Tingling present in pain that bothers the most	Categorical single
+120050						502	Online follow-up > Experience of pain	154	Pins and needles present in pain that bothers the most	Categorical single
+120051						502	Online follow-up > Experience of pain	154	Numbness present in pain that bothers the most	Categorical single
+120052						502	Online follow-up > Experience of pain	154	Itching present in pain that bothers the most	Categorical single
+120053						1021	Online follow-up > Experience of pain	154	Bad and/or recurring headaches at any time in life	Categorical single
+120054						584	Online follow-up > Experience of pain	154	Number of days with headache in past three months	Integer
+120055		YES-RELATIVE				3018	Online follow-up > Experience of pain	154	When worst headaches began	Integer
+120056		YES-RELATIVE				3018	Online follow-up > Experience of pain	154	When worst headaches ended	Integer
+120057						584	Online follow-up > Experience of pain	154	Days per month having headaches when they were at their worst	Integer
+120058						3002	Online follow-up > Experience of pain	154	Pain worst on just one side when headaches were at their worst	Categorical single
+120059						3002	Online follow-up > Experience of pain	154	Pain pounding, pulsating or throbbing when headaches were at their worst	Categorical single
+120060						3002	Online follow-up > Experience of pain	154	Pain moderate or severe when headaches were at their worst	Categorical single
+120061						3002	Online follow-up > Experience of pain	154	Pain made worse by routine activities when headaches were at their worst	Categorical single
+120062						3002	Online follow-up > Experience of pain	154	Felt sick or being sick when headaches were at their worst	Categorical single
+120063						3002	Online follow-up > Experience of pain	154	Bothered by light when headaches were at their worst	Categorical single
+120064						3002	Online follow-up > Experience of pain	154	Bothered by sound when headaches were at their worst	Categorical single
+120065						1021	Online follow-up > Experience of pain	154	Visual changes before or near the onset of headaches	Categorical single
+120066						1021	Online follow-up > Experience of pain	154	Visual changes develop slowly before or near the onset of headaches	Categorical single
+120067						1021	Online follow-up > Experience of pain	154	Tingling or numbness in face, arms or legs before or near the onset of headaches	Categorical single
+120068						1021	Online follow-up > Experience of pain	154	Tingling and/or numbness spreads slowly before or near the onset of headaches	Categorical single
+120069						1021	Online follow-up > Experience of pain	154	Develop tiredness, yawning, concentration problems, changes in mood or appetite, irritability, neck stiffness, light or sound sensitivity before or near the onset of headaches	Categorical single
+120070						584	Online follow-up > Experience of pain	154	Number of days in the last 3 months headaches interfered with ability to work, study or enjoy life	Integer
+120071						502	Online follow-up > Experience of pain	154	Legs and/or feet are usually numb	Categorical single
+120072						502	Online follow-up > Experience of pain	154	Usually have burning pain in legs and/or feet	Categorical single
+120073						502	Online follow-up > Experience of pain	154	Feet usually too sensitive to touch	Categorical single
+120074						502	Online follow-up > Experience of pain	154	Usually get muscle cramps in legs and/or feet	Categorical single
+120075						502	Online follow-up > Experience of pain	154	Usually have prickling feelings in legs or feet	Categorical single
+120076						502	Online follow-up > Experience of pain	154	Legs and feet usually hurt when the bed covers touch skin	Categorical single
+120077						502	Online follow-up > Experience of pain	154	Usually able to tell the hot water from the cold water	Categorical single
+120078						502	Online follow-up > Experience of pain	154	Ever had an open sore on foot	Categorical single
+120079						502	Online follow-up > Experience of pain	154	Ever had diabetic neuropathy	Categorical single
+120080						502	Online follow-up > Experience of pain	154	Feel weak all over most of the time	Categorical single
+120081						502	Online follow-up > Experience of pain	154	Feeling in feet and legs: symptoms are worse at night	Categorical single
+120082						502	Online follow-up > Experience of pain	154	Legs usually hurt when walking	Categorical single
+120083						502	Online follow-up > Experience of pain	154	Usually able to sense feet when walking	Categorical single
+120084						502	Online follow-up > Experience of pain	154	Skin on feet usually so dry that it cracks open	Categorical single
+120085						502	Online follow-up > Experience of pain	154	Ever had an amputation	Categorical single
+120086						584	Online follow-up > Experience of pain	154	Scale of pain that bothers most at its worst in the last 24 hours	Integer
+120087						584	Online follow-up > Experience of pain	154	Scale of pain that bothers most at its least in the last 24 hours	Integer
+120088						584	Online follow-up > Experience of pain	154	Scale of pain that bothers most on average	Integer
+120089						584	Online follow-up > Experience of pain	154	Scale of pain that bothers most right now	Integer
+120090						3015	Online follow-up > Experience of pain	154	Scale of how much relief pain treatments or medications have provided in the last 24 hours	Categorical single
+120091						584	Online follow-up > Experience of pain	154	Scale of how much pain that bothers most has interfered with general activity	Integer
+120092						584	Online follow-up > Experience of pain	154	Scale of how much pain that bothers most has interfered with mood	Integer
+120093						584	Online follow-up > Experience of pain	154	Scale of how much pain that bothers most has interfered with walking ability	Integer
+120094						584	Online follow-up > Experience of pain	154	Scale of how much pain that bothers most has interfered with normal work	Integer
+120095						584	Online follow-up > Experience of pain	154	Scale of how much pain that bothers most has interfered with relations with other people	Integer
+120096						584	Online follow-up > Experience of pain	154	Scale of how much pain that bothers most has interfered with sleep	Integer
+120097						584	Online follow-up > Experience of pain	154	Scale of how much pain that bothers most has interfered with enjoyment of life	Integer
+120098						3004	Online follow-up > Experience of pain	154	Mobility problems today	Categorical single
+120099						3019	Online follow-up > Experience of pain	154	Self-care problems today	Categorical single
+120100						3020	Online follow-up > Experience of pain	154	Problems doing usual activities	Categorical single
+120101						3021	Online follow-up > Experience of pain	154	Pain/discomfort today	Categorical single
+120102						3005	Online follow-up > Experience of pain	154	Anxiety/depression today	Categorical single
+120103						584	Online follow-up > Experience of pain	154	Scale to indicate how health is today	Integer
+120104						3006	Online follow-up > Experience of pain	154	Little interest or pleasure in doing things over the last two weeks	Categorical single
+120105						3006	Online follow-up > Experience of pain	154	Feeling down, depressed, or hopeless over the last two weeks	Categorical single
+120106						3006	Online follow-up > Experience of pain	154	Trouble falling or staying asleep, or sleeping too much over the last two weeks	Categorical single
+120107						3006	Online follow-up > Experience of pain	154	Feeling tired or having little energy over the last two weeks	Categorical single
+120108						3006	Online follow-up > Experience of pain	154	Poor appetite or overeating over the last two weeks	Categorical single
+120109						3006	Online follow-up > Experience of pain	154	Feeling bad about self over the last two weeks	Categorical single
+120110						3006	Online follow-up > Experience of pain	154	Trouble concentrating over the last two weeks	Categorical single
+120111						3006	Online follow-up > Experience of pain	154	Moving or speaking slower or faster than usual over the last two weeks	Categorical single
+120112						3006	Online follow-up > Experience of pain	154	Thoughts of being better off dead or of hurting self over the last two weeks	Categorical single
+120113						3012	Online follow-up > Experience of pain	154	Level of difficultly depression has made to do work, take care of things at home, or get along with other people	Categorical single
+120114						502	Online follow-up > Experience of pain	154	Persistent or recurrent tiredness, weariness or fatigue that has lasted for at least 6 months	Categorical single
+120115						502	Online follow-up > Experience of pain	154	Tiredness, weariness or fatigue goes away when resting	Categorical single
+120116						502	Online follow-up > Experience of pain	154	Tiredness, weariness or fatigue happening only because of exercising and/or working too much	Categorical single
+120117						502	Online follow-up > Experience of pain	154	Tired after minimal physical or mental exertion	Categorical single
+120118						502	Online follow-up > Experience of pain	154	Suffered from fatigue or exhaustion in the last week	Categorical single
+120119						584	Online follow-up > Experience of pain	154	Motivation is lower when fatigued	Integer
+120120						584	Online follow-up > Experience of pain	154	Exercise brings on fatigue	Integer
+120121						584	Online follow-up > Experience of pain	154	Easily fatigued	Integer
+120122						584	Online follow-up > Experience of pain	154	Fatigue interferes with physical functioning	Integer
+120123						584	Online follow-up > Experience of pain	154	Fatigue causes frequent problems	Integer
+120124						584	Online follow-up > Experience of pain	154	Fatigue prevents sustained physical functioning	Integer
+120125						584	Online follow-up > Experience of pain	154	Fatigue interferes with carrying out certain duties and responsibilities	Integer
+120126						584	Online follow-up > Experience of pain	154	Fatigue is among three most disabling symptoms	Integer
+120127						584	Online follow-up > Experience of pain	154	Fatigue interferes with work, family or social life	Integer
 130000					BINARY		Health-related outcomes > First occurrences > Certain infectious and parasitic diseases	2401	Date A00 first reported (cholera)	Date
 130001		YES-PROCESSING					Health-related outcomes > First occurrences > Certain infectious and parasitic diseases	2401	Source of report of A00 (cholera)	Categorical single
 130002					BINARY		Health-related outcomes > First occurrences > Certain infectious and parasitic diseases	2401	Date A01 first reported (typhoid and paratyphoid fevers)	Date
@@ -5565,6 +6214,8 @@ FieldID	TRAIT_OF_INTEREST	EXCLUDED	CAT_MULT_INDICATOR_FIELDS	CAT_SINGLE_TO_CAT_M
 130965		YES-PROCESSING					Health-related outcomes > First occurrences > Mental and behavioural disorders	2405	Source of report of F81 (specific developmental disorders of scholastic skills)	Categorical single
 130966					BINARY		Health-related outcomes > First occurrences > Mental and behavioural disorders	2405	Date F82 first reported (specific developmental disorder of motor function)	Date
 130967		YES-PROCESSING					Health-related outcomes > First occurrences > Mental and behavioural disorders	2405	Source of report of F82 (specific developmental disorder of motor function)	Categorical single
+130968					BINARY		Health-related outcomes > First occurrences > Mental and behavioural disorders	2405	Date F83 first reported (mixed specific developmental disorders)	Date
+130969		YES-PROCESSING					Health-related outcomes > First occurrences > Mental and behavioural disorders	2405	Source of report of F83 (mixed specific developmental disorders)	Categorical single
 130970					BINARY		Health-related outcomes > First occurrences > Mental and behavioural disorders	2405	Date F84 first reported (pervasive developmental disorders)	Date
 130971		YES-PROCESSING					Health-related outcomes > First occurrences > Mental and behavioural disorders	2405	Source of report of F84 (pervasive developmental disorders)	Categorical single
 130972					BINARY		Health-related outcomes > First occurrences > Mental and behavioural disorders	2405	Date F88 first reported (other disorders of psychological development)	Date
@@ -6445,6 +7096,8 @@ FieldID	TRAIT_OF_INTEREST	EXCLUDED	CAT_MULT_INDICATOR_FIELDS	CAT_SINGLE_TO_CAT_M
 131853		YES-PROCESSING					Health-related outcomes > First occurrences > Musculoskeletal system and connective tissue disorders	2413	Source of report of M07 (psoriatic and enteropathic arthropathies)	Categorical single
 131854					BINARY		Health-related outcomes > First occurrences > Musculoskeletal system and connective tissue disorders	2413	Date M08 first reported (juvenile arthritis)	Date
 131855		YES-PROCESSING					Health-related outcomes > First occurrences > Musculoskeletal system and connective tissue disorders	2413	Source of report of M08 (juvenile arthritis)	Categorical single
+131856					BINARY		Health-related outcomes > First occurrences > Musculoskeletal system and connective tissue disorders	2413	Date M09 first reported (juvenile arthritis in diseases classified elsewhere)	Date
+131857		YES-PROCESSING					Health-related outcomes > First occurrences > Musculoskeletal system and connective tissue disorders	2413	Source of report of M09 (juvenile arthritis in diseases classified elsewhere)	Categorical single
 131858					BINARY		Health-related outcomes > First occurrences > Musculoskeletal system and connective tissue disorders	2413	Date M10 first reported (gout)	Date
 131859		YES-PROCESSING					Health-related outcomes > First occurrences > Musculoskeletal system and connective tissue disorders	2413	Source of report of M10 (gout)	Categorical single
 131860					BINARY		Health-related outcomes > First occurrences > Musculoskeletal system and connective tissue disorders	2413	Date M11 first reported (other crystal arthropathies)	Date
@@ -7162,3 +7815,4 @@ FieldID	TRAIT_OF_INTEREST	EXCLUDED	CAT_MULT_INDICATOR_FIELDS	CAT_SINGLE_TO_CAT_M
 132602					BINARY		Health-related outcomes > First occurrences > Congenital disruptions and chromosomal abnormalities	2417	"Date Q98 first reported (other sex chromosome abnormalities, male phenotype, not elsewhere classified)"	Date
 132603		YES-PROCESSING					Health-related outcomes > First occurrences > Congenital disruptions and chromosomal abnormalities	2417	"Source of report of Q98 (other sex chromosome abnormalities, male phenotype, not elsewhere classified)"	Categorical single
 132604					BINARY		Health-related outcomes > First occurrences > Congenital disruptions and chromosomal abnormalities	2417	"Date Q99 first reported (other chromosome abnormalities, not elsewhere classified)"	Date
+132605		YES-PROCESSING					Health-related outcomes > First occurrences > Congenital disruptions and chromosomal abnormalities	2417	Source of report of Q99 (other chromosome abnormalities, not elsewhere classified)	Categorical single
