@@ -711,8 +711,8 @@ FieldID	TRAIT_OF_INTEREST	EXCLUDED	CAT_MULT_INDICATOR_FIELDS	CAT_SINGLE_TO_CAT_M
 10144							UK Biobank Assessment Centre > Cognitive function > Lights pattern memory	100028	Time taken to complete lights test (pilot)	Integer
 10147							UK Biobank Assessment Centre > Cognitive function > Reaction time	100032	Duration to first press of snap-button in each round (pilot)	Integer
 10241							UK Biobank Assessment Centre > Procedural metrics > Process durations	152	Touchscreen duration (pilot)	Integer
-10609							UK Biobank Assessment Centre > Cognitive function > Word production	100077	Words answer array (pilot)	Integer
-10610						100280	UK Biobank Assessment Centre > Cognitive function > Word production	100077	Word count (pilot)	Categorical single
+10609		YES-META					UK Biobank Assessment Centre > Cognitive function > Word production	100077	Words answer array (pilot)	Integer
+10610		YES-META				100280	UK Biobank Assessment Centre > Cognitive function > Word production	100077	Word count (pilot)	Categorical single
 10612						100696	UK Biobank Assessment Centre > Cognitive function > Word production	100077	Number of words beginning with 'S' (pilot)	Integer
 10691		YES-CAT-SIN-MUL-VAL				22	UK Biobank Assessment Centre > Physical measures > Spirometry	100020	Result ranking (pilot)	Categorical single
 10693							UK Biobank Assessment Centre > Physical measures > Spirometry	100020	Acceptability of each blow result (pilot)	Integer
@@ -808,38 +808,38 @@ FieldID	TRAIT_OF_INTEREST	EXCLUDED	CAT_MULT_INDICATOR_FIELDS	CAT_SINGLE_TO_CAT_M
 20023							UK Biobank Assessment Centre > Cognitive function > Reaction time	100032	Mean time to correctly identify matches	Integer
 20033		YES-SENSITIVE					UK Biobank Assessment Centre > Recruitment > Reception	100024	Home location at assessment - east co-ordinate	Integer
 20034		YES-SENSITIVE					UK Biobank Assessment Centre > Recruitment > Reception	100024	Home location at assessment - north co-ordinate	Integer
-20041						47	UK Biobank Assessment Centre > Physical measures > Anthropometry > Body size measures	100010	Reason for skipping weight	Categorical single
-20042						47	UK Biobank Assessment Centre > Physical measures > Spirometry	100020	Reason for skipping spirometry	Categorical single
-20043						47	UK Biobank Assessment Centre > Physical measures > Hand grip strength	100019	Reason for skipping grip strength (right)	Categorical single
-20044						47	UK Biobank Assessment Centre > Physical measures > Hand grip strength	100019	Reason for skipping grip strength (left)	Categorical single
-20045						47	UK Biobank Assessment Centre > Physical measures > Anthropometry > Body size measures	100010	Reason for skipping waist	Categorical single
-20046						47	UK Biobank Assessment Centre > Physical measures > Anthropometry > Body size measures	100010	Reason for skipping hip measurement	Categorical single
-20047						47	UK Biobank Assessment Centre > Physical measures > Anthropometry > Body size measures	100010	Reason for skipping standing height	Categorical single
-20048						47	UK Biobank Assessment Centre > Physical measures > Anthropometry > Body size measures	100010	Reason for skipping sitting height	Categorical single
-20049			35	YES		49	UK Biobank Assessment Centre > Biological sampling > Blood sample collection	100002	"Blood sample #, note contents"	Categorical single
-20050						50	UK Biobank Assessment Centre > Biological sampling > Blood sample collection	100002	Reason blood sampling not attempted	Categorical single
-20051						51	UK Biobank Assessment Centre > Physical measures > Arterial stiffness	100007	Reason for skipping arterial stiffness	Categorical single
-20052						54	UK Biobank Assessment Centre > Physical measures > Eye measures > Autorefraction	100014	Reason for skipping refractometry (left)	Categorical single
-20053						54	UK Biobank Assessment Centre > Physical measures > Eye measures > Intraocular pressure	100015	Reason for skipping IOP (right)	Categorical single
-20054						54	UK Biobank Assessment Centre > Physical measures > Eye measures > Intraocular pressure	100015	Reason for skipping IOP (left)	Categorical single
-20055						54	UK Biobank Assessment Centre > Physical measures > Eye measures > Autorefraction	100014	Reason for skipping refractometry (right)	Categorical single
-20056						56	UK Biobank Assessment Centre > Physical measures > Eye measures > Visual acuity	100017	Reason for skipping visual acuity (right)	Categorical single
-20057						56	UK Biobank Assessment Centre > Physical measures > Eye measures > Visual acuity	100017	Reason for skipping visual acuity (left)	Categorical single
-20058						47	UK Biobank Assessment Centre > Physical measures > ECG during exercise	100012	Reason for skipping ECG	Categorical single
-20059						59	UK Biobank Assessment Centre > Physical measures > ECG during exercise	100012	Reason ECG not completed	Categorical single
-20060						60	UK Biobank Assessment Centre > Physical measures > ECG during exercise	100012	Reason at-rest ECG performed without bicycle	Categorical single
-20061						54	UK Biobank Assessment Centre > Physical measures > Eye measures > Retinal optical coherence tomography	100016	Reason for skipping OCT (right)	Categorical single
-20062						54	UK Biobank Assessment Centre > Physical measures > Eye measures > Retinal optical coherence tomography	100016	Reason for skipping OCT (left)	Categorical single
-20071						71	UK Biobank Assessment Centre > Biological sampling > Saliva sample collection	100096	Reason no saliva sample collected	Categorical single
-20072						71	UK Biobank Assessment Centre > Biological sampling > Urine sample collection	100095	Reason no urine sample collected	Categorical single
+20041		YES-META				47	UK Biobank Assessment Centre > Physical measures > Anthropometry > Body size measures	100010	Reason for skipping weight	Categorical single
+20042		YES-META				47	UK Biobank Assessment Centre > Physical measures > Spirometry	100020	Reason for skipping spirometry	Categorical single
+20043		YES-META				47	UK Biobank Assessment Centre > Physical measures > Hand grip strength	100019	Reason for skipping grip strength (right)	Categorical single
+20044		YES-META				47	UK Biobank Assessment Centre > Physical measures > Hand grip strength	100019	Reason for skipping grip strength (left)	Categorical single
+20045		YES-META				47	UK Biobank Assessment Centre > Physical measures > Anthropometry > Body size measures	100010	Reason for skipping waist	Categorical single
+20046		YES-META				47	UK Biobank Assessment Centre > Physical measures > Anthropometry > Body size measures	100010	Reason for skipping hip measurement	Categorical single
+20047		YES-META				47	UK Biobank Assessment Centre > Physical measures > Anthropometry > Body size measures	100010	Reason for skipping standing height	Categorical single
+20048		YES-META				47	UK Biobank Assessment Centre > Physical measures > Anthropometry > Body size measures	100010	Reason for skipping sitting height	Categorical single
+20049		YES-META	35	YES		49	UK Biobank Assessment Centre > Biological sampling > Blood sample collection	100002	"Blood sample #, note contents"	Categorical single
+20050		YES-META				50	UK Biobank Assessment Centre > Biological sampling > Blood sample collection	100002	Reason blood sampling not attempted	Categorical single
+20051		YES-META				51	UK Biobank Assessment Centre > Physical measures > Arterial stiffness	100007	Reason for skipping arterial stiffness	Categorical single
+20052		YES-META				54	UK Biobank Assessment Centre > Physical measures > Eye measures > Autorefraction	100014	Reason for skipping refractometry (left)	Categorical single
+20053		YES-META				54	UK Biobank Assessment Centre > Physical measures > Eye measures > Intraocular pressure	100015	Reason for skipping IOP (right)	Categorical single
+20054		YES-META				54	UK Biobank Assessment Centre > Physical measures > Eye measures > Intraocular pressure	100015	Reason for skipping IOP (left)	Categorical single
+20055		YES-META				54	UK Biobank Assessment Centre > Physical measures > Eye measures > Autorefraction	100014	Reason for skipping refractometry (right)	Categorical single
+20056		YES-META				56	UK Biobank Assessment Centre > Physical measures > Eye measures > Visual acuity	100017	Reason for skipping visual acuity (right)	Categorical single
+20057		YES-META				56	UK Biobank Assessment Centre > Physical measures > Eye measures > Visual acuity	100017	Reason for skipping visual acuity (left)	Categorical single
+20058		YES-META				47	UK Biobank Assessment Centre > Physical measures > ECG during exercise	100012	Reason for skipping ECG	Categorical single
+20059		YES-META				59	UK Biobank Assessment Centre > Physical measures > ECG during exercise	100012	Reason ECG not completed	Categorical single
+20060		YES-META				60	UK Biobank Assessment Centre > Physical measures > ECG during exercise	100012	Reason at-rest ECG performed without bicycle	Categorical single
+20061		YES-META				54	UK Biobank Assessment Centre > Physical measures > Eye measures > Retinal optical coherence tomography	100016	Reason for skipping OCT (right)	Categorical single
+20062		YES-META				54	UK Biobank Assessment Centre > Physical measures > Eye measures > Retinal optical coherence tomography	100016	Reason for skipping OCT (left)	Categorical single
+20071		YES-META				71	UK Biobank Assessment Centre > Biological sampling > Saliva sample collection	100096	Reason no saliva sample collected	Categorical single
+20072		YES-META				71	UK Biobank Assessment Centre > Biological sampling > Urine sample collection	100095	Reason no urine sample collected	Categorical single
 20074							UK Biobank Assessment Centre > Recruitment > Reception	100024	Home location at assessment - east co-ordinate (rounded)	Integer
 20075							UK Biobank Assessment Centre > Recruitment > Reception	100024	Home location at assessment - north co-ordinate (rounded)	Integer
-20077							Online follow-up > Diet by 24-hour recall > Diet questionnaire performance	100114	Number of diet questionnaires completed	Integer
+20077		YES-META					Online follow-up > Diet by 24-hour recall > Diet questionnaire performance	100114	Number of diet questionnaires completed	Integer
 20078		YES-DATE					Online follow-up > Diet by 24-hour recall > Diet questionnaire performance	100114	When diet questionnaire completion requested	Date
-20079						73	Online follow-up > Diet by 24-hour recall > Diet questionnaire performance	100114	Day-of-week questionnaire completion requested	Categorical single
-20080						73	Online follow-up > Diet by 24-hour recall > Diet questionnaire performance	100114	Day-of-week questionnaire completed	Categorical single
-20081							Online follow-up > Diet by 24-hour recall > Diet questionnaire performance	100114	Hour-of-day questionnaire completed	Integer
-20082							Online follow-up > Diet by 24-hour recall > Diet questionnaire performance	100114	Duration of questionnaire	Integer
+20079		YES-META				73	Online follow-up > Diet by 24-hour recall > Diet questionnaire performance	100114	Day-of-week questionnaire completion requested	Categorical single
+20080		YES-META				73	Online follow-up > Diet by 24-hour recall > Diet questionnaire performance	100114	Day-of-week questionnaire completed	Categorical single
+20081		YES-META					Online follow-up > Diet by 24-hour recall > Diet questionnaire performance	100114	Hour-of-day questionnaire completed	Integer
+20082		YES-META					Online follow-up > Diet by 24-hour recall > Diet questionnaire performance	100114	Duration of questionnaire	Integer
 20083							Online follow-up > Diet by 24-hour recall > Diet questionnaire performance	100114	Delay between questionnaire request and completion	Integer
 20084			20082			74	Online follow-up > Diet by 24-hour recall > Vitamin/mineral supplements yesterday	100112	Vitamin and/or mineral supplement use	Categorical multiple
 20085			20082			75	Online follow-up > Diet by 24-hour recall > Typical diet yesterday	100097	Reason for not eating or drinking normally	Categorical multiple
@@ -885,8 +885,8 @@ FieldID	TRAIT_OF_INTEREST	EXCLUDED	CAT_MULT_INDICATOR_FIELDS	CAT_SINGLE_TO_CAT_M
 20126						100695	UK Biobank Assessment Centre > Touchscreen > Psychosocial factors > Mental health	100060	Bipolar and major depression status	Categorical single
 20127							UK Biobank Assessment Centre > Touchscreen > Psychosocial factors > Mental health	100060	Neuroticism score	Integer
 20128							UK Biobank Assessment Centre > Cognitive function > Fluid intelligence / reasoning	100027	Number of fluid intelligence questions attempted within time limit	Integer
-20129							Online follow-up > Cognitive function online > Pairs matching	117	Number of columns displayed in round	Integer
-20130							Online follow-up > Cognitive function online > Pairs matching	117	Number of rows displayed in round	Integer
+20129		YES-META					Online follow-up > Cognitive function online > Pairs matching	117	Number of columns displayed in round	Integer
+20130		YES-META					Online follow-up > Cognitive function online > Pairs matching	117	Number of rows displayed in round	Integer
 20131							Online follow-up > Cognitive function online > Pairs matching	117	Number of correct matches in round	Integer
 20132							Online follow-up > Cognitive function online > Pairs matching	117	Number of incorrect matches in round	Integer
 20133						485	Online follow-up > Cognitive function online > Pairs matching	117	Time to complete round	Integer
@@ -4586,33 +4586,33 @@ FieldID	TRAIT_OF_INTEREST	EXCLUDED	CAT_MULT_INDICATOR_FIELDS	CAT_SINGLE_TO_CAT_M
 30300							Biological samples > Assay results > Blood assays > Blood count	100081	High light scatter reticulocyte count	Continuous
 30301							Biological samples > Assay results > Blood assays > Blood count > Blood count processing	9081	High light scatter reticulocyte count freeze-thaw cycles	Integer
 30304						2226	Biological samples > Assay results > Blood assays > Blood count > Blood count processing	9081	High light scatter reticulocyte count acquisition route	Categorical single
-30314							Biological samples > Sample inventory > Blood sample inventory	100085	Volume of EDTA1 plasma held by UKB	Integer
-30324							Biological samples > Sample inventory > Blood sample inventory	100085	Volume of EDTA1 red cells held by UKB	Integer
-30334							Biological samples > Sample inventory > Blood sample inventory	100085	Volume of EDTA1 buffy held by UKB	Integer
-30344							Biological samples > Sample inventory > Blood sample inventory	100085	Volume of EDTA2 plasma held by UKB	Integer
-30354							Biological samples > Sample inventory > Blood sample inventory	100085	Volume of EDTA2 buffy held by UKB	Integer
-30364							Biological samples > Sample inventory > Blood sample inventory	100085	Volume of EDTA2 red cells held by UKB	Integer
-30374							Biological samples > Sample inventory > Blood sample inventory	100085	Volume of Li-Hep plasma held by UKB	Integer
-30384							Biological samples > Sample inventory > Blood sample inventory	100085	Volume of serum held by UKB	Integer
-30394							Biological samples > Sample inventory > Urine sample inventory	100087	Total volume of urine samples held by UKB	Integer
-30404							Biological samples > Sample inventory > Blood sample inventory	100085	Volume of ACD held by UKB	Integer
-30414							Biological samples > Sample inventory > Blood sample inventory	100085	Volume of RNA held by UKB	Integer
-30424							Biological samples > Sample inventory > Saliva sample inventory	100086	Total volume of saliva samples held by UKB	Integer
+30314		YES-META					Biological samples > Sample inventory > Blood sample inventory	100085	Volume of EDTA1 plasma held by UKB	Integer
+30324		YES-META					Biological samples > Sample inventory > Blood sample inventory	100085	Volume of EDTA1 red cells held by UKB	Integer
+30334		YES-META					Biological samples > Sample inventory > Blood sample inventory	100085	Volume of EDTA1 buffy held by UKB	Integer
+30344		YES-META					Biological samples > Sample inventory > Blood sample inventory	100085	Volume of EDTA2 plasma held by UKB	Integer
+30354		YES-META					Biological samples > Sample inventory > Blood sample inventory	100085	Volume of EDTA2 buffy held by UKB	Integer
+30364		YES-META					Biological samples > Sample inventory > Blood sample inventory	100085	Volume of EDTA2 red cells held by UKB	Integer
+30374		YES-META					Biological samples > Sample inventory > Blood sample inventory	100085	Volume of Li-Hep plasma held by UKB	Integer
+30384		YES-META					Biological samples > Sample inventory > Blood sample inventory	100085	Volume of serum held by UKB	Integer
+30394		YES-META					Biological samples > Sample inventory > Urine sample inventory	100087	Total volume of urine samples held by UKB	Integer
+30404		YES-META					Biological samples > Sample inventory > Blood sample inventory	100085	Volume of ACD held by UKB	Integer
+30414		YES-META					Biological samples > Sample inventory > Blood sample inventory	100085	Volume of RNA held by UKB	Integer
+30424		YES-META					Biological samples > Sample inventory > Saliva sample inventory	100086	Total volume of saliva samples held by UKB	Integer
 30500							Biological samples > Assay results > Urine assays	100083	Microalbumin in urine	Continuous
 30502		YES-DATE					Biological samples > Assay results > Urine assays > Urine processing	148	Microalbumin in urine acquisition time	Date
-30503						200	Biological samples > Assay results > Urine assays > Urine processing	148	Microalbumin in urine device ID	Categorical single
+30503		YES-META				200	Biological samples > Assay results > Urine assays > Urine processing	148	Microalbumin in urine device ID	Categorical single
 30505						198	Biological samples > Assay results > Urine assays	100083	Microalbumin in urine result flag	Categorical single
 30510							Biological samples > Assay results > Urine assays	100083	Creatinine (enzymatic) in urine	Continuous
 30512		YES-DATE					Biological samples > Assay results > Urine assays > Urine processing	148	Creatinine (enzymatic) in urine acquisition time	Date
-30513						200	Biological samples > Assay results > Urine assays > Urine processing	148	Creatinine (enzymatic) in urine device ID	Categorical single
+30513		YES-META				200	Biological samples > Assay results > Urine assays > Urine processing	148	Creatinine (enzymatic) in urine device ID	Categorical single
 30515						199	Biological samples > Assay results > Urine assays	100083	Creatinine (enzymatic) in urine result flag	Categorical single
 30520							Biological samples > Assay results > Urine assays	100083	Potassium in urine	Continuous
 30522		YES-DATE					Biological samples > Assay results > Urine assays > Urine processing	148	Potassium in urine acquisition time	Date
-30523						200	Biological samples > Assay results > Urine assays > Urine processing	148	Potassium in urine device ID	Categorical single
+30523		YES-META				200	Biological samples > Assay results > Urine assays > Urine processing	148	Potassium in urine device ID	Categorical single
 30525						197	Biological samples > Assay results > Urine assays	100083	Potassium in urine result flag	Categorical single
 30530							Biological samples > Assay results > Urine assays	100083	Sodium in urine	Continuous
 30532		YES-DATE					Biological samples > Assay results > Urine assays > Urine processing	148	Sodium in urine acquisition time	Date
-30533						200	Biological samples > Assay results > Urine assays > Urine processing	148	Sodium in urine device ID	Categorical single
+30533		YES-META				200	Biological samples > Assay results > Urine assays > Urine processing	148	Sodium in urine device ID	Categorical single
 30535						196	Biological samples > Assay results > Urine assays	100083	Sodium in urine result flag	Categorical single
 30600							Biological samples > Assay results > Blood assays > Blood biochemistry	17518	Albumin	Continuous
 30601		YES-DATE					Biological samples > Assay results > Blood assays > Blood biochemistry > Blood biochemistry processing	18518	Albumin assay date	Date
@@ -4835,8 +4835,8 @@ FieldID	TRAIT_OF_INTEREST	EXCLUDED	CAT_MULT_INDICATOR_FIELDS	CAT_SINGLE_TO_CAT_M
 40011			ALL	YES-INSTANCES		38	Health-related outcomes > Cancer register	100092	Histology of cancer tumour	Categorical single
 40012			ALL	YES-INSTANCES		39	Health-related outcomes > Cancer register	100092	Behaviour of cancer tumour	Categorical single
 40013			ALL	YES-INSTANCES		87	Health-related outcomes > Cancer register	100092	Type of cancer: ICD9	Categorical single
-40018						261	Health-related outcomes > Death register	100093	Death record format	Categorical single
-40019						262	Health-related outcomes > Cancer register	100092	Cancer record format	Categorical single
+40018		YES-META				261	Health-related outcomes > Death register	100093	Death record format	Categorical single
+40019		YES-META				262	Health-related outcomes > Cancer register	100092	Cancer record format	Categorical single
 40020		YES-META				1970	Health-related outcomes > Death register	100093	Death record origin	Categorical single
 40021		YES-META				1970	Health-related outcomes > Cancer register	100092	Cancer record origin	Categorical single
 40022		YES-META				1970	Health-related outcomes > Hospital inpatient > Summary Administration	2001	Inpatient record origin	Categorical multiple
@@ -4961,13 +4961,13 @@ FieldID	TRAIT_OF_INTEREST	EXCLUDED	CAT_MULT_INDICATOR_FIELDS	CAT_SINGLE_TO_CAT_M
 42038							Health-related outcomes > Primary care > Record-level access	3001	GP registration records	Integer
 42039							Health-related outcomes > Primary care > Record-level access	3001	GP prescription records	Integer
 42040							Health-related outcomes > Primary care > Record-level access	3001	GP clinical event records	Integer
-90002						93	Additional exposures > Physical activity measurement > Raw accelerometer statistics	1013	Data problem indicator	Categorical single
+90002		YES-META				93	Additional exposures > Physical activity measurement > Raw accelerometer statistics	1013	Data problem indicator	Categorical single
 90012							Additional exposures > Physical activity measurement > Acceleration averages	1009	Overall acceleration average	Continuous
 90013							Additional exposures > Physical activity measurement > Acceleration averages	1009	Standard deviation of acceleration	Continuous
 90015						7	Additional exposures > Physical activity measurement > Accelerometer wear time duration	1011	"Data quality, good wear time"	Categorical single
-90016						7	Additional exposures > Physical activity measurement > Accelerometer calibration	1012	"Data quality, good calibration"	Categorical single
-90017						7	Additional exposures > Physical activity measurement > Accelerometer calibration	1012	"Data quality, calibrated on own data"	Categorical single
-90018						7	Additional exposures > Physical activity measurement > Accelerometer wear time duration	1011	Daylight savings crossover	Categorical single
+90016		YES-META				7	Additional exposures > Physical activity measurement > Accelerometer calibration	1012	"Data quality, good calibration"	Categorical single
+90017		YES-META				7	Additional exposures > Physical activity measurement > Accelerometer calibration	1012	"Data quality, calibrated on own data"	Categorical single
+90018		YES-META				7	Additional exposures > Physical activity measurement > Accelerometer wear time duration	1011	Daylight savings crossover	Categorical single
 90019							Additional exposures > Physical activity measurement > Acceleration averages	1009	Monday average acceleration	Continuous
 90020							Additional exposures > Physical activity measurement > Acceleration averages	1009	Tuesday average acceleration	Continuous
 90021							Additional exposures > Physical activity measurement > Acceleration averages	1009	Wednesday average acceleration	Continuous
@@ -5002,37 +5002,37 @@ FieldID	TRAIT_OF_INTEREST	EXCLUDED	CAT_MULT_INDICATOR_FIELDS	CAT_SINGLE_TO_CAT_M
 90050							Additional exposures > Physical activity measurement > Acceleration averages	1009	Average acceleration 23:00 - 23:59	Continuous
 90051							Additional exposures > Physical activity measurement > Accelerometer wear time duration	1011	Wear duration overall	Continuous
 90052							Additional exposures > Physical activity measurement > Accelerometer wear time duration	1011	Non wear duration overall	Continuous
-90053							Additional exposures > Physical activity measurement > Accelerometer wear time duration	1011	Wear duration during Monday	Continuous
-90054							Additional exposures > Physical activity measurement > Accelerometer wear time duration	1011	Wear duration during Tuesday	Continuous
-90055							Additional exposures > Physical activity measurement > Accelerometer wear time duration	1011	Wear duration during Wednesday	Continuous
-90056							Additional exposures > Physical activity measurement > Accelerometer wear time duration	1011	Wear duration during Thursday	Continuous
-90057							Additional exposures > Physical activity measurement > Accelerometer wear time duration	1011	Wear duration during Friday	Continuous
-90058							Additional exposures > Physical activity measurement > Accelerometer wear time duration	1011	Wear duration during Saturday	Continuous
-90059							Additional exposures > Physical activity measurement > Accelerometer wear time duration	1011	Wear duration during Sunday	Continuous
-90060							Additional exposures > Physical activity measurement > Accelerometer wear time duration	1011	Wear duration during 00:00 - 00:59	Continuous
-90061							Additional exposures > Physical activity measurement > Accelerometer wear time duration	1011	Wear duration during 01:00 - 01:59	Continuous
-90062							Additional exposures > Physical activity measurement > Accelerometer wear time duration	1011	Wear duration during 02:00 - 02:59	Continuous
-90063							Additional exposures > Physical activity measurement > Accelerometer wear time duration	1011	Wear duration during 03:00 - 03:59	Continuous
-90064							Additional exposures > Physical activity measurement > Accelerometer wear time duration	1011	Wear duration during 04:00 - 04:59	Continuous
-90065							Additional exposures > Physical activity measurement > Accelerometer wear time duration	1011	Wear duration during 05:00 - 05:59	Continuous
-90066							Additional exposures > Physical activity measurement > Accelerometer wear time duration	1011	Wear duration during 06:00 - 06:59	Continuous
-90067							Additional exposures > Physical activity measurement > Accelerometer wear time duration	1011	Wear duration during 07:00 - 07:59	Continuous
-90068							Additional exposures > Physical activity measurement > Accelerometer wear time duration	1011	Wear duration during 08:00 - 08:59	Continuous
-90069							Additional exposures > Physical activity measurement > Accelerometer wear time duration	1011	Wear duration during 09:00 - 09:59	Continuous
-90070							Additional exposures > Physical activity measurement > Accelerometer wear time duration	1011	Wear duration during 10:00 - 10:59	Continuous
-90071							Additional exposures > Physical activity measurement > Accelerometer wear time duration	1011	Wear duration during 11:00 - 11:59	Continuous
-90072							Additional exposures > Physical activity measurement > Accelerometer wear time duration	1011	Wear duration during 12:00 - 12:59	Continuous
-90073							Additional exposures > Physical activity measurement > Accelerometer wear time duration	1011	Wear duration during 13:00 - 13:59	Continuous
-90074							Additional exposures > Physical activity measurement > Accelerometer wear time duration	1011	Wear duration during 14:00 - 14:59	Continuous
-90075							Additional exposures > Physical activity measurement > Accelerometer wear time duration	1011	Wear duration during 15:00 - 15:59	Continuous
-90076							Additional exposures > Physical activity measurement > Accelerometer wear time duration	1011	Wear duration during 16:00 - 16:59	Continuous
-90077							Additional exposures > Physical activity measurement > Accelerometer wear time duration	1011	Wear duration during 17:00 - 17:59	Continuous
-90078							Additional exposures > Physical activity measurement > Accelerometer wear time duration	1011	Wear duration during 18:00 - 18:59	Continuous
-90079							Additional exposures > Physical activity measurement > Accelerometer wear time duration	1011	Wear duration during 19:00 - 19:59	Continuous
-90080							Additional exposures > Physical activity measurement > Accelerometer wear time duration	1011	Wear duration during 20:00 - 20:59	Continuous
-90081							Additional exposures > Physical activity measurement > Accelerometer wear time duration	1011	Wear duration during 21:00 - 21:59	Continuous
-90082							Additional exposures > Physical activity measurement > Accelerometer wear time duration	1011	Wear duration during 22:00 - 22:59	Continuous
-90083							Additional exposures > Physical activity measurement > Accelerometer wear time duration	1011	Wear duration during 23:00 - 23:59	Continuous
+90053		YES-META					Additional exposures > Physical activity measurement > Accelerometer wear time duration	1011	Wear duration during Monday	Continuous
+90054		YES-META					Additional exposures > Physical activity measurement > Accelerometer wear time duration	1011	Wear duration during Tuesday	Continuous
+90055		YES-META					Additional exposures > Physical activity measurement > Accelerometer wear time duration	1011	Wear duration during Wednesday	Continuous
+90056		YES-META					Additional exposures > Physical activity measurement > Accelerometer wear time duration	1011	Wear duration during Thursday	Continuous
+90057		YES-META					Additional exposures > Physical activity measurement > Accelerometer wear time duration	1011	Wear duration during Friday	Continuous
+90058		YES-META					Additional exposures > Physical activity measurement > Accelerometer wear time duration	1011	Wear duration during Saturday	Continuous
+90059		YES-META					Additional exposures > Physical activity measurement > Accelerometer wear time duration	1011	Wear duration during Sunday	Continuous
+90060		YES-META					Additional exposures > Physical activity measurement > Accelerometer wear time duration	1011	Wear duration during 00:00 - 00:59	Continuous
+90061		YES-META					Additional exposures > Physical activity measurement > Accelerometer wear time duration	1011	Wear duration during 01:00 - 01:59	Continuous
+90062		YES-META					Additional exposures > Physical activity measurement > Accelerometer wear time duration	1011	Wear duration during 02:00 - 02:59	Continuous
+90063		YES-META					Additional exposures > Physical activity measurement > Accelerometer wear time duration	1011	Wear duration during 03:00 - 03:59	Continuous
+90064		YES-META					Additional exposures > Physical activity measurement > Accelerometer wear time duration	1011	Wear duration during 04:00 - 04:59	Continuous
+90065		YES-META					Additional exposures > Physical activity measurement > Accelerometer wear time duration	1011	Wear duration during 05:00 - 05:59	Continuous
+90066		YES-META					Additional exposures > Physical activity measurement > Accelerometer wear time duration	1011	Wear duration during 06:00 - 06:59	Continuous
+90067		YES-META					Additional exposures > Physical activity measurement > Accelerometer wear time duration	1011	Wear duration during 07:00 - 07:59	Continuous
+90068		YES-META					Additional exposures > Physical activity measurement > Accelerometer wear time duration	1011	Wear duration during 08:00 - 08:59	Continuous
+90069		YES-META					Additional exposures > Physical activity measurement > Accelerometer wear time duration	1011	Wear duration during 09:00 - 09:59	Continuous
+90070		YES-META					Additional exposures > Physical activity measurement > Accelerometer wear time duration	1011	Wear duration during 10:00 - 10:59	Continuous
+90071		YES-META					Additional exposures > Physical activity measurement > Accelerometer wear time duration	1011	Wear duration during 11:00 - 11:59	Continuous
+90072		YES-META					Additional exposures > Physical activity measurement > Accelerometer wear time duration	1011	Wear duration during 12:00 - 12:59	Continuous
+90073		YES-META					Additional exposures > Physical activity measurement > Accelerometer wear time duration	1011	Wear duration during 13:00 - 13:59	Continuous
+90074		YES-META					Additional exposures > Physical activity measurement > Accelerometer wear time duration	1011	Wear duration during 14:00 - 14:59	Continuous
+90075		YES-META					Additional exposures > Physical activity measurement > Accelerometer wear time duration	1011	Wear duration during 15:00 - 15:59	Continuous
+90076		YES-META					Additional exposures > Physical activity measurement > Accelerometer wear time duration	1011	Wear duration during 16:00 - 16:59	Continuous
+90077		YES-META					Additional exposures > Physical activity measurement > Accelerometer wear time duration	1011	Wear duration during 17:00 - 17:59	Continuous
+90078		YES-META					Additional exposures > Physical activity measurement > Accelerometer wear time duration	1011	Wear duration during 18:00 - 18:59	Continuous
+90079		YES-META					Additional exposures > Physical activity measurement > Accelerometer wear time duration	1011	Wear duration during 19:00 - 19:59	Continuous
+90080		YES-META					Additional exposures > Physical activity measurement > Accelerometer wear time duration	1011	Wear duration during 20:00 - 20:59	Continuous
+90081		YES-META					Additional exposures > Physical activity measurement > Accelerometer wear time duration	1011	Wear duration during 21:00 - 21:59	Continuous
+90082		YES-META					Additional exposures > Physical activity measurement > Accelerometer wear time duration	1011	Wear duration during 22:00 - 22:59	Continuous
+90083		YES-META					Additional exposures > Physical activity measurement > Accelerometer wear time duration	1011	Wear duration during 23:00 - 23:59	Continuous
 90084							Additional exposures > Physical activity measurement > Accelerometer wear time duration	1011	Unique hours of wear in a 24 hour cycle (scattered over multiple days)	Integer
 90085							Additional exposures > Physical activity measurement > Accelerometer wear time duration	1011	Unique minutes of wear in a 24 hour cycle (scattered over multiple days)	Integer
 90086							Additional exposures > Physical activity measurement > Accelerometer wear time duration	1011	Non wear episodes over 1 hour duration	Integer
@@ -5108,33 +5108,33 @@ FieldID	TRAIT_OF_INTEREST	EXCLUDED	CAT_MULT_INDICATOR_FIELDS	CAT_SINGLE_TO_CAT_M
 90156							Additional exposures > Physical activity measurement > Acceleration intensity distribution	1010	Fraction acceleration <= 1800 milli-gravities	Continuous
 90157							Additional exposures > Physical activity measurement > Acceleration intensity distribution	1010	Fraction acceleration <= 1900 milli-gravities	Continuous
 90158							Additional exposures > Physical activity measurement > Acceleration intensity distribution	1010	Fraction acceleration <= 2000 milli-gravities	Continuous
-90159							Additional exposures > Physical activity measurement > Accelerometer calibration	1012	Error tolerance before calibration	Continuous
-90160							Additional exposures > Physical activity measurement > Accelerometer calibration	1012	Error tolerance after calibration	Continuous
-90161							Additional exposures > Physical activity measurement > Accelerometer calibration	1012	Calibration coefficients - x offset	Continuous
-90162							Additional exposures > Physical activity measurement > Accelerometer calibration	1012	Calibration coefficients - y offset	Continuous
-90163							Additional exposures > Physical activity measurement > Accelerometer calibration	1012	Calibration coefficients - z offset	Continuous
-90164							Additional exposures > Physical activity measurement > Accelerometer calibration	1012	Calibration coefficients - x slope	Continuous
-90165							Additional exposures > Physical activity measurement > Accelerometer calibration	1012	Calibration coefficients - y slope	Continuous
-90166							Additional exposures > Physical activity measurement > Accelerometer calibration	1012	Calibration coefficients - z slope	Continuous
-90167							Additional exposures > Physical activity measurement > Accelerometer calibration	1012	Calibration coefficients - x temp	Continuous
-90168							Additional exposures > Physical activity measurement > Accelerometer calibration	1012	Calibration coefficients - y temp	Continuous
-90169							Additional exposures > Physical activity measurement > Accelerometer calibration	1012	Calibration coefficients - z temp	Continuous
-90170							Additional exposures > Physical activity measurement > Accelerometer calibration	1012	Calibration coefficients - mean temperature	Continuous
-90171							Additional exposures > Physical activity measurement > Accelerometer calibration	1012	Calibration - number of static points	Integer
-90172							Additional exposures > Physical activity measurement > Accelerometer calibration	1012	Calibration - minimum x stationary value	Continuous
-90173							Additional exposures > Physical activity measurement > Accelerometer calibration	1012	Calibration - maximum x stationary value	Continuous
-90174							Additional exposures > Physical activity measurement > Accelerometer calibration	1012	Calibration - minimum y stationary value	Continuous
-90175							Additional exposures > Physical activity measurement > Accelerometer calibration	1012	Calibration - maximum y stationary value	Continuous
-90176							Additional exposures > Physical activity measurement > Accelerometer calibration	1012	Calibration - minimum z stationary value	Continuous
-90177							Additional exposures > Physical activity measurement > Accelerometer calibration	1012	Calibration - maximum z stationary value	Continuous
-90179		YES					Additional exposures > Physical activity measurement > Raw accelerometer statistics	1013	Device ID	Integer
-90180							Additional exposures > Physical activity measurement > Raw accelerometer statistics	1013	Interrupted recording periods	Integer
-90181							Additional exposures > Physical activity measurement > Raw accelerometer statistics	1013	Duration of interrupted recording periods	Continuous
-90182							Additional exposures > Physical activity measurement > Raw accelerometer statistics	1013	Data recording errors	Integer
-90183							Additional exposures > Physical activity measurement > Raw accelerometer statistics	1013	Readings exceeding +/-8 gravities before calibration	Integer
-90184							Additional exposures > Physical activity measurement > Raw accelerometer statistics	1013	Maximum readings exceeding +/-8 gravities before calibration in a 5 second epoch	Integer
-90185							Additional exposures > Physical activity measurement > Raw accelerometer statistics	1013	Readings exceeding +/-8 gravities after calibration	Integer
-90186							Additional exposures > Physical activity measurement > Raw accelerometer statistics	1013	Maximum readings exceeding +/-8 gravities after calibration in a 5 second epoch	Integer
+90159		YES-META					Additional exposures > Physical activity measurement > Accelerometer calibration	1012	Error tolerance before calibration	Continuous
+90160		YES-META					Additional exposures > Physical activity measurement > Accelerometer calibration	1012	Error tolerance after calibration	Continuous
+90161		YES-META					Additional exposures > Physical activity measurement > Accelerometer calibration	1012	Calibration coefficients - x offset	Continuous
+90162		YES-META					Additional exposures > Physical activity measurement > Accelerometer calibration	1012	Calibration coefficients - y offset	Continuous
+90163		YES-META					Additional exposures > Physical activity measurement > Accelerometer calibration	1012	Calibration coefficients - z offset	Continuous
+90164		YES-META					Additional exposures > Physical activity measurement > Accelerometer calibration	1012	Calibration coefficients - x slope	Continuous
+90165		YES-META					Additional exposures > Physical activity measurement > Accelerometer calibration	1012	Calibration coefficients - y slope	Continuous
+90166		YES-META					Additional exposures > Physical activity measurement > Accelerometer calibration	1012	Calibration coefficients - z slope	Continuous
+90167		YES-META					Additional exposures > Physical activity measurement > Accelerometer calibration	1012	Calibration coefficients - x temp	Continuous
+90168		YES-META					Additional exposures > Physical activity measurement > Accelerometer calibration	1012	Calibration coefficients - y temp	Continuous
+90169		YES-META					Additional exposures > Physical activity measurement > Accelerometer calibration	1012	Calibration coefficients - z temp	Continuous
+90170		YES-META					Additional exposures > Physical activity measurement > Accelerometer calibration	1012	Calibration coefficients - mean temperature	Continuous
+90171		YES-META					Additional exposures > Physical activity measurement > Accelerometer calibration	1012	Calibration - number of static points	Integer
+90172		YES-META					Additional exposures > Physical activity measurement > Accelerometer calibration	1012	Calibration - minimum x stationary value	Continuous
+90173		YES-META					Additional exposures > Physical activity measurement > Accelerometer calibration	1012	Calibration - maximum x stationary value	Continuous
+90174		YES-META					Additional exposures > Physical activity measurement > Accelerometer calibration	1012	Calibration - minimum y stationary value	Continuous
+90175		YES-META					Additional exposures > Physical activity measurement > Accelerometer calibration	1012	Calibration - maximum y stationary value	Continuous
+90176		YES-META					Additional exposures > Physical activity measurement > Accelerometer calibration	1012	Calibration - minimum z stationary value	Continuous
+90177		YES-META					Additional exposures > Physical activity measurement > Accelerometer calibration	1012	Calibration - maximum z stationary value	Continuous
+90179		YES-META					Additional exposures > Physical activity measurement > Raw accelerometer statistics	1013	Device ID	Integer
+90180		YES-META					Additional exposures > Physical activity measurement > Raw accelerometer statistics	1013	Interrupted recording periods	Integer
+90181		YES-META					Additional exposures > Physical activity measurement > Raw accelerometer statistics	1013	Duration of interrupted recording periods	Continuous
+90182		YES-META					Additional exposures > Physical activity measurement > Raw accelerometer statistics	1013	Data recording errors	Integer
+90183		YES-META					Additional exposures > Physical activity measurement > Raw accelerometer statistics	1013	Readings exceeding +/-8 gravities before calibration	Integer
+90184		YES-META					Additional exposures > Physical activity measurement > Raw accelerometer statistics	1013	Maximum readings exceeding +/-8 gravities before calibration in a 5 second epoch	Integer
+90185		YES-META					Additional exposures > Physical activity measurement > Raw accelerometer statistics	1013	Readings exceeding +/-8 gravities after calibration	Integer
+90186		YES-META					Additional exposures > Physical activity measurement > Raw accelerometer statistics	1013	Maximum readings exceeding +/-8 gravities after calibration in a 5 second epoch	Integer
 90187							Additional exposures > Physical activity measurement > Raw accelerometer statistics	1013	Total data readings	Integer
 90188							Additional exposures > Physical activity measurement > Raw accelerometer statistics	1013	Sample rate average	Continuous
 90189							Additional exposures > Physical activity measurement > Raw accelerometer statistics	1013	Sample rate standard deviation	Continuous
