@@ -19,6 +19,16 @@
 ##
 ## main phenome scan file
 
+
+# allow script to be run from other directories
+initial.options <- commandArgs(trailingOnly = FALSE)
+file.arg.name <- "--file="
+script.name <- sub(file.arg.name, "", initial.options[grep(file.arg.name, initial.options)])
+script.basename <- dirname(script.name)
+print(script.basename)
+setwd(script.basename)
+
+
 library("optparse")
 
 option_list = list(
