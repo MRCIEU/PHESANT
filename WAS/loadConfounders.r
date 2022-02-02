@@ -44,6 +44,13 @@ if (opt$save==TRUE) {
 		confs = confs[,c(opt$userID,setdiff(colnames(confs),opt$userID))]
 		colnames(confs)[1] <- "userID"
 
+		# remove any rows with no values
+	        print(paste("Number of rows in confounder data: ", nrow(confs),sep=""))
+	        confsComp = complete.cases(confs)
+	        print(paste("Number of INCOMPLETE rows removed from confounder data: ", length(which(confsComp==FALSE)),sep=""))
+	        confs = confs[confsComp==TRUE,]
+		print(paste("Number of rows in confounder data: ", nrow(confs),sep=""))
+
 	} else {
 	print("Loading confounders from phenotypes file ...")
         confNames = getConfounderNames()
@@ -60,6 +67,14 @@ if (opt$save==TRUE) {
         confs = fread(opt$phenofile, select=confNames, sep=sepx, header=TRUE, data.table=FALSE)
 	confs = lapply(confs,function(x) type.convert(as.character(x)))
 	confs = as.data.frame(confs)
+
+	#####
+	##### remove any rows with no values
+        print(paste("Number of rows in confounder data: ", nrow(confs),sep=""))
+        confsComp = complete.cases(confs)
+        print(paste("Number of INCOMPLETE rows removed from confounder data: ", length(which(confsComp==FALSE)),sep=""))
+        confs = confs[confsComp==TRUE,]
+	print(paste("Number of rows in confounder data: ", nrow(confs),sep=""))
 
         #####
 	##### process genetic batch to create genetic chip variable
@@ -93,12 +108,6 @@ if (opt$save==TRUE) {
 
 	}
 
-	# remove any rows with no values
-	print(paste("Number of rows in confounder data: ", nrow(confs),sep=""))
-	confsComp = complete.cases(confs)
-	print(paste("Number of INCOMPLETE rows removed from confounder data: ", length(which(confsComp==FALSE)),sep=""))
-	confs = confs[confsComp==TRUE,]
-	print(paste("Number of rows in confounder data: ", nrow(confs),sep=""))	
 
 	print("Confounder columns:")
 	print(names(confs))
