@@ -47,7 +47,7 @@ loadIndicatorFields <- function(phenosToTest) {
 
         ## read in the right table columns
         data = fread(opt$phenofile, select=indVars, sep=sepx, header=TRUE, data.table=FALSE)
-	data = data.frame(lapply(data,function(x) type.convert(as.character(x))))
+	data = data.frame(lapply(data,function(x) type.convert(as.character(x), as.is=TRUE)))
 	colnames(data)[1] <- "userID"
 	return(data)
 }

@@ -36,7 +36,7 @@ if (opt$save==TRUE) {
 		print("Loading confounders from confounder file ...")
 	
 		confs = fread(opt$confounderfile, sep=',', header=TRUE, data.table=FALSE)
-	        confs = lapply(confs,function(x) type.convert(as.character(x)))
+	        confs = lapply(confs,function(x) type.convert(as.character(x), as.is=TRUE))
 	        confs = as.data.frame(confs)
 
 		## find userID column and change name to userID
@@ -65,7 +65,7 @@ if (opt$save==TRUE) {
         #####
 	##### extract confounders from data file
         confs = fread(opt$phenofile, select=confNames, sep=sepx, header=TRUE, data.table=FALSE)
-	confs = lapply(confs,function(x) type.convert(as.character(x)))
+	confs = lapply(confs,function(x) type.convert(as.character(x), as.is=TRUE))
 	confs = as.data.frame(confs)
 
 	#####
