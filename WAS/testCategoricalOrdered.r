@@ -74,17 +74,25 @@ testCategoricalOrdered <- function(varName, varType, thisdata, orderStr="") {
 			geno = scale(geno)
                 }
 
+		fitB <- polr(phenoFactor ~ ., data=confounders, Hess=TRUE) 
+
 		fit <- polr(phenoFactor ~ geno + ., data=confounders, Hess=TRUE)
 
 		# only save results if model converged
-		if (fit$convergence == 0) {
+		if (fit$convergence == 0 & fitB$convergence == 0) {
 
 		ctable <- coef(summary(fit))
 		sink()
 		sink(resLogFile, append=TRUE)
 
 		ct = coeftest(fit)
-		pvalue = ct["geno","Pr(>|t|)"]
+
+		# model p value compares model to baseline model
+		require(lmtest)
+                lres = lrtest(fit, fitB)
+                pvalue = lres[2,"Pr(>Chisq)"]
+
+
 		beta = ctable["geno", "Value"];
 
 		if (opt$confidenceintervals == TRUE) {
