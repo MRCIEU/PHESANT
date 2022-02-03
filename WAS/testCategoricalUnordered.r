@@ -79,6 +79,9 @@ testCategoricalUnordered <- function(varName, varType, thisdata) {
 		## baseline model with only confounders, to which we compare the model above
 		fitB <- multinom(phenoFactor ~ ., data=confounders, maxit=1000)
 
+		# only store results if both models have converged
+		if (fit$convergence == 0 & fitB$convergence == 0) {
+
 		## compare model to baseline model
 		require(lmtest)
 		lres = lrtest(fit, fitB)
@@ -135,6 +138,15 @@ testCategoricalUnordered <- function(varName, varType, thisdata) {
                 if (isExposure == TRUE) {
                         incrementCounter("success.exposure.unordCat")
                 }
+
+		}
+		else {
+			sink()
+	                sink(resLogFile, append=TRUE)
+
+			cat("MODEL DID NOT CONVERGE")
+                        incrementCounter("unordCat.noconverge")
+		}
 		
 		## END TRYCATCH
 		}, error = function(e) {

@@ -76,6 +76,9 @@ testCategoricalOrdered <- function(varName, varType, thisdata, orderStr="") {
 
 		fit <- polr(phenoFactor ~ geno + ., data=confounders, Hess=TRUE)
 
+		# only save results if model converged
+		if (fit$convergence == 0) {
+
 		ctable <- coef(summary(fit))
 		sink()
 		sink(resLogFile, append=TRUE)
@@ -102,6 +105,15 @@ testCategoricalOrdered <- function(varName, varType, thisdata, orderStr="") {
                 if (isExposure == TRUE) {
                         incrementCounter("success.exposure.ordCat")
                 }
+	
+		}
+		else {
+			sink()
+	                sink(resLogFile, append=TRUE)
+
+			cat("MODEL DID NOT CONVERGE")
+                        incrementCounter("ordCat.noconverge")
+		}
 
 		### END TRYCATCH
 		}, error = function(e) {
