@@ -79,6 +79,8 @@ binaryLogisticRegression <- function(varName, varType, thisdata, isExposure) {
 
 		sink()
              	sink(resLogFile, append=TRUE)
+
+		if (mylogit$converged == TRUE) {
 		
                 sumx = summary(mylogit)
 
@@ -103,6 +105,13 @@ binaryLogisticRegression <- function(varName, varType, thisdata, isExposure) {
                 cat("SUCCESS results-logistic-binary ");
                 
 		incrementCounter("success.binary")
+
+		}
+		else {
+			cat("MODEL DID NOT CONVERGE")
+			incrementCounter("binary.noconverge")
+		}
+		
 
 		if (isExposure==TRUE) {
 	            	incrementCounter("success.exposure.binary")
