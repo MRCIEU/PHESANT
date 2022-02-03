@@ -83,9 +83,8 @@ testCategoricalUnordered <- function(varName, varType, thisdata) {
 		if (fit$convergence == 0 & fitB$convergence == 0) {
 
 		## compare model to baseline model
-		require(lmtest)
-		lres = lrtest(fit, fitB)
-		modelP = lres[2,"Pr(>Chisq)"];
+		lres = anova(fit, fitB)
+		modelP = pchisq(lres[2,"LR stat."], df=lres[2,"   Df"], lower.tail=FALSE)
 		
 		## save result to file
 		maxFreq = length(which(phenoFactor==reference));

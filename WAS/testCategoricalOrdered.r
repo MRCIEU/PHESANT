@@ -88,10 +88,8 @@ testCategoricalOrdered <- function(varName, varType, thisdata, orderStr="") {
 		ct = coeftest(fit)
 
 		# model p value compares model to baseline model
-		require(lmtest)
-                lres = lrtest(fit, fitB)
-                pvalue = lres[2,"Pr(>Chisq)"]
-
+                lres = anova(fit, fitB)
+		pvalue = pchisq(lres[2,"LR stat."], df=lres[2,"   Df"], lower.tail=FALSE)
 
 		beta = ctable["geno", "Value"];
 
