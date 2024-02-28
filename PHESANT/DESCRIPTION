@@ -1,0 +1,10 @@
+Package: PHESANT
+Type: Package
+Title: Repliments PHESANT
+Version: 0.1
+Date: 2019-03-14
+Author: Quanli Wang
+Maintainer: Quanli Wang <quanliwang20@hotmail.com>
+Description: This will replement the original PHESANT in a package and potentially with some optimizations.
+License: GPL (>= 3)
+Depends: MASS, lmtest, data.table, nnet, optparse
