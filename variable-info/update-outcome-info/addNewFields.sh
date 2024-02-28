@@ -61,6 +61,6 @@ while read Path Category FieldID Field Participants Items Stability ValueType Un
 
 	i=$((i+1))
 
-done < "Data_Dictionary_Showcase20200806.tsv"
+done < "Data_Dictionary_Showcase.tsv"
 
 
