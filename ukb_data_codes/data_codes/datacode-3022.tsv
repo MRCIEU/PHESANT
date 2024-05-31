@@ -1,0 +1,22 @@
+coding	meaning
+-818	Undisclosed area
+0	None of the given areas
+1	Left shoulder
+2	Right shoulder
+3	Upper left arm
+4	Upper right arm
+5	Lower left arm
+6	Lower right arm
+7	Left hip
+8	Right hip
+9	Upper left leg
+10	Upper right leg
+11	Lower left leg
+12	Lower right leg
+13	Left jaw pain
+14	Right jaw pain
+15	Chest pain
+16	Abdomen
+17	Neck pain
+18	Upper back
+19	Lower back
