@@ -689,6 +689,85 @@ FieldID	TRAIT_OF_INTEREST	EXCLUDED	CAT_MULT_INDICATOR_FIELDS	CAT_SINGLE_TO_CAT_M
 6771							UK Biobank Assessment Centre > Cognitive function > Trail making	505	Errors before selecting correct item in alphanumeric path (trail #2)	Integer
 6772							UK Biobank Assessment Centre > Cognitive function > Trail making	505	Interval between previous point and current one in numeric path (trail #1)	Integer
 6773							UK Biobank Assessment Centre > Cognitive function > Trail making	505	Interval between previous point and current one in alphanumeric path (trail #2)	Integer
+7381							Assessment centre > Eye measures > Refractometry > Refractometer 2	NA	Spherical power (left)	Continuous
+7382							Assessment centre > Eye measures > Refractometry > Refractometer 2	NA	Spherical power (right)	Continuous
+7383							Assessment centre > Eye measures > Refractometry > Refractometer 2	NA	Cylindrical power (right)	Continuous
+7384							Assessment centre > Eye measures > Refractometry > Refractometer 2	NA	Cylindrical power (left)	Continuous
+7385							Assessment centre > Eye measures > Refractometry > Refractometer 2	NA	Cylinder axis (left)	Integer
+7386							Assessment centre > Eye measures > Refractometry > Refractometer 2	NA	Cylinder axis (right)	Integer
+7387		YES-META				1402	Assessment centre > Eye measures > Refractometry > Refractometer 2	NA	Confidence Index (right)	Categorical single
+7388		YES-META				1402	Assessment centre > Eye measures > Refractometry > Refractometer 2	NA	Confidence Index (left)	Categorical single
+7389							Assessment centre > Eye measures > Refractometry > Refractometer 2	NA	Spherical equivalent value (left)	Continuous
+7390							Assessment centre > Eye measures > Refractometry > Refractometer 2	NA	Spherical equivalent value (right)	Continuous
+7391							Assessment centre > Eye measures > Refractometry > Refractometer 2	NA	Keratometry R1 radius (right)	Continuous
+7392							Assessment centre > Eye measures > Refractometry > Refractometer 2	NA	Keratometry R2 radius (right)	Continuous
+7393							Assessment centre > Eye measures > Refractometry > Refractometer 2	NA	Keratometry R1 radius (left)	Continuous
+7394							Assessment centre > Eye measures > Refractometry > Refractometer 2	NA	Keratometry R2 radius (left)	Continuous
+7395							Assessment centre > Eye measures > Refractometry > Refractometer 2	NA	Keratometry average radius (left)	Continuous
+7396							Assessment centre > Eye measures > Refractometry > Refractometer 2	NA	Keratometry average radius (right)	Continuous
+7397							Assessment centre > Eye measures > Refractometry > Refractometer 2	NA	Keratometry R1 spherical value (right)	Continuous
+7398							Assessment centre > Eye measures > Refractometry > Refractometer 2	NA	Keratometry R2 spherical value (right)	Continuous
+7399							Assessment centre > Eye measures > Refractometry > Refractometer 2	NA	Keratometry R1 spherical value (left)	Continuous
+7400							Assessment centre > Eye measures > Refractometry > Refractometer 2	NA	Keratometry R2 spherical value (left)	Continuous
+7401							Assessment centre > Eye measures > Refractometry > Refractometer 2	NA	Keratometry average spherical value (left)	Continuous
+7402							Assessment centre > Eye measures > Refractometry > Refractometer 2	NA	Keratometry average spherical value (right)	Continuous
+7403							Assessment centre > Eye measures > Refractometry > Refractometer 2	NA	Keratometry spherical value (right)	Continuous
+7404							Assessment centre > Eye measures > Refractometry > Refractometer 2	NA	Keratometry spherical value (left)	Continuous
+7405							Assessment centre > Eye measures > Refractometry > Refractometer 2	NA	Keratometry cylinder axis (left)	Integer
+7406							Assessment centre > Eye measures > Refractometry > Refractometer 2	NA	Keratometry cylinder axis (right)	Integer
+7407							Assessment centre > Eye measures > Refractometry > Refractometer 2	NA	Keratometry R1 cylinder axis (right)	Integer
+7408							Assessment centre > Eye measures > Refractometry > Refractometer 2	NA	Keratometry R2 cylinder axis (right)	Integer
+7409							Assessment centre > Eye measures > Refractometry > Refractometer 2	NA	Keratometry R2 cylinder axis (left)	Integer
+7410							Assessment centre > Eye measures > Refractometry > Refractometer 2	NA	Keratometry R1 cylinder axis (left)	Integer
+7476						100274	Assessment centre > Eye measures > Refractometry > Refractometer 2	NA	Refractometry method	Categorical single
+7486							Assessment centre > Eye measures > Refractometry > Refractometer 2	NA	Distance from corneal vertex to spectacle lens when wearing glasses	Continuous
+7494							Assessment centre > Eye measures > Refractometry > Refractometer 2	NA	Corneal refractive index	Continuous
+7495							Assessment centre > Eye measures > Refractometry > Refractometer 2	NA	Median spherical power (right)	Continuous
+7496							Assessment centre > Eye measures > Refractometry > Refractometer 2	NA	Median cylindrical power (right)	Continuous
+7497							Assessment centre > Eye measures > Refractometry > Refractometer 2	NA	Median cylinder axis (right)	Integer
+7498							Assessment centre > Eye measures > Refractometry > Refractometer 2	NA	Median spherical equivalent value (right)	Continuous
+7499							Assessment centre > Eye measures > Refractometry > Refractometer 2	NA	Trial lens spherical power (right)	Continuous
+7500							Assessment centre > Eye measures > Refractometry > Refractometer 2	NA	Trial lens cylindrical power (right)	Continuous
+7501							Assessment centre > Eye measures > Refractometry > Refractometer 2	NA	Trial lens cylinder axis (right)	Integer
+7502							Assessment centre > Eye measures > Refractometry > Refractometer 2	NA	Contact lens spherical power (right)	Continuous
+7503							Assessment centre > Eye measures > Refractometry > Refractometer 2	NA	Contact lens cylindrical power (right)	Continuous
+7504							Assessment centre > Eye measures > Refractometry > Refractometer 2	NA	Contact lens cylinder axis (right)	Integer
+7505							Assessment centre > Eye measures > Refractometry > Refractometer 2	NA	Contact lens spherical equivalent value (right)	Continuous
+7507							Assessment centre > Eye measures > Refractometry > Refractometer 2	NA	Keratometry median R1 radius (right)	Continuous
+7508							Assessment centre > Eye measures > Refractometry > Refractometer 2	NA	Keratometry median R1 spherical value (right)	Continuous
+7509							Assessment centre > Eye measures > Refractometry > Refractometer 2	NA	Keratometry median R1 cylinder axis (right)	Integer
+7510							Assessment centre > Eye measures > Refractometry > Refractometer 2	NA	Keratometry median R2 radius (right)	Continuous
+7511							Assessment centre > Eye measures > Refractometry > Refractometer 2	NA	Keratometry median R2 spherical value (right)	Continuous
+7512							Assessment centre > Eye measures > Refractometry > Refractometer 2	NA	Keratometry median R2 cylinder axis (right)	Integer
+7513							Assessment centre > Eye measures > Refractometry > Refractometer 2	NA	Keratometry median average radius (right)	Continuous
+7514							Assessment centre > Eye measures > Refractometry > Refractometer 2	NA	Keratometry median average spherical value (right)	Continuous
+7515							Assessment centre > Eye measures > Refractometry > Refractometer 2	NA	Keratometry median spherical value (right)	Continuous
+7516							Assessment centre > Eye measures > Refractometry > Refractometer 2	NA	Keratometry median cylinder axis (right)	Integer
+7517							Assessment centre > Eye measures > Refractometry > Refractometer 2	NA	Median spherical power (left)	Continuous
+7518							Assessment centre > Eye measures > Refractometry > Refractometer 2	NA	Median cylindrical power (left)	Continuous
+7519							Assessment centre > Eye measures > Refractometry > Refractometer 2	NA	Median cylinder axis (left)	Integer
+7520							Assessment centre > Eye measures > Refractometry > Refractometer 2	NA	Median spherical equivalent value (left)	Continuous
+7521							Assessment centre > Eye measures > Refractometry > Refractometer 2	NA	Trial lens spherical power (left)	Continuous
+7522							Assessment centre > Eye measures > Refractometry > Refractometer 2	NA	Trial lens cylindrical power (left)	Continuous
+7523							Assessment centre > Eye measures > Refractometry > Refractometer 2	NA	Trial lens cylinder axis (left)	Integer
+7524							Assessment centre > Eye measures > Refractometry > Refractometer 2	NA	Contact lens spherical power (left)	Continuous
+7525							Assessment centre > Eye measures > Refractometry > Refractometer 2	NA	Contact lens cylindrical power (left)	Continuous
+7526							Assessment centre > Eye measures > Refractometry > Refractometer 2	NA	Contact lens cylinder axis (left)	Integer
+7527							Assessment centre > Eye measures > Refractometry > Refractometer 2	NA	Contact lens spherical equivalent value (left)	Continuous
+7529							Assessment centre > Eye measures > Refractometry > Refractometer 2	NA	Keratometry median R1 radius (left)	Continuous
+7530							Assessment centre > Eye measures > Refractometry > Refractometer 2	NA	Keratometry median R1 spherical value (left)	Continuous
+7531							Assessment centre > Eye measures > Refractometry > Refractometer 2	NA	Keratometry median R1 cylinder axis (left)	Integer
+7532							Assessment centre > Eye measures > Refractometry > Refractometer 2	NA	Keratometry median R2 radius (left)	Continuous
+7533							Assessment centre > Eye measures > Refractometry > Refractometer 2	NA	Keratometry median R2 spherical value (left)	Continuous
+7534							Assessment centre > Eye measures > Refractometry > Refractometer 2	NA	Keratometry median R2 cylinder axis (left)	Integer
+7535							Assessment centre > Eye measures > Refractometry > Refractometer 2	NA	Keratometry median average radius (left)	Continuous
+7536							Assessment centre > Eye measures > Refractometry > Refractometer 2	NA	Keratometry median average spherical value (left)	Continuous
+7537							Assessment centre > Eye measures > Refractometry > Refractometer 2	NA	Keratometry median spherical value (left)	Continuous
+7538							Assessment centre > Eye measures > Refractometry > Refractometer 2	NA	Keratometry median cylinder axis (left)	Integer
+7539							Assessment centre > Eye measures > Refractometry > Refractometer 2	NA	Pupil size (left)	Continuous
+7541							Assessment centre > Eye measures > Refractometry > Refractometer 2	NA	Eye prescription (left)	Continuous
+7542							Assessment centre > Eye measures > Refractometry > Refractometer 2	NA	Eye prescription (right)	Continuous
+7544							Assessment centre > Eye measures > Refractometry > Refractometer 2	NA	Pupil size (right)	Continuous
 10004			NO_NAN			100688	UK Biobank Assessment Centre > Touchscreen > Health and medical history > Medication	100045	"Medication for pain relief, constipation, heartburn (pilot)"	Categorical multiple
 10005			NO_NAN			100689	UK Biobank Assessment Centre > Touchscreen > Health and medical history > Medication	100045	"Medication for smoking cessation, constipation, heartburn, allergies (pilot)"	Categorical multiple
 10006			NO_NAN			100685	UK Biobank Assessment Centre > Touchscreen > Health and medical history > Mouth	100046	Mouth/teeth dental problems (pilot)	Categorical multiple
@@ -1296,6 +1375,57 @@ FieldID	TRAIT_OF_INTEREST	EXCLUDED	CAT_MULT_INDICATOR_FIELDS	CAT_SINGLE_TO_CAT_M
 21074						503	Online follow-up > Digestive health	153	Diarrhoea when IBS symptoms first began	Categorical single
 21075						1021	Online follow-up > Digestive health	153	Bloody diarrhoea when IBS symptoms first began	Categorical single
 21076						503	Online follow-up > Digestive health	153	Vomiting when IBS symptoms first began	Categorical single
+21080							Assessment centre > Imaging > Abdominal MRI > Abdominal organ composition	NA	Liver volume	Continuous
+21081							Assessment centre > Imaging > Abdominal MRI > Abdominal organ composition	NA	Left kidney volume	Continuous
+21082							Assessment centre > Imaging > Abdominal MRI > Abdominal organ composition	NA	Right kidney volume	Continuous
+21083							Assessment centre > Imaging > Abdominal MRI > Abdominal organ composition	NA	Spleen volume	Continuous
+21084							Assessment centre > Imaging > Abdominal MRI > Abdominal organ composition	NA	Lung volume	Continuous
+21085							Assessment centre > Imaging > Abdominal MRI > Abdominal organ composition	NA	Visceral fat volume	Continuous
+21086							Assessment centre > Imaging > Abdominal MRI > Abdominal organ composition	NA	Subcutaneous fat volume	Continuous
+21087							Assessment centre > Imaging > Abdominal MRI > Abdominal organ composition	NA	Pancreas volume	Continuous
+21088							Assessment centre > Imaging > Abdominal MRI > Abdominal organ composition	NA	Liver PDFF (fat fraction)	Continuous
+21089							Assessment centre > Imaging > Abdominal MRI > Abdominal organ composition	NA	Liver iron	Continuous
+21090							Assessment centre > Imaging > Abdominal MRI > Abdominal organ composition	NA	Pancreas PDFF (fat fraction)	Continuous
+21091							Assessment centre > Imaging > Abdominal MRI > Abdominal organ composition	NA	Pancreas iron	Continuous
+21092							Assessment centre > Imaging > Abdominal MRI > Abdominal organ composition	NA	Liver PDFF (fat fraction) - gradient echo	Continuous
+21093							Assessment centre > Imaging > Abdominal MRI > Abdominal organ composition	NA	Liver iron (Fe) - gradient echo	Continuous
+21100						1180	Additional exposures > Local environment > Water minerals	NA	Water hardness (USGS classification)	Categorical single
+21101						1181	Additional exposures > Local environment > Water minerals	NA	Water hardness (WHO classification)	Categorical single
+21103							Additional exposures > Local environment > Water minerals	NA	CaCO3 concentration	Integer
+21104							Additional exposures > Local environment > Water minerals	NA	Ca concentration	Integer
+21105							Additional exposures > Local environment > Water minerals	NA	Mg concentration	Integer
+21110							Assessment centre > Imaging > DXA assessment > Body composition by DXA	NA	Android fat free mass	Integer
+21111							Assessment centre > Imaging > DXA assessment > Body composition by DXA	NA	Android tissue mass	Integer
+21112							Assessment centre > Imaging > DXA assessment > Body composition by DXA	NA	Arm bone mass (left)	Integer
+21113							Assessment centre > Imaging > DXA assessment > Body composition by DXA	NA	Arm bone mass (right)	Integer
+21114							Assessment centre > Imaging > DXA assessment > Body composition by DXA	NA	Arm fat free mass (left)	Integer
+21116							Assessment centre > Imaging > DXA assessment > Body composition by DXA	NA	Arm tissue mass (left)	Integer
+21117							Assessment centre > Imaging > DXA assessment > Body composition by DXA	NA	Arm tissue mass (left)	Integer
+21118							Assessment centre > Imaging > DXA assessment > Body composition by DXA	NA	Arm tissue mass (right)	Integer
+21119							Assessment centre > Imaging > DXA assessment > Body composition by DXA	NA	Arms bone mass	Integer
+21120							Assessment centre > Imaging > DXA assessment > Body composition by DXA	NA	Arms fat free mass	Integer
+21121							Assessment centre > Imaging > DXA assessment > Body composition by DXA	NA	Arms tissue mass	Integer
+21122							Assessment centre > Imaging > DXA assessment > Body composition by DXA	NA	Femur total bone mass	Integer
+21123							Assessment centre > Imaging > DXA assessment > Body composition by DXA	NA	Gynoid fat free mass	Integer
+21124							Assessment centre > Imaging > DXA assessment > Body composition by DXA	NA	Gynoid tissue mass	Integer
+21125							Assessment centre > Imaging > DXA assessment > Body composition by DXA	NA	Leg bone mass (left)	Integer
+21126							Assessment centre > Imaging > DXA assessment > Body composition by DXA	NA	Leg bone mass (right)	Integer
+21127							Assessment centre > Imaging > DXA assessment > Body composition by DXA	NA	Leg fat free mass (left)	Integer
+21128							Assessment centre > Imaging > DXA assessment > Body composition by DXA	NA	Leg fat free mass (right)	Integer
+21129							Assessment centre > Imaging > DXA assessment > Body composition by DXA	NA	Leg tissue mass (left)	Integer
+21130							Assessment centre > Imaging > DXA assessment > Body composition by DXA	NA	Leg tissue mass (right)	Integer
+21131							Assessment centre > Imaging > DXA assessment > Body composition by DXA	NA	Legs bone mass	Integer
+21132							Assessment centre > Imaging > DXA assessment > Body composition by DXA	NA	Legs fat free mass	Integer
+21133							Assessment centre > Imaging > DXA assessment > Body composition by DXA	NA	Legs tissue mass	Integer
+21134							Assessment centre > Imaging > DXA assessment > Body composition by DXA	NA	Trunk bone mass	Integer
+21135							Assessment centre > Imaging > DXA assessment > Body composition by DXA	NA	Trunk tissue mass	Integer
+21136							Assessment centre > Imaging > DXA assessment > Bone size	NA	 mineral and density by DXA B2-B4 area	Continuous
+21137							Assessment centre > Imaging > DXA assessment > Bone size	NA	 mineral and density by DXA B2-B4 BMC (bone mineral content)	Continuous
+21138							Assessment centre > Imaging > DXA assessment > Bone size	NA	 mineral and density by DXA B2-B4 BMD (bine mineral density)	Continuous
+21160							Assessment centre > Imaging > Abdominal MRI > Kidney MRI > Kidney derived measures	NA	Kidney parenchyma total	Continuous
+21161							Assessment centre > Imaging > Abdominal MRI > Kidney MRI > Kidney derived measures	NA	Kidney parenchyma (left)	Continuous
+21162							Assessment centre > Imaging > Abdominal MRI > Kidney MRI > Kidney derived measures	NA	Kidney parenchyma (right)	Continuous
+21163							Assessment centre > Imaging > Abdominal MRI > Kidney MRI > Kidney derived measures	NA	Kidney distance	Continuous
 21611		YES-ACE					UK Biobank Assessment Centre > Procedural metrics > Process durations	152	Reception duration	Integer
 21621		YES-ACE					UK Biobank Assessment Centre > Procedural metrics > Process durations	152	Consent duration	Integer
 21622		YES-ACE					UK Biobank Assessment Centre > Procedural metrics > Process durations	152	Touchscreen duration	Integer
@@ -2231,9 +2361,210 @@ FieldID	TRAIT_OF_INTEREST	EXCLUDED	CAT_MULT_INDICATOR_FIELDS	CAT_SINGLE_TO_CAT_M
 24022							Additional exposures > Local environment > Residential noise pollution	115	Average night-time sound level of noise pollution	Continuous
 24023							Additional exposures > Local environment > Residential noise pollution	115	Average 16-hour sound level of noise pollution	Continuous
 24024							Additional exposures > Local environment > Residential noise pollution	115	Average 24-hour sound level of noise pollution	Continuous
+24100							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	LV end diastolic volume	Continuous
+24101							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	LV end systolic volume	Continuous
+24102							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	LV stroke volume	Continuous
+24103							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	LV ejection fraction	Continuous
+24104							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	LV cardiac output	Continuous
+24105							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	LV myocardial mass	Continuous
+24106							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	RV end diastolic volume	Continuous
+24107							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	RV end systolic volume	Continuous
+24108							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	RV stroke volume	Continuous
+24109							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	RV ejection fraction	Continuous
+24110							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	LA maximum volume	Continuous
+24111							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	LA minimum volume	Continuous
+24112							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	LA stroke volume	Continuous
+24113							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	LA ejection fraction	Continuous
+24114							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	RA maximum volume	Continuous
+24115							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	RA minimum volume	Continuous
+24116							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	RA stroke volume	Continuous
+24117							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	RA ejection fraction	Continuous
+24118							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	Ascending aorta maximum area	Continuous
+24119							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	Ascending aorta minimum area	Continuous
+24120							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	Ascending aorta distensibility	Continuous
+24121							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	Descending aorta maximum area	Continuous
+24122							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	Descending aorta minimum area	Continuous
+24123							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	Descending aorta distensibility	Continuous
+24124							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	LV mean myocardial wall thickness AHA 1	Continuous
+24125							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	LV mean myocardial wall thickness AHA 2	Continuous
+24126							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	LV mean myocardial wall thickness AHA 3	Continuous
+24127							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	LV mean myocardial wall thickness AHA 4	Continuous
+24128							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	LV mean myocardial wall thickness AHA 5	Continuous
+24129							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	LV mean myocardial wall thickness AHA 6	Continuous
+24130							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	LV mean myocardial wall thickness AHA 7	Continuous
+24131							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	LV mean myocardial wall thickness AHA 8	Continuous
+24132							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	LV mean myocardial wall thickness AHA 9	Continuous
+24133							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	LV mean myocardial wall thickness AHA 10	Continuous
+24134							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	LV mean myocardial wall thickness AHA 11	Continuous
+24135							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	LV mean myocardial wall thickness AHA 12	Continuous
+24136							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	LV mean myocardial wall thickness AHA 13	Continuous
+24137							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	LV mean myocardial wall thickness AHA 14	Continuous
+24138							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	LV mean myocardial wall thickness AHA 15	Continuous
+24139							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	LV mean myocardial wall thickness AHA 16	Continuous
+24140							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	LV mean myocardial wall thickness global	Continuous
+24141							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	LV circumferential strain AHA 1	Continuous
+24142							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	LV circumferential strain AHA 2	Continuous
+24143							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	LV circumferential strain AHA 3	Continuous
+24144							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	LV circumferential strain AHA 4	Continuous
+24145							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	LV circumferential strain AHA 5	Continuous
+24146							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	LV circumferential strain AHA 6	Continuous
+24147							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	LV circumferential strain AHA 7	Continuous
+24148							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	LV circumferential strain AHA 8	Continuous
+24149							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	LV circumferential strain AHA 9	Continuous
+24150							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	LV circumferential strain AHA 10	Continuous
+24151							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	LV circumferential strain AHA 11	Continuous
+24152							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	LV circumferential strain AHA 12	Continuous
+24153							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	LV circumferential strain AHA 13	Continuous
+24154							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	LV circumferential strain AHA 14	Continuous
+24155							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	LV circumferential strain AHA 15	Continuous
+24156							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	LV circumferential strain AHA 16	Continuous
+24157							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	LV circumferential strain global	Continuous
+24158							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	LV radial strain AHA 1	Continuous
+24159							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	LV radial strain AHA 2	Continuous
+24160							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	LV radial strain AHA 3	Continuous
+24161							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	LV radial strain AHA 4	Continuous
+24162							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	LV radial strain AHA 5	Continuous
+24163							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	LV radial strain AHA 6	Continuous
+24164							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	LV radial strain AHA 7	Continuous
+24165							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	LV radial strain AHA 8	Continuous
+24166							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	LV radial strain AHA 9	Continuous
+24167							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	LV radial strain AHA 10	Continuous
+24168							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	LV radial strain AHA 11	Continuous
+24169							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	LV radial strain AHA 12	Continuous
+24170							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	LV radial strain AHA 13	Continuous
+24171							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	LV radial strain AHA 14	Continuous
+24172							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	LV radial strain AHA 15	Continuous
+24173							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	LV radial strain AHA 16	Continuous
+24174							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	LV radial strain global	Continuous
+24175							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	LV longitudinal strain Segment 1	Continuous
+24176							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	LV longitudinal strain Segment 2	Continuous
+24177							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	LV longitudinal strain Segment 3	Continuous
+24178							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	LV longitudinal strain Segment 4	Continuous
+24179							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	LV longitudinal strain Segment 5	Continuous
+24180							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	LV longitudinal strain Segment 6	Continuous
+24181							Assessment centre > Imaging > Heart MRI > Cardiac and aortic function	NA	LV longitudinal strain global	Continuous
 24352							Assessment Centre > Imaging > Abdominal MRI > Abdominal composition	149	FR liver PDFF mean	Continuous
 24353							Assessment Centre > Imaging > Abdominal MRI > Abdominal composition	149	Anterior thigh muscle fat infiltration (MFI) (left)	Continuous
 24354							Assessment Centre > Imaging > Abdominal MRI > Abdominal composition	149	Anterior thigh muscle fat infiltration (MFI) (right)	Continuous
+24360							Assessment centre > Imaging > Brain MRI > Arterial spin labelling brain MRI	NA	Mean CBF in whole brain in grey matter	Continuous
+24361							Assessment centre > Imaging > Brain MRI > Arterial spin labelling brain MRI	NA	Mean CBF in cortex in grey matter	Continuous
+24362							Assessment centre > Imaging > Brain MRI > Arterial spin labelling brain MRI	NA	Mean CBF in Cerebellum in grey matter (right)	Continuous
+24363							Assessment centre > Imaging > Brain MRI > Arterial spin labelling brain MRI	NA	Mean CBF in Cerebellum in grey matter (left)	Continuous
+24364							Assessment centre > Imaging > Brain MRI > Arterial spin labelling brain MRI	NA	Mean CBF in Frontal Lobe in grey matter (right)	Continuous
+24365							Assessment centre > Imaging > Brain MRI > Arterial spin labelling brain MRI	NA	Mean CBF in Frontal Lobe in grey matter (left)	Continuous
+24366							Assessment centre > Imaging > Brain MRI > Arterial spin labelling brain MRI	NA	Mean CBF in Occipital Lobe in grey matter (right)	Continuous
+24367							Assessment centre > Imaging > Brain MRI > Arterial spin labelling brain MRI	NA	Mean CBF in Occipital Lobe in grey matter (left)	Continuous
+24368							Assessment centre > Imaging > Brain MRI > Arterial spin labelling brain MRI	NA	Mean CBF in Parietal Lobe in grey matter (right)	Continuous
+24369							Assessment centre > Imaging > Brain MRI > Arterial spin labelling brain MRI	NA	Mean CBF in Parietal Lobe in grey matter (left)	Continuous
+24370							Assessment centre > Imaging > Brain MRI > Arterial spin labelling brain MRI	NA	Mean CBF in Temporal Lobe in grey matter (right)	Continuous
+24371							Assessment centre > Imaging > Brain MRI > Arterial spin labelling brain MRI	NA	Mean CBF in Temporal Lobe in grey matter (left)	Continuous
+24372							Assessment centre > Imaging > Brain MRI > Arterial spin labelling brain MRI	NA	Mean CBF in Internal Carotid Artery vascular territory in grey matter (right)	Continuous
+24373							Assessment centre > Imaging > Brain MRI > Arterial spin labelling brain MRI	NA	Mean CBF in Internal Carotid Artery vascular territory in grey matter (left)	Continuous
+24374							Assessment centre > Imaging > Brain MRI > Arterial spin labelling brain MRI	NA	Mean CBF in VertebroBasilar Arteries vascular territories in grey matter	Continuous
+24375							Assessment centre > Imaging > Brain MRI > Arterial spin labelling brain MRI	NA	Mean CBF in whole brain in white matter	Continuous
+24376							Assessment centre > Imaging > Brain MRI > Arterial spin labelling brain MRI	NA	Mean CBF in cerebrum in white matter and >50% cerebral partial volume	Continuous
+24377							Assessment centre > Imaging > Brain MRI > Arterial spin labelling brain MRI	NA	Mean CBF in cerebrum in white matter (left)	Continuous
+24378							Assessment centre > Imaging > Brain MRI > Arterial spin labelling brain MRI	NA	Mean CBF in cerebrum in white matter (right)	Continuous
+24379							Assessment centre > Imaging > Brain MRI > Arterial spin labelling brain MRI	NA	Mean CBF in Caudate (right)	Continuous
+24380							Assessment centre > Imaging > Brain MRI > Arterial spin labelling brain MRI	NA	Mean CBF in Caudate (left)	Continuous
+24381							Assessment centre > Imaging > Brain MRI > Arterial spin labelling brain MRI	NA	Mean CBF in Putamen (right)	Continuous
+24382							Assessment centre > Imaging > Brain MRI > Arterial spin labelling brain MRI	NA	Mean CBF in Putamen (left)	Continuous
+24383							Assessment centre > Imaging > Brain MRI > Arterial spin labelling brain MRI	NA	Mean CBF in Thalamus (right)	Continuous
+24384							Assessment centre > Imaging > Brain MRI > Arterial spin labelling brain MRI	NA	Mean CBF in Thalamus (left)	Continuous
+24385							Assessment centre > Imaging > Brain MRI > Arterial spin labelling brain MRI	NA	Mean ATT in whole brain in grey matter	Continuous
+24386							Assessment centre > Imaging > Brain MRI > Arterial spin labelling brain MRI	NA	Mean ATT in cortex in grey matter	Continuous
+24387							Assessment centre > Imaging > Brain MRI > Arterial spin labelling brain MRI	NA	Mean ATT in Cerebellum in grey matter (right)	Continuous
+24388							Assessment centre > Imaging > Brain MRI > Arterial spin labelling brain MRI	NA	Mean ATT in Cerebellum in grey matter (left)	Continuous
+24389							Assessment centre > Imaging > Brain MRI > Arterial spin labelling brain MRI	NA	Mean ATT in Frontal Lobe in grey matter (right)	Continuous
+24390							Assessment centre > Imaging > Brain MRI > Arterial spin labelling brain MRI	NA	Mean ATT in Frontal Lobe in grey matter (left)	Continuous
+24391							Assessment centre > Imaging > Brain MRI > Arterial spin labelling brain MRI	NA	Mean ATT in Occipital Lobe in grey matter (right)	Continuous
+24392							Assessment centre > Imaging > Brain MRI > Arterial spin labelling brain MRI	NA	Mean ATT in Occipital Lobe in grey matter (left)	Continuous
+24393							Assessment centre > Imaging > Brain MRI > Arterial spin labelling brain MRI	NA	Mean ATT in Parietal Lobe in grey matter (right)	Continuous
+24394							Assessment centre > Imaging > Brain MRI > Arterial spin labelling brain MRI	NA	Mean ATT in Parietal Lobe in grey matter (left)	Continuous
+24395							Assessment centre > Imaging > Brain MRI > Arterial spin labelling brain MRI	NA	Mean ATT in Temporal Lobe in grey matter (right)	Continuous
+24396							Assessment centre > Imaging > Brain MRI > Arterial spin labelling brain MRI	NA	Mean ATT in Temporal Lobe in grey matter (left)	Continuous
+24397							Assessment centre > Imaging > Brain MRI > Arterial spin labelling brain MRI	NA	Mean ATT in Internal Carotid Artery vascular territory in grey matter (right)	Continuous
+24398							Assessment centre > Imaging > Brain MRI > Arterial spin labelling brain MRI	NA	Mean ATT in Internal Carotid Artery vascular territory in grey matter (left)	Continuous
+24399							Assessment centre > Imaging > Brain MRI > Arterial spin labelling brain MRI	NA	Mean ATT in VertebroBasilar Arteries vascular territories in grey matter	Continuous
+24400							Assessment centre > Imaging > Brain MRI > Arterial spin labelling brain MRI	NA	Mean ATT in whole brain in white matter	Continuous
+24401							Assessment centre > Imaging > Brain MRI > Arterial spin labelling brain MRI	NA	Mean ATT in cerebrum in white matter and >50% cerebral partial volume	Continuous
+24402							Assessment centre > Imaging > Brain MRI > Arterial spin labelling brain MRI	NA	Mean ATT in cerebrum in white matter (left)	Continuous
+24403							Assessment centre > Imaging > Brain MRI > Arterial spin labelling brain MRI	NA	Mean ATT in cerebrum in white matter (right)	Continuous
+24404							Assessment centre > Imaging > Brain MRI > Arterial spin labelling brain MRI	NA	Mean ATT in Caudate (right)	Continuous
+24405							Assessment centre > Imaging > Brain MRI > Arterial spin labelling brain MRI	NA	Mean ATT in Caudate (left)	Continuous
+24406							Assessment centre > Imaging > Brain MRI > Arterial spin labelling brain MRI	NA	Mean ATT in Putamen (right)	Continuous
+24407							Assessment centre > Imaging > Brain MRI > Arterial spin labelling brain MRI	NA	Mean ATT in Putamen (left)	Continuous
+24408							Assessment centre > Imaging > Brain MRI > Arterial spin labelling brain MRI	NA	Mean ATT in Thalamus (right)	Continuous
+24409							Assessment centre > Imaging > Brain MRI > Arterial spin labelling brain MRI	NA	Mean ATT in Thalamus (left)	Continuous
+24418						7	Assessment centre > Imaging > Brain MRI > Susceptibility weighted brain MRI	NA	Whether a temporary protocol change affected SWI	Categorical single
+24419							Assessment centre > Imaging > Brain MRI	NA	Measure of head motion in T1 structural image	Continuous
+24420							Assessment centre > Imaging > Brain MRI > Resting functional brain MRI	NA	DVARS Mean S from uncleaned rfMRI	Continuous
+24421							Assessment centre > Imaging > Brain MRI > Resting functional brain MRI	NA	DVARS Median S from uncleaned rfMRI	Continuous
+24422							Assessment centre > Imaging > Brain MRI > Resting functional brain MRI	NA	DVARS 90th percentile S from uncleaned rfMRI	Continuous
+24423							Assessment centre > Imaging > Brain MRI > Resting functional brain MRI	NA	DVARS Mean D from uncleaned rfMRI	Continuous
+24424							Assessment centre > Imaging > Brain MRI > Resting functional brain MRI	NA	DVARS Median D from uncleaned rfMRI	Continuous
+24425							Assessment centre > Imaging > Brain MRI > Resting functional brain MRI	NA	DVARS 90th percentile D from uncleaned rfMRI	Continuous
+24426							Assessment centre > Imaging > Brain MRI > Resting functional brain MRI	NA	DVARS Mean SD from uncleaned rfMRI	Continuous
+24427							Assessment centre > Imaging > Brain MRI > Resting functional brain MRI	NA	DVARS Median SD from uncleaned rfMRI	Continuous
+24428							Assessment centre > Imaging > Brain MRI > Resting functional brain MRI	NA	DVARS 90th percentile SD from uncleaned rfMRI	Continuous
+24429							Assessment centre > Imaging > Brain MRI > Resting functional brain MRI	NA	DVARS Mean S from cleaned rfMRI	Continuous
+24430							Assessment centre > Imaging > Brain MRI > Resting functional brain MRI	NA	DVARS Median S from cleaned rfMRI	Continuous
+24431							Assessment centre > Imaging > Brain MRI > Resting functional brain MRI	NA	DVARS 90th percentile S from cleaned rfMRI	Continuous
+24432							Assessment centre > Imaging > Brain MRI > Resting functional brain MRI	NA	DVARS Mean D from cleaned rfMRI	Continuous
+24433							Assessment centre > Imaging > Brain MRI > Resting functional brain MRI	NA	DVARS Median D from cleaned rfMRI	Continuous
+24434							Assessment centre > Imaging > Brain MRI > Resting functional brain MRI	NA	DVARS 90th percentile D from cleaned rfMRI	Continuous
+24435							Assessment centre > Imaging > Brain MRI > Resting functional brain MRI	NA	DVARS Mean SD from cleaned rfMRI	Continuous
+24436							Assessment centre > Imaging > Brain MRI > Resting functional brain MRI	NA	DVARS Median SD from cleaned rfMRI	Continuous
+24437							Assessment centre > Imaging > Brain MRI > Resting functional brain MRI	NA	DVARS 90th percentile SD from cleaned rfMRI	Continuous
+24438							Assessment centre > Imaging > Brain MRI > Resting functional brain MRI	NA	Mean absolute head motion from rfMRI	Continuous
+24439							Assessment centre > Imaging > Brain MRI > Resting functional brain MRI	NA	Median absolute head motion from rfMRI	Continuous
+24440							Assessment centre > Imaging > Brain MRI > Resting functional brain MRI	NA	90th percentile of absolute head motion from rfMRI	Continuous
+24441							Assessment centre > Imaging > Brain MRI > Resting functional brain MRI	NA	Mean relative head motion from rfMRI	Continuous
+24442							Assessment centre > Imaging > Brain MRI > Resting functional brain MRI	NA	Median relative head motion from rfMRI	Continuous
+24443							Assessment centre > Imaging > Brain MRI > Resting functional brain MRI	NA	90th percentile of relative head motion from rfMRI	Continuous
+24444							Assessment centre > Imaging > Brain MRI > Task functional brain MRI	NA	Mean absolute head motion from tfMRI	Continuous
+24445							Assessment centre > Imaging > Brain MRI > Task functional brain MRI	NA	Median absolute head motion from tfMRI	Continuous
+24446							Assessment centre > Imaging > Brain MRI > Task functional brain MRI	NA	90th percentile of absolute head motion from tfMRI	Continuous
+24447							Assessment centre > Imaging > Brain MRI > Task functional brain MRI	NA	Mean relative head motion from tfMRI	Continuous
+24448							Assessment centre > Imaging > Brain MRI > Task functional brain MRI	NA	Median relative head motion from tfMRI	Continuous
+24449							Assessment centre > Imaging > Brain MRI > Task functional brain MRI	NA	90th percentile of relative head motion from tfMRI	Continuous
+24450							Assessment centre > Imaging > Brain MRI > Diffusion brain MRI	NA	Mean absolute head motion from dMRI	Continuous
+24451							Assessment centre > Imaging > Brain MRI > Diffusion brain MRI	NA	Median absolute head motion from dMRI	Continuous
+24452							Assessment centre > Imaging > Brain MRI > Diffusion brain MRI	NA	90th percentile of absolute head motion from dMRI	Continuous
+24453							Assessment centre > Imaging > Brain MRI > Diffusion brain MRI	NA	Mean relative head motion from dMRI	Continuous
+24454							Assessment centre > Imaging > Brain MRI > Diffusion brain MRI	NA	Median relative head motion from dMRI	Continuous
+24455							Assessment centre > Imaging > Brain MRI > Diffusion brain MRI	NA	90th percentile of relative head motion from dMRI	Continuous
+24456							Assessment centre > Imaging > Brain MRI > Diffusion brain MRI	NA	Number of slices that Eddy estimated to be outliers in dMRI data	Integer
+24457							Assessment centre > Imaging > Brain MRI > Resting functional brain MRI	NA	Mean of mean (across space) in-plane displacement from rfMRI	Continuous
+24458							Assessment centre > Imaging > Brain MRI > Resting functional brain MRI	NA	Median of mean (across space) in-plane displacement from rfMRI	Continuous
+24459							Assessment centre > Imaging > Brain MRI > Resting functional brain MRI	NA	90th percentile of mean (across space) in-plane displacement from rfMRI	Continuous
+24460							Assessment centre > Imaging > Brain MRI > Resting functional brain MRI	NA	Mean of mean (across space) of Z displacement from rfMRI	Continuous
+24461							Assessment centre > Imaging > Brain MRI > Resting functional brain MRI	NA	Median of mean (across space) of Z displacement from rfMRI	Continuous
+24462							Assessment centre > Imaging > Brain MRI > Resting functional brain MRI	NA	90th percentile of mean (across space) of Z displacement from rfMRI	Continuous
+24463							Assessment centre > Imaging > Brain MRI > Resting functional brain MRI	NA	Median of mean (across time) in-plane displacement from rfMRI	Continuous
+24464							Assessment centre > Imaging > Brain MRI > Resting functional brain MRI	NA	90th percentile of mean (across time) in-plane displacement from rfMRI	Continuous
+24465							Assessment centre > Imaging > Brain MRI > Resting functional brain MRI	NA	Median of mean (across time) of Z displacement from rfMRI	Continuous
+24466							Assessment centre > Imaging > Brain MRI > Resting functional brain MRI	NA	90th percentile of mean (across time) of Z displacement from rfMRI	Continuous
+24467							Assessment centre > Imaging > Brain MRI > Susceptibility weighted brain MRI	NA	Median magnetic susceptibility in thalamus (left)	Continuous
+24468							Assessment centre > Imaging > Brain MRI > Susceptibility weighted brain MRI	NA	Median magnetic susceptibility in thalamus (right)	Continuous
+24469							Assessment centre > Imaging > Brain MRI > Susceptibility weighted brain MRI	NA	Median magnetic susceptibility in caudate (left)	Continuous
+24470							Assessment centre > Imaging > Brain MRI > Susceptibility weighted brain MRI	NA	Median magnetic susceptibility in caudate (right)	Continuous
+24471							Assessment centre > Imaging > Brain MRI > Susceptibility weighted brain MRI	NA	Median magnetic susceptibility in putamen (left)	Continuous
+24472							Assessment centre > Imaging > Brain MRI > Susceptibility weighted brain MRI	NA	Median magnetic susceptibility in putamen (right)	Continuous
+24473							Assessment centre > Imaging > Brain MRI > Susceptibility weighted brain MRI	NA	Median magnetic susceptibility in pallidum (left)	Continuous
+24474							Assessment centre > Imaging > Brain MRI > Susceptibility weighted brain MRI	NA	Median magnetic susceptibility in pallidum (right)	Continuous
+24475							Assessment centre > Imaging > Brain MRI > Susceptibility weighted brain MRI	NA	Median magnetic susceptibility in hippocampus (left)	Continuous
+24476							Assessment centre > Imaging > Brain MRI > Susceptibility weighted brain MRI	NA	Median magnetic susceptibility in hippocampus (right)	Continuous
+24477							Assessment centre > Imaging > Brain MRI > Susceptibility weighted brain MRI	NA	Median magnetic susceptibility in amygdala (left)	Continuous
+24478							Assessment centre > Imaging > Brain MRI > Susceptibility weighted brain MRI	NA	Median magnetic susceptibility in amygdala (right)	Continuous
+24479							Assessment centre > Imaging > Brain MRI > Susceptibility weighted brain MRI	NA	Median magnetic susceptibility in accumbens (left)	Continuous
+24480							Assessment centre > Imaging > Brain MRI > Susceptibility weighted brain MRI	NA	Median magnetic susceptibility in accumbens (right)	Continuous
+24481							Assessment centre > Imaging > Brain MRI > Susceptibility weighted brain MRI	NA	Median magnetic susceptibility in substantia nigra (left)	Continuous
+24482							Assessment centre > Imaging > Brain MRI > Susceptibility weighted brain MRI	NA	Median magnetic susceptibility in substantia nigra (right)	Continuous
+24483							Assessment centre > Imaging > Brain MRI > Susceptibility weighted brain MRI	NA	Median T2star in substantia nigra (left)	Continuous
+24484							Assessment centre > Imaging > Brain MRI > Susceptibility weighted brain MRI	NA	Median T2star in substantia nigra (right)	Continuous
+24485							Assessment centre > Imaging > Brain MRI > T2-weighted brain MRI	NA	Total volume of peri-ventricular white matter hyperintensities	Continuous
+24486							Assessment centre > Imaging > Brain MRI > T2-weighted brain MRI	NA	Total volume of deep white matter hyperintensities	Continuous
 24500							Additional exposures > Local environment > Greenspace and coastal proximity	151	"Greenspace percentage, buffer 1000m"	Continuous
 24501							Additional exposures > Local environment > Greenspace and coastal proximity	151	"Domestic garden percentage, buffer 1000m"	Continuous
 24502							Additional exposures > Local environment > Greenspace and coastal proximity	151	"Water percentage, buffer 1000m"	Continuous
@@ -3145,6 +3476,162 @@ FieldID	TRAIT_OF_INTEREST	EXCLUDED	CAT_MULT_INDICATOR_FIELDS	CAT_SINGLE_TO_CAT_M
 25928		YES-ACE					UK Biobank Assessment Centre > Imaging > Brain MRI > Diffusion brain MRI	107	Intensity scaling for dMRI	Continuous
 25929		YES-ACE					UK Biobank Assessment Centre > Imaging > Brain MRI > Resting functional brain MRI	111	Intensity scaling for rfMRI	Continuous
 25930		YES-ACE					UK Biobank Assessment Centre > Imaging > Brain MRI > Task functional brain MRI	106	Intensity scaling for tfMRI	Continuous
+26000							Online follow-up > Diet by 24-hour recall > Estimated food nutrients yesterday	NA	Total weight of all foods and beverages	Continuous
+26001							Online follow-up > Diet by 24-hour recall > Estimated food nutrients yesterday	NA	Total weight of beverages only	Continuous
+26002							Online follow-up > Diet by 24-hour recall > Estimated food nutrients yesterday	NA	Energy	Continuous
+26003							Online follow-up > Diet by 24-hour recall > Estimated food nutrients yesterday	NA	Energy from beverages	Continuous
+26004							Online follow-up > Diet by 24-hour recall > Estimated food nutrients yesterday	NA	Energy density	Continuous
+26005							Online follow-up > Diet by 24-hour recall > Estimated food nutrients yesterday	NA	Protein	Continuous
+26006							Online follow-up > Diet by 24-hour recall > Estimated food nutrients yesterday	NA	Vegetable protein	Continuous
+26007							Online follow-up > Diet by 24-hour recall > Estimated food nutrients yesterday	NA	Animal protein	Continuous
+26008							Online follow-up > Diet by 24-hour recall > Estimated food nutrients yesterday	NA	Fat	Continuous
+26009							Online follow-up > Diet by 24-hour recall > Estimated food nutrients yesterday	NA	Vegetable fat	Continuous
+26010							Online follow-up > Diet by 24-hour recall > Estimated food nutrients yesterday	NA	Animal fat	Continuous
+26011							Online follow-up > Diet by 24-hour recall > Estimated food nutrients yesterday	NA	Total sugars	Continuous
+26012							Online follow-up > Diet by 24-hour recall > Estimated food nutrients yesterday	NA	Free sugar	Continuous
+26013							Online follow-up > Diet by 24-hour recall > Estimated food nutrients yesterday	NA	Carbohydrate	Continuous
+26014							Online follow-up > Diet by 24-hour recall > Estimated food nutrients yesterday	NA	Saturated fatty acids	Continuous
+26015							Online follow-up > Diet by 24-hour recall > Estimated food nutrients yesterday	NA	n-3 fatty acids	Continuous
+26016							Online follow-up > Diet by 24-hour recall > Estimated food nutrients yesterday	NA	n-6 fatty acids	Continuous
+26017							Online follow-up > Diet by 24-hour recall > Estimated food nutrients yesterday	NA	Englyst fibre	Continuous
+26018							Online follow-up > Diet by 24-hour recall > Estimated food nutrients yesterday	NA	Calcium	Continuous
+26019							Online follow-up > Diet by 24-hour recall > Estimated food nutrients yesterday	NA	Iron	Continuous
+26020							Online follow-up > Diet by 24-hour recall > Estimated food nutrients yesterday	NA	Vitamin B6	Continuous
+26021							Online follow-up > Diet by 24-hour recall > Estimated food nutrients yesterday	NA	Vitamin B12	Continuous
+26022							Online follow-up > Diet by 24-hour recall > Estimated food nutrients yesterday	NA	Folate	Continuous
+26023							Online follow-up > Diet by 24-hour recall > Estimated food nutrients yesterday	NA	Vitamin C	Continuous
+26024							Online follow-up > Diet by 24-hour recall > Estimated food nutrients yesterday	NA	Potassium	Continuous
+26025							Online follow-up > Diet by 24-hour recall > Estimated food nutrients yesterday	NA	Magnesium	Continuous
+26026							Online follow-up > Diet by 24-hour recall > Estimated food nutrients yesterday	NA	Retinol	Continuous
+26027							Online follow-up > Diet by 24-hour recall > Estimated food nutrients yesterday	NA	Total carotene	Continuous
+26028							Online follow-up > Diet by 24-hour recall > Estimated food nutrients yesterday	NA	Vitamin E	Continuous
+26029							Online follow-up > Diet by 24-hour recall > Estimated food nutrients yesterday	NA	Vitamin D	Continuous
+26030							Online follow-up > Diet by 24-hour recall > Estimated food nutrients yesterday	NA	Alcohol	Continuous
+26031							Online follow-up > Diet by 24-hour recall > Estimated food nutrients yesterday	NA	Starch	Continuous
+26032							Online follow-up > Diet by 24-hour recall > Estimated food nutrients yesterday	NA	Monounsaturated fatty acids	Continuous
+26033							Online follow-up > Diet by 24-hour recall > Estimated food nutrients yesterday	NA	Zinc	Continuous
+26034							Online follow-up > Diet by 24-hour recall > Estimated food nutrients yesterday	NA	Thiamin	Continuous
+26035							Online follow-up > Diet by 24-hour recall > Estimated food nutrients yesterday	NA	Riboflavin	Continuous
+26036							Online follow-up > Diet by 24-hour recall > Estimated food nutrients yesterday	NA	Phosphorus	Continuous
+26037							Online follow-up > Diet by 24-hour recall > Estimated food nutrients yesterday	NA	Cholesterol	Continuous
+26038							Online follow-up > Diet by 24-hour recall > Estimated food nutrients yesterday	NA	Alpha-carotene	Continuous
+26039							Online follow-up > Diet by 24-hour recall > Estimated food nutrients yesterday	NA	Beta-carotene	Continuous
+26040							Online follow-up > Diet by 24-hour recall > Estimated food nutrients yesterday	NA	Beta cryptoxanthin	Continuous
+26041							Online follow-up > Diet by 24-hour recall > Estimated food nutrients yesterday	NA	Biotin	Continuous
+26042							Online follow-up > Diet by 24-hour recall > Estimated food nutrients yesterday	NA	Chloride	Continuous
+26043							Online follow-up > Diet by 24-hour recall > Estimated food nutrients yesterday	NA	Copper	Continuous
+26044							Online follow-up > Diet by 24-hour recall > Estimated food nutrients yesterday	NA	Fructose	Continuous
+26045							Online follow-up > Diet by 24-hour recall > Estimated food nutrients yesterday	NA	Glucose	Continuous
+26046							Online follow-up > Diet by 24-hour recall > Estimated food nutrients yesterday	NA	Haem iron	Continuous
+26047							Online follow-up > Diet by 24-hour recall > Estimated food nutrients yesterday	NA	Iodine	Continuous
+26048							Online follow-up > Diet by 24-hour recall > Estimated food nutrients yesterday	NA	Lactose	Continuous
+26049							Online follow-up > Diet by 24-hour recall > Estimated food nutrients yesterday	NA	Maltose	Continuous
+26050							Online follow-up > Diet by 24-hour recall > Estimated food nutrients yesterday	NA	Intrinsic and milk sugars	Continuous
+26051							Online follow-up > Diet by 24-hour recall > Estimated food nutrients yesterday	NA	Manganese	Continuous
+26052							Online follow-up > Diet by 24-hour recall > Estimated food nutrients yesterday	NA	Sodium	Continuous
+26053							Online follow-up > Diet by 24-hour recall > Estimated food nutrients yesterday	NA	Non-haem iron	Continuous
+26054							Online follow-up > Diet by 24-hour recall > Estimated food nutrients yesterday	NA	Niacin equivalent	Continuous
+26055							Online follow-up > Diet by 24-hour recall > Estimated food nutrients yesterday	NA	Non-milk extrinsic sugars	Continuous
+26056							Online follow-up > Diet by 24-hour recall > Estimated food nutrients yesterday	NA	Other Sugars	Continuous
+26057							Online follow-up > Diet by 24-hour recall > Estimated food nutrients yesterday	NA	Pantothenic acid	Continuous
+26058							Online follow-up > Diet by 24-hour recall > Estimated food nutrients yesterday	NA	Selenium	Continuous
+26059							Online follow-up > Diet by 24-hour recall > Estimated food nutrients yesterday	NA	Sucrose	Continuous
+26060							Online follow-up > Diet by 24-hour recall > Estimated food nutrients yesterday	NA	Total nitrogen	Continuous
+26061							Online follow-up > Diet by 24-hour recall > Estimated food nutrients yesterday	NA	Vitamin A retinol equivalents	Continuous
+26062							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Animal fat spread lower fat	Continuous
+26063							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Animal fat spread normal	Continuous
+26064							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Added sugars and preserves	Continuous
+26065							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Allium vegetables	Continuous
+26066							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Beef	Continuous
+26067							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Beer and cider	Continuous
+26068							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Biscuits	Continuous
+26069							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Breaded/battered chicken	Continuous
+26070							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Breaded/battered fish	Continuous
+26071							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Mixed bread (50/50) brown and seeded	Continuous
+26072							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Other bread	Continuous
+26073							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	White bread	Continuous
+26074							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Wholemeal bread	Continuous
+26075							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Biscuit cereal	Continuous
+26076							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Bran cereal	Continuous
+26077							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Oat cereal (non sugar)	Continuous
+26078							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Oat cereal (sugar)	Continuous
+26079							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Other cereal (sugar)	Continuous
+26080							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Chocolate confectionery	Continuous
+26081							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Coffee  caffeinated	Continuous
+26082							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Coffee  decaffeinated	Continuous
+26083							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Savoury crackers	Continuous
+26084							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Milk-dairy desserts	Continuous
+26085							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Other desserts and cakes and pastries	Continuous
+26086							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Soy desserts and yogurt	Continuous
+26087							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Milk-based and powdered drinks	Continuous
+26088							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Egg and egg dishes	Continuous
+26089							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Apples and pears	Continuous
+26090							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Berries	Continuous
+26091							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Citrus	Continuous
+26092							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Dried fruit	Continuous
+26093							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Other fruit	Continuous
+26094							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Stewed fruit	Continuous
+26095							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Fruit juice	Continuous
+26096							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Full fat yogurt	Continuous
+26097							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Grain dishes - added fat	Continuous
+26098							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Green leafy/cabbages	Continuous
+26099							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	High fat cheese	Continuous
+26100							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Lamb	Continuous
+26101							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Legumes and pulses	Continuous
+26102							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Low fat yogurt	Continuous
+26103							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Medium and low fat cheese	Continuous
+26104							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Other meat offal	Continuous
+26105							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Muesli	Continuous
+26106							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Nut-based spreads	Continuous
+26107							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Unsalted nuts and seeds	Continuous
+26108							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Salted nuts and seeds	Continuous
+26109							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Oily fish	Continuous
+26110							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Olive oil (drizzling/dunking)	Continuous
+26111							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Plant-based spread lower fat	Continuous
+26112							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Plant-based spread normal	Continuous
+26113							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	White pasta and rice	Continuous
+26114							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Wholemeal pasta  brown rice and other wholegrains	Continuous
+26115							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Peas and sweetcorn	Continuous
+26116							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Pizza	Continuous
+26117							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Pork	Continuous
+26118							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Potatoes and sweet potatoes (baked/boiled)	Continuous
+26119							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Fried/roast potatoes	Continuous
+26120							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Mashed potatoes	Continuous
+26121							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Poultry	Continuous
+26122							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Processed meat	Continuous
+26123							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Raw salad	Continuous
+26124							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Rice/oat milk	Continuous
+26125							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Root vegetables	Continuous
+26126							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Low/non sugar sugar-sweetened beverages	Continuous
+26127							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Sugar-sweetened beverages and other sugary drinks	Continuous
+26128							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Samosa  pakora	Continuous
+26129							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Sauces and condiments (high fat)	Continuous
+26130							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Sauces and condiments (low fat)	Continuous
+26131							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Semi skimmed milk	Continuous
+26132							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Shellfish	Continuous
+26133							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Skimmed milk and cholesterol-lowering milk	Continuous
+26134							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Savoury snacks	Continuous
+26135							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Soups	Continuous
+26136							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Soy milk	Continuous
+26137							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Meat substitutes - soy	Continuous
+26138							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Spirits	Continuous
+26139							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Sushi	Continuous
+26140							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Other sweets	Continuous
+26141							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Tea	Continuous
+26142							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Tea  decaffeinated	Continuous
+26143							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Tomatoes	Continuous
+26144							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Vegetable dips	Continuous
+26145							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Meat substitutes - vegetarian	Continuous
+26146							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Other vegetables  including mushrooms  fruiting and mixed vegetables	Continuous
+26147							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Vegetable side dishes	Continuous
+26148							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Water (still and sparkling)	Continuous
+26149							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	White fish and tinned tuna	Continuous
+26150							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Whole milk	Continuous
+26151							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Fortified wine	Continuous
+26152							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Red wine	Continuous
+26153							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	White wine	Continuous
+26154							Online follow-up > Diet by 24-hour recall > Total weight by food group yesterday	NA	Cream	Continuous
+26155							Online follow-up > Diet by 24-hour recall > Estimated food nutrients yesterday	NA	Trans fatty acids	Continuous
 26410							Population characteristics > Baseline characteristics > Indices of Multiple Deprivation	76	Index of Multiple Deprivation (England)	Continuous
 26411							Population characteristics > Baseline characteristics > Indices of Multiple Deprivation	76	Income score (England)	Continuous
 26412							Population characteristics > Baseline characteristics > Indices of Multiple Deprivation	76	Employment score (England)	Continuous
@@ -4493,6 +4980,65 @@ FieldID	TRAIT_OF_INTEREST	EXCLUDED	CAT_MULT_INDICATOR_FIELDS	CAT_SINGLE_TO_CAT_M
 27856							Assessment Centre > Physical measures > Eye measures > Retinal optical coherence tomography > Derived OCT measures	100079	Vertical cup to disc ratio (VCDR) regressed and transformed (right)	Continuous
 27857							Assessment Centre > Physical measures > Eye measures > Retinal optical coherence tomography > Derived OCT measures	100079	Vertical cup to disc ratio (VCDR) (left)	Continuous
 27858							Assessment Centre > Physical measures > Eye measures > Retinal optical coherence tomography > Derived OCT measures	100079	Vertical cup to disc ratio (VCDR) (right)	Continuous
+27981						603	Health-related outcomes > Coronavirus COVID-19 > Self-test antibody study	NA	Antibody test result	Categorical single
+27990						1854	Health-related outcomes > Coronavirus COVID-19 > Coronavirus infection study	NA	Antibody test result	Categorical single
+28000						1854	Health-related outcomes > Coronavirus COVID-19 > Coronavirus serology study waves 1-6 > Waves 1-6 sample processing	NA	Antibody test result	Categorical single
+28011						7	Health-related outcomes > Coronavirus COVID-19 > Coronavirus serology study waves 1-6 > Waves 1-6 symptoms questionnaire	NA	COVID-19 symptoms: Fever 38 degrees C or greater	Categorical single
+28012						7	Health-related outcomes > Coronavirus COVID-19 > Coronavirus serology study waves 1-6 > Waves 1-6 symptoms questionnaire	NA	COVID-19 symptoms: Wheezing	Categorical single
+28013						7	Health-related outcomes > Coronavirus COVID-19 > Coronavirus serology study waves 1-6 > Waves 1-6 symptoms questionnaire	NA	COVID-19 symptoms: Chills	Categorical single
+28014						7	Health-related outcomes > Coronavirus COVID-19 > Coronavirus serology study waves 1-6 > Waves 1-6 symptoms questionnaire	NA	COVID-19 symptoms: Chest pain	Categorical single
+28015						7	Health-related outcomes > Coronavirus COVID-19 > Coronavirus serology study waves 1-6 > Waves 1-6 symptoms questionnaire	NA	COVID-19 symptoms: Feeling more tired than usual	Categorical single
+28016						7	Health-related outcomes > Coronavirus COVID-19 > Coronavirus serology study waves 1-6 > Waves 1-6 symptoms questionnaire	NA	COVID-19 symptoms: Headache	Categorical single
+28017						7	Health-related outcomes > Coronavirus COVID-19 > Coronavirus serology study waves 1-6 > Waves 1-6 symptoms questionnaire	NA	COVID-19 symptoms: Muscle ache	Categorical single
+28018						7	Health-related outcomes > Coronavirus COVID-19 > Coronavirus serology study waves 1-6 > Waves 1-6 symptoms questionnaire	NA	COVID-19 symptoms: Nausea/vomiting	Categorical single
+28019						7	Health-related outcomes > Coronavirus COVID-19 > Coronavirus serology study waves 1-6 > Waves 1-6 symptoms questionnaire	NA	COVID-19 symptoms: Sore throat	Categorical single
+28020						7	Health-related outcomes > Coronavirus COVID-19 > Coronavirus serology study waves 1-6 > Waves 1-6 symptoms questionnaire	NA	COVID-19 symptoms: Abdominal pain	Categorical single
+28021						7	Health-related outcomes > Coronavirus COVID-19 > Coronavirus serology study waves 1-6 > Waves 1-6 symptoms questionnaire	NA	COVID-19 symptoms: Persistent dry cough	Categorical single
+28022						7	Health-related outcomes > Coronavirus COVID-19 > Coronavirus serology study waves 1-6 > Waves 1-6 symptoms questionnaire	NA	COVID-19 symptoms: Diarrhoea	Categorical single
+28023						7	Health-related outcomes > Coronavirus COVID-19 > Coronavirus serology study waves 1-6 > Waves 1-6 symptoms questionnaire	NA	COVID-19 symptoms: Runny nose	Categorical single
+28024						7	Health-related outcomes > Coronavirus COVID-19 > Coronavirus serology study waves 1-6 > Waves 1-6 symptoms questionnaire	NA	COVID-19 symptoms: Loss of sense of small and taste	Categorical single
+28025						7	Health-related outcomes > Coronavirus COVID-19 > Coronavirus serology study waves 1-6 > Waves 1-6 symptoms questionnaire	NA	COVID-19 symptoms: Shortness of breath	Categorical single
+28026						7	Health-related outcomes > Coronavirus COVID-19 > Coronavirus serology study waves 1-6 > Waves 1-6 symptoms questionnaire	NA	COVID-19 symptoms: Productive long-term cough (wet or chesty)	Categorical single
+28027						7	Health-related outcomes > Coronavirus COVID-19 > Coronavirus serology study waves 1-6 > Waves 1-6 symptoms questionnaire	NA	COVID-19 symptoms requiring medical attention	Categorical single
+28028						7	Health-related outcomes > Coronavirus COVID-19 > Coronavirus serology study waves 1-6 > Waves 1-6 symptoms questionnaire	NA	COVID-19 symptoms requiring self-isolation	Categorical single
+28029						7	Health-related outcomes > Coronavirus COVID-19 > Coronavirus serology study waves 1-6 > Waves 1-6 symptoms questionnaire	NA	COVID-19 symptoms requiring hospitalisation	Categorical single
+28500							Assessment centre > Eye measures > Retinal optical coherence tomography > Derived OCT measures	NA	Average retinal nerve fibre layer thickness (left)	Continuous
+28501							Assessment centre > Eye measures > Retinal optical coherence tomography > Derived OCT measures	NA	Average retinal nerve fibre layer thickness (right)	Continuous
+28502							Assessment centre > Eye measures > Retinal optical coherence tomography > Derived OCT measures	NA	Average inner nuclear layer thickness (left)	Continuous
+28503							Assessment centre > Eye measures > Retinal optical coherence tomography > Derived OCT measures	NA	Average inner nuclear layer thickness (right)	Continuous
+28504							Assessment centre > Eye measures > Retinal optical coherence tomography > Derived OCT measures	NA	Average ganglion cell-inner plexiform layer thickness (left)	Continuous
+28505							Assessment centre > Eye measures > Retinal optical coherence tomography > Derived OCT measures	NA	Average ganglion cell-inner plexiform layer thickness (right)	Continuous
+28506							Assessment centre > Eye measures > Retinal optical coherence tomography > Derived OCT measures	NA	INL-ELM thickness of the central subfield (left)	Continuous
+28507							Assessment centre > Eye measures > Retinal optical coherence tomography > Derived OCT measures	NA	INL-ELM thickness of the central subfield (right)	Continuous
+28508							Assessment centre > Eye measures > Retinal optical coherence tomography > Derived OCT measures	NA	INL-ELM thickness of the inner subfield (left)	Continuous
+28509							Assessment centre > Eye measures > Retinal optical coherence tomography > Derived OCT measures	NA	INL-ELM thickness of the inner subfield (right)	Continuous
+28510							Assessment centre > Eye measures > Retinal optical coherence tomography > Derived OCT measures	NA	INL-ELM thickness of the outer subfield (left)	Continuous
+28511							Assessment centre > Eye measures > Retinal optical coherence tomography > Derived OCT measures	NA	INL-ELM thickness of the outer subfield (right)	Continuous
+28512							Assessment centre > Eye measures > Retinal optical coherence tomography > Derived OCT measures	NA	Average INL-ELM thickness (left)	Continuous
+28513							Assessment centre > Eye measures > Retinal optical coherence tomography > Derived OCT measures	NA	Average INL-ELM thickness (right)	Continuous
+28514							Assessment centre > Eye measures > Retinal optical coherence tomography > Derived OCT measures	NA	ELM-ISOS thickness of central subfield (left)	Continuous
+28515							Assessment centre > Eye measures > Retinal optical coherence tomography > Derived OCT measures	NA	ELM-ISOS thickness of central subfield (right)	Continuous
+28516							Assessment centre > Eye measures > Retinal optical coherence tomography > Derived OCT measures	NA	ELM-ISOS thickness of inner subfield (left)	Continuous
+28517							Assessment centre > Eye measures > Retinal optical coherence tomography > Derived OCT measures	NA	ELM-ISOS thickness of inner subfield (right)	Continuous
+28518							Assessment centre > Eye measures > Retinal optical coherence tomography > Derived OCT measures	NA	ELM-ISOS thickness of outer subfield (left)	Continuous
+28519							Assessment centre > Eye measures > Retinal optical coherence tomography > Derived OCT measures	NA	ELM-ISOS thickness of outer subfield (right)	Continuous
+28520							Assessment centre > Eye measures > Retinal optical coherence tomography > Derived OCT measures	NA	Average ELM-ISOS thickness (left)	Continuous
+28521							Assessment centre > Eye measures > Retinal optical coherence tomography > Derived OCT measures	NA	Average ELM-ISOS thickness (right)	Continuous
+28522							Assessment centre > Eye measures > Retinal optical coherence tomography > Derived OCT measures	NA	ISOS-RPE thickness of central subfield (left)	Continuous
+28523							Assessment centre > Eye measures > Retinal optical coherence tomography > Derived OCT measures	NA	ISOS-RPE thickness of central subfield (right)	Continuous
+28524							Assessment centre > Eye measures > Retinal optical coherence tomography > Derived OCT measures	NA	ISOS-RPE thickness of inner subfield (left)	Continuous
+28525							Assessment centre > Eye measures > Retinal optical coherence tomography > Derived OCT measures	NA	ISOS-RPE thickness of inner subfield (right)	Continuous
+28526							Assessment centre > Eye measures > Retinal optical coherence tomography > Derived OCT measures	NA	ISOS-RPE thickness of outer subfield (left)	Continuous
+28527							Assessment centre > Eye measures > Retinal optical coherence tomography > Derived OCT measures	NA	ISOS-RPE thickness of outer subfield (right)	Continuous
+28528							Assessment centre > Eye measures > Retinal optical coherence tomography > Derived OCT measures	NA	Average ISOS-RPE thickness (left)	Continuous
+28529							Assessment centre > Eye measures > Retinal optical coherence tomography > Derived OCT measures	NA	Average ISOS-RPE thickness (right)	Continuous
+28530							Assessment centre > Eye measures > Retinal optical coherence tomography > Derived OCT measures	NA	INL-RPE thickness of central subfield (left)	Continuous
+28531							Assessment centre > Eye measures > Retinal optical coherence tomography > Derived OCT measures	NA	INL-RPE thickness of central subfield (right)	Continuous
+28532							Assessment centre > Eye measures > Retinal optical coherence tomography > Derived OCT measures	NA	INL-RPE thickness of inner subfield (left)	Continuous
+28533							Assessment centre > Eye measures > Retinal optical coherence tomography > Derived OCT measures	NA	INL-RPE thickness of inner subfield (right)	Continuous
+28534							Assessment centre > Eye measures > Retinal optical coherence tomography > Derived OCT measures	NA	INL-RPE thickness of outer subfield (left)	Continuous
+28535							Assessment centre > Eye measures > Retinal optical coherence tomography > Derived OCT measures	NA	INL-RPE thickness of outer subfield (right)	Continuous
+28536							Assessment centre > Eye measures > Retinal optical coherence tomography > Derived OCT measures	NA	Average INL-RPE thickness (left)	Continuous
 30000							Biological samples > Assay results > Blood assays > Blood count	100081	White blood cell (leukocyte) count	Continuous
 30001							Biological samples > Assay results > Blood assays > Blood count > Blood count processing	9081	White blood cell (leukocyte) count freeze-thaw cycles	Integer
 30004						2226	Biological samples > Assay results > Blood assays > Blood count > Blood count processing	9081	White blood cell (leukocyte) count acquisition route	Categorical single
